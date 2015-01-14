@@ -1,5 +1,8 @@
-script: ./gradlew -q -s generate
+script: ./travis-build.sh
 jdk:
 - openjdk7
-
-
+env:
+  global:
+  - GIT_NAME="Graeme Rocher"
+  - GIT_EMAIL="graeme.rocher@gmail.com"
+  - secure: gq/RZmdomwJzn1u7/ObdBFunYD4GHXvJO7K7bJXteduXFyLhD4Zv/20Y691dzXrFV4PLHeILSkWSCInz+Mu+dFH8KJw4kT14hEZrsxPmOHt1zaSrohcln74zUnjSf99n+2cU0ciN5WZPdqlVJu+o6G1znr4DGtWLLzZmSZW8T3U=

@@ -1,34 +1,22 @@
-= Groovy website
-The Groovy development team
-:revdate: 24-02-2014
-:build-icon: http://ci.groovy-lang.org:8111/app/rest/builds/buildType:(id:Groovy_Website)/statusIcon
-:noheader:
-:groovy-www: http://groovy.codehaus.org/
-:groovy-ci: http://ci.groovy-lang.org/viewType.html?buildTypeId=Groovy_Website&guest=1
-:gradle: http://www.gradle.org
-:markupte: http://docs.groovy-lang.org/latest/html/documentation/markup-template-engine.html
+= Grails website
+Grails is a powerful web framework, for the Java platform
+aimed at multiplying developers’ productivity thanks to a Convention-over-Configuration, sensible defaults 
+and opinionated APIs. It integrates smoothly with the JVM, allowing you to be immediately productive whilst
+providing powerful features, including integrated ORM, Domain-Specific Languages,
+runtime and compile-time meta-programming and Asynchronous programming.
 
-[.left.text-left]
-image::http://groovy.codehaus.org/images/groovy-logo.png[]
-{groovy-www}[Groovy] is an agile and dynamic language for the Java Virtual Machine. It builds upon the strengths of Java, but has additional power features inspired by languages like Python, Ruby and Smalltalk.
 
-Groovy makes modern programming features available to Java developers with almost-zero learning curve as well as supports Domain-Specific Languages and other compact syntax so your code becomes easy to read and maintain.
+== Sources for the Grails website
 
-Groovy makes writing shell and build scripts easy with its powerful processing primitives, OO abilities and an Ant DSL.
-
-It also increases developer productivity by reducing scaffolding code when developing web, GUI, database or console applications. Groovy simplifies testing by supporting unit testing and mocking out-of-the-box. Groovy also seamlessly integrates with all existing Java classes and libraries and compiles straight to Java bytecode so you can use it anywhere you can use Java.
-
-== Sources for the Groovy website
-
-This project builds the Groovy website. It is using {gradle}[Gradle] and is fully statically generated.
+This project builds the Grails website. It is using {gradle}[Gradle] and is fully statically generated.
 
 Build is image:{build-icon}[build status, link={groovy-ci}].
 
 == Generating the site
 
 ----
-git clone https://github.com/groovy/groovy-website
-cd groovy-website
+git clone https://github.com/grails/grails-static-website
+cd grails-static-website
 ./gradlew webzip
 ----
 
@@ -63,14 +51,6 @@ src/main/site                   : sources for the static website
 build.gradle                    : website weaving logic
 ----
 
-Additional details can be found in this http://melix.github.io/blog/2014/07/new-groovy-website.html[blog post].
-
-== Continuous Integration
-
-The official CI server runs {groovy-ci}[here] (login as user guest and leave the password blank) and is sponsored by http://www.jetbrains.com[JetBrains].
-
-WARNING: The website is continuously updated from the _master_ branch. This means that *every merge on master is immediately published*. Changes that need to be
-applied on a specific date need to be done on a dedicated branch.
 
 == License
 

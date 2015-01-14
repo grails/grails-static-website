@@ -9,11 +9,14 @@ echo "https://$GH_TOKEN:@github.com" > ~/.git-credentials
 
 ./gradlew generate
 
-git clone https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git -b gh-pages gh-pages --single-branch > /dev/null
-cd gh-pages
-cp -r ../site/build/site/. ./
-git add *
-git commit -a -m "Updating docs for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
-git push origin HEAD
-cd ..
-rm -rf gh-pages
+if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
+
+	git clone https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git -b gh-pages gh-pages --single-branch > /dev/null
+	cd gh-pages
+	cp -r ../site/build/site/. ./
+	git add *
+	git commit -a -m "Updating docs for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+	git push origin HEAD
+	cd ..
+	rm -rf gh-pages
+fi

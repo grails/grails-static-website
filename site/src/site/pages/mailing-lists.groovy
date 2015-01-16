@@ -33,7 +33,7 @@ layout 'layouts/main.groovy', true,
 
                                 }
                                 hr(class: 'divider')
-
+                            }
                         }
                     }
                 }

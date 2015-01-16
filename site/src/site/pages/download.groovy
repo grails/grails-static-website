@@ -27,7 +27,7 @@ layout 'layouts/main.groovy', true,
                             def linkVersionToDownload = distributions.collect { it.packages }.flatten().find { it.stable }.version
                             button(id: 'big-download-button', type: 'button', class: 'btn btn-default',
                                     title: "Download Grails ${linkVersionToDownload}",
-                                    onclick: "window.location.href=\"http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-${linkVersionToDownload}.zip\"") {
+                                    onclick: "window.location.href=\"https://github.com/grails/grails-core/releases/download/v${linkVersionToDownload}/grails-${linkVersionToDownload}.zip\"") {
                                 i(class: 'fa fa-download') {}
                                 yield ' Download'
                             }
@@ -72,14 +72,14 @@ layout 'layouts/main.groovy', true,
                                         table(width: '100%', class: 'download-table') {
                                             tr {
                                                 td {
-                                                    a(href: "http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-${pkg.version}.zip") {
+                                                    a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-${pkg.version}.zip") {
                                                         i(class: 'fa fa-gears fa-4x') {}
                                                         br()
                                                         yield 'binary'
                                                     }
                                                 }
                                                 td {
-                                                    a(href: "http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-docs-${pkg.version}.zip") {
+                                                    a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
                                                         i(class: 'fa fa-file-text fa-4x') {}
                                                         br()
                                                         yield ' documentation'

@@ -44,7 +44,7 @@ pages {
     page 'faq', 'faq', [category: 'Documentation', docSections: documentationSections]
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
     page 'api', 'api', [category: 'Learn', iframeTarget: 'http://grails.org/doc/latest/api']
-    page 'singlepagedocumentation', 'single-page-documentation', [category: 'Learn', iframeTarget: 'http://grails.org/doc/latest/guide/single.html']
+    page 'singlepagedocumentation', 'single-page-documentation', [category: 'Learn', iframeTarget: 'http://grails.org/doc/latest/']
 }
 
 documentation {

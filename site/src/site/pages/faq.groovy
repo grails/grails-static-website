@@ -31,7 +31,7 @@ layout 'layouts/main.groovy', true,
                             article {
                                 h2 'Is Grails an Open Source project?'
                                 p {
-                                    yield 'Yes, Grails is an Open Source programming language project, licensed under the '
+                                    yield 'Yes, Grails is an Open Source project, licensed under the '
                                     a(href: 'http://www.apache.org/licenses/LICENSE-2.0', 'Apache License v2')
                                     yield '. You can see the license header in all the source files of the project, as well as a '
                                     a(href: 'https://github.com/grails/grails-core/blob/master/LICENSE', 'license file')

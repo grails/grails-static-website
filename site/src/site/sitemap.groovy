@@ -19,7 +19,7 @@ menu {
     }
 
     group('Socialize') {
-        item 'Discuss on the mailing-list', 'mailing-lists.html',                               'fa-envelope'
+        item 'Discuss on the Mailing List', 'mailing-lists.html',                               'fa-envelope'
         item 'Grails on Twitter',           'https://twitter.com/grailsframework',           'fa-twitter'
         item 'Events and conferences',      'events.html',                                      'fa-calendar'
         item 'Source code on GitHub',       'https://github.com/grails/grails-core',            'fa-github'

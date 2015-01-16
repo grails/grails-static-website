@@ -157,7 +157,7 @@ allEvents {
         date 'June 2-4, 2015'
         url 'http://gr8conf.eu/'
         logo 'img/confs/gr8confeu2015.png'
-        description """
+        description '''
             <p>
             We <strong>feed your brain</strong> with all the important stuff from the 
             <strong>Groovy</strong> and <strong>Grails</strong> community.
@@ -182,7 +182,7 @@ allEvents {
             GR8Conf is an independent, affordable series of conferences.
             It's dedicated to the technologies in the Groovy ecosystem.
             </p>
-        """
+        '''
     }
     event('Groovy Grails eXchange 2015') {
         location 'London, United Kingdom'

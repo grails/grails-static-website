@@ -14,14 +14,22 @@ footer(id: 'footer') {
                     }
                 }
             }
-            /*div(class: 'col-right') {
+            div(class: 'col-right') {
                 p {
                     yield "The Grails Framework"; br()
-                    yield "is supported by "; a(href: 'http://gopivotal.com', 'Pivotal'); br()
-                    yield "and the Groovy community"; br()
+                    yield "repository is hosted by "; a(href: 'http://artifactoryonline.com', 'Artifactory'); br()
+                    yield "Website hosting is provided by "; a(href: 'http://run.pivotal.io', 'Pivotal'); br()
                 }
-                img(src: 'img/pivotal.png', title: 'Pivotal', alt: 'Pivotal')
-            }*/
+                a(href: 'http://artifactoryonline.com') {
+                    img(width:150,src: 'img/logos/artifactory.png', title: 'Artifactory Online', alt: 'Aritfactory Online')    
+                }; br()
+
+                a(href: 'http://run.pivotal.io') {
+                    img(src: 'img/pws-thumb.png', title: 'Pivotal Web Service', alt: 'Pivotal Web Service')    
+                }; br()
+
+                
+            }
         }
         div(class: 'clearfix', "&copy; 2005-${Calendar.instance[Calendar.YEAR]} the Grails project &mdash; Grails is Open Source, ${$a(href: 'http://www.apache.org/licenses/LICENSE-2.0.html', 'Apache 2 License')}")
     }

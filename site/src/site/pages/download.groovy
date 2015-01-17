@@ -15,6 +15,9 @@ layout 'layouts/main.groovy', true,
                                 li {
                                     a(href: '#gvm', class: 'anchor-link', 'Through GVM')
                                 }
+                                li {
+                                    a(href: 'https://github.com/grails/grails-core/releases', class: 'anchor-link', 'Release Notes')
+                                }                                
                             }
                         }
 
@@ -78,6 +81,7 @@ layout 'layouts/main.groovy', true,
                                                         yield 'binary'
                                                     }
                                                 }
+
                                                 td {
                                                     a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
                                                         i(class: 'fa fa-file-text fa-4x') {}
@@ -85,12 +89,20 @@ layout 'layouts/main.groovy', true,
                                                         yield ' documentation'
                                                     }
                                                 }
+
+                                                td {
+                                                    a(href: "https://github.com/grails/grails-core/releases/tag/v${pkg.version}") {
+                                                        i(class: 'fa fa-file-text fa-4x') {}
+                                                        br()
+                                                        yield ' release notes'
+                                                    }
+                                                }                                                
                                             }
                                         }
                                         p {
                                             yield 'Consult the '
-                                            a(href: pkg.releaseNotes, 'JIRA release notes')
-                                            yield '.'
+                                            a(href: pkg.releaseNotes, ' release notes')
+                                            yield ' for more information.'
                                         }
                                     }
                                 }

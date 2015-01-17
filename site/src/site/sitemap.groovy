@@ -82,14 +82,15 @@ downloads {
     //         releaseNotes 'http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&version=20612'
     //     }
     // }
-    distribution('Grails 2.4') {
+    def currentStableVersion = '2.4.4'
+    distribution("Grails $currentStableVersion") {
         description {
-            yield 'Grails 2.4 is the latest official release of Grails'
+            yield "Grails $currentStableVersion is the latest official release of Grails"
         }
 
-        version('2.4.4') {
+        version(currentStableVersion) {
             stable true
-            releaseNotes 'https://jira.grails.org/secure/ReleaseNote.jspa?projectId=10020&version=13903'
+            releaseNotes "https://github.com/grails/grails-core/releases/tag/v$currentStableVersion"
         }
     }
 }

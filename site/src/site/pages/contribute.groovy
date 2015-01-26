@@ -100,7 +100,7 @@ layout 'layouts/main.groovy', true,
                                     }
                                     li {
                                         yield 'this '
-                                        a(href: 'https://github.com/groovy/groovy-website', 'website')
+                                        a(href: 'https://github.com/grails/grails-static-website', 'website')
                                     }
                                 }
                                 p {

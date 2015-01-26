@@ -42,7 +42,9 @@ class SiteGenerator {
         model.menu = siteMap.menu
         model.currentPage = target
         target = target ?: page
-        new File("$outputDir/${target}.html").write(tplEngine.createTemplateByPath("pages/${page}.groovy").make(model).toString(), 'utf-8')
+        def targetFile = new File("$outputDir/${target}.html")
+        targetFile.parentFile.mkdirs()
+        targetFile.write(tplEngine.createTemplateByPath("pages/${page}.groovy").make(model).toString(), 'utf-8')
     }
 
     void generateSite() {

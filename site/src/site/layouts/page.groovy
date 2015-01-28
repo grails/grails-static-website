@@ -21,11 +21,11 @@ html {
         meta 'http-equiv': 'X-UA-Compatible', content: 'IE=edge'
         meta name: 'viewport', content: "width=device-width, initial-scale=1"
         title(pageTitle)
-        link(href: "img/favicon.ico", type: "image/x-ico", rel: "icon")
+        link(href: "${baseUri}img/favicon.ico", type: "image/x-ico", rel: "icon")
         def styles = extraStyles ?: []
         ['bootstrap.css', 'font-awesome.min.css', 'style.css', *styles].each {
             link rel: 'stylesheet', type: 'text/css', href:
-                    "css/$it"
+                    "${baseUri}css/$it"
         }
     }
 
@@ -70,7 +70,7 @@ html {
 
         def scripts = extraScripts ?: []
         ['vendor/jquery-1.10.2.min.js', 'vendor/classie.js', 'vendor/bootstrap.js', 'vendor/sidebarEffects.js', 'vendor/modernizr-2.6.2.min.js','plugins.js', *scripts].each {
-            yieldUnescaped "<script src='js/$it' defer></script>"
+            yieldUnescaped "<script src='${baseUri}js/$it' defer></script>"
         }
 
         if (extraFooter) {

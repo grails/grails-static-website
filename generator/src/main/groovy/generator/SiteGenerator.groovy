@@ -39,6 +39,9 @@ class SiteGenerator {
     }
 
     void render(String page, String target = null, Map model = [:]) {
+        if(!model.containsKey('baseUri')) {
+            model.baseUri = ''
+        }
         model.menu = siteMap.menu
         model.currentPage = target
         target = target ?: page

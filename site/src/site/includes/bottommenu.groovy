@@ -1,3 +1,9 @@
+def addBaseToUri(uri, baseUri) {
+    if(uri.startsWith('/') || uri.contains('://')) {
+        return uri
+    }
+    return baseUri + uri
+}
 
 // footer
 footer(id: 'footer') {
@@ -9,7 +15,7 @@ footer(id: 'footer') {
                     h1(name)
                     ul {
                         menu.each { menuItem ->
-                            li { a(href: menuItem.link, menuItem.name) }
+                            li { a(href: addBaseToUri(menuItem.link, baseUri), menuItem.name) }
                         }
                     }
                 }
@@ -21,11 +27,11 @@ footer(id: 'footer') {
                     yield "Website hosting is provided by "; a(href: 'http://run.pivotal.io', 'Pivotal'); br()
                 }
                 a(href: 'http://artifactoryonline.com') {
-                    img(width:150,src: 'img/logos/artifactory.png', title: 'Artifactory Online', alt: 'Aritfactory Online')    
+                    img(width:150,src: "${baseUri}img/logos/artifactory.png", title: 'Artifactory Online', alt: 'Aritfactory Online')    
                 }; br()
 
                 a(href: 'http://run.pivotal.io') {
-                    img(src: 'img/pws-thumb.png', title: 'Pivotal Web Service', alt: 'Pivotal Web Service')    
+                    img(src: "${baseUri}img/pws-thumb.png", title: 'Pivotal Web Service', alt: 'Pivotal Web Service')    
                 }; br()
 
                 

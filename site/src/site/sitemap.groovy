@@ -3,7 +3,7 @@ menu {
         item 'Learn',                       'learn.html'
         item 'Documentation',               'documentation.html'
         item 'Download',                    'download.html'
-        item 'Plugins',                     'plugins.html'
+        item 'Plugins',                     '/plugins'
         item 'Community',                   'community.html'
         item 'Ecosystem',                   'ecosystem.html'        
     }

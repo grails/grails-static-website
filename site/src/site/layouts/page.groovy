@@ -22,13 +22,13 @@ html {
         meta name: 'viewport', content: "width=device-width, initial-scale=1"
         title(pageTitle)
         link(href: "${baseUri}img/favicon.ico", type: "image/x-ico", rel: "icon")
-        def styles = []
+        List<String> styles = []
         if(!noBaseStyles) {
             styles.addAll(['bootstrap.css', 'font-awesome.min.css'])
         }
         styles.addAll(['style.css'])
         if(extraStyles) {
-            styles.addAll(extraStyles)
+            styles.addAll(extraStyles as List)
         }
         styles.each {
             link rel: 'stylesheet', type: 'text/css', href:
@@ -75,13 +75,13 @@ html {
             }
         }
 
-        def scripts = []
+        List<String> scripts = []
         if(!noBaseScripts) {
             scripts.addAll(['vendor/jquery-1.10.2.min.js', 'vendor/bootstrap.js', 'vendor/modernizr.min.js'])
         }
         scripts.addAll(['vendor/classie.js', 'vendor/sidebarEffects.js',  'plugins.js'])
         if(extraScripts) {
-            scripts.addAll(extraScripts)
+            scripts.addAll(extraScripts as List)
         }
         scripts.each {
             yieldUnescaped "<script src='${baseUri}js/$it' defer></script>"

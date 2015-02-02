@@ -22,8 +22,15 @@ html {
         meta name: 'viewport', content: "width=device-width, initial-scale=1"
         title(pageTitle)
         link(href: "${baseUri}img/favicon.ico", type: "image/x-ico", rel: "icon")
-        def styles = extraStyles ?: []
-        ['bootstrap.css', 'font-awesome.min.css', 'style.css', *styles].each {
+        def styles = []
+        if(!noBaseStyles) {
+            styles.addAll(['bootstrap.css', 'font-awesome.min.css'])
+        }
+        styles.addAll(['style.css'])
+        if(extraStyles) {
+            styles.addAll(extraStyles)
+        }
+        styles.each {
             link rel: 'stylesheet', type: 'text/css', href:
                     "${baseUri}css/$it"
         }
@@ -68,8 +75,15 @@ html {
             }
         }
 
-        def scripts = extraScripts ?: []
-        ['vendor/jquery-1.10.2.min.js', 'vendor/classie.js', 'vendor/bootstrap.js', 'vendor/sidebarEffects.js', 'vendor/modernizr.min.js','plugins.js', *scripts].each {
+        def scripts = []
+        if(!noBaseScripts) {
+            scripts.addAll(['vendor/jquery-1.10.2.min.js', 'vendor/bootstrap.js', 'vendor/modernizr.min.js'])
+        }
+        scripts.addAll(['vendor/classie.js', 'vendor/sidebarEffects.js',  'plugins.js'])
+        if(extraScripts) {
+            scripts.addAll(extraScripts)
+        }
+        scripts.each {
             yieldUnescaped "<script src='${baseUri}js/$it' defer></script>"
         }
 

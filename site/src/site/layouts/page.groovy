@@ -69,7 +69,7 @@ html {
         }
 
         def scripts = extraScripts ?: []
-        ['vendor/jquery-1.10.2.min.js', 'vendor/classie.js', 'vendor/bootstrap.js', 'vendor/sidebarEffects.js', 'vendor/modernizr-2.6.2.min.js','plugins.js', *scripts].each {
+        ['vendor/jquery-1.10.2.min.js', 'vendor/classie.js', 'vendor/bootstrap.js', 'vendor/sidebarEffects.js', 'vendor/modernizr.min.js','plugins.js', *scripts].each {
             yieldUnescaped "<script src='${baseUri}js/$it' defer></script>"
         }
 

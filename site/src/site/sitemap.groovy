@@ -45,7 +45,6 @@ pages {
     page 'faq', 'faq', [category: 'Documentation', docSections: documentationSections]
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
     page 'api', 'api', [category: 'Learn', iframeTarget: 'http://grails.org/doc/latest/api']
-    page 'plugins', 'plugins', [category: 'Plugins', iframeTarget: 'http://plugins-grails-org-dev.cfapps.io/plugins']
     page 'singlepagedocumentation', 'single-page-documentation', [category: 'Learn', iframeTarget: 'http://grails.org/doc/latest/']
     page 'plugins-template', 'templates/plugins', [:]
 }

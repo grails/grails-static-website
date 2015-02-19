@@ -5,7 +5,7 @@ menu {
         item 'Download',                    'download.html'
         item 'Plugins',                     '/plugins'
         item 'Community',                   'community.html'
-        item 'Ecosystem',                   'ecosystem.html'        
+        item 'Ecosystem',                   'ecosystem.html'
     }
 
     group('About') {
@@ -51,9 +51,9 @@ pages {
 
 documentation {
     groovyDocumentationVersions([
-            '1.2.0', '1.2.1', '1.2.2', '1.2.3', '1.2.4', '1.2.5', 
+            '1.2.0', '1.2.1', '1.2.2', '1.2.3', '1.2.4', '1.2.5',
             '1.3.0', '1.3.1', '1.3.2', '1.3.3', '1.3.4', '1.3.5', '1.3.6', '1.3.7', '1.3.8', '1.3.9',
-            '2.0.0', '2.0.1', '2.0.2', '2.0.3', '2.0.4', 
+            '2.0.0', '2.0.1', '2.0.2', '2.0.3', '2.0.4',
             '2.1.0', '2.1.1', '2.1.2', '2.1.3', '2.1.4', '2.1.5',
             '2.2.0', '2.2.1', '2.2.2', '2.2.3', '2.2.4', '2.2.5',
             '2.3.0', '2.3.1', '2.3.2', '2.3.3', '2.3.4', '2.3.5', '2.3.6', '2.3.7', '2.3.8', '2.3.9', '2.3.10', '2.3.11',
@@ -160,11 +160,11 @@ allEvents {
         logo 'img/confs/gr8confeu2015.png'
         description '''
             <p>
-            We <strong>feed your brain</strong> with all the important stuff from the 
+            We <strong>feed your brain</strong> with all the important stuff from the
             <strong>Groovy</strong> and <strong>Grails</strong> community.
             </p>
             <p>
-            We have <strong>in-depth</strong> talks covering all <strong>major technologies</strong> in the Groovy ecosystem. 
+            We have <strong>in-depth</strong> talks covering all <strong>major technologies</strong> in the Groovy ecosystem.
             All talks are performed by the <strong>brightest minds</strong> and <strong>core developers</strong> in their fields.
             </p>
         '''
@@ -209,27 +209,27 @@ books {
         cover 'img/books/grocher_jbrown_cover.jpg'
         url 'http://www.apress.com/9781430243779'
         description 'Definitive reference on The Grails Framework, authored by core members of the development team.'
-    }    
+    }
     book('Grails in Action') {
         authors "Glen Smith and Peter Ledbrook"
         cover 'img/books/gsmith2_cover150.jpg'
         url 'http://www.manning.com/gsmith2/'
         description 'Grails in Action, Second Edition is a comprehensive introduction to Grails 2 focused on making you super-productive fast.'
-    }    
+    }
 
     book('Grails 2: A Quick-Start Guide') {
         authors "Dave Klein and Ben Klein"
         cover 'img/books/bklein_cover.jpg'
         url 'http://www.amazon.com/gp/product/1937785777?tag=misa09-20'
         description 'This revised and updated new edition shows you how to use Grails by iteratively building a unique, working application. '
-    }    
+    }
 
     book('Programming Grails') {
         authors "Burt Beckwith"
         cover 'img/books/bbeckwith_cover.gif'
         url 'http://shop.oreilly.com/product/0636920024750.do'
         description 'Dig deeper into Grails architecture and discover how this application framework works its magic.'
-    }   
+    }
 
     book('Groovy in Action, 2nd edition') {
         authors "Dierk König, Guillaume Laforge, Paul King, Cédric Champeau, Hamlet D'Arcy, Erik Pragt, and Jon Skeet"

@@ -44,7 +44,7 @@ pages {
     page 'buildstatus', 'buildstatus', [category: 'Community']
     page 'faq', 'faq', [category: 'Documentation', docSections: documentationSections]
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
-    page 'api', 'api', [category: 'Learn', iframeTarget: 'https://grails.org/doc/latest/api']
+    page 'api', 'api', [category: 'Learn', iframeTarget: 'https://grails.github.io/grails-doc/latest/api/']
     page 'singlepagedocumentation', 'single-page-documentation', [category: 'Learn', iframeTarget: 'http://grails.org/doc/latest/']
     page 'plugins-template', 'templates/plugins', [:]
 }

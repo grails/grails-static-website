@@ -57,7 +57,8 @@ layout 'layouts/main.groovy', true,
                                 h1 'Distributions'
                                 p 'You can download a binary or a documentation bundle.'
 
-                                distributions.each { dist ->
+
+                                distributions.pop().each { dist ->
                                     h2 {
                                         i(class: 'fa grails-icon') {
                                             img src:"img/grails-cupsonly-logo-black.svg"
@@ -104,6 +105,21 @@ layout 'layouts/main.groovy', true,
                                             a(href: pkg.releaseNotes, ' release notes')
                                             yield ' for more information.'
                                         }
+                                    }
+                                }
+                            }
+                            
+                            a(name: 'versions') {}
+                            article{
+                                h2 'Previous Versions'
+                                p 'You can browse the downloads of previous versions of Grails since Grails 1.2.0:'
+                                        
+                                distributions = distributions.reverse()
+
+                                select(class: 'form-control', onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
+                                    option 'Select a version'
+                                    distributions.each{ dist ->
+                                       option "${dist.packages.first().version}"
                                     }
                                 }
                             }

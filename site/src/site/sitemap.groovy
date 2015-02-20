@@ -266,11 +266,18 @@ books {
         description 'Enhance and extend your Java applications with Domain-Specific Languages in Groovy'
     }
 
+    book('Grails Goodness Notebook') {
+        authors 'Hubert A. Klein Ikkink'
+        cover 'img/books/grailsgood.png'
+        url 'https://leanpub.com/grails-goodness-notebook'
+        description 'Experience the Grails platform through code snippets. Learn more about (hidden) Grails features with code snippets and short articles. The articles and code will get you started quickly and will give more insight in Grails.'
+    }
+
     book('Groovy Goodness Notebook') {
         authors 'Hubert A. Klein Ikkink'
         cover 'img/books/ggood.jpg'
         url 'https://leanpub.com/groovy-goodness-notebook'
-        description 'Experience The Grails Framework through code snippets. Learn more about (hidden) Groovy features with code snippets and short articles. The articles and code will get you started quickly and will give more insight in Groovy.'
+        description 'Experience the Groovy programming language through code snippets. Learn more about (hidden) Groovy features with code snippets and short articles. The articles and code will get you started quickly and will give more insight in Groovy.'
     }
 }
 

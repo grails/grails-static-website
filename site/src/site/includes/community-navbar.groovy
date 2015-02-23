@@ -1,4 +1,3 @@
-
 ul(class: 'nav-sidebar') {
     [
             'community': 'Community',
@@ -9,9 +8,9 @@ ul(class: 'nav-sidebar') {
             'usergroups': 'User groups'
     ].each { page, label ->
         if (currentPage == page) {
-            li(class: 'active') { a(href: "${page}.html") { strong(label) } }
+            li(class: 'active') { a(href: addBaseToUri("${page}.html", baseUri)) { strong(label) } }
         } else {
-            li { a(href: "${page}.html", label) }
+            li { a(href: addBaseToUri("${page}.html", baseUri), label) }
         }
     }
 }

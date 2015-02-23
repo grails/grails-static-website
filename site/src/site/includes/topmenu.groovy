@@ -1,10 +1,3 @@
-def addBaseToUri(uri, baseUri) {
-    if(uri.startsWith('/') || uri.contains('://')) {
-        return uri
-    }
-    return baseUri + uri
-}
-
 div(class: 'navbar navbar-default navbar-static-top', role: 'navigation') {
     div(class: 'container') {
         div(class: 'navbar-header') {

@@ -1,10 +1,3 @@
-def addBaseToUri(uri, baseUri) {
-    if(uri.startsWith('/') || uri.contains('://')) {
-        return uri
-    }
-    return baseUri + uri
-}
-
 // footer
 footer(id: 'footer') {
     div(class: 'row') {
@@ -27,14 +20,14 @@ footer(id: 'footer') {
                     yield "Website hosting is provided by "; a(href: 'http://run.pivotal.io', 'Pivotal'); br()
                 }
                 a(href: 'http://artifactoryonline.com') {
-                    img(width:150,src: "${baseUri}img/logos/artifactory.png", title: 'Artifactory Online', alt: 'Aritfactory Online')    
+                    img(width:150,src: "${baseUri}img/logos/artifactory.png", title: 'Artifactory Online', alt: 'Aritfactory Online')
                 }; br()
 
                 a(href: 'http://run.pivotal.io') {
-                    img(src: "${baseUri}img/pws-thumb.png", title: 'Pivotal Web Service', alt: 'Pivotal Web Service')    
+                    img(src: "${baseUri}img/pws-thumb.png", title: 'Pivotal Web Service', alt: 'Pivotal Web Service')
                 }; br()
 
-                
+
             }
         }
         div(class: 'clearfix', "&copy; 2005-${Calendar.instance[Calendar.YEAR]} the Grails project &mdash; Grails is Open Source, ${$a(href: 'http://www.apache.org/licenses/LICENSE-2.0.html', 'Apache 2 License')}")

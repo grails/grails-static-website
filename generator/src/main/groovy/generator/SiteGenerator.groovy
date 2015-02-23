@@ -30,6 +30,7 @@ class SiteGenerator {
         def tplConf = new TemplateConfiguration()
         tplConf.autoIndent = true
         tplConf.autoNewLine = true
+        tplConf.baseTemplateClass = BaseSiteTemplate
 
         def classLoader = new URLClassLoader([sourcesDir.toURI().toURL()] as URL[], this.class.classLoader)
         tplEngine = new MarkupTemplateEngine(classLoader, tplConf, new MarkupTemplateEngine.CachingTemplateResolver())
@@ -39,15 +40,19 @@ class SiteGenerator {
     }
 
     void render(String page, String target = null, Map model = [:]) {
-        if(!model.containsKey('baseUri')) {
-            model.baseUri = ''
-        }
         model.menu = siteMap.menu
         model.currentPage = target
+        addModelDefaults(model)
         target = target ?: page
         def targetFile = new File("$outputDir/${target}.html")
         targetFile.parentFile.mkdirs()
         targetFile.write(tplEngine.createTemplateByPath("pages/${page}.groovy").make(model).toString(), 'utf-8')
+    }
+
+    void addModelDefaults(Map model) {
+      if(!model.containsKey('baseUri')) {
+          model.baseUri = ''
+      }
     }
 
     void generateSite() {
@@ -121,4 +126,14 @@ class SiteGenerator {
             }
         }
     }
+}
+
+@groovy.transform.InheritConstructors
+abstract class BaseSiteTemplate extends groovy.text.markup.BaseTemplate {
+  def addBaseToUri(uri, baseUri) {
+    if(uri.startsWith('/') || uri.contains('://')) {
+      return uri
+    }
+    return baseUri + uri
+  }
 }

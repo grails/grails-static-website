@@ -53,7 +53,7 @@ html {
                     menu['Socialize'].each {
                         def (text,url, style) = [it.name, it.link, it.style ]
                         li {
-                            a(href: url, class: 'icon') { yieldUnescaped "<span class='fa $style'></span> $text" }
+                            a(href: addBaseToUri(url, baseUri), class: 'icon') { yieldUnescaped "<span class='fa $style'></span> $text" }
                         }
                     }
                 }
@@ -102,4 +102,3 @@ html {
         '''
     }
 }
-

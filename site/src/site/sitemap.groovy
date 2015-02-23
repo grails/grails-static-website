@@ -203,6 +203,20 @@ allEvents {
             </p>
         '''
     }
+    event('SpringOne 2GX 2015') {
+        location 'Washington, DC, United States of America'
+        date 'September 14-17, 2015'
+        url 'http://springone2gx.com/'
+        logo 'img/confs/spring2gx2015.png'
+        description '''
+            <p>
+            SpringOne 2GX - The Premier Spring, Groovy/Grails, & Cloud Event
+            </p>
+            <p>
+            SpringOne2GX 2015 will be held September 14 - 17, 2015 at the Marriott Marquis in Washington DC. 5 tracks covering the Spring ecosystem & 4 tracks on Groovy/Grails & more!
+            </p>
+        '''
+    }
     event('Groovy Grails eXchange 2015') {
         location 'London, United Kingdom'
         date 'December 14-15, 2015'

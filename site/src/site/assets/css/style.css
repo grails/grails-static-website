@@ -651,8 +651,11 @@ h8 {
     font-size: 14px
 }
 
-#content .colset-3-article {
+#content .first-event-row {
     padding-top: 30px;
+}
+
+#content .last-event-row {
     padding-bottom: 30px
 }
 

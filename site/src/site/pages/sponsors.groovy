@@ -15,16 +15,9 @@ layout 'layouts/main.groovy', true,
                                 yield ' Sponsors'
                             }
                             article {
-                                p "The Groovy project is generously sponsored by several companies:"
+                                p "The Grails project is generously sponsored by several companies:"
                                 ul {
-                                    li "${$a(href: 'http://gopivotal.com/', 'Pivotal')} hire key project committers"
-                                    li """
-                                        ${$a(href: 'http://www.jetbrains.com/', 'JetBrains')} cover the cost of our server
-                                        which runs our continuous integration server, hosts our documentation and website,
-                                        and they are also offering free licenses for
-                                        the ${$a(href: 'http://www.jetbrains.com/teamcity/', 'TeamCity')} integration server and
-                                        the ${$a(href: 'http://www.jetbrains.com/idea/', 'IntelliJ IDEA')} development environment.
-                                    """
+                                    li "${$a(href: 'http://pivotal.io/', 'Pivotal')} hire key project committers"
                                     li """
                                         ${$a(href: 'http://www.jfrog.com/', 'JFrog')} provide the infrastructure
                                         for deploying and hosting our snapshots and releases,

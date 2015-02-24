@@ -25,12 +25,6 @@ layout 'layouts/main.groovy', true,
                                         and the OSS ${$a(href: 'http://www.jfrog.com/home/v_artifactory_opensource_overview', 'Artifactory')} repository.
                                     """
                                 }
-                                p """
-                                    Sponsors are a key ingredient of the success of the Groovy project.
-                                    If you consider helping the project in a way or another,
-                                    please don't hesitate to contact the Groovy development team.
-                                    Your help will be most appreciated.
-                                """
                             }
                             hr(class: 'divider')
                         }

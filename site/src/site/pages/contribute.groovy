@@ -56,7 +56,7 @@ layout 'layouts/main.groovy', true,
                                         If you want to discuss a new feature,
                                         share interesting findings, and more, then the '''
                                     a(href: 'mailing-lists.html', 'mailing-lists')
-                                    yield ' are the place to go to to start a conversation with the Groovy developers and other Groovy users.'
+                                    yield ' are the place to go to to start a conversation with the Grails developers and other Grails users.'
                                     yield ' For general usage questions, posting a question on '
                                     a href:'http://stackoverflow.com/tags/grails/info', ' StackOverflow '
                                     yield ' is the way to go.'
@@ -91,28 +91,14 @@ layout 'layouts/main.groovy', true,
                                     li {
                                         yield 'the '
                                         a(href: 'api.html', 'GroovyDoc APIs')
-                                        yield ' documenting the classes of the Groovy code base'
-                                    }
-                                    li {
-                                        yield 'the '
-                                        a(href: 'gdk.html', 'Groovy GDK')
-                                        yield ' documentation, explaining how Groovy enriches the JDK APIs'
+                                        yield ' documenting the classes of the Grails code base'
                                     }
                                     li {
                                         yield 'this '
                                         a(href: 'https://github.com/grails/grails-static-website', 'website')
                                     }
                                 }
-                                p {
-                                    yield 'To contribute to the Groovy reference documentation, this '
-                                    a(href: 'http://blog.cacoethes.co.uk/groovyandgrails/contributing-to-the-groovy-documentation', 'blog post')
-                                    yield ' gives all the details on how you can work on that documentation.'
-                                }
-                                p {
-                                    yield 'All the above is stored in our code '
-                                    a(href: 'https://github.com/groovy', 'repositories on Github')
-                                    yield ', so having an account on Github would be ideal.'
-                                }
+     
                                 p """
                                     Contributing to this website is fairly easy, if you have a Github account already,
                                     as you can click on the ${$em('Improve this doc')} buttons that you can see on all the pages of this website.

@@ -23,8 +23,8 @@ layout 'layouts/main.groovy', true,
                             }
                             article {
                                 p '''
-                                    Groovy and its ecosystem are often represented at various Java-oriented conferences,
-                                    but there are particular events fully dedicated to the Groovy ecosystem.
+                                    Grails and its ecosystem are often represented at various Java-oriented conferences,
+                                    but there are particular events fully dedicated to the Groovy/Grails ecosystem.
                                     Here are the upcoming ones you might interested in learning about.
                                 '''
                                 hr(class: 'divider')

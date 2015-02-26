@@ -103,7 +103,8 @@ layout 'layouts/main.groovy', true,
                                         p {
                                             yield 'Consult the '
                                             a(href: pkg.releaseNotes, ' release notes')
-                                            yield ' for more information.'
+                                            yield ' for more information. For historical release notes, refer to '
+                                            a(href: 'https://github.com/grails/grails-core/releases', ' Github')
                                         }
                                     }
                                 }

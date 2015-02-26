@@ -10,7 +10,7 @@ runtime and compile-time meta-programming and Asynchronous programming.
 
 This project builds the Grails website. It is using {gradle}[Gradle] and is fully statically generated.
 
-Build is image:{build-icon}[build status, link={groovy-ci}].
+Build is image:https://travis-ci.org/grails/grails-static-website.svg?branch=master["Build Status", link="https://travis-ci.org/grails/grails-static-website"].
 
 == Generating the site
 

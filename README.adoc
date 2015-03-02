@@ -1,3 +1,6 @@
+:gradle: http://www.gradle.org
+:markupte: http://docs.groovy-lang.org/latest/html/documentation/markup-template-engine.html
+
 = Grails website
 Grails is a powerful web framework, for the Java platform
 aimed at multiplying developers’ productivity thanks to a Convention-over-Configuration, sensible defaults 

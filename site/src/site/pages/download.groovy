@@ -36,7 +36,7 @@ layout 'layouts/main.groovy', true,
                             }
                             article {
                                 p {
-                                    yield 'In this download area, you will be able to download the binary distrubtion and the documentation for Grails.'
+                                    yield 'In this download area, you will be able to download the binary distribution and the documentation for Grails.'
                                 }
                                 p {
                                     yield 'For a quick and effortless start on Mac OSX, Linux or Cygwin, you can use '

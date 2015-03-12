@@ -44,8 +44,9 @@ pages {
     page 'buildstatus', 'buildstatus', [category: 'Community']
     page 'faq', 'faq', [category: 'Documentation', docSections: documentationSections]
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
-    page 'api', 'api', [category: 'Learn', iframeTarget: 'https://grails.github.io/grails-doc/latest/api/']
-    page 'singlepagedocumentation', 'single-page-documentation', [category: 'Learn', iframeTarget: 'https://grails.github.io/grails-doc/latest/']
+    page 'api', 'api', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-doc/latest/api/']
+    page 'gormApi', 'gormApi', [category: 'Documentation', iframeTarget: 'http://grails.github.io/grails-data-mapping/latest/api/']
+    page 'singlepagedocumentation', 'single-page-documentation', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-doc/latest/']
     page 'plugins-template', 'templates/plugins', [:]
 }
 
@@ -66,22 +67,25 @@ documentation {
     }
 
     section ('API documentation', 'fa-code') {
-        item 'GroovyDoc API Reference',  'api',    'api'
+        item 'Grails API Reference',  'api',    'api'
+        item 'GORM API Reference',  'gormApi',    'gormApi'
     }
 }
 
 downloads {
-    // distribution('Grails 3.0') {
-    //     description {
-    //         yield 'Grails 3.0 is currently in beta testing. If you want a stable version, please choose Grails 2.4 which is our latest official '
-    //         a(href: 'versioning.html', 'version')
-    //         yield ' of Groovy.'
-    //     }
+    def currentBetaVersion = '3.0.0.RC1'
+    distribution('Grails 3.0') {
+        description {
+            yield 'Grails 3.0 is currently in beta testing. If you want a stable version, please choose Grails 2.4 which is our latest official '
+            a(href: 'versioning.html', 'version')
+            yield ' of Grails.'
+        }
 
-    //     version('2.4.0-beta-4') {
-    //         releaseNotes 'http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10242&version=20612'
-    //     }
-    // }
+        version(currentBetaVersion) {
+            stable false
+            releaseNotes "https://github.com/grails/grails-core/releases/tag/v$currentBetaVersion"
+        }
+    }
 
     def previousVersions = [
         '1.2.0', '1.2.1', '1.2.2', '1.2.3', '1.2.4', '1.2.5',

@@ -17,7 +17,7 @@ layout 'layouts/main.groovy', true,
                                 }
                                 li {
                                     a(href: 'https://github.com/grails/grails-core/releases', class: 'anchor-link', 'Release Notes')
-                                }                                
+                                }
                             }
                         }
 
@@ -52,70 +52,82 @@ layout 'layouts/main.groovy', true,
                             }
                             hr(class: 'divider')
 
+                            def renderDistribution = { dist ->
+                                h2 {
+                                    i(class: 'fa grails-icon') {
+                                        img src:"img/grails-cupsonly-logo-black.svg"
+                                    }
+
+                                    yield " ${dist.name}"
+                                }
+                                if (dist.description) {
+                                    p {
+                                        dist.description.rehydrate(this, this, this)()
+                                    }
+                                }
+                                dist.packages.each { pkg ->
+                                    h3 "${pkg.version} distributions"
+                                    table(width: '100%', class: 'download-table') {
+                                        tr {
+                                            td {
+                                                a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-${pkg.version}.zip") {
+                                                    i(class: 'fa fa-gears fa-4x') {}
+                                                    br()
+                                                    yield 'binary'
+                                                }
+                                            }
+
+                                            td {
+                                                a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
+                                                    i(class: 'fa fa-file-text fa-4x') {}
+                                                    br()
+                                                    yield ' documentation'
+                                                }
+                                            }
+
+                                            td {
+                                                a(href: "https://github.com/grails/grails-core/releases/tag/v${pkg.version}") {
+                                                    i(class: 'fa fa-file-text fa-4x') {}
+                                                    br()
+                                                    yield ' release notes'
+                                                }
+                                            }
+                                        }
+                                    }
+                                    p {
+                                        yield 'Consult the '
+                                        a(href: pkg.releaseNotes, ' release notes')
+                                        yield ' for more information. For historical release notes, refer to '
+                                        a(href: 'https://github.com/grails/grails-core/releases', ' Github')
+                                    }
+                                }
+                            }
+
+                            def stableDistributions = distributions.findAll() { it.packages.every {  it.stable } }
+
                             a(name: 'distro') {}
                             article {
                                 h1 'Distributions'
                                 p 'You can download a binary or a documentation bundle.'
 
 
-                                distributions.pop().each { dist ->
-                                    h2 {
-                                        i(class: 'fa grails-icon') {
-                                            img src:"img/grails-cupsonly-logo-black.svg"
-                                        }
 
-                                        yield " ${dist.name}"
-                                    }
-                                    if (dist.description) {
-                                        p {
-                                            dist.description.rehydrate(this, this, this)()
-                                        }
-                                    }
-                                    dist.packages.each { pkg ->
-                                        h3 "${pkg.version} distributions"
-                                        table(width: '100%', class: 'download-table') {
-                                            tr {
-                                                td {
-                                                    a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-${pkg.version}.zip") {
-                                                        i(class: 'fa fa-gears fa-4x') {}
-                                                        br()
-                                                        yield 'binary'
-                                                    }
-                                                }
 
-                                                td {
-                                                    a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
-                                                        i(class: 'fa fa-file-text fa-4x') {}
-                                                        br()
-                                                        yield ' documentation'
-                                                    }
-                                                }
-
-                                                td {
-                                                    a(href: "https://github.com/grails/grails-core/releases/tag/v${pkg.version}") {
-                                                        i(class: 'fa fa-file-text fa-4x') {}
-                                                        br()
-                                                        yield ' release notes'
-                                                    }
-                                                }                                                
-                                            }
-                                        }
-                                        p {
-                                            yield 'Consult the '
-                                            a(href: pkg.releaseNotes, ' release notes')
-                                            yield ' for more information. For historical release notes, refer to '
-                                            a(href: 'https://github.com/grails/grails-core/releases', ' Github')
-                                        }
-                                    }
+                                stableDistributions.pop().each renderDistribution
+                                def betaDistribution = distributions.find() { it.packages.any {  !it.stable } }
+                                if(betaDistribution) {
+                                    renderDistribution betaDistribution
                                 }
                             }
-                            
+
+
+
                             a(name: 'versions') {}
                             article{
                                 h2 'Previous Versions'
                                 p 'You can browse the downloads of previous versions of Grails since Grails 1.2.0:'
-                                        
-                                distributions = distributions.reverse()
+
+                                distributions = stableDistributions.reverse()
 
                                 select(class: 'form-control', onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
                                     option 'Select a version'

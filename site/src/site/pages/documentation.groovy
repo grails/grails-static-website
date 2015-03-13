@@ -61,11 +61,23 @@ layout 'layouts/main.groovy', true,
 
                                 a(name: 'old-docs') {}
                                 article {
-                                    h2 'Documentation for older versions'
+                                    h2 'User guide for older versions'
                                     p 'You can browse the documentation of previous versions of Grails since Grails 1.2.0:'
                                     def allVersions =  [*allDocVersions, 'Select a version'].reverse()
 
                                     select(class: 'form-control', onchange: "window.location.href='http://grails.org/doc/' + this.value ") {
+                                        allVersions.each { String version ->
+                                            option version
+                                        }
+                                    }
+                                }
+                                br()
+                                article {
+                                    h2 'API for older versions'
+                                    p 'You can browse the API of previous versions of Grails since Grails 1.2.0:'
+                                    def allVersions =  [*allDocVersions, 'Select a version'].reverse()
+
+                                    select(class: 'form-control', onchange: "window.location.href='http://grails.org/doc/' + this.value + '/api' ") {
                                         allVersions.each { String version ->
                                             option version
                                         }

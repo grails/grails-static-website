@@ -100,6 +100,7 @@ downloads {
         distribution("${versionNumber}"){
             version("${versionNumber}"){
                 releaseNotes "https://github.com/grails/grails-core/releases/tag/v${versionNumber}"
+                stable true
             }
         }
     }

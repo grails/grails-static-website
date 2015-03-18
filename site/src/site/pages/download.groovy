@@ -78,7 +78,10 @@ layout 'layouts/main.groovy', true,
                                             }
 
                                             td {
-                                                a(href: "https://github.com/grails/grails-core/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
+
+                                                def majorVersion = pkg.version[0].toInteger()
+                                                def subProject = majorVersion >= 3 ? 'doc' : 'core'
+                                                a(href: "https://github.com/grails/grails-${subProject}/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
                                                     i(class: 'fa fa-file-text fa-4x') {}
                                                     br()
                                                     yield ' documentation'

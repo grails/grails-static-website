@@ -73,7 +73,7 @@ documentation {
 }
 
 downloads {
-    def currentBetaVersion = '3.0.0.RC1'
+    def currentBetaVersion = '3.0.0.RC2'
     distribution('Grails 3.0') {
         description {
             yield 'Grails 3.0 is currently in beta testing. If you want a stable version, please choose Grails 2.4 which is our latest official '

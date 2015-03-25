@@ -73,10 +73,12 @@ documentation {
 }
 
 downloads {
+    //placing last to use pop on the download page
+    def currentStableVersion = '2.5.0'
     def currentBetaVersion = '3.0.0.RC2'
     distribution('Grails 3.0') {
         description {
-            yield 'Grails 3.0 is currently in beta testing. If you want a stable version, please choose Grails 2.4 which is our latest official '
+            yield "Grails 3.0 is currently in beta testing. If you want a stable version, please choose Grails $currentStableVersion which is our latest official "
             a(href: 'versioning.html', 'version')
             yield ' of Grails.'
         }
@@ -104,8 +106,6 @@ downloads {
             }
         }
     }
-    //placing last to use pop on the download page
-    def currentStableVersion = '2.5.0'
     distribution("Grails $currentStableVersion") {
         description {
             yield "Grails $currentStableVersion is the latest official release of Grails"

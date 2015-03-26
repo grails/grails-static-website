@@ -41,7 +41,7 @@ layout 'layouts/main.groovy', true,
                                 h2 'Where can I ask questions?'
                                 p {
                                     yield 'The best place to get community support is '
-                                    a(href: 'http://stackoverflow/tags/grails', 'Stack Overflow')
+                                    a(href: 'http://stackoverflow.com/questions/tagged/grails', 'Stack Overflow')
                                     yield '. If you wish to discuss the development of the framework itself or the Grails source code, then checkout the'
                                     a(href: 'https://grails.org/mailing-lists.html', ' Mailing lists')
                                     yield '.'

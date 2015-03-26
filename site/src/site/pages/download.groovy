@@ -80,7 +80,7 @@ layout 'layouts/main.groovy', true,
                                             td {
 
                                                 def majorVersion = pkg.version[0].toInteger()
-                                                def subProject = majorVersion >= 3 ? 'doc' : 'core'
+                                                def subProject = (majorVersion >= 3 || pkg.version > '2.4.4' || pkg.version >= '2.5.0') ? 'doc' : 'core'
                                                 a(href: "https://github.com/grails/grails-${subProject}/releases/download/v${pkg.version}/grails-docs-${pkg.version}.zip") {
                                                     i(class: 'fa fa-file-text fa-4x') {}
                                                     br()

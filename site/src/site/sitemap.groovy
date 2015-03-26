@@ -75,7 +75,7 @@ documentation {
 downloads {
     //placing last to use pop on the download page
     def currentStableVersion = '2.5.0'
-    def currentBetaVersion = '3.0.0.RC2'
+    def currentBetaVersion = '3.0.0.RC3'
     distribution('Grails 3.0') {
         description {
             yield "Grails 3.0 is currently in beta testing. If you want a stable version, please choose Grails $currentStableVersion which is our latest official "

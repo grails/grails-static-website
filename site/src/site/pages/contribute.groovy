@@ -75,7 +75,7 @@ layout 'layouts/main.groovy', true,
                                 }
                                 p {
                                     button(type: 'button', class: 'btn btn-default', 'Report an issue',
-                                            onclick: 'window.location.href="https://github.com/grails/grails-core/issues"')
+                                            onclick: 'window.location.href="https://github.com/grails/grails-core/issues/new"')
                                 }
                                 hr(class: 'divider')
 

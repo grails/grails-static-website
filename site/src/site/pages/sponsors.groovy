@@ -17,7 +17,7 @@ layout 'layouts/main.groovy', true,
                             article {
                                 p "The Grails project is generously sponsored by several companies:"
                                 ul {
-                                    li "${$a(href: 'http://pivotal.io/', 'Pivotal')} hire key project committers"
+                                    li "${$a(href: 'http://pivotal.io/', 'Pivotal')} provide website hosting"
                                     li """
                                         ${$a(href: 'http://www.jfrog.com/', 'JFrog')} provide the infrastructure
                                         for deploying and hosting our snapshots and releases,

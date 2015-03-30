@@ -23,7 +23,7 @@ menu {
         item 'Grails on Twitter',           'https://twitter.com/grailsframework',           'fa-twitter'
         item 'Events and conferences',      'events.html',                                      'fa-calendar'
         item 'Source code on GitHub',       'https://github.com/grails/grails-core',            'fa-github'
-        item 'Report issues in Jira',       'contribute.html#reporting-issues',                 'fa-bug'
+        item 'Report issues on Github',       'contribute.html#reporting-issues',                 'fa-bug'
         item 'Stack Overflow questions',    'http://stackoverflow.com/questions/tagged/grails', 'fa-stack-overflow'
     }
 }

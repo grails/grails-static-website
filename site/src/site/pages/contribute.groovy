@@ -32,7 +32,7 @@ layout 'layouts/main.groovy', true,
                                     li {
                                         a(href: '#reporting-issues', 'reporting issues')
                                         yield ' you encounter in our '
-                                        a(href: 'http://jira.grails.org/browse/GRAILS', 'bug tracker')
+                                        a(href: 'https://github.com/grails/grails-core/issues', 'bug tracker')
                                     }
                                     li {
                                         a(href: '#documenting', 'documenting')
@@ -66,8 +66,8 @@ layout 'layouts/main.groovy', true,
                                 a(name: 'reporting-issues') {}
                                 h2 'Reporting issues'
                                 p {
-                                    yield 'The Grails project is using the '
-                                    a(href: 'contribute.html#reporting-issues', 'JIRA bug tracker')
+                                    yield 'The Grails project uses '
+                                    a(href: 'contribute.html#reporting-issues', 'Github issues')
                                     yield '''
                                         to report and track issues, feature enhancements, and new features.
                                         Be sure to be signed-up and logged-in, as explained below, before proceeding.
@@ -75,7 +75,7 @@ layout 'layouts/main.groovy', true,
                                 }
                                 p {
                                     button(type: 'button', class: 'btn btn-default', 'Report an issue',
-                                            onclick: 'window.location.href="http://jira.grails.org/browse/GRAILS"')
+                                            onclick: 'window.location.href="https://github.com/grails/grails-core/issues"')
                                 }
                                 hr(class: 'divider')
 
@@ -98,7 +98,7 @@ layout 'layouts/main.groovy', true,
                                         a(href: 'https://github.com/grails/grails-static-website', 'website')
                                     }
                                 }
-     
+
                                 p """
                                     Contributing to this website is fairly easy, if you have a Github account already,
                                     as you can click on the ${$em('Improve this doc')} buttons that you can see on all the pages of this website.
@@ -112,14 +112,9 @@ layout 'layouts/main.groovy', true,
                                 h2 'Contributing code'
                                 p {
                                     yield '''
-                                        If you know the area you want to contribute to, this is great, but if you are looking for
-                                        some first contributions, the Grails development team tries to maintain a '''
-                                    a(href: 'https://jira.grails.org/secure/IssueNavigator%21executeAdvanced.jspa?jqlQuery=project%3DGRAILS+and+labels+%3D+contrib+AND+resolution%3DUnresolved&runQuery=true&clear=true', 'list tickets')
-                                    yield '''
-                                        of possible easy contributions that you could get you started on your journey
-                                        to become of Grails committer. Just raise your hand on the Grails developer '''
+                                        If you know the area you want to contribute to, this is great, but if you are looking to make an initial contribution just raise your hand on the Grails developer '''
                                     a(href: 'mailing-lists.html', 'mailing-list')
-                                    yield ''' to tell us about your desire to work on that ticket.'''
+                                    yield ''' to tell us about your desire to work on a particular problem.'''
                                 }
                                 p '''
                                     For more complicated tasks, the best approach is also to bring that to the attention of the Grails developers,

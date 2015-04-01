@@ -27,7 +27,7 @@ layout 'layouts/main.groovy', true,
                                 i(class: 'fa fa-cloud-download') {}
                                 yield ' Download'
                             }
-                            def linkVersionToDownload = distributions.collect { it.packages }.flatten().find { it.stable }.version
+                            def linkVersionToDownload = distributions.reverse().collect { it.packages }.flatten().find { it.stable }.version
                             button(id: 'big-download-button', type: 'button', class: 'btn btn-default',
                                     title: "Download Grails ${linkVersionToDownload}",
                                     onclick: "window.location.href=\"https://github.com/grails/grails-core/releases/download/v${linkVersionToDownload}/grails-${linkVersionToDownload}.zip\"") {

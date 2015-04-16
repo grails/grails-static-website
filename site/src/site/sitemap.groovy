@@ -181,7 +181,7 @@ allEvents {
         location 'Baku, Azerbaijan'
         date 'April 25, 2015'
         url 'http://grailsbaku.com/'
-        logo 'img/event.jpg'
+        logo 'img/ecosystem/grails.png'
         description '''
             <p>
              We are creating the first Groovy and Grails user group in Azerbaijan.  We will talk about the ecosystem of Grails framework.

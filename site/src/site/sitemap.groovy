@@ -176,6 +176,19 @@ allEvents {
             </p>
         '''
     }
+    
+     event('Grails Azerbaijan 2015') {
+        location 'Baku, Azerbaijan'
+        date 'April 25, 2015'
+        url 'http://grailsbaku.com/'
+        logo 'img/event.jpg'
+        description '''
+            <p>
+             We are creating first Groovy and Grails user group in Azerbaijan.We will talk about ecosystem of Grails framework.
+             <strong> Join Us </strong> to get more informed about Groovy and Grails.
+             </p>
+        '''
+    }
     event('GR8Conf EU 2015') {
         location 'Copenhagen, Denmark'
         date 'June 2-4, 2015'

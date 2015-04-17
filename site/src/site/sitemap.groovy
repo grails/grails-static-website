@@ -163,19 +163,6 @@ ecosystem {
 }
 
 allEvents {
-    event('Greach 2015') {
-        location 'Madrid, Spain'
-        date 'April 10-11, 2015'
-        url 'http://greachconf.com/'
-        logo 'img/confs/greach2015.png'
-        description '''
-            <p>
-            Greach, the Spanish gathering of enthusiasts of Groovy, Grails, Griffon, Gradle, Spock, Vert.x, Gaelyk,
-            and many more. With inspirational talks from the makers and users of these projects, hands-on workshops with the rock stars,
-            join the 150+ attendees, designers, students, designers, the best professionals together in a great atmosphere.
-            </p>
-        '''
-    }
 
      event('Grails Azerbaijan 2015') {
         location 'Baku, Azerbaijan'

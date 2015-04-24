@@ -245,7 +245,7 @@ books {
 		authors "Henrique Lobo Weissmann"
 		cover 'img/books/grails_weissmann.png'
 		url 'http://www.casadocodigo.com.br/products/livro-grails'
-		description "The best reference on Grails (2.5 and 3.0) in portuguese. A great guide to the framework, dealing with many details of the framework that many times are ignored by it's users. "
+		description "The best reference on Grails (2.5 and 3.0) in portuguese. A great guide to the framework, dealing with details of the framework that many times are ignored by it's users. "
 	}
     book('The Definitive Guide to Grails 2') {
         authors "Jeff Scott Brown and Graeme Rocher"

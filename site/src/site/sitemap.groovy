@@ -241,6 +241,13 @@ allEvents {
 }
 
 books {
+	book("Falando de Grails") {
+		authors "Henrique Lobo Weissmann"
+		cover 'img/books/grails_weissmann.png'
+		url 'http://www.casadocodigo.com.br/products/livro-grails'
+		description "The best Grails reference in portuguese, authored by the founder of Grails Brasil."
+	}
+
     book('The Definitive Guide to Grails 2') {
         authors "Jeff Scott Brown and Graeme Rocher"
         cover 'img/books/grocher_jbrown_cover.jpg'

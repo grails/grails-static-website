@@ -18,10 +18,15 @@ footer(id: 'footer') {
                     yield "The Grails Framework"; br()
                     yield "repository is hosted by "; a(href: 'http://artifactoryonline.com', 'Artifactory'); br()
                     yield "Website hosting is provided by "; a(href: 'http://run.pivotal.io', 'Pivotal'); br()
+                    yield "YourKit supports Grails with its "; a(href:"https://www.yourkit.com/java/profiler/index.jsp", 'Java Profiler'); br()
                 }
                 a(href: 'http://artifactoryonline.com') {
                     img(width:150,src: "${baseUri}img/logos/artifactory.png", title: 'Artifactory Online', alt: 'Aritfactory Online')
-                }; br()
+                }; br(); br()
+
+                a(href: 'http://yourkit.com') {
+                    img(width:150,src: "https://www.yourkit.com/images/yklogo.png", title: 'YourKit Java Profiler', alt: 'YourKit Java Profiler')
+                }; br()                
 
                 a(href: 'http://run.pivotal.io') {
                     img(src: "${baseUri}img/pws-thumb.png", title: 'Pivotal Web Service', alt: 'Pivotal Web Service')

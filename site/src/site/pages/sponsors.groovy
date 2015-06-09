@@ -25,6 +25,13 @@ layout 'layouts/main.groovy', true,
                                         thanks to the ${$a(href: 'https://bintray.com/', 'Bintray')} social platform for distribution,
                                         and the OSS ${$a(href: 'http://www.jfrog.com/home/v_artifactory_opensource_overview', 'Artifactory')} repository.
                                     """
+
+                                    li """
+YourKit supports open source projects with its full-featured Java Profiler. 
+YourKit, LLC is the creator of <a href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a> 
+and <a href="https://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>, 
+innovative and intelligent tools for profiling Java and .NET applications. 
+                                    """
                                 }
                             }
                             hr(class: 'divider')

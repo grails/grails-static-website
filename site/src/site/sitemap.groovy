@@ -164,34 +164,7 @@ ecosystem {
 
 allEvents {
 
-     event('Grails Azerbaijan 2015') {
-        location 'Baku, Azerbaijan'
-        date 'April 25, 2015'
-        url 'http://grailsbaku.com/'
-        logo 'img/confs/grailsbaku.jpg'
-        description '''
-            <p>
-             We are creating the first Groovy and Grails user group in Azerbaijan.  We will talk about the ecosystem of Grails framework.
-             <strong> Join Us </strong> to get more informed about Groovy and Grails.
-             </p>
-        '''
-    }
-    event('GR8Conf EU 2015') {
-        location 'Copenhagen, Denmark'
-        date 'June 2-4, 2015'
-        url 'http://gr8conf.eu/'
-        logo 'img/confs/gr8confeu2015.png'
-        description '''
-            <p>
-            We <strong>feed your brain</strong> with all the important stuff from the
-            <strong>Groovy</strong> and <strong>Grails</strong> community.
-            </p>
-            <p>
-            We have <strong>in-depth</strong> talks covering all <strong>major technologies</strong> in the Groovy ecosystem.
-            All talks are performed by the <strong>brightest minds</strong> and <strong>core developers</strong> in their fields.
-            </p>
-        '''
-    }
+
     event('GR8Conf US 2015') {
         location 'Minneapolis, MN, United States of America'
         date 'July 29-31, 2015'

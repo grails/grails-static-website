@@ -2,9 +2,10 @@ menu {
     group('Grails') {
         item 'Learn',                       'learn.html'
         item 'Documentation',               'documentation.html'
+        item 'Support',                    'support.html'
         item 'Download',                    'download.html'
         item 'Plugins',                     '/plugins/'
-        item 'Community',                   'community.html'
+        item 'Community',                   'community.html'        
         item 'Ecosystem',                   'ecosystem.html'
     }
 
@@ -37,6 +38,7 @@ pages {
     page 'download', 'download', [category: 'Download', distributions: distributions]
     page 'versioning', 'versioning', [category: 'Download']
     page 'community', 'community', [category: 'Community']
+    page 'support', 'support', [category: 'Support']
     page 'usergroups', 'usergroups', [category: 'Community', userGroups: usergroups]
     page 'mailing-lists', 'mailing-lists', [category: 'Community']
     page 'contribute', 'contribute', [category: 'Community']

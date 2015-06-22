@@ -48,7 +48,11 @@ layout 'layouts/main.groovy', true,
                                     a(href:" http://www.ociweb.com/services/commercial-product-support/", " http://www.ociweb.com/services/commercial-product-support/")
                                 }
 
-                                p "We build high performance, real-time, mission critical middleware systems and integration solutions. Our goal is to make solutions more open, scalable, reusable, interoperable, and affordable. Please visit www.ociweb.com to learn more about our engineering services, open source middleware technologies, and professional IT training."
+                                p {
+                                    yield  "We build high performance, real-time, mission critical middleware systems and integration solutions. Our goal is to make solutions more open, scalable, reusable, interoperable, and affordable. Please visit " 
+                                    a( href:"http://www.ociweb.com", "www.ociweb.com")
+                                    yield " to learn more about our engineering services, open source middleware technologies, and professional IT training."
+                                }
 
                                 a( name:"contact" ) {}
                                 h2 {

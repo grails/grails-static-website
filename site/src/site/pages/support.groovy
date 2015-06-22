@@ -65,7 +65,7 @@ layout 'layouts/main.groovy', true,
 
                                 
                                 ul {
-                                    li "12140 Woodcrest Executive Drive, Suite 250 Saint Louis, MO 63141, MO"
+                                    li "12140 Woodcrest Executive Drive, Suite 250 Saint Louis, MO 63141, USA"
                                     li {
                                         yield "Tel: "
                                         a(href:"tel:+1-314-579-0066", "01*314*579*0066")

@@ -21,11 +21,13 @@ menu {
 
     group('Socialize') {
         item 'Discuss on the Mailing List', 'mailing-lists.html',                               'fa-envelope'
+        item 'Discuss on Slack',    'http://slack-signup.grails.org', 'fa-slack'
         item 'Grails on Twitter',           'https://twitter.com/grailsframework',           'fa-twitter'
         item 'Events and conferences',      'events.html',                                      'fa-calendar'
         item 'Source code on GitHub',       'https://github.com/grails/grails-core',            'fa-github'
         item 'Report issues on Github',       'contribute.html#reporting-issues',                 'fa-bug'
         item 'Stack Overflow questions',    'http://stackoverflow.com/questions/tagged/grails', 'fa-stack-overflow'
+
     }
 }
 

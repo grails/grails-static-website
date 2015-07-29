@@ -69,7 +69,7 @@ def currentStableVersion = '3.0.4'
 def allVersions = previousVersions + [currentStableVersion]
     
 documentation {
-    groovyDocumentationVersions(currentStableVersion)
+    groovyDocumentationVersions(allVersions)
 
     section('User Guide','fa-graduation-cap') {
         //          NAME                                     TARGET HTML                DOCPAGE HTML                       GENERATE

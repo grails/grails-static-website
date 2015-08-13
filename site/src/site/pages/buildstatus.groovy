@@ -50,6 +50,8 @@ layout 'layouts/main.groovy', true,
                                     }
                                 }
                                 renderBuilds(['Grails Master': ['grails/grails-core','master'],
+                                        'Grails 3.0.x Branch': ['grails/grails-core', '3.0.x'],
+                                        'Grails 2.5.x Branch': ['grails/grails-core', '2.5.x'],
                                         'Grails 2.4.x Branch': ['grails/grails-core', '2.4.x'],
                                         'Grails 2.3.x Branch': ['grails/grails-core', '2.3.x']
                                         ])

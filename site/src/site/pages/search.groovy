@@ -31,7 +31,7 @@ layout 'layouts/main.groovy', true,
                                 'gcse:search'(linkTarget: '_blank'){}
                                 style '''
                                     .gsc-input-box {
-                                        height: 30px;
+                                        height: 32px;
                                     }
                                     input.gsc-search-button, input.gsc-search-button-v2 {
                                         height: 30px;

@@ -320,6 +320,10 @@ usergroups {
     	location 'Europe/The Netherlands'
     	url 'http://www.meetup.com/nl-gug/'
     }
+    userGroup('Berlin Groovy User Group') {
+    	location 'Europe/Germany'
+    	url 'http://www.meetup.com/Berlin-Groovy-User-Group/'
+    }
 
     // North-America
     userGroup('Groovy Users of Minnesota') {

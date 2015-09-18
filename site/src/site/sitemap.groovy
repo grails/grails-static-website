@@ -149,10 +149,10 @@ ecosystem {
         logo 'img/ecosystem/griffon.png'
     }
 
-    project('GVM') {
-        description 'GVM is a tool for managing parallel Versions of multiple Software Development Kits on most Unix based systems. It provides a convenient command line interface for installing, switching, removing and listing Candidates.'
-        url 'http://gvmtool.net/'
-        logo 'img/ecosystem/gvmtool.png'
+    project('SDK') {
+        description 'Sdkman is a tool for managing parallel versions of multiple Software Development Kits on most Unix based systems. It provides a convenient Command Line Interface (CLI) and API for installing, switching, removing and listing Candidates. Formerly known as GVM the Groovy enVironment Manager, it was inspired by the very useful RVM and rbenv tools, used at large by the Ruby community.'
+        url 'http://sdkman.io/'
+        logo 'img/ecosystem/sdkman.png'
     }
 }
 

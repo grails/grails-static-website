@@ -67,7 +67,7 @@ layout 'layouts/main.groovy', true,
                                 h2 'Reporting issues'
                                 p {
                                     yield 'The Grails project uses '
-                                    a(href: 'contribute.html#reporting-issues', 'Github issues')
+                                    a(href: 'https://github.com/grails/grails-core/issues', 'Github issues')
                                     yield '''
                                         to report and track issues, feature enhancements, and new features.
                                         Be sure to be signed-up and logged-in, as explained below, before proceeding.

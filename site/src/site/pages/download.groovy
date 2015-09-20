@@ -13,7 +13,7 @@ layout 'layouts/main.groovy', true,
                                     a(href: '#distro', class: 'anchor-link', 'Distributions')
                                 }
                                 li {
-                                    a(href: '#gvm', class: 'anchor-link', 'Through GVM')
+                                    a(href: '#sdkman', class: 'anchor-link', 'Through SDKMAN!')
                                 }
                                 li {
                                     a(href: 'https://github.com/grails/grails-core/releases', class: 'anchor-link', 'Release Notes')
@@ -40,9 +40,9 @@ layout 'layouts/main.groovy', true,
                                 }
                                 p {
                                     yield 'For a quick and effortless start on Mac OSX, Linux or Cygwin, you can use '
-                                    a(href: 'http://sdkman.io', 'SDK (The Software Development Kit Manager)')
+                                    a(href: 'http://sdkman.io', 'SDKMAN! (The Software Development Kit Manager)')
                                     yield ' to download and configure any Grails version of your choice. Basic '
-                                    a(href: '#sdk', 'instructions')
+                                    a(href: '#sdkman', 'instructions')
                                     yield ' can be found below. '
                                     br()
                                     yield 'Windows users can use '
@@ -142,15 +142,15 @@ layout 'layouts/main.groovy', true,
 
                             hr(class: 'divider')
 
-                            a(name: 'sdk') {}
+                            a(name: 'sdkman') {}
                             article {
-                                h1 'SDK (The Software Development Kit Manager)'
+                                h1 'SDKMAN! (The Software Development Kit Manager)'
                                 p {
                                     yield 'This tool makes installing Grails on any Bash platform (Mac OSX, Linux, Cygwin, Solaris or FreeBSD) very easy.'
                                     br()
                                     yield 'Simply open a new terminal and enter:'
                                 }
-                                pre { code '$ curl -s get.gvm.io | bash' }
+                                pre { code '$ curl -s get.sdkman.io | bash' }
                                 p {
                                     yield 'Follow the instructions on-screen to complete installation.'
                                     br()

@@ -92,6 +92,27 @@ a.navbar-brand {
     }
 }
 
+#fork-me{
+    position: fixed;
+    padding: 0px 50px 0px 50px;
+    top: 40px;
+    right: -60px;
+    background-color: #a60000;
+    color: #ffffff;
+    font-size: 1em;
+    z-index: 100;
+    transform: rotate(+45deg);
+    text-align: center;  
+    font-weight: bolder;
+    border: #c14646;
+    border-style: dashed;
+    border-width: 1px;
+}
+
+#fork-me p {
+    margin: 0em 0;
+}
+
 #band {
     /*grey =#808080*/
     background: #79B94C  no-repeat 50% 30%;

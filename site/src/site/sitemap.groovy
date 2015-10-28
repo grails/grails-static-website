@@ -49,7 +49,7 @@ pages {
     page 'faq', 'faq', [category: 'Documentation', docSections: documentationSections]
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
     page 'api', 'api', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-doc/latest/api/']
-    page 'gormApi', 'gormApi', [category: 'Documentation', iframeTarget: 'http://grails.github.io/grails-data-mapping/latest/api/']
+    page 'gormApi', 'gormApi', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-data-mapping/latest/api/']
     page 'singlepagedocumentation', 'single-page-documentation', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-doc/latest/']
     page 'plugins-template', 'templates/plugins', [:]
 }

@@ -56,6 +56,22 @@ layout 'layouts/main.groovy', true,
                                     }
                                 }
                             }
+
+                           div(class: 'row-fluid') {
+                                article {
+                                    div(class: 'col-md-6', style:'margin-top:20px') {
+                                        a(name: "foo") {}
+                                        h2 {
+                                            i(class: 'fa fa-database', " GORM")
+                                        }
+                                        ul {
+                                            li { a(href: "https://grails.github.io/grails-data-mapping/latest/", "Website") }
+                                            li { a(href: "http://grails.github.io/grails-doc/latest/guide/GORM.html", "GORM for Hibernate User Guide") }
+                                            li { a(href: "https://grails.github.io/grails-data-mapping/latest/api/", "API Reference") }
+                                        }
+                                    }
+                                }
+                            }                            
                             div(class: 'col-md-12') {
                                 hr(class: 'divider')
 

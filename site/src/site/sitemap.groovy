@@ -53,10 +53,13 @@ pages {
     page 'plugins-template', 'templates/plugins', [:]
 }
 
-def readVersions = getClass().getResource("versions").text.split('\n')
+def oldVersions = getClass().getResource("versions").text.split('\n')
+def releases = new groovy.json.JsonSlurper().parseText(new URL('https://api.github.com/repos/grails/grails-core/releases').text)
+def gitHubVersions = releases.findAll {!it.draft && !it.prerelease}*.tag_name.collect{ it - "v" }.sort()
 def previousVersions = []
-previousVersions.addAll( readVersions[0..-2])
-def currentStableVersion = readVersions[-1]
+previousVersions.addAll(oldVersions)
+previousVersions.addAll(gitHubVersions[0..-2])
+def currentStableVersion = gitHubVersions[-1]
 def allVersions = previousVersions + [currentStableVersion]
     
 documentation {

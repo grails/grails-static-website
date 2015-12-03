@@ -8,7 +8,6 @@ dependencies {
     ext.groovyVersion = '2.4.5'
     compile "org.codehaus.groovy:groovy:$groovyVersion"
     compile "org.codehaus.groovy:groovy-templates:$groovyVersion"
-    compile "org.codehaus.groovy:groovy-json:$groovyVersion"
 }
 
 compileGroovy.sourceCompatibility = '1.7'

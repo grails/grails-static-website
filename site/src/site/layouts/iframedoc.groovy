@@ -8,9 +8,10 @@
  * @param iframeTarget , the URL of the page to be included as an iframe
  */
 layout 'layouts/page.groovy', true,
+		extraStyles: ['hide-overflow.css'],
         mainContent: contents {
             div {
                 include template: 'includes/topmenu.groovy'
             }
-            iframe(class: 'doc-embed', frameborder: '0', height: '100%', width: '100%', src: iframeTarget) {}
+            iframe(class: 'doc-embed', frameborder: '0', height: '100%', width: '100%', style:'display: block;padding-bottom: 70px;', src: iframeTarget) {}
         }

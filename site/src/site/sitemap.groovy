@@ -4,7 +4,7 @@ menu {
         item 'Documentation',               'documentation.html'
         item 'Support',                    'support.html'
         item 'Download',                    'download.html'
-        item 'Plugins',                     'plugins.html'
+        item 'Plugins',                     '/plugins/'
         item 'Community',                   'community.html'        
         item 'Ecosystem',                   'ecosystem.html'
     }
@@ -49,7 +49,6 @@ pages {
     page 'faq', 'faq', [category: 'Documentation', docSections: documentationSections]
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
     page 'api', 'api', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-doc/latest/api/']
-    page 'plugins', 'plugins', [category: 'Documentation', iframeTarget: 'http://grails-plugins.org']
     page 'singlepagedocumentation', 'single-page-documentation', [category: 'Documentation', iframeTarget: 'https://grails.github.io/grails-doc/latest/']
     page 'plugins-template', 'templates/plugins', [:]
 }

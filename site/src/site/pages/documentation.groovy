@@ -65,9 +65,9 @@ layout 'layouts/main.groovy', true,
                                             i(class: 'fa fa-database', " GORM")
                                         }
                                         ul {
-                                            li { a(href: "https://grails.github.io/grails-data-mapping/latest/", "Website") }
-                                            li { a(href: "http://grails.github.io/grails-doc/latest/guide/GORM.html", "GORM for Hibernate User Guide") }
-                                            li { a(href: "https://grails.github.io/grails-data-mapping/latest/api/", "API Reference") }
+                                            li { a(href: "https://gorm.grails.org/", "Website") }
+                                            li { a(href: "http://docs.grails.org/latest/guide/GORM.html", "GORM for Hibernate User Guide") }
+                                            li { a(href: "https://gorm.grails.org/latest/api/", "API Reference") }
                                         }
                                     }
                                 }

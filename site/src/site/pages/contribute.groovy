@@ -145,6 +145,19 @@ layout 'layouts/main.groovy', true,
                                     yield 'If you are working with the IntelliJ IDEA development environment then you can import the project using the Intellij '
                                     yield 'Gradle Tooling ( "File / Import Project" and select the "build.gradle" file).'
                                 }
+                                p 'To get a local development version of Grails working first run the install task'
+                                pre { code './gradlew install' }
+                                p {
+                                    yield 'Then install '
+                                    a(href: 'http://sdkman.io', 'SDKman')
+                                    yield ' which is the quickest way to setup a development environment.'                                        
+                                }
+                                p 'Once you have SDKman installed point SDKman to your local development version of Grails:'
+                                
+                                pre { code 'sdk install grails dev /path/to/checkout' }
+                                pre { code 'sdk use grails dev' }
+                                p 'Now the "grails" command will be using your development version!'
+                                
                                 p 'The most important command you will have to run before sending your changes is the test command:'
                                 pre { code './gradlew test' }
                                 p 'For a successful contribution, all tests should be green!'

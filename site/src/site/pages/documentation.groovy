@@ -29,33 +29,27 @@ layout 'layouts/main.groovy', true,
                             }
                             p {
                                 yield 'The documentation is available as a '
-                                a(href: "single-page-documentation.html", 'single-page document')
+                                a(href: "http://docs.grails.org", 'single-page document')
                                 yield ', or feel free to pick at a direct section below.'
                             }
                             p "You can also browse ${$a(href: '#old-docs', 'documentation for older versions')}."
                             hr(class: 'divider')
 
-                            // group sections by 2, for 2 columns
-                            def rows = docSections.collate(2)
-                            rows.each { row ->
-                                div(class: 'row-fluid') {
-                                    article {
-                                        row.each { section ->
-                                            div(class: 'col-md-6') {
-                                                a(name: section.anchor) {}
-                                                h2 {
-                                                    i(class: "fa ${section.icon}", " $section.name")
-                                                }
-                                                ul {
-                                                    section.getItems().each { item ->
-                                                        li { a(href: "${item.targetFilename}.html", item.name) }
-                                                    }
-                                                }
-                                            }
+                           div(class: 'row-fluid') {
+                                article {
+                                    div(class: 'col-md-6', style:'margin-top:20px') {
+                                        a(name: "foo") {}
+                                        h2 {
+                                            i(class: 'fa fa-graduation-cap', " User Guide")
+                                        }
+                                        ul {
+                                            li { a(href: "https://grails.org/download.html", "Downloading Grails") }
+                                            li { a(href: "http://docs.grails.org/", "User Guide") }
+                                            li { a(href: "http://docs.grails.org/latest/api/", "API Reference") }
                                         }
                                     }
                                 }
-                            }
+                            } 
 
                            div(class: 'row-fluid') {
                                 article {

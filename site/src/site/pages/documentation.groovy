@@ -29,7 +29,7 @@ layout 'layouts/main.groovy', true,
                             }
                             p {
                                 yield 'The documentation is available as a '
-                                a(href: "http://docs.grails.org", 'single-page document')
+                                a(href: "http://docs.grails.org/latest/guide/single.html", 'single-page document')
                                 yield ', or feel free to pick at a direct section below.'
                             }
                             p "You can also browse ${$a(href: '#old-docs', 'documentation for older versions')}."

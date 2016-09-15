@@ -133,8 +133,8 @@ layout 'layouts/main.groovy', true,
                                 distributions = stableDistributions.reverse()
 
                                 select(class: 'form-control', onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
-                                    option 'Select a version'
-                                    distributions.each{ dist ->
+                                    option(label: 'Select a version', disabled: 'disabled', 'selected': 'selected')
+                                    distributions.findAll { it.name }.each{ dist ->
                                        option "${dist.packages.first().version}"
                                     }
                                 }

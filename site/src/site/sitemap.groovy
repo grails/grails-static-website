@@ -50,7 +50,7 @@ pages {
     page 'events', 'events', [category: 'Community', allEvents: allEvents]
     page 'api', 'api', [category: 'Documentation', iframeTarget: 'https://docs.grails.org/latest/api/']
     page 'plugins', 'plugins', [category: 'Documentation', iframeTarget: 'https://sheehan.github.io/grails3-plugins/']
-    page 'singlepagedocumentation', 'single-page-documentation', [category: 'Documentation', iframeTarget: 'https://docs.grails.org/latest/']
+    page 'singlepagedocumentation', 'single-page-documentation', [category: 'Documentation', iframeTarget: 'http://docs.grails.org/latest/']
     page 'plugins-template', 'templates/plugins', [:]
 }
 

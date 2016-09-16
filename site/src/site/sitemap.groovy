@@ -121,7 +121,7 @@ ecosystem {
     project('Gradle') {
         description 'Gradle is build automation evolved. Gradle can automate the building, testing, publishing, deployment and more of software packages or other types of projects such as generated static websites, generated documentation or indeed anything else.'
         url 'http://gradle.org'
-        logo 'img/ecosystem/gradle.gif'
+        logo 'img/ecosystem/gradle.svg'
     }
 
     project('Spock') {
@@ -146,6 +146,12 @@ ecosystem {
         description 'Griffon is an application framework for developing desktop applications in the JVM, with Groovy being the primary language of choice. Inspired by Grails, Griffon follows the Convention over Configuration paradigm, paired with an intuitive MVC architecture and a command line interface.'
         url 'http://griffon.codehaus.org/'
         logo 'img/ecosystem/griffon.png'
+    }
+
+    project('Geb') {
+        description 'Geb is a powerful browser functional testing framework that lets you quickly and easily write functional tests in Groovy. It brings together the power of WebDriver, the elegance of jQuery content selection, the robustness of Page Object modelling and the expressiveness of the Groovy language.'
+        url 'http://www.gebish.org/'
+        logo 'img/ecosystem/geb.png'
     }
 
     project('SDK') {

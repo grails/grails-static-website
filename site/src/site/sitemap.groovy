@@ -396,6 +396,10 @@ usergroups {
         location 'North-America/United States'
         url 'http://www.meetup.com/java-161/'
     }
+    userGroup('Los Angeles Groovy Users Group') {
+        location 'North-America/United States'
+        url 'https://www.meetup.com/Los-Angeles-GUG/'
+    }
 
     // South-America
     userGroup('Grails Brasil - Groovy and Grails users group of Brazil') {

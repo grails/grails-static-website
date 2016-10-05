@@ -51,6 +51,7 @@ pages {
     page 'api', 'api', [category: 'Documentation', iframeTarget: 'https://docs.grails.org/latest/api/']
     page 'singlepagedocumentation', 'single-page-documentation', [category: 'Documentation', iframeTarget: 'https://docs.grails.org/latest/']
     page 'plugins-template', 'templates/plugins', [:]
+    page 'plugins', 'plugins', [category: 'Documentation', iframeTarget: 'https://sheehan.github.io/grails3-plugins/']
 }
 
 def readVersions = getClass().getResource("versions").text.split('\n')

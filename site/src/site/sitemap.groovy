@@ -242,7 +242,13 @@ allEvents {
 }
 
 books {
-	book("Falando de Grails") {
+    book("Grails 3: A Practical Guide to Application Development") {
+        authors "Eric Helgeson"
+        cover 'img/books/pratical-grails-3-book-cover.png'
+        url 'https://www.grails3book.com/'
+        description "The first book dedicated to Grails 3. You will learn the concepts behind building Grails applications. Real, up-to-date code examples are provided so you can easily follow along."
+    }
+    book("Falando de Grails") {
 		authors "Henrique Lobo Weissmann"
 		cover 'img/books/grails_weissmann.png'
 		url 'http://www.casadocodigo.com.br/products/livro-grails'

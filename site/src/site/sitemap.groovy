@@ -194,7 +194,7 @@ allEvents {
     }
     event('Greach 2017') {
         location 'Madrid, Spain'
-        date 'March 31 - April 1, 2017'
+        date 'March 30 - April 1, 2017'
         url 'http://greachconf.com/'
         logo 'img/confs/greach2017.png'
         description '''

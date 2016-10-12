@@ -102,7 +102,7 @@ layout 'layouts/main.groovy', true,
                                     Below are a few selected presentations given at the
                                     ${$a(href: 'http://springone2gx.com/', 'SpringOne2GX')},
                                     ${$a(href: 'http://gr8conf.eu/', 'GR8Conf')} and
-                                    ${$a(href: 'http://greach.es/', 'Greach')} conferences.
+                                    ${$a(href: 'http://greachconf.com/', 'Greach')} conferences.
                                 """
 
                                 /*videos.each { Video video ->

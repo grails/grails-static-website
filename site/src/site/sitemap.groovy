@@ -126,13 +126,13 @@ ecosystem {
 
     project('Spock') {
         description 'Spock is a testing and specification framework for Java and Groovy applications. What makes it stand out from the crowd is its beautiful and highly expressive specification language. Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and continuous integration servers.'
-        url 'https://code.google.com/p/spock/'
+        url 'http://spockframework.org/'
         logo ''
     }
 
     project('GPars') {
         description 'The GPars framework offers Java developers intuitive and safe ways to handle Java or Groovy tasks concurrently. Leveraging the enormous flexibility of the Groovy programing language and building on proven Java technologies, we aim to make concurrent programming for multi-core hardware intuitive, robust and enjoyable.'
-        url 'http://gpars.codehaus.org/'
+        url 'http://www.gpars.org/'
         logo 'img/ecosystem/gpars.png'
     }
 
@@ -144,7 +144,7 @@ ecosystem {
 
     project('Griffon') {
         description 'Griffon is an application framework for developing desktop applications in the JVM, with Groovy being the primary language of choice. Inspired by Grails, Griffon follows the Convention over Configuration paradigm, paired with an intuitive MVC architecture and a command line interface.'
-        url 'http://griffon.codehaus.org/'
+        url 'http://griffon-framework.org/'
         logo 'img/ecosystem/griffon.png'
     }
 

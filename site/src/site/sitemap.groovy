@@ -333,6 +333,7 @@ books {
 
 usergroups {
     // Europe
+	 // does not appear to be active
     userGroup('Belgium Groovy/Grails User Group') {
         location 'Europe/Belgium'
         url 'http://www.meetup.com/Belgium-Groovy-Grails-User-Group/'
@@ -340,6 +341,8 @@ usergroups {
     userGroup('Aarhus Groovy & Grails meetup - no homepage yet') {
         location 'Europe/Denmark'
     }
+	 // wrong url for Paris group, is using the Belgium link
+	 // Paris has no url on the Groovy website, probably should match that
     userGroup('Paris Groovy Grails User Group') {
         location 'Europe/France'
         url 'http://www.meetup.com/Belgium-Groovy-Grails-User-Group/'
@@ -366,45 +369,52 @@ usergroups {
     }
 
     // North-America
-    userGroup('Groovy Users of Minnesota') {
-        location 'North-America/United States'
-        url 'http://groovy.mn'
-    }
     userGroup('Austin Groovy and Grails User Group (TX)') {
         location 'North-America/United States'
         url 'http://www.meetup.com/Austin-Groovy-and-Grails-Users/'
-    }
-    userGroup('Groovy and Grails Users of Columbus OH') {
-        location 'North-America/United States'
-        url 'http://www.meetup.com/Grails-and-Ales/'
-    }
-    userGroup('NYC Groovy / Grails Meetup') {
-        location 'North-America/United States'
-        url 'http://www.meetup.com/grails/'
-    }
-    userGroup('Scottsdale Groovy Brigade') {
-        location 'North-America/United States'
-        url 'http://www.scottsdale-groovy.com/'
     }
     userGroup('Coder Consortium of Sacramento') {
         location 'North-America/United States'
         url 'http://coderconsortium.com/'
     }
-    userGroup('DC Groovy') {
+	 // does not appear to be active
+    userGroup('DC Groovy') { 
         location 'North-America/United States'
         url 'http://www.dcgroovy.org'
     }
-    userGroup('Silicon Valley Groovy/Grails Centro') {
+    userGroup('DFW Groovy & Grails User Group') {
         location 'North-America/United States'
-        url 'http://www.meetup.com/San-Francisco-Grails-Centro/'
+        url 'http://dfw2gug.org'
+    }
+	 // does not appear to be active
+    userGroup('Groovy and Grails Users of Columbus OH') {
+        location 'North-America/United States'
+        url 'http://www.meetup.com/Grails-and-Ales/'
+    }
+    userGroup('Groovy Users of Minnesota') {
+        location 'North-America/United States'
+        url 'http://groovy.mn'
+    }
+    userGroup('Los Angeles Groovy Users Group') {
+        location 'North-America/United States'
+        url 'https://www.meetup.com/Los-Angeles-GUG/'
+    }
+    userGroup('NYC Groovy / Grails Meetup') {
+        location 'North-America/United States'
+        url 'http://www.meetup.com/grails/'
+    }
+	 // does not appear to be active
+    userGroup('Scottsdale Groovy Brigade') {
+        location 'North-America/United States'
+        url 'http://www.scottsdale-groovy.com/'
     }
     userGroup('SF Bay Groovy and Grails Meetup Group') {
         location 'North-America/United States'
         url 'http://www.meetup.com/java-161/'
     }
-    userGroup('Los Angeles Groovy Users Group') {
+    userGroup('Silicon Valley Groovy/Grails Centro') {
         location 'North-America/United States'
-        url 'https://www.meetup.com/Los-Angeles-GUG/'
+        url 'http://www.meetup.com/San-Francisco-Grails-Centro/'
     }
 
     // South-America

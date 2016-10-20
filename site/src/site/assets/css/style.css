@@ -116,11 +116,12 @@ a.navbar-brand {
 #band {
     /*grey =#808080*/
     background: #79B94C  no-repeat 50% 30%;
-    height: 400px;
+    height: 300px;
 }
 
 .svg #band {
     background-image: url(../img/grails-cupsonly-logo-white.svg);
+    background-size: 50%;
 }
 
 .no-svg #band {
@@ -507,7 +508,7 @@ h8 {
 
 .band {
     background: #4298b8;
-    height: 400px;
+    height: 300px;
     margin-bottom: 20px;
     color: white
 }
@@ -569,10 +570,11 @@ h8 {
     clear: both
 }
 
-#content .colset-2-its > h1 {
+#content .colset-2-its > h2 {
     padding-bottom: 15px;
     margin-top: 15px;
-    margin-bottom: 0
+    margin-bottom: 0;
+    text-align: center;
 }
 
 #content .colset-2-its > p {

@@ -3,7 +3,7 @@ html {
         title 'Dead links report'
         link rel:'stylesheet', type:'text/css', href:'../site/css/style.css'
     }
-    body {
+    body(style: "background:white !important") {
         h1('Dead links report')
         if (!deadLinks) {
             p("No dead link found. All green!")

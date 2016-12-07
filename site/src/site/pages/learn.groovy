@@ -14,6 +14,9 @@ layout 'layouts/main.groovy', true,
                                     a(href: '#') { strong('Learn') }
                                 }
                                 li {
+                                    a(href: '#guides', class: 'anchor-link', 'Guides')
+                                }                                
+                                li {
                                     a(href: '#books', class: 'anchor-link', 'Books')
                                 }
                                 li {
@@ -44,6 +47,16 @@ layout 'layouts/main.groovy', true,
                                     But there are other ways to learn more about Grails, thanks to ${$a(href: '#books', 'books')}
                                     and ${$a(href: '#videos', 'presentations')} given about Grails at conferences.
                                 """
+                                
+                                hr(class: 'divider')
+
+                                a(name: 'guides') {}
+                                h2 {
+                                    i(class: 'fa fa-tasks') {}
+                                    yield ' Guides'
+                                }
+                                p """The Official Grails ${$a(href: 'http://docs.grails.org/', 'User guide')} provides pretty comprehensive coverage of the framework, but if that is is not enough checkout the great ${$a(href: 'http://guides.grails.org/', 'Guides')} section of the website for more focused tutorials with examples."""
+
                                 hr(class: 'divider')
 
                                 a(name: 'books') {}

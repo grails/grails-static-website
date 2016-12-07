@@ -65,7 +65,21 @@ layout 'layouts/main.groovy', true,
                                         }
                                     }
                                 }
-                            }                            
+                            }  
+                           div(class: 'row-fluid') {
+                                article {
+                                    div(class: 'col-md-6', style:'margin-top:20px') {
+                                        a(name: "foo") {}
+                                        h2 {
+                                            i(class: 'fa fa-tasks', " Learning Resources")
+                                        }
+                                        ul {
+                                            li { a(href: "http://guides.grails.org/", "Grails Guides - Focused Tutorials with Samples") }
+                                            li { a(href: "http://slack-signup.grails.org", "Slack - Community Discussion") }
+                                        }
+                                    }
+                                }
+                            }                                                        
                             div(class: 'col-md-12') {
                                 hr(class: 'divider')
 

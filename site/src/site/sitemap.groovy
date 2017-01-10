@@ -1,12 +1,12 @@
 menu {
     group('Grails') {
         item 'Learn',                       'learn.html'
-        item 'Documentation',               'documentation.html'
-        item 'Support',                    'support.html'
+        item 'Guides',                     'http://guides.grails.org'
+        item 'Documentation',               'documentation.html'        
         item 'Download',                    'download.html'
         item 'Plugins',                     'http://plugins.grails.org'
-        item 'Community',                   'community.html'        
-        item 'Ecosystem',                   'ecosystem.html'
+        item 'Community',                   'community.html'    
+        item 'Support',                    'support.html'    
     }
 
     group('About') {

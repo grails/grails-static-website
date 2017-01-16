@@ -55,10 +55,9 @@ pages {
 }
 
 def readVersions = getClass().getResource("versions").text.split('\n')
-def previousVersions = []
-previousVersions.addAll( readVersions[0..-2])
-def currentStableVersion = readVersions[-1]
-def allVersions = previousVersions + [currentStableVersion]
+List allVersions = readVersions.sort()
+def currentStableVersion = allVersions.last()
+List previousVersions = allVersions - currentStableVersion
     
 documentation {
     groovyDocumentationVersions(allVersions)

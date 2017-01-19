@@ -1,6 +1,7 @@
 ul(class: 'nav-sidebar') {
     [
             'community': 'Community',
+            'ecosystem': 'Ecosystem',
             'contribute': 'Contribute',
             'sponsors': 'Sponsors',
             'mailing-lists': 'Mailing-lists',

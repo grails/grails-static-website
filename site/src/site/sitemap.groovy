@@ -34,7 +34,7 @@ menu {
 pages {
     page 'index', 'index', [allEvents: allEvents]
     page 'search', 'search', [category: 'Search']
-    page 'ecosystem', 'ecosystem', [category: 'Ecosystem', ecosys: ecosystem]
+    page 'ecosystem', 'ecosystem', [category: 'Community', ecosys: ecosystem]
     page 'learn', 'learn', [category: 'Learn', docSections: documentationSections, allBooks: library, videos: videos]
     page 'documentation', 'documentation', [category: 'Documentation', docSections: documentationSections, allDocVersions: allDocVersions]
     page 'download', 'download', [category: 'Download', distributions: distributions]

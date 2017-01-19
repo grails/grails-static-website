@@ -5,12 +5,7 @@ layout 'layouts/main.groovy', true,
                 section(class: 'row') {
                     div(class: 'row-fluid') {
                         div(class: 'col-lg-3') {
-                            ul(class: 'nav-sidebar') {
-                                li(class: 'active') { a(href: 'ecosystem.html') { strong('Ecosystem') } }
-                                ecosys.keySet().each { name ->
-                                    li { a(href: "#$name", class: 'anchor-link', name) }
-                                }
-                            }
+                            include template: 'includes/community-navbar.groovy'
                         }
                         div(class: 'col-lg-8 col-lg-pull-0') {
                             include template: 'includes/contribute-button.groovy'

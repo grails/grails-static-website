@@ -411,6 +411,10 @@ usergroups {
         location 'North-America/United States'
         url 'http://www.meetup.com/San-Francisco-Grails-Centro/'
     }
+    userGroup('St. Louis Groovy & Grails Meetup') {
+        location 'North-America/United States'
+        url 'https://www.meetup.com/st-louis-groovy-and-grails-meetup/'
+    }
 
     // South-America
     userGroup('Grails Brasil - Groovy and Grails users group of Brazil') {

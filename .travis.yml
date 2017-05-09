@@ -5,4 +5,4 @@ env:
   global:
   - GIT_NAME="Graeme Rocher"
   - GIT_EMAIL="graeme.rocher@gmail.com"
-  - secure: gq/RZmdomwJzn1u7/ObdBFunYD4GHXvJO7K7bJXteduXFyLhD4Zv/20Y691dzXrFV4PLHeILSkWSCInz+Mu+dFH8KJw4kT14hEZrsxPmOHt1zaSrohcln74zUnjSf99n+2cU0ciN5WZPdqlVJu+o6G1znr4DGtWLLzZmSZW8T3U=
+  - secure: JVA8aVHDyGKv+zaODWH8eVYxVynHQpiMqWvA9FWORU6xYYjMhKFhrKz7ZMHS/oVUyBYI0aBX+uybbm03ZQcdY+bL/l/2vwt35BVx+gFPtq6VSPygwITRUZcrvYB8YXgBKaBP7usGfDjXPsIuAUm9Pqpvb3E572hA16TWncmjr0Y=

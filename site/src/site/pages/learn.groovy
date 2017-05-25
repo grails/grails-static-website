@@ -74,6 +74,12 @@ layout 'layouts/main.groovy', true,
                                     yield ' Online Training'
                                 }
 
+                                p {
+                                    yield 'Jeff Scott Brown, Co-founder of the Grails framework, teaches a series of online '
+                                    a(href: 'https://objectcomputing.com/training/catalog/grails/grails-workshops/', 'Grails training courses')
+                                    yield '.'
+                                }
+
                                 onlineTrainingCatalogue.each {
                                     Course course = it.value
                                     div(class: 'course') {

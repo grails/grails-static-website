@@ -26,14 +26,12 @@ layout 'layouts/main.groovy', true,
                             
                             h1 {
                                 i(class: 'fa') {
-                                    img src:"http://objectcomputing.com/files/4814/3109/5657/e-sig-logo.png"
+                                    img src: 'img/oci.png', height: 60
                                 }
                                 yield ' Commercial Support'
                             }
                             article {
                                 p 'OCI’s Subject Matter Experts (SMEs) are available to provide up to 24/7 real-time technical support for Grails. The OCI team can assist you with:'
-
-                                hr(class: 'divider')
                                 ul {
                                     li "Architecture and design review;"
                                     li "Rapid prototyping, troubleshooting and debugging;"
@@ -44,8 +42,8 @@ layout 'layouts/main.groovy', true,
 
                                 p "OCI offers flexible, customizable open source support service with direct access to a dedicated team of architects and engineers, whom developed the product and/or have spent their careers supporting and maturing it."
 
-                                p {
-                                    a(href:"https://objectcomputing.com/products/grails/consulting-support/", "https://objectcomputing.com/products/grails/consulting-support/")
+                                h2 {
+                                    a(href:"https://objectcomputing.com/products/grails/consulting-support/", "Consulting Support")
                                 }
 
                                 p {
@@ -59,6 +57,15 @@ layout 'layouts/main.groovy', true,
                                     yield ", and "
                                     a(href:"https://objectcomputing.com/training/catalog/grails/", "Grails training")
                                     yield "."
+                                }
+
+                                h2 {
+                                    a(href: 'https://objectcomputing.com/training/catalog/grails/', 'Grails Training')
+                                }
+
+                                p {
+                                    yield 'OCI, home to Grails, offers a number of training courses related to the Groovy and Grails framework. The curriculum provides students with the knowledge and skills they need to maximize developer productivity with Groovy, Grails, and related technologies. See all upcoming '
+                                    a(href: 'https://objectcomputing.com/training/catalog/grails/', 'Grails training courses here.')
                                 }
 
                                 a( name:"contact" ) {}

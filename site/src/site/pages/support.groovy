@@ -14,7 +14,7 @@ layout 'layouts/main.groovy', true,
                                     a(href: '#') { strong('Support') }
                                 }
                                 li {
-                                    a(href: 'http://www.ociweb.com/services/commercial-product-support/', class: 'anchor-link', 'Information')
+                                    a(href: 'https://objectcomputing.com/products/grails/consulting-support/', class: 'anchor-link', 'Information')
                                 }
                                 li {
                                     a(href: '#contact', class: 'anchor-link', 'Contact')
@@ -26,7 +26,7 @@ layout 'layouts/main.groovy', true,
                             
                             h1 {
                                 i(class: 'fa') {
-                                    img src:"http://www.ociweb.com/files/4814/3109/5657/e-sig-logo.png"
+                                    img src:"http://objectcomputing.com/files/4814/3109/5657/e-sig-logo.png"
                                 }
                                 yield ' Commercial Support'
                             }
@@ -45,13 +45,20 @@ layout 'layouts/main.groovy', true,
                                 p "OCI offers flexible, customizable open source support service with direct access to a dedicated team of architects and engineers, whom developed the product and/or have spent their careers supporting and maturing it."
 
                                 p {
-                                    a(href:" http://www.ociweb.com/services/commercial-product-support/", " http://www.ociweb.com/services/commercial-product-support/")
+                                    a(href:"https://objectcomputing.com/products/grails/consulting-support/", "https://objectcomputing.com/products/grails/consulting-support/")
                                 }
 
                                 p {
-                                    yield  "We build high performance, real-time, mission critical middleware systems and integration solutions. Our goal is to make solutions more open, scalable, reusable, interoperable, and affordable. Please visit " 
-                                    a( href:"http://www.ociweb.com", "www.ociweb.com")
-                                    yield " to learn more about our engineering services, open source middleware technologies, and professional IT training."
+
+                                    yield "We build high-performance, real-time, mission-critical middleware systems and integration solutions. Our goal is to make solutions more open, scalable, reusable, interoperable, and affordable. Please visit "
+                                    a( href:"http://objectcomputing.com", "objectcomputing.com")
+                                    yield " to learn more about our "
+                                    a(href:"https://objectcomputing.com/services/software-engineering/", "engineering services")
+                                    yield ", "
+                                    a(href:"https://objectcomputing.com/products/", "Open Source middleware technologies")
+                                    yield ", and "
+                                    a(href:"https://objectcomputing.com/training/catalog/grails/", "Grails training")
+                                    yield "."
                                 }
 
                                 a( name:"contact" ) {}
@@ -72,9 +79,8 @@ layout 'layouts/main.groovy', true,
                                     }
                                     li  {
                                         yield "Email: "
-                                        a(href:"mailto:info@ociweb.com", "info@ociweb.com")
+                                        a(href:"mailto:info@objectcomputing.com", "info@objectcomputing.com")
                                     }
-
                                 }
                             }
                         }

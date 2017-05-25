@@ -17,7 +17,7 @@ layout 'layouts/main.groovy', true,
                             article {
                                 p "The Grails project is generously sponsored by several companies:"
                                 ul {
-                                    li "${$a(href: 'http://www.ociweb.com/products/grails/', 'OCI')} employs key members of the Grails team"        
+                                    li "${$a(href: 'http://objectcomputing.com/products/grails/', 'OCI')} employs key members of the Grails team"
                                     li "${$a(href: 'http://pivotal.io/', 'Pivotal')} provide website hosting"
                                     li """
                                         ${$a(href: 'http://www.jfrog.com/', 'JFrog')} provide the infrastructure

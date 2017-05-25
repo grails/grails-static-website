@@ -14,6 +14,8 @@ class SiteMap {
     final Ecosystem ecosystem = new Ecosystem()
     final Events allEvents = new Events()
     final Library library = new Library()
+    final OnsiteCourseCatalogue onsiteCourseCatalogue = new OnsiteCourseCatalogue()
+    final OnlineCourseCatalogue onlineCourseCatalogue = new OnlineCourseCatalogue()
     final List<String> allDocVersions = []
     final List<Page> pages = []
     final List<UserGroup> usergroups = []
@@ -94,6 +96,16 @@ class SiteMap {
 
     private void books(Closure booksSpec) {
         def clone = booksSpec.rehydrate(library, library, library)
+        clone()
+    }
+
+    private void onlineTrainingCatalogue(Closure onlineTrainingCatalogueSpec) {
+        def clone = onlineTrainingCatalogueSpec.rehydrate(onlineCourseCatalogue, onlineCourseCatalogue, onlineCourseCatalogue)
+        clone()
+    }
+
+    private void onsiteTrainingCatalogue(Closure onsiteTrainingCatalogueSpec) {
+        def clone = onsiteTrainingCatalogueSpec.rehydrate(onsiteCourseCatalogue, onsiteCourseCatalogue, onsiteCourseCatalogue)
         clone()
     }
 

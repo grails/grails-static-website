@@ -1,5 +1,6 @@
 import model.Book
 import model.Video
+import model.Course
 
 layout 'layouts/main.groovy', true,
         pageTitle: 'Grails - Learn',
@@ -15,7 +16,13 @@ layout 'layouts/main.groovy', true,
                                 }
                                 li {
                                     a(href: '#guides', class: 'anchor-link', 'Guides')
-                                }                                
+                                }
+                                li {
+                                    a(href: '#onlinetraining', class: 'anchor-link', 'Online Training')
+                                }
+                                li {
+                                    a(href: '#onsitetraining', class: 'anchor-link', 'On-site Training')
+                                }
                                 li {
                                     a(href: '#books', class: 'anchor-link', 'Books')
                                 }
@@ -56,6 +63,79 @@ layout 'layouts/main.groovy', true,
                                     yield ' Guides'
                                 }
                                 p """The Official Grails ${$a(href: 'http://docs.grails.org/', 'User guide')} provides pretty comprehensive coverage of the framework, but if that is is not enough checkout the great ${$a(href: 'http://guides.grails.org/', 'Guides')} section of the website for more focused tutorials with examples."""
+
+
+                                hr(class: 'divider')
+
+                                a(name: 'onlinetraining') {}
+
+                                h2 {
+                                    i(class: 'fa fa-graduation-cap') {}
+                                    yield ' Online Tranining'
+                                }
+
+                                onlineTrainingCatalogue.each {
+                                    Course course = it.value
+                                    div(class: 'course') {
+                                        h2 { a(href: course.url, course.title) }
+                                        if (course.instructor) {
+                                            div {
+                                                yield "Instructor: ${course.instructor}"
+                                            }
+                                        }
+                                        if (course.hours) {
+                                            div {
+                                                i(class: 'fa fa-clock-o') {}
+                                                yiedl " Hours: ${course.hours}"
+                                            }
+                                        }
+                                        if (course.dates) {
+                                            div {
+                                                i(class: 'fa fa-calendar') {}
+                                                yiedl " ${course.dates}"
+                                            }
+                                        }
+                                    }
+                                }
+
+                                hr(class: 'divider')
+
+                                a(name: 'onsitetraining') {}
+
+                                h2 {
+                                    i(class: 'fa fa-graduation-cap') {}
+                                    yield ' On-site Tranining'
+                                }
+
+                                onsiteTrainingCatalogue.each {
+                                    Course course = it.value
+                                    div(class: 'course') {
+                                        h2 { a(href: course.url, course.title) }
+                                        if (course.instructor) {
+                                            div {
+                                                yield "Instructor: ${course.instructor}"
+                                            }
+                                        }
+                                        if (course.location) {
+                                            div {
+                                                i(class: 'fa fa-map-marker') {}
+                                                yiedl " ${course.location}"
+                                            }
+                                        }
+                                        if (course.hours) {
+                                            div {
+                                                i(class: 'fa fa-clock-o') {}
+                                                yiedl " Hours: ${course.hours}"
+                                            }
+                                        }
+                                        if (course.dates) {
+                                            div {
+                                                i(class: 'fa fa-calendar') {}
+                                                yiedl " ${course.dates}"
+                                            }
+                                        }
+                                    }
+                                }
 
                                 hr(class: 'divider')
 

@@ -1039,6 +1039,10 @@ html, body, .st-container, .st-pusher, .st-content {
 .presentations .urls {
 }
 
+.course {
+    margin: 10px auto 25px;
+}
+
 @media screen and (max-width: 767px) {
     .presentations .img.screenshot, .video .metadata {
         float: none;

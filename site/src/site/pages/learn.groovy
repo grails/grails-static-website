@@ -71,7 +71,7 @@ layout 'layouts/main.groovy', true,
 
                                 h2 {
                                     i(class: 'fa fa-graduation-cap') {}
-                                    yield ' Online Tranining'
+                                    yield ' Online Training'
                                 }
 
                                 onlineTrainingCatalogue.each {
@@ -104,7 +104,7 @@ layout 'layouts/main.groovy', true,
 
                                 h2 {
                                     i(class: 'fa fa-graduation-cap') {}
-                                    yield ' On-site Tranining'
+                                    yield ' On-site Training'
                                 }
 
                                 onsiteTrainingCatalogue.each {

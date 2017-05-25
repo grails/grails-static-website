@@ -282,6 +282,13 @@ books {
 		url 'http://www.casadocodigo.com.br/products/livro-grails'
 		description "The best reference on Grails (2.5 and 3.0) in portuguese. A great guide to the framework, dealing with details of the framework that many times are ignored by it's users. "
 	}
+
+    book('Grails Goodness Notebook') {
+        authors "Hubert A. Klein Ikkink (mrhaki)"
+        cover 'img/books/grails_goodness_notebook.png'
+        url 'https://leanpub.com/grails-goodness-notebook'
+        description "Learn more about (hidden) Grails features with code snippets and short articles. The articles and code will get you started quickly and will give more insight in Grails."
+    }
     book('The Definitive Guide to Grails 2') {
         authors "Jeff Scott Brown and Graeme Rocher"
         cover 'img/books/grocher_jbrown_cover.jpg'

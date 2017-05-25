@@ -35,7 +35,7 @@ pages {
     page 'index', 'index', [allEvents: allEvents]
     page 'search', 'search', [category: 'Search']
     page 'ecosystem', 'ecosystem', [category: 'Community', ecosys: ecosystem]
-    page 'learn', 'learn', [category: 'Learn', docSections: documentationSections, allBooks: library, videos: videos]
+    page 'learn', 'learn', [category: 'Learn', docSections: documentationSections, allBooks: library, onlineTrainingCatalogue: onlineCourseCatalogue, onsiteTrainingCatalogue: onsiteCourseCatalogue,  videos: videos]
     page 'documentation', 'documentation', [category: 'Documentation', docSections: documentationSections, allDocVersions: allDocVersions]
     page 'download', 'download', [category: 'Download', distributions: distributions]
     page 'versioning', 'versioning', [category: 'Download']
@@ -227,6 +227,39 @@ allEvents {
             It's dedicated to the technologies in the Groovy ecosystem.
             </p>
         '''
+    }
+}
+
+onlineTrainingCatalogue {
+    course('Publishing REST Services with Grails 3') {
+        dates 'Aug 4, 2017'
+        hours 6
+        instructor 'Jeff Brown'
+        url 'https://objectcomputing.com/index.php/training/register/offering/92/'
+    }
+}
+
+onsiteTrainingCatalogue {
+    course('Next Level Grails at GR8Conf EU') {
+        dates 'May 29 - May 30, 2017'
+        hours 12
+        instructor 'Jeff Brown'
+        location 'IT University of Copenhagen Copenhagen, Denmark'
+        url 'https://objectcomputing.com/index.php/training/register/offering/84/'
+    }
+    course('Advanced Development with Grails 3') {
+        dates 'Jun 13 - Jun 15, 2017'
+        hours 18
+        instructor 'Jeff Brown'
+        location 'OCI Education Center, St. Louis, USA'
+        url 'https://objectcomputing.com/index.php/training/register/offering/90/'
+    }
+    course('Next Level Grails at GR8Conf US') {
+        dates 'Jul 24 - Jul 25, 2017'
+        hours 12
+        instructor 'Jeff Brown'
+        location 'University of St. Thomas Minneapolis, MN, USA'
+        url 'https://objectcomputing.com/index.php/training/register/offering/91/'
     }
 }
 

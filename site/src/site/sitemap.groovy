@@ -228,11 +228,15 @@ allEvents {
             </p>
         '''
     }
-
-
 }
 
 books {
+    book("Grails 3 - Step by Step") {
+        authors "Cristian Olaru"
+        cover 'img/books/grails_3_step_by_step.png'
+        url 'https://grailsthreebook.com/'
+        description "We try to describe in this book how a complete greenfield application can be implemented with Grails 3 in a fast way using profiles and plugins - and we do this in the sample application that is accompanying this book."
+    }
     book("Grails 3: A Practical Guide to Application Development") {
         authors "Eric Helgeson"
         cover 'img/books/pratical-grails-3-book-cover.png'

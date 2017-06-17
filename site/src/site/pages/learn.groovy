@@ -39,9 +39,8 @@ layout 'layouts/main.groovy', true,
                                 yield ' Learn'
                             }
                             article {
-                                p 'Welcome to the learning section of the Grails website.'
                                 p """
-                                    First of all, you will need to ${$a(href: 'documentation.html#gettingstarted', 'get started')}
+                                    To learn Grails, first of all, you will need to ${$a(href: 'documentation.html#gettingstarted', 'get started')}
                                     by installing Grails on your system or project.
                                 """
                                 p """
@@ -51,8 +50,10 @@ layout 'layouts/main.groovy', true,
                                     that come with a Grails installation.
                                 """
                                 p """
-                                    But there are other ways to learn more about Grails, thanks to ${$a(href: '#books', 'books')}
-                                    and ${$a(href: '#videos', 'presentations')} given about Grails at conferences.
+                                     ${$a(href: 'http://guides.grails.org', 'Grails guides')}, 
+                                     ${$a(href: '#onlinetraining', 'courses')}, ${$a(href: '#books', 'books')},
+                                     or ${$a(href: '#presentations', 'presentations')}, given about Grails at conferences, are excellent resources 
+                                     to learn more about Grails as well. 
                                 """
                                 
                                 hr(class: 'divider')

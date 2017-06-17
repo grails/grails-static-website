@@ -55,17 +55,7 @@ layout 'layouts/main.groovy', true,
                                      or ${$a(href: '#presentations', 'presentations')}, given about Grails at conferences, are excellent resources 
                                      to learn more about Grails as well. 
                                 """
-                                
-                                hr(class: 'divider')
-
-                                a(name: 'guides') {}
-                                h2 {
-                                    i(class: 'fa fa-tasks') {}
-                                    yield ' Guides'
-                                }
-                                p """The Official Grails ${$a(href: 'http://docs.grails.org/', 'User guide')} provides pretty comprehensive coverage of the framework, but if that is is not enough checkout the great ${$a(href: 'http://guides.grails.org/', 'Guides')} section of the website for more focused tutorials with examples."""
-
-
+                            
                                 hr(class: 'divider')
 
                                 a(name: 'onlinetraining') {}
@@ -143,6 +133,15 @@ layout 'layouts/main.groovy', true,
                                         }
                                     }
                                 }
+                                       
+                                hr(class: 'divider')
+
+                                a(name: 'guides') {}
+                                h2 {
+                                    i(class: 'fa fa-tasks') {}
+                                    yield ' Guides'
+                                }
+                                p """The Official Grails ${$a(href: 'http://docs.grails.org/', 'User guide')} provides pretty comprehensive coverage of the framework, but if that is is not enough checkout the great ${$a(href: 'http://guides.grails.org/', 'Guides')} section of the website for more focused tutorials with examples."""
 
                                 hr(class: 'divider')
 

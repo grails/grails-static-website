@@ -15,13 +15,13 @@ layout 'layouts/main.groovy', true,
                                     a(href: '#') { strong('Learn') }
                                 }
                                 li {
-                                    a(href: '#guides', class: 'anchor-link', 'Guides')
-                                }
-                                li {
                                     a(href: '#onlinetraining', class: 'anchor-link', 'Online Training')
                                 }
                                 li {
                                     a(href: '#onsitetraining', class: 'anchor-link', 'On-site Training')
+                                }
+                                li {
+                                    a(href: '#guides', class: 'anchor-link', 'Guides')
                                 }
                                 li {
                                     a(href: '#books', class: 'anchor-link', 'Books')

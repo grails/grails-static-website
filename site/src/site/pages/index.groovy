@@ -1,4 +1,5 @@
 import model.Event
+import model.Course
 
 layout 'layouts/main.groovy', true,
         pageTitle: 'The Grails Framework',
@@ -9,10 +10,10 @@ layout 'layouts/main.groovy', true,
             div(id: 'content') {
                 include unescaped: 'html/index.html'
 
-                def firstTreeEvents = allEvents.keySet().take(3)
+                def upcomingEvents = allEvents.keySet().take(1)
                 section(class: 'row colset-3-article first-event-row') {
                     h1 { strong "Groovy and Grails events you shouldn't miss!" }
-                    firstTreeEvents.each { String eventName ->
+                    upcomingEvents.each { String eventName ->
                         Event event = allEvents[eventName]
                         article {
                             div(class: 'content') {
@@ -28,6 +29,79 @@ layout 'layouts/main.groovy', true,
                                 time event.date
                                 yieldUnescaped event.description
                             }
+                        }
+                    }
+                    article {
+                        div(class: 'content') {
+                            h2 {
+                                    i(class: 'fa fa-graduation-cap') {}
+                                    yield ' Online Training'
+                                }
+
+                                onlineTrainingCatalogue.each {
+                                    Course course = it.value
+                                    div(class: 'course') {
+                                        h2 { a(href: course.url, course.title) }
+                                        if (course.instructor) {
+                                            div {
+                                                yield "Instructor: ${course.instructor}"
+                                            }
+                                        }
+                                        if (course.hours) {
+                                            div {
+                                                i(class: 'fa fa-clock-o') {}
+                                                yiedl " Hours: ${course.hours}"
+                                            }
+                                        }
+                                        if (course.dates) {
+                                            div {
+                                                i(class: 'fa fa-calendar') {}
+                                                yiedl " ${course.dates}"
+                                            }
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                    article {
+                        div(class: 'content') {
+
+                                a(name: 'onsitetraining') {}
+
+                                h2 {
+                                    i(class: 'fa fa-graduation-cap') {}
+                                    yield ' On-site Training'
+                                }
+
+                                onsiteTrainingCatalogue.each {
+                                    Course course = it.value
+                                    div(class: 'course') {
+                                        h2 { a(href: course.url, course.title) }
+                                        if (course.instructor) {
+                                            div {
+                                                yield "Instructor: ${course.instructor}"
+                                            }
+                                        }
+                                        if (course.location) {
+                                            div {
+                                                i(class: 'fa fa-map-marker') {}
+                                                yiedl " ${course.location}"
+                                            }
+                                        }
+                                        if (course.hours) {
+                                            div {
+                                                i(class: 'fa fa-clock-o') {}
+                                                yiedl " Hours: ${course.hours}"
+                                            }
+                                        }
+                                        if (course.dates) {
+                                            div {
+                                                i(class: 'fa fa-calendar') {}
+                                                yiedl " ${course.dates}"
+                                            }
+                                        }
+                                    }
+                                }
                         }
                     }
                 }

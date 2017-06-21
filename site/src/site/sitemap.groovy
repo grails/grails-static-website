@@ -33,7 +33,7 @@ menu {
 }
 
 pages {
-    page 'index', 'index', [allEvents: allEvents]
+    page 'index', 'index', [allEvents: allEvents, onlineTrainingCatalogue: onlineCourseCatalogue, onsiteTrainingCatalogue: onsiteCourseCatalogue]
     page 'search', 'search', [category: 'Search']
     page 'ecosystem', 'ecosystem', [category: 'Community', ecosys: ecosystem]
     page 'learn', 'learn', [category: 'Learn', docSections: documentationSections, allBooks: library, onlineTrainingCatalogue: onlineCourseCatalogue, onsiteTrainingCatalogue: onsiteCourseCatalogue,  videos: videos]
@@ -234,11 +234,11 @@ allEvents {
 onlineTrainingCatalogue {
     course('Live Webinar - Why IntelliJ IDEA is the Premier Development Environment for Grails 3') {
         dates 'Jul 13, 2017'
-        hours 6
+        hours 1
         instructor 'Jeff Brown'
         url 'https://info.jetbrains.com/IDEA-Webinar-July2017.html'
     }
-    
+
     course('Publishing REST Services with Grails 3') {
         dates 'Aug 4, 2017'
         hours 6

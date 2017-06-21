@@ -232,6 +232,13 @@ allEvents {
 }
 
 onlineTrainingCatalogue {
+    course('Live Webinar - Why IntelliJ IDEA is the Premier Development Environment for Grails 3') {
+        dates 'Jul 13, 2017'
+        hours 6
+        instructor 'Jeff Brown'
+        url 'https://info.jetbrains.com/IDEA-Webinar-July2017.html'
+    }
+    
     course('Publishing REST Services with Grails 3') {
         dates 'Aug 4, 2017'
         hours 6
@@ -241,20 +248,7 @@ onlineTrainingCatalogue {
 }
 
 onsiteTrainingCatalogue {
-    course('Next Level Grails at GR8Conf EU') {
-        dates 'May 29 - May 30, 2017'
-        hours 12
-        instructor 'Jeff Brown'
-        location 'IT University of Copenhagen Copenhagen, Denmark'
-        url 'https://objectcomputing.com/index.php/training/register/offering/84/'
-    }
-    course('Advanced Development with Grails 3') {
-        dates 'Jun 13 - Jun 15, 2017'
-        hours 18
-        instructor 'Jeff Brown'
-        location 'OCI Education Center, St. Louis, USA'
-        url 'https://objectcomputing.com/index.php/training/register/offering/90/'
-    }
+   
     course('Next Level Grails at GR8Conf US') {
         dates 'Jul 24 - Jul 25, 2017'
         hours 12

@@ -31,6 +31,8 @@ layout 'layouts/main.groovy', true,
                                 yield ' Commercial Support'
                             }
                             article {
+                                include unescaped: 'html/consultationform.html'
+
                                 p 'OCI’s Subject Matter Experts (SMEs) are available to provide up to 24/7 real-time technical support for Grails. The OCI team can assist you with:'
                                 ul {
                                     li "Architecture and design review;"

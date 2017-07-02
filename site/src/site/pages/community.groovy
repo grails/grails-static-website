@@ -41,7 +41,7 @@ layout 'layouts/main.groovy', true,
                                     li "how you can ${$a(href: 'contribute.html', 'contribute')} to the project, its codebase, its documentation,"
                                     li "how to raise issues in our ${$a(href: 'contribute.html#reporting-issues', 'bug tracker')},"
                                     li "how to interact with other Grails users and developers through ${$a(href: 'http://slack-signup.grails.org', 'Slack')} or the ${$a(href: 'mailing-lists.html', 'mailing-lists')},"
-                                    li "the upcoming ${$a(href: 'events.html', 'events and conferences')} you might want to attend to lear more about Groovy and to share your experience with others,"
+                                    li "the upcoming ${$a(href: 'events.html', 'events and conferences')} you might want to attend to hear more about Groovy and to share your experience with others,"
                                     li "the list of ${$a(href: 'usergroups.html', 'user groups')} you can attend and where to meet other Groovy users."
                                 }
                                 p '''

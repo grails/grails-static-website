@@ -1,6 +1,5 @@
 menu {
     group('Grails') {
-        item 'Training',                    '/learn.html#onlinetraining'
         item 'Learn',                       '/learn.html'
         item 'Guides',                      'http://guides.grails.org'
         item 'Documentation',               '/documentation.html'        

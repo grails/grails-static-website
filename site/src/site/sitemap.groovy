@@ -238,12 +238,12 @@ onlineTrainingCatalogue {
         url 'https://info.jetbrains.com/IDEA-Webinar-July2017.html'
     }
 
-    course('Publishing REST Services with Grails 3') {
-        dates 'Aug 4, 2017'
-        hours 6
-        instructor 'Jeff Brown'
-        url 'https://objectcomputing.com/index.php/training/register/offering/92/'
-    }
+    // course('Publishing REST Services with Grails 3') {
+    //     dates 'Aug 4, 2017'
+    //     hours 6
+    //     instructor 'Jeff Brown'
+    //     url 'https://objectcomputing.com/index.php/training/register/offering/92/'
+    // }
 }
 
 onsiteTrainingCatalogue {

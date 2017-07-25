@@ -192,6 +192,21 @@ allEvents {
             </p>
         '''
     }
+    event('G3 Summit 2017') {
+        location 'Austin, TX, United States'
+        date 'Nov 28 - Dec 1, 2017'
+        url 'https://g3summit.com/'
+        logo 'img/confs/g3summit2017.png'
+        description '''
+            <p>
+            The G3 Summit is an annual event for the Apache Groovy, Grails, and 
+            Gradle (G3) community. This is your chance to learn awesome Apache 
+            Groovy/Grails/Gradle technologies from project leaders, committers, 
+            authors, and industry experts.
+            </p>            
+        '''
+    }
+
     event('GR8Conf India 2018') {
         location 'New Delhi, India'
         date 'January, 2018'
@@ -231,12 +246,12 @@ allEvents {
 }
 
 onlineTrainingCatalogue {
-    course('Live Webinar - Why IntelliJ IDEA is the Premier Development Environment for Grails 3') {
-        dates 'Jul 13, 2017'
-        hours 1
-        instructor 'Jeff Brown'
-        url 'https://info.jetbrains.com/IDEA-Webinar-July2017.html'
-    }
+    // course('Live Webinar - Why IntelliJ IDEA is the Premier Development Environment for Grails 3') {
+    //     dates 'Jul 13, 2017'
+    //     hours 1
+    //     instructor 'Jeff Brown'
+    //     url 'https://info.jetbrains.com/IDEA-Webinar-July2017.html'
+    // }
 
     course('Publishing REST Services with Grails 3') {
         dates 'Aug 3 - Aug 4, 2017'
@@ -248,13 +263,13 @@ onlineTrainingCatalogue {
 
 onsiteTrainingCatalogue {
    
-    course('Next Level Grails at GR8Conf US') {
-        dates 'Jul 24 - Jul 25, 2017'
-        hours 12
-        instructor 'Jeff Brown'
-        location 'University of St. Thomas Minneapolis, MN, USA'
-        url 'https://objectcomputing.com/index.php/training/register/offering/91/'
-    }
+    // course('Next Level Grails at GR8Conf US') {
+    //     dates 'Jul 24 - Jul 25, 2017'
+    //     hours 12
+    //     instructor 'Jeff Brown'
+    //     location 'University of St. Thomas Minneapolis, MN, USA'
+    //     url 'https://objectcomputing.com/index.php/training/register/offering/91/'
+    // }
 }
 
 books {

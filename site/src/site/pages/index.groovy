@@ -10,7 +10,14 @@ layout 'layouts/main.groovy', true,
             div(id: 'content') {
                 include unescaped: 'html/index.html'
 
-                def upcomingEvents = allEvents.keySet().take(1)
+                int numberOfEvents = 3
+                if ( onlineTrainingCatalogue ) {
+                    numberOfEvents--
+                }
+                if ( onsiteTrainingCatalogue ) {
+                    numberOfEvents--
+                }
+                def upcomingEvents = allEvents.keySet().take(numberOfEvents)
                 section(class: 'row colset-3-article first-event-row') {
                     h1 { strong "Groovy and Grails events you shouldn't miss!" }
                     upcomingEvents.each { String eventName ->
@@ -31,13 +38,13 @@ layout 'layouts/main.groovy', true,
                             }
                         }
                     }
-                    article {
-                        div(class: 'content') {
-                            h2 {
+                    if ( onlineTrainingCatalogue ) {
+                        article {
+                            div(class: 'content') {
+                                h2 {
                                     i(class: 'fa fa-graduation-cap') {}
                                     yield ' Online Training'
                                 }
-
                                 onlineTrainingCatalogue.each {
                                     Course course = it.value
                                     div(class: 'course') {
@@ -61,11 +68,12 @@ layout 'layouts/main.groovy', true,
                                         }
                                     }
                                 }
-                        }
+                            }
+                        }                    
                     }
-                    article {
-                        div(class: 'content') {
-
+                    if ( onsiteTrainingCatalogue ) {
+                        article {
+                            div(class: 'content') {
                                 a(name: 'onsitetraining') {}
 
                                 h2 {
@@ -102,9 +110,11 @@ layout 'layouts/main.groovy', true,
                                         }
                                     }
                                 }
+                            }
                         }
-                    }
+                    }    
                 }
+                    
                 section(class: 'row  last-event-row') {
                     p(class: 'text-center') {
                         yield "For more events see the "

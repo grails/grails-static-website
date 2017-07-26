@@ -56,7 +56,7 @@ pages {
 
 def readVersions = getClass().getResource("versions").text.split('\n')
 List allVersions = readVersions.sort()
-def currentStableVersion = allVersions.last()
+def currentStableVersion = allVersions.reverse().find { !it.contains('.M') && !it.contains('.RC')}
 List previousVersions = allVersions - currentStableVersion
     
 documentation {

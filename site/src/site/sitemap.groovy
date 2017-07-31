@@ -163,35 +163,6 @@ ecosystem {
 allEvents {
 
     // Note that the event image should be 257x180 to look nice
-//    event('Greach 2018') {
-//        location 'Madrid, Spain'
-//        date 'March 30 - April 1, 2017'
-//        url 'http://greachconf.com/'
-//        logo 'img/confs/greach2017.png'
-//        description '''
-//            <p>
-//            Greach, the Spanish gathering of enthusiasts of Groovy, Grails, Griffon, Gradle, Spock, Vert.x, Gaelyk,
-//            and many more. With inspirational talks from the makers and users of these projects, hands-on workshops with the rock stars,
-//            join the 150+ attendees, designers, students, designers, the best professionals together in a great atmosphere.
-//            </p>
-//        '''
-//    }
-    event('GR8Conf US 2017') {
-        location 'Minneapolis, MN, United States of America'
-        date 'July 2017'
-        url 'http://gr8conf.us/'
-        logo 'img/confs/gr8confus.png'
-        description '''
-            <p>
-            Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past
-            few years, and with good reason. To spread the word even more we have created GR8Conf.
-            </p>
-            <p>
-            GR8Conf is an independent, affordable series of conferences.
-            It's dedicated to the technologies in the Groovy ecosystem.
-            </p>
-        '''
-    }
     event('G3 Summit 2017') {
         location 'Austin, TX, United States'
         date 'Nov 28 - Dec 1, 2017'
@@ -207,22 +178,37 @@ allEvents {
         '''
     }
 
-    event('GR8Conf India 2018') {
-        location 'New Delhi, India'
-        date 'January, 2018'
-        url 'http://gr8conf.in/'
-        logo 'img/confs/gr8confin.png'
-        description '''
-            <p>
-            Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past
-            few years, and with good reason. To spread the word even more we have created GR8Conf.
-            </p>
-            <p>
-            GR8Conf is an independent, affordable series of conferences.
-            It's dedicated to the technologies in the Groovy ecosystem.
-            </p>
-        '''
-    }
+//    event('GR8Conf India 2018') {
+//        location 'New Delhi, India'
+//        date 'January, 2018'
+//        url 'http://gr8conf.in/'
+//        logo 'img/confs/gr8confin.png'
+//        description '''
+//            <p>
+//            Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past
+//            few years, and with good reason. To spread the word even more we have created GR8Conf.
+//            </p>
+//            <p>
+//            GR8Conf is an independent, affordable series of conferences.
+//            It's dedicated to the technologies in the Groovy ecosystem.
+//            </p>
+//        '''
+//    }
+    
+    //    event('Greach 2018') {
+//        location 'Madrid, Spain'
+//        date 'March 30 - April 1, 2017'
+//        url 'http://greachconf.com/'
+//        logo 'img/confs/greach2017.png'
+//        description '''
+//            <p>
+//            Greach, the Spanish gathering of enthusiasts of Groovy, Grails, Griffon, Gradle, Spock, Vert.x, Gaelyk,
+//            and many more. With inspirational talks from the makers and users of these projects, hands-on workshops with the rock stars,
+//            join the 150+ attendees, designers, students, designers, the best professionals together in a great atmosphere.
+//            </p>
+//        '''
+//    }
+
     event('GR8Conf EU 2018') {
         location 'Copenhagen, Denmark'
         date 'May 30 - June 1, 2018'
@@ -242,6 +228,23 @@ allEvents {
             </p>
         '''
     }
+
+//    event('GR8Conf US 2018') {
+//        location 'Minneapolis, MN, United States of America'
+//        date 'July 2017'
+//        url 'http://gr8conf.us/'
+//        logo 'img/confs/gr8confus.png'
+//        description '''
+//            <p>
+//            Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past
+//            few years, and with good reason. To spread the word even more we have created GR8Conf.
+//            </p>
+//            <p>
+//            GR8Conf is an independent, affordable series of conferences.
+//            It's dedicated to the technologies in the Groovy ecosystem.
+//            </p>
+//        '''
+//    }
 
 }
 

@@ -249,18 +249,23 @@ allEvents {
 }
 
 onlineTrainingCatalogue {
-    // course('Live Webinar - Why IntelliJ IDEA is the Premier Development Environment for Grails 3') {
-    //     dates 'Jul 13, 2017'
-    //     hours 1
-    //     instructor 'Jeff Brown'
-    //     url 'https://info.jetbrains.com/IDEA-Webinar-July2017.html'
-    // }
-
-    course('Publishing REST Services with Grails 3') {
-        dates 'Aug 3 - Aug 4, 2017'
+    course('GORM Deep Dive') {
+        dates 'Sep 7 - Sep 8, 2017'
         hours 6
         instructor 'Jeff Brown'
-        url 'https://objectcomputing.com/index.php/training/register/offering/92/'
+        url 'https://objectcomputing.com/index.php/training/register/offering/108/'
+    }
+    course('Advanced Groovy Meta-programming with Grails 3') {
+        dates 'Oct 5 - Oct 6, 2017'
+        hours 6
+        instructor 'Jeff Brown'
+        url 'https://objectcomputing.com/index.php/training/register/offering/109/'
+    }
+    course('Intro to Grails for Spring Developers') {
+        dates 'Nov 2 - Nov 3, 2017'
+        hours 6
+        instructor 'Jeff Brown'
+        url 'https://objectcomputing.com/index.php/training/register/offering/110/'
     }
 }
 

@@ -1,6 +1,6 @@
 script: ./travis-build.sh
 jdk:
-- openjdk7
+- oraclejdk8
 env:
   global:
   - GIT_NAME="Graeme Rocher"

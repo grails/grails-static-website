@@ -249,12 +249,6 @@ allEvents {
 }
 
 onlineTrainingCatalogue {
-    course('GORM Deep Dive') {
-        dates 'Sep 7 - Sep 8, 2017'
-        hours 6
-        instructor 'Jeff Brown'
-        url 'https://objectcomputing.com/index.php/training/register/offering/108/'
-    }
     course('Advanced Groovy Meta-programming with Grails 3') {
         dates 'Oct 5 - Oct 6, 2017'
         hours 6

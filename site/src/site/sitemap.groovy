@@ -169,7 +169,8 @@ allEvents {
         url 'https://g3summit.com/'
         logo 'img/confs/g3summit2017.png'
         description '''
-            <p>
+            <p>Save $200 with this <a href="https://objectcomputing.com/news/2017/09/08/weve-got-your-200-discount-g3-summit">G3 Summit discount code</a>.</p>
+	    <p>
             The G3 Summit is an annual event for the Apache Groovy, Grails, and 
             Gradle (G3) community. This is your chance to learn awesome Apache 
             Groovy/Grails/Gradle technologies from project leaders, committers, 

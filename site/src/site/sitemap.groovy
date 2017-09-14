@@ -250,10 +250,10 @@ allEvents {
 }
 
 onlineTrainingCatalogue {
-    course('Advanced Groovy Meta-programming with Grails 3') {
+    course('Groovy Meta-programming') {
         dates 'Oct 5 - Oct 6, 2017'
         hours 6
-        instructor 'Jeff Brown'
+        instructor 'Paul King'
         url 'https://objectcomputing.com/index.php/training/register/offering/109/'
     }
     course('Intro to Grails for Spring Developers') {

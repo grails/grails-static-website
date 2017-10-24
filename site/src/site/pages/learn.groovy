@@ -52,7 +52,7 @@ layout 'layouts/main.groovy', true,
                                 p """
                                      ${$a(href: 'http://guides.grails.org', 'Grails guides')}, 
                                      ${$a(href: '#onlinetraining', 'courses')}, ${$a(href: '#books', 'books')},
-                                     or ${$a(href: '#presentations', 'presentations')}, given about Grails at conferences, are excellent resources 
+                                     or ${$a(href: '#videos', 'presentations')}, given about Grails at conferences, are excellent resources 
                                      to learn more about Grails as well. 
                                 """
                             

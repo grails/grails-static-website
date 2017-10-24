@@ -134,7 +134,18 @@ layout 'layouts/main.groovy', true,
 
                                 select(class: 'form-control', onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
                                     option(label: 'Select a version', disabled: 'disabled', 'selected': 'selected')
-                                    distributions.findAll { it.name }.each{ dist ->
+                                    distributions.findAll { it.name }.sort { lhs, rhs ->
+
+                                        // This assumes a format of major.minor.bugfix[.{RC,M}#]
+                                        def versionHash = { version ->
+                                            def parts = version.tokenize('.')
+                                            while (parts.size() < 4) { parts << null }
+
+                                            parts.collect { it == null ? '99999999' : it.padLeft(8, '0') }.join()
+                                        }
+
+                                        versionHash(rhs.packages.first().version) <=> versionHash(lhs.packages.first().version)
+                                    }.each { dist ->
                                        option "${dist.packages.first().version}"
                                     }
                                 }

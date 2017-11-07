@@ -130,6 +130,7 @@ GR8Conf is an independent, affordable series of conferences and covers All Thing
 
 
     public final static List<String> VERSIONS = [
+            '3.3.1',
             '3.3.0',
             '3.3.0.RC1',
             '3.3.0.M2',

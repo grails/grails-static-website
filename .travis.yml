@@ -1,4 +1,4 @@
-script: ./travis-build.sh
+script: "./travis-build.sh"
 jdk:
 - oraclejdk8
 env:
@@ -6,3 +6,5 @@ env:
   - GIT_NAME="Graeme Rocher"
   - GIT_EMAIL="graeme.rocher@gmail.com"
   - secure: JVA8aVHDyGKv+zaODWH8eVYxVynHQpiMqWvA9FWORU6xYYjMhKFhrKz7ZMHS/oVUyBYI0aBX+uybbm03ZQcdY+bL/l/2vwt35BVx+gFPtq6VSPygwITRUZcrvYB8YXgBKaBP7usGfDjXPsIuAUm9Pqpvb3E572hA16TWncmjr0Y=
+  - secure: p1aKLY22iAl6jdRG4zSHdt5dgH2LvUUkrjD0goocwhrBBbcsKoBVFQ20jrPxNkkegkrwlq6AWDi5bKGNTgfICjZjq89IV9iuvrqMQ3XlFDWOnT/BDZC+hw7h6giAV1kukTUEBNqWAGbijvj26mOulX1vyVkewEH638c5FU0rXrs=
+  - secure: oJAJSLp/cEdMZPq/peu0sB02khuGPG7aTNRuJWu+7mjhYdjpG2x18G3a1jjHaF180wxVh53bBAgFlX+hNKq54xA449r6JhaQ9ckJWPkm1yNxVt15aD2lmGXZeafpIUWSYKxy5az3YErcTaRMVL6qPkVA5ZUi3FOBDCOwBiS5G7k=

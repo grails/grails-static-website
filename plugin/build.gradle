@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
     }
 }
 
@@ -18,6 +19,7 @@ apply plugin:"org.grails.grails-plugin"
 apply plugin:"org.grails.grails-plugin-publish"
 apply plugin:"asset-pipeline"
 apply plugin:"org.grails.grails-gsp"
+apply plugin: "com.jfrog.artifactory"
 
 repositories {
     mavenLocal()
@@ -56,16 +58,19 @@ bootRun {
 // enable if you wish to package this plugin as a standalone application
 bootRepackage.enabled = false
 grailsPublish {
-    // TODO: Provide values here
-    user = 'user'
-    key = 'key'
-    githubSlug = 'grails/grails-static-website'
+    user = System.getenv("BINTRAY_USER") ?: project.hasProperty("bintrayUser") ? project.bintrayUser : ''
+    key = System.getenv("BINTRAY_KEY") ?: project.hasProperty("bintrayKey") ? project.bintrayKey : ''
+    userOrg = project.hasProperty('userOrg') ? project.userOrg : 'grails'
+    repo = project.hasProperty('repo') ? project.repo : 'plugins'
+    websiteUrl = project.hasProperty('websiteUrl') ? project.websiteUrl : "https://github.com/grails/grails-static-website"
     license {
-        name = 'Apache-2.0'
+        name = project.hasProperty('license') ? project.license : 'Apache-2.0'
     }
-    title = "Grails Navigationn"
-    desc = ""
-    developers = [sdelamo: "Sergio del Amo"]
+    issueTrackerUrl = project.hasProperty('issueTrackerUrl') ? project.issueTrackerUrl : "https://github.com/grails-plugins/$project.name/issues"
+    vcsUrl = project.hasProperty('vcsUrl') ? project.vcsUrl : "https://github.com/grails-plugins/$project.name"
+    title = 'Grails Navigation'
+    desc = 'Encapsulate style and navigation of Grails redesign'
+    developers = [sdelamo:"Sergio del Amo"]
 }
 
 

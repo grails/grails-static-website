@@ -707,7 +707,7 @@ body.guides .columnheader {
 }
 
 body.grails3plugins .latestguides ul {
-	padding: 20px 0 0 20px;
+	padding: 0 0 0 20px;
 }
 
 .latestguides li {

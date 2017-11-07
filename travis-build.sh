@@ -31,4 +31,9 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 	git push origin HEAD
 	cd ..
 	rm -rf gh-pages
+
+    if [[ -n $TRAVIS_TAG ]]; then
+        ./gradlew grails-navigation:bintrayUpload
+    fi
+
 fi

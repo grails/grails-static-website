@@ -13,32 +13,31 @@ class PluginGrailsPlugin extends Plugin {
         "grails-app/views/error.gsp"
     ]
 
-    // TODO Fill in these fields
-    def title = "Grails Navigation" // Headline display name of the plugin
+    def title = "Grails Navigation"
     def author = "Sergio del Amo"
     def authorEmail = "sergio.delamo@softamo.com"
-    def description = ''
+    def description = 'Encapsulate style and navigation of Grails redesign.'
     def profiles = ['web']
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/plugin"
+    def documentation = "https://github.com/grails/grails-static-website"
 
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
-//    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
+    def organization = [ name: "Grails", url: "http://grails.org/" ]
 
     // Any additional developers beyond the author specified above.
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
 
     // Location of the plugin's issue tracker.
-//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+    def issueManagement = [ system: "github", url: "https://github.com/grails/grails-static-website/issues" ]
 
     // Online location of the plugin's browseable source code.
-//    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def scm = [ url: "https://github.com/grails/grails-static-website" ]
 
     Closure doWithSpring() { {->
             // TODO Implement runtime spring config (optional)

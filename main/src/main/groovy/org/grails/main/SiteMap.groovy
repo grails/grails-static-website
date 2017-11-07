@@ -287,7 +287,7 @@ GR8Conf is an independent, affordable series of conferences and covers All Thing
                     new DocumentationLink([title: 'Grails Profiles', href: '/profiles.html']),
             ]]),
             new DocumentationGroup([image: 'images/upgrade.svg', title: 'Upgrade', links: [
-                    new DocumentationLink([title: 'Upgrade Documenation', href: '/profiles.html']),
+                    new DocumentationLink([title: 'Upgrade Documenation', href: 'https://grails.github.io/grails-upgrade/latest/guide/index.html']),
             ]]),
             new DocumentationGroup([image: 'images/async.svg', title: 'Async', links: [
                     new DocumentationLink([title: 'Async Grails', href: 'https://async.grails.org/latest/guide/index.html']),

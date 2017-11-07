@@ -127,11 +127,11 @@ class HomePage extends Page {
                     }
                 }
             }
-            html.article(class: 'training') {
+            html.article(class: 'training', style: 'display: none;') {
                 div(class: "content") {
                     h2 'Grails Training'
                     div(id: 'ocitraining') {
-                        span '&nbsp;'
+                        span ''
                     }
                 }
             }

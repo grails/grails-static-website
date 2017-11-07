@@ -12,6 +12,14 @@ var getJSON = function(url, callback) {
     };
     xhr.send();
 };
+function showElementsByClassName(className) {
+    var elements = document.getElementsByClassName(className);
+    for ( var i = 0; i < elements.length; i++ ) {
+        var element = elements[i];
+        element.style.display = "block";
+    }
+}
+
 var ociTrainingTrack = 11;
 getJSON('http://plugins.grails.org/api/training/'+ ociTrainingTrack, function(err, data) {
     var msg = '';
@@ -43,4 +51,5 @@ getJSON('http://plugins.grails.org/api/training/'+ ociTrainingTrack, function(er
     }
     var ociTraining = document.getElementById("ocitraining");
     ociTraining.innerHTML = msg;
+    //showElementsByClassName('training')
 });

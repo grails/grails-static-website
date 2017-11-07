@@ -193,7 +193,7 @@ class GuidesPage extends Page implements ReadFileUtils {
     String training() {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: 'training') {
+        html.div(class: 'training', style: 'display: none;') {
             a(href: 'https://objectcomputing.com/training/catalog/grails/') {
                 h3 class: 'columnheader', 'Grails Training'
             }

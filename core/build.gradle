@@ -1,0 +1,76 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'groovy'
+apply plugin: 'com.jfrog.bintray'
+
+repositories {
+    jcenter()
+}
+
+version projectVersion
+group 'org.grails'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "org.spockframework:spock-core:$spockVersion"
+    compile "org.gebish:geb-core:$gebVersion"
+    compile "org.seleniumhq.selenium:selenium-firefox-driver:2.53.1"
+    compile "org.seleniumhq.selenium:selenium-support:2.53.1"
+    compile "net.sourceforge.htmlunit:htmlunit:2.18"
+    compile "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
+}
+
+test {
+    systemProperties System.properties
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+    from sourceSets.main.allGroovy
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
+}
+
+bintray {
+    user = System.getenv("BINTRAY_USER") ?: project.hasProperty("bintrayUser") ? project.bintrayUser : ''
+    key = System.getenv("BINTRAY_KEY") ?: project.hasProperty("bintrayKey") ? project.bintrayKey : ''
+    publications = ['maven']
+    publish = true
+    pkg {
+        name = "grails-navigation-core"
+        desc = "Library to create Grails Navigation"
+        repo = project.hasProperty('repo') ? project.repo : 'plugins'
+        userOrg = project.hasProperty('userOrg') ? project.userOrg : 'grails'
+        websiteUrl = "https://github.com/grails/${rootProject.name}"
+        issueTrackerUrl = "https://github.com/grails/${rootProject.name}/issues"
+        vcsUrl = "git@github.com:github.com/grails/${rootProject.name}.git"
+        licenses = ['Apache-2.0']
+        publicDownloadNumbers = true
+        version {
+            name = project.version
+        }
+    }
+}

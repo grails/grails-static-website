@@ -19,43 +19,7 @@ Build is image:https://travis-ci.org/grails/grails-static-website.svg?branch=mas
 == Generating the site
 
 ----
-git clone https://github.com/grails/grails-static-website
-cd grails-static-website
-./gradlew webzip
+./gradlew :main:runShadow
 ----
 
-The output can be found in the `build` directory:
-
-----
-build
-  |---- site            : the generated static website
-  |---- reports         : deadlinks report
-  |---- distributions   : zip of the website
-----
-
-== Contributing
-
-The website is generated thanks to Gradle and makes use of the {markupte}[Markup Template Engine]. The structure of the
-project consists of two modules:
-
-----
-generator                       : utility classes and model for generating the website
-site                            : the website itself
-----
-
-The website subproject consists of:
-
-----
-src/main/site                   : sources for the static website
-          |--- assets           : static resources such as images, CSS files, ...
-          |--- html             : elements that templates include as raw HTML contents
-          |--- includes         : includes used by templates
-          |--- layouts          : layouts for the various pages
-          |--- pages            : individual pages
-build.gradle                    : website weaving logic
-----
-
-
-== License
-
-Groovy is licensed under the terms of the http://www.apache.org/licenses/LICENSE-2.0.html[Apache License, Version 2.0]
+The output can be found in the `main/build/site` directory.

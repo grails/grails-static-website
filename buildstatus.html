@@ -1,105 +1,582 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><html>
-    <head>
-        <meta charset='utf-8'/><meta http-equiv='X-UA-Compatible' content='IE=edge'/><meta name='viewport' content='width=device-width, initial-scale=1'/><title>The Grails Framework - Continuous integration</title><link href='img/favicon.ico' type='image/x-ico' rel='icon'/><link rel='stylesheet' type='text/css' href='css/bootstrap.css'/><link rel='stylesheet' type='text/css' href='css/font-awesome.min.css'/><link rel='stylesheet' type='text/css' href='css/style.css'/>
-    </head><body>
-        <a href='https://github.com/grails/grails-core' target='_blank'>
-            <div id='fork-me'>
-                <p>Fork me  on Github</p>
-            </div>
-        </a><div id='st-container' class='st-container st-effect-9'>
-            <nav class='st-menu st-effect-9' id='menu-12'>
-                <h2 class='icon icon-lab'>Socialize</h2><ul>
-                    <li>
-                        <a href='mailing-lists.html' class='icon'><span class='fa fa-envelope'></span> Discuss on the Mailing List</a>
-                    </li><li>
-                        <a href='http://slack-signup.grails.org' class='icon'><span class='fa fa-slack'></span> Discuss on Slack</a>
-                    </li><li>
-                        <a href='https://twitter.com/grailsframework' class='icon'><span class='fa fa-twitter'></span> Grails on Twitter</a>
-                    </li><li>
-                        <a href='events.html' class='icon'><span class='fa fa-calendar'></span> Events and conferences</a>
-                    </li><li>
-                        <a href='https://github.com/grails/grails-core' class='icon'><span class='fa fa-github'></span> Source code on GitHub</a>
-                    </li><li>
-                        <a href='contribute.html#reporting-issues' class='icon'><span class='fa fa-bug'></span> Report issues on Github</a>
-                    </li><li>
-                        <a href='http://stackoverflow.com/questions/tagged/grails' class='icon'><span class='fa fa-stack-overflow'></span> Stack Overflow questions</a>
-                    </li>
-                </ul>
-            </nav><div class='st-pusher'>
-                <div class='st-content'>
-                    <div class='st-content-inner'>
-                        <!--[if lt IE 7]>
-                        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-                    <![endif]--><div><div class='navbar navbar-default navbar-static-top' role='navigation'>
-                                <div class='container'>
-                                    <div class='navbar-header'>
-                                        <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
-                                            <span class='sr-only'></span><span class='icon-bar'></span><span class='icon-bar'></span><span class='icon-bar'></span>
-                                        </button><a class='navbar-brand' href='index.html'>
-                                            <i class='fa grails-icon'>
-                                                <img src='img/grails-cupsonly-logo-white.svg'/>
-                                            </i> Grails
-                                        </a>
-                                    </div><div class='navbar-collapse collapse'>
-                                        <ul class='nav navbar-nav navbar-right'>
-                                            <li class=''><a href='/learn.html'>Learn</a></li><li class=''><a href='http://guides.grails.org'>Guides</a></li><li class=''><a href='/documentation.html'>Documentation</a></li><li class=''><a href='/download.html'>Download</a></li><li class=''><a href='http://plugins.grails.org'>Plugins</a></li><li class='active'><a href='/community.html'>Community</a></li><li class=''><a href='/support.html'>Support</a></li><li>
-                                                <a data-effect='st-effect-9' class='st-trigger' href='#'>Socialize</a>
-                                            </li><li class=''>
-                                                <a href='search.html'>
-                                                    <i class='fa fa-search'></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div><div id='content' class='page-1'><div class='row'><div class='row-fluid'><div class='col-lg-3'><ul class='nav-sidebar'>
-                                                <li><a href='community.html'>Community</a></li><li><a href='ecosystem.html'>Ecosystem</a></li><li><a href='contribute.html'>Contribute</a></li><li><a href='sponsors.html'>Sponsors</a></li><li><a href='mailing-lists.html'>Mailing-lists</a></li><li><a href='events.html'>Events</a></li><li><a href='usergroups.html'>User groups</a></li>
-                                            </ul><br/><a width="100%" height="450" class="twitter-timeline" href="https://twitter.com/grailsframework" data-widget-id="555387934950842368">Tweets by @grailsframework</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div><div class='col-lg-8 col-lg-pull-0'><div id='contribute-btn'>
-                                                <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/grails/grails-static-website/tree/master/site/src/site/pages/buildstatus.groovy"'>
-                                                    <i class='fa fa-pencil-square-o'></i> Improve this doc
-                                                </button>
-                                            </div><h1><i class='fa fa-circle-o-notch'></i> Continuous integration</h1><article><p>
-                                    Our <a href='http://travis-ci.org/grails/grails-core'>continuous integration server</a>,
-                                    runs on <a href='http://www.travis-ci.org'>Travis CI</a>,
-                                    and builds Grails and Grails plugins.
-                                </p><hr class='divider'/><h2>Grails builds</h2><table class='table table-stripped'><thead><tr><th>Build name</th><th>Status</th></tr></thead><tbody><tr><td>Grails Master</td><td><a href='https://travis-ci.org/grails/grails-core?branch=master'><img src='https://travis-ci.org/grails/grails-core.svg?branch=master'/></a></td></tr><tr><td>Grails 3.1.x Branch</td><td><a href='https://travis-ci.org/grails/grails-core?branch=3.1.x'><img src='https://travis-ci.org/grails/grails-core.svg?branch=3.1.x'/></a></td></tr><tr><td>Grails 3.0.x Branch</td><td><a href='https://travis-ci.org/grails/grails-core?branch=3.0.x'><img src='https://travis-ci.org/grails/grails-core.svg?branch=3.0.x'/></a></td></tr><tr><td>Grails 2.5.x Branch</td><td><a href='https://travis-ci.org/grails/grails-core?branch=2.5.x'><img src='https://travis-ci.org/grails/grails-core.svg?branch=2.5.x'/></a></td></tr><tr><td>Grails 2.4.x Branch</td><td><a href='https://travis-ci.org/grails/grails-core?branch=2.4.x'><img src='https://travis-ci.org/grails/grails-core.svg?branch=2.4.x'/></a></td></tr><tr><td>Grails 2.3.x Branch</td><td><a href='https://travis-ci.org/grails/grails-core?branch=2.3.x'><img src='https://travis-ci.org/grails/grails-core.svg?branch=2.3.x'/></a></td></tr></tbody></table></article></div></div></div></div><footer id='footer'>
-                                <div class='row'>
-                                    <div class='colset-3-footer'>
-                                        <div class='col-1'>
-                                            <h1>Grails</h1><ul>
-                                                <li><a href='/learn.html'>Learn</a></li><li><a href='http://guides.grails.org'>Guides</a></li><li><a href='/documentation.html'>Documentation</a></li><li><a href='/download.html'>Download</a></li><li><a href='http://plugins.grails.org'>Plugins</a></li><li><a href='/community.html'>Community</a></li><li><a href='/support.html'>Support</a></li>
-                                            </ul>
-                                        </div><div class='col-2'>
-                                            <h1>About</h1><ul>
-                                                <li><a href='contribute.html'>Contributing</a></li><li><a href='https://github.com/grails/grails-core'>Source code</a></li><li><a href='buildstatus.html'>Build status</a></li><li><a href='learn.html#books'>Books</a></li><li><a href='faq.html'>FAQ</a></li><li><a href='search.html'>Search</a></li>
-                                            </ul>
-                                        </div><div class='col-3'>
-                                            <h1>Socialize</h1><ul>
-                                                <li><a href='mailing-lists.html'>Discuss on the Mailing List</a></li><li><a href='http://slack-signup.grails.org'>Discuss on Slack</a></li><li><a href='https://twitter.com/grailsframework'>Grails on Twitter</a></li><li><a href='events.html'>Events and conferences</a></li><li><a href='https://github.com/grails/grails-core'>Source code on GitHub</a></li><li><a href='contribute.html#reporting-issues'>Report issues on Github</a></li><li><a href='http://stackoverflow.com/questions/tagged/grails'>Stack Overflow questions</a></li>
-                                            </ul>
-                                        </div><div class='col-right'>
-                                            <p>
-                                                The Grails Framework<br/>repository is hosted by <a href='http://artifactoryonline.com'>Artifactory</a><br/>Website hosting is provided by <a href='http://run.pivotal.io'>Pivotal</a><br/>YourKit supports Grails with its <a href='https://www.yourkit.com/java/profiler/index.jsp'>Java Profiler</a><br/>
-                                            </p><a href='http://artifactoryonline.com'>
-                                                <img width='150' src='img/logos/artifactory.png' title='Artifactory Online' alt='Aritfactory Online'/>
-                                            </a><br/><br/><a href='http://yourkit.com'>
-                                                <img width='150' src='https://www.yourkit.com/images/yklogo.png' title='YourKit Java Profiler' alt='YourKit Java Profiler'/>
-                                            </a><br/><a href='http://run.pivotal.io'>
-                                                <img src='img/pws-thumb.png' title='Pivotal Web Service' alt='Pivotal Web Service'/>
-                                            </a><br/>
-                                        </div>
-                                    </div><div class='clearfix'>&copy; 2005-2017 the Grails project &mdash; Grails is Open Source, <a href='http://www.apache.org/licenses/LICENSE-2.0.html'>Apache 2 License</a></div>
-                                </div>
-                            </footer></div>
-                    </div>
-                </div>
-            </div>
-        </div><script src='js/vendor/jquery-1.10.2.min.js' defer></script><script src='js/vendor/bootstrap.js' defer></script><script src='js/vendor/modernizr.min.js' defer></script><script src='js/vendor/classie.js' defer></script><script src='js/vendor/sidebarEffects.js' defer></script><script src='js/plugins.js' defer></script><script>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta charset='UTF-8' />
+    <title>Build Status | Grails Framework</title>
+    <link rel='stylesheet' href='stylesheets/screen.css' />
+    <script src='javascripts/navigation.js'></script>
+  </head>
+  <body><header class='mainheader'>
+  <div class='content'>
+    <a href='http://grails.org/index.html'><img class='grailslogo' src='images/grails_logo.svg' alt='Grails Logo' /></a>
+    <a href='javascript:show(&apos;topmenus&apos;, &apos;showNavigationLink&apos;)' id='showNavigationLink' class='mobile align-center'>Show Navigation</a>
+    <div id='topmenus'>
+      <nav class='secondarymenu' id='secondarymenu'><ul>
+  <li>
+    <a href='http://grailsblog.objectcomputing.com'>Blog</a>
+  </li>
+  <li>
+    <a href='http://grails.org/community.html'>Community</a>
+  </li>
+  <li>
+    <a href='http://grails.org/books.html'>Books</a>
+  </li>
+  <li>
+    <a href='http://grails.org/search.html'>Search</a>
+  </li>
+</ul></nav>
+      <nav class='mainmenu' id='mainmenu'><ul>
+  <li>
+    <a href='http://grails.org/documentation.html'>Documentation</a>
+  </li>
+  <li>
+    <a href='http://grails.org/download.html'>Download</a>
+  </li>
+  <li>
+    <a href='http://plugins.grails.org'>Plugins</a>
+  </li>
+  <li>
+    <a href='http://guides.grails.org/index.html'>Learning</a>
+  </li>
+  <li>
+    <a href='http://grails.org/faq.html'>FAQ</a>
+  </li>
+  <li>
+    <a href='http://grails.org/support.html'>Support</a>
+  </li>
+</ul></nav>
+    </div>
+  </div>
+</header>
+    <div class='headerbar chalicesbg'>
+      <div class='content'>
+        <h1>Build Status</h1>
+      </div>
+    </div><div class='content'>
+  <article class='post'>
+    <div class='twocolumns'>
+      <div class='column'>
+        <section>
+          <p>Our
+            <a href='http://travis-ci.org/grails/grails-core'>continuous integration server</a> runs on 
+            <a href='http://www.travis-ci.org/'>Travis CI</a>, and builds Grails and Grails plugins.
+          </p><table>
+  <thead>
+    <tr>
+      <th>Build name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody><tr>
+  <td>Grails Master</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-core?branch=master'>
+      <img src='https://travis-ci.org/grails/grails-core.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails 3.1.x Branch</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-core?branch=3.1.x'>
+      <img src='https://travis-ci.org/grails/grails-core.svg?branch=3.1.x' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails 3.0.x Branch</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-core?branch=3.0.x'>
+      <img src='https://travis-ci.org/grails/grails-core.svg?branch=3.0.x' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails 2.5.x Branch</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-core?branch=2.5.x'>
+      <img src='https://travis-ci.org/grails/grails-core.svg?branch=2.5.x' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails 2.4.x Branch</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-core?branch=2.4.x'>
+      <img src='https://travis-ci.org/grails/grails-core.svg?branch=2.4.x' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails 2.3.x Branch</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-core?branch=2.3.x'>
+      <img src='https://travis-ci.org/grails/grails-core.svg?branch=2.3.x' />
+    </a>
+  </td>
+</tr></tbody>
+</table>
+        </section>
+        <section>
+          <h3 class='columnheader'>GORM</h3><table>
+  <thead>
+    <tr>
+      <th>Build name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody><tr>
+  <td>GORM Master</td>
+  <td>
+    <a href='https://travis-ci.org/grails/grails-data-mapping?branch=master'>
+      <img src='https://travis-ci.org/grails/grails-data-mapping.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>GORM GraphQL</td>
+  <td>
+    <a href='https://travis-ci.org/grails/gorm-graphql?branch=master'>
+      <img src='https://travis-ci.org/grails/gorm-graphql.svg?branch=master' />
+    </a>
+  </td>
+</tr></tbody>
+</table>
+        </section>
+      </div>
+      <div class='column'>
+        <h3 class='columnheader'>Grails Guides Build Status</h3><table>
+  <thead>
+    <tr>
+      <th>Build name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody><tr>
+  <td>Grails Multi-datasource</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-multi-datasource?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-multi-datasource.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails &amp; SOAP</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-soap?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-soap.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Querying the Database using GORM Dynamic Finders</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/querying-gorm-dynamic-finders?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/querying-gorm-dynamic-finders.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Configure Datasources dynamically while using DATABASE Multi-tenancy</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-dynamic-multiple-datasources?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-dynamic-multiple-datasources.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Custom Tenant Resolver by JWT</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-custom-security-tenant-resolver?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-custom-security-tenant-resolver.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Events</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-events?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-events.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Build a Ratpack application which uses GORM</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/gorm-ratpack?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/gorm-ratpack.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Promises</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-async-promises?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-async-promises.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Consume and test a third-party REST API</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-mock-http-server?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-mock-http-server.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Database Migration</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-database-migration?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-database-migration.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Build a Spring Boot application with GORM</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/gorm-without-grails?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/gorm-without-grails.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Build a Grails 3 application with the Vaadin 8 Framework</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/vaadin-grails?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/vaadin-grails.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Logging</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-logging?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-logging.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Replacing a Node/Express API with Grails</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-vs-nodejs?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-vs-nodejs.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Creating a React app with Spring Security</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/react-spring-security?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/react-spring-security.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Code Coverage</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-code-coverage?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-code-coverage.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Single Database Multi-Tenancy - Discriminator Column</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/discriminator-per-tenant?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/discriminator-per-tenant.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Controller Testing</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-controller-testing?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-controller-testing.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Combining the React profile projects</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/react-combined?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/react-combined.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Static code analysis in a Grails app with CodeNarc</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-codenarc?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-codenarc.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Google Home Guide</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-google-home?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-google-home.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Multi-Project Build</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-multi-project-build?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-multi-project-build.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Database per Tenant Multi-Tenancy</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/database-per-tenant?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/database-per-tenant.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>How to change languages in a Grails app?</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails_i18n?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails_i18n.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Deploy a Grails app to Google Cloud</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-google-cloud?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-google-cloud.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Service Testing</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-mock-basics?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-mock-basics.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Using HAL with JSON Views</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/using-hal-with-json-views?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/using-hal-with-json-views.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Spring Security Core Plugin Custom Authentication</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-spring-security-core-plugin-custom-authentication?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-spring-security-core-plugin-custom-authentication.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>How to test Domain class constraints?</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-test-domain-class-constraints?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-test-domain-class-constraints.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a Graph application with Grails and Neo4j</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/neo4j-movies?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/neo4j-movies.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Build a TVML App with Grails</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-tvmlapp?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-tvmlapp.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>How to upload a file with Grails 3</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-upload-file?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-upload-file.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Adding Commit Info to your Grails Application</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/adding-commit-info?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/adding-commit-info.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Deploy a Grails 3 App to Pivotal Web Services (PWS)</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-deploy-pws?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-deploy-pws.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a REST API with Grails and AngularJS 1.x</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-restapi-angularjs?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-restapi-angularjs.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building an Android client powered by a Grails backend</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/building-an-android-client-powered-by-a-grails-backend?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/building-an-android-client-powered-by-a-grails-backend.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a Objective-C iOS Client powered by a Grails backend</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/building-an-ios-objectc-client-powered-by-a-grails-backend?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/building-an-ios-objectc-client-powered-by-a-grails-backend.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a Swift iOS Client powered by a Grails backend</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/building-an-ios-swift-client-powered-by-a-grails-backend?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/building-an-ios-swift-client-powered-by-a-grails-backend.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Create and test a Grails 3 TagLib; integrate the Trix WYSWYG editor</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-taglib-wyswyg-trix?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-taglib-wyswyg-trix.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Run Grails Geb Functional Tests with multiple Browsers</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-geb-multiple-browsers?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-geb-multiple-browsers.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Creating your first Grails Application</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/creating-your-first-grails-app?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/creating-your-first-grails-app.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Testing a Secured Grails Application</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-test-security?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-test-security.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Using Command Objects To Handle Form Data</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/command-objects-and-forms?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/command-objects-and-forms.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a React App</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/building-a-react-app?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/building-a-react-app.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Combining the Angular Profile Projects</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/angular2-combined?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/angular2-combined.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Using the React Profile</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/using-the-react-profile?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/using-the-react-profile.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a REST application with MongoDB</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/rest-mongodb?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/rest-mongodb.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Building a REST application with GORM and Hibernate 5</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/rest-hibernate?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/rest-hibernate.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Sending Server Sent Events with Grails </td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/server-sent-events?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/server-sent-events.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Developing Grails 3 Applications with IntelliJ IDEA</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-developing-grails-3-applications-with-intellij-idea?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-developing-grails-3-applications-with-intellij-idea.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Retrieving Config Values</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-retrieving-config-values?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-retrieving-config-values.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>AngularJS Scaffolding with Grails 3</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-angularjs-scaffolding-with-grails-3?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-angularjs-scaffolding-with-grails-3.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Multi Project Builds</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-multi-project-builds?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-multi-project-builds.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>JSON Views</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-json-views?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-json-views.svg?branch=master' />
+    </a>
+  </td>
+</tr><tr>
+  <td>Grails Interceptors</td>
+  <td>
+    <a href='https://travis-ci.org/grails-guides/grails-quickcasts-interceptors?branch=master'>
+      <img src='https://travis-ci.org/grails-guides/grails-quickcasts-interceptors.svg?branch=master' />
+    </a>
+  </td>
+</tr></tbody>
+</table>
+      </div>
+    </div>
+  </article>
+</div><footer>
+  <div class='content'>
+    <div class='ocihometograils'>
+      <span>Sponsored by</span>
+      <a href='https://objectcomputing.com/products/grails/'><img class='' src='images/oci_home_to_grails.svg' alt='OCI Home to Grails' /></a>
+    </div>
+    <nav class='socialmedianav'><ul>
+  <li>
+    <a href='https://grails.slack.com'><img class='' src='images/slack.svg' alt='Slack Icon' /></a>
+  </li>
+  <li>
+    <a href='https://www.youtube.com/watch?v=XnRNfDGkBVg&amp;list=PLI74De5M9T73uH3WilDCePP2qfSDpMaGu'><img class='' src='images/youtube.svg' alt='Youtube Icon' /></a>
+  </li>
+  <li>
+    <a href='https://www.linkedin.com/groups/39757'><img class='' src='images/linkedin.svg' alt='LinkedIn Icon' /></a>
+  </li>
+  <li>
+    <a href='https://github.com/grails/'><img class='' src='images/github.svg' alt='Github Icon' /></a>
+  </li>
+  <li>
+    <a href='https://twitter.com/grailsframework'><img class='' src='images/twitter.svg' alt='Twitter Icon' /></a>
+  </li>
+</ul></nav>
+    <nav class='partnersnav'><ul>
+  <li>Grails' repositories is hosted by
+    <a href='http://artifactoryonline.com/'>Artifactory</a>
+  </li>
+  <li>Website hosting provided by
+    <a href='http://run.pivotal.io/'>Pivotal</a>
+  </li>
+  <li>YourKit supports Grails with its 
+    <a href='https://www.yourkit.com/java/profiler/index.jsp'>Java Profiler</a>
+  </li>
+  <li>Grails is Open Source
+    <a href='http://www.apache.org/licenses/LICENSE-2.0.html'>Apache 2 License</a>
+  </li>
+</ul></nav>
+  </div>
+</footer><div>
+  <script type='text/javascript'>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -107,7 +584,8 @@
 
               ga('create', 'UA-82213539-2', 'auto');
               ga('send', 'pageview');
-        </script><script>
+</script>
+  <script type='text/javascript'>
 adroll_adv_id = "HBWJH4CQCJGS5DJRSB4Z4D";
 adroll_pix_id = "IVEQYFOZXZAPZMDVQH7BFE";
 /* OPTIONAL: provide email to improve user identification */
@@ -127,6 +605,7 @@ adroll_pix_id = "IVEQYFOZXZAPZMDVQH7BFE";
     if (window.addEventListener) {window.addEventListener('load', _onload, false);}
     else {window.attachEvent('onload', _onload)}
 }());            
-        </script>
-    </body>
+</script>
+</div>
+  </body>
 </html>

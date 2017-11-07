@@ -6,9 +6,9 @@ git config --global user.email "$GIT_EMAIL"
 git config --global credential.helper "store --file=~/.git-credentials"
 echo "https://$GH_TOKEN:@github.com" > ~/.git-credentials
 
-./gradlew main:shadowJar
+./gradlew main:runShadow
 
-./gradlew guides:shadowJar
+./gradlew guides:runShadow
 
 if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 

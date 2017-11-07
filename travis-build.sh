@@ -33,6 +33,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 	rm -rf gh-pages
 
     if [[ -n $TRAVIS_TAG ]]; then
+        ./gradlew grails-navigation-core:bintrayUpload
         ./gradlew grails-navigation:bintrayUpload
     fi
 

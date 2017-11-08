@@ -324,9 +324,6 @@ class GuidesPage extends Page implements ReadFileUtils {
                 }
                 div(class: 'column') {
                     mkp.yieldUnescaped leftColumn()
-                    div(id: 'searchresults') {
-                        mkp.yieldUnescaped('')
-                    }
                     if ( tag ) {
                         mkp.yieldUnescaped guideGroupByTag(tag, guides)
 
@@ -334,6 +331,9 @@ class GuidesPage extends Page implements ReadFileUtils {
                         mkp.yieldUnescaped guideGroupByCategory(category, guides.findAll { it.category == category.name }, false )
 
                     } else {
+                        div(id: 'searchresults') {
+                            mkp.yieldUnescaped('')
+                        }
                         mkp.yieldUnescaped guideGroupByCategory(categories().apprentice, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)

@@ -190,7 +190,6 @@ class GuidesPage extends Page implements ReadFileUtils {
             } else {
                 mkp.yieldUnescaped training()
                 mkp.yieldUnescaped sponsoredBy()
-                mkp.yieldUnescaped guideSuggestion()
                 mkp.yieldUnescaped tagCloud()
             }
         }
@@ -320,6 +319,7 @@ class GuidesPage extends Page implements ReadFileUtils {
                         mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
+                        mkp.yieldUnescaped guideSuggestion()
                     }
                 }
                 div(class: 'column') {

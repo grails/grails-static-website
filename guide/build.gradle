@@ -27,8 +27,7 @@ dependencies {
 
 task cleanSiteFolder(type: Delete) {
     group 'build'
-    //ext.destDir = "${project.buildDir}/site"
-    ext.destDir = "/Users/sdelamo/git/grails/grails-guides/src/main/resources"
+    ext.destDir = "${project.buildDir}/site"
     delete "${destDir}/css"
     delete "${destDir}/fonts"
     delete "${destDir}/img"

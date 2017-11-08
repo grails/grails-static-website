@@ -31,6 +31,16 @@ class GormHomePage extends Page {
         'gorm_logo.svg'
     }
 
+    @Override
+    String pinnedIcon() {
+        'gorm-pinned-icon.svg'
+    }
+
+    @Override
+    String favIcon() {
+        'gormfavicon.ico'
+    }
+
     String mainLogoAlt() {
         'GOM LOGO'
     }

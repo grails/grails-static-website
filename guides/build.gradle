@@ -40,6 +40,8 @@ task copyAssets {
             into "${project.buildDir}/site/images"
             include '*.svg'
             include '*.png'
+            include '*.svg'
+            include '*.ico'
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/stylesheets"

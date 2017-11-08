@@ -101,7 +101,7 @@ class GuidesPage extends Page implements ReadFileUtils {
     @Override
     List<String> getJavascriptFiles() {
         List<String> jsFiles = super.getJavascriptFiles()
-        jsFiles << ("${guidesUrl()}/javascripts/training.js" as String)
+        jsFiles << ("${guidesUrl()}/javascripts/ocitraining.js" as String)
         jsFiles << ("${guidesUrl()}/javascripts/search.js" as String)
         jsFiles
     }

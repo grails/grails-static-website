@@ -16,10 +16,32 @@ This project builds the Grails website. It is using {gradle}[Gradle] and is full
 
 Build is image:https://travis-ci.org/grails/grails-static-website.svg?branch=master["Build Status", link="https://travis-ci.org/grails/grails-static-website"].
 
-== Generating the site
+== Generating the MAIN site
+
+[http://grails.org](http://grails.org)
 
 ----
 ./gradlew :main:runShadow
 ----
 
 The output can be found in the `main/build/site` directory.
+
+== Generating the GORM site
+
+[http://gorm.grails.org](http://gorm.grails.org)
+
+----
+./gradlew :gorm:runShadow
+----
+
+The output can be found in the `gorm/build/site` directory.
+
+== Generating the GUIDES site
+
+[http://guides.grails.org](http://guides.grails.org)
+
+----
+./gradlew :guides:runShadow
+----
+
+The output can be found in the `guides/build/site` directory.

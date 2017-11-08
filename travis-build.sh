@@ -20,7 +20,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     ./gradlew gorm:runShadow || EXIT_STATUS=$?
 
     if [[ $EXIT_STATUS -ne 0 ]]; then
-        echo "Main Website generation failed"
+        echo "GORM Website generation failed"
         exit $EXIT_STATUS
     fi
 

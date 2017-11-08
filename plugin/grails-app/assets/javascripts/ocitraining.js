@@ -51,5 +51,5 @@ getJSON('https://grailsplugins.cfapps.io/api/training/'+ ociTrainingTrack, funct
     }
     var ociTraining = document.getElementById("ocitraining");
     ociTraining.innerHTML = msg;
-    //showElementsByClassName('training')
+    showElementsByClassName('training')
 });

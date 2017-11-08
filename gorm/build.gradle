@@ -61,6 +61,11 @@ task copyAssets {
             include '*.css'
         }
         copy {
+            from "${rootProject.projectDir}/plugin/grails-app/assets/javascripts"
+            into "${project.buildDir}/site/javascripts"
+            include '*.js'
+        }
+        copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/fonts"
             into "${project.buildDir}/site/fonts"
             include '*.eot'

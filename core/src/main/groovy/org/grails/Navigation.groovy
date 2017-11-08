@@ -11,6 +11,7 @@ class Navigation {
 
     static Menu secondaryMenu(String url = null, String gormUrl) {
         new Menu(items: [
+                trainingMenuItem(),
                 blogMenuItem(),
                 communityMenuItem(url),
                 booksMenuItem(url),
@@ -20,6 +21,10 @@ class Navigation {
 
     static MenuItem blogMenuItem() {
         new TextMenuItem(href: 'http://grailsblog.objectcomputing.com', title: 'Blog')
+    }
+
+    static MenuItem trainingMenuItem() {
+        new TextMenuItem(href: 'https://objectcomputing.com/training/catalog/grails/', title: 'Training')
     }
 
     static Menu mainMenu(String url = null, String guidesUrl = null) {

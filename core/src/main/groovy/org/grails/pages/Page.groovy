@@ -224,7 +224,7 @@ abstract class Page implements HtmlPage {
             setOmitNullAttributes(true)
             head {
                 meta name: 'viewport', content: 'width=device-width, initial-scale=1'
-                link rel: 'icon', href: "/${getImageAssetPreffix()}${favIcon()}"
+                link rel: 'icon', href: "${getImageAssetPreffix()}${favIcon()}"
                 link rel: 'mask-icon', href: "/${getImageAssetPreffix()}${pinnedIcon()}", color: 'feb672'
                 meta charset: 'UTF-8'
                 title getHtmlHeadTitle()

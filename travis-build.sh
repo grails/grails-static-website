@@ -15,6 +15,31 @@ if [[ $EXIT_STATUS -ne 0 ]]; then
     exit $EXIT_STATUS
 fi
 
+# Publish Guide Style
+if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
+    ./gradlew guide:runShadow || EXIT_STATUS=$?
+
+    if [[ $EXIT_STATUS -ne 0 ]]; then
+        echo "Single Guide Styles generation failed"
+        exit $EXIT_STATUS
+    fi
+
+    git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git -b master gh-pages --single-branch > /dev/null
+
+	cd gh-pages
+	cp -r ../gorm/build/site/* src/main/resources
+	if git diff --quiet; then
+        echo "No changes in Single Guide Styles"
+    else
+        git add *
+	    git commit -a -m "Updating Single Guide Styles for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+	    git push origin HEAD
+    fi
+
+	cd ..
+	rm -rf gh-pages
+fi
+
 # Publish GORM Site
 if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     ./gradlew gorm:runShadow || EXIT_STATUS=$?

@@ -122,12 +122,7 @@ The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) 
 Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past few years, and with good reason. To spread the word even more we have created GR8Conf.
 The 2018 Edition of GR8Conf Europe is the 10th edition and will be a blast. Like in 2017 it will feature a DevOps day. Focus will be on technologies to support your everyday DevOps needs.
 GR8Conf is an independent, affordable series of conferences and covers All Things Groovy'''),
-
     ]
-
-
-
-
 
     public final static List<String> VERSIONS = [
             '3.3.1',

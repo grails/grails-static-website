@@ -133,7 +133,6 @@ class GormHomePage extends Page {
                              title: 'What\'s new?'),
                 new TextMenuItem(href: 'http://gorm.grails.org/latest/developer/manual/index.html',
                         title: 'Developer Guide'),
-                Navigation.trainingMenuItem(),
                 Navigation.supportMenuItem(),
         ] as List<MenuItem>)
     }

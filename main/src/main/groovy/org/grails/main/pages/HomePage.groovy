@@ -22,7 +22,7 @@ class HomePage extends Page {
     @Override
     List<String> getJavascriptFiles() {
         List<String> jsFiles = super.getJavascriptFiles()
-        jsFiles << 'javascripts/ocitraining.js'
+        jsFiles << 'javascripts/oci-training.js'
         jsFiles
     }
 

@@ -48,6 +48,14 @@ class GuidesPage extends Page implements ReadFileUtils {
     }
 
     @Override
+    boolean doNotIndex() {
+        if ( tag || category ) {
+            return true
+        }
+        false
+    }
+
+    @Override
     String getHtmlHeadTitle() {
         'Learning - Guides | Grails Framework'
     }

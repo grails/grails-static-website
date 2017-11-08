@@ -27,7 +27,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     git clone https://${GH_TOKEN}@github.com/grails/grails-data-mapping.git -b gh-pages gh-pages --single-branch > /dev/null
 
 	cd gh-pages
-	cp -r ../gorm/build/site/. ./
+	cp -r ../gorm/build/site/* .
 	if git diff --quiet; then
         echo "No changes in GORM Website"
     else
@@ -52,7 +52,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 
 	git clone https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git -b gh-pages gh-pages --single-branch > /dev/null
 	cd gh-pages
-	cp -r ../main/build/site/. ./
+	cp -r ../main/build/site/* .
     if git diff --quiet; then
         echo "No changes in MAIN Website"
     else
@@ -78,7 +78,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 
     git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git -b gh-pages gh-pages --single-branch > /dev/null
 	cd gh-pages
-	cp -r ../guides/build/site/. ./
+	cp -r ../guides/build/site/* .
 	if git diff --quiet; then
         echo "No changes in GUIDES Website"
     else

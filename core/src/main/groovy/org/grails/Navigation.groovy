@@ -94,7 +94,7 @@ class Navigation {
     }
 
     static TextMenuItem guidesMenuItem(String guidesUrl) {
-        menuItemWithHref('index.html', 'Learning', guidesUrl)
+        menuItemWithHref('index.html', 'Guides', guidesUrl)
     }
 
     static TextMenuItem questionsMenuItem(String url = null) {

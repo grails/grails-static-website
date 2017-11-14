@@ -57,7 +57,7 @@ class GuidesPage extends Page implements ReadFileUtils {
 
     @Override
     String getHtmlHeadTitle() {
-        'Learning - Guides | Grails Framework'
+        'Guides | Grails Framework'
     }
 
     @Override

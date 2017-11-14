@@ -219,6 +219,10 @@ abstract class Page implements HtmlPage {
         false
     }
 
+    String googleSiteVerification() {
+        'REYQ1_I6HGowAE7LOLVqfQbnKaB4IfFpMlGzMbJj55Q'
+    }
+
     @CompileDynamic
     String html() {
         StringWriter writer = new StringWriter()
@@ -227,7 +231,7 @@ abstract class Page implements HtmlPage {
             setOmitEmptyAttributes(true)
             setOmitNullAttributes(true)
             head {
-                meta name: 'google-site-verification', content: 'REYQ1_I6HGowAE7LOLVqfQbnKaB4IfFpMlGzMbJj55Q'
+                meta name: 'google-site-verification', content: googleSiteVerification()
                 meta name: 'viewport', content: 'width=device-width, initial-scale=1'
                 if ( doNotIndex() ) {
                     meta name: 'robots', content: 'noindex,nofollow'

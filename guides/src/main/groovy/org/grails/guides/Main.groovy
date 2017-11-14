@@ -6,6 +6,8 @@ import org.grails.guides.model.Category
 import org.grails.model.Guide
 import org.grails.guides.model.Tag
 import org.grails.guides.pages.GuidesPage
+import org.grails.pages.HtmlPage
+import org.grails.pages.SiteMapPage
 
 @CompileStatic
 class Main {
@@ -34,5 +36,21 @@ class Main {
             File f = new File("${path}${page.slug}")
             f.text = text
         }
+
+        List<String> urls = guides.collect { Guide guide ->
+            "http://guides.grails.org/${guide.name}/guide/index.html" as String
+        }
+        urls.add('index.html')
+        SiteMapPage siteMapPage = new SiteMapPage(urls)
+        savePage(siteMapPage, siteMapPage.slug)
+    }
+
+
+    static savePage(HtmlPage page, String filename) {
+        String text = page.html()
+        String preffix = "build/site/"
+        File f = new File("${preffix}${filename}")
+        f.createNewFile()
+        f.text = text
     }
 }

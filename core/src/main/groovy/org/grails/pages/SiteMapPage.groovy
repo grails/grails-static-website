@@ -7,13 +7,11 @@ import groovy.xml.MarkupBuilder
 @CompileStatic
 class SiteMapPage implements HtmlPage {
 
-    List<HtmlPage> pages
-    String url
+    List<String> urls
     String slug = 'sitemap.xml'
 
-    SiteMapPage(String url, List<HtmlPage> pages) {
-        this.url = url
-        this.pages = pages
+    SiteMapPage(List<String> urls) {
+        this.urls = urls
     }
 
     @CompileDynamic
@@ -22,9 +20,9 @@ class SiteMapPage implements HtmlPage {
         MarkupBuilder html = new MarkupBuilder(writer)
 
         html.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") {
-            for ( HtmlPage page : pages ) {
+            for ( String urlStr : this.urls) {
                 url {
-                    loc "${url}/${page.slug}"
+                    loc urlStr
                 }
             }
         }

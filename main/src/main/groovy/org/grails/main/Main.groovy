@@ -46,7 +46,9 @@ class Main {
         }
 
         String grailsUrl = (pages.get(0) as Page).grailsUrl()
-        SiteMapPage siteMapPage = new SiteMapPage(grailsUrl, pages)
+
+        List<String> urls = pages.collect { HtmlPage page -> "${grailsUrl}/${page.slug}" as String }
+        SiteMapPage siteMapPage = new SiteMapPage(urls)
         savePage(siteMapPage, siteMapPage.slug)
     }
 

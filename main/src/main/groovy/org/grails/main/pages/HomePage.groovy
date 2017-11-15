@@ -65,9 +65,9 @@ class HomePage extends Page {
                 div(class: 'content') {
                     div(class: 'threecolumns') {
                         div(class: 'column') {
-                            img src: "images/groovy.png", alt: "Groovy Programming Language"
-                            h3 'Groovy-Based'
-                            p 'Apache Groovy is a language for the Java platform designed to enhance developers\' productivity. It is an optionally-typed and dynamic language but with static-typing and static compilation capabilities.'
+                            img src: "images/flatlearningcurve.png", alt: "Flat Learning Curve"
+                            h3 'Flat Learning Curve'
+                            p 'Convention-over-configuration, sensible defaults, opinionated APIs, and the Groovy language combine to make Grails easy to learn for Java developers.'
                         }
                         div(class: 'column') {
                             img src: "images/springboot.svg", alt: "Spring Boot"
@@ -80,9 +80,9 @@ class HomePage extends Page {
                             p 'Grails seamlessly and transparently integrates and interoperates with Java, the JVM, and existing Java EE containers.'
                         }
                         div(class: 'column') {
-                            img src: "images/flatlearningcurve.png", alt: "Flat Learning Curve"
-                            h3 'Flat Learning Curve'
-                            p 'Convention-over-configuration, sensible defaults, opinionated APIs, and the Groovy language combine to make Grails easy to learn for Java developers.'
+                            img src: "images/groovy.png", alt: "Groovy Programming Language"
+                            h3 'Groovy-Based'
+                            p 'Apache Groovy is a language for the Java platform designed to enhance developers\' productivity. It is an optionally-typed and dynamic language but with static-typing and static compilation capabilities.'
                         }
                         div(class: 'column') {
                             img src: "images/gorm.png", alt: "GORM - Data Access Toolkit"

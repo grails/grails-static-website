@@ -27,8 +27,8 @@ class SearchPage extends Page {
         html.div(class: 'content') {
             article(class: 'post') {
                p '''
-                                You can search the Grails website, the Grails documentation, and the Grails APIs,
-                                with the Google Custom Search box below. Please type your search query, and hit enter:'''
+                                You can search the Grails website, the Grails documentation, and the Grails APIs
+                                with the Google Custom Search box below. Please type your search query and hit enter.'''
             div {
                 style '''
                                     table.gsc-search-box td {

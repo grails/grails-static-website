@@ -383,7 +383,7 @@ Grails documentation comes in several forms:
 - the [GroovyDoc APIs](api.html) documents the classes of the Grails code base
 - [GitHub](https://github.com/grails/grails-static-website) allows users to contribute to this website.   
 
-Contributing to the Grails.org website is fairly easy. Create a GitHub account or sign in with an existing account, then open [Grails.org](https://grails.org/) and select the "Improve this doc" button at the top of the page you wish to edit. Please don't hesitate to help us make improvements, fix typos or broken language, clarify complicated sections, add new material, and anything else you feel will be helpful to other Grails users.
+Contributing to the Grails.org website is fairly easy. Create a GitHub account or sign in with an existing account, then open [Grails.org](http://docs.grails.org/latest/guide/single.html) and select the "Improve this doc" button at the top of the page you wish to edit. Please don't hesitate to help us make improvements, fix typos or broken language, clarify complicated sections, add new material, and anything else you feel will be helpful to other Grails users.
 '''),
             new Question(slug: 'question_code', title: 'How can I contribute to Grails code?', answer: '''
 If you are looking to make an initial contribution, just raise your hand on the Grails developer [mailing-list](https://groups.google.com/forum/#!forum/grails-dev-discuss) and tell us about your desire to work on a particular problem.

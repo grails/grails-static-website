@@ -86,7 +86,7 @@ class HomePage extends Page {
                         }
                         div(class: 'column') {
                             img src: "images/gorm.png", alt: "GORM - Data Access Toolkit"
-                            h3 'Seamless GORM Integration'
+                            h3 'Seamlessly jkjkjkjkjk GORM Integration'
                             p 'GORM is a data access toolkit that provides a rich sets of APIs for accessing relational and non-relational data. It includes implementations for Hibernate (SQL), MongoDB, Cassandra, and Neo4j.'
                         }
                         div(class: 'column') {

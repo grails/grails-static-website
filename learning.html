@@ -6,9 +6,10 @@
     <link rel='icon' href='images/favicon.ico' />
     <link rel='mask-icon' href='/images/grails-pinned-icon.svg' color='feb672' />
     <meta charset='UTF-8' />
-    <title>Books | Grails Framework</title>
+    <title>Learning | Grails Framework</title>
     <link rel='stylesheet' href='stylesheets/screen.css' />
     <script src='javascripts/navigation.js'></script>
+    <script src='http://guides.grails.org/javascripts/oci-training.js'></script>
   </head>
   <body><header class='mainheader'>
   <div class='content'>
@@ -16,7 +17,7 @@
     <a href='javascript:show(&apos;topmenus&apos;, &apos;showNavigationLink&apos;)' id='showNavigationLink' class='mobile align-center'>Show Navigation</a>
     <div id='topmenus'>
       <nav class='secondarymenu' id='secondarymenu'><ul>
-  <li>
+  <li class='active'>
     <a href='http://grails.org/learning.html'>Learning</a>
   </li>
   <li>
@@ -51,12 +52,36 @@
 </header>
     <div class='headerbar chalicesbg'>
       <div class='content'>
-        <h1>Books</h1>
+        <h1>Learning</h1>
       </div>
     </div><div class='content'>
+  <div class='twocolumns'>
+    <div class='column'><div class='training' style='display: none;'>
+  <a href='https://objectcomputing.com/training/catalog/grails/'>
+    <h3 class='columnheader'>Grails Training</h3>
+  </a>
+  <div id='ocitraining'>
+    <span></span>
+  </div>
+</div></div>
+    <div class='column'><div class='guidegroup' style=''>
+  <div class='guidegroupheader'>
+    <img src='images//documentation.svg' alt='Learning' />
+    <h2>Blog Posts, Step-by-Step Tutorials</h2>
+  </div>
+  <ul>
+    <li>
+      <a href='http://guides.grails.org'>Grails Guides</a>
+    </li>
+    <li>
+      <a href='org.grails.model.TextMenuItem@cad77de7'>Grails Team Blog</a>
+    </li>
+  </ul>
+</div></div>
+  </div>
   <h3 class='columnheader'>Grails Books</h3><div class='twocolumns'>
   <div class='column'><figure class='book'>
-  <img src='images/images/books/pratical-grails-3-book-cover.png' alt='Practical Grails 3' />
+  <img src='images/books/pratical-grails-3-book-cover.png' alt='Practical Grails 3' />
   <figcaption>
     <h3>
       <a href='https://www.grails3book.com/'>Practical Grails 3</a>
@@ -65,7 +90,7 @@
     <span class='about'>The first book dedicated to Grails 3. You will learn the concepts behind building Grails applications. Real, up-to-date code examples are provided so you can easily follow along.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/grailsgood.png' alt='Grails Goodness Notebook' />
+  <img src='images/books/grailsgood.png' alt='Grails Goodness Notebook' />
   <figcaption>
     <h3>
       <a href='https://leanpub.com/grails-goodness-notebook'>Grails Goodness Notebook</a>
@@ -74,7 +99,7 @@
     <span class='about'>Experience the Grails platform through code snippets. Learn more about (hidden) Grails features with code snippets and short articles. The articles and code will get you started quickly and will give more insight in Grails.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/gsmith2_cover150.jpg' alt='Grails in Action' />
+  <img src='images/books/gsmith2_cover150.jpg' alt='Grails in Action' />
   <figcaption>
     <h3>
       <a href='http://www.manning.com/gsmith2/'>Grails in Action</a>
@@ -83,7 +108,7 @@
     <span class='about'>Grails in Action, Second Edition is a comprehensive introduction to Grails 2 focused on making you super-productive fast.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/bbeckwith_cover.gif' alt='Programming Grails' />
+  <img src='images/books/bbeckwith_cover.gif' alt='Programming Grails' />
   <figcaption>
     <h3>
       <a href='http://shop.oreilly.com/product/0636920024750.do'>Programming Grails</a>
@@ -93,7 +118,7 @@
   </figcaption>
 </figure></div>
   <div class='column'><figure class='book'>
-  <img src='images/images/books/grails_3_step_by_step.png' alt='Grails 3 - Step by Step' />
+  <img src='images/books/grails_3_step_by_step.png' alt='Grails 3 - Step by Step' />
   <figcaption>
     <h3>
       <a href='https://grailsthreebook.com/'>Grails 3 - Step by Step</a>
@@ -102,7 +127,7 @@
     <span class='about'>We try to describe in this book how a complete greenfield application can be implemented with Grails 3 in a fast way using profiles and plugins - and we do this in the sample application that is accompanying this book.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/grails_weissmann.png' alt='Falando de Grails' />
+  <img src='images/books/grails_weissmann.png' alt='Falando de Grails' />
   <figcaption>
     <h3>
       <a href='http://www.casadocodigo.com.br/products/livro-grails'>Falando de Grails</a>
@@ -111,7 +136,7 @@
     <span class='about'>The best reference on Grails (2.5 and 3.0) in portuguese. A great guide to the framework, dealing with details of the framework that many times are ignored by it's users.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/grocher_jbrown_cover.jpg' alt='The Definitive Guide to Grails 2' />
+  <img src='images/books/grocher_jbrown_cover.jpg' alt='The Definitive Guide to Grails 2' />
   <figcaption>
     <h3>
       <a href='http://www.apress.com/9781430243779'>The Definitive Guide to Grails 2</a>
@@ -120,7 +145,7 @@
     <span class='about'>Definitive reference on The Grails Framework, authored by core members of the development team.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/bklein_cover.jpg' alt='Grails 2: A Quick-Start Guide' />
+  <img src='images/books/bklein_cover.jpg' alt='Grails 2: A Quick-Start Guide' />
   <figcaption>
     <h3>
       <a href='http://www.amazon.com/gp/product/1937785777?tag=misa09-20'>Grails 2: A Quick-Start Guide</a>
@@ -132,7 +157,7 @@
 </div>
   <h3 class='columnheader'>Groovy Books</h3><div class='twocolumns'>
   <div class='column'><figure class='book'>
-  <img src='images/images/books/regina.png' alt='Groovy in Action, 2nd edition' />
+  <img src='images/books/regina.png' alt='Groovy in Action, 2nd edition' />
   <figcaption>
     <h3>
       <a href='http://www.manning.com/koenig2/'>Groovy in Action, 2nd edition</a>
@@ -141,7 +166,7 @@
     <span class='about'>The undisputed definitive reference on The Groovy Language, authored by core members of the development team.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/g2cook.jpg' alt='Groovy 2 Cookbook' />
+  <img src='images/books/g2cook.jpg' alt='Groovy 2 Cookbook' />
   <figcaption>
     <h3>
       <a href='http://www.packtpub.com/groovy-2-cookbook/book'>Groovy 2 Cookbook</a>
@@ -151,7 +176,7 @@
   </figcaption>
 </figure></div>
   <div class='column'><figure class='book'>
-  <img src='images/images/books/Kousen-MJG.png' alt='Making Java Groovy' />
+  <img src='images/books/Kousen-MJG.png' alt='Making Java Groovy' />
   <figcaption>
     <h3>
       <a href='http://www.manning.com/kousen/'>Making Java Groovy</a>
@@ -160,7 +185,7 @@
     <span class='about'>Make Java development easier by adding Groovy. Each chapter focuses on a task Java developers do, like building, testing, or working with databases or restful web services, and shows ways Groovy can help.</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/gdsl.jpg' alt='Groovy for Domain-Specific Languages' />
+  <img src='images/books/gdsl.jpg' alt='Groovy for Domain-Specific Languages' />
   <figcaption>
     <h3>
       <a href='http://www.packtpub.com/groovy-for-domain-specific-languages-dsl/book'>Groovy for Domain-Specific Languages</a>
@@ -169,7 +194,7 @@
     <span class='about'>Enhance and extend your Java applications with Domain-Specific Languages in Groovy</span>
   </figcaption>
 </figure><figure class='book'>
-  <img src='images/images/books/vslg2.jpg' alt='Programming Groovy 2' />
+  <img src='images/books/vslg2.jpg' alt='Programming Groovy 2' />
   <figcaption>
     <h3>
       <a href='http://pragprog.com/book/vslg2/programming-groovy-2'>Programming Groovy 2</a>

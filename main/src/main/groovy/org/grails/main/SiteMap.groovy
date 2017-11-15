@@ -369,9 +369,9 @@ Yes. Subscribe to our Google Group [here](https://groups.google.com/forum/#!foru
 The [Grails mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) is a great place to start a conversation with the Grails developers and other Grails users. 
 '''),
             new Question(slug: 'question_mailinglist_vs_stackoverflow',
-                    title: 'What&#39;s the difference between the mailing list and interacction on Stack Overflow?',
+                    title: 'What\'s the difference between the mailing list and interaction on Stack Overflow?',
                     answer: '''
-Use the [mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) for discussion around the framework's development. For questions we recommend [StackOverflow](http://stackoverflow.com/questions/tagged/grails)
+Use the [mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) for discussion around the framework's development. For questions we recommend [Stack Overflow](http://stackoverflow.com/questions/tagged/grails)
 '''),
             new Question(slug: 'question_issue', title: 'How do I report an issue with the Grails framework?', answer: '''
 The Grails project uses [Github issues](https://github.com/grails/grails-core/issues) to report and track issues, feature enhancements, and new features. Make sure you're logged-in before proceeding. [Report an issue](https://github.com/grails/grails-core/issues/new).

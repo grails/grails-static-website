@@ -11,20 +11,10 @@ class Navigation {
 
     static Menu secondaryMenu(String url = null, String gormUrl) {
         new Menu(items: [
-                trainingMenuItem(),
-                blogMenuItem(),
+                learningMenuItem(url),
                 communityMenuItem(url),
-                booksMenuItem(url),
                 searchMenuItem(url),
         ] as List<MenuItem>)
-    }
-
-    static MenuItem blogMenuItem() {
-        new TextMenuItem(href: 'http://grailsblog.objectcomputing.com', title: 'Blog')
-    }
-
-    static MenuItem trainingMenuItem() {
-        new TextMenuItem(href: 'https://objectcomputing.com/training/catalog/grails/', title: 'Training')
     }
 
     static Menu mainMenu(String url = null, String guidesUrl = null) {
@@ -57,6 +47,17 @@ class Navigation {
         ] as List<MenuItem>)
     }
 
+    static MenuItem blogMenuItem() {
+        new TextMenuItem(href: 'http://grailsblog.objectcomputing.com', title: 'Blog')
+    }
+
+    static MenuItem trainingMenuItem() {
+        new TextMenuItem(href: 'https://objectcomputing.com/training/catalog/grails/', title: 'Training')
+    }
+
+    static MenuItem learningMenuItem(String url = null) {
+        menuItemWithHref('learning.html', 'Learning', url)
+    }
 
     static TextMenuItem communityMenuItem(String url = null) {
         menuItemWithHref('community.html', 'Community', url)

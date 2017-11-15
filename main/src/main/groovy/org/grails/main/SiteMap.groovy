@@ -14,6 +14,7 @@ import org.grails.main.pages.BooksPage
 import org.grails.main.pages.DocumentationPage
 import org.grails.main.pages.DownloadPage
 import org.grails.main.pages.HomePage
+import org.grails.main.pages.LearningPage
 import org.grails.main.pages.ProfilesPage
 import org.grails.main.pages.SearchPage
 import org.grails.main.pages.CommunityPage
@@ -56,6 +57,7 @@ class SiteMap {
             new QuestionPage(),
             new SupportPage(),
             new CommunityPage(),
+            new LearningPage(),
             new BooksPage(),
             new ProfilesPage(),
             new SearchPage(),

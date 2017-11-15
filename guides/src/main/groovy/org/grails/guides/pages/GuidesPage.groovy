@@ -275,7 +275,7 @@ class GuidesPage extends Page implements ReadFileUtils {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'tagsbytopic') {
             h3 class: 'columnheader', 'Guides by Tag'
-            ul {
+            ul(class: 'tagcloud') {
                 tags.sort { Tag a, Tag b -> a.slug <=> b.slug }.each { Tag t ->
                     li(class: "tag${t.ocurrence}") {
                         a href: "${guidesUrl()}/tags/${t.slug.toLowerCase()}.html", t.title

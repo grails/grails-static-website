@@ -25,7 +25,7 @@ class DownloadPage extends Page {
         String latestVersion = SiteMap.LATEST_VERSION
         new GuideGroup(title: "Download Grails ${latestVersion}",
                 image: "${getImageAssetPreffix()}download.svg",
-                description: 'Select a profile and set of features tailored to your needs with our application Initializer, Grails Application Forge',
+                description: 'Select a profile and set of features tailored to your needs with our application initializer, Grails Application Forge',
                 items: [
                         new GuideGroupItem(href: "http://start.grails.org", title: 'Grails Application Forge'),
                         new GuideGroupItem(href: "https://github.com/grails/grails-core/releases/tag/v${latestVersion}", title: 'Release Notes'),
@@ -40,7 +40,7 @@ class DownloadPage extends Page {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: "transparent_post", style: 'margin-top: 0;') {
             h3 class: "columnheader", 'Older Versions'
-            p "You can download previous versions since Grails ${SiteMap.VERSIONS.last()}"
+            p "You can download previous versions as far back as Grails ${SiteMap.VERSIONS.last()}."
             div(class: "versionselector") {
                 select(class: "form-control", onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
                     option label: "Select a version", disabled: "disabled", selected: "selected"
@@ -70,13 +70,13 @@ class DownloadPage extends Page {
                 }
                 div(class: "column") {
                     div(class: 'transparent_post') {
-                        p 'In this download area, you will be able to download the binary distribution and the documentation for Grails.'
+                        p 'Download the binary distribution and the documentation for Grails here.'
                         p {
-                            mkp.yield 'For a quick and effortless start on Mac OSX, Linux or Cygwin, you can use '
+                            mkp.yield 'For a quick and effortless start on Mac OSX, Linux, or Cygwin, you can use '
                             a href: "http://sdkman.io", 'SDKMAN! (The Software Development Kit Manager)'
                             mkp.yield ' to download and configure any Grails version of your choice. Basic '
                             a href: "#sdkman", 'instructions'
-                            mkp.yield 'can be found below.'
+                            mkp.yield ' can be found below.'
                             mkp.yieldUnescaped '<br/>'
                             mkp.yield 'Windows users can use '
                             a href: "https://github.com/flofreud/posh-gvm", 'Posh-GVM'
@@ -85,10 +85,10 @@ class DownloadPage extends Page {
                     }
                     article(class: "question", style: 'margin-top: 0;margin-bottom: 50px;') {
                         h3(class: 'columnheader', 'SDKMAN! (The Software Development Kit Manager)')
-                        p('This tool makes installing Grails on any Bash platform (Mac OSX, Linux, Cygwin, Solaris or FreeBSD) very easy.')
+                        p('This tool makes installing Grails on any Bash platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.')
                         p( 'Simply open a new terminal and enter:')
                         div(class: 'code', '$ curl -s get.sdkman.io | bash')
-                        p('Follow the instructions on-screen to complete installation.')
+                        p('Follow the on-screen instructions to complete installation.')
                         p( 'Open a new terminal or type the command:')
                         div(class: 'code', '$ source "$HOME/.sdkman/bin/sdkman-init.sh"')
                         p 'Then install the latest stable Grails:'

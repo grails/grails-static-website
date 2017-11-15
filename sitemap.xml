@@ -19,9 +19,6 @@
     <loc>http://grails.org/community.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/learning.html</loc>
-  </url>
-  <url>
     <loc>http://grails.org/books.html</loc>
   </url>
   <url>
@@ -37,9 +34,6 @@
     <loc>http://grails.org/profiles/web/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/rest-api/index.html</loc>
-  </url>
-  <url>
     <loc>http://grails.org/profiles/angularjs/index.html</loc>
   </url>
   <url>
@@ -53,9 +47,6 @@
   </url>
   <url>
     <loc>http://grails.org/profiles/plugin/index.html</loc>
-  </url>
-  <url>
-    <loc>http://grails.org/profiles/rest-api-plugin/index.html</loc>
   </url>
   <url>
     <loc>http://grails.org/profiles/web-plugin/index.html</loc>

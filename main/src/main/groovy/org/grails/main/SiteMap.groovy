@@ -105,13 +105,13 @@ class SiteMap {
                     about: '''
 Save $200 with this [G3 Summit discount code](https://objectcomputing.com/news/2017/09/08/weve-got-your-200-discount-g3-summit).
 
-The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) community. This is your chance to explore Apache Groovy/Grails/Gradle technologies from project leaders, committers, authors, and industry experts.
+The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) community. This is your chance to explore Apache Groovy/Grails/Gradle technologies with the guidance of project leaders, committers, authors, and industry experts.
 '''),
             new Event(image: 'confs/greach.png',
                     href: 'http://greachconf.com',
-                    title: 'GR8Conf EU 2018',
+                    title: 'Greach: The Groovy Spanish Conference',
                     location: 'Madrid, Spain',
-                    dates: 'March 16 - 17, 2018',
+                    dates: 'March 15 - 17, 2018',
                     about: 'Enhance your knowledge and skills with some of the most recognizable names from the Groovy development scene from all around the world. Experience three days full of Groovy and Grails talks and networking ... plus our famous Friday Beers Party!'),
             new Event(image: 'confs/gr8confeu.png',
                     href: 'http://gr8conf.eu/',
@@ -119,9 +119,7 @@ The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) 
                     location: 'Copenhagen, Denmark',
                     dates: 'May 30 - June 1, 2018',
                     about: '''
-Groovy, Grails, and related technologies have seen astounding growth in interest and adoption over the past few years, and with good reason. The GR8Conf was founded to spread the word worldwide.
-The 2018 GR8Conf Europe is celebrating its 10th year, and it's expected to be a blast. As in 2017, the conference will feature a DevOps day with a focus on technologies designed to support your everyday DevOps needs.
-GR8Conf is an independent, affordable series of conferences and covers all things Groovy'''),
+Groovy, Grails, and related technologies have seen astounding growth in interest and adoption over the past few years, and with good reason. The GR8Conf was founded to spread the word worldwide. The 2018 GR8Conf Europe is celebrating its 10th year, and it's expected to be a blast. As in 2017, the conference will feature a DevOps day with a focus on technologies designed to support your everyday DevOps needs. GR8Conf is an independent, affordable series of conferences and covers all things Groovy'''),
     ]
 
     public final static List<String> VERSIONS = [

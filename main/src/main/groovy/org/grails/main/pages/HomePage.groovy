@@ -67,12 +67,12 @@ class HomePage extends Page {
                         div(class: 'column') {
                             img src: "images/groovy.png", alt: "Groovy Programming Language"
                             h3 'Groovy-Based'
-                            p 'Apache Groovy is language for the Java platform designed to enhance developers&#39; productivity. It is an optionally-typed and dynamic language but with static-typing and static compilation capabilities.'
+                            p 'Apache Groovy is a language for the Java platform designed to enhance developers\' productivity. It is an optionally-typed and dynamic language but with static-typing and static compilation capabilities.'
                         }
                         div(class: 'column') {
                             img src: "images/springboot.svg", alt: "Spring Boot"
                             h3 'On top of Spring Boot'
-                            p 'Grails is built on top of Spring Boot to provide Java developers the tools they need to get started quickly and leverage Spring Boot&#39;s time-saving features, such as Spring-powered dependency injection.'
+                            p 'Grails is built on top of Spring Boot and leverages Spring Boot\'s time-saving features, such as Spring-powered dependency injection.'
                         }
                         div(class: 'column') {
                             img src: "images/java.png", alt: "Smooth Java Integration"

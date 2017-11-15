@@ -9,6 +9,7 @@ import org.grails.guides.model.Category
 import org.grails.model.Guide
 import org.grails.guides.model.Tag
 import org.grails.model.TextMenuItem
+import org.grails.model.Training
 import org.grails.pages.Page
 
 @CompileStatic
@@ -188,24 +189,9 @@ class GuidesPage extends Page implements ReadFileUtils {
             if ( tag || category ) {
                 mkp.yieldUnescaped sponsoredBy()
             } else {
-                mkp.yieldUnescaped training()
+                mkp.yieldUnescaped Training.training()
                 mkp.yieldUnescaped sponsoredBy()
                 mkp.yieldUnescaped tagCloud()
-            }
-        }
-        writer.toString()
-    }
-
-    @CompileDynamic
-    String training() {
-        StringWriter writer = new StringWriter()
-        MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: 'training', style: 'display: none;') {
-            a(href: 'https://objectcomputing.com/training/catalog/grails/') {
-                h3 class: 'columnheader', 'Grails Training'
-            }
-            div(id: 'ocitraining') {
-                span ''
             }
         }
         writer.toString()

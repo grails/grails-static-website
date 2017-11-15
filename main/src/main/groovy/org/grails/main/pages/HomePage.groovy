@@ -67,7 +67,7 @@ class HomePage extends Page {
                         div(class: 'column') {
                             img src: "images/groovy.png", alt: "Groovy Programming Language"
                             h3 'Groovy-Based'
-                            p 'Grails is based on Groovy, a dynamic programming language for the Java platform designed to enhance developers&#39; productivity. Groovy is optionally-typed with static-typing and static compilation capabilities.'
+                            p 'Apache Groovy is language for the Java platform designed to enhance developers&#39; productivity. It is an optionally-typed and dynamic language but with static-typing and static compilation capabilities.'
                         }
                         div(class: 'column') {
                             img src: "images/springboot.svg", alt: "Spring Boot"

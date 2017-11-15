@@ -28,4 +28,9 @@ class SiteMapPage implements HtmlPage {
         }
         '<?xml version="1.0" encoding="UTF-8"?>\n' + writer.toString()
     }
+
+    @Override
+    void setTimestamp(String timestamp) {
+
+    }
 }

@@ -2,6 +2,7 @@ package org.grails.guides
 
 import groovy.transform.CompileStatic
 import org.grails.GuidesFetcher
+import org.grails.WebsiteGenerator
 import org.grails.guides.model.Category
 import org.grails.model.Guide
 import org.grails.guides.model.Tag
@@ -23,8 +24,9 @@ class Main {
         for ( Category category : GuidesPage.categories().values() ) {
             pages << new GuidesPage(guides, tags, category)
         }
-
+        String timestamp = WebsiteGenerator.timestamp()
         for (GuidesPage page : pages) {
+            page.timestamp = timestamp
             String text = page.html()
             String path = "build/site/"
             if ( page.tag ) {
@@ -37,20 +39,14 @@ class Main {
             f.text = text
         }
 
+        WebsiteGenerator.copyAssetsWithTimestamp(timestamp)
+
         List<String> urls = guides.collect { Guide guide ->
             "http://guides.grails.org/${guide.name}/guide/index.html" as String
         }
         urls.add('index.html')
         SiteMapPage siteMapPage = new SiteMapPage(urls)
-        savePage(siteMapPage, siteMapPage.slug)
+        WebsiteGenerator.savePage(siteMapPage, siteMapPage.slug)
     }
 
-
-    static savePage(HtmlPage page, String filename) {
-        String text = page.html()
-        String preffix = "build/site/"
-        File f = new File("${preffix}${filename}")
-        f.createNewFile()
-        f.text = text
-    }
 }

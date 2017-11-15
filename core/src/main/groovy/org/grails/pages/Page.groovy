@@ -12,6 +12,8 @@ import org.grails.model.TextMenuItem
 @CompileStatic
 abstract class Page implements HtmlPage {
 
+    String timestamp
+
     abstract MenuItem menuItem()
 
     abstract String mainContent()
@@ -26,6 +28,11 @@ abstract class Page implements HtmlPage {
 
     String developmentServer() {
         'http://localhost:8888'
+    }
+
+    @Override
+    void setTimestamp(String timestamp) {
+        this.timestamp = timestamp
     }
 
     String gormUrl() {
@@ -113,11 +120,11 @@ abstract class Page implements HtmlPage {
     }
 
     List<String> getCssFiles() {
-        ['stylesheets/screen.css']
+        ["stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
     }
 
     List<String> getJavascriptFiles() {
-        ['javascripts/navigation.js']
+        ["javascripts/${timestamp ? (timestamp + '.') : ''}navigation.js" as String]
     }
 
     String getImageAssetPreffix() {

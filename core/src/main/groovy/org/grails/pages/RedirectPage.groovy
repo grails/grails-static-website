@@ -30,4 +30,9 @@ class RedirectPage implements HtmlPage {
         }
         writer.toString()
     }
+
+    @Override
+    void setTimestamp(String timestamp) {
+
+    }
 }

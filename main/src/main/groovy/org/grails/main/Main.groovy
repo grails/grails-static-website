@@ -2,6 +2,7 @@ package org.grails.main
 
 import groovy.transform.CompileStatic
 import org.grails.GuidesFetcher
+import org.grails.WebsiteGenerator
 import org.grails.model.Guide
 import org.grails.main.model.Profile
 import org.grails.main.pages.BuildStatusPage
@@ -41,22 +42,19 @@ class Main {
         pages << new IFramePage('http://docs.grails.org/latest/api/', 'api.html', null)
         pages << new IFramePage('https://grails.github.io/grails-data-mapping/latest/api/', 'gormApi.html', null)
 
+        String timestamp = WebsiteGenerator.timestamp()
+
         for (HtmlPage page : pages) {
-            savePage(page, page.slug)
+            page.timestamp = timestamp
+            WebsiteGenerator.savePage(page, page.slug)
         }
+
+        WebsiteGenerator.copyAssetsWithTimestamp(timestamp)
 
         String grailsUrl = (pages.get(0) as Page).grailsUrl()
 
         List<String> urls = pages.collect { HtmlPage page -> "${grailsUrl}/${page.slug}" as String }
         SiteMapPage siteMapPage = new SiteMapPage(urls)
-        savePage(siteMapPage, siteMapPage.slug)
-    }
-
-    static savePage(HtmlPage page, String filename) {
-        String text = page.html()
-        String preffix = "build/site/"
-        File f = new File("${preffix}${filename}")
-        f.createNewFile()
-        f.text = text
+        WebsiteGenerator.savePage(siteMapPage, siteMapPage.slug)
     }
 }

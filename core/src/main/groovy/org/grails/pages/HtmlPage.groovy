@@ -6,4 +6,6 @@ import groovy.transform.CompileStatic
 interface HtmlPage {
     String html()
     String getSlug()
+
+    void setTimestamp(String timestamp)
 }

@@ -30,7 +30,7 @@ class Navigation {
 
     static Menu parternsMenu() {
         new Menu(items: [
-                new TextMenuItem(intro: 'Grails\' repositories is hosted by', title: 'Artifactory', href: 'http://artifactoryonline.com/'),
+                new TextMenuItem(intro: 'Grails\' repositories are hosted by', title: 'Artifactory', href: 'http://artifactoryonline.com/'),
                 new TextMenuItem(intro: 'Website hosting provided by', title: 'Pivotal', href: 'http://run.pivotal.io/'),
                 new TextMenuItem(intro: 'YourKit supports Grails with its ', title:'Java Profiler', href: 'https://www.yourkit.com/java/profiler/index.jsp'),
                 new TextMenuItem(intro: 'Grails is Open Source', title:'Apache 2 License', href: 'http://www.apache.org/licenses/LICENSE-2.0.html'),

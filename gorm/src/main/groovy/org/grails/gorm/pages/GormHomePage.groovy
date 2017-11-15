@@ -151,7 +151,7 @@ class GormHomePage extends Page {
     Menu parternsMenu() {
         new Menu(items: [
                 new TextMenuItem(intro: 'GORM\'s sources is available at ', href: 'https://github.com/grails/grails-data-mapping', title: 'Github'),
-                new TextMenuItem(intro: 'GORM\'s repositories is hosted by', title: 'Artifactory', href: 'http://artifactoryonline.com/'),
+                new TextMenuItem(intro: 'GORM\'s repositories are hosted by', title: 'Artifactory', href: 'http://artifactoryonline.com/'),
                 new TextMenuItem(intro: 'GORM is Open Source', title:'Apache 2 License', href: 'http://www.apache.org/licenses/LICENSE-2.0.html'),
         ] as List<MenuItem>)
     }

@@ -14,7 +14,6 @@ import org.grails.main.pages.BooksPage
 import org.grails.main.pages.DocumentationPage
 import org.grails.main.pages.DownloadPage
 import org.grails.main.pages.HomePage
-import org.grails.main.pages.LearningPage
 import org.grails.main.pages.ProfilesPage
 import org.grails.main.pages.SearchPage
 import org.grails.main.pages.CommunityPage
@@ -26,10 +25,10 @@ import org.grails.main.pages.SupportPage
 class SiteMap {
 
     public final static ProfileGroup PROFILES = new ProfileGroup(title: 'Profiles', image: 'images/profiles.svg',
-            description: 'Profiles encapsulate the project commands, templates and plugins that are designed to work for a given profile. The source for the profiles can be found on <a href="http://github.com/grails-profiles/">Github</a>, whilst the profiles themselves are published as JAR files to the Grails central repository.',
+            description: 'Profiles encapsulate the project commands, templates, and plugins that are designed to work with a given profile. The source for the profiles can be found on <a href="http://github.com/grails-profiles/">GitHub</a>, while the profiles themselves are published as JAR files in the Grails central repository.',
             profiles: [
                     new Profile(title: 'Web', docsHref: 'https://grails-profiles.github.io/web/latest/guide/index.html'),
-                    new Profile(title: 'Rest API', docsHref: 'https://grails-profiles.github.io/rest-api/latest/guide/index.html'),
+                    new Profile(title: 'REST API', docsHref: 'https://grails-profiles.github.io/rest-api/latest/guide/index.html'),
                     new Profile(title: 'AngularJS', docsHref: 'https://grails-profiles.github.io/angularjs/latest/guide/index.html'),
                     new Profile(title: 'Angular', docsHref: 'https://grails-profiles.github.io/angular/latest/guide/index.html'),
                     new Profile(title: 'React', docsHref: 'https://grails-profiles.github.io/react/latest/guide/index.html'),
@@ -39,12 +38,12 @@ class SiteMap {
     public final static ProfileGroup PLUGIN_PROFILES = new ProfileGroup(title: 'Plugin Profiles', image: 'images/profiles.svg',
             profiles: [
                     new Profile(title: 'Plugin', docsHref: 'https://grails-profiles.github.io/plugin/latest/guide/index.html'),
-                    new Profile(title: 'Rest API Plugin', docsHref: 'https://grails-profiles.github.io/rest-api-plugin/latest/guide/index.html'),
+                    new Profile(title: 'REST API Plugin', docsHref: 'https://grails-profiles.github.io/rest-api-plugin/latest/guide/index.html'),
                     new Profile(title: 'Web Plugin', docsHref: 'https://grails-profiles.github.io/web-plugin/latest/guide/index.html'),
             ])
 
     public final static ProfileGroup THIRD_PARTY_PROFILES =  new ProfileGroup(title: 'Third-Party Profiles', image: 'images/profiles.svg',
-            description: 'It is possible to create your own Application Profiles. Check the documentation to learn how to <a href="http://docs.grails.org/latest/guide/single.html#creatingProfiles">Create Profiles</a>.',
+            description: 'Use the following documentation to learn how to <a href="http://docs.grails.org/latest/guide/single.html#creatingProfiles">create your own application profiles</a>.',
             profiles: [
             new Profile(title: 'Vaadin', href: 'https://github.com/macprzepiora/web-vaadin8'),
             new Profile(title: 'Ember', href: 'https://github.com/hgarfer/grails-profile-ember'),
@@ -57,7 +56,6 @@ class SiteMap {
             new QuestionPage(),
             new SupportPage(),
             new CommunityPage(),
-            new LearningPage(),
             new BooksPage(),
             new ProfilesPage(),
             new SearchPage(),
@@ -79,23 +77,23 @@ class SiteMap {
     ]
 
     public final static List<Book> GRAILS_BOOKS = [
-            new Book(title: 'Grails 3 - Step by Step', author: 'Cristian Olaru', href: 'https://grailsthreebook.com/', image: 'books/grails_3_step_by_step.png', about: 'We try to describe in this book how a complete greenfield application can be implemented with Grails 3 in a fast way using profiles and plugins - and we do this in the sample application that is accompanying this book.'),
-            new Book(title: 'Practical Grails 3', author: ' Eric Helgeson', href: 'https://www.grails3book.com/', image: 'books/pratical-grails-3-book-cover.png', about: 'The first book dedicated to Grails 3. You will learn the concepts behind building Grails applications. Real, up-to-date code examples are provided so you can easily follow along.'),
-            new Book(title: 'Falando de Grails', author: 'Henrique Lobo Weissmann', href: 'http://www.casadocodigo.com.br/products/livro-grails', image: 'books/grails_weissmann.png', about: 'The best reference on Grails (2.5 and 3.0) in portuguese. A great guide to the framework, dealing with details of the framework that many times are ignored by it\'s users.'),
-            new Book(title: 'Grails Goodness Notebook', author: 'Hubert A. Klein Ikkink', href: 'https://leanpub.com/grails-goodness-notebook', image: 'books/grailsgood.png', about: 'Experience the Grails platform through code snippets. Learn more about (hidden) Grails features with code snippets and short articles. The articles and code will get you started quickly and will give more insight in Grails.'),
-            new Book(title: 'The Definitive Guide to Grails 2', author: 'Jeff Scott Brown and Graeme Rocher', href: 'http://www.apress.com/9781430243779', image: 'books/grocher_jbrown_cover.jpg', about: 'Definitive reference on The Grails Framework, authored by core members of the development team.'),
-            new Book(title: 'Grails in Action', author: 'Glen Smith and Peter Ledbrook', href: 'http://www.manning.com/gsmith2/', image: 'books/gsmith2_cover150.jpg', about: 'Grails in Action, Second Edition is a comprehensive introduction to Grails 2 focused on making you super-productive fast.'),
-            new Book(title: 'Grails 2: A Quick-Start Guide', author: 'Dave Klein and Ben Klein', href: 'http://www.amazon.com/gp/product/1937785777?tag=misa09-20', image: 'books/bklein_cover.jpg', about: 'This revised and updated new edition shows you how to use Grails by iteratively building a unique, working application.'),
+            new Book(title: 'Grails 3 - Step by Step', author: 'Cristian Olaru', href: 'https://grailsthreebook.com/', image: 'books/grails_3_step_by_step.png', about: 'Learn how a complete greenfield application can be implemented quickly and efficiently with Grails 3 using profiles and plugins. Use the sample application that accompanies the book as an example.'),
+            new Book(title: 'Practical Grails 3', author: ' Eric Helgeson', href: 'https://www.grails3book.com/', image: 'books/pratical-grails-3-book-cover.png', about: 'Learn the fundamental concepts behind building Grails applications with the first book dedicated to Grails 3. Real, up-to-date code examples are provided, so you can easily follow along.'),
+            new Book(title: 'Falando de Grails', author: 'Henrique Lobo Weissmann', href: 'http://www.casadocodigo.com.br/products/livro-grails', image: 'books/grails_weissmann.png', about: 'This is the best reference on Grails 2.5 and 3.0 written in Portuguese. It&#39;s a great guide to the framework, dealing with details that many users tend to ignore.'),
+            new Book(title: 'Grails Goodness Notebook', author: 'Hubert A. Klein Ikkink', href: 'https://leanpub.com/grails-goodness-notebook', image: 'books/grailsgood.png', about: 'Experience the Grails framework through code snippets. Discover (hidden) Grails features through code examples and short articles. The articles and code will get you started quickly and provide deeper insight into Grails.'),
+            new Book(title: 'The Definitive Guide to Grails 2', author: 'Jeff Scott Brown and Graeme Rocher', href: 'http://www.apress.com/9781430243779', image: 'books/grocher_jbrown_cover.jpg', about: 'As the title states, this is the definitive reference on the Grails framework, authored by core members of the development team.'),
+            new Book(title: 'Grails in Action', author: 'Glen Smith and Peter Ledbrook', href: 'http://www.manning.com/gsmith2/', image: 'books/gsmith2_cover150.jpg', about: 'The second edition of Grails in Action is a comprehensive introduction to Grails 2 focused on helping you become super-productive fast.'),
+            new Book(title: 'Grails 2: A Quick-Start Guide', author: 'Dave Klein and Ben Klein', href: 'http://www.amazon.com/gp/product/1937785777?tag=misa09-20', image: 'books/bklein_cover.jpg', about: 'This revised and updated edition shows you how to use Grails by iteratively building a unique, working application.'),
             new Book(title: 'Programming Grails', author: 'Burt Beckwith', href: 'http://shop.oreilly.com/product/0636920024750.do', image: 'books/bbeckwith_cover.gif', about: 'Dig deeper into Grails architecture and discover how this application framework works its magic.'),
     ]
 
 
     public final static List<Book> GROOVY_BOOKS = [
-            new Book(title: 'Making Java Groovy', author: 'Ken Kousen', href: 'http://www.manning.com/kousen/', image: 'books/Kousen-MJG.png', about: 'Make Java development easier by adding Groovy. Each chapter focuses on a task Java developers do, like building, testing, or working with databases or restful web services, and shows ways Groovy can help.'),
-            new Book(title: 'Groovy in Action, 2nd edition', author: 'Dierk König, Guillaume Laforge, Paul King, Cédric Champeau, Hamlet D\'Arcy, Erik Pragt, and Jon Skeet', href: 'http://www.manning.com/koenig2/', image: 'books/regina.png', about: 'The undisputed definitive reference on The Groovy Language, authored by core members of the development team.'),
-            new Book(title: 'Groovy for Domain-Specific Languages', author: 'Fergal Dearle', href: 'http://www.packtpub.com/groovy-for-domain-specific-languages-dsl/book', image: 'books/gdsl.jpg', about: 'Enhance and extend your Java applications with Domain-Specific Languages in Groovy'),
-            new Book(title: 'Groovy 2 Cookbook', author: 'Andrey Adamovitch, Luciano Fiandeso', href: 'http://www.packtpub.com/groovy-2-cookbook/book', image: 'books/g2cook.jpg', about: 'Over 90 recipes that provide solutions to everyday programming challenges using the powerful features of Groovy 2'),
-            new Book(title: 'Programming Groovy 2', author: 'Venkat Subramaniam', href: 'http://pragprog.com/book/vslg2/programming-groovy-2', image: 'books/vslg2.jpg', about: 'Dynamic productivity for the Java developer'),
+            new Book(title: 'Making Java Groovy', author: 'Ken Kousen', href: 'http://www.manning.com/kousen/', image: 'books/Kousen-MJG.png', about: 'Make Java development easier by adding Groovy. Each chapter focuses on a task Java developers do, like building, testing, or working with databases or restful web services, and shows ways Groovy can make those tasks easier.'),
+            new Book(title: 'Groovy in Action, 2nd Edition', author: 'Dierk König, Guillaume Laforge, Paul King, Cédric Champeau, Hamlet D\'Arcy, Erik Pragt, and Jon Skeet', href: 'http://www.manning.com/koenig2/', image: 'books/regina.png', about: 'This is the undisputed, definitive reference on the Groovy language, authored by core members of the development team.'),
+            new Book(title: 'Groovy for Domain-Specific Languages', author: 'Fergal Dearle', href: 'http://www.packtpub.com/groovy-for-domain-specific-languages-dsl/book', image: 'books/gdsl.jpg', about: 'Learn how Groovy can help Java developers easily build domain-specific languages into their applications.'),
+            new Book(title: 'Groovy 2 Cookbook', author: 'Andrey Adamovitch, Luciano Fiandeso', href: 'http://www.packtpub.com/groovy-2-cookbook/book', image: 'books/g2cook.jpg', about: 'This book contains more than 90 recipes that use the powerful features of Groovy 2 to develop solutions to everyday programming challenges.'),
+            new Book(title: 'Programming Groovy 2', author: 'Venkat Subramaniam', href: 'http://pragprog.com/book/vslg2/programming-groovy-2', image: 'books/vslg2.jpg', about: 'This book helps experienced Java developers learn to use Groovy 2, from the basics of the language to its latest advances.'),
     ]
 
     public final static List<Event> EVENTS = [
@@ -107,23 +105,23 @@ class SiteMap {
                     about: '''
 Save $200 with this [G3 Summit discount code](https://objectcomputing.com/news/2017/09/08/weve-got-your-200-discount-g3-summit).
 
-The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) community. This is your chance to learn awesome Apache Groovy/Grails/Gradle technologies from project leaders, committers, authors, and industry experts.
+The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) community. This is your chance to explore Apache Groovy/Grails/Gradle technologies from project leaders, committers, authors, and industry experts.
 '''),
             new Event(image: 'confs/greach.png',
                     href: 'http://greachconf.com',
                     title: 'GR8Conf EU 2018',
                     location: 'Madrid, Spain',
                     dates: 'March 16 - 17, 2018',
-                    about: 'Some of the most recognizable names from the Groovy development scene from all around the world. Three days of full of Groovy and Grails talks and interesting people to talk and our famous Friday Beers Party!'),
+                    about: 'Enhance your knowledge and skills with some of the most recognizable names from the Groovy development scene from all around the world. Experience three days full of Groovy and Grails talks and networking ... plus our famous Friday Beers Party!'),
             new Event(image: 'confs/gr8confeu.png',
                     href: 'http://gr8conf.eu/',
                     title: 'GR8Conf EU 2018',
                     location: 'Copenhagen, Denmark',
                     dates: 'May 30 - June 1, 2018',
                     about: '''
-Groovy, Grails and the related technologies have seen astounding growth in interest and adoption the past few years, and with good reason. To spread the word even more we have created GR8Conf.
-The 2018 Edition of GR8Conf Europe is the 10th edition and will be a blast. Like in 2017 it will feature a DevOps day. Focus will be on technologies to support your everyday DevOps needs.
-GR8Conf is an independent, affordable series of conferences and covers All Things Groovy'''),
+Groovy, Grails, and related technologies have seen astounding growth in interest and adoption over the past few years, and with good reason. The GR8Conf was founded to spread the word worldwide.
+The 2018 GR8Conf Europe is celebrating its 10th year, and it's expected to be a blast. As in 2017, the conference will feature a DevOps day with a focus on technologies designed to support your everyday DevOps needs.
+GR8Conf is an independent, affordable series of conferences and covers all things Groovy'''),
     ]
 
     public final static List<String> VERSIONS = [
@@ -281,7 +279,7 @@ GR8Conf is an independent, affordable series of conferences and covers All Thing
     ]
 
     public final static List<DocumentationGroup> DOCUMENTATION = [
-            new DocumentationGroup([image: 'images/profiles.svg', title: 'Grails Profiles', description: 'Grails Profiles encapsulate  project commands, templates and plugins. They facilitate the construction of REST APIs, Web applications with a Javascript frontend etc.', links: [
+            new DocumentationGroup([image: 'images/profiles.svg', title: 'Grails Profiles', description: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.', links: [
                     new DocumentationLink([title: 'Grails Profiles', href: '/profiles.html']),
             ]]),
             new DocumentationGroup([image: 'images/upgrade.svg', title: 'Upgrade', links: [
@@ -348,63 +346,61 @@ GR8Conf is an independent, affordable series of conferences and covers All Thing
 
     public final static List<Question> QUESTIONS = [
             new Question(slug: 'question_opensource', title: 'Is Grails an Open Source project?', answer: '''
-Yes, Grails is an Open Source project, licensed under the [Apache License v2](http://www.apache.org/licenses/LICENSE-2.0). You can see the license header in all the source files of the project, as well as a [license file](https://github.com/grails/grails-core/blob/master/LICENSE) at the root of the project
+Yes, Grails is an Open Source project licensed under the [Apache License v2](http://www.apache.org/licenses/LICENSE-2.0). You can see the license header in all the source files, as well as a [license file](https://github.com/grails/grails-core/blob/master/LICENSE) at the root of the project
 '''),
             new Question(slug: 'question_learn', title: 'What is the best way to learn about Grails?', answer: '''
-Read the [User Guide](https://grails.org/documentation.html) of the version you are planning to use. We recommend you to start with the latest stable version of Grails.
-
-Moreover, we have written a collection of [Guides](http://guides.grails.org) which are step-by-step tutorials to solve common scenarios.
+Read the [User Guide](https://grails.org/documentation.html) for the version you are planning to use. We recommend you start with the latest stable version of the framework. We have also written a collection of [Guides](http://guides.grails.org), which contain step-by-step tutorials for solving common scenarios.
 '''),
-            new Question(slug: 'question_training', title: 'Do you offer Grails Training?', answer: '''
-[OCI](http://objectcomputing.com) (sponsor of Grails' development) offers [Grails and GORM courses](https://objectcomputing.com/training/catalog/grails/) developed and delivered by Grails co-founders and the core engineering team.</p>
+            new Question(slug: 'question_training', title: 'Do you offer Grails training?', answer: '''
+[OCI](http://objectcomputing.com), sponsor of Grails' development, offers [Grails and GORM courses](https://objectcomputing.com/training/catalog/grails/) developed and delivered by Grails co-founders and the core engineering team.</p>
 '''),
             new Question(slug: 'question_usage', title: 'Where can I ask questions about usage?', answer: '''
 The best place to get community support is [Stack Overflow](http://stackoverflow.com/questions/tagged/grails) or [Slack](http://grails.slack.com).
 '''),
-            new Question(slug: 'question_socialmedia', title: 'Where can I find Grails on Social Media?', answer: '''
-You can find Grails on [Twitter](http://twitter.com/grailsframework) or [Linked-In](https://www.linkedin.com/groups/39757).
+            new Question(slug: 'question_socialmedia', title: 'Where can I find Grails on social media?', answer: '''
+You can find Grails on [Twitter](http://twitter.com/grailsframework) and [LinkedIn](https://www.linkedin.com/groups/39757).
 '''),
             new Question(slug: 'question_mailinglist',
-                    title: 'Do you have a Mailing List?',
+                    title: 'Do you have a mailing list?',
                     answer: '''
-Yes, the Grails mailing list is a Google Group which you can suscribe to using the [following link](https://groups.google.com/forum/#!forum/grails-dev-discuss). 
+Yes. Subscribe to our Google Group [here](https://groups.google.com/forum/#!forum/grails-dev-discuss). 
 '''),
             new Question(slug: 'question_feature',
-                         title: 'Where can I suggest a new feature or interesting finding?',
+                         title: 'Where can I suggest a new feature or share an interesting finding?',
                          answer: '''
-The Grails mailing list is is a great place to go to to start a conversation with the Grails developers and other Grails users. 
+The [Grails mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) is a great place to start a conversation with the Grails developers and other Grails users. 
 '''),
             new Question(slug: 'question_mailinglist_vs_stackoverflow',
-                    title: 'Mailing List vs Stack Overflow',
+                    title: 'What&#39;s the difference between the mailing list and interacction on Stack Overflow?',
                     answer: '''
-The mailing list is for discussion around the framework's development. For questions we recommend [StackOverflow](http://stackoverflow.com/questions/tagged/grails)
+Use the [mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) for discussion around the framework's development. For questions we recommend [StackOverflow](http://stackoverflow.com/questions/tagged/grails)
 '''),
-            new Question(slug: 'question_issue', title: 'Reporting issues', answer: '''
-The Grails project uses [Github issues](https://github.com/grails/grails-core/issues) to report and track issues, feature enhancements, and new features. Be sure to be signed-up and logged-in, as explained below, before proceeding. [Report an issue](https://github.com/grails/grails-core/issues/new&quot;).
+            new Question(slug: 'question_issue', title: 'How do I report an issue with the Grails framework?', answer: '''
+The Grails project uses [Github issues](https://github.com/grails/grails-core/issues) to report and track issues, feature enhancements, and new features. Make sure you're logged-in before proceeding. [Report an issue](https://github.com/grails/grails-core/issues/new).
 '''),
-            new Question(slug: 'question_docs', title: 'Improving the documentation', answer: '''
-The documentation of The Grails Framework comes in various forms:
+            new Question(slug: 'question_docs', title: 'How can I contribute to improving the documentation?', answer: '''
+Grails documentation comes in several forms:
 
-- the [reference documentation](http://docs.grails.org/latest/guide/single.html) covering the language specification, the user guides, getting started, and more.
-- the [GroovyDoc APIs](api.html) documenting the classes of the Grails code base
-- this [website](https://github.com/grails/grails-static-website)
+- the [reference documentation](http://docs.grails.org/latest/guide/single.html) contains language specification, user guides, a getting started tutorial, and more.
+- the [GroovyDoc APIs](api.html) documents the classes of the Grails code base
+- [GitHub](https://github.com/grails/grails-static-website) allows users to contribute to this website.   
 
-Contributing to this website is fairly easy, if you have a Github account already, as you can click on the **Improve this doc** buttons that you can see on all the pages of this website. So don't hesitate to help us improve it, fix typos, broken language, clarify complicated sections, add new material, etc.
+Contributing to the Grails.org website is fairly easy. Create a GitHub account or sign in with an existing account, then open [Grails.org](https://grails.org/) and select the "Improve this doc" button at the top of the page you wish to edit. Please don't hesitate to help us make improvements, fix typos or broken language, clarify complicated sections, add new material, and anything else you feel will be helpful to other Grails users.
 '''),
-            new Question(slug: 'question_code', title: 'Contributing code', answer: '''
-If you know the area you want to contribute to, this is great, but if you are looking to make an initial contribution just raise your hand on the Grails developer [mailing-list](mailing-lists.html) to tell us about your desire to work on a particular problem.
+            new Question(slug: 'question_code', title: 'How can I contribute to Grails code?', answer: '''
+If you are looking to make an initial contribution, just raise your hand on the Grails developer [mailing-list](https://groups.google.com/forum/#!forum/grails-dev-discuss) and tell us about your desire to work on a particular problem.
 
-For more complicated tasks, the best approach is also to bring that to the attention of the Grails developers, so they can give you some guidance on how best to tackle a particular problem, discuss implementation ideas and the semantics or scope of the proposed change.
+For more complicated tasks, the best approach is to bring your interest to the attention of the Grails developers. They can provide guidance on how best to tackle a particular problem, collaborate on implementation ideas, and discuss the semantics or scope of the proposed change.
 
 ### Cloning the code base
 
-To work on the Grails code base, you should be proficient enough in [git](http://git-scm.com/) and you should ideally have an account on [Github](https://github.com/) to be able to create [pull requests](https://help.github.com/articles/creating-a-pull-request) with your changes.
+To work on the Grails code base, you should be proficient in [Git](http://git-scm.com/) and (ideally) have an account on [GitHub](https://github.com/), so you can create [pull requests](https://help.github.com/articles/creating-a-pull-request) with your changes.
 
-If you have git installed on your machine, you should be able to clone the Grails repository with the following command:
+If you have Git installed on your machine, you should be able to clone the Grails repository with the following command:
 
     git clone git://github.com/grails/grails-core.git
 
-Make sure you configure Git appropriately with the same email that you registered with on Github:
+Make sure you configure Git appropriately with the same email that you registered with on GitHub.
 
     git config --global user.name "YOUR NAME"
     git config --global user.email "YOUR EMAIL"</code></pre>
@@ -415,22 +411,22 @@ You can verify these are configured appropriately by running:
 
 ### Working on the code base
 
-If you are working with the IntelliJ IDEA development environment then you can import the project using the Intellij Gradle Tooling ( "File / Import Project" and select the "build.gradle" file).
+If you are working with the IntelliJ IDEA development environment, you can import the project using the Intellij Gradle Tooling ( "File / Import Project" and select the "build.gradle" file).
 
-To get a local development version of Grails working first run the install task
+To get a local development version of Grails working, first run the install task.
 
     ./gradlew install
 
-Then install [SDKman](http://sdkman.io) which is the quickest way to setup a development environment.
+Then install [SDKman](http://sdkman.io), which is the quickest way to set up a development environment.
 
-Once you have SDKman installed point SDKman to your local development version of Grails:
+Once you have SDKman installed, point SDKman to your local development version of Grails.
 
     sdk install grails dev /path/to/checkout
     sdk use grails dev
 
 Now the "grails" command will be using your development version!
 
-The most important command you will have to run before sending your changes is the test command:
+The most important command you will have to run before sending your changes is the test command.
 
     ./gradlew test
 
@@ -441,20 +437,20 @@ For a successful contribution, all tests should be green!
 Once you are satisfied with your changes:
 
 - commit your changes in your local branch
-- push your changes to your remote branch on Github
-- send us a [pull requests](https://help.github.com/articles/creating-a-pull-request)
+- push your changes to your remote branch on GitHub
+- send us a [pull request](https://help.github.com/articles/creating-a-pull-request)
 '''),
-            new Question(slug: 'question_buildstatus', title: 'Build Status', answer: '''
-The Grails sources are tested thanks our [continuous integration server](buildstatus.html)
+            new Question(slug: 'question_buildstatus', title: 'Where can I view the build status?', answer: '''
+Grails sources are tested using our [continuous integration server](buildstatus.html).
 '''),
             new Question(slug: 'question_sponsors', title: 'Who sponsors Grails development?', answer: '''
 
 The Grails project is generously sponsored by several companies:
 
-- [OCI](http://objectcomputing.com/products/grails/) employs key members of the Grails team,
-- [Pivotal](http://pivotal.io/) provides website hosting.
+- [OCI](http://objectcomputing.com/products/grails/) maintains the Grails framework and employs key members of the Grails team.
+- [Pivotal](http://pivotal.io/) provides website hosting for Grails.org.
 - [JFrog](http://www.jfrog.com/) provides the infrastructure for deploying and hosting our snapshots and releases, thanks to the [Bintray](https://bintray.com/) social platform for distribution and the OSS [Artifactory](http://www.jfrog.com/home/v_artifactory_opensource_overview) repository.
-- YourKit supports open source projects with its full-featured Java Profiler. YourKit, LLC is the creator of [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp) innovative and intelligent tools for profiling Java and .NET applications.                                     
+- YourKit supports open source projects with its full-featured Java Profiler. YourKit, LLC is the creator of [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp), innovative and intelligent tools for profiling Java and .NET applications.                                     
 '''),
     ]
 

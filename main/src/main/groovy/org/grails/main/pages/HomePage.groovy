@@ -34,7 +34,7 @@ class HomePage extends Page {
         html.div(class: 'homebar') {
             div(class: 'content') {
                 h1 {
-                    mkp.yield 'A Powerful Groovy-Based Web application framework '
+                    mkp.yield 'A powerful Groovy-based web application framework '
                     mkp.yield 'for the JVM built on top of Spring Boot'
                 }
                 div(class: "calltoactions") {
@@ -49,7 +49,7 @@ class HomePage extends Page {
                         a class: 'allversions', href: "documentation.html", 'browse all versions'
                     }
                     div(class: "calltoaction") {
-                        b 'Get the latest Version'
+                        b 'Get the latest version'
                         h2 {
                             a(href: "https://github.com/grails/grails-core/releases/download/v${SiteMap.LATEST_VERSION}/grails-${SiteMap.LATEST_VERSION}.zip") {
                                 mkp.yield 'Download'
@@ -67,42 +67,42 @@ class HomePage extends Page {
                         div(class: 'column') {
                             img src: "images/groovy.png", alt: "Groovy Programming Language"
                             h3 'Groovy-Based'
-                            p 'Groovy is a language aimed at improving developer productivity. It is optionally-typed, dynamic but with static-typing and static compilation capabilities.'
+                            p 'Grails is based on Groovy, a dynamic programming language for the Java platform designed to enhance developers&#39; productivity. Groovy is optionally-typed with static-typing and static compilation capabilities.'
                         }
                         div(class: 'column') {
                             img src: "images/springboot.svg", alt: "Spring Boot"
                             h3 'On top of Spring Boot'
-                            p 'Grails is a web framework, for the JVM, built on top of Spring Boot. It leverages many features such as Spring-Powered dependency injection.'
+                            p 'Grails is built on top of Spring Boot to provide Java developers the tools they need to get started quickly and leverage Spring Boot&#39;s time-saving features, such as Spring-powered dependency injection.'
                         }
                         div(class: 'column') {
                             img src: "images/java.png", alt: "Smooth Java Integration"
                             h3 'Smooth Java Integration'
-                            p 'Seamlessly and transparently integrates and interoperates with Java, the JVM, and existing Java EE containers.'
+                            p 'Grails seamlessly and transparently integrates and interoperates with Java, the JVM, and existing Java EE containers.'
                         }
                         div(class: 'column') {
                             img src: "images/flatlearningcurve.png", alt: "Flat Learning Curve"
                             h3 'Flat Learning Curve'
-                            p 'Convention-over-Configuration, sensible defaults, opinionated APIs and the Groovy language combine to make Grails easy to learn  for Java developers.'
+                            p 'Convention-over-configuration, sensible defaults, opinionated APIs, and the Groovy language combine to make Grails easy to learn for Java developers.'
                         }
                         div(class: 'column') {
                             img src: "images/gorm.png", alt: "GORM - Data Access Toolkit"
                             h3 'Seamless GORM Integration'
-                            p 'GORM is a data access toolkit that provides a rich sets of APIs for accessing relational and non-relational data. It includes implementations for Hibernate (SQL), MongoDB, Cassandra, and Neo4j.'
+                            p 'Grails seamlessly integrates with GORM, a data access toolkit that provides a rich set of APIs for accessing relational and non-relational data. GORM also includes implementations for Hibernate (SQL), MongoDB, Cassandra, and Neo4j.'
                         }
                         div(class: 'column') {
                             img src: "images/restapis.svg", alt: "REST APIs, REACT, ANGULAR"
                             h3 'REST APIs, REACT, ANGULAR'
-                            p 'With the use of application profiles, Grails allows you to build modern web applications. There are profiles to facilitate the construction of REST APIs or Web applications with a Javascript frontend.'
+                            p 'With the use of application profiles, including React and Angular, Grails allows developers to build REST APIs or modern web applications with a JavaScript frontend.'
                         }
                         div(class: 'column') {
                             img src: "images/plugins.svg", alt: ""
                             h3 'Plugins'
-                            p 'Build plugins that extend and enhance Grails or reuse an existing plugin already published by a vibrant plugin community!'
+                            p 'Developers can build plugins that extend and enhance Grails, or they can access existing plugins published by a vibrant plugin community.'
                         }
                         div(class: 'column') {
                             img src: "images/view.svg", alt: "View Technologies"
                             h3 'View Technologies'
-                            p 'Technologies such as GSP, JSON Views and Markup Views help you generate HTML, JSON or XML effortlessly.'
+                            p 'Technologies such as GSP, JSON Views, and Markup Views help developers effortlessly generate HTML, JSON and XML.'
                         }
                         div(class: 'column') {
                             img src: "images/asynchronous.svg", alt: "Asynchronous Capabilities"
@@ -112,17 +112,17 @@ class HomePage extends Page {
                         div(class: 'column') {
                             img src: "images/opensource.svg", alt: "Open Source"
                             h3 'Open Source'
-                            p 'Grails is an Open Source, Apache 2 License project.'
+                            p 'Grails is an Open Source Apache 2 License project.'
                         }
                         div(class: 'column') {
                             img src: "images/dsl.png", alt: "Domain-Specific Languages"
                             h3 'Domain-Specific Languages'
-                            p 'Expressive Domain-Specific Languages (DSLs) used for validation, querying, markup rendering, etc.'
+                            p 'Grails relies on expressive domain-specific languages (DSLs) for validation, querying, markup rendering, and more.'
                         }
                         div(class: 'column') {
                             img src: "images/idesupport.png", alt: "IDE Support"
                             h3 'IDE Support'
-                            p 'Great support in IDEs and text editors such as Intellij IDEA, Eclipse, Sublime, Textmate, etc.'
+                            p 'Developers can access support at any time via IDEs and text editors, such as Intellij IDEA, Eclipse, Sublime, and Textmate.'
                         }
                     }
                 }

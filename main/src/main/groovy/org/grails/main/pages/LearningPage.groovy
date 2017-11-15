@@ -46,7 +46,7 @@ class LearningPage extends Page {
                     a href: guidesUrl(), 'Grails Guides'
                 }
                 li {
-                    a href: Navigation.blogMenuItem(), 'Grails Team Blog'
+                    a href: Navigation.blogMenuItem().href, 'Grails Team Blog'
                 }
             }
         }

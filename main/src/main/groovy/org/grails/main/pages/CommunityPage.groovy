@@ -51,7 +51,7 @@ class CommunityPage extends Page {
                 p 'Grails and its ecosystem are often represented at various Java-oriented conferences, but there are particular events fully dedicated to the Groovy/Grails ecosystem. Here are the upcoming events you might be interested in learning about.'
                 mkp.yieldUnescaped new TwoColumnsPageElement(events as List<PageElement>).renderAsHtml()
             }
-            h3 class: "columnheader", 'User Groups'
+            h3 class: "columnheader", 'User Groups', style: 'margin-bottom: 0'
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     mkp.yieldUnescaped guideGroupWithUserGroupRegion('North-America').renderAsHtml()

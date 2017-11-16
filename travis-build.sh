@@ -31,7 +31,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 	if git diff --quiet; then
         echo "No changes in Single Guide Styles"
     else
-        git add *
+        git add -A
 	    git commit -a -m "Updating Single Guide Styles for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 	    git push origin HEAD
     fi
@@ -56,7 +56,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 	if git diff --quiet; then
         echo "No changes in GORM Website"
     else
-        git add *
+        git add -A
 	    git commit -a -m "Updating GORM site for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 	    git push origin HEAD
     fi
@@ -81,7 +81,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     if git diff --quiet; then
         echo "No changes in MAIN Website"
     else
-        git add *
+        git add -A
 	    git commit -a -m "Updating main grails site for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 	    git push origin HEAD
     fi
@@ -103,13 +103,11 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 
     git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git -b gh-pages gh-pages --single-branch > /dev/null
 	cd gh-pages
-	cp ../guides/build/site/index.html index.html
-	cp ../guides/build/site/sitemap.xml sitemap.xml
 	cp -r ../guides/build/site/* .
 	if git diff --quiet; then
         echo "No changes in GUIDES Website"
     else
-	    git add *
+	    git add -A
 	    git commit -a -m "Updating guides site for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 	    git push origin HEAD
 	fi

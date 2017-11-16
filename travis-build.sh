@@ -103,6 +103,8 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
 
     git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git -b gh-pages gh-pages --single-branch > /dev/null
 	cd gh-pages
+	cp ../guides/build/site/index.html index.html
+	cp ../guides/build/site/sitemap.xml sitemap.xml
 	cp -r ../guides/build/site/* .
 	if git diff --quiet; then
         echo "No changes in GUIDES Website"

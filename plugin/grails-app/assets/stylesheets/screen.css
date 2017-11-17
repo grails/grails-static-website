@@ -1059,6 +1059,11 @@ article.quote h2 {
 	body.home .secondarymenu li {
 		border-bottom: 3px solid #FFFFFF;
 	}
+
+	body.guide .mainmenu li,
+	body.guide .secondarymenu li,
+	body.grails3plugins .mainmenu li,
+	body.grails3plugins .secondarymenu li,
 	.mainmenu li.active,
 	.secondarymenu li.active {
 		border-bottom: 3px solid #feb672;

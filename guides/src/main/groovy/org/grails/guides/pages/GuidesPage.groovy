@@ -109,7 +109,7 @@ class GuidesPage extends Page implements ReadFileUtils {
 
     @Override
     List<String> getCssFiles() {
-        ["stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
+        ["${guidesUrl()}/stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
     }
 
     @Override

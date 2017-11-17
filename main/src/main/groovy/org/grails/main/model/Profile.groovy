@@ -13,6 +13,9 @@ class Profile implements ProfileHtml {
     }
 
     String getHref() {
-        "profiles/${slug}/index.html"
+        if ( this.href == null ) {
+            return "profiles/${slug}/index.html"    
+        }
+        this.href
     }
 }

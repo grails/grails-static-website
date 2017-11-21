@@ -44,7 +44,7 @@ class DownloadPage extends Page {
             div(class: "versionselector") {
                 select(class: "form-control", onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
                     option label: "Select a version", disabled: "disabled", selected: "selected"
-                    for (String version : SiteMap.OLDER_VERSIONS) {
+                    for (String version : SiteMap.olderVersions()) {
                         option version
                     }
                 }

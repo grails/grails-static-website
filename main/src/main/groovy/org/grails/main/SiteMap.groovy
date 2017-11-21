@@ -17,6 +17,7 @@ import org.grails.main.pages.HomePage
 import org.grails.main.pages.ProfilesPage
 import org.grails.main.pages.SearchPage
 import org.grails.main.pages.CommunityPage
+import org.grails.model.GrailsVersion
 import org.grails.pages.HtmlPage
 import org.grails.main.pages.QuestionPage
 import org.grails.main.pages.SupportPage
@@ -245,7 +246,14 @@ Groovy, Grails, and related technologies have seen astounding growth in interest
 
     public final static String LATEST_VERSION = VERSIONS[0]
     public final static List<String> OLDER_VERSIONS = VERSIONS.drop(1)
-
+    static List<String> olderVersions() {
+        List<GrailsVersion> grailsVersionList = OLDER_VERSIONS.collect { String version ->
+            GrailsVersion.build(version)
+        }
+        Collections.sort(grailsVersionList)
+        grailsVersionList = grailsVersionList.reverse()
+        grailsVersionList.collect { GrailsVersion grailsVersion -> grailsVersion.versionText }
+    }
     public final static List<UserGroup> USER_GROUPS = [
             new UserGroup(region: 'North-America', country: 'United States', title: 'Austin Groovy and Grails User Group (TX)', href: 'http://www.meetup.com/Austin-Groovy-and-Grails-Users/'),
             new UserGroup(region: 'North-America', country: 'United States', title: 'Boston Groovy, Grails, Spring Meetup (B2GS)', href: 'https://www.meetup.com/Grails-Boston/'),

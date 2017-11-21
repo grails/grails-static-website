@@ -56,7 +56,7 @@ class DocumentationPage extends Page {
                             h4 'Single Page - User Guide'
                             select(onchange: "window.location.href='http://grails.org/doc/' + this.value + '/guide/single.html'") {
                                 option 'Select a version'
-                                for (String version : SiteMap.OLDER_VERSIONS) {
+                                for (String version : SiteMap.olderVersions()) {
                                     option version
                                 }
                             }
@@ -65,7 +65,7 @@ class DocumentationPage extends Page {
                             h4 'User Guide'
                             select(onchange: "window.location.href='http://grails.org/doc/' + this.value") {
                                 option 'Select a version'
-                                for (String version : SiteMap.OLDER_VERSIONS) {
+                                for (String version : SiteMap.olderVersions()) {
                                     option version
                                 }
                             }
@@ -74,7 +74,7 @@ class DocumentationPage extends Page {
                             h4 'API Reference'
                             select(onchange: "window.location.href='http://grails.org/doc/' + this.value + '/api'") {
                                 option 'Select a version'
-                                for (String version : SiteMap.OLDER_VERSIONS) {
+                                for (String version : SiteMap.olderVersions()) {
                                     option version
                                 }
                             }

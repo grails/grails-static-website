@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
+        classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineVersion"
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
     }
 }
@@ -46,8 +46,8 @@ dependencies {
     profile "org.grails.profiles:web-plugin"
     provided "org.grails:grails-plugin-services"
     provided "org.grails:grails-plugin-domain-class"
-    compile "com.bertramlabs.plugins:asset-pipeline-grails:2.14.2"
 
+    compile "com.bertramlabs.plugins:asset-pipeline-grails:$assetPipelineVersion"
     compile project(':grails-navigation-core')
 }
 

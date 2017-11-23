@@ -19,23 +19,9 @@ class Main {
         List<HtmlPage> pages = SiteMap.PAGES
         pages << new BuildStatusPage(guides)
 
-        ['Web',
-         'Rest API',
-         'AngularJS',
-         'Angular',
-         'React',
-         'Webpack',
-         'Plugin',
-         'Rest API Plugin',
-         'Web Plugin',].each { String title ->
-            List<Profile> profiles = [SiteMap.PROFILES.profiles, SiteMap.PLUGIN_PROFILES.profiles].flatten()  as List<Profile>
-            Profile profile = profiles.find { Profile profile ->
-                profile.title == title
-            }
-            if ( profile ) {
-                RedirectPage page = new RedirectPage(profile.docsHref, "profiles/${profile.slug}/index.html")
-                pages << page
-            }
+        ([SiteMap.PROFILES.profiles, SiteMap.PLUGIN_PROFILES.profiles].flatten() as List<Profile>).each { Profile profile ->
+            RedirectPage page = new RedirectPage(profile.docsHref, "profiles/${profile.slug}/index.html")
+            pages << page
         }
         pages << new RedirectPage('https://grails.github.io/grails-upgrade/latest/guide/index.html', "upgrade.html")
 

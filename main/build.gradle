@@ -36,6 +36,7 @@ task createSiteFolder {
         file("${project.buildDir}/site/profiles/angularjs").mkdirs()
         file("${project.buildDir}/site/profiles/angular").mkdirs()
         file("${project.buildDir}/site/profiles/react").mkdirs()
+        file("${project.buildDir}/site/profiles/react-webpack").mkdirs()
         file("${project.buildDir}/site/profiles/webpack").mkdirs()
         file("${project.buildDir}/site/profiles/plugin").mkdirs()
         file("${project.buildDir}/site/profiles/rest-api-plugin").mkdirs()

@@ -285,71 +285,74 @@ Groovy, Grails, and related technologies have seen astounding growth in interest
             new UserGroup(region: 'Europe', country: 'Holland', title: 'Dutch Groovy and Grails User Group (NLGUG)', href: 'http://www.meetup.com/nl-gug/'),
     ]
 
-    public final static List<DocumentationGroup> DOCUMENTATION = [
-            new DocumentationGroup([image: 'images/profiles.svg', title: 'Grails Profiles', description: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.', links: [
-                    new DocumentationLink([title: 'Grails Profiles', href: '/profiles.html']),
-            ]]),
-            new DocumentationGroup([image: 'images/upgrade.svg', title: 'Upgrade', links: [
-                    new DocumentationLink([title: 'Upgrade Documenation', href: 'https://grails.github.io/grails-upgrade/latest/guide/index.html']),
-            ]]),
-            new DocumentationGroup([image: 'images/async.svg', title: 'Async', links: [
-                    new DocumentationLink([title: 'Async Grails', href: 'https://async.grails.org/latest/guide/index.html']),
-            ]]),
-            new DocumentationGroup([image: 'images/testing.svg', title: 'Testing', links: [
-                    new DocumentationLink([title: 'Testing Framework', href: 'https://testing.grails.org/latest/guide/index.html'])
-            ]]),
-            new DocumentationGroup([image: 'images/gorm.svg', href: 'http://gorm.grails.org', title: 'GORM - Data Access Toolkit', links: [
-                    new DocumentationLink([title: 'GORM Hibernate', href: 'http://gorm.grails.org/latest/hibernate/manual/index.html']),
-                    new DocumentationLink([title: 'GORM MongoDb', href: 'http://gorm.grails.org/latest/mongodb/manual/index.html']),
-                    new DocumentationLink([title: 'GORM Neo4j', href: 'http://gorm.grails.org/latest/neo4j/manual/index.html']),
-                    new DocumentationLink([title: 'Graphql', href: 'https://grails.github.io/gorm-graphql/snapshot/guide/index.html']),
-                    new DocumentationLink([title: 'More about GORM', href: 'http://gorm.grails.org/']),
-            ]]),
-            new DocumentationGroup([image: 'images/views.svg', title: 'Views', links: [
-                    new DocumentationLink([title: 'GSP', href: 'http://gsp.grails.org/']),
-                    new DocumentationLink([title: 'JSON Views', href: 'http://views.grails.org/latest/']),
-                    new DocumentationLink([title: 'Markup Views', href: 'http://views.grails.org/latest/#_markup_views']),
-                    new DocumentationLink([title: 'Grails + React', href: 'https://grails-profiles.github.io/react/latest/guide/index.html']),
-                    new DocumentationLink([title: 'Grails + Angular', href: 'https://grails-profiles.github.io/angular/latest/guide/index.html']),
-                    new DocumentationLink([title: 'Grails + AngularJS', href: 'https://grails-profiles.github.io/angularjs/latest/guide/index.html'])
-            ]]),
-            new DocumentationGroup([image: 'images/security.svg', title: 'Security', links: [
-                    new DocumentationLink(title: 'Spring Security Core',
-                                          href: 'https://grails-plugins.github.io/grails-spring-security-core/',
-                                          vcs: 'https://github.com/grails-plugins/grails-spring-security-core'),
-                    new DocumentationLink(title: 'Spring Security REST',
-                            href: 'https://github.com/alvarosanchez/grails-spring-security-rest',
-                            vcs: 'http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/'),
+    public final static DocumentationGroup DOCUMENTATION_PROFILES = new DocumentationGroup([image: 'images/profiles.svg', title: 'Grails Profiles', description: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.', links: [
+            new DocumentationLink([title: 'Grails Profiles', href: '/profiles.html']),
+    ]])
+    public final static DocumentationGroup DOCUMENTATION_UPGRADE = new DocumentationGroup([image: 'images/upgrade.svg', title: 'Upgrade', links: [
+            new DocumentationLink([title: 'Upgrade Documenation', href: 'https://grails.github.io/grails-upgrade/latest/guide/index.html']),
+    ]])
+    public final static DocumentationGroup DOCUMENTATION_ASYNC = new DocumentationGroup([image: 'images/async.svg', title: 'Async', links: [
+        new DocumentationLink([title: 'Async Grails', href: 'https://async.grails.org/latest/guide/index.html']),
+    ]])
+    public final static DocumentationGroup DOCUMENTATION_TESTING = new DocumentationGroup([image: 'images/testing.svg', title: 'Testing', links: [
+            new DocumentationLink([title: 'Testing Framework', href: 'https://testing.grails.org/latest/guide/index.html'])
+    ]])
 
-                    new DocumentationLink(title: 'Spring Security - AppInfo',
-                            href: 'https://grails-plugins.github.io/grails-spring-security-appinfo/',
-                            vcs: 'https://github.com/grails-plugins/grails-spring-security-appinfo'),
-                    new DocumentationLink(title: 'Spring Security - UI',
-                            href: 'https://grails-plugins.github.io/grails-spring-security-ui/latest/',
-                            vcs: 'https://github.com/grails-plugins/grails-spring-security-ui'),
-                    new DocumentationLink(title: 'Spring Security - ACL',
-                            href: 'https://grails-plugins.github.io/grails-spring-security-acl/',
-                            vcs: 'https://github.com/grails-plugins/grails-spring-security-acl'),
-                    new DocumentationLink(title: 'Spring Security - LDAP',
-                            href: 'https://grails-plugins.github.io/grails-spring-security-ldap/',
-                            vcs: 'https://github.com/grails-plugins/grails-spring-security-ldap'),
-                    new DocumentationLink(title: 'Spring Security - CAS',
-                            href: 'https://grails-plugins.github.io/grails-spring-security-cas/',
-                            vcs: 'https://github.com/grails-plugins/grails-spring-security-cas'),
-                    new DocumentationLink(title: 'Spring Security - Kerberos',
-                            href: 'https://grails-plugins.github.io/grails-spring-security-kerberos/',
-                            vcs: 'https://grails-plugins.github.io/grails-spring-security-kerberos/'),
-            ]]),
+    public final static DocumentationGroup DOCUMENTATION_GORM = new DocumentationGroup([image: 'images/gorm.svg', href: 'http://gorm.grails.org', title: 'GORM - Data Access Toolkit', links: [
+            new DocumentationLink([title: 'GORM Hibernate', href: 'http://gorm.grails.org/latest/hibernate/manual/index.html']),
+            new DocumentationLink([title: 'GORM MongoDb', href: 'http://gorm.grails.org/latest/mongodb/manual/index.html']),
+            new DocumentationLink([title: 'GORM Neo4j', href: 'http://gorm.grails.org/latest/neo4j/manual/index.html']),
+            new DocumentationLink([title: 'Graphql', href: 'https://grails.github.io/gorm-graphql/snapshot/guide/index.html']),
+            new DocumentationLink([title: 'More about GORM', href: 'http://gorm.grails.org/']),
+    ]])
 
-            new DocumentationGroup([image: 'images/relationaldb.svg', title: 'Database', links: [
-                    new DocumentationLink(title: 'Database Migration Plugin',
-                            href: 'http://grails-plugins.github.io/grails-database-migration/3.0.x/index.html',
-                            vcs: 'https://github.com/grails-plugins/grails-database-migration'),
-            ]]),
-            new DocumentationGroup([image: 'images/buildstatus.svg', title: 'Build Status', links: [
-                    new DocumentationLink(title: 'Build Status', href: '/buildstatus.html'),
-            ]]),
-    ]
+    public final static DocumentationGroup DOCUMENTATION_VIEWS = new DocumentationGroup([image: 'images/views.svg', title: 'Views', links: [
+            new DocumentationLink([title: 'GSP', href: 'http://gsp.grails.org/']),
+            new DocumentationLink([title: 'JSON Views', href: 'http://views.grails.org/latest/']),
+            new DocumentationLink([title: 'Markup Views', href: 'http://views.grails.org/latest/#_markup_views']),
+            new DocumentationLink([title: 'Grails + React', href: 'https://grails-profiles.github.io/react/latest/guide/index.html']),
+            new DocumentationLink([title: 'Grails + Angular', href: 'https://grails-profiles.github.io/angular/latest/guide/index.html']),
+            new DocumentationLink([title: 'Grails + AngularJS', href: 'https://grails-profiles.github.io/angularjs/latest/guide/index.html'])
+    ]])
+
+    public final static DocumentationGroup DOCUMENTATION_SECURITY = new DocumentationGroup([image: 'images/security.svg', title: 'Security', links: [
+            new DocumentationLink(title: 'Spring Security Core',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-core/',
+                    vcs: 'https://github.com/grails-plugins/grails-spring-security-core'),
+            new DocumentationLink(title: 'Spring Security REST',
+                    href: 'https://github.com/alvarosanchez/grails-spring-security-rest',
+                    vcs: 'http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/'),
+
+            new DocumentationLink(title: 'Spring Security - AppInfo',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-appinfo/',
+                    vcs: 'https://github.com/grails-plugins/grails-spring-security-appinfo'),
+            new DocumentationLink(title: 'Spring Security - UI',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-ui/latest/',
+                    vcs: 'https://github.com/grails-plugins/grails-spring-security-ui'),
+            new DocumentationLink(title: 'Spring Security - ACL',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-acl/',
+                    vcs: 'https://github.com/grails-plugins/grails-spring-security-acl'),
+            new DocumentationLink(title: 'Spring Security - LDAP',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-ldap/',
+                    vcs: 'https://github.com/grails-plugins/grails-spring-security-ldap'),
+            new DocumentationLink(title: 'Spring Security - CAS',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-cas/',
+                    vcs: 'https://github.com/grails-plugins/grails-spring-security-cas'),
+            new DocumentationLink(title: 'Spring Security - Kerberos',
+                    href: 'https://grails-plugins.github.io/grails-spring-security-kerberos/',
+                    vcs: 'https://grails-plugins.github.io/grails-spring-security-kerberos/'),
+    ]])
+
+    public final static DocumentationGroup DOCUMENTATION_DATABASE = new DocumentationGroup([image: 'images/relationaldb.svg', title: 'Database', links: [
+            new DocumentationLink(title: 'Database Migration Plugin',
+                    href: 'http://grails-plugins.github.io/grails-database-migration/3.0.x/index.html',
+                    vcs: 'https://github.com/grails-plugins/grails-database-migration'),
+    ]])
+
+
+    public final static DocumentationGroup DOCUMENTATION_BUILDSTATUS = new DocumentationGroup([image: 'images/buildstatus.svg', title: 'Build Status', links: [
+            new DocumentationLink(title: 'Build Status', href: '/buildstatus.html'),
+    ]])
 
     public final static List<Question> QUESTIONS = [
             new Question(slug: 'question_opensource', title: 'Is Grails an Open Source project?', answer: '''

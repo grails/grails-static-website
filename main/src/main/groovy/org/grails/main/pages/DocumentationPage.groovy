@@ -39,17 +39,13 @@ class DocumentationPage extends Page {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class:"content") {
             div(class: "twocolumns") {
-                TwoColumnsPageElement twoColumnsPageElement = new TwoColumnsPageElement(SiteMap.DOCUMENTATION)
                 div(class: "odd column") {
                     mkp.yieldUnescaped documentationGuideGroup().renderAsHtml()
-                    for (PageElement el : twoColumnsPageElement.firstColumn) {
-                        mkp.yieldUnescaped el.renderAsHtml()
-                    }
                 }
                 div(class: "column") {
                     div(class: "olderversions") {
                         h3(class: "columnheader", style: 'margin-bottom: 10px;') {
-                          mkp.yieldUnescaped('Older Versions')
+                            mkp.yieldUnescaped('Older Versions')
                         }
                         p 'Browse previous versions\' documentation since Grails 1.2.0'
                         div(class: "versionselector") {
@@ -80,14 +76,42 @@ class DocumentationPage extends Page {
                             }
                         }
                     }
-
-                    for (PageElement el : twoColumnsPageElement.secondColumn) {
-                        mkp.yieldUnescaped el.renderAsHtml()
-                    }
+                }
+            }
+            div(class: "twocolumns") {
+                div(class: "odd column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_PROFILES.renderAsHtml())
+                }
+                div(class: "column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_UPGRADE.renderAsHtml())
+                }
+            }
+            div(class: "twocolumns") {
+                div(class: "odd column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_ASYNC.renderAsHtml())
+                }
+                div(class: "column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_TESTING.renderAsHtml())
+                }
+            }
+            div(class: "twocolumns") {
+                div(class: "odd column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_GORM.renderAsHtml())
+                }
+                div(class: "column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_VIEWS.renderAsHtml())
+                }
+            }
+            div(class: "twocolumns") {
+                div(class: "odd column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_SECURITY.renderAsHtml())
+                }
+                div(class: "column") {
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_DATABASE.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_BUILDSTATUS.renderAsHtml())
                 }
             }
         }
-
         writer.toString()
     }
 }

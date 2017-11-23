@@ -33,6 +33,7 @@ class SiteMap {
                     new Profile(title: 'AngularJS', docsHref: 'https://grails-profiles.github.io/angularjs/latest/guide/index.html'),
                     new Profile(title: 'Angular', docsHref: 'https://grails-profiles.github.io/angular/latest/guide/index.html'),
                     new Profile(title: 'React', docsHref: 'https://grails-profiles.github.io/react/latest/guide/index.html'),
+                    new Profile(title: 'React-Webpack', docsHref: 'https://grails-profiles.github.io/react-webpack/latest/guide/index.html'),
                     new Profile(title: 'Webpack', docsHref: 'https://grails-profiles.github.io/webpack/latest/guide/index.html'),
     ])
 

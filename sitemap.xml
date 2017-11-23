@@ -34,6 +34,9 @@
     <loc>http://grails.org/profiles/web/index.html</loc>
   </url>
   <url>
+    <loc>http://grails.org/profiles/rest-api/index.html</loc>
+  </url>
+  <url>
     <loc>http://grails.org/profiles/angularjs/index.html</loc>
   </url>
   <url>
@@ -43,10 +46,16 @@
     <loc>http://grails.org/profiles/react/index.html</loc>
   </url>
   <url>
+    <loc>http://grails.org/profiles/react-webpack/index.html</loc>
+  </url>
+  <url>
     <loc>http://grails.org/profiles/webpack/index.html</loc>
   </url>
   <url>
     <loc>http://grails.org/profiles/plugin/index.html</loc>
+  </url>
+  <url>
+    <loc>http://grails.org/profiles/rest-api-plugin/index.html</loc>
   </url>
   <url>
     <loc>http://grails.org/profiles/web-plugin/index.html</loc>

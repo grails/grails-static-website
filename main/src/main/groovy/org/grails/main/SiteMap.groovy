@@ -316,16 +316,12 @@ Groovy, Grails, and related technologies have seen astounding growth in interest
             new DocumentationLink([title: 'GORM MongoDb', href: 'http://gorm.grails.org/latest/mongodb/manual/index.html']),
             new DocumentationLink([title: 'GORM Neo4j', href: 'http://gorm.grails.org/latest/neo4j/manual/index.html']),
             new DocumentationLink([title: 'Graphql', href: 'https://grails.github.io/gorm-graphql/snapshot/guide/index.html']),
-            new DocumentationLink([title: 'More about GORM', href: 'http://gorm.grails.org/']),
     ]])
 
     public final static DocumentationGroup DOCUMENTATION_VIEWS = new DocumentationGroup([image: 'images/views.svg', title: 'Views', links: [
             new DocumentationLink([title: 'GSP', href: 'http://gsp.grails.org/']),
             new DocumentationLink([title: 'JSON Views', href: 'http://views.grails.org/latest/']),
             new DocumentationLink([title: 'Markup Views', href: 'http://views.grails.org/latest/#_markup_views']),
-            new DocumentationLink([title: 'Grails + React', href: 'https://grails-profiles.github.io/react/latest/guide/index.html']),
-            new DocumentationLink([title: 'Grails + Angular', href: 'https://grails-profiles.github.io/angular/latest/guide/index.html']),
-            new DocumentationLink([title: 'Grails + AngularJS', href: 'https://grails-profiles.github.io/angularjs/latest/guide/index.html'])
     ]])
 
     public final static DocumentationGroup DOCUMENTATION_SECURITY = new DocumentationGroup([image: 'images/security.svg', title: 'Security', links: [

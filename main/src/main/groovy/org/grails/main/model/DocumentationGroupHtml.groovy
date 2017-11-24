@@ -12,11 +12,10 @@ trait DocumentationGroupHtml implements PageElement {
     abstract List<DocumentationLink> getLinks()
 
     @CompileDynamic
-    @Override
-    String renderAsHtml() {
+    String renderAsHtml(String cssStyle = '') {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: "guidegroup") {
+        html.div(class: "guidegroup", style: cssStyle) {
             div(class:"guidegroupheader") {
                 img src: image, alt: title
                 if ( href ) {

@@ -32,6 +32,15 @@ class DocumentationPage extends Page {
         ])
     }
 
+    GuideGroup snapshotDocumentationGuideGroup() {
+        new GuideGroup(title: 'Snapshot Documentation',
+                image: "${getImageAssetPreffix()}documentation.svg",
+                items: [
+                        new GuideGroupItem(href: "http://docs.grails.org/snapshot/guide/single.html", title: 'Single Page - User Guide'),
+                        new GuideGroupItem(href: "http://docs.grails.org/snapshot/", title: 'User Guide'),
+                ])
+    }
+
     @CompileDynamic
     @Override
     String mainContent() {
@@ -40,6 +49,7 @@ class DocumentationPage extends Page {
         html.div(class:"content") {
             div(class: "twocolumns") {
                 div(class: "odd column") {
+                    mkp.yieldUnescaped snapshotDocumentationGuideGroup().renderAsHtml()
                     mkp.yieldUnescaped documentationGuideGroup().renderAsHtml()
                 }
                 div(class: "column") {
@@ -76,39 +86,34 @@ class DocumentationPage extends Page {
                             }
                         }
                     }
-                }
-            }
-            div(class: "twocolumns") {
-                div(class: "odd column") {
                     mkp.yieldUnescaped(SiteMap.DOCUMENTATION_PROFILES.renderAsHtml())
-                }
-                div(class: "column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_UPGRADE.renderAsHtml())
+
                 }
             }
             div(class: "twocolumns") {
                 div(class: "odd column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_ASYNC.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_UPGRADE.renderAsHtml('margin-top: 0;'))
                 }
                 div(class: "column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_TESTING.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_TESTING.renderAsHtml('margin-top: 0;'))
                 }
             }
             div(class: "twocolumns") {
                 div(class: "odd column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_GORM.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_GORM.renderAsHtml('margin-top: 0;'))
                 }
                 div(class: "column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_VIEWS.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_VIEWS.renderAsHtml('margin-top: 0;'))
                 }
             }
             div(class: "twocolumns") {
                 div(class: "odd column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_SECURITY.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_SECURITY.renderAsHtml('margin-top: 0;'))
                 }
                 div(class: "column") {
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_DATABASE.renderAsHtml())
-                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_BUILDSTATUS.renderAsHtml())
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_ASYNC.renderAsHtml('margin-top: 0;'))
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_DATABASE.renderAsHtml('margin-top: 0;'))
+                    mkp.yieldUnescaped(SiteMap.DOCUMENTATION_BUILDSTATUS.renderAsHtml('margin-top: 0;'))
                 }
             }
         }

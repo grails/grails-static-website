@@ -64,8 +64,21 @@ class SiteMap {
     ] as List<HtmlPage>
 
     public final static List<BuildStatus> BUILDS = [
+            new BuildStatus([title: 'Grails 3 Functional Tests Master',
+                             href: "https://travis-ci.org/grails/grails3-functional-tests?branch=master", badge: "https://travis-ci.org/grails/grails3-functional-tests.svg?branch=master"]),
+
+            new BuildStatus([title: 'Grails 3 Functional Tests 3.3.x',
+                             href: "https://travis-ci.org/grails/grails3-functional-tests?branch=3.3.x", badge: "https://travis-ci.org/grails/grails3-functional-tests.svg?branch=3.3.x"]),
+
+            new BuildStatus([title: 'Grails 3 Functional Tests 3.2.x',
+                             href: "https://travis-ci.org/grails/grails3-functional-tests?branch=3.2.x", badge: "https://travis-ci.org/grails/grails3-functional-tests.svg?branch=3.2.x"]),
+
             new BuildStatus([title: 'Grails Master',
                              href: "https://travis-ci.org/grails/grails-core?branch=master", badge: "https://travis-ci.org/grails/grails-core.svg?branch=master"]),
+            new BuildStatus([title: 'Grails 3.3.x Branch',
+                             href: 'https://travis-ci.org/grails/grails-core?branch=3.3.x', badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.3.x"]),
+            new BuildStatus([title: 'Grails 3.2.x Branch',
+                             href: 'https://travis-ci.org/grails/grails-core?branch=3.2.x', badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.2.x"]),
             new BuildStatus([title: 'Grails 3.1.x Branch',
                              href: 'https://travis-ci.org/grails/grails-core?branch=3.1.x', badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.1.x"]),
             new BuildStatus([title: 'Grails 3.0.x Branch',

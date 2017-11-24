@@ -125,6 +125,7 @@ Groovy, Grails, and related technologies have seen astounding growth in interest
     ]
 
     public final static List<String> VERSIONS = [
+            '3.3.2',
             '3.3.1',
             '3.3.0',
             '3.3.0.RC1',

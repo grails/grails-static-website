@@ -27,7 +27,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git -b master gh-pages --single-branch > /dev/null
 
 	cd gh-pages
-	cp -r ../gorm/build/site/* src/main/resources/*
+	cp -r ../guide/build/site/* src/main/resources/*
 	if git diff --quiet; then
         echo "No changes in Single Guide Styles"
     else

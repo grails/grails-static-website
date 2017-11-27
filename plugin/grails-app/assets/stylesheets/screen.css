@@ -396,6 +396,11 @@ code {
 	background-color: #ffffff !important;
 }
 
+body.guide .colist th,
+body.guide .colist td {
+	border: none;
+}
+
 body.guide .mainheader,
 body.grails3plugins .mainheader,
 body.gorm .mainheader {

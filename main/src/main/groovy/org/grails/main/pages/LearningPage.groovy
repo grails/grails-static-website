@@ -46,7 +46,7 @@ class LearningPage extends Page {
                     a href: guidesUrl(), 'Grails Guides'
                 }
                 li {
-                    a href: Navigation.blogMenuItem().href, 'Grails Team Blog'
+                    a(href: Navigation.blogMenuItem().href, 'Grails Team Blog')
                 }
             }
         }
@@ -71,17 +71,10 @@ class LearningPage extends Page {
                 }
             }
             h3 class: "columnheader", 'Grails Books'
-            mkp.yieldUnescaped new TwoColumnsPageElement(booksWithImagePath(SiteMap.GRAILS_BOOKS) as List<PageElement>).renderAsHtml()
+            mkp.yieldUnescaped new TwoColumnsPageElement(SiteMap.GRAILS_BOOKS as List<PageElement>).renderAsHtml()
             h3 class: "columnheader", 'Groovy Books'
-            mkp.yieldUnescaped new TwoColumnsPageElement(booksWithImagePath(SiteMap.GROOVY_BOOKS) as List<PageElement>).renderAsHtml()
+            mkp.yieldUnescaped new TwoColumnsPageElement(SiteMap.GROOVY_BOOKS as List<PageElement>).renderAsHtml()
         }
         writer.toString()
-    }
-
-    List<Book> booksWithImagePath(List<Book> books) {
-        books.each {
-            it.image = "${getImageAssetPreffix()}${it.image}"
-        }
-        books
     }
 }

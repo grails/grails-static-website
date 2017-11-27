@@ -48,6 +48,7 @@ task copyAssets {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images"
             into "${cleanSiteFolder.destDir}/img"
             include 'clippy.svg'
+            include 'slack.svg'
             include 'github.svg'
             include 'github_white.svg'
             include 'grails_logo.svg'

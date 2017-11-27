@@ -17,6 +17,7 @@ fi
 
 # Publish Guide Style
 if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
+
     ./gradlew guide:runShadow || EXIT_STATUS=$?
 
     if [[ $EXIT_STATUS -ne 0 ]]; then
@@ -24,10 +25,13 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
         exit $EXIT_STATUS
     fi
 
-    git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git -b master gh-pages --single-branch > /dev/null
+    echo "Cloning grails-guide master repo"
+    git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git --single-branch > /dev/null
 
-	cd gh-pages
+	cd grails-guides
+
 	cp -r ../guide/build/site/* src/main/resources/*
+
 	if git diff --quiet; then
         echo "No changes in Single Guide Styles"
     else
@@ -37,7 +41,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     fi
 
 	cd ..
-	rm -rf gh-pages
+	rm -rf grails-guides
 fi
 
 # Publish GORM Site

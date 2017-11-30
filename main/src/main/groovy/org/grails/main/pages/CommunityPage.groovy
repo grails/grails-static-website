@@ -47,6 +47,20 @@ class CommunityPage extends Page {
         }
         html.div(class: "content") {
             article {
+                h3 class: "columnheader", 'Grails Rock Star Wall of Fame'
+                div(class: 'threecolumns') {
+                    div(class: 'column') {
+                        img class: 'center', height: 200, src: "${getImageAssetPreffix()}graeme.png", alt: 'Graeme Rocher - Grails lifetime contributor Award'
+                    }
+                    div(class: 'column') {
+                        img class: 'center', height: 200, src: "${getImageAssetPreffix()}jeff_scott_brown.png", alt: 'Jeff Scott Brown - Grails lifetime contributor Award'
+                    }
+                    div(class: 'column') {
+                        img class: 'center', height: 200, src: "${getImageAssetPreffix()}eric_helgeson.png", alt: 'Eric Helgeson - 2017 Grails Rock Star Award'
+                    }
+                }
+            }
+            article {
                 h3 class: "columnheader", 'Conferences'
                 p 'Grails and its ecosystem are often represented at various Java-oriented conferences, but there are particular events fully dedicated to the Groovy/Grails ecosystem. Here are the upcoming events you might be interested in learning about.'
                 mkp.yieldUnescaped new TwoColumnsPageElement(events as List<PageElement>).renderAsHtml()

@@ -10,7 +10,7 @@ class Training {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'training', style: 'display: none;') {
             a(href: 'https://objectcomputing.com/training/catalog/grails/') {
-                h3 class: 'columnheader', 'Grails Training'
+                h3 class: 'columnheader', 'Grails Training', style: 'margin-top: 30px;'
             }
             div(id: 'ocitraining') {
                 span ''

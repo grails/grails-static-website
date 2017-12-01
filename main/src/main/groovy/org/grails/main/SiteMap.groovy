@@ -18,6 +18,7 @@ import org.grails.main.pages.LearningPage
 import org.grails.main.pages.ProfilesPage
 import org.grails.main.pages.SearchPage
 import org.grails.main.pages.CommunityPage
+import org.grails.model.GrailsAward
 import org.grails.model.GrailsVersion
 import org.grails.pages.HtmlPage
 import org.grails.main.pages.QuestionPage
@@ -91,6 +92,12 @@ class SiteMap {
                              href: "https://travis-ci.org/grails/grails-core?branch=2.4.x", badge: "https://travis-ci.org/grails/grails-core.svg?branch=2.4.x"]),
             new BuildStatus([title: 'Grails 2.3.x Branch',
                              href: "https://travis-ci.org/grails/grails-core?branch=2.3.x", badge: "https://travis-ci.org/grails/grails-core.svg?branch=2.3.x"]),
+    ]
+
+    public static List<GrailsAward> GRAILS_AWARDS_LIST = [
+            new GrailsAward(image: 'graeme.png', alt: 'Graeme Rocher - Grails lifetime contributor Award'),
+            new GrailsAward(image: 'jeff_scott_brown.png', alt: 'Jeff Scott Brown - Grails lifetime contributor Award'),
+            new GrailsAward(image: 'eric_helgeson.png', alt: 'Eric Helgeson - 2017 Grails Rock Star Award')
     ]
 
     public final static List<Book> GRAILS_BOOKS = [

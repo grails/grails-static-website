@@ -7,6 +7,7 @@ import org.grails.Navigation
 import org.grails.main.SiteMap
 import org.grails.main.model.Event
 import org.grails.main.model.UserGroup
+import org.grails.model.GrailsAward
 import org.grails.model.GuideGroup
 import org.grails.model.GuideGroupItem
 import org.grails.model.MenuItem
@@ -48,15 +49,11 @@ class CommunityPage extends Page {
         html.div(class: "content") {
             article {
                 h3 class: "columnheader", 'Grails Rock Star Wall of Fame'
-                div(class: 'threecolumns') {
-                    div(class: 'column') {
-                        img class: 'center', height: 200, src: "${getImageAssetPreffix()}graeme.png", alt: 'Graeme Rocher - Grails lifetime contributor Award'
-                    }
-                    div(class: 'column') {
-                        img class: 'center', height: 200, src: "${getImageAssetPreffix()}jeff_scott_brown.png", alt: 'Jeff Scott Brown - Grails lifetime contributor Award'
-                    }
-                    div(class: 'column') {
-                        img class: 'center', height: 200, src: "${getImageAssetPreffix()}eric_helgeson.png", alt: 'Eric Helgeson - 2017 Grails Rock Star Award'
+                div(class: columnsClass(SiteMap.GRAILS_AWARDS_LIST)) {
+                    for ( GrailsAward grailsAward :  SiteMap.GRAILS_AWARDS_LIST ) {
+                        div(class: 'column align-center', style: 'margin-top: 0 !important;') {
+                            img height: 200, src: "${getImageAssetPreffix()}${grailsAward.image}", alt: grailsAward.alt
+                        }
                     }
                 }
             }
@@ -79,4 +76,5 @@ class CommunityPage extends Page {
         }
         writer.toString()
     }
+
 }

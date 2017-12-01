@@ -337,4 +337,13 @@ adroll_pix_id = "IVEQYFOZXZAPZMDVQH7BFE";
         }
         writer.toString()
     }
+
+    static String columnsClass(List l) {
+        switch ( l.size() ) {
+            case 3:
+                return 'threecolumns'
+            default:
+                return 'twocolumns'
+        }
+    }
 }

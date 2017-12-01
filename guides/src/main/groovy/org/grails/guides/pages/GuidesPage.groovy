@@ -126,11 +126,11 @@ class GuidesPage extends Page implements ReadFileUtils {
     }
 
     @CompileDynamic
-    String guideGroupByCategory(Category category, List<Guide> guides, boolean linkToCategory = true) {
+    String guideGroupByCategory(Category category, List<Guide> guides, boolean linkToCategory = true, String cssStyle = '') {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
 
-        html.div(class: "guidegroup") {
+        html.div(class: "guidegroup", style: cssStyle) {
             div(class: "guidegroupheader") {
                 img src: "${getImageAssetPreffix()}${category.image}" as String, alt: category.name
                 if ( linkToCategory )  {
@@ -176,7 +176,6 @@ class GuidesPage extends Page implements ReadFileUtils {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div {
             mkp.yieldUnescaped latestGuides()
-            mkp.yieldUnescaped searchBox()
         }
         writer.toString()
     }
@@ -186,6 +185,7 @@ class GuidesPage extends Page implements ReadFileUtils {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div {
+            mkp.yieldUnescaped searchBox()
             if ( tag || category ) {
                 mkp.yieldUnescaped sponsoredBy()
             } else {
@@ -216,8 +216,8 @@ class GuidesPage extends Page implements ReadFileUtils {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         if ( !(tag || category) ) {
-            html.div(class: 'searchbox') {
-                div(class: 'search') {
+            html.div(class: 'searchbox', style: 'margin-top: 50px !important;') {
+                div(class: 'search', style: 'margin-bottom: 0px !important;') {
                     input(type: 'text', id: 'query', placeholder: 'SEARCH')
                     div(id: 'noresults') {
                         mkp.yieldUnescaped '&nbsp;'
@@ -296,17 +296,6 @@ class GuidesPage extends Page implements ReadFileUtils {
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     mkp.yieldUnescaped rightColumn()
-                    if ( !(tag || category) ) {
-                        mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().react, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().ria, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
-                        mkp.yieldUnescaped guideSuggestion()
-                    }
                 }
                 div(class: 'column') {
                     mkp.yieldUnescaped leftColumn()
@@ -321,11 +310,28 @@ class GuidesPage extends Page implements ReadFileUtils {
                             mkp.yieldUnescaped('')
                         }
                         mkp.yieldUnescaped guideGroupByCategory(categories().apprentice, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().async, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides)
                     }
+                }
+            }
+            div(class: 'twocolumns') {
+                div(class: 'column') {
+                    if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides, true, 'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().react, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().ria, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
+                        mkp.yieldUnescaped guideSuggestion()
+                    }
+                }
+                div(class: 'column') {
+                    mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides, true, 'margin-top: 0;')
+                    mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
+                    mkp.yieldUnescaped guideGroupByCategory(categories().async, guides)
+                    mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides)
                 }
             }
         }

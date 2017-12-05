@@ -328,10 +328,12 @@ class GuidesPage extends Page implements ReadFileUtils {
                     }
                 }
                 div(class: 'column') {
-                    mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides, true, 'margin-top: 0;')
-                    mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
-                    mkp.yieldUnescaped guideGroupByCategory(categories().async, guides)
-                    mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides)
+                    if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides, true, 'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().async, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides)
+                    }
                 }
             }
         }

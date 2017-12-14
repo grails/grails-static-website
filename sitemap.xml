@@ -55,6 +55,9 @@
     <loc>http://grails.org/profiles/webpack/index.html</loc>
   </url>
   <url>
+    <loc>http://grails.org/profiles/vue/index.html</loc>
+  </url>
+  <url>
     <loc>http://grails.org/profiles/plugin/index.html</loc>
   </url>
   <url>

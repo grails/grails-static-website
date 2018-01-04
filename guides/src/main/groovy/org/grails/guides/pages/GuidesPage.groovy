@@ -316,23 +316,34 @@ class GuidesPage extends Page implements ReadFileUtils {
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     if ( !(tag || category) ) {
-                        mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides, true, 'margin-top: 0;')
-                        mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().react, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().ria, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
-                        mkp.yieldUnescaped guideSuggestion()
                     }
                 }
                 div(class: 'column') {
                     if ( !(tag || category) ) {
                         mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().async, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides)
+
+                    }
+                }
+            }
+            div(class: 'twocolumns') {
+                div(class: 'column') {
+                    if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().async, guides, true, 'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().ria, guides)
+                    }
+                }
+                div(class: 'column') {
+                    if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides, true, 'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().react, guides)
+                        mkp.yieldUnescaped guideSuggestion()
                     }
                 }
             }

@@ -88,7 +88,11 @@ body.documentation .headerbar,
 	background-color: #C8C8C8;
 }
 body.guides .columnheader a {
-	background-color: #feb672;
+	background-color: transparent;
+}
+body.guides .columnheader a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 .align-left {
 	float: left;
@@ -740,7 +744,7 @@ div.search {
 
 body.documentation .columnheader,
 body.guides .columnheader {
-	background-color: #feb672;
+	background-color: #255AA8;
 	color: #ffffff;
 }
 

@@ -29,8 +29,10 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     git clone https://${GH_TOKEN}@github.com/grails/grails-guides.git --single-branch > /dev/null
 
 	cd grails-guides
-
-	cp -r ../guide/build/site/* src/main/resources/*
+    cp ../guide/build/site/css/* src/main/resources/css/
+    cp ../guide/build/site/fonts/* src/main/resources/fonts/
+    cp ../guide/build/site/img/* src/main/resources/img/
+    cp ../guide/build/site/style/* src/main/resources/style/
 
 	if git diff --quiet; then
         echo "No changes in Single Guide Styles"

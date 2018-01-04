@@ -87,6 +87,9 @@ body.documentation .headerbar,
 	color: #FFFFFF;
 	background-color: #C8C8C8;
 }
+body.guides .columnheader a {
+	background-color: #feb672;
+}
 .align-left {
 	float: left;
 }
@@ -109,7 +112,6 @@ body.home {
 	background-color: #ffffff;
 }
 a {
-	color: #feb672;
 	text-decoration: underline;
 }
 
@@ -192,9 +194,7 @@ td {
 	width: 100%;
 	margin-bottom: 50px;
 }
-.training th {
-	background-color: #feb672;
-}
+
 .training td {
 	background-color: #ffffff;
 	border: 1px solid #F5F5F5;
@@ -502,10 +502,8 @@ body.gorm .mainheader {
 .secondarymenu li a {
 	text-transform: uppercase;
 }
-
 .headerbar {
 	clear: both;
-	background-color: #feb672;
 	height: 100px;
 	text-transform: uppercase;
 }
@@ -525,8 +523,23 @@ body.gorm .mainheader {
 	margin-top: 42.5px;
 }
 
+.training th,
+.calltoaction h2 {
+	background-color: gray;/*#feb672;*/
+}
+
+.headerbar,
 #features {
-	background-color: #feb672;
+	background-color: #255AA8;
+}
+
+a,
+a:hover,
+.partnersnav li a {
+	color: #255AA8;
+}
+
+#features {
 	padding-top: 30px;
 	text-align: center;
 }
@@ -885,7 +898,6 @@ footer li {
 	margin-bottom: 20px;
 }
 .partnersnav li a {
-	color: #feb672;
 	text-decoration: none;
 }
 
@@ -928,7 +940,6 @@ article.quote h2 {
 }
 
 .calltoaction h2 {
-	background-color: #feb672;
 	padding: 10px;
 	width: 90%;
 	max-width: 270px;
@@ -937,6 +948,7 @@ article.quote h2 {
 	box-shadow: 1px 4px 4px #ccc;
 	margin: 0 auto;
 	font-family: 'Archia-Light', 'Roboto-Light', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 }
 .calltoaction {
 	text-align: center;

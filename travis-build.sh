@@ -33,6 +33,7 @@ if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     cp ../guide/build/site/fonts/* src/main/resources/fonts/
     cp ../guide/build/site/img/* src/main/resources/img/
     cp ../guide/build/site/style/* src/main/resources/style/
+    cp -r ../guide/build/site/* src/main/resources/*
 
 	if git diff --quiet; then
         echo "No changes in Single Guide Styles"

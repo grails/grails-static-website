@@ -45,3 +45,14 @@ http://guides.grails.org[http://guides.grails.org]
 ----
 
 The output can be found in the `guides/build/site` directory.
+
+== Grails Navigation Plugin
+
+The project generates a Grails Plugin and a Groovy library. Those
+artefacts are used to create Grails applications (e.g. Grails Plugin, Grails App Forge) wiht the look and feel of
+the grails Website.
+
+Distributions are served by Bintray:
+
+- https://bintray.com/grails/plugins/grails-navigation[grails-navigation]
+- https://bintray.com/grails/plugins/grails-navigation-core[grails-navigation-core]

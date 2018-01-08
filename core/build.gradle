@@ -71,6 +71,8 @@ bintray {
         publicDownloadNumbers = true
         version {
             name = project.version
+            vcsTag = projectVersion
+            released = new Date()
         }
     }
 }

@@ -96,7 +96,7 @@ class GuidesPage extends Page implements ReadFileUtils {
             }
             return writer.toString()
         }
-        'Learning'
+        'Guides'
     }
 
     @Override

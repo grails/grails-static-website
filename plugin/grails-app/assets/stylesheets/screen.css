@@ -432,7 +432,7 @@ body.gorm .mainheader {
 #topmenus {
 	margin-top: 17px;
 	display: none;
-	background-color: #feb672;
+	background-color: gray;
 	overflow: auto;
 	padding: 10px;
 }
@@ -508,8 +508,8 @@ body.gorm .mainheader {
 }
 .headerbar {
 	clear: both;
-	height: 100px;
 	text-transform: uppercase;
+	padding-bottom: 42.5px;
 }
 
 .headerbar a {
@@ -953,7 +953,7 @@ article.quote h2 {
 	margin: 0 auto;
 	font-family: 'Archia-Light', 'Roboto-Light', "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-}
+
 .calltoaction {
 	text-align: center;
 	overflow: auto;
@@ -1131,9 +1131,10 @@ article.quote h2 {
 	}
 	.headerbar {
 		height: 200px;
+		padding-top: 0;
 	}
 	.headerbar h1 {
-		margin-top: 85px;
+		margin-top: 110px;
 	}
 
 	.twocolumns .column {
@@ -1200,7 +1201,6 @@ article.quote h2 {
 	}
 
 	.calltoaction {
-		text-align: center;
 		width: 42.1875%; /* 270px / 640px */
 		float: left;
 		margin: 3.90625% 3.90625% 50px 3.90625%; /* 25px / 640px */

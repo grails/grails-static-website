@@ -124,8 +124,8 @@ fi
 if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then
     if [[ -n $TRAVIS_TAG ]]; then
           echo "Publish Grails Navigation plugin to Bintray"
-        ./gradlew grails-navigation-core:bintrayUpload
-        ./gradlew grails-navigation:bintrayUpload
+        ./gradlew :grails-navigation-core:bintrayUpload
+        ./gradlew :grails-navigation:bintrayUpload
     fi
 
 fi

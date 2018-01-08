@@ -17,10 +17,10 @@ trait GormImplementationHtml implements PageElement {
 
     @CompileDynamic
     @Override
-    String renderAsHtml() {
+    String renderAsHtml(String styleAttr = null) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: "guidegroup") {
+        html.div(class: "guidegroup", style: "${styleAttr ?: ''}") {
             div(class: "guidegroupheader") {
                 img src: "images/${image}", alt: name
                 h2 name

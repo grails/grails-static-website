@@ -112,13 +112,17 @@ class GormHomePage extends Page {
                                 mkp.yield ' and provides a rich set of APIs for accessing relational and non-relational data including implementations for Hibernate (SQL), MongoDB, Neo4j, Cassandra,  an in-memory ConcurrentHashMap for testing and an automatic GraphQL schema generator'
                             }
                         }
-                        mkp.yieldUnescaped gormImplementations().mongodb.renderAsHtml()
+                    }
+                    div(class: "column") {
+                        mkp.yieldUnescaped gormImplementations().hibernate.renderAsHtml()
+                    }
+                    div(class: "odd column") {
+                        mkp.yieldUnescaped gormImplementations().mongodb.renderAsHtml('margin-top: 0px !important;')
                         mkp.yieldUnescaped gormImplementations().graphql.renderAsHtml()
                         mkp.yieldUnescaped gormImplementations().cassandra.renderAsHtml()
                     }
                     div(class: "column") {
-                        mkp.yieldUnescaped gormImplementations().hibernate.renderAsHtml()
-                        mkp.yieldUnescaped gormImplementations().neo4j.renderAsHtml()
+                        mkp.yieldUnescaped gormImplementations().neo4j.renderAsHtml('margin-top: 0px !important;')
                         mkp.yieldUnescaped gormImplementations().rxgorm.renderAsHtml()
 
                     }

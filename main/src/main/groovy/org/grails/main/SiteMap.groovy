@@ -385,7 +385,7 @@ Read the [User Guide](https://grails.org/documentation.html) for the version you
 [OCI](http://objectcomputing.com), sponsor of Grails' development, offers [Grails and GORM courses](https://objectcomputing.com/training/catalog/grails/) developed and delivered by Grails co-founders and the core engineering team.</p>
 '''),
             new Question(slug: 'question_usage', title: 'Where can I ask questions about usage?', answer: '''
-The best place to get community support is [Stack Overflow](http://stackoverflow.com/questions/tagged/grails) or Slack- [Login](http://grails.slack.com) or [Join](https://grails.signup.team/) Grails Community Slack.
+The best place to get community support is [Stack Overflow](http://stackoverflow.com/questions/tagged/grails) or [Slack](https://grails-slack.cfapps.io) Grails Community Slack.
 '''),
             new Question(slug: 'question_socialmedia', title: 'Where can I find Grails on social media?', answer: '''
 You can find Grails on [Twitter](http://twitter.com/grailsframework) and [LinkedIn](https://www.linkedin.com/groups/39757).

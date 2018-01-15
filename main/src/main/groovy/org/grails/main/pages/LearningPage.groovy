@@ -27,7 +27,7 @@ class LearningPage extends Page {
     @Override
     List<String> getJavascriptFiles() {
         List<String> jsFiles = super.getJavascriptFiles()
-        jsFiles << ("${guidesUrl()}/javascripts/oci-training.js" as String)
+        jsFiles << ("${guidesUrl()}//javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js") as String
         jsFiles
     }
 

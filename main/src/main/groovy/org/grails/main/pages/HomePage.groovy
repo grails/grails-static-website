@@ -22,7 +22,8 @@ class HomePage extends Page {
     @Override
     List<String> getJavascriptFiles() {
         List<String> jsFiles = super.getJavascriptFiles()
-        jsFiles << "/javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js" as String
+        String ociTraining = "/javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js".toString()
+        jsFiles << ociTraining
         jsFiles
     }
 

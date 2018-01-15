@@ -27,7 +27,8 @@ class LearningPage extends Page {
     @Override
     List<String> getJavascriptFiles() {
         List<String> jsFiles = super.getJavascriptFiles()
-        jsFiles << ("${guidesUrl()}//javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js") as String
+        String ociTraining = "${grailsUrl()}/javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js".toString()
+        jsFiles << ociTraining
         jsFiles
     }
 

@@ -122,16 +122,6 @@ class SiteMap {
     ]
 
     public final static List<Event> EVENTS = [
-            new Event(image: 'confs/g3summit2017.png',
-                    href: 'http://g3summit.com/',
-                    title: 'G3 Summit 2017',
-                    location: 'Austin, TX, United States',
-                    dates: 'Nov 28 - Dec 1, 2017',
-                    about: '''
-Save $200 with this [G3 Summit discount code](https://objectcomputing.com/news/2017/09/08/weve-got-your-200-discount-g3-summit).
-
-The G3 Summit is an annual event for the Apache Groovy, Grails, and Gradle (G3) community. This is your chance to explore Apache Groovy/Grails/Gradle technologies with the guidance of project leaders, committers, authors, and industry experts.
-'''),
             new Event(image: 'confs/greach.png',
                     href: 'http://greachconf.com',
                     title: 'Greach: The Groovy Spanish Conference',

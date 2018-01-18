@@ -75,6 +75,15 @@ task copyAssets {
             include '*.ico'
         }
         copy {
+            from "${rootProject.projectDir}/plugin/grails-app/assets/images/banners"
+            into "${project.buildDir}/site/images/banners"
+            include '*.gif'
+            include '*.jpg'
+            include '*.png'
+            include '*.svg'
+            include '*.ico'
+        }
+        copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images"
             into "${project.buildDir}/site/images"
             include '*.gif'

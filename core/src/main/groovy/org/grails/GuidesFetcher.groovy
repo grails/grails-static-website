@@ -5,6 +5,9 @@ import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import org.grails.model.Guide
 
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
 @CompileStatic
 class GuidesFetcher {
 
@@ -14,6 +17,7 @@ class GuidesFetcher {
     static List<Guide> fetchGuides() {
         URL url = new URL(GUIDES_JSON)
         def jsonArr = new JsonSlurper().parseText(url.text)
+        DateFormat dateFormat = new SimpleDateFormat('dd MMM yyyy', Locale.US)
         List<Guide> guides = jsonArr.collect {
             Guide guide = new Guide(authors: it.authors as List,
                     category: it.category,
@@ -24,7 +28,7 @@ class GuidesFetcher {
                     tags: it.tags as List
             )
             if ( it.publicationDate ) {
-                guide.publicationDate = Date.parse('dd MMM yyyy', it.publicationDate)
+                guide.publicationDate = dateFormat.parse(it.publicationDate as String)
             }
             guide
         }

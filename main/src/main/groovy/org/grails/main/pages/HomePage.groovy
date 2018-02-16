@@ -129,11 +129,6 @@ class HomePage extends Page {
                 }
             }
 
-            html.article(class: 'training align-center') {
-                a(href: 'https://devnexus.com/speakers/1154', title: "Go to Jeff Brown's speaker page at Devnexus") {
-                    img width: '100%', src: "${getImageAssetPreffix()}banners/couponcodegrails.png", alt: "DevNexus Coupon code Grails"
-                }
-            }
             html.article(class: 'training', style: 'display: none;') {
 
                 div(class: "content") {

@@ -317,7 +317,6 @@ class GuidesPage extends Page implements ReadFileUtils {
                 div(class: 'column') {
                     if ( !(tag || category) ) {
                         mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides, true, 'margin-top: 0;')
-                        mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
                     }
                 }
                 div(class: 'column') {
@@ -331,6 +330,7 @@ class GuidesPage extends Page implements ReadFileUtils {
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().async, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
@@ -340,6 +340,7 @@ class GuidesPage extends Page implements ReadFileUtils {
                 }
                 div(class: 'column') {
                     if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().vue, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().react, guides)
@@ -357,6 +358,7 @@ class GuidesPage extends Page implements ReadFileUtils {
             angular: new Category(name: 'Grails + Angular', image: 'grailsangular.svg'),
             angularjs: new Category(name: 'Grails + AngularJS', image: 'grailsangular.svg'),
             react: new Category(name: 'Grails + React', image: 'react.svg'),
+            vue: new Category(name: 'Grails + Vue.js', image: 'vue.svg'),
             ria: new Category(name: 'Grails + RIA (Rich Internet Application)', image: 'ria.svg'),
             ios: new Category(name: 'Grails + iOS', image: 'ios.svg'),
             android: new Category(name: 'Grails + Android', image: 'grails_android.svg'),

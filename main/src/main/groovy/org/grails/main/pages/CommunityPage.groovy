@@ -12,7 +12,6 @@ import org.grails.model.GuideGroup
 import org.grails.model.GuideGroupItem
 import org.grails.model.MenuItem
 import org.grails.model.PageElement
-import org.grails.model.TextMenuItem
 import org.grails.pages.Page
 
 @CompileStatic
@@ -48,6 +47,12 @@ class CommunityPage extends Page {
         }
         html.div(class: "content") {
             article {
+                h3 class: "columnheader", 'Join Grails Community Slack'
+                p(class: 'align-center') {
+                    a(href: 'https://grails-slack.cfapps.io', title: 'Join the Grails Community Slack') {
+                        img src: "${getImageAssetPreffix()}slack_logo.svg", width: '200px', alt: 'Slack Icon'
+                    }
+                }
                 h3 class: "columnheader", 'Grails Rock Star Wall of Fame'
                 div(class: columnsClass(SiteMap.GRAILS_AWARDS_LIST)) {
                     for ( GrailsAward grailsAward :  SiteMap.GRAILS_AWARDS_LIST ) {

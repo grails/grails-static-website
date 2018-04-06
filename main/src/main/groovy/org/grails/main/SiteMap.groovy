@@ -122,12 +122,12 @@ class SiteMap {
     ]
 
     public final static List<Event> EVENTS = [
-            new Event(image: 'confs/greach.png',
-                    href: 'http://greachconf.com',
-                    title: 'Greach: The Groovy Spanish Conference',
-                    location: 'Madrid, Spain',
-                    dates: 'March 15 - 17, 2018',
-                    about: 'Enhance your knowledge and skills with some of the most recognizable names from the Groovy development scene from all around the world. Experience three days full of Groovy and Grails talks and networking ... plus our famous Friday Beers Party!'),
+//            new Event(image: 'confs/greach.png',
+//                    href: 'http://greachconf.com',
+//                    title: 'Greach: The Groovy Spanish Conference',
+//                    location: 'Madrid, Spain',
+//                    dates: 'March 15 - 17, 2018',
+//                    about: 'Enhance your knowledge and skills with some of the most recognizable names from the Groovy development scene from all around the world. Experience three days full of Groovy and Grails talks and networking ... plus our famous Friday Beers Party!'),
             new Event(image: 'confs/gr8confeu.png',
                     href: 'http://gr8conf.eu/',
                     title: 'GR8Conf EU 2018',

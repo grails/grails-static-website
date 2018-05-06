@@ -128,7 +128,11 @@ class HomePage extends Page {
                     }
                 }
             }
-
+            html.article(class: 'training align-center') {
+                a(href: 'https://objectcomputing.com/products/grails/grails-community-rock-star-award', title: "Nominate your Grails Rockstar") {
+                    img width: '100%', src: "${getImageAssetPreffix()}banners/nominateyourggrailsrockstar.png", alt: "Nominate your Grails Rockstar"
+                }
+            }
             html.article(class: 'training', style: 'display: none;') {
 
                 div(class: "content") {

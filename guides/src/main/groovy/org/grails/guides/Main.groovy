@@ -1,5 +1,7 @@
 package org.grails.guides
 
+import groovy.time.TimeCategory
+import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import org.grails.GuidesFetcher
 import org.grails.WebsiteGenerator
@@ -7,7 +9,6 @@ import org.grails.guides.model.Category
 import org.grails.model.Guide
 import org.grails.guides.model.Tag
 import org.grails.guides.pages.GuidesPage
-import org.grails.pages.HtmlPage
 import org.grails.pages.SiteMapPage
 
 @CompileStatic
@@ -15,6 +16,7 @@ class Main {
 
     static void main(String[] args) {
         List<Guide> guides = GuidesFetcher.fetchGuides()
+
         Set<Tag> tags = TagUtils.populateTags(guides)
         List<GuidesPage> pages = []
         pages << new GuidesPage(guides, tags)

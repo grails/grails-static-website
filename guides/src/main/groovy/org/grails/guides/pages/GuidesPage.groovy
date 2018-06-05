@@ -12,6 +12,8 @@ import org.grails.model.TextMenuItem
 import org.grails.model.Training
 import org.grails.pages.Page
 
+import java.text.SimpleDateFormat
+
 @CompileStatic
 class GuidesPage extends Page implements ReadFileUtils {
 
@@ -257,7 +259,8 @@ class GuidesPage extends Page implements ReadFileUtils {
                     li {
                         b guide.title
                         span {
-                            mkp.yield guide.publicationDate.format('MMM dd, yyyy')
+
+                            mkp.yield new SimpleDateFormat('MMM dd, yyyy').format(guide.publicationDate)
                             mkp.yield ' - '
                             mkp.yield guide.category
                         }

@@ -378,7 +378,8 @@ class SiteMap {
     public final static List<Question> QUESTIONS = [
             new Question(slug: 'question_opensource', title: 'Is Grails an Open Source project?', answer: '''
 Yes, Grails is an Open Source project licensed under the [Apache License v2](http://www.apache.org/licenses/LICENSE-2.0).'''),
-            new Question(slug: 'question_learn', title: 'What is the best way to learn about Grails?', answer: '''
+        new Question(slug: 'eccn', 'title: 'Export Control Classification Number (ECCN) for Micronaut?', answer: 'Micronaut is a standards-based, open source technology, which means it is classified with the general purpose classification of EAR 99.'),
+        new Question(slug: 'question_learn', title: 'What is the best way to learn about Grails?', answer: '''
 Read the [User Guide](https://grails.org/documentation.html) for the version you are planning to use. We recommend you start with the latest stable version of the framework. We have also written a collection of [Guides](http://guides.grails.org), which contain step-by-step tutorials for solving common scenarios.
 '''),
             new Question(slug: 'question_training', title: 'Do you offer Grails training?', answer: '''

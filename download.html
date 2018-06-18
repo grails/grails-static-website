@@ -7,8 +7,8 @@
     <link rel='mask-icon' href='/images/grails-pinned-icon.svg' color='feb672' />
     <meta charset='UTF-8' />
     <title>Download | Grails Framework</title>
-    <link rel='stylesheet' href='stylesheets/618160515.screen.css' />
-    <script src='javascripts/618160515.navigation.js'></script>
+    <link rel='stylesheet' href='stylesheets/618165758.screen.css' />
+    <script src='javascripts/618165758.navigation.js'></script>
   </head>
   <body><header class='mainheader'>
   <div class='content'>
@@ -214,25 +214,30 @@
     </div>
     <div class='column'>
       <div class='transparent_post'>
-        <p>Download the binary distribution and the documentation for Grails here.</p>
         <p>For a quick and effortless start on Mac OSX, Linux, or Cygwin, you can use 
-          <a href='http://sdkman.io'>SDKMAN! (The Software Development Kit Manager)</a> to download and configure any Grails version of your choice. Basic 
-          <a href='#sdkman'>instructions</a> can be found below.<br/>Windows users can use 
-          <a href='https://github.com/flofreud/posh-gvm'>Posh-GVM</a> (POwerSHell Groovy enVironment Manager), a PowerShell clone of the GVM CLI.
+          <a href='http://sdkman.io'>SDKMAN! (The Software Development Kit Manager)</a> to download and configure any Micronaut version of your choice. 
         </p>
       </div>
       <article class='question' style='margin-top: 0;margin-bottom: 50px;'>
-        <h3 class='columnheader'>SDKMAN! (The Software Development Kit Manager)</h3>
-        <p>This tool makes installing Grails on any Bash platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.</p>
+        <h3 class='columnheader'>Installing with SDKMAN!</h3>
+        <p>This tool makes installing Micronaut on any Unix based platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.</p>
         <p>Simply open a new terminal and enter:</p>
-        <div class='code'>$ curl -s get.sdkman.io | bash</div>
+        <div class='code'>
+          <p>$ curl -s https://get.sdkman.io | bash</p>
+        </div>
         <p>Follow the on-screen instructions to complete installation.</p>
         <p>Open a new terminal or type the command:</p>
-        <div class='code'>$ source "$HOME/.sdkman/bin/sdkman-init.sh"</div>
-        <p>Then install the latest stable Grails:</p>
-        <div class='code'>$ sdk install grails</div>
-        <p>After installation is complete and you've made it your default version, test it with:</p>
-        <div class='code'>$ grails -version</div>
+        <div class='code'>
+          <p>$ source "$HOME/.sdkman/bin/sdkman-init.sh"</p>
+        </div>
+        <p>Then install the latest stable Micronaut:</p>
+        <div class='code'>
+          <p>$ sdk install grails</p>
+        </div>
+        <p>If prompted, make this your default version. After installation is complete it can be tested with:</p>
+        <div class='code'>
+          <p>$ grails -version</p>
+        </div>
         <p>That's all there is to it!</p>
       </article>
     </div>

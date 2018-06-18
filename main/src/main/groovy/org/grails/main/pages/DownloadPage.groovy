@@ -70,31 +70,32 @@ class DownloadPage extends Page {
                 }
                 div(class: "column") {
                     div(class: 'transparent_post') {
-                        p 'Download the binary distribution and the documentation for Grails here.'
                         p {
                             mkp.yield 'For a quick and effortless start on Mac OSX, Linux, or Cygwin, you can use '
                             a href: "http://sdkman.io", 'SDKMAN! (The Software Development Kit Manager)'
-                            mkp.yield ' to download and configure any Grails version of your choice. Basic '
-                            a href: "#sdkman", 'instructions'
-                            mkp.yield ' can be found below.'
-                            mkp.yieldUnescaped '<br/>'
-                            mkp.yield 'Windows users can use '
-                            a href: "https://github.com/flofreud/posh-gvm", 'Posh-GVM'
-                            mkp.yield ' (POwerSHell Groovy enVironment Manager), a PowerShell clone of the GVM CLI.'
+                            mkp.yield ' to download and configure any Micronaut version of your choice. '
                         }
                     }
                     article(class: "question", style: 'margin-top: 0;margin-bottom: 50px;') {
-                        h3(class: 'columnheader', 'SDKMAN! (The Software Development Kit Manager)')
-                        p('This tool makes installing Grails on any Bash platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.')
+                        h3(class: 'columnheader', 'Installing with SDKMAN!')
+                        p('This tool makes installing Micronaut on any Unix based platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.')
                         p( 'Simply open a new terminal and enter:')
-                        div(class: 'code', '$ curl -s get.sdkman.io | bash')
+                        div(class: 'code') {
+                            p '$ curl -s https://get.sdkman.io | bash'
+                        }
                         p('Follow the on-screen instructions to complete installation.')
                         p( 'Open a new terminal or type the command:')
-                        div(class: 'code', '$ source "$HOME/.sdkman/bin/sdkman-init.sh"')
-                        p 'Then install the latest stable Grails:'
-                        div(class: 'code', '$ sdk install grails')
-                        p 'After installation is complete and you\'ve made it your default version, test it with:'
-                        div(class: 'code', '$ grails -version')
+                        div(class: 'code') {
+                            p '$ source "$HOME/.sdkman/bin/sdkman-init.sh"'
+                        }
+                        p 'Then install the latest stable Micronaut:'
+                        div(class: 'code') {
+                            p '$ sdk install grails'
+                        }
+                        p 'If prompted, make this your default version. After installation is complete it can be tested with:'
+                        div(class: 'code') {
+                            p '$ grails -version'
+                        }
                         p 'That\'s all there is to it!'
                     }
                 }

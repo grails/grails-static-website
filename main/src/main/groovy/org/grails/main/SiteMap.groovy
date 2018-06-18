@@ -144,6 +144,7 @@ class SiteMap {
     ]
 
     public final static List<String> VERSIONS = [
+            '3.3.6',
             '3.3.5',
             '3.3.4',
             '3.3.3',

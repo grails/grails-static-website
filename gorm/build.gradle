@@ -6,15 +6,21 @@ buildscript {
     }
     dependencies {
         classpath "com.github.jengelman.gradle.plugins:shadow:$shadowJarVersion"
+        classpath "gradle.plugin.org.openrepose:gradle-linkchecker-plugin:$gradleLinkcheckerPluginVersion"
     }
 }
 
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: 'groovy'
 apply plugin: 'application'
+apply plugin: "org.openrepose.gradle.plugins.linkchecker"
 
 repositories {
     jcenter()
+}
+
+ext {
+    siteDir = 'site'
 }
 
 mainClassName = "org.grails.gorm.Main"
@@ -29,7 +35,7 @@ dependencies {
 
 task createSiteFolder {
     doLast {
-        file("${project.buildDir}/site").mkdirs()
+        file("${project.buildDir}/${siteDir}").mkdirs()
     }
 }
 
@@ -37,7 +43,7 @@ task copyAssets {
     doLast {
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images"
-            into "${project.buildDir}/site/images"
+            into "${project.buildDir}/${siteDir}/images"
             include '*.svg'
             include '*.png'
             include '*.svg'
@@ -45,7 +51,7 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images/books"
-            into "${project.buildDir}/site/images/books"
+            into "${project.buildDir}/${siteDir}/images/books"
             include '*.gif'
             include '*.jpg'
             include '*.png'
@@ -54,7 +60,7 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images/confs"
-            into "${project.buildDir}/site/images/confs"
+            into "${project.buildDir}/${siteDir}/images/confs"
             include '*.gif'
             include '*.jpg'
             include '*.png'
@@ -63,17 +69,17 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/stylesheets"
-            into "${project.buildDir}/site/stylesheets"
+            into "${project.buildDir}/${siteDir}/stylesheets"
             include '*.css'
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/javascripts"
-            into "${project.buildDir}/site/javascripts"
+            into "${project.buildDir}/${siteDir}/javascripts"
             include '*.js'
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/fonts"
-            into "${project.buildDir}/site/fonts"
+            into "${project.buildDir}/${siteDir}/fonts"
             include '*.eot'
             include '*.svg'
             include '*.ttf'
@@ -86,3 +92,8 @@ task copyAssets {
 copyAssets.dependsOn = ['createSiteFolder']
 
 processResources.dependsOn = ['copyAssets']
+
+linkchecker {
+    inputDir = new File("${project.buildDir}/${siteDir}")
+}
+runShadow.finalizedBy 'linkchecker'

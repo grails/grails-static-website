@@ -6,19 +6,23 @@ buildscript {
     }
     dependencies {
         classpath "com.github.jengelman.gradle.plugins:shadow:$shadowJarVersion"
+        classpath "gradle.plugin.org.openrepose:gradle-linkchecker-plugin:$gradleLinkcheckerPluginVersion"
     }
 }
 
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: 'groovy'
 apply plugin: 'application'
+apply plugin: "org.openrepose.gradle.plugins.linkchecker"
 
 repositories {
     jcenter()
 }
 
+shadowJar {
+    mainClassName = "org.grails.main.Main"
+}
 mainClassName = "org.grails.main.Main"
-
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:$groovyVersion"
@@ -27,21 +31,25 @@ dependencies {
     compile project(':grails-navigation-core')
 }
 
+ext {
+    siteDir = 'site'
+}
+
 task createSiteFolder {
     doLast {
-        file("${project.buildDir}/site").mkdirs()
-        file("${project.buildDir}/site/profiles").mkdirs()
-        file("${project.buildDir}/site/profiles/web").mkdirs()
-        file("${project.buildDir}/site/profiles/rest-api").mkdirs()
-        file("${project.buildDir}/site/profiles/angularjs").mkdirs()
-        file("${project.buildDir}/site/profiles/angular").mkdirs()
-        file("${project.buildDir}/site/profiles/react").mkdirs()
-        file("${project.buildDir}/site/profiles/vue").mkdirs()
-        file("${project.buildDir}/site/profiles/react-webpack").mkdirs()
-        file("${project.buildDir}/site/profiles/webpack").mkdirs()
-        file("${project.buildDir}/site/profiles/plugin").mkdirs()
-        file("${project.buildDir}/site/profiles/rest-api-plugin").mkdirs()
-        file("${project.buildDir}/site/profiles/web-plugin").mkdirs()
+        file("${project.buildDir}/$siteDir").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/web").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/rest-api").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/angularjs").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/angular").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/react").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/vue").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/react-webpack").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/webpack").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/plugin").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/rest-api-plugin").mkdirs()
+        file("${project.buildDir}/${siteDir}/profiles/web-plugin").mkdirs()
     }
 }
 
@@ -49,7 +57,7 @@ task copyAssets {
     doLast {
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images"
-            into "${project.buildDir}/site/images"
+            into "${project.buildDir}/${siteDir}/images"
             include '*.gif'
             include '*.jpg'
             include '*.svg'
@@ -58,7 +66,7 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images/books"
-            into "${project.buildDir}/site/images/books"
+            into "${project.buildDir}/${siteDir}/images/books"
             include '*.gif'
             include '*.jpg'
             include '*.png'
@@ -67,7 +75,7 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images/confs"
-            into "${project.buildDir}/site/images/confs"
+            into "${project.buildDir}/${siteDir}/images/confs"
             include '*.gif'
             include '*.jpg'
             include '*.png'
@@ -76,7 +84,7 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images/banners"
-            into "${project.buildDir}/site/images/banners"
+            into "${project.buildDir}/${siteDir}/images/banners"
             include '*.gif'
             include '*.jpg'
             include '*.png'
@@ -85,7 +93,7 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images"
-            into "${project.buildDir}/site/images"
+            into "${project.buildDir}/${siteDir}/images"
             include '*.gif'
             include '*.jpg'
             include '*.png'
@@ -94,12 +102,12 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/stylesheets"
-            into "${project.buildDir}/site/stylesheets"
+            into "${project.buildDir}/${siteDir}/stylesheets"
             include '*.css'
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/fonts"
-            into "${project.buildDir}/site/fonts"
+            into "${project.buildDir}/${siteDir}/fonts"
             include '*.eot'
             include '*.svg'
             include '*.ttf'
@@ -118,3 +126,8 @@ task copyAssets {
 copyAssets.dependsOn = ['createSiteFolder']
 
 processResources.dependsOn = ['copyAssets']
+
+linkchecker {
+    inputDir = new File("${project.buildDir}/${siteDir}")
+}
+runShadow.finalizedBy 'linkchecker'

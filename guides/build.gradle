@@ -6,12 +6,18 @@ buildscript {
     }
     dependencies {
         classpath "com.github.jengelman.gradle.plugins:shadow:$shadowJarVersion"
+        classpath "gradle.plugin.org.openrepose:gradle-linkchecker-plugin:$gradleLinkcheckerPluginVersion"
     }
 }
 
 apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: 'groovy'
 apply plugin: 'application'
+apply plugin: "org.openrepose.gradle.plugins.linkchecker"
+
+ext {
+    siteDir = 'site'
+}
 
 repositories {
     jcenter()
@@ -27,9 +33,9 @@ dependencies {
 
 task createSiteFolder {
     doLast {
-        file("${project.buildDir}/site").mkdirs()
-        file("${project.buildDir}/site/tags").mkdirs()
-        file("${project.buildDir}/site/categories").mkdirs()
+        file("${project.buildDir}/${siteDir}").mkdirs()
+        file("${project.buildDir}/${siteDir}/tags").mkdirs()
+        file("${project.buildDir}/${siteDir}/categories").mkdirs()
     }
 }
 
@@ -37,7 +43,7 @@ task copyAssets {
     doLast {
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/images"
-            into "${project.buildDir}/site/images"
+            into "${project.buildDir}/${siteDir}/images"
             include '*.svg'
             include '*.png'
             include '*.svg'
@@ -45,17 +51,17 @@ task copyAssets {
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/stylesheets"
-            into "${project.buildDir}/site/stylesheets"
+            into "${project.buildDir}/${siteDir}/stylesheets"
             include '*.css'
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/javascripts"
-            into "${project.buildDir}/site/javascripts"
+            into "${project.buildDir}/${siteDir}/javascripts"
             include '*.js'
         }
         copy {
             from "${rootProject.projectDir}/plugin/grails-app/assets/fonts"
-            into "${project.buildDir}/site/fonts"
+            into "${project.buildDir}/${siteDir}/fonts"
             include '*.eot'
             include '*.svg'
             include '*.ttf'
@@ -69,3 +75,7 @@ copyAssets.dependsOn = ['createSiteFolder']
 
 processResources.dependsOn = ['copyAssets']
 
+linkchecker {
+    inputDir = new File("${project.buildDir}/${siteDir}")
+}
+runShadow.finalizedBy 'linkchecker'

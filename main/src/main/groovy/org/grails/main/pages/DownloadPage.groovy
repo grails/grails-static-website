@@ -73,12 +73,12 @@ class DownloadPage extends Page {
                         p {
                             mkp.yield 'For a quick and effortless start on Mac OSX, Linux, or Cygwin, you can use '
                             a href: "http://sdkman.io", 'SDKMAN! (The Software Development Kit Manager)'
-                            mkp.yield ' to download and configure any Micronaut version of your choice. '
+                            mkp.yield ' to download and configure any Grails version of your choice. '
                         }
                     }
                     article(class: "question", style: 'margin-top: 0;margin-bottom: 50px;') {
                         h3(class: 'columnheader', 'Installing with SDKMAN!')
-                        p('This tool makes installing Micronaut on any Unix based platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.')
+                        p('This tool makes installing Grails on any Unix based platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.')
                         p( 'Simply open a new terminal and enter:')
                         div(class: 'code') {
                             p '$ curl -s https://get.sdkman.io | bash'
@@ -88,7 +88,7 @@ class DownloadPage extends Page {
                         div(class: 'code') {
                             p '$ source "$HOME/.sdkman/bin/sdkman-init.sh"'
                         }
-                        p 'Then install the latest stable Micronaut:'
+                        p 'Then install the latest stable Grails:'
                         div(class: 'code') {
                             p '$ sdk install grails'
                         }

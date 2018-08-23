@@ -96,9 +96,10 @@ class SiteMap {
     ]
 
     public static List<GrailsAward> GRAILS_AWARDS_LIST = [
+            new GrailsAward(image: 'kenkousen.png', alt: 'Ken Kousen - 2018 Grails Rock Star Award'),
+            new GrailsAward(image: 'eric_helgeson.png', alt: 'Eric Helgeson - 2017 Grails Rock Star Award'),
             new GrailsAward(image: 'graeme.png', alt: 'Graeme Rocher - Grails lifetime contributor Award'),
             new GrailsAward(image: 'jeff_scott_brown.png', alt: 'Jeff Scott Brown - Grails lifetime contributor Award'),
-            new GrailsAward(image: 'eric_helgeson.png', alt: 'Eric Helgeson - 2017 Grails Rock Star Award')
     ]
 
     public final static List<Book> GRAILS_BOOKS = [

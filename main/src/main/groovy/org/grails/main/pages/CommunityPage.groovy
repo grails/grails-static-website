@@ -54,12 +54,8 @@ class CommunityPage extends Page {
                     }
                 }
                 h3 class: "columnheader", 'Grails Rock Star Wall of Fame'
-                div(class: columnsClass(SiteMap.GRAILS_AWARDS_LIST)) {
-                    for ( GrailsAward grailsAward :  SiteMap.GRAILS_AWARDS_LIST ) {
-                        div(class: 'column align-center', style: 'margin-top: 0 !important;') {
-                            img height: 200, src: "${getImageAssetPreffix()}${grailsAward.image}", alt: grailsAward.alt
-                        }
-                    }
+                for ( GrailsAward grailsAward :  SiteMap.GRAILS_AWARDS_LIST ) {
+                        img height: 200, style: 'margin-right: 25px;', src: "${getImageAssetPreffix()}${grailsAward.image}", alt: grailsAward.alt
                 }
             }
             article {

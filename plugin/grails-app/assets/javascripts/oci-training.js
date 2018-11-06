@@ -42,8 +42,13 @@ getJSON('https://oci-training.cfapps.io/training', function(err, data) {
             msg += '<tr><th>Course</th><th>Date(s)</th><th>Instructor(s)</th><th>Hour(s)</th></tr>';
             msg += '</thead>';
             msg += '<tbody>';
+            var hrefs = new Array();
             for ( var i = 0; i < data.length; i++ ) {
-                msg += '<tr><td><a href="'+ data[i].enrollmentLink + '">'+ data[i].course + '</a></td><td>'+ data[i].dates + '</td><td>'+ data[i].instructors + '</td><td>'+ data[i].hours + '</td></tr>';
+                var href = data[i].enrollmentLink;
+                if (hrefs.indexOf(href) == -1) {
+                    msg += '<tr><td><a href="'+ href + '">'+ data[i].course + '</a></td><td>'+ data[i].dates + '</td><td>'+ data[i].instructors + '</td><td>'+ data[i].hours + '</td></tr>';
+                    hrefs.push(href);
+                }
             }
             msg += '</tbody>';
             msg += '</table>';

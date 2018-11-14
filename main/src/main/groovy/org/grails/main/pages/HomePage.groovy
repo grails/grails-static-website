@@ -4,7 +4,9 @@ import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
 import org.grails.main.SiteMap
+import org.grails.main.model.Event
 import org.grails.model.MenuItem
+import org.grails.model.PageElement
 import org.grails.model.TextMenuItem
 import org.grails.pages.Page
 
@@ -128,12 +130,16 @@ class HomePage extends Page {
                     }
                 }
             }
-            html.article(class: 'training align-center') {
-                a(href: 'https://objectcomputing.com/products/grails/grails-community-rock-star-award', title: "Nominate your Grails Rockstar") {
-                    img width: '100%', src: "${getImageAssetPreffix()}banners/nominateyourggrailsrockstar.png", alt: "Nominate your Grails Rockstar"
-                }
-            }
             html.article(class: 'training', style: 'display: none;') {
+
+                List<Event> events = SiteMap.EVENTS
+                events.each {
+                    it.image = "${getImageAssetPreffix()}${it.image}"
+                }
+                div(class: "content", style: 'padding-top: 40px;') {
+                    mkp.yieldUnescaped new TwoColumnsPageElement(events as List<PageElement>).renderAsHtml()
+                }
+
 
                 div(class: "content") {
                     h2 'Grails Training'

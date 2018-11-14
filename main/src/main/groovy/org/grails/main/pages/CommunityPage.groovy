@@ -57,6 +57,8 @@ class CommunityPage extends Page {
                 for ( GrailsAward grailsAward :  SiteMap.GRAILS_AWARDS_LIST ) {
                         img height: 200, style: 'margin-right: 25px;', src: "${getImageAssetPreffix()}${grailsAward.image}", alt: grailsAward.alt
                 }
+
+                mkp.yieldUnescaped '<iframe width="560" height="315" src="https://www.youtube.com/embed/50OI5IENCCg?start=5188" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             }
             article {
                 h3 class: "columnheader", 'Conferences'

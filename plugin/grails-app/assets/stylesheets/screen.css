@@ -1150,16 +1150,28 @@ article.quote h2 {
 		width: 61.8%;
 	}
 
+	.fourcolumns,
 	.threecolumns {
 		clear: both;
 		overflow: auto;
 		margin: 0;
 		padding: 0;
 	}
+	.fourcolumns .column,
 	.threecolumns .column {
-		width: 31%;
 		float: left;
 		overflow: auto;
+	}
+
+	.fourcolumns .column {
+		width: 23%;
+	}
+	.threecolumns .column {
+		width: 31%;
+	}
+	.fourcolumns .column {
+		margin-left: 1%;
+		margin-right: 1%;
 	}
 
 	.threecolumns .column:nth-child(3n+2) {

@@ -7,4 +7,5 @@ class BuildStatus implements BuildStatusHtml {
     String title
     String href
     String badge
+    String version
 }

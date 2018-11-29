@@ -6,6 +6,7 @@ import groovy.transform.ToString
 @ToString(includes = ['title'])
 @CompileStatic
 class Guide {
+    String versionNumber
     List<String> authors
     String category
     String githubSlug

@@ -29,19 +29,24 @@ class BuildStatusPage extends Page {
     }
 
     @CompileDynamic
-    String renderBuildStatusListAsTable(List<BuildStatus> buildStatusList) {
+    String renderBuildStatusListAsTable(List<BuildStatus> buildStatusList,
+                                        boolean useVersionColumn = false) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.table {
             thead {
                 tr {
+                    if (useVersionColumn) {
+                        th 'Version'
+                    }
                     th 'Build name'
                     th 'Status'
                 }
             }
             tbody {
                 for ( BuildStatus buildStatus : buildStatusList ) {
-                    mkp.yieldUnescaped buildStatus.renderAsHtml()
+                    mkp.yieldUnescaped buildStatus.renderAsHtml(useVersionColumn)
+
                 }
             }
         }
@@ -83,11 +88,14 @@ class BuildStatusPage extends Page {
                     div(class: 'column') {
                         h3(class: 'columnheader', 'Grails Guides Build Status')
                         List<BuildStatus> guideBuildStatuses = guides.collect { Guide guide ->
-                            new BuildStatus([title: guide.title,
-                                             href : "https://travis-ci.org/${guide.githubSlug}?branch=master",
-                                             badge: "https://travis-ci.org/${guide.githubSlug}.svg?branch=master"])
+                            new BuildStatus([
+                                    title: guide.title,
+                                    href : "https://travis-ci.org/${guide.githubSlug}?branch=master",
+                                    badge: "https://travis-ci.org/${guide.githubSlug}.svg?branch=master",
+                                    version: guide.versionNumber,
+                            ])
                         }
-                        mkp.yieldUnescaped renderBuildStatusListAsTable(guideBuildStatuses)
+                        mkp.yieldUnescaped renderBuildStatusListAsTable(guideBuildStatuses, true)
                     }
                 }
 

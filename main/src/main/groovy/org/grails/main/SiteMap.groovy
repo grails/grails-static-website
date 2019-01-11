@@ -67,34 +67,6 @@ class SiteMap {
             new LearningPage(),
     ] as List<HtmlPage>
 
-    public final static List<BuildStatus> BUILDS = [
-            new BuildStatus([title: 'Grails 3 Functional Tests Master',
-                             href: "https://travis-ci.org/grails/grails3-functional-tests?branch=master", badge: "https://travis-ci.org/grails/grails3-functional-tests.svg?branch=master"]),
-
-            new BuildStatus([title: 'Grails 3 Functional Tests 3.3.x',
-                             href: "https://travis-ci.org/grails/grails3-functional-tests?branch=3.3.x", badge: "https://travis-ci.org/grails/grails3-functional-tests.svg?branch=3.3.x"]),
-
-            new BuildStatus([title: 'Grails 3 Functional Tests 3.2.x',
-                             href: "https://travis-ci.org/grails/grails3-functional-tests?branch=3.2.x", badge: "https://travis-ci.org/grails/grails3-functional-tests.svg?branch=3.2.x"]),
-
-            new BuildStatus([title: 'Grails Master',
-                             href: "https://travis-ci.org/grails/grails-core?branch=master", badge: "https://travis-ci.org/grails/grails-core.svg?branch=master"]),
-            new BuildStatus([title: 'Grails 3.3.x Branch',
-                             href: 'https://travis-ci.org/grails/grails-core?branch=3.3.x', badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.3.x"]),
-            new BuildStatus([title: 'Grails 3.2.x Branch',
-                             href: 'https://travis-ci.org/grails/grails-core?branch=3.2.x', badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.2.x"]),
-            new BuildStatus([title: 'Grails 3.1.x Branch',
-                             href: 'https://travis-ci.org/grails/grails-core?branch=3.1.x', badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.1.x"]),
-            new BuildStatus([title: 'Grails 3.0.x Branch',
-                             href: "https://travis-ci.org/grails/grails-core?branch=3.0.x", badge: "https://travis-ci.org/grails/grails-core.svg?branch=3.0.x"]),
-            new BuildStatus([title: 'Grails 2.5.x Branch',
-                             href: "https://travis-ci.org/grails/grails-core?branch=2.5.x", badge: "https://travis-ci.org/grails/grails-core.svg?branch=2.5.x"]),
-            new BuildStatus([title: 'Grails 2.4.x Branch',
-                             href: "https://travis-ci.org/grails/grails-core?branch=2.4.x", badge: "https://travis-ci.org/grails/grails-core.svg?branch=2.4.x"]),
-            new BuildStatus([title: 'Grails 2.3.x Branch',
-                             href: "https://travis-ci.org/grails/grails-core?branch=2.3.x", badge: "https://travis-ci.org/grails/grails-core.svg?branch=2.3.x"]),
-    ]
-
     public static List<GrailsAward> GRAILS_AWARDS_LIST = [
             new GrailsAward(image: 'kenkousen.png', alt: 'Ken Kousen - 2018 Grails Rock Star Award'),
             new GrailsAward(image: 'eric_helgeson.png', alt: 'Eric Helgeson - 2017 Grails Rock Star Award'),

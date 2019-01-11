@@ -109,7 +109,6 @@ class BuildStatusPage extends Page {
     String mainContent() {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        List<BuildStatus> buildStatusList = SiteMap.BUILDS
         html.div(class: 'content') {
             article(class: 'post') {
                 p {
@@ -145,9 +144,7 @@ class BuildStatusPage extends Page {
                 mkp.yieldUnescaped repositoriesStatus('grails', ['grails-gsp', 'grails-testing-support', 'grails-data-mapping', 'gorm-hibernate5', 'gorm-mongodb', 'grails-async', 'gorm-graphql', 'gorm-neo4j', 'scaffolding', 'grails-views'], ['master', '3.3.x'])
 
                 mkp.yieldUnescaped repositoriesStatus('grails-fields-plugin', ['grails-fields'], ['master', '3.3.x'])
-
-                mkp.yieldUnescaped renderBuildStatusListAsTable(buildStatusList)
-
+                
                 h3(class: 'columnheader', 'GORM')
                 mkp.yieldUnescaped renderBuildStatusListAsTable([
                         [title: 'GORM Master', branch: 'master', githubSlug: 'grails/grails-data-mapping'],

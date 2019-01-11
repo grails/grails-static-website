@@ -28,13 +28,13 @@ class Navigation {
         ] as List<MenuItem>)
     }
 
-    static Menu parternsMenu() {
+    static Menu parternsMenu(String url) {
         new Menu(items: [
                 new TextMenuItem(intro: 'Grails\' repositories are hosted by', title: 'Artifactory', href: 'http://artifactoryonline.com/'),
                 new TextMenuItem(intro: 'Website hosting provided by', title: 'Pivotal', href: 'http://run.pivotal.io/'),
                 new TextMenuItem(intro: 'YourKit supports Grails with its ', title:'Java Profiler', href: 'https://www.yourkit.com/java/profiler/index.jsp'),
                 new TextMenuItem(intro: 'Grails is Open Source', title:'Apache 2 License', href: 'http://www.apache.org/licenses/LICENSE-2.0.html'),
-                new TextMenuItem(intro: '', title:'Grails Build Status', href: '/buildStatus.html'),
+                Navigation.menuItemWithHref('buildstatus.html', 'Build Status', url),
         ] as List<MenuItem>)
     }
 

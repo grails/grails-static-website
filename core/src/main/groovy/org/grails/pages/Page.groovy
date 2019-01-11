@@ -144,7 +144,7 @@ abstract class Page implements HtmlPage {
     }
 
     Menu parternsMenu() {
-        Navigation.parternsMenu()
+        Navigation.parternsMenu(grailsUrl())
     }
 
     Menu socialMediaMenu() {

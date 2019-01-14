@@ -13,7 +13,7 @@ import org.grails.pages.Page
 @CompileStatic
 class BuildStatusPage extends Page {
 
-    List<String> profileBranches = ['master', '3.3.x', '3.3.3']
+    List<String> profileBranches = ['master', '3.3.x']
     List<String> profiles = [
             'rest-api-plugin',
             'web-plugin',
@@ -24,6 +24,8 @@ class BuildStatusPage extends Page {
             'react',
             'vue',
             'angular',
+            'webpack',
+            'react-webpack',
     ]
 
     String bodyClass = ''

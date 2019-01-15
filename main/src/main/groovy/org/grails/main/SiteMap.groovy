@@ -423,7 +423,9 @@ If you are working with the IntelliJ IDEA development environment, you can impor
 
 To get a local development version of Grails working, first run the install task.
 
-    ./gradlew install
+    ./gradlew assemble
+    
+    ./gradlew publishToMavenLocal
 
 Then install [SDKman](http://sdkman.io), which is the quickest way to set up a development environment.
 

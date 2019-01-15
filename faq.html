@@ -7,8 +7,8 @@
     <link rel='mask-icon' href='/images/grails-pinned-icon.svg' color='feb672' />
     <meta charset='UTF-8' />
     <title>Questions | Grails Framework</title>
-    <link rel='stylesheet' href='stylesheets/114163838.screen.css' />
-    <script src='javascripts/114163838.navigation.js'></script>
+    <link rel='stylesheet' href='stylesheets/115152301.screen.css' />
+    <script src='javascripts/115152301.navigation.js'></script>
   </head>
   <body><header class='mainheader'>
   <div class='content'>
@@ -111,7 +111,9 @@ git config --global user.email &quot;YOUR EMAIL&quot;&lt;/code&gt;&lt;/pre&gt;
 <h3>Working on the code base</h3>
 <p>If you are working with the IntelliJ IDEA development environment, you can import the project using the Intellij Gradle Tooling ( &quot;File / Import Project&quot; and select the &quot;build.gradle&quot; file).</p>
 <p>To get a local development version of Grails working, first run the install task.</p>
-<pre><code>./gradlew install
+<pre><code>./gradlew assemble
+
+./gradlew publishToMavenLocal
 </code></pre>
 <p>Then install <a href="http://sdkman.io">SDKman</a>, which is the quickest way to set up a development environment.</p>
 <p>Once you have SDKman installed, point SDKman to your local development version of Grails.</p>

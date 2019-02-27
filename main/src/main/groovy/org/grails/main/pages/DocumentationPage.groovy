@@ -41,9 +41,9 @@ class DocumentationPage extends Page {
         new GuideGroup(title: "Latest Version(${version.versionText}) Documentation",
         image: "${getImageAssetPreffix()}documentation.svg",
         items: [
-                new GuideGroupItem(href: "${docsUrl()}/latest/guide/single.html", title: 'Single Page - User Guide'),
-                new GuideGroupItem(href: "${docsUrl()}/latest/", title: 'User Guide'),
-                new GuideGroupItem(href: "${docsUrl()}/latest/api/", title: 'API Reference'),
+                new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/guide/single.html", title: 'Single Page - User Guide'),
+                new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/", title: 'User Guide'),
+                new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/api/", title: 'API Reference'),
         ])
     }
 

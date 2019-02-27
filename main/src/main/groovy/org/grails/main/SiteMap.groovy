@@ -286,7 +286,7 @@ The Grails project uses [Github issues](https://github.com/grails/grails-core/is
             new Question(slug: 'question_docs', title: 'How can I contribute to improving the documentation?', answer: """
 Grails documentation comes in several forms:
 
-- the [reference documentation](${Page.docsUrl()}/latest/guide/single.html) contains language specification, user guides, a getting started tutorial, and more.
+- the [reference documentation](${Page.docsUrl()}/${latestVersion().versionText}/guide/single.html) contains language specification, user guides, a getting started tutorial, and more.
 - the [GroovyDoc APIs](api.html) documents the classes of the Grails code base
 - [GitHub](https://github.com/grails/grails-static-website) allows users to contribute to this website.   
 

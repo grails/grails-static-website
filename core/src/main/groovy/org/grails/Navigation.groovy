@@ -5,6 +5,7 @@ import org.grails.model.IconMenuItem
 import org.grails.model.Menu
 import org.grails.model.MenuItem
 import org.grails.model.TextMenuItem
+import org.grails.pages.Page
 
 @CompileStatic
 class Navigation {
@@ -40,11 +41,11 @@ class Navigation {
 
     static Menu socialMediaMenu() {
         new Menu(items: [
-                new IconMenuItem(image: 'slack.svg', href: 'https://grails-slack.cfapps.io', alt: 'Slack Icon'),
-                new IconMenuItem(image: 'youtube.svg', href: 'https://www.youtube.com/watch?v=XnRNfDGkBVg&list=PLI74De5M9T73uH3WilDCePP2qfSDpMaGu', alt: 'Youtube Icon'),
-                new IconMenuItem(image: 'linkedin.svg', href: 'https://www.linkedin.com/groups/39757', alt: 'LinkedIn Icon'),
-                new IconMenuItem(image: 'github.svg', href: 'https://github.com/grails/', alt: 'Github Icon'),
-                new IconMenuItem(image: 'twitter.svg', href: 'https://twitter.com/grailsframework', alt: 'Twitter Icon'),
+                new IconMenuItem(image: "${Page.getImageAssetPreffix()}slack.svg", href: 'https://grails-slack.cfapps.io', alt: 'Slack Icon'),
+                new IconMenuItem(image: "${Page.getImageAssetPreffix()}youtube.svg", href: 'https://www.youtube.com/watch?v=XnRNfDGkBVg&list=PLI74De5M9T73uH3WilDCePP2qfSDpMaGu', alt: 'Youtube Icon'),
+                new IconMenuItem(image: "${Page.getImageAssetPreffix()}linkedin.svg", href: 'https://www.linkedin.com/groups/39757', alt: 'LinkedIn Icon'),
+                new IconMenuItem(image: "${Page.getImageAssetPreffix()}github.svg", href: 'https://github.com/grails/', alt: 'Github Icon'),
+                new IconMenuItem(image: "${Page.getImageAssetPreffix()}twitter.svg", href: 'https://twitter.com/grailsframework', alt: 'Twitter Icon'),
         ] as List<MenuItem>)
     }
 

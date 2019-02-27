@@ -24,9 +24,9 @@ abstract class Page implements HtmlPage {
 
     abstract String getTitle()
 
-    WebsiteEnvironment environment = WebsiteEnvironment.PRODUCTION
+    public static WebsiteEnvironment environment = WebsiteEnvironment.PRODUCTION
 
-    String developmentServer() {
+    static String developmentServer() {
         'http://localhost:8888'
     }
 
@@ -35,7 +35,7 @@ abstract class Page implements HtmlPage {
         this.timestamp = timestamp
     }
 
-    String gormUrl() {
+    static String gormUrl() {
         switch (environment) {
             case WebsiteEnvironment.DEVELOPMENT:
                 return developmentServer()
@@ -46,18 +46,16 @@ abstract class Page implements HtmlPage {
         }
     }
 
-    String guidesUrl() {
+    static String guidesUrl() {
         switch (environment) {
             case WebsiteEnvironment.DEVELOPMENT:
                 return developmentServer()
-            case WebsiteEnvironment.STAGING:
-                return 'http://guides.sergiodelamo.es'
             case WebsiteEnvironment.PRODUCTION:
-                return 'http://guides.grails.org'
+                return 'https://guides.grails.org'
         }
     }
 
-    String grailsUrl() {
+    static String grailsUrl() {
         switch (environment) {
             case WebsiteEnvironment.DEVELOPMENT:
                 return developmentServer()
@@ -66,6 +64,10 @@ abstract class Page implements HtmlPage {
             case WebsiteEnvironment.PRODUCTION:
                 return 'https://grails.org'
         }
+    }
+
+    static String docsUrl() {
+        'https://docs.grails.org'
     }
 
     @CompileDynamic

@@ -24,6 +24,7 @@ import org.grails.model.GrailsVersion
 import org.grails.pages.HtmlPage
 import org.grails.main.pages.QuestionPage
 import org.grails.main.pages.SupportPage
+import org.grails.pages.Page
 import org.yaml.snakeyaml.Yaml
 
 @CompileStatic
@@ -50,7 +51,7 @@ class SiteMap {
             ])
 
     public final static ProfileGroup THIRD_PARTY_PROFILES =  new ProfileGroup(title: 'Third-Party Profiles', image: 'images/profiles.svg',
-            description: 'Use the following documentation to learn how to <a href="http://docs.grails.org/latest/guide/single.html#creatingProfiles">create your own application profiles</a>.',
+            description: "Use the following documentation to learn how to <a href=\"${Page.docsUrl()}/latest/guide/single.html#creatingProfiles\">create your own application profiles</a>.",
             profiles: [
             new Profile(title: 'Vaadin', href: 'https://github.com/macprzepiora/web-vaadin8'),
             new Profile(title: 'Ember', href: 'https://github.com/hgarfer/grails-profile-ember'),
@@ -252,9 +253,9 @@ class SiteMap {
             new Question(slug: 'question_opensource', title: 'Is Grails an Open Source project?', answer: '''
 Yes, Grails is an Open Source project licensed under the [Apache License v2](http://www.apache.org/licenses/LICENSE-2.0).'''),
             new Question(slug: 'eccn', title: 'What is the Export Control Classification Number (ECCN) for Grails?', answer: 'Grails is an open source technology that is not on the Commerce Control List, and is therefore classified with the general purpose classification of EAR 99.'),
-        new Question(slug: 'question_learn', title: 'What is the best way to learn about Grails?', answer: '''
-Read the [User Guide](https://grails.org/documentation.html) for the version you are planning to use. We recommend you start with the latest stable version of the framework. We have also written a collection of [Guides](http://guides.grails.org), which contain step-by-step tutorials for solving common scenarios.
-'''),
+        new Question(slug: 'question_learn', title: 'What is the best way to learn about Grails?', answer: """
+Read the [User Guide](https://grails.org/documentation.html) for the version you are planning to use. We recommend you start with the latest stable version of the framework. We have also written a collection of [Guides](${Page.guidesUrl()}), which contain step-by-step tutorials for solving common scenarios.
+"""),
             new Question(slug: 'question_training', title: 'Do you offer Grails training?', answer: '''
 [OCI](http://objectcomputing.com), sponsor of Grails' development, offers [Grails and GORM courses](https://objectcomputing.com/training/catalog/grails/) developed and delivered by Grails co-founders and the core engineering team.</p>
 '''),
@@ -282,15 +283,15 @@ Use the [mailing list](https://groups.google.com/forum/#!forum/grails-dev-discus
             new Question(slug: 'question_issue', title: 'How do I report an issue with the Grails framework?', answer: '''
 The Grails project uses [Github issues](https://github.com/grails/grails-core/issues) to report and track issues, feature enhancements, and new features. Make sure you're logged-in before proceeding. [Report an issue](https://github.com/grails/grails-core/issues/new).
 '''),
-            new Question(slug: 'question_docs', title: 'How can I contribute to improving the documentation?', answer: '''
+            new Question(slug: 'question_docs', title: 'How can I contribute to improving the documentation?', answer: """
 Grails documentation comes in several forms:
 
-- the [reference documentation](http://docs.grails.org/latest/guide/single.html) contains language specification, user guides, a getting started tutorial, and more.
+- the [reference documentation](${Page.docsUrl()}/latest/guide/single.html) contains language specification, user guides, a getting started tutorial, and more.
 - the [GroovyDoc APIs](api.html) documents the classes of the Grails code base
 - [GitHub](https://github.com/grails/grails-static-website) allows users to contribute to this website.   
 
-Contributing to the Grails.org website is fairly easy. Create a GitHub account or sign in with an existing account, then open [Grails.org](http://docs.grails.org/latest/guide/single.html) and select the "Improve this doc" button at the top of the page you wish to edit. Please don't hesitate to help us make improvements, fix typos or broken language, clarify complicated sections, add new material, and anything else you feel will be helpful to other Grails users.
-'''),
+Contributing to the Grails.org website is fairly easy. Create a GitHub account or sign in with an existing account, then open [Grails.org](${Page.docsUrl()}/latest/guide/single.html) and select the "Improve this doc" button at the top of the page you wish to edit. Please don't hesitate to help us make improvements, fix typos or broken language, clarify complicated sections, add new material, and anything else you feel will be helpful to other Grails users.
+"""),
             new Question(slug: 'question_code', title: 'How can I contribute to Grails code?', answer: '''
 If you are looking to make an initial contribution, just raise your hand on the Grails developer [mailing-list](https://groups.google.com/forum/#!forum/grails-dev-discuss) and tell us about your desire to work on a particular problem.
 

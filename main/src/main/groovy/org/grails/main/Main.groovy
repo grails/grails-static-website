@@ -25,7 +25,7 @@ class Main {
         }
         pages << new RedirectPage('https://grails.github.io/grails-upgrade/latest/guide/index.html', "upgrade.html")
 
-        pages << new IFramePage('http://docs.grails.org/latest/api/', 'api.html', null)
+        pages << new IFramePage("${Page.docsUrl()}/latest/api/", 'api.html', null)
         pages << new IFramePage('https://grails.github.io/grails-data-mapping/latest/api/', 'gormApi.html', null)
 
         String timestamp = WebsiteGenerator.timestamp()

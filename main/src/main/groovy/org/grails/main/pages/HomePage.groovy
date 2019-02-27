@@ -45,7 +45,7 @@ class HomePage extends Page {
                     div(class: "calltoaction") {
                         b 'Read the docs'
                         h2 {
-                            a(href: "http://docs.grails.org/latest/guide/single.html") {
+                            a(href: "${docsUrl()}/latest/guide/single.html") {
                                 mkp.yield 'Documentation'
                                 span class: "version", latestVersion
                             }

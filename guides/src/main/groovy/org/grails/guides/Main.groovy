@@ -9,6 +9,7 @@ import org.grails.guides.model.Category
 import org.grails.model.Guide
 import org.grails.guides.model.Tag
 import org.grails.guides.pages.GuidesPage
+import org.grails.pages.Page
 import org.grails.pages.SiteMapPage
 
 @CompileStatic
@@ -44,7 +45,7 @@ class Main {
         WebsiteGenerator.copyAssetsWithTimestamp(timestamp)
 
         List<String> urls = guides.collect { Guide guide ->
-            "http://guides.grails.org/${guide.name}/guide/index.html" as String
+            "${Page.guidesUrl()}/${guide.name}/guide/index.html" as String
         }
         urls.add('index.html')
         SiteMapPage siteMapPage = new SiteMapPage(urls)

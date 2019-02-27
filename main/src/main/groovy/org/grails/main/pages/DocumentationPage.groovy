@@ -31,8 +31,8 @@ class DocumentationPage extends Page {
         new GuideGroup(title: "Milestone Version (${version.versionText}) Documentation",
                 image: "${getImageAssetPreffix()}documentation.svg",
                 items: [
-                        new GuideGroupItem(href: "http://docs.grails.org/${version.versionText}/guide/index.html", title: 'User Guide'),
-                        new GuideGroupItem(href: "http://docs.grails.org/${version.versionText}/api/", title: 'API Reference'),
+                        new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/guide/index.html", title: 'User Guide'),
+                        new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/api/", title: 'API Reference'),
                 ])
     }
 
@@ -41,9 +41,9 @@ class DocumentationPage extends Page {
         new GuideGroup(title: "Latest Version(${version.versionText}) Documentation",
         image: "${getImageAssetPreffix()}documentation.svg",
         items: [
-                new GuideGroupItem(href: "http://docs.grails.org/latest/guide/single.html", title: 'Single Page - User Guide'),
-                new GuideGroupItem(href: "http://docs.grails.org/latest/", title: 'User Guide'),
-                new GuideGroupItem(href: "http://docs.grails.org/latest/api/", title: 'API Reference'),
+                new GuideGroupItem(href: "${docsUrl()}/latest/guide/single.html", title: 'Single Page - User Guide'),
+                new GuideGroupItem(href: "${docsUrl()}/latest/", title: 'User Guide'),
+                new GuideGroupItem(href: "${docsUrl()}/latest/api/", title: 'API Reference'),
         ])
     }
 
@@ -51,8 +51,8 @@ class DocumentationPage extends Page {
         new GuideGroup(title: 'Snapshot Documentation',
                 image: "${getImageAssetPreffix()}documentation.svg",
                 items: [
-                        new GuideGroupItem(href: "http://docs.grails.org/snapshot/guide/single.html", title: 'Single Page - User Guide'),
-                        new GuideGroupItem(href: "http://docs.grails.org/snapshot/", title: 'User Guide'),
+                        new GuideGroupItem(href: "${docsUrl()}/snapshot/guide/single.html", title: 'Single Page - User Guide'),
+                        new GuideGroupItem(href: "${docsUrl()}/snapshot/", title: 'User Guide'),
                 ])
     }
 

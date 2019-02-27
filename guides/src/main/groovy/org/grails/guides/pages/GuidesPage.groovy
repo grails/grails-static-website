@@ -73,7 +73,7 @@ class GuidesPage extends Page implements ReadFileUtils {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.li {
-            a class: 'guide', href: "http://guides.grails.org/${guide.name}/guide/index.html", guide.title
+            a class: 'guide', href: "${guidesUrl()}/${guide.name}/guide/index.html", guide.title
             guide.tags.each { String tag ->
                 span(style: 'display: none', class: 'tag', tag)
             }
@@ -264,7 +264,7 @@ class GuidesPage extends Page implements ReadFileUtils {
                             mkp.yield ' - '
                             mkp.yield guide.category
                         }
-                        a href: "http://guides.grails.org/${guide.name}/guide/index.html", 'Read More'
+                        a href: "${guidesUrl()}/${guide.name}/guide/index.html", 'Read More'
                     }
                 }
             }

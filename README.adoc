@@ -38,7 +38,7 @@ The output can be found in the `gorm/build/site` directory.
 
 == Generating the GUIDES site
 
-http://guides.grails.org[http://guides.grails.org]
+https://guides.grails.org[https://guides.grails.org]
 
 ----
 ./gradlew :guides:runShadow

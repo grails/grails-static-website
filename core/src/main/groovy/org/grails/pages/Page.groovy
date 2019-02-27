@@ -64,7 +64,7 @@ abstract class Page implements HtmlPage {
             case WebsiteEnvironment.STAGING:
                 return 'http://grails.sergiodelamo.es'
             case WebsiteEnvironment.PRODUCTION:
-                return 'http://grails.org'
+                return 'https://grails.org'
         }
     }
 

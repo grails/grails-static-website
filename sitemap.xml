@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
-    <loc>http://grails.org/index.html</loc>
+    <loc>https://grails.org/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/documentation.html</loc>
+    <loc>https://grails.org/documentation.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/download.html</loc>
+    <loc>https://grails.org/download.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/faq.html</loc>
+    <loc>https://grails.org/faq.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/support.html</loc>
+    <loc>https://grails.org/support.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/community.html</loc>
+    <loc>https://grails.org/community.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/books.html</loc>
+    <loc>https://grails.org/books.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles.html</loc>
+    <loc>https://grails.org/profiles.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/search.html</loc>
+    <loc>https://grails.org/search.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/learning.html</loc>
+    <loc>https://grails.org/learning.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/buildstatus.html</loc>
+    <loc>https://grails.org/buildstatus.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/web/index.html</loc>
+    <loc>https://grails.org/profiles/web/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/rest-api/index.html</loc>
+    <loc>https://grails.org/profiles/rest-api/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/angularjs/index.html</loc>
+    <loc>https://grails.org/profiles/angularjs/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/angular/index.html</loc>
+    <loc>https://grails.org/profiles/angular/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/react/index.html</loc>
+    <loc>https://grails.org/profiles/react/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/react-webpack/index.html</loc>
+    <loc>https://grails.org/profiles/react-webpack/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/webpack/index.html</loc>
+    <loc>https://grails.org/profiles/webpack/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/vue/index.html</loc>
+    <loc>https://grails.org/profiles/vue/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/plugin/index.html</loc>
+    <loc>https://grails.org/profiles/plugin/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/rest-api-plugin/index.html</loc>
+    <loc>https://grails.org/profiles/rest-api-plugin/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/profiles/web-plugin/index.html</loc>
+    <loc>https://grails.org/profiles/web-plugin/index.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/upgrade.html</loc>
+    <loc>https://grails.org/upgrade.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/api.html</loc>
+    <loc>https://grails.org/api.html</loc>
   </url>
   <url>
-    <loc>http://grails.org/gormApi.html</loc>
+    <loc>https://grails.org/gormApi.html</loc>
   </url>
 </urlset>

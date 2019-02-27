@@ -34,6 +34,7 @@ class HomePage extends Page {
     String mainContent() {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
+        final String latestVersion = SiteMap.latestVersion().versionText
         html.div(class: 'homebar') {
             div(class: 'content') {
                 h1 {
@@ -46,7 +47,7 @@ class HomePage extends Page {
                         h2 {
                             a(href: "http://docs.grails.org/latest/guide/single.html") {
                                 mkp.yield 'Documentation'
-                                span class: "version", SiteMap.LATEST_VERSION
+                                span class: "version", latestVersion
                             }
                         }
                         a class: 'allversions', href: "documentation.html", 'browse all versions'
@@ -54,9 +55,9 @@ class HomePage extends Page {
                     div(class: "calltoaction") {
                         b 'Get the latest version'
                         h2 {
-                            a(href: "https://github.com/grails/grails-core/releases/download/v${SiteMap.LATEST_VERSION}/grails-${SiteMap.LATEST_VERSION}.zip") {
+                            a(href: "https://github.com/grails/grails-core/releases/download/v${latestVersion}/grails-${latestVersion}.zip") {
                                 mkp.yield 'Download'
-                                span class: "version", SiteMap.LATEST_VERSION
+                                span class: "version", latestVersion
                             }
                         }
                         a class: 'allversions', href: "download.html", 'browse all versions'

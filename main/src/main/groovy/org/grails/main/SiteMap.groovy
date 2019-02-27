@@ -1,6 +1,7 @@
 package org.grails.main
 
 import groovy.transform.CompileStatic
+import org.grails.SoftwareVersion
 import org.grails.main.model.Book
 import org.grails.main.model.BuildStatus
 import org.grails.main.model.DocumentationGroup
@@ -23,6 +24,7 @@ import org.grails.model.GrailsVersion
 import org.grails.pages.HtmlPage
 import org.grails.main.pages.QuestionPage
 import org.grails.main.pages.SupportPage
+import org.yaml.snakeyaml.Yaml
 
 @CompileStatic
 class SiteMap {
@@ -116,147 +118,41 @@ class SiteMap {
 
     ]
 
-    public final static List<String> VERSIONS = [
-            '3.3.9',
-            '3.3.8',
-            '3.3.7',
-            '3.3.6',
-            '3.3.5',
-            '3.3.4',
-            '3.3.3',
-            '3.3.2',
-            '3.3.1',
-            '3.3.0',
-            '3.3.0.RC1',
-            '3.3.0.M2',
-            '3.3.0.M1',
-            '3.2.9',
-            '3.2.8',
-            '3.2.7',
-            '3.2.6',
-            '3.2.5',
-            '3.2.4',
-            '3.2.3',
-            '3.2.2',
-            '3.2.13',
-            '3.2.12',
-            '3.2.11',
-            '3.2.10',
-            '3.2.1',
-            '3.2.0.RC2',
-            '3.2.0.RC1',
-            '3.2.0.M2',
-            '3.2.0.M1',
-            '3.2.0',
-            '3.1.9',
-            '3.1.8',
-            '3.1.7',
-            '3.1.6',
-            '3.1.5',
-            '3.1.4',
-            '3.1.3',
-            '3.1.2',
-            '3.1.16',
-            '3.1.15',
-            '3.1.14',
-            '3.1.13',
-            '3.1.12',
-            '3.1.11',
-            '3.1.10',
-            '3.1.1',
-            '3.1.0.RC2',
-            '3.1.0.RC1',
-            '3.1.0.M3',
-            '3.1.0.M2',
-            '3.1.0',
-            '3.0.9',
-            '3.0.8',
-            '3.0.7',
-            '3.0.6',
-            '3.0.5',
-            '3.0.4',
-            '3.0.3',
-            '3.0.2',
-            '3.0.17',
-            '3.0.16',
-            '3.0.15',
-            '3.0.14',
-            '3.0.13',
-            '3.0.12',
-            '3.0.11',
-            '3.0.10',
-            '3.0.1',
-            '3.0.0',
-            '2.5.6',
-            '2.5.5',
-            '2.5.4',
-            '2.5.3',
-            '2.5.2',
-            '2.5.1',
-            '2.5.0',
-            '2.4.5',
-            '2.4.4',
-            '2.4.3',
-            '2.4.2',
-            '2.4.1',
-            '2.4.0',
-            '2.3.9',
-            '2.3.8',
-            '2.3.7',
-            '2.3.6',
-            '2.3.5',
-            '2.3.4',
-            '2.3.3',
-            '2.3.2',
-            '2.3.11',
-            '2.3.10',
-            '2.3.1',
-            '2.3.0',
-            '2.2.5',
-            '2.2.4',
-            '2.2.3',
-            '2.2.2',
-            '2.2.1',
-            '2.2.0',
-            '2.1.5',
-            '2.1.4',
-            '2.1.3',
-            '2.1.2',
-            '2.1.1',
-            '2.1.0',
-            '2.0.4',
-            '2.0.3',
-            '2.0.2',
-            '2.0.1',
-            '2.0.0',
-            '1.3.9',
-            '1.3.8',
-            '1.3.7',
-            '1.3.6',
-            '1.3.5',
-            '1.3.4',
-            '1.3.3',
-            '1.3.2',
-            '1.3.1',
-            '1.3.0',
-            '1.2.5',
-            '1.2.4',
-            '1.2.3',
-            '1.2.2',
-            '1.2.1',
-            '1.2.0'
-    ]
-
-    public final static String LATEST_VERSION = VERSIONS[0]
-    public final static List<String> OLDER_VERSIONS = VERSIONS.drop(1)
-    static List<String> olderVersions() {
-        List<GrailsVersion> grailsVersionList = OLDER_VERSIONS.collect { String version ->
-            GrailsVersion.build(version)
-        }
-        Collections.sort(grailsVersionList)
-        grailsVersionList = grailsVersionList.reverse()
-        grailsVersionList.collect { GrailsVersion grailsVersion -> grailsVersion.versionText }
+    static SoftwareVersion latestVersion() {
+        List<SoftwareVersion> versions = stableVersions()
+        versions ? versions.get(0) : null
     }
+    static List<SoftwareVersion> stableVersions() {
+        (versions().findAll { SoftwareVersion softwareVersion ->
+            !softwareVersion.isSnapshot()
+        } as List<SoftwareVersion>).sort { a, b -> b <=> a }
+    }
+
+    static List<String> olderVersions() {
+        stableVersions().reverse().drop(1).collect { it.versionText }
+    }
+
+    static List<SoftwareVersion> milestoneVersions() {
+        versions().findAll() { SoftwareVersion softwareVersion ->
+            softwareVersion.snapshot?.isMilestone()
+        }.sort { a, b -> b <=> a }
+    }
+
+    static List<SoftwareVersion> versions() {
+        Yaml yaml = new Yaml()
+        File f = new File('src/main/resources/releases.yml')
+        assert f.exists()
+        Map model = yaml.load(f.newDataInputStream())
+        model['releases'].collect { Map release ->
+            SoftwareVersion.build(release['version'] as String)
+        }.sort()
+    }
+
+    static SoftwareVersion latestMilestoneVersion() {
+        List<SoftwareVersion> versions = milestoneVersions()
+        versions ? versions.get(0) : null
+    }
+
     public final static List<UserGroup> USER_GROUPS = [
             new UserGroup(region: 'North-America', country: 'United States', title: 'Austin Groovy and Grails User Group (TX)', href: 'http://www.meetup.com/Austin-Groovy-and-Grails-Users/'),
             new UserGroup(region: 'North-America', country: 'United States', title: 'Boston Groovy, Grails, Spring Meetup (B2GS)', href: 'https://www.meetup.com/Grails-Boston/'),

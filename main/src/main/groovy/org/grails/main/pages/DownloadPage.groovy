@@ -3,6 +3,7 @@ package org.grails.main.pages
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
+import org.grails.SoftwareVersion
 import org.grails.main.SiteMap
 import org.grails.model.GuideGroup
 import org.grails.model.GuideGroupItem
@@ -22,7 +23,10 @@ class DownloadPage extends Page {
     }
 
     GuideGroup downloadGuideGroup() {
-        String latestVersion = SiteMap.LATEST_VERSION
+        SoftwareVersion latest = SiteMap.latestVersion()
+        String latestVersion = latest.versionText
+
+
         new GuideGroup(title: "Download Grails ${latestVersion}",
                 image: "${getImageAssetPreffix()}download.svg",
                 description: 'Select a profile and set of features tailored to your needs with our application initializer, Grails Application Forge',
@@ -40,7 +44,7 @@ class DownloadPage extends Page {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: "transparent_post", style: 'margin-top: 0;') {
             h3 class: "columnheader", 'Older Versions'
-            p "You can download previous versions as far back as Grails ${SiteMap.VERSIONS.last()}."
+            p "You can download previous versions as far back as Grails ${SiteMap.stableVersions().last()}."
             div(class: "versionselector") {
                 select(class: "form-control", onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
                     option label: "Select a version", disabled: "disabled", selected: "selected"

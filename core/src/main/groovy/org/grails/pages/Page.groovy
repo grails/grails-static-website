@@ -122,15 +122,15 @@ abstract class Page implements HtmlPage {
     }
 
     List<String> getCssFiles() {
-        ["${guidesUrl()}/stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
+        ["/stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
     }
 
     List<String> getJavascriptFiles() {
-        ["${guidesUrl()}/javascripts/${timestamp ? (timestamp + '.') : ''}navigation.js" as String]
+        ["/javascripts/${timestamp ? (timestamp + '.') : ''}navigation.js" as String]
     }
 
     static String getImageAssetPreffix() {
-        "${guidesUrl()}/images/"
+        "/images/"
     }
 
     boolean showChalicesBackground() {

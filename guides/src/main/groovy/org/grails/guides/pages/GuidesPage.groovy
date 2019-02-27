@@ -101,17 +101,30 @@ class GuidesPage extends Page implements ReadFileUtils {
         'Guides'
     }
 
+    boolean useTimestamp() {
+        false
+    }
+
     @Override
     List<String> getJavascriptFiles() {
         List<String> jsFiles = super.getJavascriptFiles()
-        jsFiles << ("${guidesUrl()}/javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js" as String)
-        jsFiles << ("${guidesUrl()}/javascripts/${timestamp ? (timestamp + '.') : ''}search.js" as String)
+        if (useTimestamp()) {
+            jsFiles << ("${guidesUrl()}/javascripts/${timestamp ? (timestamp + '.') : ''}oci-training.js" as String)
+            jsFiles << ("${guidesUrl()}/javascripts/${timestamp ? (timestamp + '.') : ''}search.js" as String)
+        } else {
+            jsFiles << ("${guidesUrl()}/javascripts/oci-training.js" as String)
+            jsFiles << ("${guidesUrl()}/javascripts/search.js" as String)
+        }
         jsFiles
     }
 
     @Override
     List<String> getCssFiles() {
-        ["${guidesUrl()}/stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
+        if (useTimestamp()) {
+            return ["${guidesUrl()}/stylesheets/${timestamp ? (timestamp + '.') : ''}screen.css" as String]
+        } else {
+            return ["${guidesUrl()}/stylesheets/screen.css" as String]
+        }
     }
 
     @Override

@@ -162,10 +162,14 @@ abstract class Page implements HtmlPage {
     }
 
     @CompileDynamic
-    String renderImage(String image, String alt, String className) {
+    String renderImage(String image, String alt, String className, Integer width = null) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.img class: className, src: "${getImageAssetPreffix()}${image}", alt: alt
+        if (width) {
+            html.img class: className, src: "${getImageAssetPreffix()}${image}", alt: alt, width: "${width}px"
+        } else {
+            html.img class: className, src: "${getImageAssetPreffix()}${image}", alt: alt
+        }
         writer.toString()
     }
 
@@ -178,7 +182,7 @@ abstract class Page implements HtmlPage {
                 div(class: 'ocihometograils') {
                     span 'Sponsored by'
                     a(href: "https://objectcomputing.com/products/grails/") {
-                        mkp.yieldUnescaped renderImage('oci_home_to_grails.svg', 'OCI Home to Grails', '')
+                        mkp.yieldUnescaped renderImage('oci_home_to_grails.svg', 'Object Computing - Home to Grails', '', 300)
                     }
                 }
                 nav(class: 'socialmedianav') {

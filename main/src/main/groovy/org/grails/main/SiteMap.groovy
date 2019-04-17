@@ -3,7 +3,6 @@ package org.grails.main
 import groovy.transform.CompileStatic
 import org.grails.SoftwareVersion
 import org.grails.main.model.Book
-import org.grails.main.model.BuildStatus
 import org.grails.main.model.DocumentationGroup
 import org.grails.main.model.DocumentationLink
 import org.grails.main.model.Event
@@ -20,7 +19,6 @@ import org.grails.main.pages.ProfilesPage
 import org.grails.main.pages.SearchPage
 import org.grails.main.pages.CommunityPage
 import org.grails.model.GrailsAward
-import org.grails.model.GrailsVersion
 import org.grails.pages.HtmlPage
 import org.grails.main.pages.QuestionPage
 import org.grails.main.pages.SupportPage
@@ -133,9 +131,9 @@ class SiteMap {
         stableVersions().reverse().drop(1).collect { it.versionText }
     }
 
-    static List<SoftwareVersion> milestoneVersions() {
+    static List<SoftwareVersion> preReleaseVersions() {
         versions().findAll() { SoftwareVersion softwareVersion ->
-            softwareVersion.snapshot?.isMilestone()
+            softwareVersion.snapshot?.isMilestone() || softwareVersion.snapshot?.isReleaseCandidate()
         }.sort { a, b -> b <=> a }
     }
 
@@ -149,8 +147,8 @@ class SiteMap {
         }.sort()
     }
 
-    static SoftwareVersion latestMilestoneVersion() {
-        List<SoftwareVersion> versions = milestoneVersions()
+    static SoftwareVersion latestPreReleaseVersion() {
+        List<SoftwareVersion> versions = preReleaseVersions()
         versions ? versions.get(0) : null
     }
 

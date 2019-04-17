@@ -8,7 +8,6 @@ import org.grails.main.SiteMap
 import org.grails.model.GuideGroup
 import org.grails.model.GuideGroupItem
 import org.grails.model.MenuItem
-import org.grails.model.PageElement
 import org.grails.model.TextMenuItem
 import org.grails.pages.Page
 
@@ -23,8 +22,8 @@ class DocumentationPage extends Page {
         new TextMenuItem(href: "${grailsUrl()}/documentation.html", title: 'Documentation')
     }
 
-    GuideGroup milestoneDocumentationGuideGroup() {
-        SoftwareVersion version = SiteMap.latestMilestoneVersion()
+    GuideGroup preReleaseDocumentationGuideGroup() {
+        SoftwareVersion version = SiteMap.latestPreReleaseVersion()
         if (!version) {
             return null
         }
@@ -62,7 +61,7 @@ class DocumentationPage extends Page {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
 
-        GuideGroup milestone = milestoneDocumentationGuideGroup()
+        GuideGroup milestone = preReleaseDocumentationGuideGroup()
 
         html.div(class:"content") {
             div(class: "twocolumns") {
@@ -152,7 +151,7 @@ class DocumentationPage extends Page {
     }
 
     private boolean shouldDisplayMilestone() {
-        SoftwareVersion milestone = SiteMap.latestMilestoneVersion()
+        SoftwareVersion milestone = SiteMap.latestPreReleaseVersion()
         SoftwareVersion latest = SiteMap.latestVersion()
         int compare = milestone.compareTo(latest)
         return milestone && compare > 0

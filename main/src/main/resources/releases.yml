@@ -260,3 +260,6 @@ releases:
   -
     version: 4.0.0.M2
     publicationDate: Mar 26, 2019
+  -
+    version: 4.0.0.RC1
+    publicationDate: Apr 17, 2019

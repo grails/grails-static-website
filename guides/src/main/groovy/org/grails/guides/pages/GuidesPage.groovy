@@ -250,7 +250,7 @@ class GuidesPage extends Page implements ReadFileUtils {
         html.div(class: 'sponsoredby') {
             h4 'Sponsored by'
             a(href: 'https://objectcomputing.com/products/grails/') {
-                img src: "${getImageAssetPreffix()}oci_logo.svg", alt: 'Object Computing'
+                img src: "${getImageAssetPreffix()}oci_home_to_grails.svg", alt: 'Object Computing'
             }
         }
         writer.toString()

@@ -32,7 +32,7 @@ class SupportPage extends Page implements  ReadFileUtils {
                             section {
                                 p 'Grails development is sponsored by:'
                                 a(href: "https://objectcomputing.com/products/grails/") {
-                                    img src: "images/oci_logo.svg", width: "90%", alt: "Object Computing"
+                                    img src: "images/oci_home_to_grails.svg", width: "90%", alt: "Object Computing"
                                 }
                             }
                             article {

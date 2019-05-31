@@ -54,7 +54,6 @@ task copyAssets {
             include 'grails_logo.svg'
             include 'linkedin.svg'
             include 'oci_home_to_grails.svg'
-            include 'oci-grails-services.svg'
             include 'ocigrailsteam.png'
             include 'twitter.svg'
             include 'youtube.svg'

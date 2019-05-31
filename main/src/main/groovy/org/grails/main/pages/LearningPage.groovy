@@ -49,6 +49,9 @@ class LearningPage extends Page {
                 li {
                     a(href: Navigation.blogMenuItem().href, 'Grails Team Blog')
                 }
+                li {
+                    a(href: 'https://objectcomputing.com/resources/events/webinars#grails-webinars', 'Grails Webinars')
+                }
             }
         }
         writer.toString()

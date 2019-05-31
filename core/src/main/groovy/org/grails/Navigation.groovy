@@ -50,7 +50,7 @@ class Navigation {
     }
 
     static MenuItem blogMenuItem() {
-        new TextMenuItem(href: 'http://grailsblog.objectcomputing.com', title: 'Blog')
+        new TextMenuItem(href: 'https://objectcomputing.com/news/category/grails-blog', title: 'Blog')
     }
 
     static MenuItem trainingMenuItem() {

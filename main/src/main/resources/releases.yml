@@ -265,3 +265,6 @@ releases:
   -
     version: 4.0.0.RC1
     publicationDate: Apr 17, 2019
+  -
+    version: 4.0.0.RC2
+    publicationDate: Jun 04, 2019

@@ -37,7 +37,7 @@ class DocumentationPage extends Page {
 
     GuideGroup documentationGuideGroup() {
         SoftwareVersion version = SiteMap.latestVersion()
-        new GuideGroup(title: "Latest Version(${version.versionText}) Documentation",
+        new GuideGroup(title: "Latest Version (${version.versionText}) Documentation",
         image: "${getImageAssetPreffix()}documentation.svg",
         items: [
                 new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/guide/single.html", title: 'Single Page - User Guide'),
@@ -87,7 +87,7 @@ class DocumentationPage extends Page {
                         h3(class: "columnheader", style: 'margin-bottom: 10px;') {
                             mkp.yieldUnescaped('Older Versions')
                         }
-                        p 'Browse previous versions\' documentation since Grails 1.2.0'
+                        p "Browse previous versions' documentation since Grails ${olderVersions.last()}"
                         div(class: "versionselector") {
                             h4 'Single Page - User Guide'
                             select(onchange: "window.location.href='http://grails.org/doc/' + this.value + '/guide/single.html'") {

@@ -38,7 +38,7 @@ class SiteMap {
                     new Profile(title: 'React', docsHref: 'https://grails-profiles.github.io/react/latest/guide/index.html'),
                     new Profile(title: 'React-Webpack', docsHref: 'https://grails-profiles.github.io/react-webpack/latest/guide/index.html'),
                     new Profile(title: 'Webpack', docsHref: 'https://grails-profiles.github.io/webpack/latest/guide/index.html'),
-                    new Profile(title: 'Vue', docsHref: 'https://grails-profiles.github.io/vue/latest/guide/index.html'),                
+                    new Profile(title: 'Vue', docsHref: 'https://grails-profiles.github.io/vue/latest/guide/index.html'),
     ])
 
     public final static ProfileGroup PLUGIN_PROFILES = new ProfileGroup(title: 'Plugin Profiles', image: 'images/profiles.svg',
@@ -128,7 +128,7 @@ class SiteMap {
     }
 
     static List<String> olderVersions() {
-        stableVersions().reverse().drop(1).collect { it.versionText }
+        stableVersions().drop(1).reverse().collect { it.versionText }
     }
 
     static List<SoftwareVersion> preReleaseVersions() {

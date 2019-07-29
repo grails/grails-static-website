@@ -329,23 +329,19 @@ class GuidesPage extends Page implements ReadFileUtils {
                     }
                 }
             }
-            div(class: 'twocolumns') {
-                div(class: 'column') {
-                    if ( !(tag || category) ) {
+            if ( !(tag || category) ) {
+                div(class: 'twocolumns') {
+                    div(class: 'column') {
                         mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides, true, 'margin-top: 0;')
                     }
-                }
-                div(class: 'column') {
-                    if ( !(tag || category) ) {
+                    div(class: 'column') {
                         mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
 
                     }
                 }
-            }
-            div(class: 'twocolumns') {
-                div(class: 'column') {
-                    if ( !(tag || category) ) {
+                div(class: 'twocolumns') {
+                    div(class: 'column') {
                         mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().async, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides)
@@ -353,9 +349,7 @@ class GuidesPage extends Page implements ReadFileUtils {
                         mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().ria, guides)
                     }
-                }
-                div(class: 'column') {
-                    if ( !(tag || category) ) {
+                    div(class: 'column') {
                         mkp.yieldUnescaped guideGroupByCategory(categories().vue, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)

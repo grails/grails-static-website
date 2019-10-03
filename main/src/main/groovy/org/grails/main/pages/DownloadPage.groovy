@@ -44,7 +44,7 @@ class DownloadPage extends Page {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: "transparent_post", style: 'margin-top: 0;') {
             h3 class: "columnheader", 'Older Versions'
-            p "You can download previous versions as far back as Grails ${SiteMap.stableVersions().last()}."
+            p "You can download previous versions as far back as Grails ${SiteMap.stableVersions().last().versionText}."
             div(class: "versionselector") {
                 select(class: "form-control", onchange: "window.location.href='https://github.com/grails/grails-core/releases/download/v'+ this.value +'/grails-' + this.value + '.zip'") {
                     option label: "Select a version", disabled: "disabled", selected: "selected"

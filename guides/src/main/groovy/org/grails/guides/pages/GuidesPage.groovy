@@ -92,7 +92,8 @@ class GuidesPage extends Page implements ReadFileUtils {
                         if (query == null || titlesMatchesQuery(multiGuide.title, query) || tagsMatchQuery(tagList as List<String>, query)) {
 
                             div(class: 'align-left') {
-                                a(class: 'grailsVersion', href: "https://guides.grails.org/${grailsVersion == GrailsMayorVersion.GRAILS_3 ? 'grails3' : ''}/${multiGuide.githubSlug.replaceAll('grails-guides/', '')}/guide/index.html") {
+                                String href = "${guidesUrl()}${grailsVersion == GrailsMayorVersion.GRAILS_3 ? '/grails3' : ''}/${multiGuide.githubSlug.replaceAll('grails-guides/', '')}/guide/index.html"
+                                a(class: 'grailsVersion', href: href) {
                                     mkp.yield(grailsVersion.toString().replaceAll("_", " "))
                                 }
                                 tagList.each { String tag ->

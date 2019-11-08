@@ -89,7 +89,7 @@ class Navigation {
 
 
     static TextMenuItem pluginsMenuItem() {
-        new TextMenuItem(href: 'http://plugins.grails.org', title: 'Plugins')
+        new TextMenuItem(href: 'https://plugins.grails.org', title: 'Plugins')
     }
 
     static TextMenuItem gormMenuItem(String gormUrl) {

@@ -4,7 +4,10 @@ import groovy.json.JsonSlurper
 import groovy.time.TimeCategory
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
+import org.grails.model.GrailsMayorVersion
+import org.grails.model.GrailsVersionedGuide
 import org.grails.model.Guide
+import org.grails.model.SingleGuide
 
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -34,24 +37,74 @@ class GuidesFetcher {
         def jsonArr = new JsonSlurper().parseText(url.text)
         DateFormat dateFormat = new SimpleDateFormat('dd MMM yyyy',
                 Locale.US)
-        List<Guide> guides = jsonArr.collect {
 
-            String grailsVersion = versionNumber(it.githubSlug)
-
-            Guide guide = new Guide(
-                    versionNumber: grailsVersion,
-                    authors: it.authors as List,
-                    category: it.category,
-                    githubSlug: it.githubSlug,
-                    name: it.name,
-                    title: it.title,
-                    subtitle: it.subtitle,
-                    tags: it.tags as List
-            )
-            if ( it.publicationDate ) {
-                guide.publicationDate = dateFormat.parse(it.publicationDate as String)
+        Map<String, Set<String>> githubSlugsAndBranches = [:]
+        jsonArr.each { it ->
+            if (githubSlugsAndBranches.containsKey(it.githubSlug)) {
+                Set<String> arr = githubSlugsAndBranches[it.githubSlug]
+                arr << it.githubBranch ?: 'master'
+                githubSlugsAndBranches[it.githubSlug] = arr
+            } else {
+                githubSlugsAndBranches[it.githubSlug] = [it.githubBranch ?: 'master'] as HashSet<String>
             }
-            guide
+        }
+        List<Guide> guides = []
+        for (String githubSlug : githubSlugsAndBranches.keySet()) {
+            if (githubSlugsAndBranches[githubSlug].size() == 1) {
+                def guideArr = jsonArr.find {
+                    it.githubSlug == githubSlug &&
+                            (!it.githubBranch || it.githubBranch == githubSlugsAndBranches[githubSlug])
+                }
+                if (guideArr) {
+                    Guide guide = new SingleGuide(
+                            versionNumber: guideArr.grailsVersion,
+                            authors: guideArr.authors as List,
+                            category: guideArr.category,
+                            githubSlug: guideArr.githubSlug,
+                            githubBranch: guideArr.githubBranch,
+                            name: guideArr.name,
+                            title: guideArr.title,
+                            subtitle: guideArr.subtitle,
+                            tags: guideArr.tags as List
+                    )
+                    if (guideArr.publicationDate) {
+                        guide.publicationDate = dateFormat.parse(guideArr.publicationDate as String)
+                    }
+                    guides << guide
+                }
+            } else if (githubSlugsAndBranches[githubSlug].size() > 1) {
+                GrailsVersionedGuide guide
+                for (String githubBranch : githubSlugsAndBranches[githubSlug]) {
+                    def guideArr = jsonArr.find {
+                        it.githubSlug == githubSlug &&
+                                it.githubBranch == githubBranch
+                    }
+                    if (guideArr) {
+                        if (!guide) {
+                            guide = new GrailsVersionedGuide()
+                        }
+                        guide.versionNumber = guideArr.grailsVersion
+                        guide.authors = guideArr.authors as List
+                        guide.category = guideArr.category
+                        guide.githubSlug = guideArr.githubSlug
+                        guide.githubBranch = guideArr.githubBranch
+                        guide.name = guideArr.name
+                        guide.title = guideArr.title
+                        guide.subtitle = guideArr.subtitle
+                        if (githubBranch == 'grails3') {
+                            guide.grailsMayorVersionTags[GrailsMayorVersion.GRAILS_3] = guideArr.tags
+                        } else if (githubBranch == 'master') {
+                            guide.grailsMayorVersionTags[GrailsMayorVersion.GRAILS_4] = guideArr.tags
+                        }
+                        if (guideArr.publicationDate) {
+                            guide.publicationDate = dateFormat.parse(guideArr.publicationDate as String)
+                        }
+                    }
+                }
+                if (guide) {
+                    guides << guide
+                }
+            }
         }
         if(skipFuture) {
             guides = guides.findAll { it.publicationDate.before(tomorrow()) }

@@ -655,15 +655,30 @@ article.quote,
 	padding-top: 0;
 	border: 0;
 }
+
+
 .guidegroup li a {
 	display: block;
 	text-decoration: underline;
 	letter-spacing: 1px;
+}
+.guidegroup li span.title {
+	display: block;
+	border: 1px solid #ffffff;
+}
+.guidegroup li span.title,
+.guidegroup li a.guide {
 	background-image: url(../images/caret.png);
 	background-repeat: no-repeat;
 	background-position: right center;
+	padding-right: 20px;
+}
+.guidegroup li a {
 	font-family: 'Roboto-Light', "Open Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #7c7c7c;
+}
+.guidegroup li a.grailsVersion {
+	float: left;
 	padding-right: 20px;
 }
 

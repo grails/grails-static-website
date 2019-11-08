@@ -6,8 +6,11 @@ import groovy.xml.MarkupBuilder
 import org.grails.Navigation
 import org.grails.ReadFileUtils
 import org.grails.guides.model.Category
+import org.grails.model.GrailsMayorVersion
+import org.grails.model.GrailsVersionedGuide
 import org.grails.model.Guide
 import org.grails.guides.model.Tag
+import org.grails.model.SingleGuide
 import org.grails.model.TextMenuItem
 import org.grails.model.Training
 import org.grails.pages.Page
@@ -69,18 +72,47 @@ class GuidesPage extends Page implements ReadFileUtils {
     }
 
     @CompileDynamic
-    String renderGuide(Guide guide) {
+    String renderGuide(Guide guide, String query = null) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.li {
-            a class: 'guide', href: "${guidesUrl()}/${guide.name}/guide/index.html", guide.title
-            guide.tags.each { String tag ->
-                span(style: 'display: none', class: 'tag', tag)
+            if ( guide instanceof SingleGuide) {
+                a class: 'guide', href: "${guidesUrl()}/${guide.name}/guide/index.html", guide.title
+                guide.tags.each { String tag ->
+                    span(style: 'display: none', class: 'tag', tag)
+                }
+            } else if (guide instanceof GrailsVersionedGuide) {
+                GrailsVersionedGuide multiGuide = ((GrailsVersionedGuide) guide)
+                div(class: 'multiguide') {
+                    span(class: 'title', guide.title)
+                    for (GrailsMayorVersion grailsVersion :  multiGuide.grailsMayorVersionTags.keySet())  {
+                        Set<String> tagList = multiGuide.grailsMayorVersionTags[grailsVersion] as Set<String>
+                        tagList << grailsVersion.toString().toLowerCase()
+
+                        if (query == null || titlesMatchesQuery(multiGuide.title, query) || tagsMatchQuery(tagList as List<String>, query)) {
+
+                            div(class: 'align-left') {
+                                a(class: 'grailsVersion', href: "https://guides.grails.org/${grailsVersion == GrailsMayorVersion.GRAILS_3 ? 'grails3' : ''}/${multiGuide.githubSlug.replaceAll('grails-guides/', '')}/guide/index.html") {
+                                    mkp.yield(grailsVersion.toString().replaceAll("_", " "))
+                                }
+                                tagList.each { String tag ->
+                                    span(style: 'display: none', class: 'tag', tag)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         writer.toString()
     }
 
+    boolean titlesMatchesQuery(String title, String query) {
+        title.indexOf(query) != -1
+    }
+    boolean tagsMatchQuery(List<String> tags, String query) {
+        tags.any { it.indexOf(query) != -1 }
+    }
 
     @CompileDynamic
     @Override

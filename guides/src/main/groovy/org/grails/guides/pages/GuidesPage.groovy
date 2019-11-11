@@ -77,20 +77,18 @@ class GuidesPage extends Page implements ReadFileUtils {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.li {
             if ( guide instanceof SingleGuide) {
-                a class: 'guide', href: "${guidesUrl()}/${guide.name}/guide/index.html", guide.title
+
+                a class: (guide.tags.contains('quickcast') ? 'quickcast guide' : 'guide'), href: "${guidesUrl()}/${guide.name}/guide/index.html", guide.title
                 guide.tags.each { String tag ->
                     span(style: 'display: none', class: 'tag', tag)
                 }
             } else if (guide instanceof GrailsVersionedGuide) {
                 GrailsVersionedGuide multiGuide = ((GrailsVersionedGuide) guide)
-                div(class: 'multiguide') {
+                div(class: (guide.tags.contains('quickcast') ? 'quickcast multiguide' : 'multiguide')) {
                     span(class: 'title', guide.title)
                     for (GrailsMayorVersion grailsVersion :  multiGuide.grailsMayorVersionTags.keySet())  {
                         Set<String> tagList = multiGuide.grailsMayorVersionTags[grailsVersion] as Set<String>
-                        tagList << grailsVersion.toString().toLowerCase()
-
                         if (query == null || titlesMatchesQuery(multiGuide.title, query) || tagsMatchQuery(tagList as List<String>, query)) {
-
                             div(class: 'align-left') {
                                 String href = "${guidesUrl()}${grailsVersion == GrailsMayorVersion.GRAILS_3 ? '/grails3' : ''}/${multiGuide.githubSlug.replaceAll('grails-guides/', '')}/guide/index.html"
                                 a(class: 'grailsVersion', href: href) {

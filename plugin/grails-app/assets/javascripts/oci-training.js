@@ -28,7 +28,7 @@ getJSON('https://oci-training.cfapps.io/training', function(err, data) {
 
     } else {
         if ( data.length == 0 ) {
-            msg = '<p><b>Currenlty, we don\'t have any training offerings available</b></p>.';
+            msg = '<p><b>Currently, we don\'t have any training offerings available</b></p>.';
 
         } else {
             msg += '<table>';

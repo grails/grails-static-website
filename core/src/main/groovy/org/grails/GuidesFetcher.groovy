@@ -53,7 +53,7 @@ class GuidesFetcher {
             if (githubSlugsAndBranches[githubSlug].size() == 1) {
                 def guideArr = jsonArr.find {
                     it.githubSlug == githubSlug &&
-                            (!it.githubBranch || it.githubBranch == githubSlugsAndBranches[githubSlug])
+                            (!it.githubBranch || githubSlugsAndBranches[githubSlug].any { branch -> branch == it.githubBranch})
                 }
                 if (guideArr) {
                     Guide guide = new SingleGuide(

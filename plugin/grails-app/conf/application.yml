@@ -3,9 +3,6 @@ grails:
     profile: web-plugin
     codegen:
         defaultPackage: org.grails.plugins.grails.navigation
-    spring:
-        transactionManagement:
-            proxies: false
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events

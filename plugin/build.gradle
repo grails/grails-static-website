@@ -39,7 +39,7 @@ bootRun {
     addResources = true
 }
 // enable if you wish to package this plugin as a standalone application
-bootRepackage.enabled = false
+bootJar.enabled = false
 grailsPublish {
     user = System.getenv("BINTRAY_USER") ?: project.hasProperty("bintrayUser") ? project.bintrayUser : ''
     key = System.getenv("BINTRAY_KEY") ?: project.hasProperty("bintrayKey") ? project.bintrayKey : ''

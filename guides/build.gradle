@@ -8,7 +8,6 @@ buildscript {
         classpath "com.github.jengelman.gradle.plugins:shadow:$shadowJarVersion"
         classpath "gradle.plugin.org.openrepose:gradle-linkchecker-plugin:$gradleLinkcheckerPluginVersion"
         classpath "gradle.plugin.org.aim42:htmlSanityCheck:$htmlSanityCheckVersion"
-
     }
 }
 

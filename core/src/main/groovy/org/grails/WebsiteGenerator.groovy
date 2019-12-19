@@ -3,6 +3,8 @@ package org.grails
 import groovy.transform.CompileStatic
 import org.grails.pages.HtmlPage
 
+import java.text.SimpleDateFormat
+
 @CompileStatic
 class WebsiteGenerator {
 
@@ -24,7 +26,9 @@ class WebsiteGenerator {
     }
 
     static String timestamp() {
-        new Date().format("MddHHmmss", TimeZone.getTimeZone('UTC'))
+        SimpleDateFormat f = new SimpleDateFormat("MddHHmmss");
+        f.setTimeZone(TimeZone.getTimeZone("UTC"));
+        f.format(new Date())
     }
 
     static void copyAssetsWithTimestamp(String timestamp) {

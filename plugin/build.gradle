@@ -41,6 +41,8 @@ bootRun {
             '-XX:TieredStopAtLevel=1',
             '-Xmx1024m')
     sourceResources sourceSets.main
+    String springProfilesActive = 'spring.profiles.active'
+    systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
 // enable if you wish to package this plugin as a standalone application
 bootJar.enabled = false

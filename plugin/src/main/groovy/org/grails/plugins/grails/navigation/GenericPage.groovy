@@ -9,7 +9,7 @@ class GenericPage extends AssetPipelinePage {
     String mainContent() { '' }
     String slug = ''
     String bodyClass = ''
-    String title = 'Grails 3'
+    String title = 'Grails'
 
     boolean active = true
 

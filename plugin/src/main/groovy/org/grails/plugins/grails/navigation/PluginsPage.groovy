@@ -9,7 +9,7 @@ class PluginsPage extends AssetPipelinePage  {
     String mainContent() { '' }
     String slug = ''
     String bodyClass = ''
-    String title = 'Grails 3 Plugins'
+    String title = 'Grails 3/4 Plugins'
 
     boolean active = true
 

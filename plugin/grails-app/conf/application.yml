@@ -14,18 +14,27 @@ info:
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
 spring:
+    jmx:
+        unique-names: true
     main:
         banner-mode: "off"
     groovy:
         template:
             check-template-location: false
+    devtools:
+        restart:
+            additional-exclude:
+                - '*.gsp'
+                - '**/*.gsp'
+                - '*.gson'
+                - '**/*.gson'
+                - 'logback.groovy'
+                - '*.properties'
 
 # Spring Actuator Endpoints are Disabled by Default
-endpoints:
-    enabled: false
-    jmx:
-        enabled: true
-
+management:
+    endpoints:
+        enabled-by-default: false
 ---
 grails:
     mime:
@@ -78,6 +87,7 @@ grails:
                 scriptlets: html
                 taglib: none
                 staticparts: none
-endpoints:
-    jmx:
-        unique-names: true
+management:
+    endpoints:
+        jmx:
+            unique-names: true

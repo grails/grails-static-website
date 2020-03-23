@@ -350,7 +350,8 @@ The Grails project is generously sponsored by several companies:
 - [OCI](http://objectcomputing.com/products/grails/) maintains the Grails framework and employs key members of the Grails team.
 - [Pivotal](http://pivotal.io/) provides website hosting for Grails.org.
 - [JFrog](http://www.jfrog.com/) provides the infrastructure for deploying and hosting our snapshots and releases, thanks to the [Bintray](https://bintray.com/) social platform for distribution and the OSS [Artifactory](http://www.jfrog.com/home/v_artifactory_opensource_overview) repository.
-- YourKit supports open source projects with its full-featured Java Profiler. YourKit, LLC is the creator of [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp), innovative and intelligent tools for profiling Java and .NET applications.                                     
+- JetBrains supports open source projects with [IntelliJ IDEA](https://www.jetbrains.com/idea/), its full-featured Capable and Ergonomic IDE for JVM.
+- YourKit supports open source projects with its full-featured Java Profiler. YourKit, LLC is the creator of [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp), innovative and intelligent tools for profiling Java and .NET applications.
 '''),
     ]
 

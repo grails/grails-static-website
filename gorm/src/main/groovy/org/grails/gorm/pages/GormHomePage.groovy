@@ -99,7 +99,7 @@ class GormHomePage extends Page {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'homebar') {
             div(class: 'content') {
-                h1 'GORM 6 - A powerful Groovy-based data access toolkit for the JVM'
+                h1 'GORM 7 - A powerful Groovy-based data access toolkit for the JVM'
             }
             div(class: 'content') {
                 div(class: "twocolumns") {

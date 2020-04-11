@@ -7,7 +7,6 @@ buildscript {
     dependencies {
         classpath "com.github.jengelman.gradle.plugins:shadow:$shadowJarVersion"
         classpath "gradle.plugin.org.openrepose:gradle-linkchecker-plugin:$gradleLinkcheckerPluginVersion"
-        classpath "gradle.plugin.org.aim42:htmlSanityCheck:$htmlSanityCheckVersion"
     }
 }
 
@@ -15,7 +14,6 @@ apply plugin: "com.github.johnrengelman.shadow"
 apply plugin: 'groovy'
 apply plugin: 'application'
 apply plugin: "org.openrepose.gradle.plugins.linkchecker"
-apply plugin: 'org.aim42.htmlSanityCheck'
 
 repositories {
     jcenter()
@@ -99,9 +97,3 @@ linkchecker {
     inputDir = new File("${project.buildDir}/${siteDir}")
 }
 runShadow.finalizedBy 'linkchecker'
-
-
-htmlSanityCheck {
-    sourceDir = new File("${project.buildDir}/${siteDir}")
-}
-runShadow.finalizedBy(htmlSanityCheck)

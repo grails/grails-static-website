@@ -60,7 +60,7 @@ class SupportPage extends Page implements  ReadFileUtils {
                                     a href: 'mailto:info@objectcomputing.com', 'Contact OCI'
                                     mkp.yield ' to learn more.'
                                 }
-                                p '12140 Woodcrest Executive Drive, Suite 250 Saint Louis, MO 63141, USA'
+                                p '12140 Woodcrest Executive Drive, Suite 300 Saint Louis, MO 63141, USA'
                                 p 'Tel: 01*314*579*0066'
                                 p 'Email: info@objectcomputing.com'
                           

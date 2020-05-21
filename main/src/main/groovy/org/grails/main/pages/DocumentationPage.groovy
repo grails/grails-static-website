@@ -30,7 +30,8 @@ class DocumentationPage extends Page {
         new GuideGroup(title: "Milestone Version (${version.versionText}) Documentation",
                 image: "${getImageAssetPreffix()}documentation.svg",
                 items: [
-                        new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/guide/index.html", title: 'User Guide'),
+                        new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/guide/single.html", title: 'Single Page - User Guide'),
+                        new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/", title: 'User Guide'),
                         new GuideGroupItem(href: "${docsUrl()}/${version.versionText}/api/", title: 'API Reference'),
                 ])
     }

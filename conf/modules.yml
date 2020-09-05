@@ -1,0 +1,112 @@
+modules:
+  grailsprofiles:
+    title: Grails Profiles
+    url: '[%url]/profiles.html'
+    categoryImage: '[%url]/images/profiles.svg'
+    category: Grails Profiles
+    categoryDescription: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.'
+  upgrade:
+    title: Upgrade Documentation
+    url: https://grails.github.io/grails-upgrade/latest/guide/index.html
+    categoryImage: '[%url]/images/upgrade.svg'
+    category: Upgrade
+    categoryDescription: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.'
+  async:
+    title: Async Grails
+    url: https://async.grails.org/latest/guide/index.html
+    category: Async
+    categoryImage: '[%url]/images/async.svg'
+  testing:
+    title: Testing Framework
+    url: https://testing.grails.org/latest/guide/index.html
+    categoryImage: '[%url]/images/testing.svg'
+    category: Testing
+  gormhibernate:
+    categoryUrl: http://gorm.grails.org
+    categoryImage: '[%url]/images/gorm.svg'
+    category: GORM - Data Access Toolkit
+    title: GORM Hibernate
+    url: http://gorm.grails.org/latest/hibernate/manual/index.html
+  gormmongodb:
+    categoryUrl: http://gorm.grails.org
+    categoryImage: '[%url]/images/gorm.svg'
+    category: GORM - Data Access Toolkit
+    title: GORM MongoDb
+    url: http://gorm.grails.org/latest/mongodb/manual/index.html
+  gormneo4j:
+    categoryUrl: http://gorm.grails.org
+    categoryImage: '[%url]/images/gorm.svg'
+    category: GORM - Data Access Toolkit
+    title: GORM Neo4j
+    url: http://gorm.grails.org/latest/neo4j/manual/index.html
+  gormgraphql:
+    categoryUrl: http://gorm.grails.org
+    categoryImage: '[%url]/images/gorm.svg'
+    category: GORM - Data Access Toolkit
+    title: Graphql
+    url: https://grails.github.io/gorm-graphql/snapshot/guide/index.html
+  gsp:
+    categoryImage: '[%url]/images/views.svg'
+    category: Views
+    title: GSP
+    url: http://gsp.grails.org
+  jsonviews:
+    categoryImage: '[%url]/images/views.svg'
+    category: Views
+    title: JSON Views
+    url: http://views.grails.org/latest/
+  markupviews:
+    categoryImage: '[%url]/images/views.svg'
+    category: Views
+    title: Markup Views
+    url: http://views.grails.org/latest/#_markup_views
+  springsecuritycore:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security Core
+    url: https://grails-plugins.github.io/grails-spring-security-core/
+  springsecurityrest:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security REST
+    url: https://github.com/alvarosanchez/grails-spring-security-rest
+  springsecurityappinfo:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security - AppInfo
+    url: https://grails-plugins.github.io/grails-spring-security-appinfo/
+  springsecurityui:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security - UI
+    url: https://github.com/grails-plugins/grails-spring-security-ui
+  springsecurityacl:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security - ACL
+    url: https://github.com/grails-plugins/grails-spring-security-acl
+  springsecurityldap:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security - LDAP
+    url: https://grails-plugins.github.io/grails-spring-security-ldap/
+  springsecuritycas:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security - CAS
+    url: https://grails-plugins.github.io/grails-spring-security-cas/
+  springsecuritykerberos:
+    categoryImage: '[%url]/images/security.svg'
+    category: Security
+    title: Spring Security - Kerberos
+    url: https://grails-plugins.github.io/grails-spring-security-kerberos/
+  databasemigrationplugin:
+    categoryImage: '[%url]/images/relationaldb.svg'
+    category: Database
+    title: Database Migration Plugin
+    url: http://grails-plugins.github.io/grails-database-migration/3.0.x/index.html
+  buildstatus:
+    categoryImage: '[%url]/images/buildstatus.svg'
+    category: Build Status
+    title: Build Status
+    url: '[%url]/buildstatus.html'

@@ -1,4 +1,4 @@
 DATE=`date +'%b %d, %Y'`
-echo "  -" >> main/src/main/resources/releases.yml
-echo "    version: $1" >> main/src/main/resources/releases.yml
-echo "    publicationDate: $DATE" >> main/src/main/resources/releases.yml
+echo "    -" >> conf/releases.yml
+echo "      version: $1" >> conf/releases.yml
+echo "      publicationDate: $DATE" >> conf/releases.yml

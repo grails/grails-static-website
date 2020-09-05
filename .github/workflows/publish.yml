@@ -1,0 +1,40 @@
+name: Publish
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '* 9 * * *'
+jobs:
+  build:
+    if: github.repository == 'grails/grails-static-website'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: ['8']
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java }}
+      - name: Publish Main Site
+        run: ./publish.sh
+        env:
+          GITHUB_SLUG: grails/grails-static-website
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          GRADLE_TASK: build
+      - name: Publish Guides Site
+        run: ./publish.sh
+        env:
+          GITHUB_SLUG: grails/grails-guides
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GRADLE_TASK: buildGuide

@@ -1,0 +1,75 @@
+---
+title: Download | Grails Framework
+---
+<div class='headerbar chalicesbg'>
+    <div class='content'>
+        <h1>Download</h1>
+    </div>
+</div>
+<div class='content'>
+    <div class='twocolumns'>
+        <div class='odd column'><div class='guidegroup' style='margin-bottom: 0;'>
+            <div class='guidegroupheader'>
+                <img src='[%url]/images/download.svg' alt='Download Grails [%latest]' />
+                <h2>Download Grails [%latest]</h2>
+            </div>
+            <ul>
+                <li class='legend'>Select a profile and set of features tailored to your needs with our application initializer, Grails Application Forge</li>
+                <li>
+                    <a href='http://start.grails.org'>Grails Application Forge</a>
+                </li>
+                <li>
+                    <a href='https://github.com/grails/grails-core/releases/tag/v[%latest]'>Release Notes</a>
+                </li>
+                <li>
+                    <a href='https://github.com/grails/grails-core/releases/download/v[%latest]/grails-[%latest].zip'>Binary</a>
+                </li>
+                <li>
+                    <a href='https://github.com/grails/grails-doc/releases/download/v[%latest]/grails-docs-[%latest].zip'>Documentation</a>
+                </li>
+            </ul>
+        </div>
+            <p style='margin-top: 10px; margin-bottom: 0;'>For historical release notes, refer to
+                <a href='https://github.com/grails/grails-core/releases'>Github</a>
+            </p><div class='transparent_post' style='margin-top: 0;'>
+                <h3 class='columnheader'>Older Versions</h3>
+                <p>You can download previous versions as far back as Grails 1.2.0.</p>
+                <div class='versionselector'>
+                    <select class='form-control' onchange='window.location.href=&apos;https://github.com/grails/grails-core/releases/download/v&apos;+ this.value +&apos;/grails-&apos; + this.value + &apos;.zip&apos;'>
+                        <option label='Select a version' disabled='disabled' selected='selected' />
+                        [%versions]
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class='column'>
+            <div class='transparent_post'>
+                <p>For a quick and effortless start on Mac OSX, Linux, or Cygwin, you can use
+                    <a href='http://sdkman.io'>SDKMAN! (The Software Development Kit Manager)</a> to download and configure any Grails version of your choice.
+                </p>
+            </div>
+            <article class='question' style='margin-top: 0;margin-bottom: 50px;'>
+                <h3 class='columnheader'>Installing with SDKMAN!</h3>
+                <p>This tool makes installing Grails on any Unix based platform (Mac OSX, Linux, Cygwin, Solaris, or FreeBSD) easy.</p>
+                <p>Simply open a new terminal and enter:</p>
+                <div class='code'>
+                    <p>$ curl -s https://get.sdkman.io | bash</p>
+                </div>
+                <p>Follow the on-screen instructions to complete installation.</p>
+                <p>Open a new terminal or type the command:</p>
+                <div class='code'>
+                    <p>$ source "$HOME/.sdkman/bin/sdkman-init.sh"</p>
+                </div>
+                <p>Then install the latest stable Grails:</p>
+                <div class='code'>
+                    <p>$ sdk install grails</p>
+                </div>
+                <p>If prompted, make this your default version. After installation is complete it can be tested with:</p>
+                <div class='code'>
+                    <p>$ grails -version</p>
+                </div>
+                <p>That's all there is to it!</p>
+            </article>
+        </div>
+    </div>
+</div>

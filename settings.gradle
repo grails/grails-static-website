@@ -1,10 +1,1 @@
-include 'main'
-include 'core'
-include 'guides'
-include 'guide'
-include 'gorm'
-include 'plugin'
-
-findProject(':plugin').name = 'grails-navigation'
-findProject(':core').name = 'grails-navigation-core'
-rootProject.name = 'grails-static-website'
+rootProject.name="static-website"

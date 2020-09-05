@@ -195,7 +195,7 @@ class GuidesPage {
                             mkp.yield ' - '
                             mkp.yield guide.category
                         }
-                        a href: "${guidesUrl()}/${guide.name}/guide/index.html", 'Read More'
+                        a href: "${GUIDES_URL}/${guide.name}/guide/index.html", 'Read More'
                     }
                 }
             }

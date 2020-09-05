@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grails Test Leakage</title>
+    <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
+    <meta name="description" content="Learn how to avoid test leakage in Grails integration and functional tests" />
+    <meta name="date" content="December 5, 2017" />
+    <meta name="robots" content="all"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
+    <meta charset='UTF-8' />
+    <link rel='icon' href='https://grails.org/images/favicon.ico'/>
+    <meta name='twitter:card' content='summary_large_image'/>
+    <meta name='twitter:site' content='@grailsframework'/>
+    <meta name='twitter:description' content='Learn how to avoid test leakage in Grails integration and functional tests'/>
+    <meta name='twitter:creator' content='@grailsframework'/>
+    <meta property='og:image' content='https://grails.org/images/grails.png'/>
+    <meta property='og:image:width' content='300'/>
+    <meta property='og:image:height' content='300'/>
+    <meta property='og:url' content='https://grails.org'/>
+    <meta property='og:title' content='Grails Test Leakage'/>
+    <meta property='og:description' content='Learn how to avoid test leakage in Grails integration and functional tests'/>
+    <meta property='og:type' content='website'/>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='mask-icon' href='https://grails.org/images/grails-pinned-icon.svg' color='feb672' />
+    <link rel='stylesheet' href='https://grails.org/stylesheets/screen.css' />
+    <script src='https://grails.org/javascripts/navigation.js'></script>
+    
+    <link rel='stylesheet' href='https://grails.org/stylesheets/prism.css'/>
+    <script src='https://grails.org/javascripts/prism.js'></script>
+</head>
+<body><header class='mainheader'>
+    <div class='content'>
+        <a href='https://grails.org/index.html'><img class='grailslogo' src='https://grails.org/images/grails_logo.svg' alt='Grails Logo' /></a>
+        <a href='javascript:show(&apos;topmenus&apos;, &apos;showNavigationLink&apos;)' id='showNavigationLink' class='mobile align-center'>Show Navigation</a>
+        <div id='topmenus'>
+            <nav class='secondarymenu' id='secondarymenu'><ul>
+                <li><a href='https://grails.org/blog/index.html'>Blog</a></li>
+                <li><a href='https://grails.org/learning.html'>Learning</a></li>
+                <li><a href='https://grails.org/community.html'>Community</a></li>
+                <li><a href='https://grails.org/search.html'>Search</a></li>
+            </ul></nav>
+            <nav class='mainmenu' id='mainmenu'><ul>
+                <li><a href='https://grails.org/documentation.html'>Documentation</a></li>
+                <li><a href='https://grails.org/download.html'>Download</a></li>
+                <li><a href='https://plugins.grails.org'>Plugins</a></li>
+                <li><a href='https://guides.grails.org/index.html'>Guides</a></li>
+                <li><a href='https://grails.org/faq.html'>FAQ</a></li>
+                <li><a href='https://grails.org/support.html'>Support</a></li>
+            </ul></nav>
+        </div>
+    </div>
+</header>
+<article><div class='headerbar chalicesbg'>
+  <div class='content'>
+    <h1>
+      <a href='https://grails.org/blog/index.html'>Grails Blog</a>
+    </h1>
+  </div>
+</div>
+<div class='content container'>
+  <div class='light padded blogpost'><h1>Grails Test Leakage</h1>
+<p><span class="author">By Sergio Del Amo Caballero</span></p>
+<p><span class="date">December 5, 2017</span></p>
+<p>From Rob Fletcher book, <a href="http://shop.oreilly.com/product/0636920038597.do">Spock: Up and Running</a></p>
+<blockquote>
+<p>TEST LEAKAGE</p>
+<p>A very important feature of any unit test is that it should be idempotent. That is to say, the test should produce the same result regardless of whether it is run alone or with other tests in a suite and regardless of the order in which the tests in that suite are run. When side effects from a test affect subsequent tests in the suite, we can describe that test as leaking.
+Test leakage is caused by badly managed resources. Typical causes of leakage include data in a persistent store that is not removed, changes to a class’ metaclass that are unexpectedly still in place later, mocks injected into objects reused between tests, and uncontrolled changes to global state such as the system clock.
+Test leakage can be very difficult to track down. Simply identifying which test is leaking can be time consuming. For example, the leaking test might not affect the one running directly after it, or continuous integration servers might run test suites in a different order from that of the developer’s computers, leading to protests of but, it works on my machine!”</p>
+</blockquote>
+<p>In this blog post, we discuss how to avoid test leakage in Grails integration and functional tests. In particular, <em>data in a persistent store that is not removed</em>.</p>
+<p>Lets us create a simple Grails App:</p>
+<pre><code>curl -O start.grails.org/myapp.zip -d version=3.3.2 -d profile=rest-api
+</code></pre>
+<p>with a Domain Class</p>
+<p><em>grails-app/domain/demo/Book.groovy</em></p>
+<pre><code class="language-groovy">package demo
+
+import grails.rest.Resource
+
+@Resource
+class Book {
+    String title
+}
+</code></pre>
+<p>and a GORM Data Service</p>
+<p><em>grails-app/services/demo/BookDataService.groovy</em></p>
+<pre><code class="language-groovy">package demo
+
+import grails.gorm.services.Service
+
+@Service(Book)
+interface BookDataService {
+    Book saveBook(String title)
+    void deleteBook(Serializable id)
+    int count()
+}
+</code></pre>
+<h2>Integration Test</h2>
+<p>If you create the next integration specification:</p>
+<p><em>src/integration-test/groovy/demo/BookDataServiceSpec.groovy</em></p>
+<pre><code class="language-groovy">package demo
+
+import grails.testing.mixin.integration.Integration
+import spock.lang.Specification
+
+@Integration
+class BookDataServiceSpec extends Specification {
+
+    BookDataService bookDataService
+
+    void &quot;test save book&quot;() {
+        when:
+        Book book = bookDataService.saveBook('Practical Grails 3')
+
+        then:
+bookDataService.count() == old(bookDataService.count()) + 1
+        book
+    }
+}
+</code></pre>
+<p>You will have a test leakage. After the specification is executed, the <code>book</code> database table will be:</p>
+<table>
+    <thead><tr><th>id</th><th>title</th></tr></thead>
+    <tbody><tr><td>1</td><td>Practical Grails 3</td></tr></tbody>
+</table>
+<p>The previous test leaks one <code>book</code> row.</p>
+<p>To solve it, you could add a cleanup block:</p>
+<p><em>src/integration-test/groovy/demo/BookDataServiceSpec.groovy</em></p>
+<pre><code class="language-groovy">@Integration
+class BookDataServiceSpec extends Specification {
+
+    BookDataService bookDataService
+
+    void &quot;test save book&quot;() {
+        when:
+        Book book = bookDataService.saveBook('Practical Grails 3')
+
+        then:
+        Book.count() == old(Book.count()) + 1
+
+        cleanup: 
+        bookDataService.deleteBook(book.id)
+    }
+}
+</code></pre>
+<p>or use <code>@Rollback</code> annotation.</p>
+<blockquote>
+<p>The Rollback annotation ensures that each test method runs in a transaction that is rolled back. Generally this is desirable because you do not want your tests depending on order or application state.</p>
+</blockquote>
+<p><em>src/integration-test/groovy/demo/BookDataServiceSpec.groovy</em></p>
+<pre><code class="language-groovy">package demo
+
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
+import spock.lang.Specification
+
+@Rollback
+@Integration
+class BookDataServiceSpec extends Specification {
+
+    BookDataService bookDataService
+
+    void &quot;test save book&quot;() {
+        when:
+        Book book = bookDataService.saveBook('Practical Grails 3')
+
+        then:
+        bookDataService.count() == old(bookDataService.count()) + 1
+        book
+    }
+}
+</code></pre>
+<h2>Functional Test</h2>
+<p>You may have noticed that we have annotated the Domain class with <code>@Resource</code> transformation.</p>
+<blockquote>
+<p>Simply by adding the Resource transformation and specifying a URI, your domain class will automatically be available as a REST resource in either XML or JSON formats. The transformation will automatically register the necessary RESTful URL mapping and create a controller called BookController.</p>
+</blockquote>
+<p>We add a functional test to test the API exposed by the transformation:</p>
+<p><em>src/integration-test/groovy/demo/BookResourceSpec.groovy</em></p>
+<pre><code class="language-groovy">package demo
+
+import grails.plugins.rest.client.RestBuilder
+import grails.plugins.rest.client.RestResponse
+import grails.testing.mixin.integration.Integration
+import groovy.json.JsonOutput
+import spock.lang.Specification
+
+@Integration
+class BookResourceSpec extends Specification {
+
+    BookDataService bookDataService
+
+    void &quot;test save book&quot;() {
+        given:
+        RestBuilder restBuilder = new RestBuilder()
+
+        when:
+        RestResponse resp = restBuilder.post(&quot;http://localhost:&amp;#36;{serverPort}/book&quot;) {
+            accept('application/json')
+            contentType('application/json')
+            json(JsonOutput.toJson([title: 'Practical Grails 3']))
+        }
+
+        then:
+        bookDataService.count() == old(bookDataService.count()) + 1
+        resp.json.id
+    }
+}
+</code></pre>
+<p>The previous tests causes a test leakage. After the specification is executed, the <code>book</code> database table will be:</p>
+<table>
+    <thead><tr><th>id</th><th>title</th></tr></thead>
+    <tbody><tr><td>1</td><td>Practical Grails 3</td></tr></tbody>
+</table>
+<p>You may be tempted to add a <code>@Rollback</code> annotation to the functional test. However, that will not solve
+the test leakage. <code>@Rollback</code> only impacts changes within the test method. By using a REST
+client you are sending requests to the server which run the changes in a completely
+different thread, thus the same transaction management doesn't apply.</p>
+<p>You can solve the functional test leakage by adding a <code>cleanup</code> block.</p>
+<p><em>src/integration-test/groovy/demo/BookResourceSpec.groovy</em></p>
+<pre><code class="language-groovy">package demo
+
+import grails.plugins.rest.client.RestBuilder
+import grails.plugins.rest.client.RestResponse
+import grails.testing.mixin.integration.Integration
+import groovy.json.JsonOutput
+import spock.lang.Specification
+
+@Integration
+class BookResourceSpec extends Specification {
+
+    BookDataService bookDataService
+
+    void &quot;test save book&quot;() {
+        given:
+        RestBuilder restBuilder = new RestBuilder()
+
+        when:
+        RestResponse resp = restBuilder.post(&quot;http://localhost:&amp;#36;{serverPort}/book&quot;) {
+            accept('application/json')
+            contentType('application/json')
+            json(JsonOutput.toJson([title: 'Practical Grails 3']))
+        }
+
+        then:
+        bookDataService.count() == old(bookDataService.count()) + 1
+        resp.json.id
+
+        cleanup:
+        bookDataService.deleteBook(resp.json.id as Serializable)
+    }
+}
+</code></pre>
+<p>To sump up, be careful when writing integration and functional tests to avoid test leakage.
+While <code>@Rollback</code> annotation may help you in integration tests, you will need to
+manually cleanup in functional tests.</p>
+    <h2>You might also like ...</h2>
+    <div class='threecolumns'>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
+  <a href='https://grails.org/blog/2019-12-20.html'>
+    <h3>December 20, 2019</h3>
+    <h2>Grails 4 Upgrade</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-08-27.jpg)'>
+  <a href='https://grails.org/blog/2019-08-27.html'>
+    <h3>August 27, 2019</h3>
+    <h2>Groovy 3 and Beyond: An Insider's Guide</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-07-11.jpg)'>
+  <a href='https://grails.org/blog/2019-07-11.html'>
+    <h3>July 11, 2019</h3>
+    <h2>Grails 4 GA Released</h2>
+  </a>
+</article></div>
+    </div>
+  </div>
+</div>&nbsp;</article>
+<footer>
+    <div class='content'>
+        <div class='ocihometograils'>
+            <span>Sponsored by</span>
+            <a href='https://objectcomputing.com/products/grails/'><img class='' src='https://grails.org/images/oci_home_to_grails.svg' alt='Object Computing - Home to Grails' width='300px' /></a>
+        </div>
+        <nav class='socialmedianav'><ul>
+            <li>
+                <a href='https://grails-slack.cfapps.io'><img class='' src='https://grails.org/images/slack.svg' alt='Slack Icon' /></a>
+            </li>
+            <li>
+                <a href='https://www.youtube.com/watch?v=XnRNfDGkBVg&amp;list=PLI74De5M9T73uH3WilDCePP2qfSDpMaGu'><img class='' src='https://grails.org/images/youtube.svg' alt='Youtube Icon' /></a>
+            </li>
+            <li>
+                <a href='https://www.linkedin.com/groups/39757'><img class='' src='https://grails.org/images/linkedin.svg' alt='LinkedIn Icon' /></a>
+            </li>
+            <li>
+                <a href='https://github.com/grails/'><img class='' src='https://grails.org/images/github.svg' alt='Github Icon' /></a>
+            </li>
+            <li>
+                <a href='https://twitter.com/grailsframework'><img class='' src='https://grails.org/images/twitter.svg' alt='Twitter Icon' /></a>
+            </li>
+        </ul></nav>
+        <nav class='partnersnav'><ul>
+            <li>Grails' repositories are hosted by
+                <a href='http://artifactoryonline.com/'>Artifactory</a>
+            </li>
+            <li>Website hosting provided by
+                <a href="https://run.pivotal.io/">Pivotal</a>
+            </li>
+            <li>JetBrains supports Grails with its
+                <a href='https://www.jetbrains.com/idea/'>IntelliJ IDEA IDE</a>
+            </li>
+            <li>YourKit supports Grails with its
+                <a href='https://www.yourkit.com/java/profiler/index.jsp'>Java Profiler</a>
+            </li>
+            <li>Grails is Open Source
+                <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache 2 License</a>
+            </li>
+            <li>
+                <a href='https://grails.org/buildstatus.html'>Build Status</a>
+            </li>
+        </ul></nav>
+    </div>
+</footer><div>
+    <script type='text/javascript'>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-82213539-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type='text/javascript'>
+        adroll_adv_id = "HBWJH4CQCJGS5DJRSB4Z4D";
+        adroll_pix_id = "IVEQYFOZXZAPZMDVQH7BFE";
+        /* OPTIONAL: provide email to improve user identification */
+        /* adroll_email = "username@example.com"; */
+        (function () {
+            var _onload = function(){
+                if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+                if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+                var scr = document.createElement("script");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                scr.setAttribute('async', 'true');
+                scr.type = "text/javascript";
+                scr.src = host + "/j/roundtrip.js";
+                ((document.getElementsByTagName('head') || [null])[0] ||
+                    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+            };
+            if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+            else {window.attachEvent('onload', _onload)}
+        }());
+    </script>
+</div>
+</body>
+</html>

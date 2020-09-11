@@ -11,7 +11,7 @@ image: 2020-09-10.jpg
 
 [%date] 
 
-Tags: 
+Tags: #micronaut #groovy3
 
 As we approach the fourth quarter of 2020, I wanted to take a few minutes to update everyone in the community on the updates and enhancements coming to the Grails framework. 
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Thu, 10 Sep 2020 20:53:55 GMT</pubDate><item><title>Grails State of the Union</title><link>https://grails.org/blog/2020-09-10-grails-state-of-union.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 11 Sep 2020 05:55:54 GMT</pubDate><item><title>Grails State of the Union</title><link>https://grails.org/blog/2020-09-10-grails-state-of-union.html</link><description><![CDATA[</p>
 <p>Tags:</p>
 <p>As we approach the fourth quarter of 2020, I wanted to take a few minutes to update everyone in the community on the updates and enhancements coming to the Grails framework.</p>
 <p>In the last few months, the <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails, and Micronaut) team</a> has put a lot of work into the upcoming Grails 4.1 release. We’re excited to share that this release will include support for Apache Groovy 3! Groovy 3 offers a number of <a href="http://groovy-lang.org/releasenotes/groovy-3.0.html">enhancements</a> to the language including method references and a new, more flexible parser. Additionally, Grails 4.1 will support <a href="https://micronaut.io">Micronaut 2.0</a>, Gradle 6.5, and Spring 2.3. We’ve also added improvements to the Grails profiles to support the exclusion of transitive dependencies.</p>
@@ -779,7 +779,22 @@ class DeclaredSlf4jServiceSpec extends Specification {
 <li>The Parrot Parser – Java syntax alignment, new features, advanced capabilities</li>
 <li>JDK9: support, limitations and on-going work</li>
 </ul>
-<p><a href="https://objectcomputing.com/files/7715/2708/5312/180518-Groovy-Update-slide-deck.pdf">Slides</a></p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/ECZVbiFZPwE" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2018-05-18</guid><pubDate>Fri, 18 May 2018 00:00:00 GMT</pubDate></item><item><title>Introducing the Grails 3 GORM Logical Delete Plugin</title><link>https://grails.org/blog/2018-04-05.html</link><description><![CDATA[</p>
+<p><a href="https://objectcomputing.com/files/7715/2708/5312/180518-Groovy-Update-slide-deck.pdf">Slides</a></p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/ECZVbiFZPwE" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2018-05-18</guid><pubDate>Fri, 18 May 2018 00:00:00 GMT</pubDate></item><item><title>Database Migration with Grails 3</title><link>https://grails.org/blog/2018-04-06.html</link><description><![CDATA[</p>
+<p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
+<h2>Overview</h2>
+<p>Database migrations are an important facet of web development. Preserving existing data while seamlessly adding new functionality and tables is critical when making incremental database changes to production applications.</p>
+<p>Without a tool to manage database migrations, developers end up cobbling together solutions using manual SQL, error-prone communication processes, and costly risk management strategies.</p>
+<p>In this webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#assar">Nirav Assar</a>, demonstrates how to apply the Grails Database Migration plugin in development and production.</p>
+<h2>Outline</h2>
+<p>The following topics are covered in this webinar:</p>
+<ul>
+<li>Fundamental database management concepts</li>
+<li>Overview of database migration tools</li>
+<li>Demonstration of the Grails Database Migration plugin</li>
+<li>Live coding examples representing real-world use cases</li>
+<li>Advanced scenarios and best practices</li>
+</ul>
+<p><a href="https://objectcomputing.com/files/2715/2338/5917/180409-Database_Migration_Grails_3_Webinar_Deck.pdf">Slides</a></p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/rNdfozn7NCs" frameborder="0"></iframe>]]></description><author>Nirav Assar</author><guid>2018-04-06</guid><pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate></item><item><title>Introducing the Grails 3 GORM Logical Delete Plugin</title><link>https://grails.org/blog/2018-04-05.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a> <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
 <p>Recently our development team came upon the need to develop a Grails 3 plugin that implements logical delete for entities.</p>
 <p>A &quot;logical&quot; delete (sometimes referred to as a &quot;soft&quot; delete) is a delete that doesn’t actually delete the relevant data but instead marks the data as deleted. Marking the data as deleted has the benefit of excluding the data from queries by default, while still maintaining the ability to retrieve the data when/if necessary. Essentially the plugin offers a mechanism to &quot;hide&quot; domain objects from retrieval. This is useful for retaining data without having it clutter the current set of active data.</p>
@@ -858,22 +873,7 @@ p.delete()
 <p><a href="https://objectcomputing.com/files/2115/2088/9809/180309-GORM-GraphQL-Webinar-Deck.pdf">Slides</a></p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/KphmxzIaVf0" frameborder="0"></iframe>]]></description><author>James Kleeh</author><guid>2018-03-09</guid><pubDate>Fri, 09 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Browser Automation Testing with Geb &amp; Grails</title><link>https://grails.org/blog/2018-03-06.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/geb.html"><span class="hashtag">#geb</span></a></p>
 <p>Geb brings together the power of WebDriver, the elegance of jQuery content selection, the robustness of page-object modeling, and the expressiveness of the Groovy language. Together with Spock, Geb is integrated into Grails to ease the creation of functionals/acceptance tests.</p>
-<p>In this webinar, Geb Lead, Marcin Erdmann, and Grails team member, Sergio del Amo Caballero, discuss how Geb integrates seamlessly into the Grails workflow and how this combination leads to robust and well-tested applications.</p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/E7zjib3wrxk" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero &amp; Marcin Erdmann</author><guid>2018-03-06</guid><pubDate>Tue, 06 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Database Migration with Grails 3</title><link>https://grails.org/blog/2018-04-06.html</link><description><![CDATA[</p>
-<p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
-<h2>Overview</h2>
-<p>Database migrations are an important facet of web development. Preserving existing data while seamlessly adding new functionality and tables is critical when making incremental database changes to production applications.</p>
-<p>Without a tool to manage database migrations, developers end up cobbling together solutions using manual SQL, error-prone communication processes, and costly risk management strategies.</p>
-<p>In this webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#assar">Nirav Assar</a>, demonstrates how to apply the Grails Database Migration plugin in development and production.</p>
-<h2>Outline</h2>
-<p>The following topics are covered in this webinar:</p>
-<ul>
-<li>Fundamental database management concepts</li>
-<li>Overview of database migration tools</li>
-<li>Demonstration of the Grails Database Migration plugin</li>
-<li>Live coding examples representing real-world use cases</li>
-<li>Advanced scenarios and best practices</li>
-</ul>
-<p><a href="https://objectcomputing.com/files/2715/2338/5917/180409-Database_Migration_Grails_3_Webinar_Deck.pdf">Slides</a></p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/rNdfozn7NCs" frameborder="0"></iframe>]]></description><author>Nirav Assar</author><guid>2018-04-06</guid><pubDate>Tue, 06 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Grails Development with Groovy Eclipse</title><link>https://grails.org/blog/2018-03-02.html</link><description><![CDATA[</p>
+<p>In this webinar, Geb Lead, Marcin Erdmann, and Grails team member, Sergio del Amo Caballero, discuss how Geb integrates seamlessly into the Grails workflow and how this combination leads to robust and well-tested applications.</p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/E7zjib3wrxk" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero &amp; Marcin Erdmann</author><guid>2018-03-06</guid><pubDate>Tue, 06 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Grails Development with Groovy Eclipse</title><link>https://grails.org/blog/2018-03-02.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/groovy.html"><span class="hashtag">#groovy</span></a> <a href="https://grails.org/blog/tag/eclipse.html"><span class="hashtag">#eclipse</span></a> <a href="https://grails.org/blog/tag/gradle.html"><span class="hashtag">#gradle</span></a></p>
 <p>In this blog post, we show the steps necessary to set up <a href="https://www.eclipse.org">Eclipse IDE</a> to develop Grails 3 applications.</p>
 <h2>Groovy Eclipse</h2>

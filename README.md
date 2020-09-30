@@ -239,3 +239,5 @@ Assets used in the website can be found under `assets`.
 ## What to change when a new release is published.
 
 Please, modify `conf/releases.yml`
+
+I wanted to participate in https://hacktoberfest.digitalocean.com/ contest in which i should pull requests. So i request you to not dismiss this request!

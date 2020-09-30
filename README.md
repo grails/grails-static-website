@@ -1,4 +1,4 @@
-# Grails Website
+# Grails  Website 
 
 [![Build Status](https://github.com/grails/grails-static-website/workflows/Publish/badge.svg)](https://github.com/grails/grails-static-website/actions)
 
@@ -154,7 +154,7 @@ date: April 9, 2020 09:00
 
 #### Blog post background
 
-For Blog post background images usage image metadata. 
+For blog post background images usage image metadata. 
 
 ```markdown
 ---

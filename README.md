@@ -7,6 +7,7 @@ This project builds the Grails website. A static website build with [Gradle](htt
 Gradle tasks use `grails` group. 
 
 You can get more info by running: 
+Thank you!
 
 ```
   % ./gradlew tasks --group=grails

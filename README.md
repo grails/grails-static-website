@@ -239,3 +239,4 @@ Assets used in the website can be found under `assets`.
 ## What to change when a new release is published.
 
 Please, modify `conf/releases.yml`
+#nice

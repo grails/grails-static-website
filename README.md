@@ -9,7 +9,7 @@ Gradle tasks use `grails` group.
 You can get more info by running: 
 
 ```
-  % ./gradlew tasks --group=grails
+  % ./gradlew tasks --group=grails an amazing   website
  
  > Task :tasks
  

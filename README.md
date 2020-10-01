@@ -4,9 +4,9 @@
 
 This project builds the Grails website. A static website build with [Gradle](https://gradle.org). It uses a Gradle Plugin whose sources can be found at `buildSrc`. 
 
-Gradle tasks use `grails` group. 
+Gradle tasks use `grails` group.  
 
-You can get more info by running: 
+You can get more information by running: 
 
 ```
   % ./gradlew tasks --group=grails

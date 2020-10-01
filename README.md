@@ -33,7 +33,7 @@ You can get more info by running:
  
  To see more detail about a task, run gradlew help --task <task>
  
- BUILD SUCCESSFUL in 558ms
+ BUILD SUCCESSFULLY in 558ms
  1 actionable task: 1 executed
 ```
 

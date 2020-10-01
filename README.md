@@ -14,7 +14,7 @@ You can get more info by running:
  > Task :tasks
  
  ------------------------------------------------------------
- Tasks runnable from root project
+ Tasks runnable from given root project it easy way
  ------------------------------------------------------------
  
  Grails tasks

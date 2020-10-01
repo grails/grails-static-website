@@ -1,4 +1,4 @@
-# Grails Website
+# Grails Website(an amazing website)
 
 [![Build Status](https://github.com/grails/grails-static-website/workflows/Publish/badge.svg)](https://github.com/grails/grails-static-website/actions)
 

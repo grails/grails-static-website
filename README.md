@@ -1,4 +1,4 @@
-# Grails Website
+# Grails Website:
 
 [![Build Status](https://github.com/grails/grails-static-website/workflows/Publish/badge.svg)](https://github.com/grails/grails-static-website/actions)
 
@@ -37,7 +37,7 @@ You can get more info by running:
  1 actionable task: 1 executed
 ```
 
-## Generating the MAIN site
+## Generating the MAIN site:
 
 [https://grails.org](https://grails.org)
 
@@ -47,7 +47,7 @@ You can get more info by running:
 
 The output can be found in the `build/dist` directory.
 
-## Generating the GUIDES site
+## Generating the GUIDES site:
 
 [https://guides.grails.org](http://guides.grails.org)
 

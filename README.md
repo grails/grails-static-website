@@ -2,11 +2,11 @@
 
 [![Build Status](https://github.com/grails/grails-static-website/workflows/Publish/badge.svg)](https://github.com/grails/grails-static-website/actions)
 
-This project builds the Grails website. A static website build with [Gradle](https://gradle.org). It uses a Gradle Plugin whose sources can be found at `buildSrc`. 
+This project builds the Grails website. A static website build with [Gradle](https://gradle.org). It's uses a Gradle Plugin whose sources can be found at `buildSrc`. 
 
 Gradle tasks use `grails` group. 
 
-You can get more info by running: 
+You can get more info by running this code: 
 
 ```
   % ./gradlew tasks --group=grails

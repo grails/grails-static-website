@@ -37,7 +37,7 @@ You can get more info by running:
  1 actionable task: 1 executed
 ```
 
-## Generating the MAIN site
+## Generating the Main site
 
 [https://grails.org](https://grails.org)
 
@@ -47,7 +47,7 @@ You can get more info by running:
 
 The output can be found in the `build/dist` directory.
 
-## Generating the GUIDES site
+## Generating the Guides site
 
 [https://guides.grails.org](http://guides.grails.org)
 
@@ -107,7 +107,7 @@ We had [previously](http://grails.io/post/142674392718/deploying-grails-3-to-wil
 The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely similar, with some minor configuration differences.
 ```
 
-#### Text Expander snippets
+#### Text Expander Snippets
 
 If you write often to Micronaut's blog, we recommend you to create a [Text Expander](https://textexpander.com) snippet:
 
@@ -152,7 +152,7 @@ date: April 9, 2020 09:00
 
 **To Schedule tasks use a date in the future. Github Action runs daily and will publish scheduled posts.**
 
-#### Blog post background
+#### Blog Post Background
 
 For Blog post background images usage image metadata. 
 

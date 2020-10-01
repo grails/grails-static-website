@@ -1,5 +1,5 @@
 # Grails Website
-#camelCase
+
 [![Build Status](https://github.com/grails/grails-static-website/workflows/Publish/badge.svg)](https://github.com/grails/grails-static-website/actions)
 
 This project builds the Grails website. A static website build with [Gradle](https://gradle.org). It uses a Gradle Plugin whose sources can be found at `buildSrc`. 
@@ -18,6 +18,7 @@ You can get more info by running:
  ------------------------------------------------------------
  
  Grails tasks
+ camelCase
  ------------
  buildGuides - Build guides website - generates guides pages, copies assets and generates a sitemap
  copyAssets - Copies css, js, fonts and images from the assets folder to the dist folder

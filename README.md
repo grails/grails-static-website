@@ -126,7 +126,7 @@ Description metadata is used as HTML meta description tag, and in twitter cards.
 
 Date is used to for publication date. It is used to order to blog posts. It is displayed in the UI and in the RSS feed.
 
-Date can be expressed in `MMM d, yyyy`
+Date can be expressed in `MM d, yyyy`
 
 ```markdown
 ---
@@ -138,7 +138,7 @@ date: April 9, 2020
 
 ```
 
-or `MMM d, yyyy HH:mm`
+or `MM d, yyyy HH:mm`
  
 ```markdown
 ---

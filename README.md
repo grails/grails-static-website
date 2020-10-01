@@ -19,7 +19,7 @@ You can get more info by running:
  
  Grails tasks
  ------------
- buildGuides - Build guides website - generates guides pages, copies assets and generates a sitemap
+ buildGuides - Builded the guides website - generates guides pages, copies assets and generates a sitemap
  copyAssets - Copies css, js, fonts and images from the assets folder to the dist folder
  genDocs - Generates documentation HTML page - build/temp/documentation.html
  genFaq - Generates FAQ HTML - build/temp/faq.html 

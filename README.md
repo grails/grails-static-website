@@ -37,7 +37,7 @@ You can get more info by running:
  1 actionable task: 1 executed
 ```
 
-## Generating the MAIN site
+## Generating the MAIN site:
 
 [https://grails.org](https://grails.org)
 
@@ -47,7 +47,7 @@ You can get more info by running:
 
 The output can be found in the `build/dist` directory.
 
-## Generating the GUIDES site
+## Generating the GUIDES site:
 
 [https://guides.grails.org](http://guides.grails.org)
 
@@ -57,9 +57,9 @@ The output can be found in the `build/dist` directory.
 ```
 The output can be found in the `build/dist` directory.
 
-## Running the website locally
+## Running the website locally:
 
-The easiest way to work locally is to generate the site and setup your Webserver to serve build/dist. 
+The easiest way to work locally is to generate the site and setup your Web server to serve build/dist. 
 
 For example with [MAMP](https://www.mamp.info/en/mamp/): 
 
@@ -71,13 +71,13 @@ You can also use Python to serve the directory:
 python3 -m http.server 8080 --directory build/dist
 ```
 
-## Blog Posts
+## Blog Posts:
 
-### Posts Location
+### Posts Location:
 
 Write blog posts in markdown at `posts` folder.
 
-### Blog post Metadata
+### Blog post Metadata:
 
 A post supports metadata at the beginning of the document. You can use it store information (title, description, publication date) about your blog posts. 
 
@@ -107,22 +107,22 @@ We had [previously](http://grails.io/post/142674392718/deploying-grails-3-to-wil
 The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely similar, with some minor configuration differences.
 ```
 
-#### Text Expander snippets
+#### Text Expander snippets:
 
-If you write often to Micronaut's blog, we recommend you to create a [Text Expander](https://textexpander.com) snippet:
+If you write often to Micronaut's blog, we recommend you to create a [Text Expander](https://textexpander.com) snippet and write text:
 
  ![](docs/textexpander.png)
 
 
-#### Title Metadata
+#### Title Metadata:
 
 `title` tag is used as the window title, the card title, blog post main header and also in twitter cards.
 
-#### Description Metadata
+#### Description Metadata:
 
 Description metadata is used as HTML meta description tag, and in twitter cards.
 
-#### Date Metadata
+#### Date Metadata:
 
 Date is used to for publication date. It is used to order to blog posts. It is displayed in the UI and in the RSS feed.
 
@@ -152,7 +152,7 @@ date: April 9, 2020 09:00
 
 **To Schedule tasks use a date in the future. Github Action runs daily and will publish scheduled posts.**
 
-#### Blog post background
+#### Blog post background:
 
 For Blog post background images usage image metadata. 
 
@@ -185,7 +185,7 @@ Release announcements should be tagged with `release`.
 
 Check the [list of tags](https://grails.org/blog/index.html) and try to reuse them. 
 
-#### Code Highlighting
+#### Code Highlighting:
 
 If your blog post, contains code samples add the following metadata:
 
@@ -202,7 +202,7 @@ JAVASCRIPT: [%url]/javascripts/prism.js
 
 ```
 
-#### Video
+#### Video:
 
 Use the `video` metadata to embed a Video. 
 
@@ -232,7 +232,7 @@ Tags:
 ```
 
 
-## Assets (Fonts, Stylesheets, Images, Javascripts)
+## Assets (Fonts, html, Stylesheets, Images, Javascripts)
 
 Assets used in the website can be found under `assets`. 
 

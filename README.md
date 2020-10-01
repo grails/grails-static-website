@@ -6,7 +6,7 @@ This project builds the Grails website. A static website build with [Gradle](htt
 
 Gradle tasks use `grails` group. 
 
-You can get more info by running: 
+You Can Get More Info By Running: 
 
 ```
   % ./gradlew tasks --group=grails
@@ -55,7 +55,7 @@ The output can be found in the `build/dist` directory.
 ./gradlew buildGuide --console=plain
 
 ```
-The output can be found in the `build/dist` directory.
+The Output Can Be Found In The `build/dist` Directory.
 
 ## Running the website locally
 

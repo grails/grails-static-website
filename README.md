@@ -37,7 +37,7 @@ You can get more info by running:
  1 actionable task: 1 executed
 ```
 
-## Generating the MAIN site
+## Creating the MAIN site
 
 [https://grails.org](https://grails.org)
 
@@ -71,7 +71,7 @@ You can also use Python to serve the directory:
 python3 -m http.server 8080 --directory build/dist
 ```
 
-## Blog Posts
+## Poppular Blog Posts 
 
 ### Posts Location
 

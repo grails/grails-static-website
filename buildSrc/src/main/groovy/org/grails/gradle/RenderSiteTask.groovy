@@ -200,7 +200,7 @@ class RenderSiteTask extends DefaultTask {
     @Nullable
     static String parseVideoIframe(Map<String, String> metadata) {
         String videoId = parseVideoId(metadata)
-        videoId ? "<iframe width=\"100%\" height=\"360\" src=\"https://www.youtube-nocookie.com/embed/"+videoId+"\" frameborder=\"0\"></iframe>" : null
+        videoId ? "<iframe width=\"100%\" height=\"560\" src=\"https://www.youtube-nocookie.com/embed/"+videoId+"\" frameborder=\"0\"></iframe>" : null
     }
 
     static String twitterPlayerHtml(String videoId, int width, int height) {

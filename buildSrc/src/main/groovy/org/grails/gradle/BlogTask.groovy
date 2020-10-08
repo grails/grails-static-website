@@ -226,7 +226,9 @@ class BlogTask extends DefaultTask {
         mb.div(class: 'content container') {
             div(class: 'light padded blogpost') {
                 mkp.yieldUnescaped(htmlPost.html)
-                h2 "You might also like ..."
+                h2 (class: 'space-above') {
+                    span "You might also like ..."
+                }
                 div(class: 'threecolumns') {
                     for (HtmlPost post : relatedPosts(htmlPost, posts)) {
                         div(class: 'column') {
@@ -296,11 +298,11 @@ class BlogTask extends DefaultTask {
                 markdown = markdown + "\n\n[Code](${metadata['code']})\n\n"
             }
             String html = MarkdownUtil.htmlFromMarkdown(markdown)
-            String contentHtml = wrapTags(metadata, html)
             String iframe = RenderSiteTask.parseVideoIframe(metadata)
             if (iframe) {
-                contentHtml = contentHtml + iframe
+                html = html + iframe
             }
+            String contentHtml = wrapTags(metadata, html)
             Set<String> postTags = parseTags(contentHtml)
             new HtmlPost(metadata: postMetadata, html: contentHtml, path: mdPost.path, tags: postTags)
         }

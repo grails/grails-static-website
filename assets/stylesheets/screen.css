@@ -1735,3 +1735,7 @@ blockquote {
 	border-left: 3px solid #333333;
 	padding-left: 20px;
 }
+
+.space-above {
+	margin-top: 10%;
+}

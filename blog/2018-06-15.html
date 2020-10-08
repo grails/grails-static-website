@@ -98,8 +98,11 @@
 <p><strong>A:</strong> Most of that code is because of the Spring Framework. Since Grails 3, we rely a lot on AST transformations and traits to generate code during compilation to avoid that overhead.</p>
 <p>For example, Grails @Transactional is done at compile time vs. Spring @Transactional that relies on runtime proxies. The &quot;problem&quot; is that both Spring and Hibernate use runtime proxies and runtime reflection, so you can't get rid of all those wrappers.</p>
 <p>If you want to avoid runtime proxies, I would suggest you take a look at <a href="https://micronaut.io/">Micronaut</a>. :)</p>
-<p><a href="https://objectcomputing.com/files/7815/2933/9902/180615_Grails_Code_Webinar_slidedeck.pdf">Slides</a></p><iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/lZX_lL7cxHE" frameborder="0"></iframe>
-    <h2>You might also like ...</h2>
+<p><a href="https://objectcomputing.com/files/7815/2933/9902/180615_Grails_Code_Webinar_slidedeck.pdf">Slides</a></p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/lZX_lL7cxHE" frameborder="0"></iframe>
+    <h2 class='space-above'>
+      <span>You might also like ...</span>
+    </h2>
     <div class='threecolumns'>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
   <a href='https://grails.org/blog/2019-12-20.html'>

@@ -74,7 +74,9 @@
 <p>We have added a check that will make the build fail if any repository is not secure. You can get more information on this solution <a href="https://github.com/grails/grails-core/blob/master/build.gradle#L597" title="Learn more about this solution">here</a>.</p>
 <h2>Steps for Users</h2>
 <p>No action is necessary. The issue was specifically related to the build of the framework itself and not applications built with it. If there were an issue, it would have been introduced in the build of Grails (not your Grails apps), and we have verified that Grails itself was not compromised. Thus, users do not need to verify their own apps because they weren’t resolving dependencies over HTTP. However, in case of doubt, you can upgrade to Grails <code>3.3.10</code>, which includes the applied patch.</p>
-    <h2>You might also like ...</h2>
+    <h2 class='space-above'>
+      <span>You might also like ...</span>
+    </h2>
     <div class='threecolumns'>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-09-10.jpg)'>
   <a href='https://grails.org/blog/2020-09-10-grails-state-of-union.html'>

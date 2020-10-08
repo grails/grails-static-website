@@ -13,7 +13,7 @@ grails {
     template = file("templates/document.html")
     output = project.buildDir
     title = 'Grails framework'
-    url = System.getenv('GITHUB_RUN_ID') != null ? 'https://grails.org' : 'http://localhost/grails'
+    url = System.getenv('GITHUB_RUN_ID') != null ? 'https://grails.org' : System.getenv("GRAILS_WS_URL") ?: ''
     description = 'A powerful Groovy-based web application framework for the JVM built on top of Spring Boot'
     keywords = ['grails','jvm','framework','groovy', 'gradle', 'spring-boot', 'gorm']
     robots = 'all'

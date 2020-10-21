@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 21 Oct 2020 10:27:03 GMT</pubDate><item><title>2GM Quarterly Town Hall Meetings</title><link>https://grails.org/blog/2020-10-01-2gm-town-hall.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 21 Oct 2020 20:48:38 GMT</pubDate><item><title>2GM Town Hall Meeting: 2020 Q4</title><link>https://grails.org/blog/2020-10-16-2gm-town-hall-2020-q4.html</link><description><![CDATA[</p>
+<p>Tags: <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
+<p>A big thanks to everyone who joined us for our inaugural 2GM Town Hall webinar. We had a great time and learned about several exciting goings on within our Groovy, Grails, and Micronaut communities. For those of you who missed the live event, the recording is embedded below.</p>
+<p>I would like to take this opportunity to thank our fantastic panel of experts:</p>
+<ul>
+<li>James Kleeh, Micronaut Development Lead</li>
+<li>Puneet Behl, Grails Development Lead</li>
+<li>Jeff Scott Brown, Micronaut and Grails Practice Lead and Object Computing Partner</li>
+<li>Plus, our guest panelist, David Estes</li>
+</ul>
+<p>David is the co-founder and VP of Engineering at Morpheus Data and also the creator of the Grails Asset-Pipeline, which is broadly used by many developers in the Grails community.
+David has contributed to so many plugins over the years, he has lost count! Which is why we were thrilled to present him with the 2020 Grails Community Rock Star Award! Congratulations, David!</p>
+<p>Stay tuned for details about our next 2GM Town Hall meeting, where Object Computing Groovy Development Lead, Paul King, will share the latest on Groovy 4.0, and we'll welcome a surprise special guest.</p>
+<p>— Jen Wiese</p>
+<p>2GM Product Evangelist</p>
+<p><a href="https://objectcomputing.com/files/3716/0331/1496/2GM_Town_Hall_Deck.pdf">Slides</a></p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/yfY2SBtagYs" frameborder="0"></iframe>]]></description><author>Jen Wiese</author><guid>2020-10-16-2gm-town-hall-2020-q4</guid><pubDate>Fri, 16 Oct 2020 00:00:00 GMT</pubDate></item><item><title>2GM Quarterly Town Hall Meetings</title><link>https://grails.org/blog/2020-10-01-2gm-town-hall.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
 <p>At Object Computing, home to Grails and Micronaut, our core values energize and guide us in all that we do. Those values are:</p>
 <ul>

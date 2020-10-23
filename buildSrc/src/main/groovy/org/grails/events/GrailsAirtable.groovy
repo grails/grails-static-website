@@ -14,13 +14,15 @@ class GrailsAirtable {
     public static final String FIELD_LINK = 'link'
     public static final String FIELD_LOCATION = 'location'
     public static final String FIELD_LINK_OCI = 'our webpage'
-    public static final String FIELD_NAME_LOWERCASE = 'name'
+    public static final String FIELD_EVENT_NAME = 'asset or event'
     public static final String FIELD_DATE = 'start/publish date'
-    public static final String FIELD_SPEAKERS = 'speaker(s)'
+    public static final String FIELD_OCI_SPEAKERS = 'OCI speaker(s)'
+    public static final String FIELD_GUEST_SPEAKERS = 'Guest Speakers'
     public static final String FIELD_PRACTICE_AREA = 'practice area'
     public static final String TABLE_PRACTICE_AREAS = 'Practice Areas'
     public static final String TABLE_FOCUS = 'Focus'
-    public static final String TABLE_SMES = 'SMEs'
+    public static final String TABLE_OCI_TEAM = 'OCI Team'
+    public static final String TABLE_GUEST_SPEAKERS = 'Guest Speakers'
     public static final String FIELD_STATUS = 'status'
     public static final String STATUS_SCHEDULED = 'scheduled'
     public static final String FIELD_EVENTS = 'events'
@@ -57,16 +59,26 @@ class GrailsAirtable {
             Event e = new Event()
             e.link = record.fields[FIELD_LINK] ?: record.fields[FIELD_LINK_OCI]
             e.location = record.fields[FIELD_LOCATION]
-            e.name = record.fields[FIELD_NAME_LOWERCASE]
+            e.name = record.fields[FIELD_EVENT_NAME]
             e.date = LocalDate.of(d.substring(0, 4) as Integer , d.substring(5, 7) as Integer, d.substring(8, 10) as Integer)
-            e.speakers = record.fields[FIELD_SPEAKERS].collect { speakerName(it as String) }
+            List<String> ociSpeakers = record.fields[FIELD_OCI_SPEAKERS].collect { ociSpeakerName(it as String) }
+            List<String> guestSpeakers = record.fields[FIELD_GUEST_SPEAKERS].collect { guestSpeakerName(it as String) }
+            e.speakers = ociSpeakers + guestSpeakers
             e
         }
     }
 
+    String ociSpeakerName(String speakerId) {
+        speakerName(TABLE_OCI_TEAM, speakerId)
+    }
+
+    String guestSpeakerName(String speakerId) {
+        speakerName(TABLE_GUEST_SPEAKERS, speakerId)
+    }
+
     @Memoized
-    String speakerName(String speakerId) {
-        List<Record> records = api.list(TABLE_SMES,
+    String speakerName(String speakerTable, String speakerId) {
+        List<Record> records = api.list(speakerTable,
                 [FIELD_NAME],
                 null,
                 null,

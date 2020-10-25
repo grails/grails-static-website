@@ -294,6 +294,6 @@ releases:
   -
     version: 4.1.0.M2
     publicationDate: Sep 23, 2020
-    -
-      version: 4.0.5
-      publicationDate: Oct 25, 2020
+  -
+    version: 4.0.5
+    publicationDate: Oct 25, 2020

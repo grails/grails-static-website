@@ -212,7 +212,7 @@ class GuidesPage {
             ul(class: 'tagcloud') {
                 tags.sort { Tag a, Tag b -> a.slug <=> b.slug }.each { Tag t ->
                     li(class: "tag${t.ocurrence}") {
-                        a href: "[%url]/tags/${t.slug.toLowerCase()}.html", t.title
+                        a href: "${GUIDES_URL}/tags/${t.slug.toLowerCase()}.html", t.title
                     }
                 }
             }

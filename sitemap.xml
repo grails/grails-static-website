@@ -25,6 +25,9 @@
     <loc>https://grails.org/blog/2016-06-07.html</loc>
   </url>
   <url>
+    <loc>https://grails.org/blog/2020-10-26-grails-foundation-announcement.html</loc>
+  </url>
+  <url>
     <loc>https://grails.org/blog/2016-04-01-2.html</loc>
   </url>
   <url>
@@ -113,6 +116,9 @@
   </url>
   <url>
     <loc>https://grails.org/blog/tag/rest.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/foundation.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/tag/graphql.html</loc>

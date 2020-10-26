@@ -1,0 +1,86 @@
+body.foundation article.content {
+	margin-top: 50px;
+}
+
+section.foundation-description, section.foundation-description p {
+	line-height: 1.5em;
+}
+
+section.foundation-description h2 {
+	margin: 5% 0 3% 0;
+	font-size: 1.3em;
+}
+
+section.foundation-description a {
+	color: #255AA8;
+	text-decoration: none;
+}
+
+section.foundation-description a.button {
+	display: inline-block;
+	font-size: 1.1em;
+	padding: 10px 30px;
+	background: #feb672;
+	color: white;
+	border-color: #feb672;
+	border-radius: 8px;
+	border-style: solid;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+section.foundation-description .emphasis {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+section.foundation-description .quote {
+	font-style: italic;
+	clear: unset;
+	overflow: unset;
+	margin: 0;
+	padding: 0;
+	background-color: unset;
+	border: unset;
+	box-shadow: unset;
+	-webkit-box-shadow: unset;
+}
+
+section.foundation-boards {
+	background-color: white;
+	border-top: 3px solid #feb672;
+}
+
+section.foundation-boards .foundation-logo {
+	padding: 10% 20% 0 20%;
+}
+
+section.foundation-boards .foundation-board-content {
+	padding: 0 15%;
+}
+
+section.foundation-boards .foundation-board-content h2 {
+	margin: 10% 0;
+	color: #feb672;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+.person {
+	margin-bottom: 7%;
+}
+
+.person .name {
+	display: block;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: 600;
+}
+
+.person .title {
+	display: block;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}

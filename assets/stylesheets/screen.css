@@ -1175,6 +1175,7 @@ article.quote h2 {
 		width: 61.8%;
 	}
 
+	.fivecolumns,
 	.fourcolumns,
 	.threecolumns {
 		clear: both;
@@ -1182,18 +1183,25 @@ article.quote h2 {
 		margin: 0;
 		padding: 0;
 	}
+
+	.fivecolumns .column,
 	.fourcolumns .column,
 	.threecolumns .column {
 		float: left;
 		overflow: auto;
 	}
 
+	.fivecolumns .column {
+		width: 18%;
+	}
 	.fourcolumns .column {
 		width: 23%;
 	}
 	.threecolumns .column {
 		width: 31%;
 	}
+
+	.fivecolumns .column,
 	.fourcolumns .column {
 		margin-left: 1%;
 		margin-right: 1%;

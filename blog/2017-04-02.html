@@ -64,8 +64,8 @@
 <p><span class="author">By Søren Berg Glasius &amp; Colin Harrington</span></p>
 <p><span class="date">April 2, 2017</span></p>
 <h2>Introduction</h2>
-<p>When you build and run Grails 3 applications, often you may want to know about the build environment via the running application.</p>
-<p>Since the early days of Grails, we were able to add arbitrary properties to the <code>application.properties</code> file. Grails provides this information through the <code>grails.util.Metadata</code> class, and for views this is easily made available through the tag.</p>
+<p>When you build and run Grails<sup>®</sup> 3 applications, often you may want to know about the build environment via the running application.</p>
+<p>Since the early days of the Grails framework, we were able to add arbitrary properties to the <code>application.properties</code> file. The Grails framework provides this information through the <code>grails.util.Metadata</code> class, and for views this is easily made available through the tag.</p>
 <p>Since Grails 3 is built with <a href="https://gradle.org/">Gradle</a>, the old <code>application.properties</code> is no longer in use. Instead we'll add properties to <code>grails.build.info</code></p>
 <h2>The Basics</h2>
 <p>When you build/run your Grails applications, one of tasks that Gradle always executes is <code>buildProperties</code>. This task takes a small set of build information from your project and places it in a file, which the Grails <code>Metadata</code> class later reads. This file is located in <code>META-INF</code> and is named <code>grails.build.info</code>.</p>
@@ -149,7 +149,7 @@ info.app.grailsVersion=3.2.5
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-26.jpg)'>
   <a href='https://grails.org/blog/2020-10-26-grails-foundation-announcement.html'>
     <h3>October 26, 2020</h3>
-    <h2>Grails Foundation Announced</h2>
+    <h2>Grails® Foundation Announced</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-16.jpg)'>

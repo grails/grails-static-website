@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 04 Dec 2020 10:10:32 GMT</pubDate><item><title>Grails Foundation Announced</title><link>https://grails.org/blog/2020-10-26-grails-foundation-announcement.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 04 Dec 2020 17:49:06 GMT</pubDate><item><title>Grails® Foundation Announced</title><link>https://grails.org/blog/2020-10-26-grails-foundation-announcement.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/foundation.html"><span class="hashtag">#foundation</span></a></p>
-<p>We're pleased to announce the formation of the new Grails Foundation, a not-for-profit company established to support and continue to advance the open source Grails® Framework.</p>
+<p>We're pleased to announce the formation of the new Grails<sup>®</sup> Foundation, a not-for-profit company established to support and continue to advance the open source Grails® Framework.</p>
 <p>The Grails Foundation oversees software roadmap and development, best practices and processes, repository control, documentation and support, and fundraising related to the open source framework.</p>
 <p><a href="https://objectcomputing.com/news/2020/10/26/new-grails-foundation-announced">Continue reading on Object Computing, Inc. (OCI) website</a></p>]]></description><author>Jen Wiese</author><guid>2020-10-26-grails-foundation-announcement</guid><pubDate>Mon, 26 Oct 2020 00:00:00 GMT</pubDate></item><item><title>2GM Town Hall Meeting: 2020 Q4</title><link>https://grails.org/blog/2020-10-16-2gm-town-hall-2020-q4.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
-<p>A big thanks to everyone who joined us for our inaugural 2GM Town Hall webinar. We had a great time and learned about several exciting goings on within the Groovy, Grails, and Micronaut communities. For those of you who missed the live event, the recording is embedded below.</p>
+<p>A big thanks to everyone who joined us for our inaugural 2GM Town Hall webinar. We had a great time and learned about several exciting goings on within the Groovy, Grails<sup>®</sup> framework, and Micronaut communities. For those of you who missed the live event, the recording is embedded below.</p>
 <p>I would like to take this opportunity to thank our fantastic panel of experts:</p>
 <ul>
 <li>James Kleeh, Micronaut Development Lead</li>
@@ -20,19 +20,19 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <p><a href="https://objectcomputing.com/files/3716/0331/1496/2GM_Town_Hall_Deck.pdf">Slides</a></p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/yfY2SBtagYs" frameborder="0"></iframe>]]></description><author>Jen Wiese</author><guid>2020-10-16-2gm-town-hall-2020-q4</guid><pubDate>Fri, 16 Oct 2020 00:00:00 GMT</pubDate></item><item><title>2GM Quarterly Town Hall Meetings</title><link>https://grails.org/blog/2020-10-01-2gm-town-hall.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
-<p>At Object Computing, home to Grails and Micronaut, our core values energize and guide us in all that we do. Those values are:</p>
+<p>At Object Computing, home to the Grails<sup>®</sup> framework and Micronaut, our core values energize and guide us in all that we do. Those values are:</p>
 <ul>
 <li>All of us is better than any one of us.</li>
 <li>Innovate courageously.</li>
 <li>Share it back.</li>
 </ul>
-<p>As part of our commitment to empowering technologists – both within our organization and without – to find inspiration in these values, we invest our resources in open source projects. Through those projects, we have the opportunity to engage with the global open source community, including the Groovy, Grails, and Micronaut communities – communities that are supportive, enthusiastic, creative, and full of thought leaders.</p>
-<p>2GM Town Hall Meetings provide the Groovy, Grails, and Micronaut communities a place to gather once per quarter to review the most up-to-date news and resources available, celebrate accomplishments, ask questions, and participate more fully in the 2GM ecosystems.</p>
+<p>As part of our commitment to empowering technologists – both within our organization and without – to find inspiration in these values, we invest our resources in open source projects. Through those projects, we have the opportunity to engage with the global open source community, including the Groovy, Grails framework, and Micronaut communities – communities that are supportive, enthusiastic, creative, and full of thought leaders.</p>
+<p>2GM Town Hall Meetings provide the Groovy, Grails framework, and Micronaut communities a place to gather once per quarter to review the most up-to-date news and resources available, celebrate accomplishments, ask questions, and participate more fully in the 2GM ecosystems.</p>
 <p>Each Town Hall Meeting is led by a panel of 2GM users, developers, and advocates. Everyone in the 2GM communities is welcome and encouraged to participate.</p>
-<p>We look forward to hearing from you, learning from you, engaging with you, and empowering you to contribute to the community and the frameworks you love.</p>]]></description><author>Jen Wiese</author><guid>2020-10-01-2gm-town-hall</guid><pubDate>Thu, 01 Oct 2020 00:00:00 GMT</pubDate></item><item><title>Grails State of the Union</title><link>https://grails.org/blog/2020-09-10-grails-state-of-union.html</link><description><![CDATA[</p>
+<p>We look forward to hearing from you, learning from you, engaging with you, and empowering you to contribute to the community and the frameworks you love.</p>]]></description><author>Jen Wiese</author><guid>2020-10-01-2gm-town-hall</guid><pubDate>Thu, 01 Oct 2020 00:00:00 GMT</pubDate></item><item><title>Grails® State of the Union</title><link>https://grails.org/blog/2020-09-10-grails-state-of-union.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/micronaut.html"><span class="hashtag">#micronaut</span></a> <a href="https://grails.org/blog/tag/groovy3.html"><span class="hashtag">#groovy3</span></a></p>
-<p>As we approach the fourth quarter of 2020, I wanted to take a few minutes to update everyone in the community on the updates and enhancements coming to the Grails framework.</p>
-<p>In the last few months, the <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails, and Micronaut) team</a> has put a lot of work into the upcoming Grails 4.1 release. We’re excited to share that this release will include support for Apache Groovy 3! Groovy 3 offers a number of <a href="http://groovy-lang.org/releasenotes/groovy-3.0.html">enhancements</a> to the language including method references and a new, more flexible parser. Additionally, Grails 4.1 will support <a href="https://micronaut.io">Micronaut 2.0</a>, Gradle 6.5, and Spring 2.3. We’ve also added improvements to the Grails profiles to support the exclusion of transitive dependencies.</p>
+<p>As we approach the fourth quarter of 2020, I wanted to take a few minutes to update everyone in the community on the updates and enhancements coming to the Grails<sup>®</sup> framework.</p>
+<p>In the last few months, the <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails framework, and Micronaut) team</a> has put a lot of work into the upcoming Grails 4.1 release. We’re excited to share that this release will include support for Apache Groovy 3! Groovy 3 offers a number of <a href="http://groovy-lang.org/releasenotes/groovy-3.0.html">enhancements</a> to the language including method references and a new, more flexible parser. Additionally, Grails 4.1 will support <a href="https://micronaut.io">Micronaut 2.0</a>, Gradle 6.5, and Spring 2.3. We’ve also added improvements to the Grails profiles to support the exclusion of transitive dependencies.</p>
 <p>Apart from this, we've had some minor releases featuring bug fixes and improvements, which include (but are not limited to) the following:</p>
 <ul>
 <li>Loading configurations from plugins</li>
@@ -43,13 +43,13 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <li>Injecting GORM Data Services</li>
 </ul>
 <h2>Developer Productivity FTW!</h2>
-<p>Grails remains an excellent choice for rapidly building web applications. The framework utilizes the power of the Groovy language and offers lots of Groovy DSLs. If you prefer the dynamic nature of Groovy, Grails is an excellent framework for you.</p>
+<p>The Grails framework remains an excellent choice for rapidly building web applications. The framework utilizes the power of the Groovy language and offers lots of Groovy DSLs. If you prefer the dynamic nature of Groovy, the Grails framework is an excellent option for you.</p>
 <p>Other benefits include the following:</p>
 <ul>
-<li>Grails gives you the power to use any Spring library; from Grails 3 forward, the framework is built on top of Spring Boot</li>
+<li>The Grails framework gives you the power to use any Spring library; from Grails 3 forward, the framework is built on top of Spring Boot</li>
 <li>In Grails 4, Micronaut is the parent application, which allows you to use many Micronaut features, including the Micronaut HTTP client, Kafka client, and others in your Grails apps. Due to Micronaut’s avoidance of reflection, you also benefit from a reduced memory footprint and faster start times!</li>
-<li>Grails provides a variety of compelling and powerful features, such as GSP, JSON Views, and more.</li>
-<li>Grails allows you to quickly and easily build an application because it takes advantage of the convention over configuration concept, wherein you:
+<li>The Grails framework provides a variety of compelling and powerful features, such as GSP, JSON Views, and more.</li>
+<li>The Grails framework allows you to quickly and easily build an application because it takes advantage of the convention over configuration concept, wherein you:
 <ul>
 <li>Do not need to use a lot of annotations, such as Controller, Service, etc.</li>
 <li>Do not need to specify every URL mapping</li>
@@ -58,13 +58,13 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 </ul>
 </li>
 </ul>
-<p>While the parent context in Grails 4 is Micronaut, it is worth noting that not all Micronaut features are supported in Grails at this time.  These include:</p>
+<p>While the parent context in Grails 4 is Micronaut, it is worth noting that not all Micronaut features are supported in the Grails framework at this time.  These include:</p>
 <ul>
 <li>Anything that has to do with the server, such as tracing, Micronaut controllers, etc.</li>
 <li>GraalVM native image support</li>
 <li>Micronaut serverless, AWS Lambda, Functions, GRPC, etc.</li>
 </ul>
-<p>As the Grails framework continues to evolve, so does the way that we are using Grails here at Object Computing. As I mentioned above, Grails 4 applications can now use many of Micronaut’s features, including the <a href="https://docs.micronaut.io/latest/guide/index.html#httpClient">HTTP Client</a>. If your application is using the GORM REST Client, we suggest migrating over to the Micronaut HTTP Client.</p>
+<p>As the Grails framework continues to evolve, so does the way that we are using Grails apps here at Object Computing. As I mentioned above, Grails 4 applications can now use many of Micronaut’s features, including the <a href="https://docs.micronaut.io/latest/guide/index.html#httpClient">HTTP Client</a>. If your application is using the GORM REST Client, we suggest migrating over to the Micronaut HTTP Client.</p>
 <p>Also, because Grails 4 now uses Micronaut as the parent context, you can develop integrations for your applications using a <a href="https://docs.micronaut.io/latest/guide/index.html#configurations">Micronaut Configuration</a> where you may have written a Grails plugin in the past. Doing so will enable your Grails application to make use of the new functionality and opens up the opportunity to use the configuration with other non-Grails applications that have been built on Micronaut!</p>
 <h2>Coming Soon</h2>
 <p>In addition to the improvements above, we are planning on a number of additional enhancements including:</p>
@@ -72,14 +72,14 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <li>Native support for web-sockets</li>
 <li>Transaction support in GORM for MongoDB</li>
 <li>Better support for Kafka, such as improvements in the CLI for creating Kafka listeners through the plugin</li>
-<li>Ability to use GSP in Micronaut and Spring Boot applications by making GSP more modular and independent to Grails</li>
+<li>Ability to use GSP in Micronaut and Spring Boot applications by making GSP more modular and independent to the Grails framework</li>
 <li>More Micronaut features, including reduced memory footprints and other benefits</li>
 <li>Support for the latest Groovy and JDK.</li>
 </ul>
 <h2>Thank You</h2>
-<p>The continuing evolution and improvements to the Grails framework wouldn’t be possible without the work and support provided by the vibrant <a href="https://grails.org/community.html">Grails community</a>. If you are new to Grails or are considering it for your next project, please stop by our <a href="https://grails-slack.cfapps.io/">Slack community</a> and say &quot;hello.&quot; We can’t wait to hear about the great applications you're building with Groovy and Grails!</p>]]></description><author>Puneet Behl</author><guid>2020-09-10-grails-state-of-union</guid><pubDate>Thu, 10 Sep 2020 00:00:00 GMT</pubDate></item><item><title>Webinar: Grails 4 Upgrade</title><link>https://grails.org/blog/2019-12-20.html</link><description><![CDATA[</p>
+<p>The continuing evolution and improvements to the Grails framework wouldn’t be possible without the work and support provided by the vibrant <a href="https://grails.org/community.html">Grails community</a>. If you are new to the Grails framework or are considering it for your next project, please stop by our <a href="https://grails-slack.cfapps.io/">Slack community</a> and say &quot;hello.&quot; We can’t wait to hear about the great applications you're building with Groovy and the Grails framework!</p>]]></description><author>Puneet Behl</author><guid>2020-09-10-grails-state-of-union</guid><pubDate>Thu, 10 Sep 2020 00:00:00 GMT</pubDate></item><item><title>Webinar: Grails® 4 Upgrade</title><link>https://grails.org/blog/2019-12-20.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
-<p>Join 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo</a>, for an in-depth demonstration of how to upgrade a Grails 3 application to Grails 4. Sergio also shows you how to benefit from the Micronaut integration available in the new iteration of the framework.</p>
+<p>Join 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo</a>, for an in-depth demonstration of how to upgrade a Grails 3 application to Grails 4. Sergio also shows you how to benefit from the Micronaut integration available in the new iteration of the framework.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
@@ -88,8 +88,8 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <li>Gradle changes</li>
 <li>GORM changes</li>
 <li>Plugin changes</li>
-<li>Grails hot reload</li>
-<li>Micronaut + Grails</li>
+<li>Grails development hot reload</li>
+<li>Micronaut + the Grails framework</li>
 <li>Migration from Rest client builder to Micronaut HTTP client</li>
 </ul>
 <p><a href="https://objectcomputing.com/files/5715/7841/1261/Slide_Deck_Grails_4_Upgrade_Webinar.pdf">Slides</a></p>
@@ -122,9 +122,9 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 </ul>
 <p>Although everyone is welcome, this webinar is most useful to developers who use Java or Groovy (including any of the many projects in the Groovy ecosystem), as well as anyone with an interest in JVM languages. Previous exposure to Groovy is a plus, but no detailed knowledge is assumed.</p>
 <p><a href="https://objectcomputing.com/files/6415/6694/2515/slide_deck_Groovy_3_and_Beyond_webinar.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/FPA_3dXzH7A" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2019-08-27</guid><pubDate>Tue, 27 Aug 2019 00:00:00 GMT</pubDate></item><item><title>Grails 4 GA Released</title><link>https://grails.org/blog/2019-07-11.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/FPA_3dXzH7A" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2019-08-27</guid><pubDate>Tue, 27 Aug 2019 00:00:00 GMT</pubDate></item><item><title>Grails® 4 GA Released</title><link>https://grails.org/blog/2019-07-11.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>After several release candidates and great feedback from the community, the <a href="https://objectcomputing.com/products/2gm-team" title="Grails Team">Grails team</a> at Object Computing, Inc. (OCI) is pleased to announce the GA availability of <a href="https://github.com/grails/grails-core/releases/tag/v4.0.0">Grails 4</a>.</p>
+<p>After several release candidates and great feedback from the community, the <a href="https://objectcomputing.com/products/2gm-team" title="Grails Team">Grails<sup>®</sup> team</a> at Object Computing, Inc. (OCI) is pleased to announce the GA availability of <a href="https://github.com/grails/grails-core/releases/tag/v4.0.0">Grails 4</a>.</p>
 <p>Grails 4 represents a significant upgrade, with the framework now rebased on top of an updated minimum set of dependencies including:</p>
 <ul>
 <li>Spring 5.1</li>
@@ -134,10 +134,10 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <li>Groovy 2.5</li>
 <li>Gradle 5</li>
 </ul>
-<p>In addition, <a href="https://micronaut.io/" title="Micronaut">Micronaut</a> is now included as part of Grails as the parent ApplicationContext, allowing any Micronaut feature, whether it be the declarative HTTP client or the Kafka client, to be used within a Grails 4 application. In fact the <a href="https://docs.micronaut.io/latest/guide/index.html#httpClient">Micronaut HTTP client</a> is now considered the supported HTTP client for use within Grails applications.</p>
-<p>Startup time and memory consumption have also been optimized and improved significantly over previous releases, thanks to changes in both Spring Boot 2.1 and also the migration of some of Grails' internal infrastructure wiring to Micronaut.</p>
+<p>In addition, <a href="https://micronaut.io/" title="Micronaut">Micronaut</a> is now included as part of the Grails framework as the parent ApplicationContext, allowing any Micronaut feature, whether it be the declarative HTTP client or the Kafka client, to be used within a Grails 4 application. In fact the <a href="https://docs.micronaut.io/latest/guide/index.html#httpClient">Micronaut HTTP client</a> is now considered the supported HTTP client for use within Grails applications.</p>
+<p>Startup time and memory consumption have also been optimized and improved significantly over previous releases, thanks to changes in both Spring Boot 2.1 and also the migration of some of the Grails framework's internal infrastructure wiring to Micronaut.</p>
 <p>Many Grails plugins have been verified as working with Grails 4. For those within the Grails plugin community, now is the time to upgrade your plugins and verify they continue to work with Grails 4. As this is a new major version, <a href="http://docs.grails.org/4.0.x/guide/upgrading.html">API changes have been made</a>, as well as changes within Spring Boot, Groovy, and Hibernate that may require changes to work with Grails 4. Please read the <a href="http://docs.grails.org/4.0.x/guide/upgrading.html">upgrade documentation</a> for more information.</p>
-<p>Thanks to all those who contributed to the release, and if you haven't already, do sign up for <a href="https://objectcomputing.com/products/micronaut/community/something-big-is-coming">next week's webinar</a> where we have more exciting announcements related to Grails and Micronaut planned.</p>]]></description><author>Graeme Rocher</author><guid>2019-07-11</guid><pubDate>Thu, 11 Jul 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Using Apache Groovy for Data Science</title><link>https://grails.org/blog/2019-06-18.html</link><description><![CDATA[</p>
+<p>Thanks to all those who contributed to the release, and if you haven't already, do sign up for <a href="https://objectcomputing.com/products/micronaut/community/something-big-is-coming">next week's webinar</a> where we have more exciting announcements related to the Grails framework and Micronaut planned.</p>]]></description><author>Graeme Rocher</author><guid>2019-07-11</guid><pubDate>Thu, 11 Jul 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Using Apache Groovy for Data Science</title><link>https://grails.org/blog/2019-06-18.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/groovy.html"><span class="hashtag">#groovy</span></a></p>
 <p>Apache Groovy is a multi-faceted, multi-paradigm programming language for the JVM that offers a wealth of features that make it ideal for transforming big data into usable solutions.</p>
 <ul>
@@ -147,9 +147,9 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 </ul>
 <p>In this complimentary webinar, <a href="https://objectcomputing.com/products/2gm-team#king">Object Computing Groovy Practice Lead, Paul King</a>, reviews the key benefits of using Groovy to develop data science solutions, including integration with various JDK libraries commonly used in data science solutions.</p>
 <p><a href="https://objectcomputing.com/files/5715/6095/8662/Slide_Deck_Groovy_for_Data_Science_Webinar.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/rixvYN-DCPk" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2019-06-18</guid><pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate></item><item><title>Possible Grails MITM Vulnerability</title><link>https://grails.org/blog/2019-05-30.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/rixvYN-DCPk" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2019-06-18</guid><pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate></item><item><title>Possible Grails® MITM Vulnerability</title><link>https://grails.org/blog/2019-05-30.html</link><description><![CDATA[</p>
 <h2>Introduction</h2>
-<p>In Grails, we have been using Travis to automatically release new versions.</p>
+<p>In the Grails<sup>®</sup> framework, we have been using Travis to automatically release new versions.</p>
 <p>Some time ago, a user <a href="https://github.com/grails/grails-core/issues/11250" title="Issue 11250">opened an issue</a> detailing a possible MITM (Man in the Middle) attack because we were using a non-secured repository as part of the build process.</p>
 <h2>Our Analysis</h2>
 <p>The HTTP repository mentioned before was only used to resolve SDKMan notification service and not for any project dependencies. All project dependencies were resolved with HTTPS.</p>
@@ -159,29 +159,29 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <h2>Assuring This Won't Happen Again</h2>
 <p>We have added a check that will make the build fail if any repository is not secure. You can get more information on this solution <a href="https://github.com/grails/grails-core/blob/master/build.gradle#L597" title="Learn more about this solution">here</a>.</p>
 <h2>Steps for Users</h2>
-<p>No action is necessary. The issue was specifically related to the build of the framework itself and not applications built with it. If there were an issue, it would have been introduced in the build of Grails (not your Grails apps), and we have verified that Grails itself was not compromised. Thus, users do not need to verify their own apps because they weren’t resolving dependencies over HTTP. However, in case of doubt, you can upgrade to Grails <code>3.3.10</code>, which includes the applied patch.</p>]]></description><author>Iván López</author><guid>2019-05-30</guid><pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Single-Page Apps Simplified with Grails and Vue.js</title><link>https://grails.org/blog/2019-05-24.html</link><description><![CDATA[</p>
+<p>No action is necessary. The issue was specifically related to the build of the framework itself and not applications built with it. If there were an issue, it would have been introduced in the build of the Grails framework (not your Grails apps), and we have verified that Grails code itself was not compromised. Thus, users do not need to verify their own apps because they weren’t resolving dependencies over HTTP. However, in case of doubt, you can upgrade to Grails <code>3.3.10</code>, which includes the applied patch.</p>]]></description><author>Iván López</author><guid>2019-05-30</guid><pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Single-Page Apps Simplified with the Grails® framework and Vue.js</title><link>https://grails.org/blog/2019-05-24.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
 <p>Vue.js is a modern, pragmatic JavaScript library designed for building user interfaces. Vue borrows good ideas from React and Angular, then adds a slew of features to enhance developer experience and productivity. Interest in Vue is through the roof, and for good reason.</p>
-<p>Grails includes a Vue profile for building applications with a Vue front-end. In addition, Grails offers several features that make it an ideal back-end framework for single-page apps (SPAs), including JSON views and JWT authentication with the Spring Security REST plugin.</p>
-<p>In this webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#klein-z">Zachary Klein</a>, introduces the Vue.js library and walks you through a Grails project using Vue, REST, and JWT security. He completes the demonstration by demonstrating the steps necessary to build an executable JAR file with Grails and Vue.</p>
+<p>The Grails<sup>®</sup> framework includes a Vue profile for building applications with a Vue front-end. In addition, the Grails framework offers several features that make it an ideal back-end framework for single-page apps (SPAs), including JSON views and JWT authentication with the Spring Security REST plugin.</p>
+<p>In this webinar, 2GM (Groovy, Grails framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#klein-z">Zachary Klein</a>, introduces the Vue.js library and walks you through a Grails project using Vue, REST, and JWT security. He completes the demonstration by demonstrating the steps necessary to build an executable JAR file with the Grails framework and Vue.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
 <li>Introduction to Vue.js</li>
-<li>Overview of the Vue profile for Grails</li>
+<li>Overview of the Vue profile for the Grails framework</li>
 <li>Overview of Spring Security REST with JWT</li>
-<li>Demonstration of how to implement JWT security with Grails and Vue</li>
-<li>Demonstration of a sample project using Grails and Vue</li>
+<li>Demonstration of how to implement JWT security with the Grails framework and Vue</li>
+<li>Demonstration of a sample project using the Grails framework and Vue</li>
 <li>Demonstration of an executable JAR build with Gradle</li>
 </ul>
-<p>This is a great opportunity for Grails developers to add a new skill to their coding toolboxes! General web and JVM developers are also encouraged to discover what Grails has to offer modern web development practices.</p>
+<p>This is a great opportunity for Grails developers to add a new skill to their coding toolboxes! General web and JVM developers are also encouraged to discover what the Grails framework has to offer modern web development practices.</p>
 <p><a href="https://objectcomputing.com/files/4215/5872/4980/Slide_Deck_SPAs_with_Grails_and_Vue_Webinar.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/eSNYhZeTmWg" frameborder="0"></iframe>]]></description><author>Zachary Klein</author><guid>2019-05-24</guid><pubDate>Fri, 24 May 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Introducing Grails 4: Upgrades and New Features</title><link>https://grails.org/blog/2019-03-27.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/eSNYhZeTmWg" frameborder="0"></iframe>]]></description><author>Zachary Klein</author><guid>2019-05-24</guid><pubDate>Fri, 24 May 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Introducing Grails® 4: Upgrades and New Features</title><link>https://grails.org/blog/2019-03-27.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
-<p>This webinar provides an introduction to the latest iteration of Grails.</p>
+<p>This webinar provides an introduction to the latest iteration of the Grails<sup>®</sup> framework.</p>
 <h2>Overview</h2>
 <p>The first milestone of Grails 4 was released in February 2019, and further milestones and release candidates are forthcoming, pending community feedback.</p>
-<p>This webinar, hosted by 2GM (Groovy, Grails, and Micronaut) team member <a href="https://objectcomputing.com/products/2gm-team#kleeh">James Kleeh</a>, provides Grails users a summary of the new features they can expect in Grails 4 (including Micronaut integration!) and a good idea of what to expect regarding the upgrade process.</p>
+<p>This webinar, hosted by 2GM (Groovy, Grails framework, and Micronaut) team member <a href="https://objectcomputing.com/products/2gm-team#kleeh">James Kleeh</a>, provides Grails users a summary of the new features they can expect in Grails 4 (including Micronaut integration!) and a good idea of what to expect regarding the upgrade process.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
@@ -192,9 +192,9 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <li>What to expect from the upgrade effort going forward</li>
 </ul>
 <p><a href="https://objectcomputing.com/files/9715/5371/5835/Slide_Deck_Introducing_Grails_4_Webinar.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/EVA_pIrjVdo" frameborder="0"></iframe>]]></description><author>James Kleeh</author><guid>2019-03-27</guid><pubDate>Wed, 27 Mar 2019 00:00:00 GMT</pubDate></item><item><title>Grails 4 Milestone 1 Released</title><link>https://grails.org/blog/2019-02-19.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/EVA_pIrjVdo" frameborder="0"></iframe>]]></description><author>James Kleeh</author><guid>2019-03-27</guid><pubDate>Wed, 27 Mar 2019 00:00:00 GMT</pubDate></item><item><title>Grails® 4 Milestone 1 Released</title><link>https://grails.org/blog/2019-02-19.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>The <a href="https://objectcomputing.com/products/2gm-team" title="Grails Team">Grails team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the availability of the <a href="https://github.com/grails/grails-core/releases/tag/v4.0.0.M1">first milestone of Grails 4</a>.</p>
+<p>The <a href="https://objectcomputing.com/products/2gm-team" title="Grails Team">Grails<sup>®</sup> team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the availability of the <a href="https://github.com/grails/grails-core/releases/tag/v4.0.0.M1">first milestone of Grails 4</a>.</p>
 <p>Grails 4 represents a significant upgrade with the framework now rebased on top of an updated minimum set of dependencies including:</p>
 <ul>
 <li>Spring 5.1</li>
@@ -203,12 +203,12 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <li>Hibernate 5.4</li>
 <li>Groovy 2.5</li>
 </ul>
-<p>In addition, <a href="https://micronaut.io/" title="Micronaut">Micronaut</a> is now included as part of Grails as the parent ApplicationContext, allowing any Micronaut feature, whether it be the declarative HTTP client or the Kafka client, to be used within a Grails 4 application.</p>
-<p>Startup time and memory consumption have also been optimized and improved significantly over previous releases, thanks to changes in both Spring Boot 2.1 and also the migration of some of Grails' internal infrastructure wiring to Micronaut.</p>
+<p>In addition, <a href="https://micronaut.io/" title="Micronaut">Micronaut</a> is now included as part of the Grails framework as the parent ApplicationContext, allowing any Micronaut feature, whether it be the declarative HTTP client or the Kafka client, to be used within a Grails 4 application.</p>
+<p>Startup time and memory consumption have also been optimized and improved significantly over previous releases, thanks to changes in both Spring Boot 2.1 and also the migration of some of the Grails framework's internal infrastructure wiring to Micronaut.</p>
 <p>Many Grails plugins have been verified as working with Grails 4, and for those within the Grails plugin community, now is the time to upgrade your plugins and verify the plugins continue to work with Grails 4. As this is a new major version, <a href="http://docs.grails.org/4.0.x/guide/upgrading.html">API changes have been made</a>, as well as changes within Spring Boot, Groovy, and Hibernate that may require changes to work with Grails 4. Please read the <a href="http://docs.grails.org/4.0.x/guide/upgrading.html">upgrade documentation</a> for more information.</p>
-<p>Thanks to all those who contributed to the release, and we look forward to your feedback and to seeing you at Devnexus 2019.</p>]]></description><author>Graeme Rocher</author><guid>2019-02-19</guid><pubDate>Tue, 19 Feb 2019 00:00:00 GMT</pubDate></item><item><title>Quickcast #12: Building Grails Applications with Gradle</title><link>https://grails.org/blog/2019-01-30.html</link><description><![CDATA[</p>
+<p>Thanks to all those who contributed to the release, and we look forward to your feedback and to seeing you at Devnexus 2019.</p>]]></description><author>Graeme Rocher</author><guid>2019-02-19</guid><pubDate>Tue, 19 Feb 2019 00:00:00 GMT</pubDate></item><item><title>Quickcast #12: Building Grails® Applications with Gradle</title><link>https://grails.org/blog/2019-01-30.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this Grails Quickcast, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo</a>, explores Grails integration with the Gradle build tool.</p>
+<p>In this Grails<sup>®</sup> Quickcast, 2GM (Groovy, Grails framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo</a>, explores Grails integration with the Gradle build tool.</p>
 <p>In this 25-minute tutorial, Sergio:</p>
 <ul>
 <li>Explains the Gradle wrapper-related files</li>
@@ -219,7 +219,7 @@ David has contributed to so many plugins over the years, he has lost count! Whic
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/-h3YfHbGkvA" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2019-01-30</guid><pubDate>Wed, 30 Jan 2019 00:00:00 GMT</pubDate></item><item><title>SDKMAN! with Travis</title><link>https://grails.org/blog/2019-01-07.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>The <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails, and Micronaut) team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) uses <a href="https://travis-ci.org/">Travis CI</a> and <a href="https://sdkman.io/">SDKMAN!</a> daily.</p>
+<p>The <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) uses <a href="https://travis-ci.org/">Travis CI</a> and <a href="https://sdkman.io/">SDKMAN!</a> daily.</p>
 <p>Using SDKMAN! in Travis is possible and opens a lot of possibilities.</p>
 <p>The following <code>.travis.yml</code> file will install SDKMAN! and create a Grails app using the latest version available.</p>
 <pre><code class="language-bash">install: true
@@ -231,26 +231,26 @@ script:
   - echo sdkman_auto_answer=true &gt; ~/.sdkman/etc/config
   - source &quot;/home/travis/.sdkman/bin/sdkman-init.sh&quot;
   - sdk install grails
-</code></pre>]]></description><author>Sergio del Amo Caballero</author><guid>2019-01-07</guid><pubDate>Mon, 07 Jan 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Introduction to Grails Multi-Tenancy</title><link>https://grails.org/blog/2018-10-12.html</link><description><![CDATA[</p>
+</code></pre>]]></description><author>Sergio del Amo Caballero</author><guid>2019-01-07</guid><pubDate>Mon, 07 Jan 2019 00:00:00 GMT</pubDate></item><item><title>Webinar: Introduction to Grails® Multi-Tenancy</title><link>https://grails.org/blog/2018-10-12.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
 <h2>Overview</h2>
-<p>In this webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo Caballero</a>, demonstrates the multi-tenancy capabilities built into Grails and GORM.</p>
+<p>In this webinar, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo Caballero</a>, demonstrates the multi-tenancy capabilities built into the Grails framework and GORM.</p>
 <p>Multi-tenancy, as it relates to software development, is when a single instance of an application is used to service multiple clients (tenants) in such a way that each tenant's data is isolated from the other. Among other things, multi-tenancy enables you to build software as a service (SaaS) applications.</p>
-<p>Grails developers interested in learning how to integrate multi-tenancy in their applications will get an introduction to Grails' multi-tenancy capabilities and an in-depth demonstration of how to implement this powerful functionality.</p>
+<p>Grails developers interested in learning how to integrate multi-tenancy in their applications will get an introduction to the Grails framework's multi-tenancy capabilities and an in-depth demonstration of how to implement this powerful functionality.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
 <li>Supported multi-tenancy modes (database, schema, discriminator)</li>
-<li>Grails' built-in tenant resolver</li>
+<li>The Grails framework's built-in tenant resolver</li>
 <li>How to build your own tenant resolver</li>
 <li>How to build a custom tenant resolver by logged-in user</li>
 <li>How to configure datasources dynamically while using database multi-tenancy</li>
 </ul>
 <p>This webinar is an excellent learning opportunity for Grails developers who wish to gain an understanding of Grails multi-tenancy capabilities and the possibilities therein.</p>
 <p><a href="https://objectcomputing.com/files/4915/6624/8967/slide_deck_Micronaut_Multitenancy.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/ypVirnPo4y4" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2018-10-12</guid><pubDate>Fri, 12 Oct 2018 00:00:00 GMT</pubDate></item><item><title>Grails Domain Read-Only Attribute</title><link>https://grails.org/blog/2018-10-02.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/ypVirnPo4y4" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2018-10-12</guid><pubDate>Fri, 12 Oct 2018 00:00:00 GMT</pubDate></item><item><title>Grails® Domain Read-Only Attribute</title><link>https://grails.org/blog/2018-10-02.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a></p>
-<p>Recently I encountered a situation with a client Grails application that required a read-only domain attribute. The application had a backend table where one column (call it <code>A</code>) was populated strictly by a batch database process. The table needed to be mapped to a Grails domain class. Certain columns (call them <code>B through D</code>) were to be updated from the UI. Attribute <code>A</code> should not be writable, but needed to be accessed for read-only operations.</p>
+<p>Recently I encountered a situation with a client Grails<sup>®</sup> application that required a read-only domain attribute. The application had a backend table where one column (call it <code>A</code>) was populated strictly by a batch database process. The table needed to be mapped to a Grails domain class. Certain columns (call them <code>B through D</code>) were to be updated from the UI. Attribute <code>A</code> should not be writable, but needed to be accessed for read-only operations.</p>
 <h2>The Problem</h2>
 <p>The catch here is when an update occurs on a mapped domain class, GORM with Hibernate issues an update on all columns, regardless of which columns have a value change. So even if attribute <code>B</code> is changed, an update will be issued on all columns <code>A through D</code>. If the database is configured with a specific column as read-only, you will get an error along the lines of: &quot;failure to insert into a read-only column&quot;.</p>
 <p>We propose two solutions:</p>
@@ -315,7 +315,7 @@ class Team {
 </code></pre>]]></description><author>Nirav Assar</author><guid>2018-10-02</guid><pubDate>Tue, 02 Oct 2018 00:00:00 GMT</pubDate></item><item><title>Security Vulnerability in Asset-Pipeline and Jetty</title><link>https://grails.org/blog/2018-09-23.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
 <h2>Introduction</h2>
-<p><a href="https://grails.org/plugin/asset-pipeline">Asset-pipeline</a> has been the default plugin for handling static assets in a Grails web application since Grails 2.4.0. A security vulnerability that involves asset-pipeline and Jetty has been identified.</p>
+<p><a href="https://grails.org/plugin/asset-pipeline">Asset-pipeline</a> has been the default plugin for handling static assets in a Grails<sup>®</sup> web application since Grails 2.4.0. A security vulnerability that involves asset-pipeline and Jetty has been identified.</p>
 <h2>Affected Versions</h2>
 <p>The vulnerability affects all asset-pipeline users that deploy Grails applications in Jetty, and it allows directory traversal and download any file knowing its specific directory.</p>
 <h2>Reproducing The Issue</h2>
@@ -333,13 +333,13 @@ class Team {
 <li>2.14.1.1 for Grails 2.x</li>
 <li>2.15.1 for Grails 3 and Java 7</li>
 <li>3.0.6 for Grails 3 and Java 8</li>
-</ul>]]></description><author>Iván López</author><guid>2018-09-23</guid><pubDate>Sun, 23 Sep 2018 00:00:00 GMT</pubDate></item><item><title>Quickcast #11: Grails Profiling with YourKit</title><link>https://grails.org/blog/2018-08-22-2.html</link><description><![CDATA[</p>
+</ul>]]></description><author>Iván López</author><guid>2018-09-23</guid><pubDate>Sun, 23 Sep 2018 00:00:00 GMT</pubDate></item><item><title>Quickcast #11: Grails® Profiling with YourKit</title><link>https://grails.org/blog/2018-08-22-2.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a> <a href="https://grails.org/blog/tag/yourkit.html"><span class="hashtag">#yourkit</span></a></p>
-<p>In this Quickcast, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#assar">Nirav Assar</a>, demonstrates how to use YourKit to profile a Grails application and spot CPU problems and heap and garbage collection issues.</p>
+<p>In this Quickcast, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#assar">Nirav Assar</a>, demonstrates how to use YourKit to profile a Grails application and spot CPU problems and heap and garbage collection issues.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/NJ_T5g4bBeY" frameborder="0"></iframe>]]></description><author>Nirav Assar</author><guid>2018-08-22-2</guid><pubDate>Wed, 22 Aug 2018 00:00:00 GMT</pubDate></item><item><title>Quickcast #10: Debugging Grails</title><link>https://grails.org/blog/2018-08-22-1.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/NJ_T5g4bBeY" frameborder="0"></iframe>]]></description><author>Nirav Assar</author><guid>2018-08-22-2</guid><pubDate>Wed, 22 Aug 2018 00:00:00 GMT</pubDate></item><item><title>Quickcast #10: Debugging Grails® Apps</title><link>https://grails.org/blog/2018-08-22-1.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this 13-minute Quickcast, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#lopez">Iván López</a>, demonstrates a variety of ways to debug Grails core code and the Grails CLI (command line interface). Developers may use these tips to fix issues or contribute enhancements to the core Grails framework.</p>
+<p>In this 13-minute Quickcast, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#lopez">Iván López</a>, demonstrates a variety of ways to debug Grails core code and the Grails CLI (command line interface). Developers may use these tips to fix issues or contribute enhancements to the core Grails framework.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/y69Cr_hYUCA" frameborder="0"></iframe>]]></description><author>Iván López</author><guid>2018-08-22-1</guid><pubDate>Wed, 22 Aug 2018 00:00:00 GMT</pubDate></item><item><title>Mock vs Stub vs Spy</title><link>https://grails.org/blog/2018-06-22.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/spock.html"><span class="hashtag">#spock</span></a></p>
@@ -630,10 +630,10 @@ Moreover, it changes the method implementation to return a different String.
 <li><a href="http://spockframework.org/spock/docs/1.1/all_in_one.html#_interaction_based_testing">http://spockframework.org/spock/docs/1.1/all_in_one.html#_interaction_based_testing</a></li>
 <li><a href="https://martinfowler.com/bliki/UnitTest.html">https://martinfowler.com/bliki/UnitTest.html</a></li>
 <li><a href="https://martinfowler.com/articles/mocksArentStubs.html">https://martinfowler.com/articles/mocksArentStubs.html</a></li>
-</ul>]]></description><author>Dean Del Ponte</author><guid>2018-06-22</guid><pubDate>Fri, 22 Jun 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: I've Seen Grails Code You Wouldn't Believe</title><link>https://grails.org/blog/2018-06-15.html</link><description><![CDATA[</p>
+</ul>]]></description><author>Dean Del Ponte</author><guid>2018-06-22</guid><pubDate>Fri, 22 Jun 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: I've Seen Grails® Code You Wouldn't Believe</title><link>https://grails.org/blog/2018-06-15.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
 <h2>Overview</h2>
-<p>&quot;I’ve seen Grails code you wouldn’t believe …</p>
+<p>&quot;I’ve seen Grails<sup>®</sup> code you wouldn’t believe …</p>
 <p>… or how to properly write maintainable Grails applications&quot;</p>
 <p>Over the years, Iván López has built a lot of different Grails applications, and he's learned from his mistakes. As an experienced Grails developer, Iván now possesses a vast amount of knowledge about how to avoid problems and pitfalls in future projects.</p>
 <p>For over a year, Iván has been sharing his hard-won expertise with others, so they can benefit from his experience and write more maintainable code that's easy to read and modify.</p>
@@ -662,15 +662,15 @@ Moreover, it changes the method implementation to return a different String.
 <p>Finally, when everything is done, I start up the application to make sure that everything works as expected (and it should because I have tests for everything).</p>
 <p><strong>Q:</strong> I’ve noticed a lot of auto-generated code when I’m single stepping through code (e.g., transactional wrappers). Any advice on best practice for avoiding this kind of overhead?</p>
 <p><strong>A:</strong> Most of that code is because of the Spring Framework. Since Grails 3, we rely a lot on AST transformations and traits to generate code during compilation to avoid that overhead.</p>
-<p>For example, Grails @Transactional is done at compile time vs. Spring @Transactional that relies on runtime proxies. The &quot;problem&quot; is that both Spring and Hibernate use runtime proxies and runtime reflection, so you can't get rid of all those wrappers.</p>
+<p>For example, the Grails @Transactional annotation is applied at compile time vs. Spring @Transactional that relies on runtime proxies. The &quot;problem&quot; is that both Spring and Hibernate use runtime proxies and runtime reflection, so you can't get rid of all those wrappers.</p>
 <p>If you want to avoid runtime proxies, I would suggest you take a look at <a href="https://micronaut.io/">Micronaut</a>. :)</p>
 <p><a href="https://objectcomputing.com/files/7815/2933/9902/180615_Grails_Code_Webinar_slidedeck.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/lZX_lL7cxHE" frameborder="0"></iframe>]]></description><author>Iván López</author><guid>2018-06-15</guid><pubDate>Fri, 15 Jun 2018 00:00:00 GMT</pubDate></item><item><title>Grails Mock Logging</title><link>https://grails.org/blog/2018-05-24.html</link><description><![CDATA[</p>
-<p>In Grails 3 applications, logging is handled by the <a href="https://docs.grails.org/latest/guide/conf.html#logging">Logback logging framework</a>. Grails artifacts are configured with logging out of the box. The developer simply invokes <code>log.info(&quot;log whatever&quot;)</code> and it works. But how do we create unit tests that assert that logs occur with the appropriate level?</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/lZX_lL7cxHE" frameborder="0"></iframe>]]></description><author>Iván López</author><guid>2018-06-15</guid><pubDate>Fri, 15 Jun 2018 00:00:00 GMT</pubDate></item><item><title>Grails® Mock Logging</title><link>https://grails.org/blog/2018-05-24.html</link><description><![CDATA[</p>
+<p>In Grails<sup>®</sup> 3 applications, logging is handled by the <a href="https://docs.grails.org/latest/guide/conf.html#logging">Logback logging framework</a>. Grails artifacts are configured with logging out of the box. The developer simply invokes <code>log.info(&quot;log whatever&quot;)</code> and it works. But how do we create unit tests that assert that logs occur with the appropriate level?</p>
 <p>This blog will highlight some mock logging techniques and when to use them.</p>
 <h2>Default Grails Logging in Unit Tests</h2>
-<p>First let's get the obvious out of the way for clarity. If you are not concerned about testing how logs operate in your application, there is no reason to worry about mocking loggers in Grails.</p>
-<p>Since the logger is already present in Grails controllers, services, and domain objects there is no need to mock the logger when running unit tests. When a unit test is run with <a href="https://testing.grails.org/latest/guide/index.html">Grail Testing Support</a>, the logger will execute just as in does in production mode. In this scenario, we can say the logger as already &quot;mocked&quot; for the purpose of focusing on the <a href="http://wiki.c2.com/?ClassUnderTest">Class Under Test</a>. This is distinct from the scenario of actually verifying logging occurs, which we will dive into next.</p>
+<p>First let's get the obvious out of the way for clarity. If you are not concerned about testing how logs operate in your application, there is no reason to worry about mocking loggers in Grails apps.</p>
+<p>Since the logger is already present in Grails controllers, services, and domain objects there is no need to mock the logger when running unit tests. When a unit test is run with <a href="https://testing.grails.org/latest/guide/index.html">Grails Testing Support</a>, the logger will execute just as in does in production mode. In this scenario, we can say the logger as already &quot;mocked&quot; for the purpose of focusing on the <a href="http://wiki.c2.com/?ClassUnderTest">Class Under Test</a>. This is distinct from the scenario of actually verifying logging occurs, which we will dive into next.</p>
 <h2>Verify Logging with Tests</h2>
 <p>What if we want to assert that a certain log occurs with a particular log level? For example, let's say we want to test that that the method below prints friendly advice based on the <code>age</code> parameter.</p>
 <pre><code class="language-groovy">package mock.logging
@@ -693,8 +693,8 @@ class AgeService {
 </code></pre>
 <p>In this scenario we need to mock the logger and capture the message passed in. Then we can assert that the message is correct and also assert the appropriate log level was used in each scenario. Conceptually, this is pretty easy. But in practice not so much.</p>
 <h2>Why Not Use Spock?</h2>
-<p>One would think that we should simply mock out the logger with <code>def mockLogger = Mock(Logger)</code>, then set the service in the unit test with <code>service.log = mockLogger</code>. We could proceed to check the arguments passed in and also the number of times <code>service.log</code> is called with spock programming. However, in Grails we run into a few basic problems while trying to mock with native spock or even <a href="http://groovy-lang.org/testing.html#_mockfor_and_stubfor">Groovy MockFor</a>.</p>
-<p>Logback is the default framework and the <a href="https://logback.qos.ch/apidocs/ch/qos/logback/classic/Logger.html">Logger</a> is <code>final</code>. We cannot mock a final class. Furthermore, the injected <code>log</code>property in Grails artefacts is a read-only property and cannot be set. These two fundamental problems prohibit spock mocks from being effective in most mock logging situations in Grails.</p>
+<p>One would think that we should simply mock out the logger with <code>def mockLogger = Mock(Logger)</code>, then set the service in the unit test with <code>service.log = mockLogger</code>. We could proceed to check the arguments passed in and also the number of times <code>service.log</code> is called with spock programming. However, in Grails apps we run into a few basic problems while trying to mock with native spock or even <a href="http://groovy-lang.org/testing.html#_mockfor_and_stubfor">Groovy MockFor</a>.</p>
+<p>Logback is the default framework and the <a href="https://logback.qos.ch/apidocs/ch/qos/logback/classic/Logger.html">Logger</a> is <code>final</code>. We cannot mock a final class. Furthermore, the injected <code>log</code>property in Grails artifacts is a read-only property and cannot be set. These two fundamental problems prohibit spock mocks from being effective in most mock logging situations in Grails apps.</p>
 <h2>Use Mockito to Verify Log Events</h2>
 <p>The <a href="http://site.mockito.org/">Mockito</a> Library can be used to verify logs take place. With Mockito, we can create a mock <code>Appender</code> class, attach it to the logger, and then use an <code>ArgumentCaptor</code> to capture the invocations sent to the logger.</p>
 <p>build.gradle</p>
@@ -727,7 +727,7 @@ class AgeService {
     }
 </code></pre>
 <h2>Use Slf4j Test to Verify Log Events</h2>
-<p><a href="http://projects.lidalia.org.uk/slf4j-test/">Slf4j Test</a> is a test implementation of Slf4j that stores log messages in memory and provides messages for retrieving them. This works nicely to substitute for the real implementation in the test environment of Grails.</p>
+<p><a href="http://projects.lidalia.org.uk/slf4j-test/">Slf4j Test</a> is a test implementation of Slf4j that stores log messages in memory and provides messages for retrieving them. This works nicely to substitute for the real implementation in the test environment of Grails apps.</p>
 <p>In <code>build.gradle</code>, we first need to depend on the jar, and then exclude the real implementation from the test environment. It is quite simple to check the logging events.</p>
 <p>build.gradle</p>
 <pre><code class="language-groovy">dependencies { 
@@ -821,12 +821,12 @@ class DeclaredSlf4jServiceSpec extends Specification {
 <li>JDK9: support, limitations and on-going work</li>
 </ul>
 <p><a href="https://objectcomputing.com/files/7715/2708/5312/180518-Groovy-Update-slide-deck.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/ECZVbiFZPwE" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2018-05-18</guid><pubDate>Fri, 18 May 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Database Migration with Grails 3</title><link>https://grails.org/blog/2018-04-06.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/ECZVbiFZPwE" frameborder="0"></iframe>]]></description><author>Paul King</author><guid>2018-05-18</guid><pubDate>Fri, 18 May 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Database Migration with Grails® 3</title><link>https://grails.org/blog/2018-04-06.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
 <h2>Overview</h2>
 <p>Database migrations are an important facet of web development. Preserving existing data while seamlessly adding new functionality and tables is critical when making incremental database changes to production applications.</p>
 <p>Without a tool to manage database migrations, developers end up cobbling together solutions using manual SQL, error-prone communication processes, and costly risk management strategies.</p>
-<p>In this webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#assar">Nirav Assar</a>, demonstrates how to apply the Grails Database Migration plugin in development and production.</p>
+<p>In this webinar, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#assar">Nirav Assar</a>, demonstrates how to apply the Grails Database Migration plugin in development and production.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
@@ -837,9 +837,9 @@ class DeclaredSlf4jServiceSpec extends Specification {
 <li>Advanced scenarios and best practices</li>
 </ul>
 <p><a href="https://objectcomputing.com/files/2715/2338/5917/180409-Database_Migration_Grails_3_Webinar_Deck.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/rNdfozn7NCs" frameborder="0"></iframe>]]></description><author>Nirav Assar</author><guid>2018-04-06</guid><pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate></item><item><title>Introducing the Grails 3 GORM Logical Delete Plugin</title><link>https://grails.org/blog/2018-04-05.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/rNdfozn7NCs" frameborder="0"></iframe>]]></description><author>Nirav Assar</author><guid>2018-04-06</guid><pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate></item><item><title>Introducing the Grails® 3 GORM Logical Delete Plugin</title><link>https://grails.org/blog/2018-04-05.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a> <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
-<p>Recently our development team came upon the need to develop a Grails 3 plugin that implements logical delete for entities.</p>
+<p>Recently our development team came upon the need to develop a Grails<sup>®</sup> 3 plugin that implements logical delete for entities.</p>
 <p>A &quot;logical&quot; delete (sometimes referred to as a &quot;soft&quot; delete) is a delete that doesn’t actually delete the relevant data but instead marks the data as deleted. Marking the data as deleted has the benefit of excluding the data from queries by default, while still maintaining the ability to retrieve the data when/if necessary. Essentially the plugin offers a mechanism to &quot;hide&quot; domain objects from retrieval. This is useful for retaining data without having it clutter the current set of active data.</p>
 <p>Logical Delete functionality is available in a few Grails 2 plugins. However these implementations rely on filters, ASTs, and runtime metaClass enhancements. We decided to create another implementation of the logical delete using some of latest Grails 3 features such as Traits and Listeners.</p>
 <p>This blog will highlight how to use the plugin and also give some insight into the techniques used under the covers.</p>
@@ -887,7 +887,7 @@ p.delete()
 <p>Note Hibernate Criteria and HQL queries are NOT supported by this plugin as they are ORM implementation specific.</p>
 </blockquote>
 <h2>Behind The Scenes</h2>
-<p>It's beneficial to understand how the plugin is implemented under the covers. We have tried to use the most efficient techniques with Groovy and Grails, which reduces some of the noise and clutter found in previous plugin implementations.</p>
+<p>It's beneficial to understand how the plugin is implemented under the covers. We have tried to use the most efficient techniques with Groovy and the Grails framework, which reduces some of the noise and clutter found in previous plugin implementations.</p>
 <p>In concept, what is occurring is that any domain object can be given a logical delete capability with the attribute <code>deleted</code>. When the entity is logically deleted, it is set to <code>true</code>. It is not physically deleted from persistence. During query time, a query event is intercepted by a listener and the query is altered to only include <code>deleted = false</code> items from the result set. This gives the illusion that the items are not present, but in reality they are just hidden by the query.</p>
 <h2>LogicalDelete</h2>
 <p>The <a href="https://grails-plugins.github.io/gorm-logical-delete/snapshot/api/gorm/logical/delete/LogicalDelete.html"><code>LogicalDelete</code></a> trait makes available a <code>deleted</code> attribute. As stated earlier, an entity can implement this.</p>
@@ -900,8 +900,8 @@ p.delete()
 <p>Take a look and we hope the plugin is useful for your needs.</p>]]></description><author>Nirav Assar</author><guid>2018-04-05</guid><pubDate>Thu, 05 Apr 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Build a Better API with GORM &amp; GraphQL</title><link>https://grails.org/blog/2018-03-09.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a> <a href="https://grails.org/blog/tag/graphql.html"><span class="hashtag">#graphql</span></a></p>
 <h2>Overview</h2>
-<p>GraphQL is an exceptional technology that allows APIs to be more efficient and expressive. GORM is the object relational mapper used by Grails that enables developers to interact with both relational and document databases through the declaration of simple Groovy classes.</p>
-<p>In this 55-minute webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#kleeh">James Kleeh</a>, discusses in depth a new GORM extension and Grails plugin that combine these two great technologies and increase developer productivity.</p>
+<p>GraphQL is an exceptional technology that allows APIs to be more efficient and expressive. GORM is the object relational mapper used by Grails<sup>®</sup> apps that enables developers to interact with both relational and document databases through the declaration of simple Groovy classes.</p>
+<p>In this 55-minute webinar, 2GM (Groovy, Grails framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#kleeh">James Kleeh</a>, discusses in depth a new GORM extension and Grails plugin that combine these two great technologies and increase developer productivity.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar.</p>
 <ul>
@@ -914,13 +914,13 @@ p.delete()
 </ul>
 <p>This webinar is an excellent learning opportunity for developers who wish to improve the efficiency and expressiveness of their APIs.</p>
 <p><a href="https://objectcomputing.com/files/2115/2088/9809/180309-GORM-GraphQL-Webinar-Deck.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/KphmxzIaVf0" frameborder="0"></iframe>]]></description><author>James Kleeh</author><guid>2018-03-09</guid><pubDate>Fri, 09 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Browser Automation Testing with Geb &amp; Grails</title><link>https://grails.org/blog/2018-03-06.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/KphmxzIaVf0" frameborder="0"></iframe>]]></description><author>James Kleeh</author><guid>2018-03-09</guid><pubDate>Fri, 09 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Browser Automation Testing with Geb &amp; the Grails® Framework</title><link>https://grails.org/blog/2018-03-06.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/geb.html"><span class="hashtag">#geb</span></a></p>
-<p>Geb brings together the power of WebDriver, the elegance of jQuery content selection, the robustness of page-object modeling, and the expressiveness of the Groovy language. Together with Spock, Geb is integrated into Grails to ease the creation of functionals/acceptance tests.</p>
+<p>Geb brings together the power of WebDriver, the elegance of jQuery content selection, the robustness of page-object modeling, and the expressiveness of the Groovy language. Together with Spock, Geb integrates into Grails<sup>®</sup> apps to ease the creation of functionals/acceptance tests.</p>
 <p>In this webinar, Geb Lead, Marcin Erdmann, and Grails team member, Sergio del Amo Caballero, discuss how Geb integrates seamlessly into the Grails workflow and how this combination leads to robust and well-tested applications.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/E7zjib3wrxk" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero &amp; Marcin Erdmann</author><guid>2018-03-06</guid><pubDate>Tue, 06 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Grails Development with Groovy Eclipse</title><link>https://grails.org/blog/2018-03-02.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/E7zjib3wrxk" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero &amp; Marcin Erdmann</author><guid>2018-03-06</guid><pubDate>Tue, 06 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Grails® Development with Groovy Eclipse</title><link>https://grails.org/blog/2018-03-02.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/groovy.html"><span class="hashtag">#groovy</span></a> <a href="https://grails.org/blog/tag/eclipse.html"><span class="hashtag">#eclipse</span></a> <a href="https://grails.org/blog/tag/gradle.html"><span class="hashtag">#gradle</span></a></p>
-<p>In this blog post, we show the steps necessary to set up <a href="https://www.eclipse.org">Eclipse IDE</a> to develop Grails 3 applications.</p>
+<p>In this blog post, we show the steps necessary to set up <a href="https://www.eclipse.org">Eclipse IDE</a> to develop Grails<sup>®</sup> 3 applications.</p>
 <h2>Groovy Eclipse</h2>
 <p>First step is to install <a href="http://github.com/groovy/groovy-eclipse">Groovy Eclipse</a>. Check the <a href="https://github.com/groovy/groovy-eclipse/wiki#how-to-install">installation instructions</a>.</p>
 <p>Once, you have set up Groovy Eclipse, set up the compiler to use Groovy 2.4.13; the version used by the latest stable release of Grails 3.3.2.</p>
@@ -957,11 +957,11 @@ p.delete()
 <p>Build your artifacts</p>
 <p><code>./gradlew assemble</code></p>
 <p>Dependency report</p>
-<p><code>./gradlew dependencies</code></p>]]></description><author>Sergio Del Amo Caballero</author><guid>2018-03-02</guid><pubDate>Fri, 02 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Developing React Apps with Grails 3</title><link>https://grails.org/blog/2018-02-09.html</link><description><![CDATA[</p>
+<p><code>./gradlew dependencies</code></p>]]></description><author>Sergio Del Amo Caballero</author><guid>2018-03-02</guid><pubDate>Fri, 02 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Webinar: Developing React Apps with Grails® 3</title><link>https://grails.org/blog/2018-02-09.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/react.html"><span class="hashtag">#react</span></a> <a href="https://grails.org/blog/tag/javascript.html"><span class="hashtag">#javascript</span></a></p>
 <h2>Overview</h2>
 <p>React is the JavaScript view library from our friends at Facebook. Rather than providing a &quot;full-stack framework&quot; for the front end, React focuses entirely on being the 'V' in MVC.</p>
-<p>In this 60-minute webinar, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#klein-z">Zachary Klein</a>, demonstrates how to leverage React in your projects. You'll learn several ways to use these two frameworks together and get an introduction to the React profile for Grails.</p>
+<p>In this 60-minute webinar, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#klein-z">Zachary Klein</a>, demonstrates how to leverage React in your projects. You'll learn several ways to use these two frameworks together and get an introduction to the React profile for Grails apps.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
@@ -971,14 +971,14 @@ p.delete()
 <li>Spring Security REST</li>
 <li>Unified deployment</li>
 </ul>
-<p>This webinar is a useful tutorial for Grails developers interested in adding React or another front-end framework/library to their projects. Front-end developers are also encouraged to discover what Grails has to offer in a modern web development workflow.</p>
+<p>This webinar is a useful tutorial for Grails developers interested in adding React or another front-end framework/library to their projects. Front-end developers are also encouraged to discover what the Grails framework has to offer in a modern web development workflow.</p>
 <p><a href="https://objectcomputing.com/files/9315/1855/8037/2018-02-09-Grails-React-Webinar-Slides.pdf">Slides</a></p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/tjQHQDwaxto" frameborder="0"></iframe>]]></description><author>Zachary Klein</author><guid>2018-02-09</guid><pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate></item><item><title>Quickcast #9: GORM Many-to-One Relationship – Replacing a Collection</title><link>https://grails.org/blog/2018-02-08.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
 <p>GORM, a powerful Groovy-based data-access toolkit for the JVM, enables simplified creation of many-to-one relationships.</p>
-<p>In this short video tutorial, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio Del Amo Caballero</a>, explains how to efficiently replace a many-to-one collection with a minimal number of queries and by leveraging cascade behavior.</p>
+<p>In this short video tutorial, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio Del Amo Caballero</a>, explains how to efficiently replace a many-to-one collection with a minimal number of queries and by leveraging cascade behavior.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/7Ypy6osALxY" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2018-02-08</guid><pubDate>Thu, 08 Feb 2018 00:00:00 GMT</pubDate></item><item><title>Grails Test Leakage</title><link>https://grails.org/blog/2017-12-05.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/7Ypy6osALxY" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2018-02-08</guid><pubDate>Thu, 08 Feb 2018 00:00:00 GMT</pubDate></item><item><title>Grails® Test Leakage</title><link>https://grails.org/blog/2017-12-05.html</link><description><![CDATA[</p>
 <p>From Rob Fletcher book, <a href="http://shop.oreilly.com/product/0636920038597.do">Spock: Up and Running</a></p>
 <blockquote>
 <p>TEST LEAKAGE</p>
@@ -986,7 +986,7 @@ p.delete()
 Test leakage is caused by badly managed resources. Typical causes of leakage include data in a persistent store that is not removed, changes to a class’ metaclass that are unexpectedly still in place later, mocks injected into objects reused between tests, and uncontrolled changes to global state such as the system clock.
 Test leakage can be very difficult to track down. Simply identifying which test is leaking can be time consuming. For example, the leaking test might not affect the one running directly after it, or continuous integration servers might run test suites in a different order from that of the developer’s computers, leading to protests of but, it works on my machine!”</p>
 </blockquote>
-<p>In this blog post, we discuss how to avoid test leakage in Grails integration and functional tests. In particular, <em>data in a persistent store that is not removed</em>.</p>
+<p>In this blog post, we discuss how to avoid test leakage in Grails<sup>®</sup> integration and functional tests. In particular, <em>data in a persistent store that is not removed</em>.</p>
 <p>Lets us create a simple Grails App:</p>
 <pre><code>curl -O start.grails.org/myapp.zip -d version=3.3.2 -d profile=rest-api
 </code></pre>
@@ -1172,15 +1172,15 @@ class BookResourceSpec extends Specification {
 </code></pre>
 <p>To sump up, be careful when writing integration and functional tests to avoid test leakage.
 While <code>@Rollback</code> annotation may help you in integration tests, you will need to
-manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-12-05</guid><pubDate>Tue, 05 Dec 2017 00:00:00 GMT</pubDate></item><item><title>Eric Helgeson Named 2017 Grails Rock Star</title><link>https://grails.org/blog/2017-11-30.html</link><description><![CDATA[</p>
-<p>The Grails Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.</p>
+manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-12-05</guid><pubDate>Tue, 05 Dec 2017 00:00:00 GMT</pubDate></item><item><title>Eric Helgeson Named 2017 Grails® Rock Star</title><link>https://grails.org/blog/2017-11-30.html</link><description><![CDATA[</p>
+<p>The Grails<sup>®</sup> Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.</p>
 <p>Yesterday at <a href="https://g3summit.com/">G3 Summit 2017</a>, Eric Helgeson was awarded the Grails Rock Star Award. Eric is the author of the book <a href="https://www.grails3book.com/">Practical Grails 3</a>, and he is often seen in the <a href="https://grails.slack.com/">Grails Slack Community</a> answering and helping other users. Moreover, Eric contributes to the Grails Community with code, plugin development, issues reporting, etc.</p>
-<p>Also, Graeme Rocher and Jeff Scott Brown, Grails co-founders, were awarded Grails lifetime contributor awards for their contributions in the past decade to the framework success.</p>
+<p>Also, Graeme Rocher and Jeff Scott Brown, Grails framework co-founders, were awarded Grails lifetime contributor awards for their contributions in the past decade to the framework success.</p>
 <p><strong>Congratulations to Eric, Graeme, and Jeff for these well deserved awards.</strong></p>
-<p><img src="2017-11-30-img01.png" alt="Eric Helgeson, Graeme Rocher, and Jeff Scott Brown were honored at G3 Summit 2017 for their contributions to the Grails framework." /></p>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-11-30</guid><pubDate>Thu, 30 Nov 2017 00:00:00 GMT</pubDate></item><item><title>Grails React Profiles</title><link>https://grails.org/blog/2017-11-21.html</link><description><![CDATA[</p>
+<p><img src="2017-11-30-img01.png" alt="Eric Helgeson, Graeme Rocher, and Jeff Scott Brown were honored at G3 Summit 2017 for their contributions to the Grails framework." /></p>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-11-30</guid><pubDate>Thu, 30 Nov 2017 00:00:00 GMT</pubDate></item><item><title>Grails® React Profiles</title><link>https://grails.org/blog/2017-11-21.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/react.html"><span class="hashtag">#react</span></a></p>
-<p>As of Grails 3.3.2, there are now two distinct <a href="https://docs.grails.org/latest/guide/profiles.html">Profiles</a> for using <a href="https://reactjs.org/">React</a> in your Grails projects. These profiles are essentially the same as those described in the <a href="http://grailsblog.objectcomputing.com/posts/2016/11/14/introducing-the-react-profile-for-grails.html">announcement post</a>, with some updates.</p>
-<h2>React-Webpack Profile for Grails</h2>
+<p>As of Grails<sup>®</sup> 3.3.2, there are now two distinct <a href="https://docs.grails.org/latest/guide/profiles.html">Profiles</a> for using <a href="https://reactjs.org/">React</a> in your Grails projects. These profiles are essentially the same as those described in the <a href="http://grailsblog.objectcomputing.com/posts/2016/11/14/introducing-the-react-profile-for-grails.html">announcement post</a>, with some updates.</p>
+<h2>React-Webpack Profile for Grails apps</h2>
 <p>This profile provides a monolithic project structure with React code embedded within the Grails project. Formerly, to use this version of the profile you had to specific it's version explictly. Now, this profile can be used when creating a new Grails 3.3.2 app like so:</p>
 <pre><code>grails create-app myapp -profile react-weback
 </code></pre>
@@ -1206,17 +1206,17 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
     yarnVersion = '1.3.2'
     download = false
 </code></pre>
-<p>You can now run the tests either using <code>./gradlew client:test</code>, or <code>yarn test</code>.</p>]]></description><author>Zachary Klein</author><guid>2017-11-21</guid><pubDate>Tue, 21 Nov 2017 00:00:00 GMT</pubDate></item><item><title>Webinar: Grails 3 for Spring Developers</title><link>https://grails.org/blog/2017-11-09.html</link><description><![CDATA[</p>
+<p>You can now run the tests either using <code>./gradlew client:test</code>, or <code>yarn test</code>.</p>]]></description><author>Zachary Klein</author><guid>2017-11-21</guid><pubDate>Tue, 21 Nov 2017 00:00:00 GMT</pubDate></item><item><title>Webinar: Grails® 3 for Spring Developers</title><link>https://grails.org/blog/2017-11-09.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
 <h2>Overview</h2>
-<p>Grails 3 is a full stack framework built on top of Spring Boot. In addition to all of the capabilities offered by Boot, developers using Grails 3 benefit from the enormous productivity gains and other features (e.g., GORM, Profiles, etc.) that Grails 3 packs in!</p>
-<p>In this webinar, Spring Developer Advocate, Josh Long (@starbuxman), and Grails co-founder, Jeff Scott Brown (@jeffscottbrown), introduce the Grails framework from the perspective of a Spring developer and demonstrate how these awesome technologies play so well together.</p>
+<p>Grails<sup>®</sup> 3 is a full stack framework built on top of Spring Boot. In addition to all of the capabilities offered by Boot, developers using Grails 3 benefit from the enormous productivity gains and other features (e.g., GORM, Profiles, etc.) that Grails 3 packs in!</p>
+<p>In this webinar, Spring Developer Advocate, Josh Long (@starbuxman), and Grails framework co-founder, Jeff Scott Brown (@jeffscottbrown), introduce the Grails framework from the perspective of a Spring developer and demonstrate how these awesome technologies play so well together.</p>
 <p>The session will be of interest to anyone looking to build robust JVM web applications with high productivity, while keeping the application code expressive and simple.</p>
-<p>Grails developers will find many interesting tips and tricks during the demonstrations but no prior experience with Grails is necessary.</p>
+<p>Grails developers will find many interesting tips and tricks during the demonstrations but no prior experience with the Grails framework is necessary.</p>
 <h2>Outline</h2>
 <p>The following topics are covered in this webinar:</p>
 <ul>
-<li>Quick Intro to Spring &amp; Grails</li>
+<li>Quick Intro to Spring &amp; the Grails framework</li>
 <li>REST</li>
 <li>JSON views</li>
 <li>Testing</li>
@@ -1225,28 +1225,28 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
 <li>Deployment</li>
 <li>Customizing Spring Boot in a Grails app</li>
 </ul>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/71Avk4IcEPs" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown &amp; Josh Long</author><guid>2017-11-09</guid><pubDate>Thu, 09 Nov 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #8: Grails React Profile</title><link>https://grails.org/blog/2017-10-30.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/71Avk4IcEPs" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown &amp; Josh Long</author><guid>2017-11-09</guid><pubDate>Thu, 09 Nov 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #8: Grails® React Profile</title><link>https://grails.org/blog/2017-10-30.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a> <a href="https://grails.org/blog/tag/react.html"><span class="hashtag">#react</span></a></p>
-<p>In this short video tutorial, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#klein-z">Zachary Klein</a>, demonstrates how to use the Grails 3 React profile to build Grails applications with a React frontend.</p>
+<p>In this short video tutorial, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#klein-z">Zachary Klein</a>, demonstrates how to use the Grails 3 React profile to build Grails applications with a React frontend.</p>
 <p>In particular, Zak shows you how to create a single project build, which allows you to mix React code with common Grails-view technologies, such as GSP.</p>
 <p>Moreover, he discusses the different Gradle tasks bundled with the profile and the typical workflow you may use while using it.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/JVLn7kWkjp0" frameborder="0"></iframe>]]></description><author>Zachary Klein</author><guid>2017-10-30</guid><pubDate>Mon, 30 Oct 2017 00:00:00 GMT</pubDate></item><item><title>Grails 3.3 GA Released</title><link>https://grails.org/blog/2017-07-26.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/JVLn7kWkjp0" frameborder="0"></iframe>]]></description><author>Zachary Klein</author><guid>2017-10-30</guid><pubDate>Mon, 30 Oct 2017 00:00:00 GMT</pubDate></item><item><title>Grails® 3.3 GA Released</title><link>https://grails.org/blog/2017-07-26.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>Just in time for <a href="http://gr8conf.us/">Gr8Conf US</a>, the <a href="https://objectcomputing.com/products/2gm-team">Grails team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the release of <a href="http://docs.grails.org/3.3.x/">Grails 3.3 GA</a>.</p>
+<p>Just in time for <a href="http://gr8conf.us/">Gr8Conf US</a>, the <a href="https://objectcomputing.com/products/2gm-team">Grails<sup>®</sup> team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the release of <a href="http://docs.grails.org/3.3.x/">Grails 3.3 GA</a>.</p>
 <p>Grails 3.3 includes a number of significant improvements, most notably to GORM with GORM 6.1, which we <a href="https://github.com/objectcomputing/grails-team-blog/blob/gh-pages/posts/2017/03/27/gorm-6.1-released.html">released earlier</a> in order to gather feedback from Grails 3.2.x users.</p>
 <p>GORM 6.1 includes some real breakthrough innovations, including <a href="http://gorm.grails.org/6.1.x/hibernate/manual/index.html#dataServices">Data Services</a> that allow you to define interfaces that are automatically implemented and work seamlessly with GORM's multi-tenancy features.</p>
 <p>Other highlights of Grails 3.3 include the new <a href="https://async.grails.org/latest/guide/index.html#events">EventBus</a> abstraction which integrates with existing reactive libraries such as RxJava. Events are also for the first time transaction aware so that consumers are only notified if the surrounding transaction is successful, which simplifies code greatly.</p>
 <p>Overall there is an abundance of new features and improvements that developers will be able to take advantage of, from the <a href="http://testing.grails.org/">new testing framework</a> to improvemments to <a href="http://views.grails.org/latest/">JSON Views</a>.</p>
-<p>All of these new features and more are covered in the <a href="http://docs.grails.org/3.3.x/guide/introduction.html#whatsNew">What's New guide</a>. Thanks to the Grails community who contributed greatly to making the release a success and we look forward <a href="https://github.com/grails/grails-core/issues">to your feedback</a>!</p>]]></description><author>Graeme Rocher</author><guid>2017-07-26</guid><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #7: Logging with Grails 3</title><link>https://grails.org/blog/2017-07-12.html</link><description><![CDATA[</p>
+<p>All of these new features and more are covered in the <a href="http://docs.grails.org/3.3.x/guide/introduction.html#whatsNew">What's New guide</a>. Thanks to the Grails community who contributed greatly to making the release a success and we look forward <a href="https://github.com/grails/grails-core/issues">to your feedback</a>!</p>]]></description><author>Graeme Rocher</author><guid>2017-07-26</guid><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #7: Logging with Grails® 3</title><link>https://grails.org/blog/2017-07-12.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this 20-minute video, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo Caballero</a>, introduces several tips and tricks related to logging with a Grails 3 application.</p>
+<p>In this 20-minute video, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#caballero">Sergio del Amo Caballero</a>, introduces several tips and tricks related to logging with a Grails 3 application.</p>
 <p>Sergio discusses changes to logger names in Grails 3.3 and things to bear in mind when logging in Grails artifacts and Groovy POGOs.</p>
 <p>Moreover, he explains the benefits of using Slf4j, parameterized logging, how to configure rolling logging, how to use an external configuration file, and more.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/3TppFy3lq1A" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2017-07-12</guid><pubDate>Wed, 12 Jul 2017 00:00:00 GMT</pubDate></item><item><title>Running a Grails 3 App With a Self-Signed SSL Certificate</title><link>https://grails.org/blog/2017-06-28.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/3TppFy3lq1A" frameborder="0"></iframe>]]></description><author>Sergio del Amo Caballero</author><guid>2017-07-12</guid><pubDate>Wed, 12 Jul 2017 00:00:00 GMT</pubDate></item><item><title>Running a Grails® 3 App With a Self-Signed SSL Certificate</title><link>https://grails.org/blog/2017-06-28.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/ssl.html"><span class="hashtag">#ssl</span></a> <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>The <a href="http://docs.grails.org/latest/ref/Command%20Line/run-app.html">Grails <em>run-app</em> command documentation</a> describes how to use the <em>-https</em> flag to serve your app over HTTPS.</p>
+<p>The <a href="http://docs.grails.org/latest/ref/Command%20Line/run-app.html">Grails<sup>®</sup> <em>run-app</em> command documentation</a> describes how to use the <em>-https</em> flag to serve your app over HTTPS.</p>
 <blockquote>
 <p>https - Start an HTTPS server (on port 8443 by default) alongside the main server. Just to be clear, the application will be accessible via HTTPS and HTTP. A self-signed key will be generated. Intended for development use only.</p>
 </blockquote>
@@ -1269,7 +1269,7 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
 </ul>
 <p>You can learn about other <code>req</code> options by running <code>man req</code></p>
 <p>The previous command will prompt you to supply metadata about the certificate, such as Country, Organization, etc. Moreover, it will ask you to provide a PEM pass phrase. Enter a random password and keep it safe; we will need in the next step.</p>
-<p>Now you have you self-signed certificate. Unfortunately Grails (and Spring Boot) doesn’t support the PEM format directly. Instead, we need to use the PKCS12 format for our keys. Fortunately, there is another <code>openssl</code> command to make the conversion:</p>
+<p>Now you have you self-signed certificate. Unfortunately the Grails framework (and Spring Boot) doesn’t support the PEM format directly. Instead, we need to use the PKCS12 format for our keys. Fortunately, there is another <code>openssl</code> command to make the conversion:</p>
 <p><code>openssl pkcs12 -export -in cert.pem -inkey key.pem -out keystore.p12 -name tomcat -caname root</code></p>
 <p>Again, we're using a few options:</p>
 <ul>
@@ -1321,7 +1321,7 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
 <p>Groovy has less ceremony than Java. That's crystal-clear in exception handling. Java forces us to handle checked exceptions. Groovy does not force us to handle exceptions that we don't want to handle or that are inappropriate at the current level of code. Any exception we don't handle is automatically passed on to a higher level.</p>
 </blockquote>
 <p>Although the distinction between checked exceptions and runtime exceptions in Groovy is blurred, <strong>GORM versions before 6.0.0 did not roll back transactions for checked <code>Exceptions</code></strong>. However, they rollbacked transactions for runtime exceptions.</p>
-<p>Grails 3.2.0 shipped with GORM 6.0.0. One of the changes introduced by GORM 6.0.0 is that if a transactional method throws an <code>Exception</code> (both checked or runtime exception), the transaction will automatically be rolled back. Thus, same behavior for checked and runtime exceptions as you may expect in Groovy.</p>
+<p>Grails<sup>®</sup> 3.2.0 shipped with GORM 6.0.0. One of the changes introduced by GORM 6.0.0 is that if a transactional method throws an <code>Exception</code> (both checked or runtime exception), the transaction will automatically be rolled back. Thus, same behavior for checked and runtime exceptions as you may expect in Groovy.</p>
 <p>The previous behavior is better illustrated  with an example:</p>
 <p>Given a Checked Exception</p>
 <pre><code class="language-groovy">package demo
@@ -1414,13 +1414,13 @@ class BookServiceIntegrationSpec extends Specification {
         bookService.count() == old(bookService.count())
     }
 }
-</code></pre>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-06-27</guid><pubDate>Tue, 27 Jun 2017 00:00:00 GMT</pubDate></item><item><title>Why You Should Avoid Using Autowiring for Grails Domain Classes</title><link>https://grails.org/blog/2017-05-09.html</link><description><![CDATA[</p>
+</code></pre>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-06-27</guid><pubDate>Tue, 27 Jun 2017 00:00:00 GMT</pubDate></item><item><title>Why You Should Avoid Using Autowiring for Grails® Domain Classes</title><link>https://grails.org/blog/2017-05-09.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a></p>
 <p>You should not inject services into a domain class.</p>
 <p>Why?</p>
 <p>Autowiring a service into a domain class can have a big performance impact.</p>
 <p>Imagine you query 1,000 records from a database, and those records are mapped into a GORM entities. Injecting a service into each of those 1,000 GORM entities will have a performance cost.</p>
-<p>Thus, <a href="https://github.com/grails/grails-core/releases/tag/v3.2.8">starting with Grails 3.2.8</a> auto wiring of GORM entities is disabled when you create an app from scratch. In Grails 3.3.0 or above it is disabled by default.</p>
+<p>Thus, <a href="https://github.com/grails/grails-core/releases/tag/v3.2.8">starting with Grails<sup>®</sup> 3.2.8</a> auto wiring of GORM entities is disabled when you create an app from scratch. In Grails 3.3.0 or above it is disabled by default.</p>
 <p>Let me illustrate this with an example.</p>
 <p>The following code will not get the service <em>greetingService</em> injected into a domain class unless you enable auto wiring.</p>
 <pre><code class="language-groovy">package demo
@@ -1483,9 +1483,9 @@ class HelloController {
         autowire: true
 </code></pre>
 <p><strong>If Spring autowiring of domain instances is enabled, read performance will degrade.</strong></p>
-<p>Try to avoid the injection of services in domain classes. Grails has an excellent services layer. You should place your business logic there.</p>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-05-09</guid><pubDate>Tue, 09 May 2017 00:00:00 GMT</pubDate></item><item><title>Grails Angular Profiles</title><link>https://grails.org/blog/2017-04-12.html</link><description><![CDATA[</p>
+<p>Try to avoid the injection of services in domain classes. the Grails framework has an excellent services layer. You should place your business logic there.</p>]]></description><author>Sergio Del Amo Caballero</author><guid>2017-05-09</guid><pubDate>Tue, 09 May 2017 00:00:00 GMT</pubDate></item><item><title>Grails® Angular Profiles</title><link>https://grails.org/blog/2017-04-12.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/angular.html"><span class="hashtag">#angular</span></a></p>
-<p>In order to be consistent with the Angular team's guidelines on naming conventions, we have renamed the Angular profiles that Grails provides. This change will take affect in Grails 3.2.9. Any existing applications will not be impacted by this change. This will only affect your project if you create a new application with Grails 3.2.9 or above, or if you upgrade an existing application.</p>
+<p>In order to be consistent with the Angular team's guidelines on naming conventions, we have renamed the Angular profiles that the Grails<sup>®</sup> framework provides. This change will take affect in Grails 3.2.9. Any existing applications will not be impacted by this change. This will only affect your project if you create a new application with Grails 3.2.9 or above, or if you upgrade an existing application.</p>
 <p>Previously we had:</p>
 <table>
 <thead>
@@ -1516,7 +1516,7 @@ class HelloController {
     profile org.grails.profiles:angular
 }
 </code></pre>
-<p>Since Grails manages the version of the profile for you, if you were to upgrade to a newer version of Grails, you will get the newer version of the angular profile. That means that previously you had the Angular 1.x profile and after upgrading, you will have the Angular 4.x profile.</p>
+<p>Since the Grails framework manages the version of the profile for you, if you were to upgrade to a newer version of the Grails framework, you will get the newer version of the angular profile. That means that previously you had the Angular 1.x profile and after upgrading, you will have the Angular 4.x profile.</p>
 <p>Fortunately the change will not change the behavior of your application in any way. The only problem you may encounter is if you attempt to use the commands provided by the AngularJS profile. You will find the commands (<code>create-ng-controller</code>, <code>create-ng-directive</code>, etc) won't work as they exist in the &quot;angularjs&quot; profile, while you have the &quot;angular&quot; profile.</p>
 <p>To get the commands working again, simply change the dependency to &quot;angularjs&quot;.</p>
 <pre><code class="language-groovy">dependencies {
@@ -1528,7 +1528,7 @@ class HelloController {
     profile: angular //Change to &quot;angularjs&quot;
 </code></pre>
 <h3><a href="https://github.com/grails-profiles/angular">Angular2 Profile</a></h3>
-<p>If you have an existing application with the &quot;angular2&quot; profile and you upgrade to Grails 3.2.9 and above, you will find Gradle can't find the dependency because Grails is no longer providing a version for that dependency. To fix the problem, simply change the dependency in <code>build.gradle</code>.</p>
+<p>If you have an existing application with the &quot;angular2&quot; profile and you upgrade to Grails 3.2.9 and above, you will find Gradle can't find the dependency because the Grails framework is no longer providing a version for that dependency. To fix the problem, simply change the dependency in <code>build.gradle</code>.</p>
 <pre><code class="language-groovy"> dependencies {
      profile org.grails.profiles:angular2  //Change to &quot;angular&quot;
  }
@@ -1590,8 +1590,8 @@ dependencies {
 <h2>Conclusion</h2>
 <p>The goal of this change was to make determining which profile/scaffolding plugin should be used less confusing in the future. If you encounter any problems as a result of this change that were not expected, please file an issue.</p>]]></description><author>James Kleeh</author><guid>2017-04-12</guid><pubDate>Wed, 12 Apr 2017 00:00:00 GMT</pubDate></item><item><title>How to Add Build Info to Your Project</title><link>https://grails.org/blog/2017-04-02.html</link><description><![CDATA[</p>
 <h2>Introduction</h2>
-<p>When you build and run Grails 3 applications, often you may want to know about the build environment via the running application.</p>
-<p>Since the early days of Grails, we were able to add arbitrary properties to the <code>application.properties</code> file. Grails provides this information through the <code>grails.util.Metadata</code> class, and for views this is easily made available through the tag.</p>
+<p>When you build and run Grails<sup>®</sup> 3 applications, often you may want to know about the build environment via the running application.</p>
+<p>Since the early days of the Grails framework, we were able to add arbitrary properties to the <code>application.properties</code> file. The Grails framework provides this information through the <code>grails.util.Metadata</code> class, and for views this is easily made available through the tag.</p>
 <p>Since Grails 3 is built with <a href="https://gradle.org/">Gradle</a>, the old <code>application.properties</code> is no longer in use. Instead we'll add properties to <code>grails.build.info</code></p>
 <h2>The Basics</h2>
 <p>When you build/run your Grails applications, one of tasks that Gradle always executes is <code>buildProperties</code>. This task takes a small set of build information from your project and places it in a file, which the Grails <code>Metadata</code> class later reads. This file is located in <code>META-INF</code> and is named <code>grails.build.info</code>.</p>
@@ -1669,7 +1669,7 @@ info.app.grailsVersion=3.2.5
 <h2>Conclusion</h2>
 <p>This blog-post shows how you can easily add build information to your Grails 3 application by leveraging the tasks already available within the Gradle build, and how you can show them in your application.</p>]]></description><author>Søren Berg Glasius &amp; Colin Harrington</author><guid>2017-04-02</guid><pubDate>Sun, 02 Apr 2017 00:00:00 GMT</pubDate></item><item><title>GORM 6.1 Released</title><link>https://grails.org/blog/2017-03-27.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>Today, <a href="https://objectcomputing.com/products/2gm-team">the Grails team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the release of <a href="http://gorm.grails.org/6.1.x/">GORM 6.1 GA</a>.</p>
+<p>Today, <a href="https://objectcomputing.com/products/2gm-team">the Grails<sup>®</sup> team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the release of <a href="http://gorm.grails.org/6.1.x/">GORM 6.1 GA</a>.</p>
 <p>This release includes <a href="http://gorm.grails.org/latest/whatsNew/manual/index.html">a number of new and exciting features</a> that we are happy to share with you today. Notably:</p>
 <ul>
 <li><a href="http://gorm.grails.org/6.1.x/hibernate/manual/index.html#dataServices">GORM Data Services</a> allow you to easily define interfaces or abstract classes that are automatically implemented for you at compile time.</li>
@@ -1692,31 +1692,31 @@ info.app.grailsVersion=3.2.5
 <p>GORM 6.1 will become the default version of GORM to be used in the upcoming Grails 3.3, in the meantime you can use GORM 6.1 in Grails 3.2 simply by changing the <code>gormVersion</code> setting in <code>gradle.properties</code>:</p>
 <pre><code class="language-groovy">gormVersion=6.1.0.RELEASE
 </code></pre>
-<p>To celebrate the release we have prepared the first of a series of new guides to cover GORM 6.1. Among the many new features are huge improvements to support Neo4j. Using the official Neo4j sample application, the new guide describes how you can <a href="http://guides.grails.org/neo4j-movies/guide/index.html">build a graph application with Grails, GORM 6.1 and Neo4j</a>! Enjoy!</p>]]></description><author>Graeme Rocher</author><guid>2017-03-27</guid><pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #5: Retrieving Runtime Config Values in Grails 3</title><link>https://grails.org/blog/2017-01-20-3.html</link><description><![CDATA[</p>
+<p>To celebrate the release we have prepared the first of a series of new guides to cover GORM 6.1. Among the many new features are huge improvements to support Neo4j. Using the official Neo4j sample application, the new guide describes how you can <a href="http://guides.grails.org/neo4j-movies/guide/index.html">build a graph application with the Grails framework, GORM 6.1 and Neo4j</a>! Enjoy!</p>]]></description><author>Graeme Rocher</author><guid>2017-03-27</guid><pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #5: Retrieving Runtime Config Values in Grails® 3</title><link>https://grails.org/blog/2017-01-20-3.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this short video tutorial, Grails co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, highlights some of the great features of the Grails Framework.</p>
+<p>In this short video tutorial, Grails<sup>®</sup> framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, highlights some of the great features of the Grails framework.</p>
 <p>In fewer than 18 minutes, Jeff describes several techniques for retrieving configuration values at runtime and discusses the pros and cons of each. Visit <a href="https://objectcomputing.com/news/2016/08/31/retrieving-config-values-grails-3">this Grails blog post</a> for an accompanying article.</p>
-<p>For this Quickcast, you’ll need no more than a basic understanding of Grails.</p>
+<p>For this Quickcast, you’ll need no more than a basic understanding of the Grails framework.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/Qw5hjwT9EOc" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2017-01-20-3</guid><pubDate>Fri, 20 Jan 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #6: Developing Grails 3 Applications with IntelliJ IDEA</title><link>https://grails.org/blog/2017-01-20-4.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/Qw5hjwT9EOc" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2017-01-20-3</guid><pubDate>Fri, 20 Jan 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #6: Developing Grails® 3 Applications with IntelliJ IDEA</title><link>https://grails.org/blog/2017-01-20-4.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>Grails 3 is a high-productivity framework for building web applications for the JVM.</p>
+<p>Grails<sup>®</sup> 3 is a high-productivity framework for building web applications for the JVM.</p>
 <p>IntelliJ IDEA is a high-productivity Integrated Development Environment (IDE) for building a variety of application types. IDEA has always had great support for building Grails applications and, in particular, has the best support of any IDE for developing with Grails 3.</p>
-<p>In this 20-minute video, Grails co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, introduces several tips and tricks related to building Grails 3 applications in IDEA.</p>
+<p>In this 20-minute video, Grails framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, introduces several tips and tricks related to building Grails 3 applications in IDEA.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XsCCsTRdezw" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2017-01-20-4</guid><pubDate>Fri, 20 Jan 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #3: Multi-Project Builds</title><link>https://grails.org/blog/2017-01-20-1.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this video, Grails co-founder Graeme Rocher walks you through multi-project builds in Grails.</p>
-<p>Grails does a few handy things with multi-project builds and plugins, not the least of which being that Grails compiles your plugins first and puts the class and resources of those plugins directly in the classpath. This lets you make changes to your plugins and instantly see those changes in your build.</p>
+<p>In this video, Grails<sup>®</sup> framework co-founder Graeme Rocher walks you through multi-project builds in Grails apps.</p>
+<p>The Grails framework does a few handy things with multi-project builds and plugins, not the least of which being that Grails compiles your plugins first and puts the class and resources of those plugins directly in the classpath. This lets you make changes to your plugins and instantly see those changes in your build.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/yNA0ce5fG9s" frameborder="0"></iframe>]]></description><author>Graeme Rocher</author><guid>2017-01-20-1</guid><pubDate>Fri, 20 Jan 2017 00:00:00 GMT</pubDate></item><item><title>Quickcast #4: Angular Scaffolding</title><link>https://grails.org/blog/2017-01-20-2.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a> <a href="https://grails.org/blog/tag/rest.html"><span class="hashtag">#rest</span></a></p>
-<p>In this Quickcast, 2GM (Groovy, Grails, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#kleeh">James Kleeh</a>, walks you through the process of using the Angular scaffolding for Grails to build a fully functional web app, using a simple blog format for demonstration.</p>
-<p>The tutorial explains how to have Grails set up a REST endpoint and all the Angular modules needed to get the web app running.</p>
+<p>In this Quickcast, 2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team member, <a href="https://objectcomputing.com/products/2gm-team#kleeh">James Kleeh</a>, walks you through the process of using the Angular scaffolding for Grails apps to build a fully functional web app, using a simple blog format for demonstration.</p>
+<p>The tutorial explains how to have the Grails framework set up a REST endpoint and all the Angular modules needed to get the web app running.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/tT4BdlRFAis" frameborder="0"></iframe>]]></description><author>James Kleeh</author><guid>2017-01-20-2</guid><pubDate>Fri, 20 Jan 2017 00:00:00 GMT</pubDate></item><item><title>G3 Summit 2016 Wrap-up!</title><link>https://grails.org/blog/2016-12-14.html</link><description><![CDATA[</p>
 <p><img src="2016-12-14-img01.jpg" alt="The OCI Grails team at G3 Summit 2016" /></p>
-<p>Last month, nearly the entire <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails, and Micronaut) team</a> from [Object Computing, Inc.] (https://objectcomputing.com/) (OCI) converged on Fort Lauderdale for the inaugural edition of the <a href="http://g3summit.com/">G3 Summit</a>, the conference for the Apache Groovy, Grails, and Gradle Community. The event is organized by <a href="https://www.nofluffjuststuff.com/home/main">No Fluff Just Stuff</a> and is a fantastic opportunity for developers to mingle with committers, authors, and project leaders in the greater Groovy community.</p>
+<p>Last month, nearly the entire <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team</a> from [Object Computing, Inc.] (https://objectcomputing.com/) (OCI) converged on Fort Lauderdale for the inaugural edition of the <a href="http://g3summit.com/">G3 Summit</a>, the conference for the Apache Groovy, Grails framework, and Gradle Community. The event is organized by <a href="https://www.nofluffjuststuff.com/home/main">No Fluff Just Stuff</a> and is a fantastic opportunity for developers to mingle with committers, authors, and project leaders in the greater Groovy community.</p>
 <p>OCI team members presented over 30 workshops and breakout sessions during the event, in addition to socializing with attendees between sessions and after hours. We’ve asked a few team members to share their experiences at the conference. We hope you will join us next year!</p>
 <h2>Will Buck, Software Engineer</h2>
 <p>For me, the inaugural G3 Summit was a hit! The Groovy community is always great to get together with and this event was no exception. I thought the Westin Beach in Fort Lauderdale was a fantastic venue with great food, the keynotes were all exciting and informative, and the presentation blocks were all packed with quality information that got me fired up to try things out on personal and work projects.</p>
@@ -1729,7 +1729,7 @@ info.app.grailsVersion=3.2.5
 <li>Magician Michael Carducci making James Kleeh’s ring disappear during his magic routine at the closing happy hour</li>
 <li><a href="https://g3summit.com/conference/fort_lauderdale/2016/11/session?id=38112">The Single-Page Application &quot;breakout&quot; session</a> on Tuesday, which was a great discussion of real problems attendees were having in their workplaces and ways we’d collectively found to solve them. This in particular was huge for me, as a big reason I joined the OCI Grails team was to hear from OSS users and think about ways I could contribute to solutions that anyone could enjoy</li>
 <li><strong>Swimming in the Atlantic</strong> after the conference ended, which I don’t think I’ve ever done</li>
-<li>The mealtime conversations about getting Grails into the workplace, personal stories about life as a software developer, and children’s fascination with Villains (I found another kindred spirit whose daughter wants to be Darth Vader!)</li>
+<li>The mealtime conversations about getting Grails apps into the workplace, personal stories about life as a software developer, and children’s fascination with Villains (I found another kindred spirit whose daughter wants to be Darth Vader!)</li>
 </ul>
 <p>Jay Zimmerman and the NFJS tour crew have the kinks worked out on throwing a great conference event and G3 Summit was no exception. I’d highly recommend this to both regulars of the Groovy community and newcomers interested in learning all the great things in our ecosystem!</p>
 <p><img src="2016-12-14-img03.jpg" alt="One highlight of the conference: swimming in the Atlantic Ocean!" /></p>
@@ -1738,8 +1738,8 @@ info.app.grailsVersion=3.2.5
 <p>I arrived early and had a chance to cruise with Ívan and Álvaro from the OCI Grails Team in a <a href="https://twitter.com/ilopmar/status/802889186906808320">yellow Ford Mustang Convertible</a>.</p>
 <p>But it wasn't all fun and games. The conference was a four-day show of Groovy-ness. The first day was packed with workshops where the attendees had a chance to get in depth knowledge on their favorite G* technology.</p>
 <p>Tuesday kicked off with an insightful keynote by <strong>Guillaume Laforge</strong> covering the current state of <a href="http://groovy-lang.org/">Apache Groovy</a>, followed by Graeme Rocher showing the <a href="http://guides.grails.org/">new Grails Guides portal</a> and the new <a href="http://start.grails.org/#/index">Grails Application Forge</a>. The keynotes were followed by great talks throughout the day.</p>
-<p>On Wednesday I gave two talks: &quot;<a href="https://www.youtube.com/watch?v=ZXRklokhxuE">Get to Know Grails</a>&quot; and &quot;<a href="https://www.youtube.com/watch?v=RuK90qD6RJU">Tour de Plugin</a>,&quot; and on Thursday I gave a talk named &quot;<a href="https://www.youtube.com/watch?v=T0sxNY1_GFg">Fields Plugin - Deep Dive</a>&quot; (see links for screencasts).</p>
-<p>My personal favorite experience was when sat down and talked to a (former?) Ruby on Rails developer, who wanted to start using Grails in his projects. To see the smile on his face when he saw Grails shine and when he realized that the journey from Rails to Grails would be much easier than he had anticipated.</p>
+<p>On Wednesday I gave two talks: &quot;<a href="https://www.youtube.com/watch?v=ZXRklokhxuE">Get to Know the Grails framework</a>&quot; and &quot;<a href="https://www.youtube.com/watch?v=RuK90qD6RJU">Tour de Plugin</a>,&quot; and on Thursday I gave a talk named &quot;<a href="https://www.youtube.com/watch?v=T0sxNY1_GFg">Fields Plugin - Deep Dive</a>&quot; (see links for screencasts).</p>
+<p>My personal favorite experience was when sat down and talked to a (former?) Ruby on Rails developer, who wanted to start using the Grails framework in his projects. To see the smile on his face when he saw Grails apps shine and when he realized that the journey from Rails to Grails apps would be much easier than he had anticipated.</p>
 <p>For me, G3 Summit was well worth the travel from Europe. Thank you to Jay Zimmerman for inviting me to the show, and to his crew who did a great job putting on a great show. I look forward to next year’s edition of G3 Summit.</p>
 <h2>Zachary Klein, Software Engineer</h2>
 <p>The inaugural G3 Summit was a unique and amazing event. The NFJS crew know how to put together a <strong>first-class conference</strong>, and this was no exception. The speaker line-up was very strong, and from the first workshops till the closing sessions there was no shortage of high-quality content.</p>
@@ -1756,7 +1756,7 @@ info.app.grailsVersion=3.2.5
 <p><img src="2016-12-14-img04.jpg" alt="All-Star Panel" /></p>
 <p>The two &quot;all-star&quot; panel discussions were lively and informative, with a wide-range of topics ranging from the future of Groovy/Grails/Gradle to how we as developers can improve our skills and stay abreast of the new developments in our field. Last but not least, the interactions between sessions with attendees and speakers were a fresh and welcome reminder of the strength and welcoming nature of the Groovy community – you’re all a great bunch of folks to work with!</p>
 <h2>Ryan Vanderwerf, Software Engineer</h2>
-<p>SpringOne2GX has turned into G3 Summit! Groovy, Grails and Gradle represent the largest base of G(Groovy)-based tech in the space, but there are so many other projects that are also popular. Jay Zimmerman kicked this one off with his extreme professionalism as all of his NFJS conferences with perfect execution. I was glad to see many new and many familiar faces this year. The venue was nice and right on the beach!</p>
+<p>SpringOne2GX has turned into G3 Summit! Groovy, Grails framework and Gradle represent the largest base of G(Groovy)-based tech in the space, but there are so many other projects that are also popular. Jay Zimmerman kicked this one off with his extreme professionalism as all of his NFJS conferences with perfect execution. I was glad to see many new and many familiar faces this year. The venue was nice and right on the beach!</p>
 <p><img src="2016-12-14-img05.jpg" alt="Ryan Vanderwerf on the beach at G3 Summit 2016" /></p>
 <p>Things were small and friendly which allowed open conversations with everyone at the two mixers/happy hours on the roof top. I stuck my head in on workshop day in all of the rooms, they were very well attended, especially for 7 hour workshops!</p>
 <p>I spent most of my time at Dan Wood’s <a href="https://ratpack.io/">Ratpack</a> workshop. He started off in Java for the first few lessons then went improvisational by switching things to Groovy on the fly. I am sure it was way less typing - but in doing things in Java he removed some magic so you would see what is really going on with the framework. I enjoyed it and learned new things!</p>
@@ -1775,7 +1775,7 @@ info.app.grailsVersion=3.2.5
 <li>Paul King (&quot;Groovy - the Awesome Parts&quot;)</li>
 <li>Jeff Scott Brown (“Runtime Metaprogramming”)</li>
 <li>Ken Kousen (Grails 3 workshop)</li>
-<li>Ivan Lopez (“Dockerize your Grails!”)</li>
+<li>Ivan Lopez (“Dockerize your Grails apps!”)</li>
 <li>Raju Gandi (“Gradle from The Ground Up”)</li>
 </ul>
 <p><img src="2016-12-14-img07.jpg" alt="Jeff Brown presenting Testing Grails 3" /></p>
@@ -1821,7 +1821,7 @@ info.app.grailsVersion=3.2.5
 <li>David Clark on “Modern Groovy DSLs”</li>
 <li>Venkat on Spock</li>
 <li>Jeff Scott Brown on “Restful Grails 3”</li>
-<li>Alvaro on “Grails, Angular and Spring Security”</li>
+<li>Alvaro on “Grails apps, Angular and Spring Security”</li>
 <li>Ethan Hall on Linkedin usage of Gradle</li>
 <li>and yet another informational Q&amp;A Session with SPA (I hung out there to learn myself!)</li>
 </ul>
@@ -1830,13 +1830,13 @@ info.app.grailsVersion=3.2.5
 <ul>
 <li>Dan Woods with &quot;Groovy in the Cloud&quot;</li>
 <li>Ivan Lopez with Groovy Annotations</li>
-<li>Jeff Scott Brown with “Polyglot Development with Grails”</li>
+<li>Jeff Scott Brown with “Polyglot Development with Grails apps”</li>
 <li>Zachary Klein with “Using React and Grails 3”</li>
 <li>Scott Hickey with Mutual of Omaha and Jenkins</li>
 <li>A GORM Q&amp;A Session.</li>
 </ul>
 <p>Last slot of talks I gave a new version of my “Alexa Tell my I’m Groovy” where I shared all of the latest efforts my friend Lee Fox and I did with overhaul of the Java SDK which the Grails Plugin and Lazybones Lambda use to make Skills quickly. I demoed the various types of apps/Skills you can make and shared how I made them.</p>
-<p>David Clark had a “Concurrent Groovy” talk at the same time, Colin Harrington had a talk on “Grails View Layer”, Søren Glasius on “Tour de Plugin”, Zak Klein and Will Buck on “Grails, Gradle and Node.js”, and Grails 3.2 Q&amp;A session.</p>
+<p>David Clark had a “Concurrent Groovy” talk at the same time, Colin Harrington had a talk on “Grails View Layer”, Søren Glasius on “Tour de Plugin”, Zak Klein and Will Buck on “Grails apps, Gradle and Node.js”, and Grails 3.2 Q&amp;A session.</p>
 <p>We wrapped up with a great great “Groovy Puzzlers” Season 3 session with Baruch Sadorgursky and Guillaume Laforge, and finally another nice cocktail reception!</p>
 <p>The last day ended a bit slow, with breakfast and panel discussion, followed by a single slot of sessions.</p>
 <p>I gave my talk &quot;Getting Groovy with Google Glass and Android Wear&quot; - by this time it seems most people went home. However, those who came participated in a great discussion about Glass, Wear, modifying cars, and home automation, which I enjoyed.</p>
@@ -1845,14 +1845,14 @@ info.app.grailsVersion=3.2.5
 <p><img src="2016-12-14-img08.jpg" alt="The OCI Grails team enjoying post-conference feast" /></p>
 <p>Overall it was a great conference and would love to see even more attendance next year. I think the 90 minute format is great for a deeper dive into the tech instead of a overview at 60 minutes. The venue is great for nice weather and folks up north getting a break from the cold.</p>
 <p>The last night several teammates went out for Cuban food, which was delicious! On Friday Ivan, Alvaro and I walked around the marina areas and had a nice Italian lunch before hopping on a plane back to Austin.</p>
-<p>I hope to see everyone and more new faces next year!!!</p>]]></description><author>Will Buck, Ryan Vanderwerf, Zachary Klein, and Søren Berg Glasius</author><guid>2016-12-14</guid><pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate></item><item><title>Introducing the React Profile for Grails</title><link>https://grails.org/blog/2016-11-14.html</link><description><![CDATA[</p>
+<p>I hope to see everyone and more new faces next year!!!</p>]]></description><author>Will Buck, Ryan Vanderwerf, Zachary Klein, and Søren Berg Glasius</author><guid>2016-12-14</guid><pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate></item><item><title>Introducing the React Profile for Grails®</title><link>https://grails.org/blog/2016-11-14.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/react.html"><span class="hashtag">#react</span></a></p>
-<h2>React Profiles for Grails</h2>
+<h2>React Profiles for the Grails<sup>®</sup> framework</h2>
 <p>Grails 3 offers great support for the Angular framework, including the Angular Scaffolding plugin as well as profiles for both Angular 1.x and 2.x. Recently new profiles have been released to provide support for creating React applications with Grails 3.</p>
 <p>This post will cover <em>two new profiles for React</em>, one aimed at monolithic Grails applications, and a second profile which makes use of the brand new <a href="https://github.com/facebookincubator/create-react-app"><code>create-react-app</code> CLI</a> and generates a multi-project client/server structure.</p>
 <p><img src="2016-11-14-img01.png" alt="" /></p>
 <h2>React &amp; Webpack Profiles</h2>
-<p>If you've read the previous post on <a href="URL">Using React with Grails</a>, you've probably noticed that there's quite a bit of wiring that has to happen to get React working properly in the context of a Grails application. This is a place where profiles shine, and now you can get an entire React/Grails project setup immediately upon app generation, including some basic sample React code.</p>
+<p>If you've read the previous post on <a href="http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html">Using React with the Grails framework</a>, you've probably noticed that there's quite a bit of wiring that has to happen to get React working properly in the context of a Grails application. This is a place where profiles shine, and now you can get an entire React/Grails project setup immediately upon app generation, including some basic sample React code.</p>
 <pre><code>grails create-app myReactApp --profile=org.grails.profiles:react:1.0.2
 </code></pre>
 <p>The <code>react:1.x</code> profile is based on another new profile, <code>org.grails.profiles:webpack:1.x</code>.  The <code>webpack</code> profile can be used standalone as well, if you want to use webpack with another JavaScript framework in a Grails project. In addition, the <code>webpack</code> profile offers a single feature which will configure the <code>babel</code> transpiler with support for ES6 - it also includes sample code to demonstrate the feature.</p>
@@ -1916,10 +1916,10 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
 <h2>Links</h2>
 <ul>
 <li><code>create-react-app</code>: <a href="https://github.com/facebookincubator/create-react-app">https://github.com/facebookincubator/create-react-app</a></li>
-<li>&quot;Using React with Grails&quot;: <a href="http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html">http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html</a></li>
-</ul>]]></description><author>Zachary Klein</author><guid>2016-11-14</guid><pubDate>Mon, 14 Nov 2016 00:00:00 GMT</pubDate></item><item><title>Deploying Grails 3.2 to JBoss 7.1 EAP</title><link>https://grails.org/blog/2016-11-10.html</link><description><![CDATA[</p>
+<li>&quot;Using React with the Grails framework&quot;: <a href="http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html">http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html</a></li>
+</ul>]]></description><author>Zachary Klein</author><guid>2016-11-14</guid><pubDate>Mon, 14 Nov 2016 00:00:00 GMT</pubDate></item><item><title>Deploying Grails® 3.2 to JBoss 7.1 EAP</title><link>https://grails.org/blog/2016-11-10.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>Following on from our post describing <a href="">how to deploy Grails 3 to JBoss 6.4 EAP</a>, I recently undertook a new adventure to deploy Grails 3.2.3 to <a href="http://www.jboss.org/">JBoss 7.1 EAP</a>.</p>
+<p>Following on from our post describing <a href="">how to deploy Grails<sup>®</sup> 3 to JBoss 6.4 EAP</a>, I recently undertook a new adventure to deploy Grails 3.2.3 to <a href="http://www.jboss.org/">JBoss 7.1 EAP</a>.</p>
 <p>Like every new version of JBoss there are dependency challenges and tweaks to overcome in order to get to the point where you can deploy an application.</p>
 <h2>Configuring Gradle</h2>
 <p>After you have created a Grails application using the <code>grails create-app</code> command the first thing that needs to be done is to modify the dependencies to versions compatible with JBoss 7.1.</p>
@@ -1932,8 +1932,8 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
 <p>Since the classes within the Tomcat JARs are already provided by Tomcat these should not be included in the WAR. Next you should also specify the Servlet 3.0 API as provided:</p>
 <pre><code class="language-groovy">provided &quot;javax.servlet:javax.servlet-api:3.0.1&quot;
 </code></pre>
-<p>This does two things, firstly it ensures the Servlet API dependencies are not in the WAR and secondly it forces Grails to use Servlet 3.0 instead of the default 3.1.</p>
-<p>The next challenge is the Bean Validation API, in earlier versions of JBoss it was possible to exclude the validation module and ship with a custom version of the Bean Validation API, this no longer seems to be possible with JBoss 7 so you have to downgrade the version of Hibernate Validator used by Grails:</p>
+<p>This does two things, firstly it ensures the Servlet API dependencies are not in the WAR and secondly it forces the Grails framework to use Servlet 3.0 instead of the default 3.1.</p>
+<p>The next challenge is the Bean Validation API, in earlier versions of JBoss it was possible to exclude the validation module and ship with a custom version of the Bean Validation API, this no longer seems to be possible with JBoss 7 so you have to downgrade the version of Hibernate Validator used by the Grails framework:</p>
 <pre><code class="language-groovy">compile &quot;org.hibernate:hibernate-validator:4.3.2.Final&quot;
 </code></pre>
 <p>The JAXB dependency also seems be a required dependency of JBoss 7 so you have to add that:</p>
@@ -1974,7 +1974,7 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
             jndiName: &quot;java:jboss/datasources/MyDataSource&quot;
             dbCreate: none   
 </code></pre>
-<p>Note that you typically do not want Grails to create the schema for you so we set <code>dbCreate</code> to <code>none</code>. You can then run <code>grails schema-export</code> to generate a <code>build/ddl.sql</code> file that you can use to create the database in your production environment.</p>
+<p>Note that you typically do not want the Grails tooling to create the schema for you so we set <code>dbCreate</code> to <code>none</code>. You can then run <code>grails schema-export</code> to generate a <code>build/ddl.sql</code> file that you can use to create the database in your production environment.</p>
 <p>On the JBoss side if you are using standalone deployment, you need to modify the <code>standalone/configuration/standalone.xml</code> file to configure your JNDI datasource. For example for MySQL adding the following section within the <code>&lt;datasources&gt;</code> block will do:</p>
 <pre><code class="language-xml">    &lt;datasource jndi-name=&quot;java:jboss/datasources/MyDataSource&quot; pool-name=&quot;MyDataSource&quot;&gt;
         &lt;connection-url&gt;jdbc:mysql://localhost:3306/my-database&lt;/connection-url&gt;
@@ -2002,13 +2002,13 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
 </code></pre>
 <p>This is apparently <a href="http://stackoverflow.com/questions/13786685/spring3-2-and-jboss-as-7">normal behaviour</a> and can be safely ignored.</p>
 <h2>This Is WAY Too Hard</h2>
-<p>I agree. Deploying to &quot;enterprise&quot; containers is not fun. It can, however, be a requirement where you work. In order to simplify these steps I have created a JBoss 7 profile for Grails that tries to encapsulate all these changes. Simply run:</p>
+<p>I agree. Deploying to &quot;enterprise&quot; containers is not fun. It can, however, be a requirement where you work. In order to simplify these steps I have created a JBoss 7 profile for Grails apps that tries to encapsulate all these changes. Simply run:</p>
 <pre><code class="language-bah">grails create-app myapp --profile org.grails.profiles:web-jboss7:1.0.0.RC1
 </code></pre>
-<p>This will create an application in the <code>myapp</code> directory with all the changes necessary apart from preparing the JNDI datasource. Hopefully the profile encourages more JBoss 7 folks to give Grails a try. Happy deploying!</p>]]></description><author>Graeme Rocher</author><guid>2016-11-10</guid><pubDate>Thu, 10 Nov 2016 00:00:00 GMT</pubDate></item><item><title>Configuring Rolling Logging with Logback</title><link>https://grails.org/blog/2016-11-01.html</link><description><![CDATA[</p>
+<p>This will create an application in the <code>myapp</code> directory with all the changes necessary apart from preparing the JNDI datasource. Hopefully the profile encourages more JBoss 7 folks to give the Grails framework a try. Happy deploying!</p>]]></description><author>Graeme Rocher</author><guid>2016-11-10</guid><pubDate>Thu, 10 Nov 2016 00:00:00 GMT</pubDate></item><item><title>Configuring Rolling Logging with Logback</title><link>https://grails.org/blog/2016-11-01.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/logging.html"><span class="hashtag">#logging</span></a> <a href="https://grails.org/blog/tag/logback.html"><span class="hashtag">#logback</span></a> <a href="https://grails.org/blog/tag/config.html"><span class="hashtag">#config</span></a></p>
-<p>A common requirement in web applications is to support a rolling log system, so that log files are rolled over on a schedule and archived after a certain point. Grails 3 uses Logback (considered the successor to log4j) as its logging library, and it's quite simple to configure a rolling appender using Logback's Groovy config format.</p>
-<p>Grails includes a default Logback configuration at <code>grails-app/conf/logback.groovy</code>. By default (as of Grails 3.2.1), this file (which follows the standard Logback groovy config format) configures a single appender, an instance of <code>ConsoleAppender</code> called <code>STDOUT</code>, and conditionally (when in development mode) an instance of <code>FileAppender</code> called <code>FULL_STACKTRACE</code>. These may then be used by logger instances, which can target specific package names and log levels, and write to one or more appenders. You have access to the Grails <code>Environment</code>, so you can configure different combinations of appenders for development and production.</p>
+<p>A common requirement in web applications is to support a rolling log system, so that log files are rolled over on a schedule and archived after a certain point. Grails<sup>®</sup> 3 uses Logback (considered the successor to log4j) as its logging library, and it's quite simple to configure a rolling appender using Logback's Groovy config format.</p>
+<p>The Grails framework includes a default Logback configuration at <code>grails-app/conf/logback.groovy</code>. By default (as of Grails 3.2.1), this file (which follows the standard Logback groovy config format) configures a single appender, an instance of <code>ConsoleAppender</code> called <code>STDOUT</code>, and conditionally (when in development mode) an instance of <code>FileAppender</code> called <code>FULL_STACKTRACE</code>. These may then be used by logger instances, which can target specific package names and log levels, and write to one or more appenders. You have access to the Grails <code>Environment</code>, so you can configure different combinations of appenders for development and production.</p>
 <p>The default <code>logback.groovy</code> file in Grails 3.2.1 is shown below.</p>
 <pre><code class="language-groovy">//grails-app/confg/logback.groovy
 import grails.util.BuildSettings
@@ -2138,7 +2138,7 @@ else {
 </ul>]]></description><author>Zachary Klein</author><guid>2016-11-01</guid><pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate></item><item><title>How to Use Travis-CI to Build and Deploy Your Plugin</title><link>https://grails.org/blog/2016-10-03.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a> <a href="https://grails.org/blog/tag/travis.html"><span class="hashtag">#travis</span></a></p>
 <h2>Introduction</h2>
-<p>When you create a Grails 3 plugin and you want to share it with the world, wouldn't it be great if building and deploying was taken care of by a CI server?</p>
+<p>When you create a Grails<sup>®</sup> 3 plugin and you want to share it with the world, wouldn't it be great if building and deploying was taken care of by a CI server?</p>
 <p>In this blog I will show you how to set up a Grails Plugin project that will be built and deployed on the <a href="https://travis-ci.org/">Travis-CI infrastructure</a>.</p>
 <p>Let us start out by setting up the project, so that it can be deployed to Bintray. Then we will add a Travis build to the mix. Finally we will explore how to handle snapshot deployment to <a href="https://oss.jfrog.org/">JFrog's open source repository</a>.</p>
 <h2>How Travis-CI Works</h2>
@@ -2384,12 +2384,12 @@ cache:
 </code></pre>
 <p>This will reduce downloads and build time on Travis-CI.</p>
 <h2>Conclusion</h2>
-<p>Travis-CI is a great tool to build and deploy your Grails plugin; it will help you maintain your code when receiving pull requests from the community. Happy CI'ing!</p>]]></description><author>Søren Berg Glasius</author><guid>2016-10-03</guid><pubDate>Mon, 03 Oct 2016 00:00:00 GMT</pubDate></item><item><title>Grails 3.2 and GORM 6.0 Released</title><link>https://grails.org/blog/2016-09-28.html</link><description><![CDATA[</p>
+<p>Travis-CI is a great tool to build and deploy your Grails plugin; it will help you maintain your code when receiving pull requests from the community. Happy CI'ing!</p>]]></description><author>Søren Berg Glasius</author><guid>2016-10-03</guid><pubDate>Mon, 03 Oct 2016 00:00:00 GMT</pubDate></item><item><title>Grails® 3.2 and GORM 6.0 Released</title><link>https://grails.org/blog/2016-09-28.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>Today we are pleased to announce the GA releases of <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0">Grails 3.2</a> and <a href="http://gorm.grails.org/latest/">GORM 6.0</a>.</p>
+<p>Today we are pleased to announce the GA releases of <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0">Grails<sup>®</sup> 3.2</a> and <a href="http://gorm.grails.org/latest/">GORM 6.0</a>.</p>
 <p>Each of these releases represents a significant step forward for the framework and marks the second major release since <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) began sponsoring development.</p>
 <h2>GORM 6.0</h2>
-<p><a href="http://gorm.grails.org/6.0.x">GORM 6.0</a> continues our goal of making GORM a standalone technology that can be used outside of Grails. By separating GORM from the Spring container, it is now easier to bootstrap and use GORM in a range of different scenarios, from Grails to Spring Boot to within a unit test.</p>
+<p><a href="http://gorm.grails.org/6.0.x">GORM 6.0</a> continues our goal of making GORM a standalone technology that can be used outside of the Grails framework. By separating GORM from the Spring container, it is now easier to bootstrap and use GORM in a range of different scenarios, from usage in Grails apps to Spring Boot apps to within a unit test.</p>
 <p>In addition we have addressed often-requested features in GORM including:</p>
 <ul>
 <li>Multiple Data Sources Support for MongoDB and Neo4j</li>
@@ -2416,7 +2416,7 @@ cache:
 <p>Finally, thanks to all those who contributed feedback and issue reports to the release. We look forward to the continued participation of the Grails community as the framework continues to evolve.</p>]]></description><author>Graeme Rocher</author><guid>2016-09-28</guid><pubDate>Wed, 28 Sep 2016 00:00:00 GMT</pubDate></item><item><title>How to Migrate from Resources Plugin to Asset-Pipeline</title><link>https://grails.org/blog/2016-09-12.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
 <h2>Introduction</h2>
-<p>Since Grails 2.4.0, <a href="https://grails.org/plugin/asset-pipeline">asset-pipeline</a> has been the default plugin recommended to manage the static resources in a Grails application. In earlier versions of Grails, the <a href="http://grails.org/plugin/resources">resources</a> plugin was an option, but with Grails 3, the only viable option is using asset-pipeline because resources is not available in Grails 3.</p>
+<p>Since Grails<sup>®</sup> 2.4.0, <a href="https://grails.org/plugin/asset-pipeline">asset-pipeline</a> has been the default plugin recommended to manage the static resources in a Grails application. In earlier versions of the Grails framework, the <a href="http://grails.org/plugin/resources">resources</a> plugin was an option, but with Grails 3, the only viable option is using asset-pipeline because resources is not available in Grails 3.</p>
 <p>If you want to know how to migrate from resources to asset-pipeline, this post is for you.</p>
 <h2>Let's Migrate!</h2>
 <p>I recommend you start the migration analyzing your layouts because probably those files contain most of your static resources (javascripts and css files). Imagine that the content of your <code>main.gsp</code> layout is the following:</p>
@@ -2553,9 +2553,9 @@ cache:
 <p>Effectively, asset-pipeline treats each of the subdirectories of <code>grails-app/assets</code> as another root for locating assets.</p>
 <h2>Conclusion</h2>
 <p>As you have seen in this post, it's pretty simple to organize the static resources using asset-pipeline plugin and migrate from resources.</p>
-<p>If you want to take a closer look to the code, this example application is available <a href="https://github.com/ilopmar/example-asset-pipeline">here</a>.</p>]]></description><author>Iván López</author><guid>2016-09-12</guid><pubDate>Mon, 12 Sep 2016 00:00:00 GMT</pubDate></item><item><title>Retrieving Config Values In Grails 3</title><link>https://grails.org/blog/2016-08-31.html</link><description><![CDATA[</p>
+<p>If you want to take a closer look to the code, this example application is available <a href="https://github.com/ilopmar/example-asset-pipeline">here</a>.</p>]]></description><author>Iván López</author><guid>2016-09-12</guid><pubDate>Mon, 12 Sep 2016 00:00:00 GMT</pubDate></item><item><title>Retrieving Config Values In Grails® 3</title><link>https://grails.org/blog/2016-08-31.html</link><description><![CDATA[</p>
 <h2>Introduction</h2>
-<p>Grails leverages the “Convention Over Configuration” design paradigm, which functions to decrease the number of decisions that a developer using the framework is required to make without losing flexibility. This is one of the ways Grails significantly increases developer productivity!</p>
+<p>The Grails<sup>®</sup> framework leverages the “Convention Over Configuration” design paradigm, which functions to decrease the number of decisions that a developer using the framework is required to make without losing flexibility. This is one of the ways Grails significantly increases developer productivity!</p>
 <p>While Grails applications often involve considerably less configuration than similar applications built with other frameworks, some configuration may still be necessary. This post will detail a number of mechanisms that make it easy for Grails developers gain access to those configuration values at runtime.</p>
 <h3>application.yml</h3>
 <p>The default configuration file for Grails 3 applications is <code>grails-app/conf/application.yml</code>. In this file, <a href="http://www.yaml.org/">YAML</a> syntax is supported.</p>
@@ -2688,14 +2688,14 @@ class WidgetService {
 </code></pre>
 <h2>Conclusion</h2>
 <p>The examples above detail several approaches for retrieving config values at runtime. Grails intentionally provides several options, each with its own strengths and flexibility. Knowing where and when config values need to be accessible will help dictate which approach makes the most sense for a particular use case.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-08-31</guid><pubDate>Wed, 31 Aug 2016 00:00:00 GMT</pubDate></item><item><title>GR8Conf US 2016 Wrap-up!</title><link>https://grails.org/blog/2016-08-01.html</link><description><![CDATA[</p>
-<p><img src="2016-08-01-img01.png" alt="The OCI Grails team at GR8Conf US 2016" /></p>
+<p><img src="2016-08-01-img01.png" alt="The OCI Grails® team at GR8Conf US 2016" /></p>
 <p>Well I've just started to clear my fuzzy head getting back from <a href="http://gr8conf.us/">GR8Conf US</a> in Minneapolis, where OCI was a platinum sponsor this year. Lots of good stuff came out of the show, things announced, good workshops. There were 4 concurrent tracks of talks for 2 days, and 1 day of workshops. In all, the OCI Grails team delivered 4 workshops and 8 talks - most of the team creates these talks on their own time as well in addition to our regular responsibilities. We are dedicated!</p>
 <p><img src="2016-08-01-img02.jpg" alt="" /></p>
 <p>I grew up in a suburb in St. Paul and had not been back since I started speaking at Gr8Conf 3-4 years ago. What a beautiful city it is now! So much stuff going on, sports games, music, breweries and a pretty clean downtown. Can't recommend enough to come visit here in the summer - that said I would avoid it in the thick of winter - it's so cold they build sky-bridges to connect the buildings to minimize the outside elements! Check out one of these great buildings at night. The picture below is looking out from the University of St. Thomas, the venue.</p>
 <p><img src="2016-08-01-img03.png" alt="Skyline" /></p>
 <h2>Day 1: Workshops</h2>
 <p><img src="2016-08-01-img04.jpg" alt="Ryan and Lee presenting Alexa, Tell Me I'm Groovy" /></p>
-<p>I started the day doing my Groovy Lego Mindstorms EV3 talk where we worked with putting Groovy apps on the robots, then used Grails to control the robots like Mars rovers. I Then did a 2nd half day workshop with my friend Lee Fox on Amazon Alexa. We built Groovy Lambda Skills as well as Grails 3 Skills.</p>
+<p>I started the day doing my Groovy Lego Mindstorms EV3 talk where we worked with putting Groovy apps on the robots, then used the Grails framework to control the robots like Mars rovers. I Then did a 2nd half day workshop with my friend Lee Fox on Amazon Alexa. We built Groovy Lambda Skills as well as Grails 3 Skills.</p>
 <p><img src="2016-08-01-img05.jpeg" alt="Jeff Scott Brown presenting at GR8Conf US 2016" /></p>
 <p>Jeff Brown then did 2(!) back-to-back workshops on 'Getting Started with Grails 3' and 'Rest with Grails 3' (*Pic by Annyce Davis).</p>
 <p>Danny Hyun did a Groovy intro workshop where he taught people to use a Pokemon Java API to help them catch them all in Groovy (all day).
@@ -2711,7 +2711,7 @@ Marcin Erdmann (His first stateside appearance at Gr8?) did an all day Ratpack s
 <p>Next slot after lunch: Lee Fox and I do the &quot;Alexa Tell me I'm Groovy&quot; talk which we covered AWS Groovy Lambda Skills and The Grails 3 plugin. Lee made a superhero quiz game and Baruch from JFrog stepped up to test his skills. Needless to say he said his name and Alexa said 'I heard bottles' and proceeded to ask 'Bottles' trivia questions. So that is Baruch's new nickname, try it out next time you see him :) The audience got lots of laughs from all the Alexa antics we did. It gets better, we used a Grails app we wrote for Alexa to live-tweet the audience reaction. So much fun!</p>
 <p>While this was going on fellow OCI Grails team member Alvaro Sanchez-Mariscal did 'Mastering Grails 3 Plugins' with some solid advice on Grails 3 to avoid pain later. Asset-pipeline creator Dave Estes did a great talk on the ins and outs of asset-pipeline which every Grails developer should learn and know. Finishing this slot is Jenn Strater's talk on a TDD Approach to Documenting Restful APIs which a lot of people were excited about all of the documentation tools she showed off.</p>
 <p>Last talk slot of the day:</p>
-<p>Bob the Builder by Sascha Klein shared his tips of using builder patterns for daily survival. Teammate Alvaro continued with another talk on Creating apps with Grails, AngularJS, and Spring Security which is a shorter talk version of the workshop he did at Gr8Conf.eu this year. Annyce Davis a new speaker I met this year did a great talk on From Grails to Android: A Simple Journey. Finishing the talks for the day was Jenn Strater with &quot;CodeNarc Revisited.&quot;</p>
+<p>Bob the Builder by Sascha Klein shared his tips of using builder patterns for daily survival. Teammate Alvaro continued with another talk on Creating apps with the Grails framework, AngularJS, and Spring Security which is a shorter talk version of the workshop he did at Gr8Conf.eu this year. Annyce Davis a new speaker I met this year did a great talk on From the Grails framework to Android: A Simple Journey. Finishing the talks for the day was Jenn Strater with &quot;CodeNarc Revisited.&quot;</p>
 <p><img src="2016-08-01-img08.jpeg" alt="Alvaro presenting on Grails, Angular, and DDS" /></p>
 <p>Kenneth Kousen closed up the day with a great keynote that talked about all the value Groovy and all the community has to offer.</p>
 <p><img src="2016-08-01-img09.jpeg" alt="Ken Kousen delivering a keynote at GR8Conf US 2016" /></p>
@@ -2719,8 +2719,8 @@ Marcin Erdmann (His first stateside appearance at Gr8?) did an all day Ratpack s
 <p><img src="2016-08-01-img10.jpeg" alt="Groovy Puzzlers with Baruch(Bottles) and Dan Woods" /></p>
 <p><img src="2016-08-01-img11.jpeg" alt="Gr8ConfUS Beer" /></p>
 <h2>Day 3 Talks</h2>
-<p>We roll into day 3 running with (almost) a complete track of talks about Ratpack by Dan Woods (9am after late night karaoke, impressive!), non web Ratpack with John Engelman, and testing Rackpack with Danny Hyun. Back to chronological order, Puneet Behl talked about Giving back to the community by helping migrate 2.x plugins to 3.x. Annyce David talked about Gradle Plugin Goodness, and Ryan Applegate talked about scaling Grails at SmartThings.</p>
-<p>Craig Burke talked about AngularJS in Grails as well as trolled Kyle Boon and myself pretty hard (His test is totally rigged I say!). Jeff Brown from OCI Grails Team talked about Groovy Metaprogramming, and Charlie Knudsen talked about a strategy to get to zero downtime deployments.</p>
+<p>We roll into day 3 running with (almost) a complete track of talks about Ratpack by Dan Woods (9am after late night karaoke, impressive!), non web Ratpack with John Engelman, and testing Rackpack with Danny Hyun. Back to chronological order, Puneet Behl talked about Giving back to the community by helping migrate 2.x plugins to 3.x. Annyce David talked about Gradle Plugin Goodness, and Ryan Applegate talked about scaling Grails apps at SmartThings.</p>
+<p>Craig Burke talked about AngularJS in Grails apps as well as trolled Kyle Boon and myself pretty hard (His test is totally rigged I say!). Jeff Brown from OCI Grails Team talked about Groovy Metaprogramming, and Charlie Knudsen talked about a strategy to get to zero downtime deployments.</p>
 <p><img src="2016-08-01-img12.jpeg" alt="Colin Harrington's presentation about how to secure your Grails application via Spring Security Plugins" /></p>
 <p>Next slot we had fellow OCI Grails teammate Colin Harrington talk about how to secure your Grails application via Spring Security Plugins. Sacha Klein also gave a Groovy with Jenkins talk about using Groovy in your CI pipeline. Todd Miller talked about Spring Cloud in production with tools like Eureka and Hystrix/Turbine to monitor your apps. Craig Atkinson also gave a great Spock and Geb into talk.</p>
 <p>After lunch Burt Beckwith talked about Spring Security, Christian Oestreich talked about monitoring Grails 3 applications, Craig Atkinson gave another great functional testing talk with Geb. Stephen Pember gave a mind-bender talk on Reactive Streams and Groovy to finish out the time slot.</p>
@@ -2764,9 +2764,9 @@ Marcin Erdmann (His first stateside appearance at Gr8?) did an all day Ratpack s
 <p><a href="http://www.adavis.info/2016/07/gr8conf-us-2016-recap.html">Annyce Davis</a></p>
 <p><a href="http://rpalcolea.github.io/blog/2016/GR8Conf-US-Recap-2016.html">Roberto Perez A.</a></p>
 <p>I look forward to the next edition in 2017!</p>
-<p>— Ryan Vanderwerf and the rest of the OCI/Grails Team</p>]]></description><author>Ryan Vanderwerf</author><guid>2016-08-01</guid><pubDate>Mon, 01 Aug 2016 00:00:00 GMT</pubDate></item><item><title>Grails 3.2 M2 and GORM 6.0 M2 Released</title><link>https://grails.org/blog/2016-07-22.html</link><description><![CDATA[</p>
+<p>— Ryan Vanderwerf and the rest of the OCI/Grails Team</p>]]></description><author>Ryan Vanderwerf</author><guid>2016-08-01</guid><pubDate>Mon, 01 Aug 2016 00:00:00 GMT</pubDate></item><item><title>Grails® 3.2 M2 and GORM 6.0 M2 Released</title><link>https://grails.org/blog/2016-07-22.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>Today the <a href="https://objectcomputing.com/products/2gm-team">Grails team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the release of <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0.M2">Grails 3.2 Milestone 2</a>, which includes <a href="http://gorm.grails.org/6.0.x">GORM 6 Milestone 2</a> - the biggest GORM release ever!</p>
+<p>Today the <a href="https://objectcomputing.com/products/2gm-team">Grails team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) is pleased to announce the release of <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0.M2">Grails<sup>®</sup> 3.2 Milestone 2</a>, which includes <a href="http://gorm.grails.org/6.0.x">GORM 6 Milestone 2</a> - the biggest GORM release ever!</p>
 <p>The <a href="http://gorm.grails.org/6.0.x">new version of GORM</a> is really the theme of this release. There are so many great new features that we wrote a dedicated <a href="http://gorm.grails.org/6.0.x/whatsNew/manual/index.html">&quot;What's New&quot;</a> guide just for GORM (to go along with the new dedicated GORM documentation).</p>
 <p>Just to summarize the new features in GORM include:</p>
 <ul>
@@ -2786,9 +2786,9 @@ Marcin Erdmann (His first stateside appearance at Gr8?) did an all day Ratpack s
 <p>Grails 3.2 has also been updated to the latest and greatest dependencies including Spring Boot 1.4 RC1 and Spring 4.3.</p>
 <p>Check out the <a href="http://docs.grails.org/3.2.x/guide/introduction.html#whatsNew">What's New in Grails 3.2 Guide</a> for information on all the updates.</p>
 <p>We're inching closer to an RC now so it is a great time to try your applications and <a href="https://github.com/grails/grails-core/issues">report issues</a>!</p>
-<p>If you want to hear more come and see us at <a href="http://gr8conf.us/">Gr8Conf US</a> in Minneapolis USA, or <a href="https://g3summit.com/conference/fort_lauderdale/2016/11/home">G3 Summit</a> in Fort Lauderdale USA!</p>]]></description><author>Graeme Rocher</author><guid>2016-07-22</guid><pubDate>Fri, 22 Jul 2016 00:00:00 GMT</pubDate></item><item><title>Grails Angular Scaffolding</title><link>https://grails.org/blog/2016-07-06.html</link><description><![CDATA[</p>
+<p>If you want to hear more come and see us at <a href="http://gr8conf.us/">Gr8Conf US</a> in Minneapolis USA, or <a href="https://g3summit.com/conference/fort_lauderdale/2016/11/home">G3 Summit</a> in Fort Lauderdale USA!</p>]]></description><author>Graeme Rocher</author><guid>2016-07-22</guid><pubDate>Fri, 22 Jul 2016 00:00:00 GMT</pubDate></item><item><title>Grails® Angular Scaffolding</title><link>https://grails.org/blog/2016-07-06.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/angular.html"><span class="hashtag">#angular</span></a></p>
-<p>Creating a single-page application (SPA) has never been easier than it is with the new <a href="https://github.com/grails-plugins/grails-angular-scaffolding">Grails Angular Scaffolding Plugin</a>! This post will give you a short tutorial on how to use it.</p>
+<p>Creating a single-page application (SPA) has never been easier than it is with the new <a href="https://github.com/grails-plugins/grails-angular-scaffolding">Grails<sup>®</sup> Angular Scaffolding Plugin</a>! This post will give you a short tutorial on how to use it.</p>
 <hr />
 <p>The easiest way to get started with the scaffolding is to use the angular profile in Grails 3.2.0 or higher, which installs and configures the plugin automatically. See the <a href="http://grails-plugins.github.io/grails-angular-scaffolding/latest">documentation</a> for information on how to get the plugin installed into an existing application.</p>
 <p>For this tutorial, we will be working with the following domain classes.</p>
@@ -2952,16 +2952,16 @@ If a parent module does not exist or the parent module isn’t being included on
 <p>Now that all domain classes have scaffolding, you can manage your data in a single page application.</p>
 <p>The scaffolding is designed as a starting point for rapid development. Explore the generated JavaScript code and make changes to meet your business requirements. If you run into any issues, please submit an issue on the github page <a href="https://github.com/grails-plugins/grails-angular-scaffolding/issues">here</a> or come chat with us about it in our <a href="https://grails.slack.com/">Slack</a> channel.</p>
 <p>For a complete run through of installing and using the scaffolding in Grails 3.1.x, check out this <a href="https://objectcomputing.com/index.php?cID=1274" title="Grails Quickcast <a href="https://grails.org/blog/tag/4:.html"><span class="hashtag">#4:</span></a> Angular Scaffolding">Quickcast</a>!</p>
-<p>The example project created in the video is available <a href="https://github.com/grails-samples/angular-scaffolding-31x">here</a>.</p>]]></description><author>James Kleeh</author><guid>2016-07-06</guid><pubDate>Wed, 06 Jul 2016 00:00:00 GMT</pubDate></item><item><title>Building Alexa Skills with Grails</title><link>https://grails.org/blog/2016-06-26.html</link><description><![CDATA[</p>
+<p>The example project created in the video is available <a href="https://github.com/grails-samples/angular-scaffolding-31x">here</a>.</p>]]></description><author>James Kleeh</author><guid>2016-07-06</guid><pubDate>Wed, 06 Jul 2016 00:00:00 GMT</pubDate></item><item><title>Building Alexa Skills with the Grails® framework</title><link>https://grails.org/blog/2016-06-26.html</link><description><![CDATA[</p>
 <p><img src="2016-06-26-img01.jpg" alt="building spoken-language apps and experiences for Amazon Echo" /></p>
-<p>Recently I gave a talk at GR8Conf.eu about building applications for the Amazon Alexa platform. I talked about using Groovy with Lambdas to demonstrate Skills (Alexa Apps), as well as using Grails. I'll give this talk again at GR8Conf.us at the end of July and have even more good stuff to show. On top of that, after working on this for months, I have the material to deliver an Alexa workshop at GR8Conf.us (Thanks to Colin Harrington for helping with the idea). Good Times!</p>
+<p>Recently I gave a talk at GR8Conf.eu about building applications for the Amazon Alexa platform. I talked about using Groovy with Lambdas to demonstrate Skills (Alexa Apps), as well as using the Grails<sup>®</sup> framework. I'll give this talk again at GR8Conf.us at the end of July and have even more good stuff to show. On top of that, after working on this for months, I have the material to deliver an Alexa workshop at GR8Conf.us (Thanks to Colin Harrington for helping with the idea). Good Times!</p>
 <p>I wanted to write a post as a step-by-step on using a plugin I've recently developed to help you crank out Alexa apps (skills or speechlets). Amazon has a promotion right now: If you submit a new skill to their library, you can win a free t-shirt, so maybe you can make something cool with this and get one! You do not even need an Amazon device; you can point your browser to <a href="https://echosim.io/">https://echosim.io</a> to use their emulator.</p>
 <p><img src="2016-06-26-img02.png" alt="Echo-ism" /></p>
 <p>Let me first get started to explain how these things work and a little about the devices.</p>
 <p>Starting a couple years ago, Amazon released a home device/speaker thing called the Echo. It's a household helper device with very nice multi-directional microphones and a nice speaker for playing music.</p>
 <p>At first, I didn't get one or understand it; it sounded like a useless toy to me. However peers gobbled them up and started playing around with them. They weren't building apps for it but raved about how cool it was and how it helped them automate their homes and do useful things. Then they started saying they loved it so much they were buying more units and putting them all over their houses. Now my attention was had – of course the first thing that pops into my head was 'how can I get Groovy to work with this thing?'</p>
 <p><img src="2016-06-26-img03.jpg" alt="Things Alexa Can Do" /></p>
-<p>The first examples they give are all about AWS Lambda functions in Node; however they aren't fantastic on Java because they have a hard limit of 50mb jars you can upload. Surely you can't fit all of Grails and dependencies in there to do much.</p>
+<p>The first examples they give are all about AWS Lambda functions in Node; however they aren't fantastic on Java because they have a hard limit of 50mb jars you can upload. Surely you can't fit the whole Grails framework and dependencies in there to do much.</p>
 <p>Still, we gave it a shot. I followed Benoit Hédiard's <a href="https://skillsmatter.com/skillscasts/7291-serverless-microservices-using-aws-lambda-and-groovy">presentation</a> on Groovy with Lambdas from GGX 2015. I sat down with a buddy of mine, Lee Fox (he will be at GR8Conf.us), and we hammered out a bunch of ideas we could build with it – in Groovy of course!</p>
 <p>The first app we got working was a simple Twitter app that combined Groovy, Spring Social, and Skills to make a skill that would connect to Twitter and search for tweets, as well as give updates to your timeline. You can find the code <a href="https://github.com/rvanderwerf/alexa-twitter-groovy">here</a>.</p>
 <p>Good! Now we're getting somewhere. I did a little digging and found they have some servlet support to make a standalone web service – now we can get Grails involved and make this less hideous.</p>
@@ -3329,18 +3329,18 @@ class SkillsTestController {
 <li>SSML Reference: <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference">https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/speech-synthesis-markup-language-ssml-reference</a></li>
 </ul>
 <h2>Conclusion</h2>
-<p>The Alexa service is a great invention that is catching on. Google and Apple are dipping their toes into the market. I see the Star Trek experience in the home being a reality for everyone in a few years. Already my wife uses it (who swore she never would), and my 4 year old asks it to tell her jokes all the time. I use it to control my lights very often. The sky is the limit, and these tools can be useful in the workplace too. Get out there and build some neat stuff for Alexa with Grails!</p>]]></description><author>Ryan Vanderwerf</author><guid>2016-06-26</guid><pubDate>Sun, 26 Jun 2016 00:00:00 GMT</pubDate></item><item><title>GR8Conf EU 2016 Wrap-up!</title><link>https://grails.org/blog/2016-06-07.html</link><description><![CDATA[</p>
+<p>The Alexa service is a great invention that is catching on. Google and Apple are dipping their toes into the market. I see the Star Trek experience in the home being a reality for everyone in a few years. Already my wife uses it (who swore she never would), and my 4 year old asks it to tell her jokes all the time. I use it to control my lights very often. The sky is the limit, and these tools can be useful in the workplace too. Get out there and build some neat stuff for Alexa with the Grails framework!</p>]]></description><author>Ryan Vanderwerf</author><guid>2016-06-26</guid><pubDate>Sun, 26 Jun 2016 00:00:00 GMT</pubDate></item><item><title>GR8Conf EU 2016 Wrap-up!</title><link>https://grails.org/blog/2016-06-07.html</link><description><![CDATA[</p>
 <p><img src="2016-06-07-img01.jpg" alt="The OCI Team at GR8Conf EU 2016" /></p>
 <p>Well I've just started to clear my jet-lagged head getting back from <a href="http://gr8conf.eu/">GR8Conf EU</a> in Copenhagen, where <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) was a platinum sponsor this year. Lots of good stuff came out of the show, things announced, good workshops. This also was the first year there were 3 concurrent tracks for the EU edition. This worked out quite well and gave a good variety for everyone. There was also a university day with 3 hour workshops packed in all day long.</p>
 <p><img src="2016-06-07-img02.jpg" alt="CPH View" /></p>
 <h2>Day 1: Workshops</h2>
-<p>I started the day doing my Groovy Lego Mindstorms EV3 talk where we worked with putting Groovy apps on the robots, then used Grails to control the robots like mars rovers.</p>
+<p>I started the day doing my Groovy Lego Mindstorms EV3 talk where we worked with putting Groovy apps on the robots, then used the Grails<sup>®</sup> framework to control the robots like mars rovers.</p>
 <p><img src="2016-06-07-img03.jpg" alt="Lego" /></p>
-<p>Jeff Brown then did 2(!) back to back workshops on 'Getting Started with Grails 3' and 'Rest with Grails 3'. Andres Almiray did a Gradle workshop, Jacob Mikkelsen (Of Grails Diary fame) did a Groovy and Spock for beginners. Wrapping up was our own Alvaro Sanchez-Mariscal with a workshop on <a href="http://alvarosanchez.github.io/grails-angularjs-springsecurity-workshop/" title="Building Apps with Grails">building apps with Grails, AngularJS, and Spring Security</a>. I thought the workshops were very well attended this year, I could have used a couple more robots in mine, and I poked my head into full rooms on the other ones.</p>
+<p>Jeff Brown then did 2(!) back to back workshops on 'Getting Started with Grails 3' and 'Rest with Grails 3'. Andres Almiray did a Gradle workshop, Jacob Mikkelsen (Of Grails Diary fame) did a Groovy and Spock for beginners. Wrapping up was our own Alvaro Sanchez-Mariscal with a workshop on <a href="http://alvarosanchez.github.io/grails-angularjs-springsecurity-workshop/" title="Building Apps with Grails">building apps with the Grails framework, AngularJS, and Spring Security</a>. I thought the workshops were very well attended this year, I could have used a couple more robots in mine, and I poked my head into full rooms on the other ones.</p>
 <h3>Hackergarten on Tour</h3>
-<p>Andres Almiray led the Hackergarten this year again. His energy is very good and high which helps get people motivated for some open source contributions. Lots was done, I think several Spock issues merged, progress on Elastic Search 2 plugin for Grails 3, fixes for lazybones templates on Android Wear. One thing that will be good for Grails got lots of progress on a converter for the old gdoc format to ascii doctor <a href="https://t.co/NA41R1DUjM">here</a>! Also a new Gradle Groovydoc plugin that forks the jvm <a href="https://t.co/EsFOyuVx7n">here</a>.</p>
+<p>Andres Almiray led the Hackergarten this year again. His energy is very good and high which helps get people motivated for some open source contributions. Lots was done, I think several Spock issues merged, progress on Elastic Search 2 plugin for Grails 3, fixes for lazybones templates on Android Wear. One thing that will be good for the Grails framework is that there was lots of progress on a converter for the old gdoc format to ascii doctor <a href="https://t.co/NA41R1DUjM">here</a>! Also a new Gradle Groovydoc plugin that forks the jvm <a href="https://t.co/EsFOyuVx7n">here</a>.</p>
 <h2>Day 2: Talks</h2>
-<p>Kenneth Kousen kicked off the conference with a great keynote that talked about all the value Groovy has and talked about the decisions by Gradle to make Kotlin first class and Groovy second going forward. Lots of good points about what everyone can do to make Groovy better and what makes the community great - and a big one is needing maintainers for the Grails/Groovy support for Eclipse. Will someone step up? It is hard to say because almost everyone at the show used IntelliJ IDEA, so it's tough to be motivated to work on another IDE for the folks in larger companies who only have access to Community edition of IJ or Eclipse. Some asked will IntelliJ Community add support for Grails? We don't know but that'd be nice for a free option for Grails folks.</p>
+<p>Kenneth Kousen kicked off the conference with a great keynote that talked about all the value Groovy has and talked about the decisions by Gradle to make Kotlin first class and Groovy second going forward. Lots of good points about what everyone can do to make Groovy better and what makes the community great - and a big one is that maintainers are needed for the Grails framework and Groovy support for Eclipse. Will someone step up? It is hard to say because almost everyone at the show used IntelliJ IDEA, so it's tough to be motivated to work on another IDE for the folks in larger companies who only have access to Community edition of IJ or Eclipse. Some asked will IntelliJ Community add support for the Grails framework? We don't know but that'd be nice for a free option for Grails folks.</p>
 <p>Here we start the 3 parallel tracks, with one being 'A Groovy journey in open source land' by Guillaume Laforge where we get a state of the union on Groovy. Following the Groovy track Jochen Theodorou talking about the new joint compiler which is very early. As an aside Jochen has started at Canoo (yay!), and unfortunately will have less time for Groovy now :( On a good note Cédric Champeau prepped a new release of Groovy 2.4.7 which is awaiting Apache approval for release.</p>
 <p>After lunch we fire up again with our very own Jeff Scott Brown talking about monitoring and metrics in Grails 3 with a dropwizard plugin, Noam on clean Groovy, and a panel on the future of Groovy. I went to the panel which was led by Cedric, Jochen, and Jennifer. It was a frank upbeat discussion starting out with ribbing Gradle on Kotlin of course, then talking about what can be done to help drive Groovy adoption forward. Again the Eclipse support bubbled to the top again. Average Joe it seems misses the support in Eclipse and is lost without it.</p>
 <p>I've heard following up that Marcin's talk on 'nooks and crannies of Spock' was quite good - lots to learn there. I didn't get a chance to attend the others but I peeked in the fame talk and looked interesting (does it archive?).</p>
@@ -3397,13 +3397,13 @@ class SkillsTestController {
 <li><a href="http://www.slideshare.net/aalmiray/gradle-glam-plugis-strike-back">Gradle Glam - Plugins Strike Back</a> (Andres Almiray)</li>
 </ul>
 <p>I look forward to the next edition!</p>
-<p>— Ryan Vanderwerf and the rest of the OCI/Grails Team</p>]]></description><author>Ryan Vanderwerf</author><guid>2016-06-07</guid><pubDate>Tue, 07 Jun 2016 00:00:00 GMT</pubDate></item><item><title>Monitoring and Metrics with Grails 3</title><link>https://grails.org/blog/2016-06-02.html</link><description><![CDATA[</p>
+<p>— Ryan Vanderwerf and the rest of the OCI/Grails Team</p>]]></description><author>Ryan Vanderwerf</author><guid>2016-06-07</guid><pubDate>Tue, 07 Jun 2016 00:00:00 GMT</pubDate></item><item><title>Monitoring and Metrics with Grails® 3</title><link>https://grails.org/blog/2016-06-02.html</link><description><![CDATA[</p>
 <p>tags: <a href="https://grails.org/blog/tag/monitoring.html"><span class="hashtag">#monitoring</span></a> <a href="https://grails.org/blog/tag/video.html"><span class="hashtag">#video</span></a></p>
-<p>Jeff Scott Brown, co-founder of Grails, discusses monitoring and metrics with Grails 3 at GR8Conf EU 2016.</p>
+<p>Jeff Scott Brown, co-founder of the Grails<sup>®</sup> framework, discusses monitoring and metrics with Grails 3 at GR8Conf EU 2016.</p>
 <p>In this presentation, Jeff demonstrates capabilities that are currently in development with the intention of soliciting feedback from the Grails community. He also introduces features of Grails 3 and Groovy.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/wVpEsbzMj90" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-06-02</guid><pubDate>Thu, 02 Jun 2016 00:00:00 GMT</pubDate></item><item><title>Grails 3.2 Milestone 1 Released</title><link>https://grails.org/blog/2016-05-31.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/wVpEsbzMj90" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-06-02</guid><pubDate>Thu, 02 Jun 2016 00:00:00 GMT</pubDate></item><item><title>Grails® 3.2 Milestone 1 Released</title><link>https://grails.org/blog/2016-05-31.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/release.html"><span class="hashtag">#release</span></a></p>
-<p>Today, and just in time for <a href="http://gr8conf.eu/">GR8Conf EU</a> in Copenhagen, we are pleased to announce the <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0.M1">first milestone of Grails 3.2</a>, which includes the following new features.</p>
+<p>Today, and just in time for <a href="http://gr8conf.eu/">GR8Conf EU</a> in Copenhagen, we are pleased to announce the <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0.M1">first milestone of Grails<sup>®</sup> 3.2</a>, which includes the following new features.</p>
 <h2>RxGORM</h2>
 <p>Grails 3.2 milestone 1 ships with GORM 6.0 milestone 1, which includes a new implementation of GORM based on RxJava called RxGORM. With RxGORM you can build non-blocking, reactive applications using a familiar GORM API including features such as Where Queries, Dynamic Finders and Criteria Queries.</p>
 <p>With the initial release, support for MongoDB is included, but more implementations are planned for SQL, REST client, and other implementations. See the <a href="http://gorm.grails.org/rx/latest/">RxGORM Documentation</a> for more information.</p>
@@ -3422,11 +3422,11 @@ class SkillsTestController {
 <li>Further AngularJS and REST Refinements</li>
 </ul>
 <p>For more information on the Milestone 1 release, check out the release notes.</p>
-<p>We look forward your feedback, and if you are coming to <a href="http://gr8conf.eu/">GR8Conf EU</a>, we look forward to talking to you more about the great new features coming in the Grails framework.</p>]]></description><author>Graeme Rocher</author><guid>2016-05-31</guid><pubDate>Tue, 31 May 2016 00:00:00 GMT</pubDate></item><item><title>Using React with Grails</title><link>https://grails.org/blog/2016-05-28.html</link><description><![CDATA[</p>
+<p>We look forward your feedback, and if you are coming to <a href="http://gr8conf.eu/">GR8Conf EU</a>, we look forward to talking to you more about the great new features coming in the Grails framework.</p>]]></description><author>Graeme Rocher</author><guid>2016-05-31</guid><pubDate>Tue, 31 May 2016 00:00:00 GMT</pubDate></item><item><title>Using React with the Grails® framework</title><link>https://grails.org/blog/2016-05-28.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/react.html"><span class="hashtag">#react</span></a> <a href="https://grails.org/blog/tag/javascript.html"><span class="hashtag">#javascript</span></a> <a href="https://grails.org/blog/tag/gradle.html"><span class="hashtag">#gradle</span></a></p>
 <p><strong>React</strong>, the JavaScript library from Facebook, has become a popular view technology for building dynamic, testable and performant user interfaces. While not a full-fledged framework like Angular or Ember, React’s focus on functional component-based views with no (or minimal) internal state makes it a great choice when building single page applications (SPA) or even dynamic subcomponents within a page-based application.</p>
 <p>Because it doesn't make assumptions about data-flow or controller logic outside of rendering the view, React relies on the developer to either provide these features directly in JavaScript or use another framework as a backend to support the React-based UI.</p>
-<p>It is this flexibility, in part, that makes React an appealing choice as a modern JavaScript view layer for <strong>Grails</strong> applications. Grails provides a robust backend built upon Spring Boot, GORM, and the Groovy programming language, as well as excellent support for generating restful endpoints that can be consumed by our React application. Since Grails 3 is also based upon Gradle, we can leverage <a href="https://github.com/srs/gradle-node-plugin">Gradle’s Node plugin</a> to unify our build and testing pipeline for both Grails and React, without needing to complicate our deployment processes.</p>
+<p>It is this flexibility, in part, that makes React an appealing choice as a modern JavaScript view layer for <strong>Grails</strong><sup>®</sup> applications. Grails provides a robust backend built upon Spring Boot, GORM, and the Groovy programming language, as well as excellent support for generating restful endpoints that can be consumed by our React application. Since Grails 3 is also based upon Gradle, we can leverage <a href="https://github.com/srs/gradle-node-plugin">Gradle’s Node plugin</a> to unify our build and testing pipeline for both Grails and React, without needing to complicate our deployment processes.</p>
 <p>Finally, <strong>JSX</strong> (React's XML-like syntax for defining components and page markup) is a powerful and flexible way to create dynamic views. In the author's opinion, creating components in JSX is quite analogous to defining custom GSP tags in a Grails taglib: a function which receives state via props (GSP <code>attrs</code>) and typically (but not always) renders markup based on that state. In React's case, these components are re-rendered upon every change to the app's state, rather than being limited to page-load. This stateless component model should be understandable to Grails developers who have written <a href="http://www.ociweb.com/resources/publications/sett/december-2015-custom-gsp-tags-grails-best-kept-secret/">custom GSP tags</a>, and JSX takes this to the next level.</p>
 <p>In this article, we'll demonstrate how to integrate React into a Grails 3 application, using some of Grail’s restful features to get up and running quickly. We’ll spend a bit of time getting our project set up, and get to know some of the players in a React codebase.</p>
 <p>There are plenty of resources available to teach you React and restful API design, so I’m going to focus primarily on the “missing pieces” of combining React with a Grails application[1]. At the completion of this article, we'll list some resources to further your understanding of React. You'll be able to take this foundation and follow along with the same documentation, tutorials and other resources available to React developers.</p>
@@ -3878,8 +3878,8 @@ class SkillsTestController {
 <li>React Test-Utils: <a href="https://facebook.github.io/react/docs/test-utils.html">https://facebook.github.io/react/docs/test-utils.html</a></li>
 <li>JSX Documentation: <a href="https://github.com/ZacharyKlein/grails-react-starter">https://facebook.github.io/react/docs/jsx-in-depth.html</a></li>
 <li>Webpack Documentation: <a href="http://webpack.github.io/docs/">http://webpack.github.io/docs/</a></li>
-</ul>]]></description><author>Zachary Klein</author><guid>2016-05-28</guid><pubDate>Sat, 28 May 2016 00:00:00 GMT</pubDate></item><item><title>Deploying Grails 3.1 Applications to JBoss 6.4 EAP</title><link>https://grails.org/blog/2016-05-26.html</link><description><![CDATA[</p>
-<p>We had <a href="http://grails.io/post/142674392718/deploying-grails-3-to-wildfly-10">previously</a> described how to deploy Grails 3.1 applications to WildFly 10, which is where all of the &quot;cutting edge&quot; work happens in the JBoss world.</p>
+</ul>]]></description><author>Zachary Klein</author><guid>2016-05-28</guid><pubDate>Sat, 28 May 2016 00:00:00 GMT</pubDate></item><item><title>Deploying Grails® 3.1 Applications to JBoss 6.4 EAP</title><link>https://grails.org/blog/2016-05-26.html</link><description><![CDATA[</p>
+<p>We had <a href="http://grails.io/post/142674392718/deploying-grails-3-to-wildfly-10">previously</a> described how to deploy Grails<sup>®</sup> 3.1 applications to WildFly 10, which is where all of the &quot;cutting edge&quot; work happens in the JBoss world.</p>
 <p>The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely similar, with some minor configuration differences.</p>
 <p>Firstly, you have to configure your dependencies in <code>build.gradle</code> correctly by marking Tomcat as a provided dependency and including JAXB as a runtime dependency:</p>
 <pre><code class="language-groovy">provided &quot;org.springframework.boot:spring-boot-starter-tomcat&quot;    
@@ -3903,16 +3903,16 @@ runtime 'javax.xml.bind:jaxb-api:2.2.12'
     at org.hibernate.validator.internal.engine.ValidatorFactoryImpl.&lt;init&gt;(ValidatorFactoryImpl.java:119)
     at org.hibernate.validator.HibernateValidator.buildValidatorFactory(HibernateValidator.java:45)
 </code></pre>
-<p>With these two changes in place you can run <code>gradle assemble</code> to produce a WAR file that can be deployed to JBoss 6.4 EAP!</p>]]></description><author>Graeme Rocher</author><guid>2016-05-26</guid><pubDate>Thu, 26 May 2016 00:00:00 GMT</pubDate></item><item><title>Grails Slack Channel</title><link>https://grails.org/blog/2016-04-28.html</link><description><![CDATA[</p>
+<p>With these two changes in place you can run <code>gradle assemble</code> to produce a WAR file that can be deployed to JBoss 6.4 EAP!</p>]]></description><author>Graeme Rocher</author><guid>2016-05-26</guid><pubDate>Thu, 26 May 2016 00:00:00 GMT</pubDate></item><item><title>Grails® Slack Channel</title><link>https://grails.org/blog/2016-04-28.html</link><description><![CDATA[</p>
 <p>The folks at Slack describe their application as follows:</p>
 <blockquote>
 <p>A messaging app for teams who are changing the world.</p>
 </blockquote>
 <p>That sounds like us! :)</p>
-<p>We set up the Grails Slack channel less than a year ago, and the channel has been very well received by the community. Our Slack channel is a great place to connect with the core Grails development team, as well as thousands of other Grails users, to ask and answer questions and to discuss ideas.</p>
-<p>The Grails Slack Channel can be found at <a href="http://grails.slack.com/">http://grails.slack.com</a>. Sign up at <a href="https://grails-slack.cfapps.io/">https://grails-slack.cfapps.io</a>.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-04-28</guid><pubDate>Thu, 28 Apr 2016 00:00:00 GMT</pubDate></item><item><title>How to Use a Specific Version of GORM in Grails 3</title><link>https://grails.org/blog/2016-04-27.html</link><description><![CDATA[</p>
+<p>We set up the Grails<sup>®</sup> Slack channel less than a year ago, and the channel has been very well received by the community. Our Slack channel is a great place to connect with the core Grails development team, as well as thousands of other Grails users, to ask and answer questions and to discuss ideas.</p>
+<p>The Grails Slack Channel can be found at <a href="http://grails.slack.com/">http://grails.slack.com</a>. Sign up at <a href="https://grails-slack.cfapps.io/">https://grails-slack.cfapps.io</a>.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-04-28</guid><pubDate>Thu, 28 Apr 2016 00:00:00 GMT</pubDate></item><item><title>How to Use a Specific Version of GORM in Grails® 3</title><link>https://grails.org/blog/2016-04-27.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a></p>
-<p>In order to ensure compatibility Grails 3 ships with a BOM that applies dependency management and enforces a particular version of GORM when using Grails.</p>
+<p>In order to ensure compatibility Grails<sup>®</sup> 3 ships with a BOM that applies dependency management and enforces a particular version of GORM when using Grails.</p>
 <p>Sometimes however, you want to use a different version or there is a more recent version of GORM out there that you would prefer to use.</p>
 <p>Luckily Gradle makes this fairly easy to control. Using the following snippet you can enforce a particular GORM version within your <code>build.gradle</code>:</p>
 <pre><code class="language-groovy">configurations.all {
@@ -3926,7 +3926,7 @@ runtime 'javax.xml.bind:jaxb-api:2.2.12'
 </code></pre>
 <p>In this example I’m forcing Gradle to resolve the <code>5.0.5.RELEASE</code> version of GORM using the Gradle resolutionStrategy.</p>]]></description><author>Graeme Rocher</author><guid>2016-04-27</guid><pubDate>Wed, 27 Apr 2016 00:00:00 GMT</pubDate></item><item><title>JSON Views</title><link>https://grails.org/blog/2016-04-13.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/json.html"><span class="hashtag">#json</span></a> <a href="https://grails.org/blog/tag/rest.html"><span class="hashtag">#rest</span></a></p>
-<p>We recently published another Grails Quickcast, brought to you in collaboration with DZone. In case you missed the first episode on Grails 3 Interceptors, you can view it <a href="https://objectcomputing.com/products/grails/resources/quickcasts/grails-interceptors">here</a>.</p>
+<p>We recently published another Grails<sup>®</sup> Quickcast, brought to you in collaboration with DZone. In case you missed the first episode on Grails 3 Interceptors, you can view it <a href="https://objectcomputing.com/products/grails/resources/quickcasts/grails-interceptors">here</a>.</p>
 <p>The latest episode introduces JSON Views, a really simple yet powerful tool supported by Grails 3 for describing the JSON response formats for REST APIs. The video is available <a href="https://objectcomputing.com/products/grails/resources/quickcasts/json-views">here</a>.</p>
 <p>Another powerful feature supported by the tool is convention-based content negotiation.</p>
 <p>Consider a simple domain class.</p>
@@ -3971,24 +3971,24 @@ json {
 <li>view_name.gson (Example: show.gson)</li>
 </ul>
 <p>The content type (defined by either the <code>ACCEPT</code> header or file extension in the URI) is taken into account to allow different formats for the same view.</p>
-<p>For more detail, see <a href="http://grails.github.io/grails-views/latest/">the official documentation</a>.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-04-13</guid><pubDate>Wed, 13 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #1: Grails Interceptors</title><link>https://grails.org/blog/2016-04-01-1.html</link><description><![CDATA[</p>
+<p>For more detail, see <a href="http://grails.github.io/grails-views/latest/">the official documentation</a>.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-04-13</guid><pubDate>Wed, 13 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #1: Grails® Interceptors</title><link>https://grails.org/blog/2016-04-01-1.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this 17-minute video, Grails co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, talks Grails <a href="https://en.wikipedia.org/wiki/Interceptor_pattern">interceptors</a>.</p>
+<p>In this 17-minute video, the Grails<sup>®</sup> framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, talks Grails <a href="https://en.wikipedia.org/wiki/Interceptor_pattern">interceptors</a>.</p>
 <p>(Yes, <code>create-interceptor</code> actually creates an interceptor. Mind. Blown.)</p>
 <p>This tutorial assumes only basic familiarity with Groovy (which is pretty darned expressive anyway) and the MVC concept (which you already know). It also serves as an excellent introduction to the interceptor pattern in any language, because Grails' behind-the-scenes legwork lets you focus on the logic of the pattern.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
 <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-1</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #2: JSON Views</title><link>https://grails.org/blog/2016-04-01-2.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a> <a href="https://grails.org/blog/tag/json.html"><span class="hashtag">#json</span></a></p>
-<p>In a delightful and informative 15 minutes, Grails co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, probes JSON views.</p>
+<p>In a delightful and informative 15 minutes, the Grails<sup>®</sup> framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, probes JSON views.</p>
 <p>Beginning with a Grails 3.1.1 application created with a standard web profile, Jeff demonstrates how to add a few custom domain classes.</p>
 <p>Jeff uses music examples, including <em>Space Oddity</em> by David Bowie (RIP) and <em>Close to the Edge</em> by Yes, to populate an artist class with associated albums annotated with grails.rest.Resource.</p>
 <p>The goal is to publish a REST API under <code>/artists</code> to manage instances of the <code>artist</code> class and to support the JSON and XML formats. Sending a request to <code>/artists</code> delivers a list of artists, all of whom have albums associated with them.</p>
 <p>While the app is running in development mode, the JSON files can be altered, and the effects of those changes can be seen real-time in the application.</p>
 <p>This Quickcast assumes basic knowledge of Grails, JSON, and REST APIs.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-2</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Grails 3 Interceptors</title><link>https://grails.org/blog/2015-03-01.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-2</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Grails® 3 Interceptors</title><link>https://grails.org/blog/2015-03-01.html</link><description><![CDATA[</p>
 <h2>Introduction</h2>
-<p>Grails 3 is a major step forward in the evolution of the framework and re-evaluates many aspects of the framework that have evolved over the years. One area of the framework that was re-evaluated is that related to Grails filters.</p>
+<p>Grails<sup>®</sup> 3 is a major step forward in the evolution of the framework and re-evaluates many aspects of the framework that have evolved over the years. One area of the framework that was re-evaluated is that related to Grails filters.</p>
 <p>Grails filters are a lot like servlet filters but are more simple and are better integrated into the Grails runtime and its conventions. Grails filters were a way to implement logic that might relate to any number of controllers and were a powerful and flexible way to address many of those concerns. Grails 3 introduces the notion of interceptors as a better way to address many of the types of concerns that previously would have been addressed with filters.</p>
 <p>Like filters, interceptors contain code which may be applied to requests before and/or after invoking controller actions without having to embed that logic into all of the controllers that the logic may relate to. Interceptors offer a number of benefits over filters including support for static compilation and more flexible configurability.</p>
 <h2>Defining An Interceptor</h2>

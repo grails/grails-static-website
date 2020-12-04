@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Introducing the Grails 3 GORM Logical Delete Plugin</title>
+    <title>Introducing the Grails® 3 GORM Logical Delete Plugin</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="A blog explaining the usage and under the hood details of the Grails 3 GORM Logical Delete Plugin." />
+    <meta name="description" content="A blog explaining the usage and under the hood details of the Grails® 3 GORM Logical Delete Plugin." />
     <meta name="date" content="April 5, 2018" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
@@ -11,14 +11,14 @@
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='A blog explaining the usage and under the hood details of the Grails 3 GORM Logical Delete Plugin.'/>
+    <meta name='twitter:description' content='A blog explaining the usage and under the hood details of the Grails® 3 GORM Logical Delete Plugin.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Introducing the Grails 3 GORM Logical Delete Plugin'/>
-    <meta property='og:description' content='A blog explaining the usage and under the hood details of the Grails 3 GORM Logical Delete Plugin.'/>
+    <meta property='og:title' content='Introducing the Grails® 3 GORM Logical Delete Plugin'/>
+    <meta property='og:description' content='A blog explaining the usage and under the hood details of the Grails® 3 GORM Logical Delete Plugin.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,11 +60,11 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Introducing the Grails 3 GORM Logical Delete Plugin</h1>
+  <div class='light padded blogpost'><h1>Introducing the Grails® 3 GORM Logical Delete Plugin</h1>
 <p><span class="author">By Nirav Assar</span></p>
 <p><span class="date">April 5, 2018</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a> <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
-<p>Recently our development team came upon the need to develop a Grails 3 plugin that implements logical delete for entities.</p>
+<p>Recently our development team came upon the need to develop a Grails<sup>®</sup> 3 plugin that implements logical delete for entities.</p>
 <p>A &quot;logical&quot; delete (sometimes referred to as a &quot;soft&quot; delete) is a delete that doesn’t actually delete the relevant data but instead marks the data as deleted. Marking the data as deleted has the benefit of excluding the data from queries by default, while still maintaining the ability to retrieve the data when/if necessary. Essentially the plugin offers a mechanism to &quot;hide&quot; domain objects from retrieval. This is useful for retaining data without having it clutter the current set of active data.</p>
 <p>Logical Delete functionality is available in a few Grails 2 plugins. However these implementations rely on filters, ASTs, and runtime metaClass enhancements. We decided to create another implementation of the logical delete using some of latest Grails 3 features such as Traits and Listeners.</p>
 <p>This blog will highlight how to use the plugin and also give some insight into the techniques used under the covers.</p>
@@ -112,7 +112,7 @@ p.delete()
 <p>Note Hibernate Criteria and HQL queries are NOT supported by this plugin as they are ORM implementation specific.</p>
 </blockquote>
 <h2>Behind The Scenes</h2>
-<p>It's beneficial to understand how the plugin is implemented under the covers. We have tried to use the most efficient techniques with Groovy and Grails, which reduces some of the noise and clutter found in previous plugin implementations.</p>
+<p>It's beneficial to understand how the plugin is implemented under the covers. We have tried to use the most efficient techniques with Groovy and the Grails framework, which reduces some of the noise and clutter found in previous plugin implementations.</p>
 <p>In concept, what is occurring is that any domain object can be given a logical delete capability with the attribute <code>deleted</code>. When the entity is logically deleted, it is set to <code>true</code>. It is not physically deleted from persistence. During query time, a query event is intercepted by a listener and the query is altered to only include <code>deleted = false</code> items from the result set. This gives the illusion that the items are not present, but in reality they are just hidden by the query.</p>
 <h2>LogicalDelete</h2>
 <p>The <a href="https://grails-plugins.github.io/gorm-logical-delete/snapshot/api/gorm/logical/delete/LogicalDelete.html"><code>LogicalDelete</code></a> trait makes available a <code>deleted</code> attribute. As stated earlier, an entity can implement this.</p>
@@ -130,7 +130,7 @@ p.delete()
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-10-02.jpg)'>
   <a href='https://grails.org/blog/2018-10-02.html'>
     <h3>October 2, 2018</h3>
-    <h2>Grails Domain Read-Only Attribute</h2>
+    <h2>Grails® Domain Read-Only Attribute</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-03-09.jpg)'>

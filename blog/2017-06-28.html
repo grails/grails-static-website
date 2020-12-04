@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Running a Grails 3 App With a Self-Signed SSL Certificate</title>
+    <title>Running a Grails® 3 App With a Self-Signed SSL Certificate</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
     <meta name="description" content="Learn the steps involved in generating and configuring a self-signed certificate with your Grails app." />
     <meta name="date" content="June 28, 2017" />
@@ -17,7 +17,7 @@
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Running a Grails 3 App With a Self-Signed SSL Certificate'/>
+    <meta property='og:title' content='Running a Grails® 3 App With a Self-Signed SSL Certificate'/>
     <meta property='og:description' content='Learn the steps involved in generating and configuring a self-signed certificate with your Grails app.'/>
     <meta property='og:type' content='website'/>
 
@@ -60,11 +60,11 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Running a Grails 3 App With a Self-Signed SSL Certificate</h1>
+  <div class='light padded blogpost'><h1>Running a Grails® 3 App With a Self-Signed SSL Certificate</h1>
 <p><span class="author">By Zachary Klein</span></p>
 <p><span class="date">June 28, 2017</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/ssl.html"><span class="hashtag">#ssl</span></a> <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>The <a href="http://docs.grails.org/latest/ref/Command%20Line/run-app.html">Grails <em>run-app</em> command documentation</a> describes how to use the <em>-https</em> flag to serve your app over HTTPS.</p>
+<p>The <a href="http://docs.grails.org/latest/ref/Command%20Line/run-app.html">Grails<sup>®</sup> <em>run-app</em> command documentation</a> describes how to use the <em>-https</em> flag to serve your app over HTTPS.</p>
 <blockquote>
 <p>https - Start an HTTPS server (on port 8443 by default) alongside the main server. Just to be clear, the application will be accessible via HTTPS and HTTP. A self-signed key will be generated. Intended for development use only.</p>
 </blockquote>
@@ -87,7 +87,7 @@
 </ul>
 <p>You can learn about other <code>req</code> options by running <code>man req</code></p>
 <p>The previous command will prompt you to supply metadata about the certificate, such as Country, Organization, etc. Moreover, it will ask you to provide a PEM pass phrase. Enter a random password and keep it safe; we will need in the next step.</p>
-<p>Now you have you self-signed certificate. Unfortunately Grails (and Spring Boot) doesn’t support the PEM format directly. Instead, we need to use the PKCS12 format for our keys. Fortunately, there is another <code>openssl</code> command to make the conversion:</p>
+<p>Now you have you self-signed certificate. Unfortunately the Grails framework (and Spring Boot) doesn’t support the PEM format directly. Instead, we need to use the PKCS12 format for our keys. Fortunately, there is another <code>openssl</code> command to make the conversion:</p>
 <p><code>openssl pkcs12 -export -in cert.pem -inkey key.pem -out keystore.p12 -name tomcat -caname root</code></p>
 <p>Again, we're using a few options:</p>
 <ul>
@@ -140,7 +140,7 @@
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-26.jpg)'>
   <a href='https://grails.org/blog/2020-10-26-grails-foundation-announcement.html'>
     <h3>October 26, 2020</h3>
-    <h2>Grails Foundation Announced</h2>
+    <h2>Grails® Foundation Announced</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-01-07.jpg)'>
@@ -152,7 +152,7 @@
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-11-10.jpg)'>
   <a href='https://grails.org/blog/2016-11-10.html'>
     <h3>November 10, 2016</h3>
-    <h2>Deploying Grails 3.2 to JBoss 7.1 EAP</h2>
+    <h2>Deploying Grails® 3.2 to JBoss 7.1 EAP</h2>
   </a>
 </article></div>
     </div>

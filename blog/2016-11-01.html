@@ -3,7 +3,7 @@
 <head>
     <title>Configuring Rolling Logging with Logback</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn how to configure rolling log system in Grails, so that log files are rolled over on a schedule and archived after a certain point." />
+    <meta name="description" content="Learn how to configure rolling log system in Grails® apps, so that log files are rolled over on a schedule and archived after a certain point." />
     <meta name="date" content="November 1, 2016" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
@@ -11,14 +11,14 @@
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn how to configure rolling log system in Grails, so that log files are rolled over on a schedule and archived after a certain point.'/>
+    <meta name='twitter:description' content='Learn how to configure rolling log system in Grails® apps, so that log files are rolled over on a schedule and archived after a certain point.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
     <meta property='og:title' content='Configuring Rolling Logging with Logback'/>
-    <meta property='og:description' content='Learn how to configure rolling log system in Grails, so that log files are rolled over on a schedule and archived after a certain point.'/>
+    <meta property='og:description' content='Learn how to configure rolling log system in Grails® apps, so that log files are rolled over on a schedule and archived after a certain point.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -64,8 +64,8 @@
 <p><span class="author">By Zachary Klein</span></p>
 <p><span class="date">November 1, 2016</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/logging.html"><span class="hashtag">#logging</span></a> <a href="https://grails.org/blog/tag/logback.html"><span class="hashtag">#logback</span></a> <a href="https://grails.org/blog/tag/config.html"><span class="hashtag">#config</span></a></p>
-<p>A common requirement in web applications is to support a rolling log system, so that log files are rolled over on a schedule and archived after a certain point. Grails 3 uses Logback (considered the successor to log4j) as its logging library, and it's quite simple to configure a rolling appender using Logback's Groovy config format.</p>
-<p>Grails includes a default Logback configuration at <code>grails-app/conf/logback.groovy</code>. By default (as of Grails 3.2.1), this file (which follows the standard Logback groovy config format) configures a single appender, an instance of <code>ConsoleAppender</code> called <code>STDOUT</code>, and conditionally (when in development mode) an instance of <code>FileAppender</code> called <code>FULL_STACKTRACE</code>. These may then be used by logger instances, which can target specific package names and log levels, and write to one or more appenders. You have access to the Grails <code>Environment</code>, so you can configure different combinations of appenders for development and production.</p>
+<p>A common requirement in web applications is to support a rolling log system, so that log files are rolled over on a schedule and archived after a certain point. Grails<sup>®</sup> 3 uses Logback (considered the successor to log4j) as its logging library, and it's quite simple to configure a rolling appender using Logback's Groovy config format.</p>
+<p>The Grails framework includes a default Logback configuration at <code>grails-app/conf/logback.groovy</code>. By default (as of Grails 3.2.1), this file (which follows the standard Logback groovy config format) configures a single appender, an instance of <code>ConsoleAppender</code> called <code>STDOUT</code>, and conditionally (when in development mode) an instance of <code>FileAppender</code> called <code>FULL_STACKTRACE</code>. These may then be used by logger instances, which can target specific package names and log levels, and write to one or more appenders. You have access to the Grails <code>Environment</code>, so you can configure different combinations of appenders for development and production.</p>
 <p>The default <code>logback.groovy</code> file in Grails 3.2.1 is shown below.</p>
 <pre><code class="language-groovy">//grails-app/confg/logback.groovy
 import grails.util.BuildSettings
@@ -200,7 +200,7 @@ else {
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-26.jpg)'>
   <a href='https://grails.org/blog/2020-10-26-grails-foundation-announcement.html'>
     <h3>October 26, 2020</h3>
-    <h2>Grails Foundation Announced</h2>
+    <h2>Grails® Foundation Announced</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-16.jpg)'>

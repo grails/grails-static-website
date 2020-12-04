@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails Angular Profiles</title>
+    <title>Grails® Angular Profiles</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Grails provided Angular profiles have been renamed" />
+    <meta name="description" content="Grails® framework provided Angular profiles have been renamed" />
     <meta name="date" content="April 12, 2017" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
@@ -11,14 +11,14 @@
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Grails provided Angular profiles have been renamed'/>
+    <meta name='twitter:description' content='Grails® framework provided Angular profiles have been renamed'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails Angular Profiles'/>
-    <meta property='og:description' content='Grails provided Angular profiles have been renamed'/>
+    <meta property='og:title' content='Grails® Angular Profiles'/>
+    <meta property='og:description' content='Grails® framework provided Angular profiles have been renamed'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,11 +60,11 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails Angular Profiles</h1>
+  <div class='light padded blogpost'><h1>Grails® Angular Profiles</h1>
 <p><span class="author">By James Kleeh</span></p>
 <p><span class="date">April 12, 2017</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/angular.html"><span class="hashtag">#angular</span></a></p>
-<p>In order to be consistent with the Angular team's guidelines on naming conventions, we have renamed the Angular profiles that Grails provides. This change will take affect in Grails 3.2.9. Any existing applications will not be impacted by this change. This will only affect your project if you create a new application with Grails 3.2.9 or above, or if you upgrade an existing application.</p>
+<p>In order to be consistent with the Angular team's guidelines on naming conventions, we have renamed the Angular profiles that the Grails<sup>®</sup> framework provides. This change will take affect in Grails 3.2.9. Any existing applications will not be impacted by this change. This will only affect your project if you create a new application with Grails 3.2.9 or above, or if you upgrade an existing application.</p>
 <p>Previously we had:</p>
 <table>
 <thead>
@@ -95,7 +95,7 @@
     profile org.grails.profiles:angular
 }
 </code></pre>
-<p>Since Grails manages the version of the profile for you, if you were to upgrade to a newer version of Grails, you will get the newer version of the angular profile. That means that previously you had the Angular 1.x profile and after upgrading, you will have the Angular 4.x profile.</p>
+<p>Since the Grails framework manages the version of the profile for you, if you were to upgrade to a newer version of the Grails framework, you will get the newer version of the angular profile. That means that previously you had the Angular 1.x profile and after upgrading, you will have the Angular 4.x profile.</p>
 <p>Fortunately the change will not change the behavior of your application in any way. The only problem you may encounter is if you attempt to use the commands provided by the AngularJS profile. You will find the commands (<code>create-ng-controller</code>, <code>create-ng-directive</code>, etc) won't work as they exist in the &quot;angularjs&quot; profile, while you have the &quot;angular&quot; profile.</p>
 <p>To get the commands working again, simply change the dependency to &quot;angularjs&quot;.</p>
 <pre><code class="language-groovy">dependencies {
@@ -107,7 +107,7 @@
     profile: angular //Change to &quot;angularjs&quot;
 </code></pre>
 <h3><a href="https://github.com/grails-profiles/angular">Angular2 Profile</a></h3>
-<p>If you have an existing application with the &quot;angular2&quot; profile and you upgrade to Grails 3.2.9 and above, you will find Gradle can't find the dependency because Grails is no longer providing a version for that dependency. To fix the problem, simply change the dependency in <code>build.gradle</code>.</p>
+<p>If you have an existing application with the &quot;angular2&quot; profile and you upgrade to Grails 3.2.9 and above, you will find Gradle can't find the dependency because the Grails framework is no longer providing a version for that dependency. To fix the problem, simply change the dependency in <code>build.gradle</code>.</p>
 <pre><code class="language-groovy"> dependencies {
      profile org.grails.profiles:angular2  //Change to &quot;angular&quot;
  }
@@ -175,7 +175,7 @@ dependencies {
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-26.jpg)'>
   <a href='https://grails.org/blog/2020-10-26-grails-foundation-announcement.html'>
     <h3>October 26, 2020</h3>
-    <h2>Grails Foundation Announced</h2>
+    <h2>Grails® Foundation Announced</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-16.jpg)'>
@@ -187,7 +187,7 @@ dependencies {
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-07-06.jpg)'>
   <a href='https://grails.org/blog/2016-07-06.html'>
     <h3>July 6, 2016</h3>
-    <h2>Grails Angular Scaffolding</h2>
+    <h2>Grails® Angular Scaffolding</h2>
   </a>
 </article></div>
     </div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails Test Leakage</title>
+    <title>Grails® Test Leakage</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn how to avoid test leakage in Grails integration and functional tests" />
+    <meta name="description" content="Learn how to avoid test leakage in Grails® integration and functional tests" />
     <meta name="date" content="December 5, 2017" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
@@ -11,14 +11,14 @@
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn how to avoid test leakage in Grails integration and functional tests'/>
+    <meta name='twitter:description' content='Learn how to avoid test leakage in Grails® integration and functional tests'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails Test Leakage'/>
-    <meta property='og:description' content='Learn how to avoid test leakage in Grails integration and functional tests'/>
+    <meta property='og:title' content='Grails® Test Leakage'/>
+    <meta property='og:description' content='Learn how to avoid test leakage in Grails® integration and functional tests'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,7 +60,7 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails Test Leakage</h1>
+  <div class='light padded blogpost'><h1>Grails® Test Leakage</h1>
 <p><span class="author">By Sergio Del Amo Caballero</span></p>
 <p><span class="date">December 5, 2017</span></p>
 <p>From Rob Fletcher book, <a href="http://shop.oreilly.com/product/0636920038597.do">Spock: Up and Running</a></p>
@@ -70,7 +70,7 @@
 Test leakage is caused by badly managed resources. Typical causes of leakage include data in a persistent store that is not removed, changes to a class’ metaclass that are unexpectedly still in place later, mocks injected into objects reused between tests, and uncontrolled changes to global state such as the system clock.
 Test leakage can be very difficult to track down. Simply identifying which test is leaking can be time consuming. For example, the leaking test might not affect the one running directly after it, or continuous integration servers might run test suites in a different order from that of the developer’s computers, leading to protests of but, it works on my machine!”</p>
 </blockquote>
-<p>In this blog post, we discuss how to avoid test leakage in Grails integration and functional tests. In particular, <em>data in a persistent store that is not removed</em>.</p>
+<p>In this blog post, we discuss how to avoid test leakage in Grails<sup>®</sup> integration and functional tests. In particular, <em>data in a persistent store that is not removed</em>.</p>
 <p>Lets us create a simple Grails App:</p>
 <pre><code>curl -O start.grails.org/myapp.zip -d version=3.3.2 -d profile=rest-api
 </code></pre>
@@ -264,7 +264,7 @@ manually cleanup in functional tests.</p>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-26.jpg)'>
   <a href='https://grails.org/blog/2020-10-26-grails-foundation-announcement.html'>
     <h3>October 26, 2020</h3>
-    <h2>Grails Foundation Announced</h2>
+    <h2>Grails® Foundation Announced</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-16.jpg)'>

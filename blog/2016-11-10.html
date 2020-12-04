@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Deploying Grails 3.2 to JBoss 7.1 EAP</title>
+    <title>Deploying Grails® 3.2 to JBoss 7.1 EAP</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
     <meta name="description" content="Learn the steps involved to deploy a Grails 3 app to JBoss 7.1 EAP" />
     <meta name="date" content="November 10, 2016" />
@@ -17,7 +17,7 @@
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Deploying Grails 3.2 to JBoss 7.1 EAP'/>
+    <meta property='og:title' content='Deploying Grails® 3.2 to JBoss 7.1 EAP'/>
     <meta property='og:description' content='Learn the steps involved to deploy a Grails 3 app to JBoss 7.1 EAP'/>
     <meta property='og:type' content='website'/>
 
@@ -60,11 +60,11 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Deploying Grails 3.2 to JBoss 7.1 EAP</h1>
+  <div class='light padded blogpost'><h1>Deploying Grails® 3.2 to JBoss 7.1 EAP</h1>
 <p><span class="author">By Graeme Rocher</span></p>
 <p><span class="date">November 10, 2016</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>Following on from our post describing <a href="">how to deploy Grails 3 to JBoss 6.4 EAP</a>, I recently undertook a new adventure to deploy Grails 3.2.3 to <a href="http://www.jboss.org/">JBoss 7.1 EAP</a>.</p>
+<p>Following on from our post describing <a href="">how to deploy Grails<sup>®</sup> 3 to JBoss 6.4 EAP</a>, I recently undertook a new adventure to deploy Grails 3.2.3 to <a href="http://www.jboss.org/">JBoss 7.1 EAP</a>.</p>
 <p>Like every new version of JBoss there are dependency challenges and tweaks to overcome in order to get to the point where you can deploy an application.</p>
 <h2>Configuring Gradle</h2>
 <p>After you have created a Grails application using the <code>grails create-app</code> command the first thing that needs to be done is to modify the dependencies to versions compatible with JBoss 7.1.</p>
@@ -77,8 +77,8 @@
 <p>Since the classes within the Tomcat JARs are already provided by Tomcat these should not be included in the WAR. Next you should also specify the Servlet 3.0 API as provided:</p>
 <pre><code class="language-groovy">provided &quot;javax.servlet:javax.servlet-api:3.0.1&quot;
 </code></pre>
-<p>This does two things, firstly it ensures the Servlet API dependencies are not in the WAR and secondly it forces Grails to use Servlet 3.0 instead of the default 3.1.</p>
-<p>The next challenge is the Bean Validation API, in earlier versions of JBoss it was possible to exclude the validation module and ship with a custom version of the Bean Validation API, this no longer seems to be possible with JBoss 7 so you have to downgrade the version of Hibernate Validator used by Grails:</p>
+<p>This does two things, firstly it ensures the Servlet API dependencies are not in the WAR and secondly it forces the Grails framework to use Servlet 3.0 instead of the default 3.1.</p>
+<p>The next challenge is the Bean Validation API, in earlier versions of JBoss it was possible to exclude the validation module and ship with a custom version of the Bean Validation API, this no longer seems to be possible with JBoss 7 so you have to downgrade the version of Hibernate Validator used by the Grails framework:</p>
 <pre><code class="language-groovy">compile &quot;org.hibernate:hibernate-validator:4.3.2.Final&quot;
 </code></pre>
 <p>The JAXB dependency also seems be a required dependency of JBoss 7 so you have to add that:</p>
@@ -119,7 +119,7 @@
             jndiName: &quot;java:jboss/datasources/MyDataSource&quot;
             dbCreate: none   
 </code></pre>
-<p>Note that you typically do not want Grails to create the schema for you so we set <code>dbCreate</code> to <code>none</code>. You can then run <code>grails schema-export</code> to generate a <code>build/ddl.sql</code> file that you can use to create the database in your production environment.</p>
+<p>Note that you typically do not want the Grails tooling to create the schema for you so we set <code>dbCreate</code> to <code>none</code>. You can then run <code>grails schema-export</code> to generate a <code>build/ddl.sql</code> file that you can use to create the database in your production environment.</p>
 <p>On the JBoss side if you are using standalone deployment, you need to modify the <code>standalone/configuration/standalone.xml</code> file to configure your JNDI datasource. For example for MySQL adding the following section within the <code>&lt;datasources&gt;</code> block will do:</p>
 <pre><code class="language-xml">    &lt;datasource jndi-name=&quot;java:jboss/datasources/MyDataSource&quot; pool-name=&quot;MyDataSource&quot;&gt;
         &lt;connection-url&gt;jdbc:mysql://localhost:3306/my-database&lt;/connection-url&gt;
@@ -147,10 +147,10 @@
 </code></pre>
 <p>This is apparently <a href="http://stackoverflow.com/questions/13786685/spring3-2-and-jboss-as-7">normal behaviour</a> and can be safely ignored.</p>
 <h2>This Is WAY Too Hard</h2>
-<p>I agree. Deploying to &quot;enterprise&quot; containers is not fun. It can, however, be a requirement where you work. In order to simplify these steps I have created a JBoss 7 profile for Grails that tries to encapsulate all these changes. Simply run:</p>
+<p>I agree. Deploying to &quot;enterprise&quot; containers is not fun. It can, however, be a requirement where you work. In order to simplify these steps I have created a JBoss 7 profile for Grails apps that tries to encapsulate all these changes. Simply run:</p>
 <pre><code class="language-bah">grails create-app myapp --profile org.grails.profiles:web-jboss7:1.0.0.RC1
 </code></pre>
-<p>This will create an application in the <code>myapp</code> directory with all the changes necessary apart from preparing the JNDI datasource. Hopefully the profile encourages more JBoss 7 folks to give Grails a try. Happy deploying!</p>
+<p>This will create an application in the <code>myapp</code> directory with all the changes necessary apart from preparing the JNDI datasource. Hopefully the profile encourages more JBoss 7 folks to give the Grails framework a try. Happy deploying!</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
@@ -158,7 +158,7 @@
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2020-10-26.jpg)'>
   <a href='https://grails.org/blog/2020-10-26-grails-foundation-announcement.html'>
     <h3>October 26, 2020</h3>
-    <h2>Grails Foundation Announced</h2>
+    <h2>Grails® Foundation Announced</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-01-07.jpg)'>
@@ -170,7 +170,7 @@
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2017-06-28.jpg)'>
   <a href='https://grails.org/blog/2017-06-28.html'>
     <h3>June 28, 2017</h3>
-    <h2>Running a Grails 3 App With a Self-Signed SSL...</h2>
+    <h2>Running a Grails® 3 App With a Self-Signed SS...</h2>
   </a>
 </article></div>
     </div>

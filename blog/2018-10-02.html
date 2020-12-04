@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails Domain Read-Only Attribute</title>
+    <title>Grails® Domain Read-Only Attribute</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn how to make a domain attribute read-only in Grails." />
+    <meta name="description" content="Learn how to make a domain attribute read-only in Grails® apps." />
     <meta name="date" content="October 2, 2018" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
@@ -11,14 +11,14 @@
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn how to make a domain attribute read-only in Grails.'/>
+    <meta name='twitter:description' content='Learn how to make a domain attribute read-only in Grails® apps.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails Domain Read-Only Attribute'/>
-    <meta property='og:description' content='Learn how to make a domain attribute read-only in Grails.'/>
+    <meta property='og:title' content='Grails® Domain Read-Only Attribute'/>
+    <meta property='og:description' content='Learn how to make a domain attribute read-only in Grails® apps.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,11 +60,11 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails Domain Read-Only Attribute</h1>
+  <div class='light padded blogpost'><h1>Grails® Domain Read-Only Attribute</h1>
 <p><span class="author">By Nirav Assar</span></p>
 <p><span class="date">October 2, 2018</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/gorm.html"><span class="hashtag">#gorm</span></a></p>
-<p>Recently I encountered a situation with a client Grails application that required a read-only domain attribute. The application had a backend table where one column (call it <code>A</code>) was populated strictly by a batch database process. The table needed to be mapped to a Grails domain class. Certain columns (call them <code>B through D</code>) were to be updated from the UI. Attribute <code>A</code> should not be writable, but needed to be accessed for read-only operations.</p>
+<p>Recently I encountered a situation with a client Grails<sup>®</sup> application that required a read-only domain attribute. The application had a backend table where one column (call it <code>A</code>) was populated strictly by a batch database process. The table needed to be mapped to a Grails domain class. Certain columns (call them <code>B through D</code>) were to be updated from the UI. Attribute <code>A</code> should not be writable, but needed to be accessed for read-only operations.</p>
 <h2>The Problem</h2>
 <p>The catch here is when an update occurs on a mapped domain class, GORM with Hibernate issues an update on all columns, regardless of which columns have a value change. So even if attribute <code>B</code> is changed, an update will be issued on all columns <code>A through D</code>. If the database is configured with a specific column as read-only, you will get an error along the lines of: &quot;failure to insert into a read-only column&quot;.</p>
 <p>We propose two solutions:</p>
@@ -134,7 +134,7 @@ class Team {
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-04-05.jpg)'>
   <a href='https://grails.org/blog/2018-04-05.html'>
     <h3>April 5, 2018</h3>
-    <h2>Introducing the Grails 3 GORM Logical Delete ...</h2>
+    <h2>Introducing the Grails® 3 GORM Logical Delete...</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-03-09.jpg)'>

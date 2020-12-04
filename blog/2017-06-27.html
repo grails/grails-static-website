@@ -69,7 +69,7 @@
 <p>Groovy has less ceremony than Java. That's crystal-clear in exception handling. Java forces us to handle checked exceptions. Groovy does not force us to handle exceptions that we don't want to handle or that are inappropriate at the current level of code. Any exception we don't handle is automatically passed on to a higher level.</p>
 </blockquote>
 <p>Although the distinction between checked exceptions and runtime exceptions in Groovy is blurred, <strong>GORM versions before 6.0.0 did not roll back transactions for checked <code>Exceptions</code></strong>. However, they rollbacked transactions for runtime exceptions.</p>
-<p>Grails 3.2.0 shipped with GORM 6.0.0. One of the changes introduced by GORM 6.0.0 is that if a transactional method throws an <code>Exception</code> (both checked or runtime exception), the transaction will automatically be rolled back. Thus, same behavior for checked and runtime exceptions as you may expect in Groovy.</p>
+<p>Grails<sup>®</sup> 3.2.0 shipped with GORM 6.0.0. One of the changes introduced by GORM 6.0.0 is that if a transactional method throws an <code>Exception</code> (both checked or runtime exception), the transaction will automatically be rolled back. Thus, same behavior for checked and runtime exceptions as you may expect in Groovy.</p>
 <p>The previous behavior is better illustrated  with an example:</p>
 <p>Given a Checked Exception</p>
 <pre><code class="language-groovy">package demo
@@ -170,13 +170,13 @@ class BookServiceIntegrationSpec extends Specification {
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-10-02.jpg)'>
   <a href='https://grails.org/blog/2018-10-02.html'>
     <h3>October 2, 2018</h3>
-    <h2>Grails Domain Read-Only Attribute</h2>
+    <h2>Grails® Domain Read-Only Attribute</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-04-05.jpg)'>
   <a href='https://grails.org/blog/2018-04-05.html'>
     <h3>April 5, 2018</h3>
-    <h2>Introducing the Grails 3 GORM Logical Delete ...</h2>
+    <h2>Introducing the Grails® 3 GORM Logical Delete...</h2>
   </a>
 </article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-03-09.jpg)'>

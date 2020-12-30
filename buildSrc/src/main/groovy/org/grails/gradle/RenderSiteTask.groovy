@@ -100,8 +100,7 @@ class RenderSiteTask extends DefaultTask {
             ApplicationContext applicationContext = ApplicationContext.run(configuration)
             AirtableBaseApi api = applicationContext.getBean(AirtableBaseApi, Qualifiers.byName("2020"))
             GrailsAirtable airtable = new GrailsAirtable(api)
-            List<Event> events = airtable.fetchGrailsByPracticeName('Groovy')
-            events.addAll(airtable.fetchGrailsByPracticeName('Grails'))
+            List<Event> events = airtable.fetchGrailsByPracticeName('2GM')
             eventsHtml = EventsPage.eventsTable(events)
             applicationContext.close()
         }

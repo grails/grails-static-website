@@ -22,7 +22,7 @@ onload = function () {
     elements = document.getElementsByClassName(multiguideClassName);
     for ( var i = 0; i < elements.length; i++ ) {
         var element = elements[i];
-        var guide = { title: titleAtMultiguide(element), languages: languagesAtMultiguide(element)  }; /* */
+        var guide = { title: titleAtMultiguide(element), versions: versionsAtMultiguide(element)  }; /* */
         allguides.push(guide);
     }
 
@@ -77,29 +77,29 @@ function titleAtMultiguide(element) {
     return '';
 }
 
-function languagesAtMultiguide(element) {
-    var languages = [];
+function versionsAtMultiguide(element) {
+    var versions = [];
 
     for (var y = 0; y < element.childNodes.length; y++) {
         if (element.childNodes[y].className === "align-left") {
-            var languageDiv = element.childNodes[y];
-            var langEl;
+            var versionDiv = element.childNodes[y];
+            var verEl;
             var hrefEl;
             var tagsArr = [];
-            for (var x = 0; x < languageDiv.childNodes.length; x++) {
-                if (languageDiv.childNodes[x].className === "lang") {
-                    langEl = languageDiv.childNodes[x].textContent
-                    hrefEl = languageDiv.childNodes[x].getAttribute('href');
+            for (var x = 0; x < versionDiv.childNodes.length; x++) {
+                if (versionDiv.childNodes[x].className === "grailsVersion") {
+                    verEl = versionDiv.childNodes[x].textContent
+                    hrefEl = versionDiv.childNodes[x].getAttribute('href');
                 }
-                if (languageDiv.childNodes[x].className === "tag") {
-                    var tag = languageDiv.childNodes[x];
+                if (versionDiv.childNodes[x].className === "tag") {
+                    var tag = versionDiv.childNodes[x];
                     tagsArr.push(tag.textContent);
                 }
             }
-            languages.push({lang: langEl, href: hrefEl, tags: tagsArr})
+            versions.push({grailsVersion: verEl, href: hrefEl, tags: tagsArr})
         }
     }
-    return languages
+    return versions
 }
 
 function tagsAtGuide(element) {
@@ -163,9 +163,9 @@ function doesGuideMatchesQuery(guide, query) {
         return true;
     }
     if (guide.tags === undefined || guide.tags === null) {
-        for ( var i = 0; i < guide.languages.length; i++) {
-            var language = guide.languages[i];
-            if (doesTagsMatchesQuery(language.tags,query)) {
+        for ( var i = 0; i < guide.versions.length; i++) {
+            var version = guide.versions[i];
+            if (doesTagsMatchesQuery(version.tags,query)) {
                 return true;
             }
         }
@@ -212,14 +212,14 @@ function renderGuideAsHtmlLi(guide, query) {
         html += "<div class=\"multiguide\">";
         html += "<span class=\"title\">" + guide.title + "</span>";
         var titleMatched = doesTitleMatchesQuery(guide.title, query);
-        for (var i = 0; i < guide.languages.length; i++) {
-            var language = guide.languages[i];
-            var tagsMatched = doesTagsMatchesQuery(language.tags, query);
+        for (var i = 0; i < guide.versions.length; i++) {
+            var version = guide.versions[i];
+            var tagsMatched = doesTagsMatchesQuery(version.tags, query);
             if (titleMatched || tagsMatched) {
                 html += "<div class=\"align-left\">";
-                html += "<a class=\"lang\" href=\""+language.href+"\">"+language.lang+"</a>"
-                for (var x = 0; x < language.tags.length; x++) {
-                    var tag = language.tags[x];
+                html += "<a class=\"grailsVersion\" href=\""+version.href+"\">"+version.grailsVersion+"</a>"
+                for (var x = 0; x < version.tags.length; x++) {
+                    var tag = version.tags[x];
                     html += "<span style='display: none' class='tag'>" + tag + "</span>";
                 }
                 html += "</div>";

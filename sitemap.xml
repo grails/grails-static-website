@@ -1,70 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
+    <loc>https://grails.org/blog/2016-12-14.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-01-20-1.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-04-05.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-10-12.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2020-10-01-2gm-town-hall.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-07-12.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2020-09-10-grails-state-of-union.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-10-30.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-08-31.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-07-06.html</loc>
+  </url>
+  <url>
     <loc>https://grails.org/blog/2016-11-10.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-03-09.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-06-22.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-11-01.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-11-14.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-02-19.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2020-10-26-grails-foundation-announcement.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-09-12.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-01-30.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-11-09.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-04-01-2.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-07-22.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-01-20-4.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-06-02.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-03-06.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-05-26.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-05-31.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2018-08-22-1.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/geb.html</loc>
+    <loc>https://grails.org/blog/2019-03-27.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/video.html</loc>
+    <loc>https://grails.org/blog/2019-08-27.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-06-07.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-01-30.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-07-26.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/ssl.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/4:.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/tag/angular.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/micronaut.html</loc>
+    <loc>https://grails.org/blog/tag/geb.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/foundation.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/monitoring.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/yourkit.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/javascript.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/plugins.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/groovy3.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/release.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/video.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/spock.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/tag/eclipse.html</loc>
@@ -73,19 +97,7 @@
     <loc>https://grails.org/blog/tag/logback.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/quickcast.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/townhall.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/release.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/react.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/spock.html</loc>
+    <loc>https://grails.org/blog/tag/travis.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/tag/rest.html</loc>
@@ -94,7 +106,25 @@
     <loc>https://grails.org/blog/tag/webinar.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/travis.html</loc>
+    <loc>https://grails.org/blog/tag/logging.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/config.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/micronaut.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/quickcast.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/json.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/graphql.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/tag/groovy.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/tag/gradle.html</loc>
@@ -103,130 +133,37 @@
     <loc>https://grails.org/blog/tag/gorm.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/groovy3.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/groovy.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/javascript.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/logging.html</loc>
+    <loc>https://grails.org/blog/tag/react.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/tag/deployment.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/monitoring.html</loc>
+    <loc>https://grails.org/blog/tag/townhall.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/foundation.html</loc>
+    <loc>https://grails.org/blog/2016-05-26.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/tag/plugins.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/graphql.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/json.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/yourkit.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/config.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/4:.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/tag/ssl.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-04-05.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-11-30.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-11-21.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-01-07.html</loc>
+    <loc>https://grails.org/blog/2017-05-09.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2018-09-23.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2018-02-09.html</loc>
+    <loc>https://grails.org/blog/2016-04-01-2.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-04-01-1.html</loc>
+    <loc>https://grails.org/blog/2017-11-09.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-10-03.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-05-18.html</loc>
+    <loc>https://grails.org/blog/2016-09-28.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2020-10-16-2gm-town-hall-2020-q4.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/index.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-05-24.html</loc>
-  </url>
-  <url>
     <loc>https://grails.org/blog/2016-06-26.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2020-10-01-2gm-town-hall.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-05-28.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-10-30.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-07-06.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-07-26.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-04-06.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-06-18.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2020-09-10-grails-state-of-union.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-08-31.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-05-24.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-08-22-2.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-03-27.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-12-05.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-06-27.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2017-04-02.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2018-03-02.html</loc>
@@ -235,7 +172,28 @@
     <loc>https://grails.org/blog/2017-06-28.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2019-08-27.html</loc>
+    <loc>https://grails.org/blog/2020-10-26-grails-foundation-announcement.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-01-20-4.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-03-27.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-08-01.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-04-01-1.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-12-05.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-06-15.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-07-11.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2018-02-08.html</loc>
@@ -244,67 +202,127 @@
     <loc>https://grails.org/blog/2017-04-12.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-04-13.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2018-10-12.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2016-04-28.html</loc>
-  </url>
-  <url>
     <loc>https://grails.org/blog/2015-03-01.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-07-22.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-11-01.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-11-21.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-10-03.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-04-06.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-05-24.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-02-19.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2017-01-20-3.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2019-05-30.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/blog/2019-12-20.html</loc>
+    <loc>https://grails.org/blog/2017-06-27.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2018-10-02.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-09-28.html</loc>
+    <loc>https://grails.org/blog/2016-04-28.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-03-06.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-03-09.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-05-28.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2016-04-27.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2017-05-09.html</loc>
+    <loc>https://grails.org/blog/2018-05-24.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-11-30.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2017-04-02.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-05-31.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2018-08-22-2.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-12-20.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2017-01-20-2.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-08-01.html</loc>
+    <loc>https://grails.org/blog/2016-06-02.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2017-07-12.html</loc>
+    <loc>https://grails.org/blog/2018-02-09.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-12-14.html</loc>
+    <loc>https://grails.org/blog/2016-11-14.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2017-03-27.html</loc>
+    <loc>https://grails.org/blog/index.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2016-06-07.html</loc>
+    <loc>https://grails.org/blog/2019-01-07.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2018-06-15.html</loc>
+    <loc>https://grails.org/blog/2018-05-18.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2017-01-20-1.html</loc>
+    <loc>https://grails.org/blog/2018-06-22.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/blog/2019-07-11.html</loc>
+    <loc>https://grails.org/blog/2016-09-12.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-05-30.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2019-06-18.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2016-04-13.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/profiles.html</loc>
   </url>
   <url>
     <loc>https://grails.org/search.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/support.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/documentation.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/faq.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/community.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/foundation/index.html</loc>
   </url>
   <url>
     <loc>https://grails.org/learning.html</loc>
@@ -313,24 +331,6 @@
     <loc>https://grails.org/index.html</loc>
   </url>
   <url>
-    <loc>https://grails.org/documentation.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/foundation/index.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/community.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/support.html</loc>
-  </url>
-  <url>
     <loc>https://grails.org/download.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/profiles.html</loc>
-  </url>
-  <url>
-    <loc>https://grails.org/faq.html</loc>
   </url>
 </urlset>

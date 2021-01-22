@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SDKMAN! with Travis</title>
+    <title>GRAILS | Blog | Grails Framework</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn the steps involved to install SDKMAN in Travis CI." />
-    <meta name="date" content="January 7, 2019" />
+    <meta name="description" content="A powerful Groovy-based web application framework for the JVM built on top of Spring Boot" />
+    <meta name="date" content="January 22, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn the steps involved to install SDKMAN in Travis CI.'/>
+    <meta name='twitter:description' content='A powerful Groovy-based web application framework for the JVM built on top of Spring Boot'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='SDKMAN! with Travis'/>
-    <meta property='og:description' content='Learn the steps involved to install SDKMAN in Travis CI.'/>
+    <meta property='og:title' content='GRAILS | Blog | Grails Framework'/>
+    <meta property='og:description' content='A powerful Groovy-based web application framework for the JVM built on top of Spring Boot'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -26,8 +26,8 @@
     <link rel='stylesheet' href='https://grails.org/stylesheets/screen.css' />
     <script src='https://grails.org/javascripts/navigation.js'></script>
     
-    
-    
+    <link rel='stylesheet' href=''/>
+    <script src=''></script>
 </head>
 <body><header class='mainheader'>
     <div class='content'>
@@ -53,50 +53,18 @@
     </div>
 </header>
 <article><div class='headerbar chalicesbg'>
-  <div class='content'>
-    <h1>
-      <a href='https://grails.org/blog/index.html'>Grails Blog</a>
-    </h1>
-  </div>
+  <div class='content'><h1>
+  <span>Tag:</span>
+  <b>grails</b>
+</h1></div>
 </div>
-<div class='content container'>
-  <div class='light padded blogpost'><h1>SDKMAN! with Travis</h1>
-<p><span class="author">By Sergio del Amo Caballero</span></p>
-<p><span class="date">January 7, 2019</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>The <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) uses <a href="https://travis-ci.org/">Travis CI</a> and <a href="https://sdkman.io/">SDKMAN!</a> daily.</p>
-<p>Using SDKMAN! in Travis is possible and opens a lot of possibilities.</p>
-<p>The following <code>.travis.yml</code> file will install SDKMAN! and create a Grails app using the latest version available.</p>
-<pre><code class="language-bash">install: true
-jdk:
-  - oraclejdk8
-script:
-  - curl -s get.sdkman.io | bash
-  - source &quot;&amp;#36;HOME/.sdkman/bin/sdkman-init.sh&quot;
-  - echo sdkman_auto_answer=true &gt; ~/.sdkman/etc/config
-  - source &quot;/home/travis/.sdkman/bin/sdkman-init.sh&quot;
-  - sdk install grails
-</code></pre>
-    <h2 class='space-above'>
-      <span>You might also like ...</span>
-    </h2>
-    <div class='threecolumns'>
+<div class='clear content container'>
+  <div class='light'>
+    <div class='padded' style='padding-top: 0;'><div class="threecolumns">
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
   <a href='https://grails.org/blog/2021-01-22-grails-exciting-updates.html'>
     <h3>January 22, 2021</h3>
     <h2>Grails Framework Exciting Updates</h2>
-  </a>
-</article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2017-06-28.jpg)'>
-  <a href='https://grails.org/blog/2017-06-28.html'>
-    <h3>June 28, 2017</h3>
-    <h2>Running a Grails® 3 App With a Self-Signed SS...</h2>
-  </a>
-</article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-11-10.jpg)'>
-  <a href='https://grails.org/blog/2016-11-10.html'>
-    <h3>November 10, 2016</h3>
-    <h2>Deploying Grails® 3.2 to JBoss 7.1 EAP</h2>
   </a>
 </article></div>
     </div>

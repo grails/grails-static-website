@@ -84,3 +84,19 @@ section.foundation-boards .foundation-board-content h2 {
 	font-size: 1.1em;
 	line-height: 1.4em;
 }
+
+.donations-table {
+	margin: auto;
+	margin-top: 1em;
+	width: 90%;
+	font-size: 1.2em;
+	position: relative;
+}
+
+.donations-table .reward-dot {
+	width: .7em;
+	height: .7em;
+	border-radius: 9999px;
+	background: #feb672;
+	margin: auto;
+}

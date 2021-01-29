@@ -85,6 +85,11 @@ section.foundation-boards .foundation-board-content h2 {
 	line-height: 1.4em;
 }
 
+.donations-content .two-columns {
+	column-count: 2;
+	column-gap: 2em;
+}
+
 .donations-table {
 	margin: auto;
 	margin-top: 50px;

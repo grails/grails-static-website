@@ -96,12 +96,20 @@ section.foundation-boards .foundation-board-content h2 {
 .donations-table thead tr th {
 	background: #ffffff;
 	border-top: 10px solid #feb672;
-	border-bottom: 2px solid black;
+	border-bottom: 5px solid #f5f5f5;
+	color: #feb672
+}
+
+.donations-table .contributions {
+	text-align: center;
 }
 
 .donations-table tbody tr td {
 	background: #ffffff;
-	border-color: black white;
+	border-top: 5px solid #f5f5f5;
+	border-left: #ffffff;
+	border-right: #ffffff;
+	border-bottom: #ffffff;
 }
 
 .donations-table .reward-dot {

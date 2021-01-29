@@ -87,8 +87,8 @@ section.foundation-boards .foundation-board-content h2 {
 
 .donations-table {
 	margin: auto;
-	margin-top: 1em;
-	max-width: 1366px;
+	margin-top: 50px;
+	width: 1141px;
 	font-size: 1.2em;
 	position: relative;
 }
@@ -110,6 +110,7 @@ section.foundation-boards .foundation-board-content h2 {
 	border-left: #ffffff;
 	border-right: #ffffff;
 	border-bottom: #ffffff;
+	height: 55px;
 }
 
 .donations-table .reward-dot {

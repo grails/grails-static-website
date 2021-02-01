@@ -85,6 +85,13 @@ section.foundation-boards .foundation-board-content h2 {
 	line-height: 1.4em;
 }
 
+.donations-content {
+	background-color: #ffffff;
+	padding: 25px;
+	column-count: 2;
+	column-gap: 2em;
+}
+
 .donations-content .two-columns {
 	column-count: 2;
 	column-gap: 2em;

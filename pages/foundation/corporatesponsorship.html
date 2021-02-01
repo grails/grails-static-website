@@ -1,5 +1,6 @@
 title: Corporate Sponsorship | Grails&reg; Framework
 CSS: /stylesheets/foundation.css
+JAVASCRIPT: https://js.hsforms.net/forms/v2.js
 body: foundation
 ---
 <div class='headerbar chalicesbg'>
@@ -26,9 +27,9 @@ body: foundation
       <p>The Grails Foundation relies on the financial support of our Contributing Members to support and grow the Grails framework. If you are interested in becoming a Contributing Member, or have any questions regarding sponsorship details, please contact us at foundation@grails.org.
       <br><br>
       We encourage organizations that make extensive use of the Grails framework to support the continued evolution and growth of the technology through the Grails Foundation Corporate Sponsor Program. The generous support of our Corporate Sponsors allows the Foundation to continue to ensure technical innovation and advancement of the Grails framework as a free and open public use software development framework for a growing global community.
-      <br><br> 
+      <br><br>
       Contributing Members may support the Grails Foundation by contributing at one of our defined sponsorship levels, or by making an anonymous donation to the Grails Foundation. There are five tiers of sponsorship: Ambassador, Platinum, Gold, Silver, and Bronze.  Please reach out to the Grails Foundation Board of Directors at foundation@grails.org to discuss additional opportunities to support and engage with our team.</p>
-      <h2>Other Ways To Support The Grails Foundation</h2>        
+      <h2>Other Ways To Support The Grails Foundation</h2>
       <p>The Grails Foundation is also supported by our Community Member Sponsorship Program.  If you are interested in supporting the Grails Foundation as an individual, please see our <a href="communitysponsorship.html">Community Member Sponsorship details</a>.</p>
     </div>
   </div>
@@ -136,7 +137,9 @@ body: foundation
       </tr>
       <tr>
         <td></td>
-        <td class="button"><button>Contact Us</button></td>
+        <td class="button">
+          <button class="modal-button" data-hubspot-form="ambassador">Contact Us</button>
+        </td>
         <td class="button"><button>Donate Now</button></td>
         <td class="button"><button>Donate Now</button></td>
         <td class="button"><button>Donate Now</button></td>
@@ -144,5 +147,59 @@ body: foundation
       </tr>
     </tbody>
   </table>
-    
 </article>
+<div id="modal-ambassador" class="contact-modal padded">
+  <button class="contact-us-close">X</button>
+  <div id="modal-ambassador-target" class="contact-modal-iframe-wrapper"></div>
+</div>
+<script>
+  ;(function() {
+
+    const config = {
+      hubspot: {
+        portalId: '4547412',
+        formIds: {
+          ambassador: '08f40ccd-5958-4e71-923f-4d3197662b9f'
+        }
+      }
+    };
+
+    function initHubspotForms() {
+      const contactUsModal = document.getElementById('contact-us-modal');
+
+      document.querySelectorAll('button.modal-button').forEach(function(button) {
+        console.log('Found: ');
+
+        const formName = button.getAttribute('data-hubspot-form');
+        console.log(formName);
+        const targetId = '#modal-' + formName + '-target';
+        const modal = document.getElementById('modal-' + formName);
+
+        hbspt.forms.create({
+          target: targetId,
+          portalId: config.hubspot.portalId,
+          formId: config.hubspot.formIds[formName]
+        });
+
+        function clickHandler() {
+          modal.classList.add('active');
+          document.body.classList.add('drawer-active');
+        }
+
+        function closeHandler() {
+          modal.classList.remove('active');
+          document.body.classList.remove('drawer-active');
+        }
+
+        modal.querySelectorAll('.contact-us-close').forEach(function(closeButton) {
+          closeButton.addEventListener('click', closeHandler);
+        });
+
+        button.addEventListener('click', clickHandler);
+      });
+    }
+
+    initHubspotForms();
+
+  })()
+</script>

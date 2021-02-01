@@ -91,6 +91,10 @@ section.foundation-boards .foundation-board-content h2 {
 	width: 100%;
 }
 
+.donations-tabs a {
+	color:#feb672;
+}
+
 .donations-tabs .tab {
 	width: 49.8%;
 	display: inline-block;

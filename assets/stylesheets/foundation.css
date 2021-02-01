@@ -88,7 +88,16 @@ section.foundation-boards .foundation-board-content h2 {
 .donations-tabs {
 	background-color: #ffffff;
 	color: #feb672;
-	margin: 50px;
+	width: 100%;
+}
+
+.donations-tabs .tab {
+	width: 49.8%;
+	display: inline-block;
+}
+
+.donations-tabs .tab .tab-title {
+	display: inline-block;
 }
 
 .donations-content {

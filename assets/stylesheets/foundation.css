@@ -85,6 +85,12 @@ section.foundation-boards .foundation-board-content h2 {
 	line-height: 1.4em;
 }
 
+.donations-tabs {
+	background-color: #ffffff;
+	color: #feb672;
+	margin: 50px;
+}
+
 .donations-content {
 	background-color: #ffffff;
 	padding: 25px;

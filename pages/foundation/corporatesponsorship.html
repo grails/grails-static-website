@@ -148,9 +148,19 @@ body: foundation
     </tbody>
   </table>
 </article>
+<div class="outro">
+  <span class="outro-content">
+      <p>To learn more about donating to the Grails Foundation, please provide us with your contact information and we will be in touch!</p>
+      <button class="contact-us-general modal-button" data-hubspot-form="general">Contact Us</button>
+  </span>
+</div>
 <div id="modal-ambassador" class="contact-modal padded">
   <button class="contact-us-close">X</button>
   <div id="modal-ambassador-target" class="contact-modal-iframe-wrapper"></div>
+</div>
+<div id="modal-general" class="contact-modal padded">
+  <button class="contact-us-close">X</button>
+  <div id="modal-general-target" class="contact-modal-iframe-wrapper"></div>
 </div>
 <script>
   ;(function() {
@@ -159,7 +169,8 @@ body: foundation
       hubspot: {
         portalId: '4547412',
         formIds: {
-          ambassador: '08f40ccd-5958-4e71-923f-4d3197662b9f'
+          ambassador: '08f40ccd-5958-4e71-923f-4d3197662b9f',
+          general: '3cd89d07-d575-405c-a9c1-d8c22c765cea'
         }
       }
     };

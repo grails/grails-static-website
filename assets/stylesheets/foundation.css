@@ -208,3 +208,36 @@ section.foundation-boards .foundation-board-content h2 {
 body.drawer-active {
 	overflow: hidden;
 }
+
+.outro {
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-bottom: 3em;
+	text-align: center;
+	color: white;
+	background-color: rgb(37, 90, 168);
+}
+
+.outro .outro-content {
+	display: inline-block;
+	max-width: 650px;
+}
+
+.outro p {
+	font-size: 1.4em;
+	font-weight: 600;
+}
+
+.outro button {
+	font-size: 1.4em;
+	font-weight: 600;
+	background-color: #feb672;
+	color: white;
+	border-color: #feb672;
+	border-radius: 8px;
+	border-style: solid;
+	position: relative;
+	min-height: 2.4em;
+	min-width: 10em;
+	cursor: pointer;
+}

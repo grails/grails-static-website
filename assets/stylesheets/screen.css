@@ -1747,3 +1747,7 @@ blockquote {
 .space-above {
 	margin-top: 10%;
 }
+
+body.community-guidelines ul > li {
+	margin-left: 30px;
+}

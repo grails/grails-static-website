@@ -100,16 +100,16 @@ section.foundation-boards .foundation-board-content h2 {
 .donations-tabs .tab {
     background-color: #ffffff;
     flex: 1;
-    border-bottom: 1em solid #eeeeee;
+    border-bottom: 1.3rem solid #eeeeee;
     color: #7c7c7c;
 }
 
 .donations-tabs .tab:last-of-type {
-    border-left: 1em solid #eeeeee;
+    border-left: 1.3rem solid #eeeeee;
 }
 
 .donations-tabs .tab.first-of-type {
-    border-right: 1em solid #eeeeee;
+    border-right: 1.3rem solid #eeeeee;
 }
 
 .donations-tabs .tab.tab-active {
@@ -130,6 +130,7 @@ section.foundation-boards .foundation-board-content h2 {
     display: inline-block;
     font-size: 1.1rem;
     padding-left: 5px;
+    text-transform: uppercase;
 }
 
 .donations-tabs .tab .tab-image {
@@ -137,6 +138,7 @@ section.foundation-boards .foundation-board-content h2 {
     height: 75px;
     vertical-align: middle;
 }
+
 .donations-content {
     background-color: #ffffff;
     padding: 25px;
@@ -193,6 +195,8 @@ section.foundation-boards .foundation-board-content h2 {
     border-bottom: 5px solid #f5f5f5;
     color: var(--grails-orange);
     text-transform: uppercase;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 .donations-table .contributions td:not(:first-of-type) {
@@ -206,7 +210,7 @@ section.foundation-boards .foundation-board-content h2 {
 /*Reset the first colum to left aligned*/
 .donations-table td:first-of-type {
     text-align: left;
-    max-width: 28ch;
+    max-width: 18ch;
 }
 
 
@@ -227,10 +231,34 @@ section.foundation-boards .foundation-board-content h2 {
     margin: auto;
 }
 
+.donations-table .button-row td {
+    background:#f5f5f5;
+    padding-top: 4px;
+}
+
 .donations-table .button {
     text-align: center;
     vertical-align: middle;
+}
+
+.donations-table .button button {
+    position: relative;
     white-space: nowrap;
+    width: 13ch;
+}
+
+.donations-table .button button:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: var(--grails-orange) transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    transform: translateX(-50%);
 }
 
 /** Accordion General */

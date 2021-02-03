@@ -34,7 +34,7 @@ body: foundation
     </div>
   </div>
 </article>
-<article>
+<article class="donations-level-desktop">
   <table class="donations-table">
     <thead>
       <tr>
@@ -89,14 +89,87 @@ body: foundation
       </tr>
       <tr>
         <td style="background:#f5f5f5;"></td>
-        <td class="button" style="background:#f5f5f5;"><button>Donate Now</button></td>
-        <td class="button" style="background:#f5f5f5;"><button>Donate Now</button></td>
-        <td class="button" style="background:#f5f5f5;"><button>Donate Now</button></td>
+        <td class="button" style="background:#f5f5f5;">
+          <button class="donate-button" data-stripe-type="vip">Donate Now</button>
+        </td>
+        <td class="button" style="background:#f5f5f5;">
+          <button class="donate-button" data-stripe-type="super-fan">Donate Now</button>
+        </td>
+        <td class="button" style="background:#f5f5f5;">
+          <button class="donate-button" data-stripe-type="champion">Donate Now</button>
+        </td>
       </tr>
     </tbody>
   </table>
+</article>
+<article class="donations-level-mobile">
+    <h2 class="donations-level-heading">Annual Contribution Levels</h2>
+    <!-- VIP Accordion  -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <label>Vip</label>
+        <div class="accordion-indicator"></div>
+      </div>
+      <div class="accordion-body">
+          <div class="price">$135</div>
+          <div class="benefits-heading">Member Benefits</div>
+          <ul class="benefits-list">
+            <li class="benefits-list-item">Annual Limited Edition Fan Pack</li>
+            <li class="benefits-list-item">Complimentary Seat in an Online Training Event</li>
+            <li class="benefits-list-item">Limited Edition Grails Foundation T-Shirt and Stickers</li>
+            <li class="benefits-list-item">Listed in Quarterly Reports</li>
+            <li class="benefits-list-item">Name Placement on Grails Foundation Sponsor Page</li>
+            <li class="benefits-list-item">Social Media Mention</li>
+          </ul>
+          <button class="donate-button" data-stripe-type="vip">Donate Now</button>
+      </div>
+      <div class='accordion-footer'></div>
+    </div>
+    <!--  End Vip Accordion -->
+
+  <!-- Super Fan Accordion  -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <label>Super Fan</label>
+        <div class="accordion-indicator"></div>
+      </div>
+      <div class="accordion-body">
+          <div class="price">$60</div>
+          <div class="benefits-heading">Member Benefits</div>
+          <ul class="benefits-list">
+            <li class="benefits-list-item">Limited Edition Grails Foundation T-Shirt and Stickers</li>
+            <li class="benefits-list-item">Listed in Quarterly Reports</li>
+            <li class="benefits-list-item">Name Placement on Grails Foundation Sponsor Page</li>
+            <li class="benefits-list-item">Social Media Mention</li>
+          </ul>
+          <button class="donate-button" data-stripe-type="super-fan">Donate Now</button>
+      </div>
+      <div class='accordion-footer'></div>
+    </div>
+    <!--  End Super Fan Accordion -->
+
+    <!-- Champion Accordion  -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <label>Champion</label>
+        <div class="accordion-indicator"></div>
+      </div>
+      <div class="accordion-body">
+          <div class="price">$25</div>
+          <div class="benefits-heading">Member Benefits</div>
+          <ul class="benefits-list">
+            <li class="benefits-list-item">Listed in Quarterly Reports</li>
+            <li class="benefits-list-item">Name Placement on Grails Foundation Sponsor Page</li>
+            <li class="benefits-list-item">Social Media Mention</li>
+          </ul>
+          <button class="donate-button" data-stripe-type="champion">Donate Now</button>
+      </div>
+      <div class='accordion-footer'></div>
+    </div>
+    <!--  End Champion Accordion -->
 
 </article>
+
 <div class="outro">
   <span class="outro-content">
       <p>To learn more about donating to the Grails Foundation, please provide us with your contact information and we will be in touch!</p>
@@ -116,8 +189,14 @@ body: foundation
         formIds: {
           general: '3cd89d07-d575-405c-a9c1-d8c22c765cea'
         }
+      },
+      stripe: {
+        'vip' :{ stripeId: "1234"},
+        'super-fan' :{ stripeId: "4567"},
+        'champion' :{ stripeId: "6789"},
       }
     };
+
 
     function initHubspotForms() {
       const contactUsModal = document.getElementById('contact-us-modal');
@@ -152,7 +231,47 @@ body: foundation
       });
     }
 
-    initHubspotForms();
+    function initStripe() {
+      // Do What We need to do with strip
+      function goToStripe(stripeId) {
+          // stripe.sdk.open(stripeId)
+      }
 
+      function onDonateNow(event) {
+          event.preventDefault()
+
+          const dataSet = event.target.dataset;
+          const stripeType = dataSet.stripeType
+          if(!stripeType) {
+            return; // probably the wrong button
+          }
+
+          const stripeData = config.stripe[stripeType];
+          if(stripeData) {
+            goToStripe(stripeData.stripeId)
+          } else {
+            alert("Sorry, We could not find that donation tier level")
+          }
+      }
+
+      document.querySelectorAll('.donate-button').forEach(function(button) {
+        button.addEventListener('click', onDonateNow)
+      })
+    }
+
+    function initAccordions() {
+      document.querySelectorAll(".accordion").forEach(function(accordion) {
+          function toggleAccordion() {
+             accordion.classList.toggle("active")
+          }
+          accordion.querySelectorAll(".accordion-header").forEach(function (header) {
+              header.addEventListener("click", toggleAccordion)
+          })
+      })
+    }
+
+    initHubspotForms();
+    initAccordions();
+    initStripe();
   })()
 </script>

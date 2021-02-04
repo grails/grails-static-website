@@ -93,7 +93,7 @@ body: foundation
             <tbody>
             <tr class="contributions">
                 <td>Donation Level</td>
-                <td><span class="txt-top">&dollar;</span><span class="txt-l">135</span></td>
+                <td><span class="txt-top">&dollar;</span><span class="txt-l">125</span></td>
                 <td><span class="txt-top">&dollar;</span><span class="txt-l">60</span></td>
                 <td><span class="txt-top">&dollar;</span><span class="txt-l">25</span></td>
             </tr>
@@ -184,7 +184,7 @@ body: foundation
                 <div class="accordion-indicator"></div>
             </div>
             <div class="accordion-body">
-                <div class="price">$135</div>
+                <div class="price">$125</div>
                 <div class="benefits-heading">Member Benefits</div>
                 <ul class="benefits-list">
                     <li class="benefits-list-item">Annual Limited Edition Fan Pack</li>
@@ -568,10 +568,12 @@ body: foundation
       <button class="contact-us-general modal-button" data-hubspot-form="general">Contact Us</button>
   </span>
 </div>
+
 <div id="modal-ambassador" class="contact-modal padded">
     <button class="contact-us-close">X</button>
     <div id="modal-ambassador-target" class="contact-modal-iframe-wrapper"></div>
 </div>
+
 <div id="modal-general" class="contact-modal padded">
     <button class="contact-us-close">X</button>
     <div id="modal-general-target" class="contact-modal-iframe-wrapper"></div>
@@ -585,12 +587,13 @@ body: foundation
         const SUCCESS_URL =
             DOMAIN +
             '/foundation/thank-you.html?&session_id={CHECKOUT_SESSION_ID}'
-        
+
         const config = {
             hubspot: {
                 portalId: '4547412',
                 formIds: {
-                    general: '3cd89d07-d575-405c-a9c1-d8c22c765cea'
+                    ambassador: '08f40ccd-5958-4e71-923f-4d3197662b9f',
+                    general: '3cd89d07-d575-405c-a9c1-d8c22c765cea',
                 }
             },
             stripe: {

@@ -152,6 +152,7 @@ section.foundation-boards .foundation-board-content h2 {
     text-transform: uppercase;
 }
 
+
 .donations-tabs .tab .tab-image {
     width: 75px;
     height: 75px;
@@ -185,6 +186,15 @@ section.foundation-boards .foundation-board-content h2 {
     display: none;
     width: 95%;
     margin: auto;
+}
+
+@media screen and (max-width: 481px) {
+    .tab.tab-active .tab-link {
+        justify-content: center;
+    }
+    .tab.tab-active .tab-title {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {

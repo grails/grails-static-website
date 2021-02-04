@@ -4,6 +4,10 @@
     --bg-gray: #f5f5f5;
 }
 
+.hidden {
+    display: none;
+}
+
 button {
     transition: .2s all;
 }
@@ -112,18 +116,19 @@ section.foundation-boards .foundation-board-content h2 {
 }
 
 .donations-tabs .tab {
+    cursor: pointer;
     background-color: #ffffff;
     flex: 1;
-    border-bottom: 1.3rem solid #eeeeee;
+    border-bottom: 1.3rem solid var(--bg-gray);
     color: #7c7c7c;
 }
 
 .donations-tabs .tab:last-of-type {
-    border-left: 1.3rem solid #eeeeee;
+    border-left: 1.3rem solid var(--bg-gray);
 }
 
 .donations-tabs .tab.first-of-type {
-    border-right: 1.3rem solid #eeeeee;
+    border-right: 1.3rem solid var(--bg-gray);
 }
 
 .donations-tabs .tab.tab-active {

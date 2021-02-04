@@ -189,13 +189,15 @@ section.foundation-boards .foundation-board-content h2 {
 }
 
 @media screen and (max-width: 481px) {
-    .tab.tab-active .tab-link {
-        justify-content: center;
-    }
     .tab.tab-active .tab-title {
         display: none;
     }
+
+    .tab.tab-active .tab-link {
+        justify-content: center;
+    }
 }
+
 
 @media screen and (max-width: 768px) {
     .donations-level-mobile {

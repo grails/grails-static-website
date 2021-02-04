@@ -581,7 +581,11 @@ body: foundation
 
 <script>
     ;(function () {
-
+        const DOMAIN = location.protocol + '//' + location.hostname
+        const SUCCESS_URL =
+            DOMAIN +
+            '/foundation/thank-you.html?&session_id={CHECKOUT_SESSION_ID}'
+        
         const config = {
             hubspot: {
                 portalId: '4547412',
@@ -591,45 +595,42 @@ body: foundation
             },
             stripe: {
                 publishableKey: "pk_test_51IGq93DqIkTDdYVMcsVq7NiUqCnRwFmobQh7I3Fg93yBDw2uxqNz1uWavFKEKjqpnlbPCwhde4yMdsqLyUQqI8dE00q6YSpSVV",
-                stripe: {
-                    publishableKey: "pk_test_51IGq93DqIkTDdYVMcsVq7NiUqCnRwFmobQh7I3Fg93yBDw2uxqNz1uWavFKEKjqpnlbPCwhde4yMdsqLyUQqI8dE00q6YSpSVV",
-                    prices: {
-                        'vip': {
+                prices: {
+                    'vip': {
 
-                            priceId: "price_1IGqTBDqIkTDdYVMP9S0DgvW",
-                            description: "VIP Level Community All Star Sponsor"
+                        priceId: "price_1IGqTBDqIkTDdYVMP9S0DgvW",
+                        description: "VIP Level Community All Star Sponsor"
+                    },
+                    'super-fan':
+                        {
+                            priceId: "price_1IGqU7DqIkTDdYVMzM3np6Ef",
+                            description: "Super Fan Level Community All Star Sponsor"
                         },
-                        'super-fan':
-                            {
-                                priceId: "price_1IGqU7DqIkTDdYVMzM3np6Ef",
-                                description: "Super Fan Level Community All Star Sponsor"
-                            },
-                        'champion':
-                            {
-                                priceId: "price_1IGqUzDqIkTDdYVMlHbVJ9FG",
-                                description: "Champion Level Community All Star Sponsor"
-                            },
-                        'platinum':
-                            {
-                                priceId: "price_1IGqOCDqIkTDdYVM13zRPFbW",
-                                description: "Platinum Level Corporate Sponsor"
-                            },
-                        'gold': {
+                    'champion':
+                        {
+                            priceId: "price_1IGqUzDqIkTDdYVMlHbVJ9FG",
+                            description: "Champion Level Community All Star Sponsor"
+                        },
+                    'platinum':
+                        {
+                            priceId: "price_1IGqOCDqIkTDdYVM13zRPFbW",
+                            description: "Platinum Level Corporate Sponsor"
+                        },
+                    'gold': {
 
-                            priceId: "price_1IGqPhDqIkTDdYVMtP8ieVDP",
-                            description: "Gold Level Corporate Sponsor"
-                        },
-                        'silver': {
+                        priceId: "price_1IGqPhDqIkTDdYVMtP8ieVDP",
+                        description: "Gold Level Corporate Sponsor"
+                    },
+                    'silver': {
 
-                            priceId: "price_1IGqQwDqIkTDdYVM76H7ZMAy",
-                            description: "Silver Level Corporate Sponsor"
-                        },
-                        'bronze': {
+                        priceId: "price_1IGqQwDqIkTDdYVM76H7ZMAy",
+                        description: "Silver Level Corporate Sponsor"
+                    },
+                    'bronze': {
 
-                            priceId: "price_1IGqRwDqIkTDdYVM37UDBwTg",
-                            description: "Bronze Level Corporate Sponsor"
-                        },
-                    }
+                        priceId: "price_1IGqRwDqIkTDdYVM37UDBwTg",
+                        description: "Bronze Level Corporate Sponsor"
+                    },
                 }
             }
         };
@@ -667,7 +668,7 @@ body: foundation
                 button.addEventListener('click', onTabClick)
             })
 
-            chooseTab(location.hash.replace("#","") || "community")
+            chooseTab(location.hash.replace("#", "") || "community")
         }
 
 

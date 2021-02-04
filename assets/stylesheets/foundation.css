@@ -1,7 +1,21 @@
 :root {
     --grails-orange: #feb672;
     --grails-blue: #255AA8;
-    --bg-gray: #eeeeee;
+    --bg-gray: #f5f5f5;
+}
+
+button {
+    transition: .2s all;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(255, 89, 0);
 }
 
 body.foundation article.content {
@@ -146,7 +160,12 @@ section.foundation-boards .foundation-board-content h2 {
     column-gap: 2rem;
 }
 
-.donations-content .two-columns {
+.donations-content.one-column {
+    column-count: 1;
+    column-gap: 0;
+}
+
+.donations-content.two-columns {
     column-count: 2;
     column-gap: 2rem;
 }
@@ -172,7 +191,8 @@ section.foundation-boards .foundation-board-content h2 {
         display: none;
     }
 
-    .donations-content {
+    .donations-content,
+    .donations-content.two-columns {
         column-count: 1;
         column-gap: 0;
     }
@@ -192,7 +212,7 @@ section.foundation-boards .foundation-board-content h2 {
 .donations-table thead tr th {
     background: #ffffff;
     border-top: 5px solid var(--grails-orange);
-    border-bottom: 5px solid #f5f5f5;
+    border-bottom: 5px solid var(--bg-gray);
     color: var(--grails-orange);
     text-transform: uppercase;
     padding-top: 0.3rem;
@@ -216,7 +236,7 @@ section.foundation-boards .foundation-board-content h2 {
 
 .donations-table tbody tr td {
     background: #ffffff;
-    border-top: 5px solid #f5f5f5;
+    border-top: 5px solid var(--bg-gray);
     border-left: #ffffff;
     border-right: #ffffff;
     border-bottom: #ffffff;
@@ -232,7 +252,7 @@ section.foundation-boards .foundation-board-content h2 {
 }
 
 .donations-table .button-row td {
-    background:#f5f5f5;
+    background: var(--bg-gray);
     padding-top: 4px;
 }
 
@@ -246,6 +266,7 @@ section.foundation-boards .foundation-board-content h2 {
     white-space: nowrap;
     width: 13ch;
 }
+
 
 .donations-table .button button:before {
     content: "";

@@ -11,7 +11,7 @@ body: foundation
 <article class="content container" style="overflow: hidden;">
     <div>
         <div class="donations-tabs">
-            <div class="tab" >
+            <div class="tab">
                 <div role="button" onclick="window.open('corporatesponsorship.html', '_self')" class="tab-link">
                     <img class="tab-image" src="[%url]/images/corporatesponsor.svg">
                     <div class="tab-title">Become A Corporate Sponsor</div>
@@ -235,9 +235,47 @@ body: foundation
                 }
             },
             stripe: {
-                'vip': {stripeId: "1234"},
-                'super-fan': {stripeId: "4567"},
-                'champion': {stripeId: "6789"},
+                publishableKey: "pk_test_51IGq93DqIkTDdYVMcsVq7NiUqCnRwFmobQh7I3Fg93yBDw2uxqNz1uWavFKEKjqpnlbPCwhde4yMdsqLyUQqI8dE00q6YSpSVV",
+                stripe: {
+                    publishableKey: "pk_test_51IGq93DqIkTDdYVMcsVq7NiUqCnRwFmobQh7I3Fg93yBDw2uxqNz1uWavFKEKjqpnlbPCwhde4yMdsqLyUQqI8dE00q6YSpSVV",
+                    prices: {
+                        'vip': {
+
+                            priceId: "price_1IGqTBDqIkTDdYVMP9S0DgvW",
+                            description: "VIP Level Community All Star Sponsor"
+                        },
+                        'super-fan':
+                            {
+                                priceId: "price_1IGqU7DqIkTDdYVMzM3np6Ef",
+                                description: "Super Fan Level Community All Star Sponsor"
+                            },
+                        'champion':
+                            {
+                                priceId: "price_1IGqUzDqIkTDdYVMlHbVJ9FG",
+                                description: "Champion Level Community All Star Sponsor"
+                            },
+                        'platinum':
+                            {
+                                priceId: "price_1IGqOCDqIkTDdYVM13zRPFbW",
+                                description: "Platinum Level Corporate Sponsor"
+                            },
+                        'gold': {
+
+                            priceId: "price_1IGqPhDqIkTDdYVMtP8ieVDP",
+                            description: "Gold Level Corporate Sponsor"
+                        },
+                        'silver': {
+
+                            priceId: "price_1IGqQwDqIkTDdYVM76H7ZMAy",
+                            description: "Silver Level Corporate Sponsor"
+                        },
+                        'bronze': {
+
+                            priceId: "price_1IGqRwDqIkTDdYVM37UDBwTg",
+                            description: "Bronze Level Corporate Sponsor"
+                        },
+                    }
+                }
             }
         };
 
@@ -276,12 +314,40 @@ body: foundation
         }
 
         function initStripe() {
+            // noinspection JSUnresolvedFunction - this is window level
+            const stripeApi = Stripe(config.stripe.publishableKey)
+
             // Do What We need to do with strip
-            function goToStripe(stripeId) {
-                // stripe.sdk.open(stripeId)
+            function goToStripe(stripeData) {
+                window.sessionStorage.setItem(
+                    'FOUNDATION_SUPPORT_LEVEL',
+                    JSON.stringify(stripeData)
+                )
+                const lineItems = [{price: stripeData.priceId, quantity: 1}]
+                // We'll use this on the thank you page
+
+                stripeApi
+                    .redirectToCheckout({
+                        mode: "subscription",
+                        lineItems: lineItems,
+                        submitType: 'donate',
+                        successUrl: SUCCESS_URL,
+                        cancelUrl: window.location.href,
+                    })
+                    .then(handleResult)
             }
 
-            function onDonateNow(event) {
+            // Handle any errors from Checkout
+            function handleResult(result) {
+                if (result.error) {
+                    const displayError = document.getElementById(
+                        'error-message'
+                    )
+                    displayError.textContent = result.error.message
+                }
+            }
+
+            function stripeButtonClickHandler(event) {
                 event.preventDefault()
 
                 const dataSet = event.target.dataset;
@@ -290,16 +356,17 @@ body: foundation
                     return; // probably the wrong button
                 }
 
-                const stripeData = config.stripe[stripeType];
+                const stripeData = config.stripe.prices[stripeType];
+
                 if (stripeData) {
-                    goToStripe(stripeData.stripeId)
+                    goToStripe(stripeData)
                 } else {
                     alert("Sorry, We could not find that donation tier level")
                 }
             }
 
             document.querySelectorAll('.donate-button').forEach(function (button) {
-                button.addEventListener('click', onDonateNow)
+                button.addEventListener('click', stripeButtonClickHandler)
             })
         }
 

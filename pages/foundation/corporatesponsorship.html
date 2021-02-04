@@ -18,7 +18,7 @@ body: foundation
                 </div>
             </div>
             <div class="tab">
-                <div class="tab-link" role="button" onclick="window.open('communitysponsorship.html', '_self')" >
+                <div class="tab-link" role="button" onclick="window.open('communitysponsorship.html', '_self')">
                     <img class="tab-image" src="[%url]/images/communitysponsor.svg">
                     <div class="tab-title">Become A Community Sponsor</div>
                 </div>
@@ -221,16 +221,16 @@ body: foundation
                 <button class="modal-button" data-hubspot-form="ambassador">Contact Us</button>
             </td>
             <td class="button">
-                <button data-stripe-type="platinum">Donate Now</button>
+                <button class='donate-button' data-stripe-type="platinum">Donate Now</button>
             </td>
             <td class="button">
-                <button data-stripe-type="gold">Donate Now</button>
+                <button class='donate-button' data-stripe-type="gold">Donate Now</button>
             </td>
             <td class="button">
-                <button data-stripe-type="silver">Donate Now</button>
+                <button class='donate-button' data-stripe-type="silver">Donate Now</button>
             </td>
             <td class="button">
-                <button data-stripe-type="bronze">Donate Now</button>
+                <button class='donate-button' data-stripe-type="bronze">Donate Now</button>
             </td>
         </tr>
         </tbody>
@@ -377,8 +377,15 @@ body: foundation
     <button class="contact-us-close">X</button>
     <div id="modal-general-target" class="contact-modal-iframe-wrapper"></div>
 </div>
+
+<script src="https://js.stripe.com/v3/"></script>
+
 <script>
     ;(function () {
+        const DOMAIN = location.protocol + '//' + location.hostname
+        const SUCCESS_URL =
+            DOMAIN +
+            '/foundation/thank-you.html?&session_id={CHECKOUT_SESSION_ID}'
 
         const config = {
             hubspot: {
@@ -389,11 +396,44 @@ body: foundation
                 }
             },
             stripe: {
-                'ambassador': {stripeId: "1234"},
-                'platinum': {stripeId: "4567"},
-                'gold': {stripeId: "6789"},
-                'silver': {stripeId: "4567"},
-                'bronze': {stripeId: "6789"},
+                publishableKey: "pk_test_51IGq93DqIkTDdYVMcsVq7NiUqCnRwFmobQh7I3Fg93yBDw2uxqNz1uWavFKEKjqpnlbPCwhde4yMdsqLyUQqI8dE00q6YSpSVV",
+                prices: {
+                    'vip': {
+
+                        priceId: "price_1IGqTBDqIkTDdYVMP9S0DgvW",
+                        description: "VIP Level Community All Star Sponsor"
+                    },
+                    'super-fan':
+                        {
+                            priceId: "price_1IGqU7DqIkTDdYVMzM3np6Ef",
+                            description: "Super Fan Level Community All Star Sponsor"
+                        },
+                    'champion':
+                        {
+                            priceId: "price_1IGqUzDqIkTDdYVMlHbVJ9FG",
+                            description: "Champion Level Community All Star Sponsor"
+                        },
+                    'platinum':
+                        {
+                            priceId: "price_1IGqOCDqIkTDdYVM13zRPFbW",
+                            description: "Platinum Level Corporate Sponsor"
+                        },
+                    'gold': {
+
+                        priceId: "price_1IGqPhDqIkTDdYVMtP8ieVDP",
+                        description: "Gold Level Corporate Sponsor"
+                    },
+                    'silver': {
+
+                        priceId: "price_1IGqQwDqIkTDdYVM76H7ZMAy",
+                        description: "Silver Level Corporate Sponsor"
+                    },
+                    'bronze': {
+
+                        priceId: "price_1IGqRwDqIkTDdYVM37UDBwTg",
+                        description: "Bronze Level Corporate Sponsor"
+                    },
+                }
             }
         };
 
@@ -401,10 +441,7 @@ body: foundation
             const contactUsModal = document.getElementById('contact-us-modal');
 
             document.querySelectorAll('button.modal-button').forEach(function (button) {
-                console.log('Found: ');
-
                 const formName = button.getAttribute('data-hubspot-form');
-                console.log(formName);
                 const targetId = '#modal-' + formName + '-target';
                 const modal = document.getElementById('modal-' + formName);
 
@@ -433,12 +470,40 @@ body: foundation
         }
 
         function initStripe() {
+            // noinspection JSUnresolvedFunction - this is window level
+            const stripeApi = Stripe(config.stripe.publishableKey)
+
             // Do What We need to do with strip
-            function goToStripe(stripeId) {
-                // stripe.sdk.open(stripeId)
+            function goToStripe(stripeData) {
+                window.sessionStorage.setItem(
+                    'FOUNDATION_SUPPORT_LEVEL',
+                    JSON.stringify(stripeData)
+                )
+                const lineItems = [{price: stripeData.priceId, quantity: 1}]
+                // We'll use this on the thank you page
+
+                stripeApi
+                    .redirectToCheckout({
+                        mode: "subscription",
+                        lineItems: lineItems,
+                        submitType: 'donate',
+                        successUrl: SUCCESS_URL,
+                        cancelUrl: window.location.href,
+                    })
+                    .then(handleResult)
             }
 
-            function onDonateNow(event) {
+            // Handle any errors from Checkout
+            function handleResult(result) {
+                if (result.error) {
+                    const displayError = document.getElementById(
+                        'error-message'
+                    )
+                    displayError.textContent = result.error.message
+                }
+            }
+
+            function stripeButtonClickHandler(event) {
                 event.preventDefault()
 
                 const dataSet = event.target.dataset;
@@ -447,16 +512,17 @@ body: foundation
                     return; // probably the wrong button
                 }
 
-                const stripeData = config.stripe[stripeType];
+                const stripeData = config.stripe.prices[stripeType];
+
                 if (stripeData) {
-                    goToStripe(stripeData.stripeId)
+                    goToStripe(stripeData)
                 } else {
                     alert("Sorry, We could not find that donation tier level")
                 }
             }
 
             document.querySelectorAll('.donate-button').forEach(function (button) {
-                button.addEventListener('click', onDonateNow)
+                button.addEventListener('click', stripeButtonClickHandler)
             })
         }
 

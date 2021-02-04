@@ -374,8 +374,6 @@ section.foundation-boards .foundation-board-content h2 {
 /* Contact Us Form */
 .contact-modal {
     background: white;
-    padding: 40px;
-    padding-bottom: 200px;
     position: fixed;
     top: -200vh;
     left: 0;
@@ -416,6 +414,8 @@ section.foundation-boards .foundation-board-content h2 {
     display: block;
     overflow: auto;
     height: 100vh;
+    padding: 40px;
+    padding-bottom: 200px;
 }
 
 /*End contact form */

@@ -571,12 +571,12 @@ body: foundation
 
 <div id="modal-ambassador" class="contact-modal">
     <button class="contact-us-close">X</button>
-    <div id="modal-ambassador-target" class="contact-modal-iframe-wrapper"></div>
+    <div id="modal-ambassador-target" class="contact-modal-iframe-wrapper" data-hubspot-form="ambassador"></div>
 </div>
 
 <div id="modal-general" class="contact-modal">
     <button class="contact-us-close">X</button>
-    <div id="modal-general-target" class="contact-modal-iframe-wrapper"></div>
+    <div id="modal-general-target" class="contact-modal-iframe-wrapper" data-hubspot-form="general"></div>
 </div>
 
 <script src="https://js.stripe.com/v3/"></script>
@@ -669,19 +669,21 @@ body: foundation
 
 
         function initHubspotForms() {
-            const contactUsModal = document.getElementById('contact-us-modal');
+
+            document.querySelectorAll(".contact-modal-iframe-wrapper").forEach(function(wrapper){
+                const formName = wrapper.dataset.hubspotForm
+                const formId = config.hubspot.formIds[formName]
+                hbspt.forms.create({
+                    target: "#"+wrapper.id,
+                    portalId: config.hubspot.portalId,
+                    formId: formId
+                });
+            })
 
             document.querySelectorAll('button.modal-button').forEach(function (button) {
 
-                const formName = button.getAttribute('data-hubspot-form');
-                const targetId = '#modal-' + formName + '-target';
+                const formName = button.dataset.hubspotForm;
                 const modal = document.getElementById('modal-' + formName);
-
-                hbspt.forms.create({
-                    target: targetId,
-                    portalId: config.hubspot.portalId,
-                    formId: config.hubspot.formIds[formName]
-                });
 
                 function clickHandler() {
                     modal.classList.add('active');

@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 09 Feb 2021 10:15:57 GMT</pubDate><item><title>Grails Framework Exciting Updates</title><link>https://grails.org/blog/2021-01-22-grails-exciting-updates.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 09 Feb 2021 19:12:25 GMT</pubDate><item><title>Webinar: 2GM TOWN HALL MEETING: 2021 Q1</title><link>https://grails.org/blog/2021-02-05-2gm-town-hall-q1.html</link><description><![CDATA[</p>
+<p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
+<p>A big thanks to everyone who joined us for our first 2GM Town Hall of 2021!  We had a great time and learned about several exciting goings on within the Groovy, Grails, and Micronaut communities. For those of you who missed the live event, the recording is embedded below.</p>
+<p>I would like to take this opportunity to thank our awesome panel of experts:</p>
+<p>James Kleeh, Micronaut Development Lead
+Puneet Behl, Grails Development Lead
+Paul King, Groovy Development Lead
+Plus, our guest panelist, Graeme Rocher, Architect at Oracle</p>
+<p>Stay tuned for details about our next 2GM Town Hall meeting.</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/j7sf8G63OrI" frameborder="0"></iframe>]]></description><author>Jen Wiese</author><guid>2021-02-05-2gm-town-hall-q1</guid><pubDate>Fri, 05 Feb 2021 00:00:00 GMT</pubDate></item><item><title>Grails Framework Exciting Updates</title><link>https://grails.org/blog/2021-01-22-grails-exciting-updates.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/grails.html"><span class="hashtag">#grails</span></a></p>
 <p>We wish everyone a healthy and happy new year 2021 and thank all our users and contributors for your love and support of the Grails framework. We are excited to announce some of the upcoming changes around Grails releases, which will benefit the community and help with maintainability.</p>
 <h2>Adoption of Semantic Versioning</h2>

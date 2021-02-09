@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Webinar: I've Seen Grails® Code You Wouldn't Believe</title>
+    <title>Webinar: 2GM TOWN HALL MEETING: 2021 Q1</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Iván López shares valuable tips and strategies for improving your coding practices and developing better Grails® applications." />
-    <meta name="date" content="June 15, 2018" />
+    <meta name="description" content="2GM Town Hall Meetings provide the Groovy, Grails, and Micronaut communities a place to gather once per quarter to review the most up-to-date news and resources available, celebrate accomplishments, ask questions, and participate more fully in the 2GM ecosystems." />
+    <meta name="date" content="February 5, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
-    <meta name='twitter:card' content='player'/><meta name='twitter:player' content='https://www.youtube.com/embed/lZX_lL7cxHE' />
+    <meta name='twitter:card' content='player'/><meta name='twitter:player' content='https://www.youtube.com/embed/j7sf8G63OrI' />
 <meta name='twitter:player:width' content='560' />
 <meta name='twitter:player:height' content='315' />
 
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Iván López shares valuable tips and strategies for improving your coding practices and developing better Grails® applications.'/>
+    <meta name='twitter:description' content='2GM Town Hall Meetings provide the Groovy, Grails, and Micronaut communities a place to gather once per quarter to review the most up-to-date news and resources available, celebrate accomplishments, ask questions, and participate more fully in the 2GM ecosystems.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Webinar: I've Seen Grails® Code You Wouldn't Believe'/>
-    <meta property='og:description' content='Iván López shares valuable tips and strategies for improving your coding practices and developing better Grails® applications.'/>
+    <meta property='og:title' content='Webinar: 2GM TOWN HALL MEETING: 2021 Q1'/>
+    <meta property='og:description' content='2GM Town Hall Meetings provide the Groovy, Grails, and Micronaut communities a place to gather once per quarter to review the most up-to-date news and resources available, celebrate accomplishments, ask questions, and participate more fully in the 2GM ecosystems.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -63,54 +63,22 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Webinar: I've Seen Grails® Code You Wouldn't Believe</h1>
-<p><span class="author">By Iván López</span></p>
-<p><span class="date">June 15, 2018</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a></p>
-<h2>Overview</h2>
-<p>&quot;I’ve seen Grails<sup>®</sup> code you wouldn’t believe …</p>
-<p>… or how to properly write maintainable Grails applications&quot;</p>
-<p>Over the years, Iván López has built a lot of different Grails applications, and he's learned from his mistakes. As an experienced Grails developer, Iván now possesses a vast amount of knowledge about how to avoid problems and pitfalls in future projects.</p>
-<p>For over a year, Iván has been sharing his hard-won expertise with others, so they can benefit from his experience and write more maintainable code that's easy to read and modify.</p>
-<p>In this 1-hour webinar, Iván walks you through code examples and demonstrates how to adapt them to best practices. You'll also see code examples that you should never, ever write, along with alternative solutions that will significantly improve your applications.</p>
-<p>Iván says, &quot;I promise no developers were harmed in the making of this talk.&quot;</p>
-<h2>Outline</h2>
-<p>The following topics are covered in this webinar:</p>
-<ul>
-<li>Best practices for writing maintainable and testable Grails applications</li>
-<li>How to detect bad code and tips for turning it into good code</li>
-<li>Strategies for avoiding common pitfalls when writing Grails applications</li>
-</ul>
-<p>This webinar is an excellent learning opportunity for Grails developers who have had problems adding new features or maintaining their Grails applications and would like to improve their speed, efficiency, and debugging skills.</p>
-<h2>Q&amp;A Follow-Up</h2>
-<p>We had a lot of great questions at the end of this webinar. Here are Iván's responses to the questions we didn't have time to answer.</p>
-<p><strong>Q:</strong> Can you just define as many UrlMapping files as you wish in your webapp's grails-app/conf, as long as they have different names but end with UrlMapping.groovy?</p>
-<p><strong>A:</strong> Yes. Take a look at <a href="https://github.com/grails-core-issues-forks/multiple-url-mappings/commit/e65f85513d1bd8af89c9b36a6825e20948d17902">this commit</a> in a sample project I've created for an example.</p>
-<p><strong>Q:</strong> Any best practices regarding withSession / withNewSession?</p>
-<p><strong>A:</strong> My best advice is to try not to use them. In most cases, you can create regular services and annotate them with @Transactional. In the other few places in which you need them, I almost always use withNewSession because there is no session available. In any case I try to avoid this as much as I can.</p>
-<p><strong>Q:</strong> Is it recommended to write business logic always in service layer?</p>
-<p><strong>A:</strong> Yes it is. Think about this. Imagine that you're creating a regular Grails application that renders GSPs pages, and also you want to create some RESTful or SOAP endpoints. If you write all your business logic in services, the only thing you need to do is call those services from the different endpoints: &quot;regular&quot; controllers, RESTful controllers, and SOAP endpoints.</p>
-<p>In these 3 controllers you're dealing with a different transport/communication layer and returning the same thing, but in a different format: HTTP to render HTML, HTTP to return JSON, and HTTP to return SOAP. Once you validate the parameters in these layers (and you can also share the validation logic using command objects), the only thing you need to do is call the same service with the parameters needed.</p>
-<p>What I always do when developing new features in a Grails application is start with the services. I don't think about controllers, just services. This way, I can think in terms of my business logic: &quot;I need to receive these parameters, and I need to return this other thing.&quot;</p>
-<p>Then I use TDD to develop the service, so I make sure that everything works.</p>
-<p>After that, I go to the controllers layer, write command objects (with tests), and then write the controllers that call the services I finished in the previous step. As I already developed (and tested) my business logic when I created the services, I know that everything will work, and I just need to pass the appropriate parameters to the services.</p>
-<p>Finally, when everything is done, I start up the application to make sure that everything works as expected (and it should because I have tests for everything).</p>
-<p><strong>Q:</strong> I’ve noticed a lot of auto-generated code when I’m single stepping through code (e.g., transactional wrappers). Any advice on best practice for avoiding this kind of overhead?</p>
-<p><strong>A:</strong> Most of that code is because of the Spring Framework. Since Grails 3, we rely a lot on AST transformations and traits to generate code during compilation to avoid that overhead.</p>
-<p>For example, the Grails @Transactional annotation is applied at compile time vs. Spring @Transactional that relies on runtime proxies. The &quot;problem&quot; is that both Spring and Hibernate use runtime proxies and runtime reflection, so you can't get rid of all those wrappers.</p>
-<p>If you want to avoid runtime proxies, I would suggest you take a look at <a href="https://micronaut.io/">Micronaut</a>. :)</p>
-<p><a href="https://objectcomputing.com/files/7815/2933/9902/180615_Grails_Code_Webinar_slidedeck.pdf">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/lZX_lL7cxHE" frameborder="0"></iframe>
+  <div class='light padded blogpost'><h1>Webinar: 2GM TOWN HALL MEETING: 2021 Q1</h1>
+<p><span class="author">By Jen Wiese</span></p>
+<p><span class="date">February 5, 2021</span></p>
+<p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
+<p>A big thanks to everyone who joined us for our first 2GM Town Hall of 2021!  We had a great time and learned about several exciting goings on within the Groovy, Grails, and Micronaut communities. For those of you who missed the live event, the recording is embedded below.</p>
+<p>I would like to take this opportunity to thank our awesome panel of experts:</p>
+<p>James Kleeh, Micronaut Development Lead
+Puneet Behl, Grails Development Lead
+Paul King, Groovy Development Lead
+Plus, our guest panelist, Graeme Rocher, Architect at Oracle</p>
+<p>Stay tuned for details about our next 2GM Town Hall meeting.</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/j7sf8G63OrI" frameborder="0"></iframe>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
-  <a href='https://grails.org/blog/2021-02-05-2gm-town-hall-q1.html'>
-    <h3>February 5, 2021</h3>
-    <h2>Webinar: 2GM TOWN HALL MEETING: 2021 Q1</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
   <a href='https://grails.org/blog/2019-12-20.html'>
     <h3>December 20, 2019</h3>
@@ -121,6 +89,12 @@
   <a href='https://grails.org/blog/2019-08-27.html'>
     <h3>August 27, 2019</h3>
     <h2>Webinar: Groovy 3 and Beyond – An Insider's G...</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-06-18.jpg)'>
+  <a href='https://grails.org/blog/2019-06-18.html'>
+    <h3>June 18, 2019</h3>
+    <h2>Webinar: Using Apache Groovy for Data Science</h2>
   </a>
 </article></div>
     </div>

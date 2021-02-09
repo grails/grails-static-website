@@ -3,7 +3,7 @@ title: 2GM Quarterly Town Hall Meetings
 date:  Oct 1, 2020 
 description: 2GM Town Hall Meetings give the Groovy, Grails® framework, and Micronaut team a chance to  engage with you and empower you to contribute to the frameworks you love.
 author: Jen Wiese
-image: 2020-10-01.jpg
+image: grails-blog-index-6.png
 ---
 
 # [%title]

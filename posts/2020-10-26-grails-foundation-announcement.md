@@ -3,7 +3,7 @@ title: Grails® Foundation Announced
 date:  Oct 26, 2020 
 description: We're pleased to announce the formation of the Grails® Foundation, a not-for-profit organization that exists to support and collectively lead the open source Grails® Framework.
 author: Jen Wiese
-image: 2020-10-26.jpg
+image: grails-blog-index-5.png
 ---
 
 # [%title]

@@ -5,6 +5,7 @@ description: 2GM Town Hall Meetings provide the Groovy, Grails, and Micronaut co
 author: Jen Wiese
 image: grails-blog-index-4.png
 video: https://www.youtube.com/watch?v=j7sf8G63OrI
+slides: https://objectcomputing.com/download_file/5088
 ---
 
 # [%title]

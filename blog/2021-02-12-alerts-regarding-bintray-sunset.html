@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SDKMAN! with Travis</title>
+    <title>Important Information Regarding Grails and Bintray</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn the steps involved to install SDKMAN in Travis CI." />
-    <meta name="date" content="January 7, 2019" />
+    <meta name="description" content="The Grails team shares preliminary plans for existing artifacts and plugin publication in response to JFrog's plans to sunset Bintray on May 1, 2021." />
+    <meta name="date" content="February 12, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn the steps involved to install SDKMAN in Travis CI.'/>
+    <meta name='twitter:description' content='The Grails team shares preliminary plans for existing artifacts and plugin publication in response to JFrog's plans to sunset Bintray on May 1, 2021.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='SDKMAN! with Travis'/>
-    <meta property='og:description' content='Learn the steps involved to install SDKMAN in Travis CI.'/>
+    <meta property='og:title' content='Important Information Regarding Grails and Bintray'/>
+    <meta property='og:description' content='The Grails team shares preliminary plans for existing artifacts and plugin publication in response to JFrog's plans to sunset Bintray on May 1, 2021.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,43 +60,46 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>SDKMAN! with Travis</h1>
-<p><span class="author">By Sergio del Amo Caballero</span></p>
-<p><span class="date">January 7, 2019</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>The <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails<sup>®</sup> framework, and Micronaut) team</a> at <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) uses <a href="https://travis-ci.org/">Travis CI</a> and <a href="https://sdkman.io/">SDKMAN!</a> daily.</p>
-<p>Using SDKMAN! in Travis is possible and opens a lot of possibilities.</p>
-<p>The following <code>.travis.yml</code> file will install SDKMAN! and create a Grails app using the latest version available.</p>
-<pre><code class="language-bash">install: true
-jdk:
-  - oraclejdk8
-script:
-  - curl -s get.sdkman.io | bash
-  - source &quot;&amp;#36;HOME/.sdkman/bin/sdkman-init.sh&quot;
-  - echo sdkman_auto_answer=true &gt; ~/.sdkman/etc/config
-  - source &quot;/home/travis/.sdkman/bin/sdkman-init.sh&quot;
-  - sdk install grails
-</code></pre>
+  <div class='light padded blogpost'><h1>Important Information Regarding Grails and Bintray</h1>
+<p><span class="author">By Jason Schindler</span></p>
+<p><span class="date">February 12, 2021</span></p>
+<p>Tags: <a href="https://grails.org/blog/tag/bintray.html"><span class="hashtag">#bintray</span></a> <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
+<p>As many of you know, last week JFrog <a href="https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/">announced</a> that they are sunsetting JCenter and Bintray. On March 31st, JCenter will no longer accept new package submissions, but it will continue to serve artifacts until February 1st of 2022. On May 1, 2021, Bintray will be shut down. After May 1st, artifacts hosted by Bintray and the Bintray API will not be available.</p>
+<p>This has a large impact on the Grails community, as we have been using Bintray for quite some time to host a number of our artifacts, as well as the community plugins under the <code>org.grails.plugins</code> group ID. Additionally, the <a href="https://plugins.grails.org/">Grails Plugins Portal</a> utilizes the Bintray API to retrieve needed metadata to list and search plugins.</p>
+<p>We have a plan, but it is going to require some lifting.</p>
+<h2>Moving Existing Artifacts Out of Bintray</h2>
+<p>Our primary concern is making sure existing artifacts can still be resolved after Bintray is shut down on May 1st.  In order to achieve this, we will be moving existing artifacts including community plugins from Bintray to the Grails <a href="https://repo.grails.org/">Artifactory instance</a>. JFrog is not shutting down Artifactory and will continue to support our instance. This should allow existing artifacts to be served from Artifactory once Bintray is shut down, and current Grails applications should continue to have access to the artifacts and plugins that they need that are in our control.</p>
+<h2>Updating Grails Plugins Portal</h2>
+<p>As mentioned earlier, the Grails Plugins Portal is currently backed by the Bintray API. On May 1st, that API will be shut down with the rest of Bintray, so we need an alternative. We will create a public repository on GitHub that will host the metadata needed by the Grails Plugins Portal and can be managed by the community. Our intent is that this repository will periodically scan for updated release information and modify the metadata that the Grails Plugins Portal requires. This is a work in progress. We will announce more details about this process in the near future.</p>
+<h2>Publishing Community Plugins</h2>
+<p>Unfortunately, the loss of Bintray will require some extra effort from community plugin authors when you publish your next release.</p>
+<p>First, you will no longer be able to publish to Bintray, and you will no longer be able to use the <code>org.grails.plugins</code> group. Community access to the <code>org.grails.plugins</code> group was a benefit of using Bintray that we cannot easily recreate. We could grant community plugin authors access to the Grails Artifactory instance, but doing so would create substantial user management overhead. It would also more tightly couple Grails to our JFrog Artifactory instance.</p>
+<p>We feel a better solution is to maintain the plugin list publicly in a GitHub repository, and for plugin authors to publish their artifacts to another repository. Fortunately, community plugin authors have some options on where to publish their artifacts. We strongly suggest that folks publish to Maven Central. There is some extra overhead in publishing there, but we feel it is the safest bet for future availability of our artifacts.</p>
+<p>The “grails-plugin-publish” Gradle plugin will no longer be able to publish Grails community plugins, as it supports publishing to Bintray with the <a href="https://github.com/bintray/gradle-bintray-plugin">gradle-bintray-plugin</a>. To publish to Maven Central, we recommend that plugin authors switch to the <a href="https://docs.gradle.org/current/userguide/publishing_maven.html">Gradle Maven Publish</a> plugin instead. We will be exercising this process ourselves in the coming days and will provide more details and guidance in the very near future.</p>
+<h2>Grails 5 Delay</h2>
+<p>Over the next few weeks, we will be focusing our efforts on this migration, and that is likely to cause a delay in the Grails 5 release. We want to wrap this up as quickly as possible so that we can get back to work on Grails 5!</p>
+<h2>Moving Forward</h2>
+<p>Thank you to all of you for your continued participation in the Grails community. We know that some of the changes resulting from this will be frustrating, and we ask for your patience as we work through this migration.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
-  <a href='https://grails.org/blog/2021-02-12-alerts-regarding-bintray-sunset.html'>
-    <h3>February 12, 2021</h3>
-    <h2>Important Information Regarding Grails and Bi...</h2>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-09-23.jpg)'>
+  <a href='https://grails.org/blog/2018-09-23.html'>
+    <h3>September 23, 2018</h3>
+    <h2>Security Vulnerability in Asset-Pipeline and ...</h2>
   </a>
 </article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2017-06-28.jpg)'>
-  <a href='https://grails.org/blog/2017-06-28.html'>
-    <h3>June 28, 2017</h3>
-    <h2>Running a Grails® 3 App With a Self-Signed SS...</h2>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-04-05.jpg)'>
+  <a href='https://grails.org/blog/2018-04-05.html'>
+    <h3>April 5, 2018</h3>
+    <h2>Introducing the Grails® 3 GORM Logical Delete...</h2>
   </a>
 </article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-11-10.jpg)'>
-  <a href='https://grails.org/blog/2016-11-10.html'>
-    <h3>November 10, 2016</h3>
-    <h2>Deploying Grails® 3.2 to JBoss 7.1 EAP</h2>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-10-03.jpg)'>
+  <a href='https://grails.org/blog/2016-10-03.html'>
+    <h3>October 3, 2016</h3>
+    <h2>How to Use Travis-CI to Build and Deploy Your...</h2>
   </a>
 </article></div>
     </div>

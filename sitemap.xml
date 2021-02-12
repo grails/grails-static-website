@@ -91,6 +91,9 @@
     <loc>https://grails.org/blog/tag/plugins.html</loc>
   </url>
   <url>
+    <loc>https://grails.org/blog/tag/bintray.html</loc>
+  </url>
+  <url>
     <loc>https://grails.org/blog/tag/gradle.html</loc>
   </url>
   <url>
@@ -155,6 +158,9 @@
   </url>
   <url>
     <loc>https://grails.org/blog/2017-03-27.html</loc>
+  </url>
+  <url>
+    <loc>https://grails.org/blog/2021-02-12-alerts-regarding-bintray-sunset.html</loc>
   </url>
   <url>
     <loc>https://grails.org/blog/2018-02-09.html</loc>

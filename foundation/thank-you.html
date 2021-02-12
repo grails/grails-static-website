@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PLUGINS | Blog | Grails Framework</title>
+    <title>Thank You For Your Support | Grails&reg; Framework</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
     <meta name="description" content="A powerful Groovy-based web application framework for the JVM built on top of Spring Boot" />
     <meta name="date" content="February 12, 2021" />
@@ -17,7 +17,7 @@
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='PLUGINS | Blog | Grails Framework'/>
+    <meta property='og:title' content='Thank You For Your Support | Grails&reg; Framework'/>
     <meta property='og:description' content='A powerful Groovy-based web application framework for the JVM built on top of Spring Boot'/>
     <meta property='og:type' content='website'/>
 
@@ -26,10 +26,10 @@
     <link rel='stylesheet' href='https://grails.org/stylesheets/screen.css' />
     <script src='https://grails.org/javascripts/navigation.js'></script>
     
-    <link rel='stylesheet' href=''/>
-    <script src=''></script>
+    <link rel='stylesheet' href='/stylesheets/foundation.css'/>
+    <script src='https://js.hsforms.net/forms/v2.js'></script>
 </head>
-<body><header class='mainheader'>
+<body class='foundation'><header class='mainheader'>
     <div class='content'>
         <a href='https://grails.org/index.html'><img class='grailslogo' src='https://grails.org/images/grails_logo.svg' alt='Grails Logo' /></a>
         <a href='javascript:show(&apos;topmenus&apos;, &apos;showNavigationLink&apos;)' id='showNavigationLink' class='mobile align-center'>Show Navigation</a>
@@ -52,42 +52,36 @@
         </div>
     </div>
 </header>
-<article><div class='headerbar chalicesbg'>
-  <div class='content'><h1>
-  <span>Tag:</span>
-  <b>plugins</b>
-</h1></div>
-</div>
-<div class='clear content container'>
-  <div class='light'>
-    <div class='padded' style='padding-top: 0;'><div class="threecolumns">
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-09-23.jpg)'>
-  <a href='https://grails.org/blog/2018-09-23.html'>
-    <h3>September 23, 2018</h3>
-    <h2>Security Vulnerability in Asset-Pipeline and ...</h2>
-  </a>
-</article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2018-04-05.jpg)'>
-  <a href='https://grails.org/blog/2018-04-05.html'>
-    <h3>April 5, 2018</h3>
-    <h2>Introducing the Grails® 3 GORM Logical Delete...</h2>
-  </a>
-</article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-10-03.jpg)'>
-  <a href='https://grails.org/blog/2016-10-03.html'>
-    <h3>October 3, 2016</h3>
-    <h2>How to Use Travis-CI to Build and Deploy Your...</h2>
-  </a>
-</article></div></div><div class="threecolumns">
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2016-09-12.jpg)'>
-  <a href='https://grails.org/blog/2016-09-12.html'>
-    <h3>September 12, 2016</h3>
-    <h2>How to Migrate from Resources Plugin to Asset...</h2>
-  </a>
-</article></div>
+<article>
+<div class='headerbar chalicesbg'>
+    <div class='content'>
+        <h1>Foundation</h1>
     </div>
-  </div>
-</div>&nbsp;</article>
+</div>
+
+<div class="content container foundation-donations-thank-you">
+    <div class='donations-content one-column' style="min-height: 50vh; margin-top: 1rem">
+        <h2>Thank you for your support</h2>
+        <p>Your contribution <span id="support-level"></span> is appreciated.</p>
+        <p>We will reach out to you shortly so we can find the best way to get you your rewards.</p>
+    </div>
+</div>
+
+<script>
+
+    function writeMessage() {
+        try {
+            const message = JSON.parse(window.sessionStorage.getItem("FOUNDATION_SUPPORT_LEVEL"))
+            const el = document.getElementById("support-level")
+            el.innerText = "as a " + message.description
+        } catch (ignore) {
+            // This extra bit of text is just a nice to have, and
+            // we don't really need to do anything on failure.
+        }
+    }
+
+    writeMessage()
+</script>&nbsp;</article>
 <footer>
     <div class='content'>
         <div class='ocihometograils'>

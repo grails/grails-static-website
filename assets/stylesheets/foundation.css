@@ -1,86 +1,470 @@
+:root {
+    --grails-orange: #feb672;
+    --grails-blue: #255AA8;
+    --bg-gray: #f5f5f5;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    transition: .2s all;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(255, 89, 0);
+}
+
 body.foundation article.content {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 section.foundation-description, section.foundation-description p {
-	line-height: 1.5em;
+    line-height: 1.5rem;
 }
 
 section.foundation-description h2 {
-	margin: 5% 0 3% 0;
-	font-size: 1.3em;
+    margin: 5% 0 3% 0;
+    font-size: 1.3rem;
 }
 
 section.foundation-description a {
-	color: #255AA8;
-	text-decoration: none;
+    color: var(--grails-blue);
+    text-decoration: none;
 }
 
 section.foundation-description a.button {
-	display: inline-block;
-	font-size: 1.1em;
-	padding: 10px 30px;
-	background: #feb672;
-	color: white;
-	border-color: #feb672;
-	border-radius: 8px;
-	border-style: solid;
-	position: relative;
-	cursor: pointer;
-	text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    background: var(--grails-orange);
+    border-color: var(--grails-orange);
+    color: white;
+    border-radius: 8px;
+    border-style: solid;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 section.foundation-description .emphasis {
-	text-transform: uppercase;
-	font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 section.foundation-description .quote {
-	font-style: italic;
-	clear: unset;
-	overflow: unset;
-	margin: 0;
-	padding: 0;
-	background-color: unset;
-	border: unset;
-	box-shadow: unset;
-	-webkit-box-shadow: unset;
+    font-style: italic;
+    clear: unset;
+    overflow: unset;
+    margin: 0;
+    padding: 0;
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
 }
 
 section.foundation-boards {
-	background-color: white;
-	border-top: 3px solid #feb672;
+    background-color: white;
+    border-top: 3px solid var(--grails-orange);
 }
 
 section.foundation-boards .foundation-logo {
-	padding: 10% 20% 0 20%;
+    padding: 10% 20% 0 20%;
 }
 
 section.foundation-boards .foundation-board-content {
-	padding: 0 15%;
+    padding: 0 15%;
 }
 
 section.foundation-boards .foundation-board-content h2 {
-	margin: 10% 0;
-	color: #feb672;
-	text-transform: uppercase;
-	font-size: 1.2em;
+    margin: 10% 0;
+    color: var(--grails-orange);
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 .person {
-	margin-bottom: 7%;
+    margin-bottom: 7%;
 }
 
 .person .name {
-	display: block;
-	text-transform: uppercase;
-	font-size: 1.2em;
-	line-height: 1.5em;
-	font-weight: 600;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 600;
 }
 
 .person .title {
-	display: block;
-	font-size: 1.1em;
-	line-height: 1.4em;
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+.donations-tabs {
+    color: var(--grails-orange);
+    width: 100%;
+    display: flex;
+}
+
+.donations-tabs .tab {
+    cursor: pointer;
+    background-color: #ffffff;
+    flex: 1;
+    border-bottom: 1.3rem solid var(--bg-gray);
+    color: #7c7c7c;
+}
+
+.donations-tabs .tab:last-of-type {
+    border-left: 1.3rem solid var(--bg-gray);
+}
+
+.donations-tabs .tab.first-of-type {
+    border-right: 1.3rem solid var(--bg-gray);
+}
+
+.donations-tabs .tab.tab-active {
+    border-right: none;
+    border-bottom: none;
+    color: var(--grails-orange);
+}
+
+.donations-tabs .tab .tab-link {
+    padding: 1rem;
+    border-top: 4px solid var(--grails-orange);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.donations-tabs .tab .tab-title {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
+
+.donations-tabs .tab .tab-image {
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+}
+
+.donations-content {
+    background-color: #ffffff;
+    padding: 25px;
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+.donations-content.one-column {
+    column-count: 1;
+    column-gap: 0;
+}
+
+.donations-content.two-columns {
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+
+/** Responsive Switches For Donation Levels */
+.donations-level-desktop {
+    display: block;
+}
+
+.donations-level-mobile {
+    display: none;
+    width: 95%;
+    margin: auto;
+}
+
+@media screen and (max-width: 481px) {
+    .tab.tab-active .tab-title {
+        display: none;
+    }
+
+    .tab.tab-active .tab-link {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .donations-level-mobile {
+        display: block;
+    }
+
+    .donations-level-desktop {
+        display: none;
+    }
+
+    .donations-content,
+    .donations-content.two-columns {
+        column-count: 1;
+        column-gap: 0;
+    }
+}
+
+/** Donations Table */
+.donations-table {
+    margin: auto;
+    margin-top: 50px;
+    width: 1141px;
+    font-size: 1.2rem;
+    position: relative;
+    max-width: 100vw;
+    overflow: scroll;
+}
+
+.donations-table thead tr th {
+    background: #ffffff;
+    border-top: 5px solid var(--grails-orange);
+    border-bottom: 5px solid var(--bg-gray);
+    color: var(--grails-orange);
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.donations-table .contributions td:not(:first-of-type) {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/*Reset the first colum to left aligned*/
+.donations-table td:first-of-type {
+    text-align: left;
+    max-width: 18ch;
+}
+
+
+.donations-table tbody tr td {
+    background: #ffffff;
+    border-top: 5px solid var(--bg-gray);
+    border-left: #ffffff;
+    border-right: #ffffff;
+    border-bottom: #ffffff;
+    height: 55px;
+}
+
+.donations-table .reward-dot {
+    max-width: .7rem;
+    height: .7rem;
+    border-radius: 9999px;
+    background: var(--grails-orange);
+    margin: auto;
+}
+
+.donations-table .button-row td {
+    background: var(--bg-gray);
+    padding-top: 4px;
+}
+
+.donations-table .button {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.donations-table .button button {
+    position: relative;
+    white-space: nowrap;
+    width: 13ch;
+}
+
+
+.donations-table .button button:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: var(--grails-orange) transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+/** Accordion General */
+.accordion-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion-footer {
+    width: 100%;
+    height: 1rem;
+}
+
+.accordion-indicator {
+    transition: .2s transform linear;
+}
+
+.accordion.active .accordion-indicator {
+    transform: rotate(90deg);
+}
+
+.accordion-indicator:after {
+    content: "❯";
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+}
+
+.accordion-body {
+    padding: 0 1rem;
+    background: #eeeeee;
+    max-height: 0px;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.accordion.active .accordion-body {
+    max-height: 100vh;
+}
+
+/** Mobile Donations Level Accordion Overrides */
+.donations-level-mobile .donations-level-heading {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.donations-level-mobile .accordion {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.donations-level-mobile .accordion,
+.donations-level-mobile .accordion-body {
+    background: var(--grails-blue);
+    color: white;
+}
+
+.donations-level-mobile .accordion-header {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    text-transform: uppercase;
+}
+
+.accordion-body .price {
+    font-weight: bold;
+}
+
+.accordion-body .benefits-heading {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.accordion-body .benefits-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.accordion-body .benefits-list-item {
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+
+/* Contact Us Form */
+.contact-modal {
+    background: white;
+    position: fixed;
+    top: -200vh;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    overflow-y: scroll;
+    z-index: 2000;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: .7s all linear;
+}
+
+.contact-modal.active {
+    top: 0;
+}
+
+.contact-modal .contact-us-close {
+    font-size: 1.4rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 9999px;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.contact-modal iframe {
+    width: 100% !important;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.contact-modal-iframe-wrapper {
+    display: block;
+    overflow: auto;
+    height: 100vh;
+    padding: 40px;
+    padding-bottom: 200px;
+}
+
+/*End contact form */
+
+body.drawer-active {
+    overflow: hidden;
+}
+
+.outro {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(37, 90, 168);
+}
+
+.outro .outro-content {
+    display: inline-block;
+    max-width: 650px;
+}
+
+.outro p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.outro button {
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: var(--grails-orange);
+    color: white;
+    border-color: var(--grails-orange);
+    border-radius: 8px;
+    border-style: solid;
+    position: relative;
+    min-height: 2.4rem;
+    min-width: 10rem;
+    cursor: pointer;
 }

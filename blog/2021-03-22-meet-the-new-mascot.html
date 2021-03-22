@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails® State of the Union</title>
+    <title>Meet the Grails® Framework's New Mascot, Sir Gideon of Grails!</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Grails® Product Development Lead, Puneet Behl, provides an update on the current state of the Grails framework and what you can expect going forward." />
-    <meta name="date" content="September 10, 2020" />
+    <meta name="description" content="We're excited to introduce the new Grails mascot, Sir Gideon of Grails!" />
+    <meta name="date" content="March 22, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Grails® Product Development Lead, Puneet Behl, provides an update on the current state of the Grails framework and what you can expect going forward.'/>
+    <meta name='twitter:description' content='We're excited to introduce the new Grails mascot, Sir Gideon of Grails!'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails® State of the Union'/>
-    <meta property='og:description' content='Grails® Product Development Lead, Puneet Behl, provides an update on the current state of the Grails framework and what you can expect going forward.'/>
+    <meta property='og:title' content='Meet the Grails® Framework's New Mascot, Sir Gideon of Grails!'/>
+    <meta property='og:description' content='We're excited to introduce the new Grails mascot, Sir Gideon of Grails!'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,67 +60,23 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails® State of the Union</h1>
-<p><span class="author">By Puneet Behl</span></p>
-<p><span class="date">September 10, 2020</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/micronaut.html"><span class="hashtag">#micronaut</span></a> <a href="https://grails.org/blog/tag/groovy3.html"><span class="hashtag">#groovy3</span></a></p>
-<p>As we approach the fourth quarter of 2020, I wanted to take a few minutes to update everyone in the community on the updates and enhancements coming to the Grails<sup>®</sup> framework.</p>
-<p>In the last few months, the <a href="https://objectcomputing.com/products/2gm-team">2GM (Groovy, Grails framework, and Micronaut) team</a> has put a lot of work into the upcoming Grails 4.1 release. We’re excited to share that this release will include support for Apache Groovy 3! Groovy 3 offers a number of <a href="http://groovy-lang.org/releasenotes/groovy-3.0.html">enhancements</a> to the language including method references and a new, more flexible parser. Additionally, Grails 4.1 will support <a href="https://micronaut.io">Micronaut 2.0</a>, Gradle 6.5, and Spring 2.3. We’ve also added improvements to the Grails profiles to support the exclusion of transitive dependencies.</p>
-<p>Apart from this, we've had some minor releases featuring bug fixes and improvements, which include (but are not limited to) the following:</p>
-<ul>
-<li>Loading configurations from plugins</li>
-<li>Significant improvements to the performance of compileGroovyPages and compileJsonView Gradle tasks</li>
-<li>GORM for MongoDB to support MongoDB Sync driver 4.0.3</li>
-<li>GORM for Neo4j to use the latest Neo4j driver version 4.0.1</li>
-<li>Update to the latest Elasticsearch in the Grails Elasticsearch plugin</li>
-<li>Injecting GORM Data Services</li>
-</ul>
-<h2>Developer Productivity FTW!</h2>
-<p>The Grails framework remains an excellent choice for rapidly building web applications. The framework utilizes the power of the Groovy language and offers lots of Groovy DSLs. If you prefer the dynamic nature of Groovy, the Grails framework is an excellent option for you.</p>
-<p>Other benefits include the following:</p>
-<ul>
-<li>The Grails framework gives you the power to use any Spring library; from Grails 3 forward, the framework is built on top of Spring Boot</li>
-<li>In Grails 4, Micronaut is the parent application, which allows you to use many Micronaut features, including the Micronaut HTTP client, Kafka client, and others in your Grails apps. Due to Micronaut’s avoidance of reflection, you also benefit from a reduced memory footprint and faster start times!</li>
-<li>The Grails framework provides a variety of compelling and powerful features, such as GSP, JSON Views, and more.</li>
-<li>The Grails framework allows you to quickly and easily build an application because it takes advantage of the convention over configuration concept, wherein you:
-<ul>
-<li>Do not need to use a lot of annotations, such as Controller, Service, etc.</li>
-<li>Do not need to specify every URL mapping</li>
-<li>Benefit from automatic code generation</li>
-<li>Can build REST APIs for domains</li>
-</ul>
-</li>
-</ul>
-<p>While the parent context in Grails 4 is Micronaut, it is worth noting that not all Micronaut features are supported in the Grails framework at this time.  These include:</p>
-<ul>
-<li>Anything that has to do with the server, such as tracing, Micronaut controllers, etc.</li>
-<li>GraalVM native image support</li>
-<li>Micronaut serverless, AWS Lambda, Functions, GRPC, etc.</li>
-</ul>
-<p>As the Grails framework continues to evolve, so does the way that we are using Grails apps here at Object Computing. As I mentioned above, Grails 4 applications can now use many of Micronaut’s features, including the <a href="https://docs.micronaut.io/latest/guide/index.html#httpClient">HTTP Client</a>. If your application is using the GORM REST Client, we suggest migrating over to the Micronaut HTTP Client.</p>
-<p>Also, because Grails 4 now uses Micronaut as the parent context, you can develop integrations for your applications using a <a href="https://docs.micronaut.io/latest/guide/index.html#configurations">Micronaut Configuration</a> where you may have written a Grails plugin in the past. Doing so will enable your Grails application to make use of the new functionality and opens up the opportunity to use the configuration with other non-Grails applications that have been built on Micronaut!</p>
-<h2>Coming Soon</h2>
-<p>In addition to the improvements above, we are planning on a number of additional enhancements including:</p>
-<ul>
-<li>Native support for web-sockets</li>
-<li>Transaction support in GORM for MongoDB</li>
-<li>Better support for Kafka, such as improvements in the CLI for creating Kafka listeners through the plugin</li>
-<li>Ability to use GSP in Micronaut and Spring Boot applications by making GSP more modular and independent to the Grails framework</li>
-<li>More Micronaut features, including reduced memory footprints and other benefits</li>
-<li>Support for the latest Groovy and JDK.</li>
-</ul>
-<h2>Thank You</h2>
-<p>The continuing evolution and improvements to the Grails framework wouldn’t be possible without the work and support provided by the vibrant <a href="https://grails.org/community.html">Grails community</a>. If you are new to the Grails framework or are considering it for your next project, please stop by our <a href="https://slack.grails.org">Slack community</a> and say &quot;hello.&quot; We can’t wait to hear about the great applications you're building with Groovy and the Grails framework!</p>
+  <div class='light padded blogpost'><h1>Meet the Grails® Framework's New Mascot, Sir Gideon of Grails!</h1>
+<p><span class="author">By Jen Wiese</span></p>
+<p><span class="date">March 22, 2021</span></p>
+<p>Tags: <a href="https://grails.org/blog/tag/mascot.html"><span class="hashtag">#mascot</span></a></p>
+<p>In February 2021, we introduced the Grails framework's brand new mascot and reached out to our community to give the knight a name. The winner had a chance to win a one-of-a-kind Grails swag bag (and bragging rights, of course).</p>
+<p>We were absolutely delighted to see the creativity, enthusiasm, and support the Grails community contributed to our quest. We received an amazing number of responses with some super imaginative suggestions.</p>
+<p>So, the community has voted, and the Grails mascot has been named!</p>
+<p>And the knight's new name is …</p>
+<p>[Drumroll please …]</p>
+<p>Gideon!</p>
+<p><img src="2021-03-22-gideon-hello-world.png" alt="Meet Sir Gideon of Grails" /></p>
+<p>The name Gideon was overwhelmingly the top pick. Since multiple people suggested the name, we drew several winners from those entries to receive a swag bag. Please join me in congratulating winners: Joshua Freivald, Joe Little, and Benjamin Suffin! And if you were one of the many people who suggested we name the knight Gideon who didn't win a swag bag, please feel free to enjoy the bragging rights. Every time you see Sir Gideon out there, you'll know you were part of his &quot;Hello World&quot; development.</p>
+<p>Huge thanks to everyone who took part in the Name the Knight contest. Even if your name wasn't chosen, your  participation reminded us just how much we love and appreciate the Grails community.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-6.png)'>
-  <a href='https://grails.org/blog/2021-03-22-meet-the-new-mascot.html'>
-    <h3>March 22, 2021</h3>
-    <h2>Meet the Grails® Framework's New Mascot, Sir ...</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
   <a href='https://grails.org/blog/2021-02-12-alerts-regarding-bintray-sunset.html'>
     <h3>February 12, 2021</h3>
@@ -131,6 +87,12 @@
   <a href='https://grails.org/blog/2021-02-05-2gm-town-hall-q1.html'>
     <h3>February 5, 2021</h3>
     <h2>Webinar: 2GM TOWN HALL MEETING: 2021 Q1</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
+  <a href='https://grails.org/blog/2021-01-22-grails-exciting-updates.html'>
+    <h3>January 22, 2021</h3>
+    <h2>Grails Framework Exciting Updates</h2>
   </a>
 </article></div>
     </div>

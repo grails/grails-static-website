@@ -40,7 +40,7 @@ class SitemapTask extends DefaultTask {
     static String sitemapContent(List<String> urls) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") {
+        html.urlset(xmlns: "https://www.sitemaps.org/schemas/sitemap/0.9") {
             for (String urlStr : urls) {
                 url {
                     loc urlStr

@@ -22,25 +22,25 @@ modules:
     categoryImage: '[%url]/images/testing.svg'
     category: Testing
   gormhibernate:
-    categoryUrl: http://gorm.grails.org
+    categoryUrl: https://gorm.grails.org
     categoryImage: '[%url]/images/gorm.svg'
     category: GORM - Data Access Toolkit
     title: GORM Hibernate
-    url: http://gorm.grails.org/latest/hibernate/manual/index.html
+    url: https://gorm.grails.org/latest/hibernate/manual/index.html
   gormmongodb:
-    categoryUrl: http://gorm.grails.org
+    categoryUrl: https://gorm.grails.org
     categoryImage: '[%url]/images/gorm.svg'
     category: GORM - Data Access Toolkit
     title: GORM MongoDb
-    url: http://gorm.grails.org/latest/mongodb/manual/index.html
+    url: https://gorm.grails.org/latest/mongodb/manual/index.html
   gormneo4j:
-    categoryUrl: http://gorm.grails.org
+    categoryUrl: https://gorm.grails.org
     categoryImage: '[%url]/images/gorm.svg'
     category: GORM - Data Access Toolkit
     title: GORM Neo4j
-    url: http://gorm.grails.org/latest/neo4j/manual/index.html
+    url: https://gorm.grails.org/latest/neo4j/manual/index.html
   gormgraphql:
-    categoryUrl: http://gorm.grails.org
+    categoryUrl: https://gorm.grails.org
     categoryImage: '[%url]/images/gorm.svg'
     category: GORM - Data Access Toolkit
     title: Graphql
@@ -49,17 +49,17 @@ modules:
     categoryImage: '[%url]/images/views.svg'
     category: Views
     title: GSP
-    url: http://gsp.grails.org
+    url: https://gsp.grails.org
   jsonviews:
     categoryImage: '[%url]/images/views.svg'
     category: Views
     title: JSON Views
-    url: http://views.grails.org/latest/
+    url: https://views.grails.org/latest/
   markupviews:
     categoryImage: '[%url]/images/views.svg'
     category: Views
     title: Markup Views
-    url: http://views.grails.org/latest/#_markup_views
+    url: https://views.grails.org/latest/#_markup_views
   springsecuritycore:
     categoryImage: '[%url]/images/security.svg'
     category: Security
@@ -104,7 +104,7 @@ modules:
     categoryImage: '[%url]/images/relationaldb.svg'
     category: Database
     title: Database Migration Plugin
-    url: http://grails-plugins.github.io/grails-database-migration/3.0.x/index.html
+    url: https://grails-plugins.github.io/grails-database-migration/3.0.x/index.html
   buildstatus:
     categoryImage: '[%url]/images/buildstatus.svg'
     category: Build Status

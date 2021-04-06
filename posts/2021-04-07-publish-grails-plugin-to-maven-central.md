@@ -22,10 +22,6 @@ In this post, we will outline how to publish Grails plugins to Maven Central. Fo
 The Sonatype’s OSSRH service is the primary place to publish plugins to the Central repository. In order to use OSSRH, you need to take care of a few prerequisites and follow some basic steps. 
 
 ## Prerequisites
-1. Choose your coordinates
-2. Sign up and provide project details\
-3. Minimum requirements
-4. Install GnuPG
 
 ### 1. Choose your coordinates
 When publishing Grails plugins to Bintray, it was possible to publish under the same groupId (i.e. org.grails.plugins) which needs to be changed while publishing to Sonatype.

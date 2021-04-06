@@ -118,7 +118,7 @@ class FirstInterceptorSpec extends Specification {
 }
 </code></pre>
 <h2>The Interceptor Trait</h2>
-<p>Grails 3 takes advantage of Groovy's powerful and flexible support for traits in many places. All interceptors are automatically made to implement the <a href="http://grails.org/doc/3.0.x/api/grails/artefact/Interceptor.html">grails.artefact.Interceptor</a> trait so all of the methods and properties defined by that trait and all of the methods and properties defined by traits which that trait extends are all available inside of an interceptor. This provides easy access to attributes like <code>grailsApplication</code>, <code>params</code>, <code>request</code>, <code>session</code> and others. The trait also provides access to methods like <code>redirect</code> and <code>render</code>.</p>
+<p>Grails 3 takes advantage of Groovy's powerful and flexible support for traits in many places. All interceptors are automatically made to implement the <a href="https://grails.org/doc/3.0.x/api/grails/artefact/Interceptor.html">grails.artefact.Interceptor</a> trait so all of the methods and properties defined by that trait and all of the methods and properties defined by traits which that trait extends are all available inside of an interceptor. This provides easy access to attributes like <code>grailsApplication</code>, <code>params</code>, <code>request</code>, <code>session</code> and others. The trait also provides access to methods like <code>redirect</code> and <code>render</code>.</p>
 <h2>Matching Requests</h2>
 <p>A convention is imposed which will automatically configure interceptors to match all requests to their corresponding controller. The implicit mapping from an interceptor to a controller is based on the artifact names. For example, by default the <code>PersonInterceptor</code> will match all requests to the <code>PersonController</code>.</p>
 <p>Interceptors often need to deviate from the convention and define which requests they should participate in using the <code>match</code>or <code>matchAll</code> method.</p>
@@ -144,7 +144,7 @@ class FirstInterceptor {
     // ...
 }
 </code></pre>
-<p>The named arguments supported are <code>namespace</code>, <code>controller</code>, <code>action</code>, <code>method</code>, and <code>uri</code>. All of them except for <code>uri</code> accept either a <code>String</code> or a regex expression. The <code>uri</code> argument supports a <code>String</code> path that is compatible with Spring's <a href="http://docs.spring.io/spring/docs/4.1.7.RELEASE/javadoc-api/org/springframework/util/AntPathMatcher.html">org.springframework.util.AntPathMatcher</a>.</p>
+<p>The named arguments supported are <code>namespace</code>, <code>controller</code>, <code>action</code>, <code>method</code>, and <code>uri</code>. All of them except for <code>uri</code> accept either a <code>String</code> or a regex expression. The <code>uri</code> argument supports a <code>String</code> path that is compatible with Spring's <a href="https://docs.spring.io/spring/docs/4.1.7.RELEASE/javadoc-api/org/springframework/util/AntPathMatcher.html">org.springframework.util.AntPathMatcher</a>.</p>
 <p>An interecptor may match all requests except requests that satisfy some condition.</p>
 <pre><code class="language-groovy">// grails-app/controllers/demo/FirstInterceptor.groovy
 package demo
@@ -160,7 +160,7 @@ class FirstInterceptor {
     // ...
 }
 </code></pre>
-<p>The <code>match</code> and <code>matchAll</code> methods in an intereceptor each return an instance of <a href="http://grails.github.io/grails-doc/3.0.x/api/grails/interceptors/Matcher.html">grails.interceptors.Matcher</a>. Most of the methods in <code>Matcher</code> also return the <code>Matcher</code> which allows for method chaining as shown above with <code>matchAll().excludes(controller: 'auth')</code>.</p>
+<p>The <code>match</code> and <code>matchAll</code> methods in an intereceptor each return an instance of <a href="https://grails.github.io/grails-doc/3.0.x/api/grails/interceptors/Matcher.html">grails.interceptors.Matcher</a>. Most of the methods in <code>Matcher</code> also return the <code>Matcher</code> which allows for method chaining as shown above with <code>matchAll().excludes(controller: 'auth')</code>.</p>
 <p>Care should be taken to narrow the group of requests that an interceptor is applied to. Keep in mind that whatever logic is contained in an interceptor is being engaged for all of the requests that the interceptor matches.</p>
 <h2>Interceptor Methods</h2>
 <p>There are 3 separate methods that an interceptor may define to participate in different parts of the request processing lifecycle. The <code>before</code> method is executed before the controller action is invoked. The <code>after</code> method is invoked after the controller action returns and before the view is rendered. The <code>afterView</code> method is invoked after the view is rendered. An interceptor may provide any combination of these 3 call back methods and does not need to provide all 3.</p>
@@ -241,7 +241,7 @@ logger 'grails.app.controllers.demo.SimpleAuthInterceptor',
 <p>The framework offers flexibility around this such that if you would like to separate your interceptors from your controllers you can do that by moving the interceptors to a directory like <code>grails-app/interceptors/</code>. If the interceptor defined above were moved from <code>grails-app/controllers/demo/SimpleAuthInterceptor.groovy</code> to <code>grails-app/interceptors/demo/SimpleAuthInterceptor.groovy</code>, the logger name would be <code>grails.app.interceptors.demo.SimpleAuthInterceptor</code>.</p>
 <h2>Interceptors Are Spring Beans</h2>
 <p>All interceptors are configured as beans in the Spring application context and are configured to be autowired by name. This means that just like other Grails artifacts, an interceptor may define a property with a name that matches a bean name and that property will be initialized using standard Spring dependency injection.</p>
-<p>In addition to participating in dependency injection, because interceptors are Spring beans they participate in all of the standard Spring bean management handling. For example, if an interceptor wanted access to the application's configuration, the intereceptor class could implement the <a href="http://grails.github.io/grails-doc/3.0.x/api/grails/core/support/GrailsConfigurationAware.html">grails.core.support.GrailsConfigurationAware</a> interface.</p>
+<p>In addition to participating in dependency injection, because interceptors are Spring beans they participate in all of the standard Spring bean management handling. For example, if an interceptor wanted access to the application's configuration, the intereceptor class could implement the <a href="https://grails.github.io/grails-doc/3.0.x/api/grails/core/support/GrailsConfigurationAware.html">grails.core.support.GrailsConfigurationAware</a> interface.</p>
 <pre><code class="language-groovy">package demo
 
 import grails.config.Config
@@ -404,7 +404,7 @@ class DemoControllerFunctionalSpec extends GebSpec {
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -446,7 +446,7 @@ class DemoControllerFunctionalSpec extends GebSpec {
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

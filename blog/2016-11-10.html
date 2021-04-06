@@ -64,7 +64,7 @@
 <p><span class="author">By Graeme Rocher</span></p>
 <p><span class="date">November 10, 2016</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>Following on from our post describing <a href="">how to deploy Grails<sup>®</sup> 3 to JBoss 6.4 EAP</a>, I recently undertook a new adventure to deploy Grails 3.2.3 to <a href="http://www.jboss.org/">JBoss 7.1 EAP</a>.</p>
+<p>Following on from our post describing <a href="">how to deploy Grails<sup>®</sup> 3 to JBoss 6.4 EAP</a>, I recently undertook a new adventure to deploy Grails 3.2.3 to <a href="https://www.jboss.org/">JBoss 7.1 EAP</a>.</p>
 <p>Like every new version of JBoss there are dependency challenges and tweaks to overcome in order to get to the point where you can deploy an application.</p>
 <h2>Configuring Gradle</h2>
 <p>After you have created a Grails application using the <code>grails create-app</code> command the first thing that needs to be done is to modify the dependencies to versions compatible with JBoss 7.1.</p>
@@ -145,7 +145,7 @@
 <pre><code class="language-groovy">16:45:35,789 WARN  [org.jboss.as.ee] (MSC service thread 1-6) JBAS011006: Not installing optional component org.springframework.web.context.request.async.StandardServletAsyncWebRequest due to exception: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS011054: Could not find default constructor for class org.springframework.web.context.request.async.StandardServletAsyncWebRequest
     at org.jboss.as.ee.component.ComponentDescription&amp;#36;DefaultComponentConfigurator.configure(ComponentDescription.java:606)
 </code></pre>
-<p>This is apparently <a href="http://stackoverflow.com/questions/13786685/spring3-2-and-jboss-as-7">normal behaviour</a> and can be safely ignored.</p>
+<p>This is apparently <a href="https://stackoverflow.com/questions/13786685/spring3-2-and-jboss-as-7">normal behaviour</a> and can be safely ignored.</p>
 <h2>This Is WAY Too Hard</h2>
 <p>I agree. Deploying to &quot;enterprise&quot; containers is not fun. It can, however, be a requirement where you work. In order to simplify these steps I have created a JBoss 7 profile for Grails apps that tries to encapsulate all these changes. Simply run:</p>
 <pre><code class="language-bah">grails create-app myapp --profile org.grails.profiles:web-jboss7:1.0.0.RC1
@@ -201,7 +201,7 @@
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -243,7 +243,7 @@
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

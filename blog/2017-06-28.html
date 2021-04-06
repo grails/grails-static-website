@@ -64,7 +64,7 @@
 <p><span class="author">By Zachary Klein</span></p>
 <p><span class="date">June 28, 2017</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/ssl.html"><span class="hashtag">#ssl</span></a> <a href="https://grails.org/blog/tag/deployment.html"><span class="hashtag">#deployment</span></a></p>
-<p>The <a href="http://docs.grails.org/latest/ref/Command%20Line/run-app.html">Grails<sup>®</sup> <em>run-app</em> command documentation</a> describes how to use the <em>-https</em> flag to serve your app over HTTPS.</p>
+<p>The <a href="https://docs.grails.org/latest/ref/Command%20Line/run-app.html">Grails<sup>®</sup> <em>run-app</em> command documentation</a> describes how to use the <em>-https</em> flag to serve your app over HTTPS.</p>
 <blockquote>
 <p>https - Start an HTTPS server (on port 8443 by default) alongside the main server. Just to be clear, the application will be accessible via HTTPS and HTTP. A self-signed key will be generated. Intended for development use only.</p>
 </blockquote>
@@ -74,7 +74,7 @@
 <p>Your app will be served at <em>https://localhost:8443</em></p>
 <p>However, as stated in the documentation, the <em>https</em> flag is intended for development use only. In real-world applications, an SSL certificate from a <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate Authority</a>, would be used to verify your application's identity with clients. However, it is also possible to generate a self-signed certificate for testing purposes. A self-signed certificate doesn't provide the identity protection that a CA offers, but the steps involved in configuring a self-signed certificate with your Grails app will be largely the same with a CA certificate.</p>
 <h2>Generate Your Self-Signed SSL Certificate</h2>
-<p>You can generate a self-signed certificate using the <a href="https://www.openssl.org/"><code>openssl</code></a> command-line utility. This is installed by default on most Unix-based OS's, and can be installed on <a href="http://gnuwin32.sourceforge.net/packages/openssl.htm">Windows</a> as well.</p>
+<p>You can generate a self-signed certificate using the <a href="https://www.openssl.org/"><code>openssl</code></a> command-line utility. This is installed by default on most Unix-based OS's, and can be installed on <a href="https://gnuwin32.sourceforge.net/packages/openssl.htm">Windows</a> as well.</p>
 <p>We can use <code>openssl</code>'s <code>req</code> command to create a self-signed certificate:</p>
 <p><code>openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365</code></p>
 <p>We're using several command options:</p>
@@ -183,7 +183,7 @@
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -225,7 +225,7 @@
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

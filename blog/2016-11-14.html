@@ -69,7 +69,7 @@
 <p>This post will cover <em>two new profiles for React</em>, one aimed at monolithic Grails applications, and a second profile which makes use of the brand new <a href="https://github.com/facebookincubator/create-react-app"><code>create-react-app</code> CLI</a> and generates a multi-project client/server structure.</p>
 <p><img src="2016-11-14-img01.png" alt="" /></p>
 <h2>React &amp; Webpack Profiles</h2>
-<p>If you've read the previous post on <a href="http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html">Using React with the Grails framework</a>, you've probably noticed that there's quite a bit of wiring that has to happen to get React working properly in the context of a Grails application. This is a place where profiles shine, and now you can get an entire React/Grails project setup immediately upon app generation, including some basic sample React code.</p>
+<p>If you've read the previous post on <a href="https://grails.org/blog/2016-05-28.html">Using React with the Grails framework</a>, you've probably noticed that there's quite a bit of wiring that has to happen to get React working properly in the context of a Grails application. This is a place where profiles shine, and now you can get an entire React/Grails project setup immediately upon app generation, including some basic sample React code.</p>
 <pre><code>grails create-app myReactApp --profile=org.grails.profiles:react:1.0.2
 </code></pre>
 <p>The <code>react:1.x</code> profile is based on another new profile, <code>org.grails.profiles:webpack:1.x</code>.  The <code>webpack</code> profile can be used standalone as well, if you want to use webpack with another JavaScript framework in a Grails project. In addition, the <code>webpack</code> profile offers a single feature which will configure the <code>babel</code> transpiler with support for ES6 - it also includes sample code to demonstrate the feature.</p>
@@ -133,7 +133,7 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
 <h2>Links</h2>
 <ul>
 <li><code>create-react-app</code>: <a href="https://github.com/facebookincubator/create-react-app">https://github.com/facebookincubator/create-react-app</a></li>
-<li>&quot;Using React with the Grails framework&quot;: <a href="http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html">http://grailsblog.objectcomputing.com/posts/2016/05/28/using-react-with-grails.html</a></li>
+<li>&quot;Using React with the Grails framework&quot;: <a href="https://grails.org/blog/2016-05-28.html">https://grails.org/blog/2016-05-28.html</a></li>
 </ul>
     <h2 class='space-above'>
       <span>You might also like ...</span>
@@ -185,7 +185,7 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -227,7 +227,7 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

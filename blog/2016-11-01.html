@@ -71,7 +71,7 @@
 import grails.util.BuildSettings
 import grails.util.Environment
 
-// See http://logback.qos.ch/manual/groovy.html for details on configuration
+// See https://logback.qos.ch/manual/groovy.html for details on configuration
 appender('STDOUT', ConsoleAppender) {
     encoder(PatternLayoutEncoder) {
         pattern = &quot;%level %logger - %msg%n&quot;
@@ -94,7 +94,7 @@ else {
     root(ERROR, ['STDOUT'])
 }
 </code></pre>
-<p>Let's add an instance of <a href="http://logback.qos.ch/manual/appenders.html#RollingFileAppender"><code>RollingFileAppender</code></a> for our production environment. Let's say we want to split out our log files by day, and keep 30 days worth of log files around (deleting any older ones). In addition, we don't have unlimited hard drive space, so we'll also set a file size cap so that the total disk space used by our logs never exceeds 2GB.</p>
+<p>Let's add an instance of <a href="https://logback.qos.ch/manual/appenders.html#RollingFileAppender"><code>RollingFileAppender</code></a> for our production environment. Let's say we want to split out our log files by day, and keep 30 days worth of log files around (deleting any older ones). In addition, we don't have unlimited hard drive space, so we'll also set a file size cap so that the total disk space used by our logs never exceeds 2GB.</p>
 <p>Here's our new appender:</p>
 <pre><code class="language-groovy">//grails-app/confg/logback.groovy
 import ch.qos.logback.core.rolling.RollingFileAppender
@@ -119,7 +119,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
 <p><code>TimeBasedRollingPolicy</code> gets both it's rolling behavior (creating a new log file with the current date/time in the file name) and it's triggering behavior (rollover will occur based on the specified timestamp pattern) from the <code>fileNamePattern</code> property.</p>
 <blockquote>
 <h2>What's In a Name?</h2>
-<p>Maybe you'd rather not have the filenames of your log files contain the trigger interval. No worries, <code>RollingFileAppender</code> also supports a <code>file</code> property which can override this behavior, so your log files can be rolled over monthly (for example) without actually containing the date string in their filenames. See the documentation for <a href="http://logback.qos.ch/manual/appenders.html#RollingFileAppender"><code>RollingFileAppender</code></a> for more details.</p>
+<p>Maybe you'd rather not have the filenames of your log files contain the trigger interval. No worries, <code>RollingFileAppender</code> also supports a <code>file</code> property which can override this behavior, so your log files can be rolled over monthly (for example) without actually containing the date string in their filenames. See the documentation for <a href="https://logback.qos.ch/manual/appenders.html#RollingFileAppender"><code>RollingFileAppender</code></a> for more details.</p>
 </blockquote>
 <p>The trigger policy is the most interesting part here - it takes an approach that bases the rollover occurrence on how specific you define the timestamp in the <code>fileNamePattern</code>.  So if you specify down to the month, rollover will occur each month. Specify a pattern down to the day, and it will occur daily). It's easier to understand when you see it in action, so here's some example patterns taken from Logback's documentation:</p>
 <pre><code class="language-groovy">  fileNamePattern = &quot;/myApp-log.%d{yyyy-MM}.log&quot;	      //Rollover at the beginning of each month, file format: myApp-log.2016-11.log
@@ -133,14 +133,14 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
 <p>Finally, adding a <code>zip</code> or <code>gz</code> file extension to our <code>fileNamePattern</code> will apply the selected compression to the rolled-over log files:</p>
 <pre><code class="language-groovy">fileNamePattern = &quot;/myApp-log.%d{yyyy/MM}.gz&quot;	      //Rollover at the beginning of each month, compress the rolled-over file with GZIP
 </code></pre>
-<p>Going back to our previous example, we're setting a couple more properties on our <code>TimeBasedRollingPolicy</code> -  <code>maxHistory</code> and <code>totalSizeCap</code>. These are pretty simple to understand; <code>maxHistory</code> sets the upper limit on how many log files to preserve (when the max is reached the oldest file is deleted), and <code>totalSizeCap</code> sets a cap on how much disk space our log files are allowed to use (again, when the cap is reached the oldest files are deleted). There are other useful options you can set here, see the <a href="http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy"><code>TimeBasedRollingPolicy</code> documentation</a> for a full list and explanation.</p>
+<p>Going back to our previous example, we're setting a couple more properties on our <code>TimeBasedRollingPolicy</code> -  <code>maxHistory</code> and <code>totalSizeCap</code>. These are pretty simple to understand; <code>maxHistory</code> sets the upper limit on how many log files to preserve (when the max is reached the oldest file is deleted), and <code>totalSizeCap</code> sets a cap on how much disk space our log files are allowed to use (again, when the cap is reached the oldest files are deleted). There are other useful options you can set here, see the <a href="https://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy"><code>TimeBasedRollingPolicy</code> documentation</a> for a full list and explanation.</p>
 <blockquote>
 <h2>Warning!</h2>
 </blockquote>
 <blockquote>
 <p>While the Logback docs suggest that <code>totalSizeCap</code> can be specified as a plain String (i.e, &quot;2GB&quot;), I've found that it needs to be specified as a <code>FileSize</code> to avoid casting exceptions - so make sure to use <code>FileSize.valueOf(&quot;2GB&quot;)</code> to evaluate your total size. This also applies to the <code>maxFileSize</code> property used in the <code>SizeBasedRollingPolicy</code> and <code>TimeAndSizeBasedRollingPolicy</code>.</p>
 </blockquote>
-<p>There are several more <a href="http://logback.qos.ch/manual/appenders.html#onRollingPolicies">rolling &amp; triggering policies</a> that are available, including <a href="http://logback.qos.ch/manual/appenders.html#SizeBasedTriggeringPolicy"><code>SizeBasedTriggerPolicy</code></a> and <a href="http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy"><code>SizeAndTimeBasedTriggeringPolicy</code></a>, and <code>FixedWindowRollingPolicy</code></p>
+<p>There are several more <a href="https://logback.qos.ch/manual/appenders.html#onRollingPolicies">rolling &amp; triggering policies</a> that are available, including <a href="https://logback.qos.ch/manual/appenders.html#SizeBasedTriggeringPolicy"><code>SizeBasedTriggerPolicy</code></a> and <a href="https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy"><code>SizeAndTimeBasedTriggeringPolicy</code></a>, and <code>FixedWindowRollingPolicy</code></p>
 <p>Finally, let's specify that we want our new <code>RollingFileAppender</code> to be used in production mode only, while keeping the default <code>ConsoleAppender</code> for development mode.</p>
 <pre><code class="language-groovy">//grails-app/confg/logback.groovy
 import grails.util.BuildSettings
@@ -151,7 +151,7 @@ import ch.qos.logback.core.util.FileSize
 
 def HOME_DIR = &quot;.&quot;
 
-// See http://logback.qos.ch/manual/groovy.html for details on configuration
+// See https://logback.qos.ch/manual/groovy.html for details on configuration
 appender('STDOUT', ConsoleAppender) {
     encoder(PatternLayoutEncoder) {
         pattern = &quot;%level %logger - %msg%n&quot;
@@ -189,8 +189,8 @@ else {
 <p>And with that, we have our rolling log system. Enjoy!</p>
 <h2>Resources</h2>
 <ul>
-<li>Logback documentions: <a href="http://logback.qos.ch/documentation.html">http://logback.qos.ch/documentation.html</a></li>
-<li>Logback Groovy config (from the official docs): <a href="http://logback.qos.ch/manual/groovy.html">http://logback.qos.ch/manual/groovy.html</a></li>
+<li>Logback documentions: <a href="https://logback.qos.ch/documentation.html">https://logback.qos.ch/documentation.html</a></li>
+<li>Logback Groovy config (from the official docs): <a href="https://logback.qos.ch/manual/groovy.html">https://logback.qos.ch/manual/groovy.html</a></li>
 <li>DZone - Logback Configuration Using Groovy:  <a href="https://dzone.com/articles/logback-configuration-using-groovy">https://dzone.com/articles/logback-configuration-using-groovy</a></li>
 </ul>
     <h2 class='space-above'>
@@ -243,7 +243,7 @@ else {
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -285,7 +285,7 @@ else {
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

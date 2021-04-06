@@ -67,7 +67,7 @@
 <p>The Grails<sup>®</sup> framework leverages the “Convention Over Configuration” design paradigm, which functions to decrease the number of decisions that a developer using the framework is required to make without losing flexibility. This is one of the ways Grails significantly increases developer productivity!</p>
 <p>While Grails applications often involve considerably less configuration than similar applications built with other frameworks, some configuration may still be necessary. This post will detail a number of mechanisms that make it easy for Grails developers gain access to those configuration values at runtime.</p>
 <h3>application.yml</h3>
-<p>The default configuration file for Grails 3 applications is <code>grails-app/conf/application.yml</code>. In this file, <a href="http://www.yaml.org/">YAML</a> syntax is supported.</p>
+<p>The default configuration file for Grails 3 applications is <code>grails-app/conf/application.yml</code>. In this file, <a href="https://www.yaml.org/">YAML</a> syntax is supported.</p>
 <pre><code class="language-yaml">dataSource:
     pooled: true
     jmxExport: true
@@ -78,9 +78,9 @@
 dataSource.jmxExport = true
 dataSource.driverClassName = 'org.h2.Driver'
 </code></pre>
-<p>This article will not go into detail about YAML syntax. For that see <a href="http://www.yaml.org/">the main YAML site</a>. Instead, this article will focus on Grails 3 specific features related to accessing those configuration values.</p>
+<p>This article will not go into detail about YAML syntax. For that see <a href="https://www.yaml.org/">the main YAML site</a>. Instead, this article will focus on Grails 3 specific features related to accessing those configuration values.</p>
 <h2>The Config Property in GrailsApplication</h2>
-<p>The <a href="http://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html">GrailsApplication</a> interface defines the <a href="http://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html#getConfig()">getConfig</a> method which returns a <a href="http://docs.grails.org/3.1.10/api/grails/config/Config.html">Config</a> object. In the Spring application context is a bean named <code>grailsApplication</code> which is an instance of a class which implements the <code>GrailsApplication</code> interface. Retrieving the config object from this bean is one way to gain access to config values.</p>
+<p>The <a href="https://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html">GrailsApplication</a> interface defines the <a href="https://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html#getConfig()">getConfig</a> method which returns a <a href="https://docs.grails.org/3.1.10/api/grails/config/Config.html">Config</a> object. In the Spring application context is a bean named <code>grailsApplication</code> which is an instance of a class which implements the <code>GrailsApplication</code> interface. Retrieving the config object from this bean is one way to gain access to config values.</p>
 <pre><code class="language-yaml"># grails-app/conf/application.yml
 max:
     line:
@@ -124,7 +124,7 @@ Integer maxLineNumbers =  config.getProperty('max.line.numbers', Integer, 2112)
 {% endhighlight %}
 </code></pre>
 <h3>Required Properties</h3>
-<p>For required properties you could write application code that reacts however is appropriate if the property doesn't exist. You could also use the <a href="http://docs.grails.org/3.1.10/api/grails/config/ConfigMap.html#getRequiredProperty(java.lang.String,%20java.lang.Class)">getRequiredProperty</a> method which will throw an exception if a requested property does not exist.</p>
+<p>For required properties you could write application code that reacts however is appropriate if the property doesn't exist. You could also use the <a href="https://docs.grails.org/3.1.10/api/grails/config/ConfigMap.html#getRequiredProperty(java.lang.String,%20java.lang.Class)">getRequiredProperty</a> method which will throw an exception if a requested property does not exist.</p>
 <pre><code class="language-groovy">// retrieve the max.line.numbers config value
 // throws IllegalStateException if the
 // config value does not exist
@@ -146,7 +146,7 @@ class SomeController {
 }
 </code></pre>
 <h3>Config Injection Using GrailsConfigurationAware</h3>
-<p>An alternative is to retrieve the config value only once and then hold on to it so that it may be used later as many times as necessary. One way to do this is to have the config injected into any bean by implementing the <a href="http://docs.grails.org/3.1.10/api/grails/core/support/GrailsConfigurationAware.html">GrailsConfigurationAware</a> interface. There is a bean post processor that will discover all beans that implement at that interface and that post processor will invoke the <a href="http://docs.grails.org/3.1.10/api/grails/core/support/GrailsConfigurationAware.html#setConfiguration(grails.config.Config)">setConfiguration</a> method on those beans, passing the config object as an argument.</p>
+<p>An alternative is to retrieve the config value only once and then hold on to it so that it may be used later as many times as necessary. One way to do this is to have the config injected into any bean by implementing the <a href="https://docs.grails.org/3.1.10/api/grails/core/support/GrailsConfigurationAware.html">GrailsConfigurationAware</a> interface. There is a bean post processor that will discover all beans that implement at that interface and that post processor will invoke the <a href="https://docs.grails.org/3.1.10/api/grails/core/support/GrailsConfigurationAware.html#setConfiguration(grails.config.Config)">setConfiguration</a> method on those beans, passing the config object as an argument.</p>
 <pre><code class="language-groovy">import grails.config.Config
 import grails.core.support.GrailsConfigurationAware
 
@@ -167,7 +167,7 @@ class WidgetService implements GrailsConfigurationAware {
 }
 </code></pre>
 <h3>Config Injection Using @Value</h3>
-<p>Another option for injecting config values is to use the <a href="http://docs.spring.io/spring/docs/4.2.6.RELEASE/javadoc-api/org/springframework/beans/factory/annotation/Value.html">@Value</a> annotation.</p>
+<p>Another option for injecting config values is to use the <a href="https://docs.spring.io/spring/docs/4.2.6.RELEASE/javadoc-api/org/springframework/beans/factory/annotation/Value.html">@Value</a> annotation.</p>
 <pre><code class="language-groovy">import org.springframework.beans.factory.annotation.Value
 
 class WidgetService {
@@ -247,7 +247,7 @@ class WidgetService {
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -289,7 +289,7 @@ class WidgetService {
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

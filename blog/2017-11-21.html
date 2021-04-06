@@ -64,7 +64,7 @@
 <p><span class="author">By Zachary Klein</span></p>
 <p><span class="date">November 21, 2017</span></p>
 <p>Tags: <a href="https://grails.org/blog/tag/react.html"><span class="hashtag">#react</span></a></p>
-<p>As of Grails<sup>®</sup> 3.3.2, there are now two distinct <a href="https://docs.grails.org/latest/guide/profiles.html">Profiles</a> for using <a href="https://reactjs.org/">React</a> in your Grails projects. These profiles are essentially the same as those described in the <a href="http://grailsblog.objectcomputing.com/posts/2016/11/14/introducing-the-react-profile-for-grails.html">announcement post</a>, with some updates.</p>
+<p>As of Grails<sup>®</sup> 3.3.2, there are now two distinct <a href="https://docs.grails.org/latest/guide/profiles.html">Profiles</a> for using <a href="https://reactjs.org/">React</a> in your Grails projects. These profiles are essentially the same as those described in the <a href="https://grails.org/blog/2017-11-21.html">announcement post</a>, with some updates.</p>
 <h2>React-Webpack Profile for Grails apps</h2>
 <p>This profile provides a monolithic project structure with React code embedded within the Grails project. Formerly, to use this version of the profile you had to specific it's version explictly. Now, this profile can be used when creating a new Grails 3.3.2 app like so:</p>
 <pre><code>grails create-app myapp -profile react-weback
@@ -142,7 +142,7 @@
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -184,7 +184,7 @@
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

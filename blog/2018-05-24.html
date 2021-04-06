@@ -67,7 +67,7 @@
 <p>This blog will highlight some mock logging techniques and when to use them.</p>
 <h2>Default Grails Logging in Unit Tests</h2>
 <p>First let's get the obvious out of the way for clarity. If you are not concerned about testing how logs operate in your application, there is no reason to worry about mocking loggers in Grails apps.</p>
-<p>Since the logger is already present in Grails controllers, services, and domain objects there is no need to mock the logger when running unit tests. When a unit test is run with <a href="https://testing.grails.org/latest/guide/index.html">Grails Testing Support</a>, the logger will execute just as in does in production mode. In this scenario, we can say the logger as already &quot;mocked&quot; for the purpose of focusing on the <a href="http://wiki.c2.com/?ClassUnderTest">Class Under Test</a>. This is distinct from the scenario of actually verifying logging occurs, which we will dive into next.</p>
+<p>Since the logger is already present in Grails controllers, services, and domain objects there is no need to mock the logger when running unit tests. When a unit test is run with <a href="https://testing.grails.org/latest/guide/index.html">Grails Testing Support</a>, the logger will execute just as in does in production mode. In this scenario, we can say the logger as already &quot;mocked&quot; for the purpose of focusing on the <a href="https://wiki.c2.com/?ClassUnderTest">Class Under Test</a>. This is distinct from the scenario of actually verifying logging occurs, which we will dive into next.</p>
 <h2>Verify Logging with Tests</h2>
 <p>What if we want to assert that a certain log occurs with a particular log level? For example, let's say we want to test that that the method below prints friendly advice based on the <code>age</code> parameter.</p>
 <pre><code class="language-groovy">package mock.logging
@@ -90,10 +90,10 @@ class AgeService {
 </code></pre>
 <p>In this scenario we need to mock the logger and capture the message passed in. Then we can assert that the message is correct and also assert the appropriate log level was used in each scenario. Conceptually, this is pretty easy. But in practice not so much.</p>
 <h2>Why Not Use Spock?</h2>
-<p>One would think that we should simply mock out the logger with <code>def mockLogger = Mock(Logger)</code>, then set the service in the unit test with <code>service.log = mockLogger</code>. We could proceed to check the arguments passed in and also the number of times <code>service.log</code> is called with spock programming. However, in Grails apps we run into a few basic problems while trying to mock with native spock or even <a href="http://groovy-lang.org/testing.html#_mockfor_and_stubfor">Groovy MockFor</a>.</p>
+<p>One would think that we should simply mock out the logger with <code>def mockLogger = Mock(Logger)</code>, then set the service in the unit test with <code>service.log = mockLogger</code>. We could proceed to check the arguments passed in and also the number of times <code>service.log</code> is called with spock programming. However, in Grails apps we run into a few basic problems while trying to mock with native spock or even <a href="https://groovy-lang.org/testing.html#_mockfor_and_stubfor">Groovy MockFor</a>.</p>
 <p>Logback is the default framework and the <a href="https://logback.qos.ch/apidocs/ch/qos/logback/classic/Logger.html">Logger</a> is <code>final</code>. We cannot mock a final class. Furthermore, the injected <code>log</code>property in Grails artifacts is a read-only property and cannot be set. These two fundamental problems prohibit spock mocks from being effective in most mock logging situations in Grails apps.</p>
 <h2>Use Mockito to Verify Log Events</h2>
-<p>The <a href="http://site.mockito.org/">Mockito</a> Library can be used to verify logs take place. With Mockito, we can create a mock <code>Appender</code> class, attach it to the logger, and then use an <code>ArgumentCaptor</code> to capture the invocations sent to the logger.</p>
+<p>The <a href="https://site.mockito.org/">Mockito</a> Library can be used to verify logs take place. With Mockito, we can create a mock <code>Appender</code> class, attach it to the logger, and then use an <code>ArgumentCaptor</code> to capture the invocations sent to the logger.</p>
 <p>build.gradle</p>
 <pre><code class="language-groovy">dependencies { 
     ...
@@ -124,7 +124,7 @@ class AgeService {
     }
 </code></pre>
 <h2>Use Slf4j Test to Verify Log Events</h2>
-<p><a href="http://projects.lidalia.org.uk/slf4j-test/">Slf4j Test</a> is a test implementation of Slf4j that stores log messages in memory and provides messages for retrieving them. This works nicely to substitute for the real implementation in the test environment of Grails apps.</p>
+<p><a href="https://projects.lidalia.org.uk/slf4j-test/">Slf4j Test</a> is a test implementation of Slf4j that stores log messages in memory and provides messages for retrieving them. This works nicely to substitute for the real implementation in the test environment of Grails apps.</p>
 <p>In <code>build.gradle</code>, we first need to depend on the jar, and then exclude the real implementation from the test environment. It is quite simple to check the logging events.</p>
 <p>build.gradle</p>
 <pre><code class="language-groovy">dependencies { 
@@ -254,7 +254,7 @@ class DeclaredSlf4jServiceSpec extends Specification {
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -296,7 +296,7 @@ class DeclaredSlf4jServiceSpec extends Specification {
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

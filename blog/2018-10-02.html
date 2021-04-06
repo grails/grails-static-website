@@ -111,7 +111,7 @@ class Team {
 <p>Now upon updates, the following hibernate log is generated (note the omission of <code>nationalRank</code>):</p>
 <pre><code class="language-groovy">Hibernate: update team set version=?, coach=?, name=? where id=? and version=?
 </code></pre>
-<p>A derived property is one that takes its value from a SQL expression. E.g., <code>tax formula: 'PRICE * TAX_RATE'</code>. The formula expressed in the ORM DSL references to NATIONAL_RANK instead nationalRank. We are echoing a value which must be set elsewhere and cannot be inserted through GORM. So returning the column value directly achieves a read-only effect. <a href="http://gorm.grails.org/6.1.x/hibernate/manual/#derivedProperties">DerivedProperties</a></p>
+<p>A derived property is one that takes its value from a SQL expression. E.g., <code>tax formula: 'PRICE * TAX_RATE'</code>. The formula expressed in the ORM DSL references to NATIONAL_RANK instead nationalRank. We are echoing a value which must be set elsewhere and cannot be inserted through GORM. So returning the column value directly achieves a read-only effect. <a href="https://gorm.grails.org/6.1.x/hibernate/manual/#derivedProperties">DerivedProperties</a></p>
 <h2>DynamicUpdate</h2>
 <p>An alternate way of achieving the same result is to use hibernate's <code>dynamicUpdate</code> mapping. <code>dynamicUpdate</code> tells Hibernate whether to include unmodified properties in the SQL UPDATE statement. This excludes any attribute from the update statement which is not dirty.</p>
 <pre><code class="language-groovy">package grails.readonly.attribute
@@ -177,7 +177,7 @@ class Team {
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -219,7 +219,7 @@ class Team {
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

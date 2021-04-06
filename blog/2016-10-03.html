@@ -241,7 +241,7 @@ git push --tags
 <p>Notice, that I added <code>--tags</code> to the <code>git</code> command to get tags pushed to GitHub.</p>
 <p>That's it. The build is automated, and a release can be created on Bintray by using Travis-CI and GitHub tagging.</p>
 <h2>Deploy Snapshots to JFrog OSS Artifactory</h2>
-<p>To have snapshot published to a public repo for others to use it, we can resort to Jfrog OSS Artifactory <a href="http://oss.jfrog.org/">oss.jfrog.org (OJO)</a>, since Bintray does not support snapshot builds. (This section is inspired by the <a href="http://www.slideshare.net/alvarosanchezmariscal/mastering-grails-3-plugins-greach-2016">blog post by Álvaro Sánchez</a>). Before you can publish to OJO, please read <a href="https://www.jfrog.com/confluence/display/RTF/Deploying+Snapshots+to+oss.jfrog.org">this document</a>.</p>
+<p>To have snapshot published to a public repo for others to use it, we can resort to Jfrog OSS Artifactory <a href="https://oss.jfrog.org/">oss.jfrog.org (OJO)</a>, since Bintray does not support snapshot builds. (This section is inspired by the <a href="https://www.slideshare.net/alvarosanchezmariscal/mastering-grails-3-plugins-greach-2016">blog post by Álvaro Sánchez</a>). Before you can publish to OJO, please read <a href="https://www.jfrog.com/confluence/display/RTF/Deploying+Snapshots+to+oss.jfrog.org">this document</a>.</p>
 <h3>Setup Build Scripts</h3>
 <p>Let us start with <code>build.gradle</code>:</p>
 <pre><code class="language-groovy">buildscript {
@@ -258,7 +258,7 @@ grailsPublish {
    //...
 }
 artifactory {
-    contextUrl = 'http://oss.jfrog.org'
+    contextUrl = 'https://oss.jfrog.org'
     publish {
         repository {
             repoKey = 'oss-snapshot-local'
@@ -362,7 +362,7 @@ cache:
         </ul></nav>
         <nav class='partnersnav'><ul>
             <li>Grails' repositories are hosted by
-                <a href='http://artifactoryonline.com/'>Artifactory</a>
+                <a href='https://grails.jfrog.io/'>Artifactory</a>
             </li>
             <li>Website hosting provided by
                 <a href="https://aws.amazon.com/">AWS</a>
@@ -404,7 +404,7 @@ cache:
                 if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
                 if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
                 var scr = document.createElement("script");
-                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "https://a.adroll.com");
                 scr.setAttribute('async', 'true');
                 scr.type = "text/javascript";
                 scr.src = host + "/j/roundtrip.js";

@@ -15,7 +15,7 @@ Tags: #micronaut #groovy3
 
 As we approach the fourth quarter of 2020, I wanted to take a few minutes to update everyone in the community on the updates and enhancements coming to the Grails<sup>&reg;</sup> framework. 
 
-In the last few months, the [2GM (Groovy, Grails framework, and Micronaut) team](https://objectcomputing.com/products/2gm-team) has put a lot of work into the upcoming Grails 4.1 release. We’re excited to share that this release will include support for Apache Groovy 3! Groovy 3 offers a number of [enhancements](http://groovy-lang.org/releasenotes/groovy-3.0.html) to the language including method references and a new, more flexible parser. Additionally, Grails 4.1 will support [Micronaut 2.0](https://micronaut.io), Gradle 6.5, and Spring 2.3. We’ve also added improvements to the Grails profiles to support the exclusion of transitive dependencies.
+In the last few months, the [2GM (Groovy, Grails framework, and Micronaut) team](https://objectcomputing.com/products/2gm-team) has put a lot of work into the upcoming Grails 4.1 release. We’re excited to share that this release will include support for Apache Groovy 3! Groovy 3 offers a number of [enhancements](https://groovy-lang.org/releasenotes/groovy-3.0.html) to the language including method references and a new, more flexible parser. Additionally, Grails 4.1 will support [Micronaut 2.0](https://micronaut.io), Gradle 6.5, and Spring 2.3. We’ve also added improvements to the Grails profiles to support the exclusion of transitive dependencies.
 
 Apart from this, we've had some minor releases featuring bug fixes and improvements, which include (but are not limited to) the following: 
 

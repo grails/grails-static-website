@@ -548,7 +548,7 @@ class BlogTask extends DefaultTask {
         RssChannel.Builder builder = RssChannel.builder(sitemeta['title'], sitemeta['url'], sitemeta['description'])
         builder.pubDate(ZonedDateTime.of(LocalDateTime.now(), ZoneId.of("GMT")))
         builder.lastBuildDate(ZonedDateTime.of(LocalDateTime.now(), ZoneId.of("GMT")))
-                .docs("http://blogs.law.harvard.edu/tech/rss")
+                .docs("https://blogs.law.harvard.edu/tech/rss")
                 .generator("Micronaut RSS")
                 .managingEditor("delamos@objectcomputing.com")
                 .webMaster("delamos@objectcomputing.com")

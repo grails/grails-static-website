@@ -49,7 +49,7 @@ The output can be found in the `build/dist` directory.
 
 ## Generating the GUIDES site
 
-[https://guides.grails.org](http://guides.grails.org)
+[https://guides.grails.org](https://guides.grails.org)
 
 ```bash
 ./gradlew buildGuide --console=plain
@@ -102,7 +102,7 @@ image: 2016-05-26.jpg
 
 [%date] 
 
-We had [previously](http://grails.io/post/142674392718/deploying-grails-3-to-wildfly-10) described how to deploy Grails 3.1 applications to WildFly 10, which is where all of the "cutting edge" work happens in the JBoss world.
+We had [previously](https://grails.io/post/142674392718/deploying-grails-3-to-wildfly-10) described how to deploy Grails 3.1 applications to WildFly 10, which is where all of the "cutting edge" work happens in the JBoss world.
 
 The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely similar, with some minor configuration differences.
 ```

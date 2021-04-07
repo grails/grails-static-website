@@ -30,10 +30,10 @@ The Sonatype’s OSSRH service is the primary place to publish plugins to the Ce
     
     To publish to Sonatype, the groupID needs to be changed.
 
-    1. If your plugins are hosted on Github, you could use "io.github.yourusername", "io.github.yourorganization", etc. For example: "io.github.puneetbehl", where "puneetbehl" is my Github username.
+    1. If your plugins are hosted on GitHub, you could use "io.github.yourusername", "io.github.yourorganization", etc. For example: "io.github.puneetbehl", where "puneetbehl" is my GitHub username.
     2. If you own or manage a domain then you could use groupId starting with the reverse domain name.
 
-   Please note that there is a Sonatype validation process to verify that you own the Github username or control the domain. See [Individual Projects - Open Source Software Repository Hosting (OSSRH)](https://central.sonatype.org/publish/#individual-projects-open-source-software-repository-hosting-ossrh) for more information.
+   Please note that there is a Sonatype validation process to verify that you own the GitHub username or control the domain. See [Individual Projects - Open Source Software Repository Hosting (OSSRH)](https://central.sonatype.org/publish/#individual-projects-open-source-software-repository-hosting-ossrh) for more information.
 
 2. ### Sign up and provide project details
 
@@ -286,11 +286,11 @@ grailsPublish {
         ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
         ```
 
-## Automate Publishing Using Github Action
+## Automate Publishing Using GitHub Action
 
-To automatically release using Github Workflow, add the following [.github/workflows/release.yml](https://raw.githubusercontent.com/puneetbehl/myplugin/main/.github/workflows/release.yml) workflow configuration file to your project.
+To automatically release using GitHub Workflow, add the following [.github/workflows/release.yml](https://raw.githubusercontent.com/puneetbehl/myplugin/main/.github/workflows/release.yml) workflow configuration file to your project.
 
-When using this file, you must configure the following Github Secrets:
+When using this file, you must configure the following GitHub Secrets:
 
 1. SONATYPE_USERNAME
 2. SONATYPE_PASSWORD
@@ -299,7 +299,7 @@ When using this file, you must configure the following Github Secrets:
 5. SIGNING_PASSPHRASE
 6. SECRING_FILE - This is a BASE64 encoded value. Run the command `gpg --keyring ~/.gnupg/pubring.kbx --export-secret-keys > ~/.gnupg/secring.gpg && base64 ~/.gnupg/secring.gpg | pbcopy` to copy BASE64 encoded value to the clipboard.
 
-To trigger a release, create a new release from the Github releases page. Here is a sample [Grails Plugin](https://github.com/puneetbehl/myplugin) that's configured to publish to Maven Central.
+To trigger a release, create a new release from the GitHub releases page. Here is a sample [Grails Plugin](https://github.com/puneetbehl/myplugin) that's configured to publish to Maven Central.
 
 ## Update Information on Grails Plugin Portal
 The [Grails Plugin Portal](https://plugins.grails.org) uses the [grails-plugins.json](https://raw.githubusercontent.com/grails/grails-plugins-metadata/main/grails-plugins.json) metadata file to display plugin information.

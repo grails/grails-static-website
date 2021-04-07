@@ -12,7 +12,7 @@ JAVASCRIPT: [%url]/javascripts/prism.js
 
 [%author]
 
-[%date] 
+[%date]
 
 Tags: #bintray #plugins
 
@@ -20,13 +20,13 @@ Beginning May 1, 2021, plugin developers will [no longer be able to publish your
 
 In this post, we will outline how to publish Grails plugins to Maven Central. For detailed information, we also suggest checking [Sonatype OSSRH Guide](https://central.sonatype.org/pages/ossrh-guide.html).
 
-The Sonatype’s OSSRH service is the primary place to publish plugins to the Central repository. In order to use OSSRH, you need to take care of a few prerequisites and follow some basic steps. 
+The Sonatype’s OSSRH service is the primary place to publish plugins to the Central repository. In order to use OSSRH, you need to take care of a few prerequisites and follow some basic steps.
 
 ## Prerequisites
 
 ### 1. Choose your coordinates
 When publishing Grails plugins to Bintray, it was possible to publish under the same groupId as core Grails plugins (`org.grails.plugins`). This will no longer be the case when publishing to Sonatype.
- 1. If your plugins are hosted on Github, you could use `com.github.yourusername`, `com.github.yourorganization`, etc. For example: `com.github.puneetbehl`, where `puneetbehl` is my Github username.
+ 1. If your plugins are hosted on Github, you could use `io.github.yourusername`, `io.github.yourorganization`, etc. For example: `io.github.puneetbehl`, where `puneetbehl` is my Github username.
  2. If you own or manage a domain then you could use groupId starting with the reverse domain name.
 
 Please note that there is a Sonatype validation process to verify that you own the Github username or control the domain. See [Individual Projects - Open Source Software Repository Hosting (OSSRH)](https://central.sonatype.org/pages/producers.html) section for more information.
@@ -35,10 +35,10 @@ Please note that there is a Sonatype validation process to verify that you own t
 Once you identify the groupId, you need to [Claim Your Namespace on the Central Repository](https://www.youtube.com/watch?v=P_3yo-oU1To) (SonaType has provided the linked video to explain the process). Follow the steps below.
 
 1. Sign up on [Sonatype JIRA](https://issues.sonatype.org).
-2. Provide project details by creating a new project ticket 
+2. Provide project details by creating a new project ticket
     1. Create a new Issue in the "Community Support - Open Source Project Repository Hosting" project
     2. The issue type should be "New Project"
-    3. On the Project Details page, enter basic project details. See the screenshot below for an example: 
+    3. On the Project Details page, enter basic project details. See the screenshot below for an example:
        ![](2021-04-07-img01.png)
        NOTE: Once the ticket is resolved, you should be good to deploy your artifacts.
 ### 3. Minimum Requirements
@@ -75,7 +75,7 @@ One of the requirements for publishing to the Central Repository is to sign your
 
 After generating the GnuPG key you need to distribute your public key to the key server so others can use it to verify your files. See [Distributing Your Public Key Section](https://central.sonatype.org/pages/working-with-pgp-signatures.html#distributing-your-public-key).
 
-You may receive an error from Sonatype stating that the signature could not be verified.  The error message will list the key servers that it is checking.  You may need to distribute your key to another server (for example: [http://keyserver.ubuntu.com:11371](http://keyserver.ubuntu.com:11371)) in order for Sonatype to validate the artifacts.   
+You may receive an error from Sonatype stating that the signature could not be verified.  The error message will list the key servers that it is checking.  You may need to distribute your key to another server (for example: [http://keyserver.ubuntu.com:11371](http://keyserver.ubuntu.com:11371)) in order for Sonatype to validate the artifacts.
 
 ## Publishing
 In order to deploy your plugin artifacts to OSSRH, you must meet the requirements for metadata in the POM and sign the artifacts. First, let’s remove the previous Grails plugin, which is used to upload artifacts to JFrog Bintray.
@@ -276,13 +276,13 @@ When using this file you must configure the following Github Secrets:
    5. SIGNING_PASSPHRASE
    6. SECRING_FILE - This is a BASE64 encoded value. (`gpg --keyring ~/.gnupg/pubring.kbx --export-secret-keys > ~/.gnupg/secring.gpg && base64 ~/.gnupg/secring.gpg | pbcopy`)
 
-To trigger a release, create a new release from the Github releases page. Here is a sample [Grails Plugin](https://github.com/puneetbehl/myplugin) that's configured to publish to Maven Central. 
+To trigger a release, create a new release from the Github releases page. Here is a sample [Grails Plugin](https://github.com/puneetbehl/myplugin) that's configured to publish to Maven Central.
 
 ## Update Information on Grails Plugin Portal
 The [Grails Plugin Portal](https://plugins.grails.org) uses the [grails-plugins.json](https://raw.githubusercontent.com/grails/grails-plugins-metadata/main/grails-plugins.json) metadata file to display plugin information.
 
-The metadata is hosted at [grails/grails-plugins-metadata/blob/main/grails-plugins.json](https://github.com/grails/grails-plugins-metadata/blob/main/grails-plugins.json). When you publish a new plugin or release an existing plugin, you must send a pull request to this file to update the information on the portal. 
-1. When you release a new plugin, add the following information at the end of the JSON file: 
+The metadata is hosted at [grails/grails-plugins-metadata/blob/main/grails-plugins.json](https://github.com/grails/grails-plugins-metadata/blob/main/grails-plugins.json). When you publish a new plugin or release an existing plugin, you must send a pull request to this file to update the information on the portal.
+1. When you release a new plugin, add the following information at the end of the JSON file:
 
 ```groovy
 {

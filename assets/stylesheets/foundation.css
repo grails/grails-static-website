@@ -469,7 +469,7 @@ body.drawer-active {
     cursor: pointer;
 }
 
-body.foundation-sponsors article.content,.container {
+body.foundation-sponsors article.content.container {
     margin-top: 50px;
     border-top: 4px solid var(--grails-orange);
     background-color: white;

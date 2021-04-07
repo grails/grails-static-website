@@ -16,7 +16,7 @@ JAVASCRIPT: [%url]/javascripts/prism.js
 
 Tags: #bintray #plugins
 
-Beginning May 1, 2021, you will [no longer be able to publish your Grails plugins/artifacts to JFrog Bintray. We have already copied most of the Grails plugins from JFrog Bintray](https://grails.org/blog/2021-02-12-alerts-regarding-bintray-sunset.html) to the [Grails Artifactory](https://repo.grails.org), which allows us to resolve those artifacts. Going forward, we recommend that you start publishing artifacts to Maven Central.
+Beginning May 1, 2021, you will [no longer be able to publish your Grails plugins/artifacts to JFrog Bintray](https://grails.org/blog/2021-02-12-alerts-regarding-bintray-sunset.html). We have already copied most of the Grails plugins from JFrog Bintray to the [Grails Artifactory](https://repo.grails.org), which allows us to resolve those artifacts. Going forward, we recommend that you start publishing artifacts to Maven Central.
 
 In this post, we outline how to publish Grails plugins to Maven Central. For detailed information, we also suggest checking [Sonatype OSSRH Guide](https://central.sonatype.org/publish/publish-guide/).
 

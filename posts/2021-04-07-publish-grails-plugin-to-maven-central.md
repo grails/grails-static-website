@@ -117,7 +117,7 @@ grailsPublish {
    2. Customize Metadata - The following sample shows how to customize the metadata for a Grails plugin:
 
       ```groovy
-      group 'com.github.puneetbehl'
+      group 'io.github.puneetbehl'
       Version '1.0.0'
       
       publishing {

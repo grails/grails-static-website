@@ -1,6 +1,6 @@
 ---
 title: How to Publish a Grails Plugin to the Maven Central Repository
-date:  April 05, 2021
+date:  April 07, 2021
 description: In this post, we will outline how to publish Grails plugins to Maven Central.
 author: Puneet Behl
 image: grails-blog-index-6.png

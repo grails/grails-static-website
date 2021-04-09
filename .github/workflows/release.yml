@@ -1,0 +1,30 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      grails_version:
+        description: 'Grails Version (eg: 4.0.10)'
+        required: true
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GIT_USER_NAME: puneetbehl
+      GIT_USER_EMAIL: behlp@objectcomputing.com
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: gradle/wrapper-validation-action@v1
+      - name: Run Release Script
+        run: ./release.sh ${{ github.event.inputs.grails_version }}
+      - name: Commit Release
+        run: |
+          git config user.name ${GIT_USER_NAME}
+          git config user.email ${GIT_USER_EMAIL}
+          git add conf/releases.yml
+          git commit -m "Update conf/releases.yml \n\nAdd ${RELEASE} to Grails Versions list"
+          git push
+        env:
+          RELEASE: ${{ github.event.inputs.grails_version }}

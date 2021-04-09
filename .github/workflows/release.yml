@@ -24,7 +24,7 @@ jobs:
           git config user.name ${GIT_USER_NAME}
           git config user.email ${GIT_USER_EMAIL}
           git add conf/releases.yml
-          git commit -m "Update conf/releases.yml \n\nAdd ${RELEASE} to Grails Versions list"
+          git commit -m "Update conf/releases.yml" -m "Add ${RELEASE} to Grails Versions list"
           git push
         env:
           RELEASE: ${{ github.event.inputs.grails_version }}

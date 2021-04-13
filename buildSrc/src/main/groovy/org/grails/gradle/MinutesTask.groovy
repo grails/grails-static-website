@@ -41,6 +41,8 @@ class MinutesTask extends DefaultTask {
     static final SimpleDateFormat MMMM_D_YYYY = new SimpleDateFormat("MMMM d, yyyy")
     public static final String RSS_FILE = 'rss.xml'
     final static String SPAN_CLOSE = "</span>"
+    public static final String IMAGES = 'images'
+    public static final String MINUTES_BG = 'grails-blog-index-6.png'
     public static final String MINUTES = 'foundation/minutes'
     public static final String INDEX = 'index.html'
 
@@ -100,19 +102,14 @@ class MinutesTask extends DefaultTask {
                 versions
         )
         copyBackgroundImages()
-        List<MarkdownMinutes> listOfPosts = parsePosts(minutes.get())
-        listOfPosts = filterOutFuturePosts(listOfPosts)
-        listOfPosts = listOfPosts.sort { a, b ->
+        List<MarkdownMinutes> listOfMinutes = parseMinutes(minutes.get())
+        listOfMinutes = listOfMinutes.sort { a, b ->
             parseDate(a.date).after(parseDate(b.date)) ? -1 : 1
         }
-        List<HtmlMinutes> htmlPosts = processMinutes(m, listOfPosts)
+        List<HtmlMinutes> htmlMinutes = processMinutes(m, listOfMinutes)
         File blog = new File(o.absolutePath + '/' + MINUTES)
         blog.mkdirs()
-        renderPosts(m, htmlPosts, blog, templateText)
-    }
-
-    static List<MarkdownMinutes> filterOutFuturePosts(List<MarkdownMinutes> minutes) {
-        minutes.findAll { m -> !parseDate(m.date).after(new Date()) }
+        renderMinutes(m, htmlMinutes, blog, templateText)
     }
 
     static Date parseDate(String date) throws ParseException {
@@ -166,15 +163,36 @@ class MinutesTask extends DefaultTask {
 
     @CompileDynamic
     static String renderMinutesHtml(HtmlMinutes htmlMinutes,
-                                    String templateText,
-                                    List<HtmlMinutes> minutes) {
+                                    String templateText) {
 
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
         mb.div(class: 'headerbar chalicesbg') {
             div(class: 'content') {
                 h1 {
-                    a(href: '[%url]/foundation/minutes/index.html', 'Foundation')
+                    a(href: '[%url]/foundation/index.html', 'Foundation')
+                }
+            }
+        }
+
+        mb.article(class: 'content container') {
+            mb.section(class: 'largegoldenratio align-left foundation-description') {
+                mb.div {
+                    mkp.yieldUnescaped(htmlMinutes.html)
+                }
+            }
+
+            mb.section(class: 'smallgoldenratio align-left foundation-boards') {
+
+                mb.div(class: 'meeting-archive-list') {
+                    h2 { mkp.yield("Meeting Minutes Archive") }
+                    mkp.yieldUnescaped("""
+                        <h3>2021</h3>
+                        <ul>
+                        <li><a href="/foundation/minutes/20210321-tab.html">Mar 21 - Technology Advisory Board</a></li>
+                        </ul>
+                        </div>
+                    """)
                 }
             }
         }
@@ -183,18 +201,18 @@ class MinutesTask extends DefaultTask {
         Map<String, String> metadata = htmlMinutes.metadata.toMap()
         html = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
         html = RenderSiteTask.highlightMenu(html, metadata, htmlMinutes.path)
-        metadata['body'] = metadata['body'] ? metadata['body'] : ''
+        metadata['body'] = metadata['body'] ? metadata['body'] : 'foundation minutes'
         if (metadata['body']) {
             html = html.replace("<body>", "<body class='${metadata['body']}'>")
         }
         html
     }
 
-    static List<HtmlMinutes> processMinutes(Map<String, String> globalMetadata, List<MarkdownMinutes> markdownPosts) {
-        markdownPosts.collect { MarkdownMinutes mdPost ->
-            Map<String, String> metadata = RenderSiteTask.processMetadata(globalMetadata + mdPost.metadata)
-            MinutesMetadata postMetadata = new MinutesMetadataAdaptor(metadata)
-            String markdown = mdPost.content
+    static List<HtmlMinutes> processMinutes(Map<String, String> globalMetadata, List<MarkdownMinutes> markdownMinutes) {
+        markdownMinutes.collect { MarkdownMinutes mdMinutes ->
+            Map<String, String> metadata = RenderSiteTask.processMetadata(globalMetadata + mdMinutes.metadata)
+            MinutesMetadata minutesMetadata = new MinutesMetadataAdaptor(metadata)
+            String markdown = mdMinutes.content
             if (metadata.containsKey('slides')) {
                 markdown = markdown + "\n\n[Slides](${metadata['slides']})\n\n"
             }
@@ -207,28 +225,28 @@ class MinutesTask extends DefaultTask {
                 html = html + iframe
             }
 
-            new HtmlMinutes(metadata: postMetadata, html: html, path: mdPost.path)
+            new HtmlMinutes(metadata: minutesMetadata, html: html, path: mdMinutes.path)
         }
     }
 
-    static void renderPosts(Map<String, String> globalMetadata,
-                            List<HtmlMinutes> listOfPosts,
-                            File outputDir,
-                            final String templateText) {
+    static void renderMinutes(Map<String, String> globalMetadata,
+                              List<HtmlMinutes> listOfMinutes,
+                              File outputDir,
+                              final String templateText) {
         List<String> minuteCards = []
         List<RssItem> rssItems = []
 
-        for (HtmlMinutes htmlMinutes : listOfPosts) {
+        for (HtmlMinutes htmlMinutes : listOfMinutes) {
             minuteCards << minutesCard(htmlMinutes)
-            String html = renderMinutesHtml(htmlMinutes, templateText, listOfPosts)
+            String html = renderMinutesHtml(htmlMinutes, templateText)
             File pageOutput = new File(outputDir.absolutePath + "/" + htmlMinutes.path)
             pageOutput.createNewFile()
             pageOutput.text = html
 
-            String postLink = postLink(htmlMinutes)
+            String minutesLink = minutesLink(htmlMinutes)
             rssItems.add(rssItemWithPage(htmlMinutes.metadata.title,
                     parseDate(htmlMinutes.metadata.date),
-                    postLink,
+                    minutesLink,
                     htmlMinutes.path.replace(".html", ""),
                     htmlMinutes.html))
         }
@@ -236,7 +254,7 @@ class MinutesTask extends DefaultTask {
         renderRss(globalMetadata, rssItems, new File(outputDir.absolutePath + "/../" + RSS_FILE))
     }
 
-    static String postLink(HtmlMinutes minutes) {
+    static String minutesLink(HtmlMinutes minutes) {
         minutes.metadata.url + '/' + MINUTES + '/' + minutes.path
     }
 
@@ -244,8 +262,8 @@ class MinutesTask extends DefaultTask {
     private static String minutesCard(HtmlMinutes htmlMinutes) {
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
-        mb.article(class: 'blogcard', style: '') {
-            a(href: postLink(htmlMinutes)) {
+        mb.article(class: 'blogcard', style: "margin-bottom: 0; background-image: url(${htmlMinutes.metadata.url + '/' + IMAGES}/${MINUTES_BG})") {
+            a(href: minutesLink(htmlMinutes)) {
                 h3 {
                     mkp.yield RenderSiteTask.formatDate(htmlMinutes.metadata.date)
                 }
@@ -314,15 +332,6 @@ class MinutesTask extends DefaultTask {
         f.text = html
     }
 
-    private static void renderCards(File f,
-                                    List<String> cards,
-                                    Map<String, String> meta,
-                                    String templateText,
-                                    String title = null) {
-        String pageHtml = cardsHtml(cards, meta, title)
-        f.createNewFile()
-        f.text = RenderSiteTask.renderHtmlWithTemplateContent(pageHtml, meta, templateText)
-    }
 
     @CompileDynamic
     static String cardsHtml(List<String> cards, Map<String, String> meta, String title = null) {
@@ -330,23 +339,20 @@ class MinutesTask extends DefaultTask {
         MarkupBuilder mb = new MarkupBuilder(writer)
 
         mb.div(class: 'headerbar chalicesbg') {
+
             div(class: 'content') {
                 if (title) {
                     mkp.yieldUnescaped(title)
                 } else {
                     h1 {
-                        a(href: '[%url]/foundation/minutes/index.html', 'Foundation')
+                        a(href: '[%url]/foundation/index.html', 'Foundation')
                     }
                 }
             }
         }
         mb.div(class: 'clear content container') {
-//            if (title) {
-//                mkp.yieldUnescaped(title)
-//            } else {
-//
-//            }
-
+            h3 class: 'columnheader', style: 'margin-bottom: 0', 'Meeting Minutes'
+            p('Archive of past meeting minutes of the Technology Advisory Board')
             div(class: 'light') {
                 div(class: 'padded', style: 'padding-top: 0;') {
                     for (int i = 0; i < cards.size(); i++) {
@@ -388,15 +394,15 @@ class MinutesTask extends DefaultTask {
     }
 
 
-    static List<MarkdownMinutes> parsePosts(File minutes) {
-        List<MarkdownMinutes> listOfPosts = []
+    static List<MarkdownMinutes> parseMinutes(File minutes) {
+        List<MarkdownMinutes> listOfMinutes = []
         minutes.eachFile { file ->
             if (file.path.endsWith(".md") || file.path.endsWith(".markdown")) {
                 ContentAndMetadata contentAndMetadata = RenderSiteTask.parseFile(file)
-                listOfPosts << new MarkdownMinutes(filename: file.name, content: contentAndMetadata.content, metadata: contentAndMetadata.metadata)
+                listOfMinutes << new MarkdownMinutes(filename: file.name, content: contentAndMetadata.content, metadata: contentAndMetadata.metadata)
             }
         }
-        listOfPosts
+        listOfMinutes
     }
 
 

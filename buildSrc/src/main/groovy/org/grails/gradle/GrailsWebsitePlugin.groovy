@@ -90,6 +90,7 @@ class GrailsWebsitePlugin implements Plugin<Project> {
                 task.setProperty("robots", siteExtension.robots)
                 task.setProperty("document", siteExtension.template)
                 task.setProperty("output", siteExtension.output)
+                task.setProperty("assets", siteExtension.assets)
                 task.setProperty("minutes", siteExtension.minutes)
                 task.setProperty("releases", siteExtension.releases)
             }
@@ -161,6 +162,7 @@ class GrailsWebsitePlugin implements Plugin<Project> {
             task.dependsOn(TASK_GEN_PROFILES)
             task.dependsOn(TASK_GEN_FAQ)
             task.finalizedBy(TASK_RENDER_BLOG)
+            task.finalizedBy(TASK_RENDER_MINUTES)
             task.finalizedBy(TASK_GEN_SITEMAP)
             task.setDescription('Build Micronaut website - generates pages with HTML entries in pages and build/temp, renders blog and RSS feed, copies assets and generates a sitemap')
 

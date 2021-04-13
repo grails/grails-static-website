@@ -27,14 +27,12 @@ import org.gradle.api.tasks.InputDirectory
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 
-import javax.annotation.Nonnull
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.ZonedDateTime
-import java.util.stream.Collectors
 
 @CompileStatic
 class MinutesTask extends DefaultTask {
@@ -43,7 +41,7 @@ class MinutesTask extends DefaultTask {
     static final SimpleDateFormat MMMM_D_YYYY = new SimpleDateFormat("MMMM d, yyyy")
     public static final String RSS_FILE = 'rss.xml'
     final static String SPAN_CLOSE = "</span>"
-    public static final String MINUTES = 'minutes'
+    public static final String MINUTES = 'foundation/minutes'
     public static final String INDEX = 'index.html'
 
     public static final int MAX_TITLE_LENGTH = 45
@@ -83,7 +81,7 @@ class MinutesTask extends DefaultTask {
     final Property<File> releases = project.objects.property(File)
 
     @TaskAction
-    void renderBlog() {
+    void renderMinutes() {
         File template = document.get()
         final String templateText = template.text
         File o = dist()
@@ -109,7 +107,7 @@ class MinutesTask extends DefaultTask {
         }
         List<HtmlMinutes> htmlPosts = processMinutes(m, listOfPosts)
         File blog = new File(o.absolutePath + '/' + MINUTES)
-        blog.mkdir()
+        blog.mkdirs()
         renderPosts(m, htmlPosts, blog, templateText)
     }
 
@@ -176,7 +174,7 @@ class MinutesTask extends DefaultTask {
         mb.div(class: 'headerbar chalicesbg') {
             div(class: 'content') {
                 h1 {
-                    a(href: '[%url]/blog/index.html', 'Grails Blog')
+                    a(href: '[%url]/foundation/minutes/index.html', 'Foundation')
                 }
             }
         }
@@ -217,11 +215,11 @@ class MinutesTask extends DefaultTask {
                             List<HtmlMinutes> listOfPosts,
                             File outputDir,
                             final String templateText) {
-        List<String> postCards = []
+        List<String> minuteCards = []
         List<RssItem> rssItems = []
 
         for (HtmlMinutes htmlMinutes : listOfPosts) {
-            postCards << minutesCard(htmlMinutes)
+            minuteCards << minutesCard(htmlMinutes)
             String html = renderMinutesHtml(htmlMinutes, templateText, listOfPosts)
             File pageOutput = new File(outputDir.absolutePath + "/" + htmlMinutes.path)
             pageOutput.createNewFile()
@@ -234,7 +232,7 @@ class MinutesTask extends DefaultTask {
                     htmlMinutes.path.replace(".html", ""),
                     htmlMinutes.html))
         }
-        renderArchive(new File(outputDir.absolutePath + "/index.html"), postCards, globalMetadata, templateText)
+        renderArchive(new File(outputDir.absolutePath + "/index.html"), minuteCards, globalMetadata, templateText)
         renderRss(globalMetadata, rssItems, new File(outputDir.absolutePath + "/../" + RSS_FILE))
     }
 
@@ -300,15 +298,15 @@ class MinutesTask extends DefaultTask {
 
     @CompileDynamic
     private static void renderArchive(File f,
-                                      List<String> postCards,
+                                      List<String> minuteCards,
                                       Map<String, String> sitemeta,
                                       String templateText) {
 
         List<String> cards = []
-        cards.addAll(postCards)
+        cards.addAll(minuteCards)
         Map<String, String> resolvedMetadata = RenderSiteTask.processMetadata(sitemeta)
         String html = cardsHtml(cards, resolvedMetadata)
-        resolvedMetadata['title'] = 'Blog | Grails Framework'
+        resolvedMetadata['title'] = 'Foundation | Grails Framework'
         html = RenderSiteTask.renderHtmlWithTemplateContent(html, resolvedMetadata, templateText)
 
         html = RenderSiteTask.highlightMenu(html, resolvedMetadata, "/" + MINUTES + "/" + INDEX)
@@ -337,7 +335,7 @@ class MinutesTask extends DefaultTask {
                     mkp.yieldUnescaped(title)
                 } else {
                     h1 {
-                        a(href: '[%url]/blog/index.html', 'Grails Blog')
+                        a(href: '[%url]/foundation/minutes/index.html', 'Foundation')
                     }
                 }
             }

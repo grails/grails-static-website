@@ -9,6 +9,7 @@ grails {
     releases = file("conf/releases.yml")
     questions = file("conf/questions.yml")
     posts = file("posts")
+    minutes = file("minutes")
     pages = file("pages")
     template = file("templates/document.html")
     output = project.buildDir

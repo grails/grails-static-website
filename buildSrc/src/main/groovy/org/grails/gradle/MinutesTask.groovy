@@ -163,7 +163,12 @@ class MinutesTask extends DefaultTask {
 
     @CompileDynamic
     static String renderMinutesHtml(HtmlMinutes htmlMinutes,
-                                    String templateText) {
+                                    String templateText,
+                                    List<HtmlMinutes> minutes) {
+
+        def groupedMinutes = minutes.groupBy {
+            parseDate(it.metadata.date)[Calendar.YEAR]
+        }
 
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
@@ -186,13 +191,20 @@ class MinutesTask extends DefaultTask {
 
                 mb.div(class: 'meeting-archive-list') {
                     h2 { mkp.yield("Meeting Minutes Archive") }
-                    mkp.yieldUnescaped("""
-                        <h3>2021</h3>
-                        <ul>
-                        <li><a href="/foundation/minutes/20210321-tab.html">Mar 21 - Technology Advisory Board</a></li>
-                        </ul>
-                        </div>
-                    """)
+
+                    mb.div {
+                        groupedMinutes.each { year, yearMinutes ->
+                            mb.h3 { mkp.yield(year) }
+                            mb.ul {
+                                yearMinutes.each { m ->
+                                    mb.li {
+                                        a(href: minutesLink(m), "${parseDate(m.metadata.date).format("MMM dd")} - ${m.metadata.title}")
+                                    }
+                                    //<li><a href="/foundation/minutes/20210321-tab.html">Mar 21 - Technology Advisory Board</a></li>
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -238,7 +250,7 @@ class MinutesTask extends DefaultTask {
 
         for (HtmlMinutes htmlMinutes : listOfMinutes) {
             minuteCards << minutesCard(htmlMinutes)
-            String html = renderMinutesHtml(htmlMinutes, templateText)
+            String html = renderMinutesHtml(htmlMinutes, templateText, listOfMinutes)
             File pageOutput = new File(outputDir.absolutePath + "/" + htmlMinutes.path)
             pageOutput.createNewFile()
             pageOutput.text = html

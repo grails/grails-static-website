@@ -39,8 +39,7 @@ class MinutesTask extends DefaultTask {
     static final SimpleDateFormat MMM_D_YYYY_HHMM = new SimpleDateFormat("MMM d, yyyy HH:mm")
     static final SimpleDateFormat MMM_D_YYYY = new SimpleDateFormat("MMM d, yyyy")
     static final SimpleDateFormat MMMM_D_YYYY = new SimpleDateFormat("MMMM d, yyyy")
-    public static final String RSS_FILE = 'rss.xml'
-    final static String SPAN_CLOSE = "</span>"
+    public static final String RSS_FILE = 'minutes.xml'
     public static final String IMAGES = 'images'
     public static final String MINUTES_BG = 'grails-blog-index-6.png'
     public static final String MINUTES = 'foundation/minutes'
@@ -364,7 +363,7 @@ class MinutesTask extends DefaultTask {
             }
         }
         mb.div(class: 'clear content container') {
-            h3 class: 'columnheader', style: 'margin-bottom: 0', 'Meeting Minutes Archive'
+            h3 class: 'columnheader', 'Meeting Minutes Archive'
             div(class: 'light') {
                 div(class: 'padded', style: 'padding-top: 0;') {
                     for (int i = 0; i < cards.size(); i++) {

@@ -190,17 +190,18 @@ class MinutesTask extends DefaultTask {
             mb.section(class: 'smallgoldenratio align-left foundation-boards') {
 
                 mb.div(class: 'meeting-archive-list') {
-                    h2 { mkp.yield("Meeting Minutes Archive") }
-
+                    mb.a(href: '[%url]/foundation/minutes/index.html', style: 'text-decoration: none', title: 'Meeting Minutes Archive') {
+                        mb.h2 { mkp.yield("Meeting Minutes Archive") }
+                    }
+                    mb.br()
                     mb.div {
                         groupedMinutes.each { year, yearMinutes ->
                             mb.h3 { mkp.yield(year) }
                             mb.ul {
                                 yearMinutes.each { m ->
                                     mb.li {
-                                        a(href: minutesLink(m), "${parseDate(m.metadata.date).format("MMM dd")} - ${m.metadata.title}")
+                                        mb.a(href: minutesLink(m), "${parseDate(m.metadata.date).format("MMM dd")} - ${m.metadata.title}")
                                     }
-                                    //<li><a href="/foundation/minutes/20210321-tab.html">Mar 21 - Technology Advisory Board</a></li>
                                 }
                             }
                         }
@@ -363,8 +364,7 @@ class MinutesTask extends DefaultTask {
             }
         }
         mb.div(class: 'clear content container') {
-            h3 class: 'columnheader', style: 'margin-bottom: 0', 'Meeting Minutes'
-            p('Archive of past meeting minutes of the Technology Advisory Board')
+            h3 class: 'columnheader', style: 'margin-bottom: 0', 'Meeting Minutes Archive'
             div(class: 'light') {
                 div(class: 'padded', style: 'padding-top: 0;') {
                     for (int i = 0; i < cards.size(); i++) {

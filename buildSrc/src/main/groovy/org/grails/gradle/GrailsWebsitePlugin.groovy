@@ -22,6 +22,7 @@ class GrailsWebsitePlugin implements Plugin<Project> {
     public static final String BUILD_GUIDES = "buildGuides"
     public static final String GROUP_GRAILS = 'grails'
     public static final String TASK_RENDER_BLOG = 'renderBlog'
+    public static final String TASK_RENDER_MINUTES = 'renderMinutes'
 
 
     @Override
@@ -77,6 +78,24 @@ class GrailsWebsitePlugin implements Plugin<Project> {
             }
             task.setGroup(GROUP_GRAILS)
             task.description = 'Renders Markdown posts (posts/*.md) into HTML pages (dist/blog/*.html). It generates tag pages. Generates RSS feed. Posts with future dates are not generated.'
+        })
+        project.tasks.register(TASK_RENDER_MINUTES, MinutesTask, { task ->
+            Object extension = project.getExtensions().findByName(EXTENSION_NAME)
+            if (extension instanceof SiteExtension) {
+                SiteExtension siteExtension = ((SiteExtension) extension)
+                task.setProperty("url", siteExtension.url)
+                task.setProperty("title", siteExtension.title)
+                task.setProperty("about", siteExtension.description)
+                task.setProperty("keywords", siteExtension.keywords)
+                task.setProperty("robots", siteExtension.robots)
+                task.setProperty("document", siteExtension.template)
+                task.setProperty("output", siteExtension.output)
+                task.setProperty("assets", siteExtension.assets)
+                task.setProperty("minutes", siteExtension.minutes)
+                task.setProperty("releases", siteExtension.releases)
+            }
+            task.setGroup(GROUP_GRAILS)
+            task.description = 'Renders Markdown minutes (minutes/*.md) into HTML pages (dist/foundation/minutes/*.html). It generates tag pages. Generates RSS feed. Minutes with future dates are not generated.'
         })
         project.tasks.register(TASK_GEN_FAQ, QuestionsTask, { task ->
             Object extension = project.getExtensions().findByName(EXTENSION_NAME)
@@ -143,6 +162,7 @@ class GrailsWebsitePlugin implements Plugin<Project> {
             task.dependsOn(TASK_GEN_PROFILES)
             task.dependsOn(TASK_GEN_FAQ)
             task.finalizedBy(TASK_RENDER_BLOG)
+            task.finalizedBy(TASK_RENDER_MINUTES)
             task.finalizedBy(TASK_GEN_SITEMAP)
             task.setDescription('Build Micronaut website - generates pages with HTML entries in pages and build/temp, renders blog and RSS feed, copies assets and generates a sitemap')
 

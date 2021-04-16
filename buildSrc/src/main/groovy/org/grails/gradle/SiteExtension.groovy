@@ -21,6 +21,8 @@ class SiteExtension {
 
     final Property<File> posts
 
+    final Property<File> minutes
+
     final Property<File> template
 
     final Property<File> assets
@@ -46,6 +48,7 @@ class SiteExtension {
         questions = objects.property(File)
         pages = objects.property(File)
         posts = objects.property(File)
+        minutes = objects.property(File)
         template = objects.property(File)
         output = objects.property(File)
         title = objects.property(String)

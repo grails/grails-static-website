@@ -541,3 +541,12 @@ body.foundation.minutes section.foundation-boards .meeting-archive-list h3 {
 body.foundation.minutes section.foundation-boards .meeting-archive-list ul {
     list-style-type: none;
 }
+
+body.foundation thead tr th:first-child,
+tbody tr td:first-child {
+  min-width: 130px;
+}
+
+body.foundation h3.columnheader {
+    margin-bottom: 0
+}

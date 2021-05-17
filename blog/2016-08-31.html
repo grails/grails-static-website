@@ -78,7 +78,7 @@
 dataSource.jmxExport = true
 dataSource.driverClassName = 'org.h2.Driver'
 </code></pre>
-<p>This article will not go into detail about YAML syntax. For that see <a href="https://www.yaml.org/">the main YAML site</a>. Instead, this article will focus on Grails 3 specific features related to accessing those configuration values.</p>
+<p>This article will not go into detail about YAML syntax. For that see <a href="https://yaml.org/">the main YAML site</a>. Instead, this article will focus on Grails 3 specific features related to accessing those configuration values.</p>
 <h2>The Config Property in GrailsApplication</h2>
 <p>The <a href="https://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html">GrailsApplication</a> interface defines the <a href="https://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html#getConfig()">getConfig</a> method which returns a <a href="https://docs.grails.org/3.1.10/api/grails/config/Config.html">Config</a> object. In the Spring application context is a bean named <code>grailsApplication</code> which is an instance of a class which implements the <code>GrailsApplication</code> interface. Retrieving the config object from this bean is one way to gain access to config values.</p>
 <pre><code class="language-yaml"># grails-app/conf/application.yml

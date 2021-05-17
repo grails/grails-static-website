@@ -78,7 +78,7 @@ grails.env=production
 info.app.grailsVersion=3.2.5
 </code></pre>
 <p>This info primarily comes from <code>build.gradle</code> and <code>gradle.properties</code> (the curious can check out the source code in <a href="https://github.com/grails/grails-core/blob/6c85ec239aa8cc4a9f646bb345c70c327ddb2dbc/grails-gradle-plugin/src/main/groovy/org/grails/gradle/plugin/core/GrailsGradlePlugin.groovy#L179">grails-core</a>). This file will be part of your final application when you build your <code>.jar</code> or <code>.war</code> file.</p>
-<p>In a <code>.gsp</code>, this information is available by using the meta tag like this: (see the <a href="http://docs.grails.org/latest/ref/Tags/meta.html">tag</a> documentation).</p>
+<p>In a <code>.gsp</code>, this information is available by using the meta tag like this: (see the <a href="https://gsp.grails.org/latest/guide/index.html#tags">tag</a> documentation).</p>
 <h2>Adding More Information to <code>grails.build.info</code></h2>
 <p>With the Gradle build system, it is possible to hook into the build process and execute our own code. In this case we want Gradle to complete writing <code>grails.build.info</code>, and then we want to add additional properties to the file.</p>
 <p>To accomplish this, add the following snippet to <code>build.gradle</code> in your project:</p>

@@ -80,7 +80,7 @@
 <h2>React 16</h2>
 <p>Both the <code>react</code> and <code>react-webpack</code> profiles have been upgraded to use React 16. In addition, the <code>react</code> profile is now using the latest (1.0.17, as of time of writing) release of <a href="https://github.com/facebookincubator/create-react-app"><code>create-react-app</code></a>.</p>
 <h2>Known Issues</h2>
-<p>Both of these profiles (as well as the <code>angular</code> profile) leverage the <a href="https://github.com/objectcomputing/grails-team-blog/blob/gh-pages/_posts/javascript">Gradle Node Plugin</a> to wrap the Node.js build tools when running via Grails or Gradle commands.</p>
+<p>Both of these profiles (as well as the <code>angular</code> profile) leverage the <a href="https://github.com/node-gradle/gradle-node-plugin">Gradle Node Plugin</a> to wrap the Node.js build tools when running via Grails or Gradle commands.</p>
 <p>Unfortunately, there are a couple of issues with the underlying Gradle task management with this plugin. In particular, the following two issues are known and being investigated:</p>
 <ol>
 <li>Node process sometimes fails to stop when run from Gradle. This is due to an issue in <a href="https://github.com/gradle/gradle/issues/1128">Gradle</a>. You may need to kill the process manually in order to restart the app.</li>

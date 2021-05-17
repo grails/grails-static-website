@@ -247,10 +247,10 @@
     }
 </code></pre>
 <p>This will ensure that babel uses the presets we’ve installed when transpiling our code.</p>
-<p>Of course, if we’re going to run our code through a transpiler, that means we need a build step to do the work. Typically in Grails applications, the asset pipeline plugin is the tool of choice for processing static assets like Javascript files. While there is a <a href="https://grails.org/plugin/babel-asset-pipeline">Babel plugin</a> for the Grails asset pipeline, we are going to take a different approach and use **webpack **for this purpose; this will give us more flexibility in processing our React code and is in keeping with typical React projects.</p>
+<p>Of course, if we’re going to run our code through a transpiler, that means we need a build step to do the work. Typically in Grails applications, the asset pipeline plugin is the tool of choice for processing static assets like Javascript files. While there is a <a href="https://plugins.grails.org/plugin/errbuddy/babel-asset-pipeline">Babel plugin</a> for the Grails asset pipeline, we are going to take a different approach and use **webpack **for this purpose; this will give us more flexibility in processing our React code and is in keeping with typical React projects.</p>
 <h2>Webpack</h2>
 <p><a href="https://webpack.github.io" title="Webpack on GitHub">Webpack</a> represents a family of tools called “bundlers” and is a very popular choice for building React applications. It’s also a powerful and complex tool, but we can get started with a fairly minimal configuration.</p>
-<p>Here’s the big picture: Webpack will be responsible for running our React code through “loaders” for processing, and then output the finished product as a “bundle”. There are <a href="https://webpack.github.io/docs/list-of-loaders.html">loaders for nearly every conceivable asset type</a> you may want to access in your React application, including LESS, SASS, markdown, images, urls, generic files, and even Java properties files (such as <code>i18n/messages.properties</code> files). In our case, the babel-loader all we need to configure right now. We will configure webpack to drop this bundle into the <code>grails-app/assets/javascripts</code> directory in our Grails application, so it can be served just like another Javascript file.</p>
+<p>Here’s the big picture: Webpack will be responsible for running our React code through “loaders” for processing, and then output the finished product as a “bundle”. There are <a href="https://webpack.js.org/loaders/">loaders for nearly every conceivable asset type</a> you may want to access in your React application, including LESS, SASS, markdown, images, urls, generic files, and even Java properties files (such as <code>i18n/messages.properties</code> files). In our case, the babel-loader all we need to configure right now. We will configure webpack to drop this bundle into the <code>grails-app/assets/javascripts</code> directory in our Grails application, so it can be served just like another Javascript file.</p>
 <p>Here's our <code>webpack.config.js</code> file:</p>
 <pre><code class="language-javascript">    var path = require('path');
 
@@ -277,7 +277,7 @@
         }
     };
 </code></pre>
-<p>Don't be intimidated by this configuration; it’s actually fairly simple. The syntax is plain Javascript, which can be a bit confusing for a Grails developer accustomed to a DSL for config. The key points are that we’re defining where to find our React source files (<code>src/main/js/index.js</code>), where to output them (<code>grails-app/assets/javascripts</code>), and how to process them via the babel loader. You can learn more about configuring webpack <a href="https://webpack.github.io/docs/">from the documentation</a>, but this should get you started.</p>
+<p>Don't be intimidated by this configuration; it’s actually fairly simple. The syntax is plain Javascript, which can be a bit confusing for a Grails developer accustomed to a DSL for config. The key points are that we’re defining where to find our React source files (<code>src/main/js/index.js</code>), where to output them (<code>grails-app/assets/javascripts</code>), and how to process them via the babel loader. You can learn more about configuring webpack <a href="https://webpack.js.org/concepts/">from the documentation</a>, but this should get you started.</p>
 <blockquote>
 <p>Where Is <code>/src/main/js</code>?</p>
 <p>Typically in a Grails application, Javascript files, like other static assets, live in the <code>grails-app/assets/</code> directory, which is where the asset pipeline picks them up. However, it is far more typical in a React application to keep the source files separate from the distributed bundle within a <code>src</code> directory, which makes sense, given that they contain “source code” for an application and are not really “assets” in the sense that Twitter Bootstrap or jQuery might be.</p>
@@ -517,7 +517,7 @@
 <li>React Documentation: <a href="https://github.com/ZacharyKlein/grails-react-starter">https://facebook.github.io/react/docs/getting-started.html</a></li>
 <li>React Test-Utils: <a href="https://facebook.github.io/react/docs/test-utils.html">https://facebook.github.io/react/docs/test-utils.html</a></li>
 <li>JSX Documentation: <a href="https://github.com/ZacharyKlein/grails-react-starter">https://facebook.github.io/react/docs/jsx-in-depth.html</a></li>
-<li>Webpack Documentation: <a href="https://webpack.github.io/docs/">https://webpack.github.io/docs/</a></li>
+<li>Webpack Documentation: <a href="https://webpack.js.org/concepts/">https://webpack.js.org/concepts/</a></li>
 </ul>
     <h2 class='space-above'>
       <span>You might also like ...</span>

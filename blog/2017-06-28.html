@@ -74,7 +74,7 @@
 <p>Your app will be served at <em>https://localhost:8443</em></p>
 <p>However, as stated in the documentation, the <em>https</em> flag is intended for development use only. In real-world applications, an SSL certificate from a <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate Authority</a>, would be used to verify your application's identity with clients. However, it is also possible to generate a self-signed certificate for testing purposes. A self-signed certificate doesn't provide the identity protection that a CA offers, but the steps involved in configuring a self-signed certificate with your Grails app will be largely the same with a CA certificate.</p>
 <h2>Generate Your Self-Signed SSL Certificate</h2>
-<p>You can generate a self-signed certificate using the <a href="https://www.openssl.org/"><code>openssl</code></a> command-line utility. This is installed by default on most Unix-based OS's, and can be installed on <a href="https://gnuwin32.sourceforge.net/packages/openssl.htm">Windows</a> as well.</p>
+<p>You can generate a self-signed certificate using the <a href="https://www.openssl.org/"><code>openssl</code></a> command-line utility. This is installed by default on most Unix-based OS's, and can be installed on <a href="https://sourceforge.net/projects/openssl-for-windows/">Windows</a> as well.</p>
 <p>We can use <code>openssl</code>'s <code>req</code> command to create a self-signed certificate:</p>
 <p><code>openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365</code></p>
 <p>We're using several command options:</p>
@@ -125,7 +125,7 @@
 <p>Now we can update our <code>application.yml</code> to use the JKS file instead of the PKCS#12 keystore.</p>
 <pre><code>server:
     port: 8443
-    ssl:              
+    ssl:
         enabled: true
         keyStore: /certificates/keystore.jks
         keyStorePassword: secret

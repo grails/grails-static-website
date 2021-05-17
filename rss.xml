@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 17 May 2021 17:27:52 GMT</pubDate><item><title>How to Publish a Grails Plugin to the Maven Central Repository</title><link>https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 17 May 2021 18:45:22 GMT</pubDate><item><title>How to Publish a Grails Plugin to the Maven Central Repository</title><link>https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/bintray.html"><span class="hashtag">#bintray</span></a> <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
 <p>Beginning May 1, 2021, you will <a href="https://grails.org/blog/2021-02-12-alerts-regarding-bintray-sunset.html">no longer be able to publish your Grails plugins/artifacts to JFrog Bintray</a>. We have already copied most of the Grails plugins from JFrog Bintray to the <a href="https://repo.grails.org">Grails Artifactory</a>, which allows us to resolve those artifacts. Going forward, we recommend that you start publishing artifacts to Maven Central.</p>
 <p>In this post, we outline how to publish Grails plugins to Maven Central. For detailed information, we also suggest checking <a href="https://central.sonatype.org/publish/publish-guide/">Sonatype OSSRH Guide</a>.</p>
@@ -733,7 +733,7 @@ class Team {
 </code></pre>]]></description><author>Nirav Assar</author><guid>2018-10-02</guid><pubDate>Tue, 02 Oct 2018 00:00:00 GMT</pubDate></item><item><title>Security Vulnerability in Asset-Pipeline and Jetty</title><link>https://grails.org/blog/2018-09-23.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
 <h2>Introduction</h2>
-<p><a href="https://grails.org/plugin/asset-pipeline">Asset-pipeline</a> has been the default plugin for handling static assets in a Grails<sup>®</sup> web application since Grails 2.4.0. A security vulnerability that involves asset-pipeline and Jetty has been identified.</p>
+<p><a href="https://plugins.grails.org/plugin/grails/asset-pipeline">Asset-pipeline</a> has been the default plugin for handling static assets in a Grails<sup>®</sup> web application since Grails 2.4.0. A security vulnerability that involves asset-pipeline and Jetty has been identified.</p>
 <h2>Affected Versions</h2>
 <p>The vulnerability affects all asset-pipeline users that deploy Grails applications in Jetty, and it allows directory traversal and download any file knowing its specific directory.</p>
 <h2>Reproducing The Issue</h2>
@@ -1613,7 +1613,7 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
 <h2>React 16</h2>
 <p>Both the <code>react</code> and <code>react-webpack</code> profiles have been upgraded to use React 16. In addition, the <code>react</code> profile is now using the latest (1.0.17, as of time of writing) release of <a href="https://github.com/facebookincubator/create-react-app"><code>create-react-app</code></a>.</p>
 <h2>Known Issues</h2>
-<p>Both of these profiles (as well as the <code>angular</code> profile) leverage the <a href="https://github.com/objectcomputing/grails-team-blog/blob/gh-pages/_posts/javascript">Gradle Node Plugin</a> to wrap the Node.js build tools when running via Grails or Gradle commands.</p>
+<p>Both of these profiles (as well as the <code>angular</code> profile) leverage the <a href="https://github.com/node-gradle/gradle-node-plugin">Gradle Node Plugin</a> to wrap the Node.js build tools when running via Grails or Gradle commands.</p>
 <p>Unfortunately, there are a couple of issues with the underlying Gradle task management with this plugin. In particular, the following two issues are known and being investigated:</p>
 <ol>
 <li>Node process sometimes fails to stop when run from Gradle. This is due to an issue in <a href="https://github.com/gradle/gradle/issues/1128">Gradle</a>. You may need to kill the process manually in order to restart the app.</li>
@@ -1674,7 +1674,7 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
 <p>Your app will be served at <em>https://localhost:8443</em></p>
 <p>However, as stated in the documentation, the <em>https</em> flag is intended for development use only. In real-world applications, an SSL certificate from a <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate Authority</a>, would be used to verify your application's identity with clients. However, it is also possible to generate a self-signed certificate for testing purposes. A self-signed certificate doesn't provide the identity protection that a CA offers, but the steps involved in configuring a self-signed certificate with your Grails app will be largely the same with a CA certificate.</p>
 <h2>Generate Your Self-Signed SSL Certificate</h2>
-<p>You can generate a self-signed certificate using the <a href="https://www.openssl.org/"><code>openssl</code></a> command-line utility. This is installed by default on most Unix-based OS's, and can be installed on <a href="https://gnuwin32.sourceforge.net/packages/openssl.htm">Windows</a> as well.</p>
+<p>You can generate a self-signed certificate using the <a href="https://www.openssl.org/"><code>openssl</code></a> command-line utility. This is installed by default on most Unix-based OS's, and can be installed on <a href="https://sourceforge.net/projects/openssl-for-windows/">Windows</a> as well.</p>
 <p>We can use <code>openssl</code>'s <code>req</code> command to create a self-signed certificate:</p>
 <p><code>openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365</code></p>
 <p>We're using several command options:</p>
@@ -1725,7 +1725,7 @@ manually cleanup in functional tests.</p>]]></description><author>Sergio Del Amo
 <p>Now we can update our <code>application.yml</code> to use the JKS file instead of the PKCS#12 keystore.</p>
 <pre><code>server:
     port: 8443
-    ssl:              
+    ssl:
         enabled: true
         keyStore: /certificates/keystore.jks
         keyStorePassword: secret
@@ -2022,7 +2022,7 @@ grails.env=production
 info.app.grailsVersion=3.2.5
 </code></pre>
 <p>This info primarily comes from <code>build.gradle</code> and <code>gradle.properties</code> (the curious can check out the source code in <a href="https://github.com/grails/grails-core/blob/6c85ec239aa8cc4a9f646bb345c70c327ddb2dbc/grails-gradle-plugin/src/main/groovy/org/grails/gradle/plugin/core/GrailsGradlePlugin.groovy#L179">grails-core</a>). This file will be part of your final application when you build your <code>.jar</code> or <code>.war</code> file.</p>
-<p>In a <code>.gsp</code>, this information is available by using the meta tag like this: (see the <a href="http://docs.grails.org/latest/ref/Tags/meta.html">tag</a> documentation).</p>
+<p>In a <code>.gsp</code>, this information is available by using the meta tag like this: (see the <a href="https://gsp.grails.org/latest/guide/index.html#tags">tag</a> documentation).</p>
 <h2>Adding More Information to <code>grails.build.info</code></h2>
 <p>With the Gradle build system, it is possible to hook into the build process and execute our own code. In this case we want Gradle to complete writing <code>grails.build.info</code>, and then we want to add additional properties to the file.</p>
 <p>To accomplish this, add the following snippet to <code>build.gradle</code> in your project:</p>
@@ -2258,7 +2258,7 @@ info.app.grailsVersion=3.2.5
 <p>We wrapped up with a great great “Groovy Puzzlers” Season 3 session with Baruch Sadorgursky and Guillaume Laforge, and finally another nice cocktail reception!</p>
 <p>The last day ended a bit slow, with breakfast and panel discussion, followed by a single slot of sessions.</p>
 <p>I gave my talk &quot;Getting Groovy with Google Glass and Android Wear&quot; - by this time it seems most people went home. However, those who came participated in a great discussion about Glass, Wear, modifying cars, and home automation, which I enjoyed.</p>
-<p>Venkat gave a Functional Programming talk, Ken a talk on functional testing with Geb, Søren a talk on <a href="https://grails.org/plugin/fields">the Fields plugin</a>, Michael Carducci with CI on Gradle/Jenkins, and Jeff held a Grails Upgrade Q&amp;A Session.</p>
+<p>Venkat gave a Functional Programming talk, Ken a talk on functional testing with Geb, Søren a talk on <a href="https://plugins.grails.org/plugin/grails/fields">the Fields plugin</a>, Michael Carducci with CI on Gradle/Jenkins, and Jeff held a Grails Upgrade Q&amp;A Session.</p>
 <p>We finished up the conference with lunch, which was a nice touch at the end I don’t normally see at conferences!</p>
 <p><img src="2016-12-14-img08.jpg" alt="The OCI Grails team enjoying post-conference feast" /></p>
 <p>Overall it was a great conference and would love to see even more attendance next year. I think the 90 minute format is great for a deeper dive into the tech instead of a overview at 60 minutes. The venue is great for nice weather and folks up north getting a break from the cold.</p>
@@ -2834,7 +2834,7 @@ cache:
 <p>Finally, thanks to all those who contributed feedback and issue reports to the release. We look forward to the continued participation of the Grails community as the framework continues to evolve.</p>]]></description><author>Graeme Rocher</author><guid>2016-09-28</guid><pubDate>Wed, 28 Sep 2016 00:00:00 GMT</pubDate></item><item><title>How to Migrate from Resources Plugin to Asset-Pipeline</title><link>https://grails.org/blog/2016-09-12.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/plugins.html"><span class="hashtag">#plugins</span></a></p>
 <h2>Introduction</h2>
-<p>Since Grails<sup>®</sup> 2.4.0, <a href="https://grails.org/plugin/asset-pipeline">asset-pipeline</a> has been the default plugin recommended to manage the static resources in a Grails application. In earlier versions of the Grails framework, the <a href="https://grails.org/plugin/resources">resources</a> plugin was an option, but with Grails 3, the only viable option is using asset-pipeline because resources is not available in Grails 3.</p>
+<p>Since Grails<sup>®</sup> 2.4.0, <a href="https://grails.org/plugin/asset-pipeline">asset-pipeline</a> has been the default plugin recommended to manage the static resources in a Grails application. In earlier versions of the Grails framework, the <a href="https://github.com/grails-plugins/grails-resources">resources</a> plugin was an option, but with Grails 3, the only viable option is using asset-pipeline because resources is not available in Grails 3.</p>
 <p>If you want to know how to migrate from resources to asset-pipeline, this post is for you.</p>
 <h2>Let's Migrate!</h2>
 <p>I recommend you start the migration analyzing your layouts because probably those files contain most of your static resources (javascripts and css files). Imagine that the content of your <code>main.gsp</code> layout is the following:</p>
@@ -2987,7 +2987,7 @@ cache:
 dataSource.jmxExport = true
 dataSource.driverClassName = 'org.h2.Driver'
 </code></pre>
-<p>This article will not go into detail about YAML syntax. For that see <a href="https://www.yaml.org/">the main YAML site</a>. Instead, this article will focus on Grails 3 specific features related to accessing those configuration values.</p>
+<p>This article will not go into detail about YAML syntax. For that see <a href="https://yaml.org/">the main YAML site</a>. Instead, this article will focus on Grails 3 specific features related to accessing those configuration values.</p>
 <h2>The Config Property in GrailsApplication</h2>
 <p>The <a href="https://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html">GrailsApplication</a> interface defines the <a href="https://docs.grails.org/3.1.10/api/grails/core/GrailsApplication.html#getConfig()">getConfig</a> method which returns a <a href="https://docs.grails.org/3.1.10/api/grails/config/Config.html">Config</a> object. In the Spring application context is a bean named <code>grailsApplication</code> which is an instance of a class which implements the <code>GrailsApplication</code> interface. Retrieving the config object from this bean is one way to gain access to config values.</p>
 <pre><code class="language-yaml"># grails-app/conf/application.yml
@@ -3820,7 +3820,7 @@ class SkillsTestController {
 <p>Today, and just in time for <a href="https://gr8conf.eu/">GR8Conf EU</a> in Copenhagen, we are pleased to announce the <a href="https://github.com/grails/grails-core/releases/tag/v3.2.0.M1">first milestone of Grails<sup>®</sup> 3.2</a>, which includes the following new features.</p>
 <h2>RxGORM</h2>
 <p>Grails 3.2 milestone 1 ships with GORM 6.0 milestone 1, which includes a new implementation of GORM based on RxJava called RxGORM. With RxGORM you can build non-blocking, reactive applications using a familiar GORM API including features such as Where Queries, Dynamic Finders and Criteria Queries.</p>
-<p>With the initial release, support for MongoDB is included, but more implementations are planned for SQL, REST client, and other implementations. See the <a href="https://gorm.grails.org/rx/latest/">RxGORM Documentation</a> for more information.</p>
+<p>With the initial release, support for MongoDB is included, but more implementations are planned for SQL, REST client, and other implementations. See the <a href="https://gorm.grails.org/latest/rx/manual/index.html">RxGORM Documentation</a> for more information.</p>
 <h2>Angular Scaffolding</h2>
 <p>Grails 3.2 features support for scaffolding of AngularJS 1.x applications (support for Angular 2 is also planned) when using the <code>angular</code> profile, allowing your team to quickly get up and running integrating Angular frontends with Grails 3 backends.</p>
 <h2>Improvements to JSON Views</h2>
@@ -4021,10 +4021,10 @@ class SkillsTestController {
     }
 </code></pre>
 <p>This will ensure that babel uses the presets we’ve installed when transpiling our code.</p>
-<p>Of course, if we’re going to run our code through a transpiler, that means we need a build step to do the work. Typically in Grails applications, the asset pipeline plugin is the tool of choice for processing static assets like Javascript files. While there is a <a href="https://grails.org/plugin/babel-asset-pipeline">Babel plugin</a> for the Grails asset pipeline, we are going to take a different approach and use **webpack **for this purpose; this will give us more flexibility in processing our React code and is in keeping with typical React projects.</p>
+<p>Of course, if we’re going to run our code through a transpiler, that means we need a build step to do the work. Typically in Grails applications, the asset pipeline plugin is the tool of choice for processing static assets like Javascript files. While there is a <a href="https://plugins.grails.org/plugin/errbuddy/babel-asset-pipeline">Babel plugin</a> for the Grails asset pipeline, we are going to take a different approach and use **webpack **for this purpose; this will give us more flexibility in processing our React code and is in keeping with typical React projects.</p>
 <h2>Webpack</h2>
 <p><a href="https://webpack.github.io" title="Webpack on GitHub">Webpack</a> represents a family of tools called “bundlers” and is a very popular choice for building React applications. It’s also a powerful and complex tool, but we can get started with a fairly minimal configuration.</p>
-<p>Here’s the big picture: Webpack will be responsible for running our React code through “loaders” for processing, and then output the finished product as a “bundle”. There are <a href="https://webpack.github.io/docs/list-of-loaders.html">loaders for nearly every conceivable asset type</a> you may want to access in your React application, including LESS, SASS, markdown, images, urls, generic files, and even Java properties files (such as <code>i18n/messages.properties</code> files). In our case, the babel-loader all we need to configure right now. We will configure webpack to drop this bundle into the <code>grails-app/assets/javascripts</code> directory in our Grails application, so it can be served just like another Javascript file.</p>
+<p>Here’s the big picture: Webpack will be responsible for running our React code through “loaders” for processing, and then output the finished product as a “bundle”. There are <a href="https://webpack.js.org/loaders/">loaders for nearly every conceivable asset type</a> you may want to access in your React application, including LESS, SASS, markdown, images, urls, generic files, and even Java properties files (such as <code>i18n/messages.properties</code> files). In our case, the babel-loader all we need to configure right now. We will configure webpack to drop this bundle into the <code>grails-app/assets/javascripts</code> directory in our Grails application, so it can be served just like another Javascript file.</p>
 <p>Here's our <code>webpack.config.js</code> file:</p>
 <pre><code class="language-javascript">    var path = require('path');
 
@@ -4051,7 +4051,7 @@ class SkillsTestController {
         }
     };
 </code></pre>
-<p>Don't be intimidated by this configuration; it’s actually fairly simple. The syntax is plain Javascript, which can be a bit confusing for a Grails developer accustomed to a DSL for config. The key points are that we’re defining where to find our React source files (<code>src/main/js/index.js</code>), where to output them (<code>grails-app/assets/javascripts</code>), and how to process them via the babel loader. You can learn more about configuring webpack <a href="https://webpack.github.io/docs/">from the documentation</a>, but this should get you started.</p>
+<p>Don't be intimidated by this configuration; it’s actually fairly simple. The syntax is plain Javascript, which can be a bit confusing for a Grails developer accustomed to a DSL for config. The key points are that we’re defining where to find our React source files (<code>src/main/js/index.js</code>), where to output them (<code>grails-app/assets/javascripts</code>), and how to process them via the babel loader. You can learn more about configuring webpack <a href="https://webpack.js.org/concepts/">from the documentation</a>, but this should get you started.</p>
 <blockquote>
 <p>Where Is <code>/src/main/js</code>?</p>
 <p>Typically in a Grails application, Javascript files, like other static assets, live in the <code>grails-app/assets/</code> directory, which is where the asset pipeline picks them up. However, it is far more typical in a React application to keep the source files separate from the distributed bundle within a <code>src</code> directory, which makes sense, given that they contain “source code” for an application and are not really “assets” in the sense that Twitter Bootstrap or jQuery might be.</p>
@@ -4291,7 +4291,7 @@ class SkillsTestController {
 <li>React Documentation: <a href="https://github.com/ZacharyKlein/grails-react-starter">https://facebook.github.io/react/docs/getting-started.html</a></li>
 <li>React Test-Utils: <a href="https://facebook.github.io/react/docs/test-utils.html">https://facebook.github.io/react/docs/test-utils.html</a></li>
 <li>JSX Documentation: <a href="https://github.com/ZacharyKlein/grails-react-starter">https://facebook.github.io/react/docs/jsx-in-depth.html</a></li>
-<li>Webpack Documentation: <a href="https://webpack.github.io/docs/">https://webpack.github.io/docs/</a></li>
+<li>Webpack Documentation: <a href="https://webpack.js.org/concepts/">https://webpack.js.org/concepts/</a></li>
 </ul>]]></description><author>Zachary Klein</author><guid>2016-05-28</guid><pubDate>Sat, 28 May 2016 00:00:00 GMT</pubDate></item><item><title>Deploying Grails® 3.1 Applications to JBoss 6.4 EAP</title><link>https://grails.org/blog/2016-05-26.html</link><description><![CDATA[</p>
 <p>We had <a href="https://grails.io/post/142674392718/deploying-grails-3-to-wildfly-10">previously</a> described how to deploy Grails<sup>®</sup> 3.1 applications to WildFly 10, which is where all of the &quot;cutting edge&quot; work happens in the JBoss world.</p>
 <p>The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely similar, with some minor configuration differences.</p>

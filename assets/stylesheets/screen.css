@@ -256,9 +256,7 @@ li {
 	max-width: 1141px;
 }
 
-.mainheader .content {
-	width: auto;
-}
+
 
 .listingblock .content {
 	width: auto;
@@ -934,7 +932,9 @@ footer li {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
+	max-width: 8rem;
 }
+
 body.home .grailslogo {
 	display: block;
 }

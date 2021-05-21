@@ -18,7 +18,7 @@ Tags: #webinar #townhall
 
 A big thanks to everyone who joined us for our Q2 2GM Town Hall Meeting! For those of you who missed the live event, the recording is embedded below.
 
-At this quarter's meeting, we shared updates regarding the Grails and Micronaut roadmaps, discussed changes to the Micronaut Guides, talked about how to become a sponsor of the Grails and Micronaut Foundations, and encouraged qualified community members to apply to join the 2GM engineering team! You can find all of Object Computing's open positions here.
+At this quarter's meeting, we shared updates regarding the Grails and Micronaut roadmaps, discussed changes to the Micronaut Guides, talked about how to become a sponsor of the Grails and Micronaut Foundations, and encouraged qualified community members to apply to join the 2GM engineering team! You can find all of Object Computing's open positions [here](https://jobs.lever.co/oci).
 
 Also, special thanks to our fantastic panel of experts: Jeff Scott Brown, David Estes, Iván López, and Graeme Rocher.
 

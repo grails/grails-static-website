@@ -962,6 +962,10 @@ article.quote h2 {
 	padding: 10px;
 	width: 90%;
 	max-width: 270px;
+	min-height: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	-webkit-box-shadow: 1px 4px 4px #ccc;
 	-moz-box-shadow: 1px 4px 4px #ccc;
 	box-shadow: 1px 4px 4px #ccc;
@@ -972,9 +976,17 @@ article.quote h2 {
 .calltoaction {
 	text-align: center;
 	overflow: auto;
-	margin-top: 30px;
-	margin-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 }
+
+
+.calltoaction.position-reset {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+
 .calltoaction h2 a {
 	font-size: 16px;
 }
@@ -999,6 +1011,14 @@ article.quote h2 {
 .calltoaction h2 span.version,
 .calltoaction b {
 	display: block;
+}
+
+.get-started-row {
+	width: 100%;
+	position: relative;
+	display: block;
+	justify-content: center;
+	padding-bottom: 2em;
 }
 
 .testimonials {
@@ -1038,6 +1058,10 @@ article.quote h2 {
 
 	.calltoaction h2 a {
 		font-size: 20px;
+	}
+	.get-started-row {
+		display: flex;
+		top: -2em; /* This is super ugly, but the .calltoaction h2 has margins on it which we need to compensate for */
 	}
 
 	.mainheader {
@@ -1248,7 +1272,7 @@ article.quote h2 {
 	.calltoaction {
 		width: 42.1875%; /* 270px / 640px */
 		float: left;
-		margin: 3.90625% 3.90625% 50px 3.90625%; /* 25px / 640px */
+		padding: 3.90625% 3.90625% 50px 3.90625%; /* 25px / 640px */
 		overflow: auto;
 	}
 	.ocihometograils span { text-align: left; }

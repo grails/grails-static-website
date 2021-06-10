@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Deploying Grails® 3.1 Applications to JBoss 6.4 EAP</title>
+    <title>Updated Grails Wrapper for Grails 3 and 4 projects</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn necessary configuration differences to deploy Grails 3.1 applications to JBoss 6.4 EAP" />
-    <meta name="date" content="May 26, 2016" />
+    <meta name="description" content="Instructions to update grails-wrapper.jar for recent updates to Grails Framework Repository" />
+    <meta name="date" content="June 10, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn necessary configuration differences to deploy Grails 3.1 applications to JBoss 6.4 EAP'/>
+    <meta name='twitter:description' content='Instructions to update grails-wrapper.jar for recent updates to Grails Framework Repository'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Deploying Grails® 3.1 Applications to JBoss 6.4 EAP'/>
-    <meta property='og:description' content='Learn necessary configuration differences to deploy Grails 3.1 applications to JBoss 6.4 EAP'/>
+    <meta property='og:title' content='Updated Grails Wrapper for Grails 3 and 4 projects'/>
+    <meta property='og:description' content='Instructions to update grails-wrapper.jar for recent updates to Grails Framework Repository'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -26,8 +26,8 @@
     <link rel='stylesheet' href='https://grails.org/stylesheets/screen.css' />
     <script src='https://grails.org/javascripts/navigation.js'></script>
     
-    <link rel='stylesheet' href='https://grails.org/stylesheets/prism.css'/>
-    <script src='https://grails.org/javascripts/prism.js'></script>
+    
+    
 </head>
 <body><header class='mainheader'>
     <div class='content'>
@@ -60,44 +60,37 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Deploying Grails® 3.1 Applications to JBoss 6.4 EAP</h1>
-<p><span class="author">By Graeme Rocher</span></p>
-<p><span class="date">May 26, 2016</span></p>
-<p>We had <a href="https://grails.io/post/142674392718/deploying-grails-3-to-wildfly-10">previously</a> described how to deploy Grails<sup>®</sup> 3.1 applications to WildFly 10, which is where all of the &quot;cutting edge&quot; work happens in the JBoss world.</p>
-<p>The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely similar, with some minor configuration differences.</p>
-<p>Firstly, you have to configure your dependencies in <code>build.gradle</code> correctly by marking Tomcat as a provided dependency and including JAXB as a runtime dependency:</p>
-<pre><code class="language-groovy">provided &quot;org.springframework.boot:spring-boot-starter-tomcat&quot;    
-runtime 'javax.xml.bind:jaxb-api:2.2.12'
+  <div class='light padded blogpost'><h1>Updated Grails Wrapper for Grails 3 and 4 projects</h1>
+<p><span class="author">By Jason Schindler</span></p>
+<p><span class="date">June 10, 2021</span></p>
+<p>Recently, the Grails Framework Artifactory instance was updated and as a result all HTTP requests to the repository are being redirected over HTTPS.  That is a good thing, but unfortunately it caused <a href="https://github.com/grails/grails-wrapper/issues/7">an issue</a> as our <code>grails-wrapper.jar</code> was hardcoded to download from HTTP and was not able to follow redirects.</p>
+<p>We are preparing a patch release of Grails 4 and Grails 3 to make new applications work with the change, but for existing Grails 3 and Grails 4 applications the <code>grailsw</code> command will fail if the necessary assets haven't already been cached on the machine.</p>
+<p>The error received is:</p>
+<pre><code>You must be connected to the internet the first time you use the Grails wrapper
+org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 3; The element type &quot;hr&quot; must be terminated by the matching end-tag &quot;&lt;/hr&gt;&quot;.
+
 </code></pre>
-<p>Next you need to create a <code>src/main/webapp/WEB-INF/jboss-deployment-structure.xml</code> file with the following contents:</p>
-<pre><code class="language-xml">&lt;?xml version='1.0' encoding='UTF-8'?&gt;
-&lt;jboss-deployment-structure xmlns=&quot;urn:jboss:deployment-structure:1.1&quot;&gt;
-    &lt;deployment&gt;
-        &lt;exclusions&gt;
-          &lt;module name=&quot;javaee.api&quot;&gt;&lt;/module&gt;
-          &lt;module name=&quot;javax.validation.api&quot;&gt;&lt;/module&gt;
-          &lt;module name=&quot;javax.faces.api&quot;&gt;&lt;/module&gt;
-          &lt;module name=&quot;org.hibernate.validator&quot;&gt;&lt;/module&gt;
-        &lt;/exclusions&gt;
-    &lt;/deployment&gt;
-&lt;/jboss-deployment-structure&gt;
-</code></pre>
-<p>This will prevent JBoss from loading any APIs that conflict. For example Grails ships with <code>javax.validation</code> version 1.1 but JBoss 6.4 comes prepackages with version 1.0, so without this configuration you would end up with an exception such as:</p>
-<pre><code class="language-plaintext">Caused by: java.lang.NoSuchMethodError: javax.validation.spi.ConfigurationState.getParameterNameProvider()Ljavax/validation/ParameterNameProvider;
-    at org.hibernate.validator.internal.engine.ValidatorFactoryImpl.&lt;init&gt;(ValidatorFactoryImpl.java:119)
-    at org.hibernate.validator.HibernateValidator.buildValidatorFactory(HibernateValidator.java:45)
-</code></pre>
-<p>With these two changes in place you can run <code>gradle assemble</code> to produce a WAR file that can be deployed to JBoss 6.4 EAP!</p>
+<h2>Updating Existing Projects</h2>
+<p>To fix this, replace the <code>grails-wrapper.jar</code> file in the base of your existing project with one of the updated wrappers below:</p>
+<ul>
+<li><a href="/files/wrapper-issue7/grails3/grails-wrapper.jar">Updated grails-wrapper.jar for Grails 3 Projects</a> <a href="/files/wrapper-issue7/grails3/grails-wrapper.jar.md5">(MD5)</a></li>
+<li><a href="/files/wrapper-issue7/grails4/grails-wrapper.jar">Updated grails-wrapper.jar for Grails 4 Projects</a> <a href="/files/wrapper-issue7/grails4/grails-wrapper.jar.md5">(MD5)</a></li>
+</ul>
+<p>Running the <code>grailsw</code> command from within the project should now work as expected.</p>
+<h2>Changing Repository URL</h2>
+<p>In addition to removing the hard-coded HTTP URL, we have also added the ability to change the base URL that the wrapper uses.</p>
+<p>There are two possible mechanisms for doing this:</p>
+<ul>
+<li>Setting an environment variable named <code>GRAILS_CORE_ARTIFACTORY_BASE_URL</code></li>
+<li>Setting the <code>grails.core.artifactory.baseUrl</code> system property</li>
+</ul>
+<p>The default value is <code>https://repo.grails.org/grails/core</code> and we do not expect that to change.</p>
+<h2>Wrapping Up</h2>
+<p>We apologize for any inconvenience you may have experienced by this recent change.  We will be posting a more detailed post-mortem on these events in the next few days.  Please continue to report <a href="https://github.com/grails/grails-core/issues">any issues</a> you encounter.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
-  <a href='https://grails.org/blog/2021-06-10-grails-wrapper-update.html'>
-    <h3>June 10, 2021</h3>
-    <h2>Updated Grails Wrapper for Grails 3 and 4 pro...</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
   <a href='https://grails.org/blog/2021-05-21-2gm-town-hall-q2.html'>
     <h3>May 21, 2021</h3>
@@ -108,6 +101,12 @@ runtime 'javax.xml.bind:jaxb-api:2.2.12'
   <a href='https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html'>
     <h3>April 7, 2021</h3>
     <h2>How to Publish a Grails Plugin to the Maven C...</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-6.png)'>
+  <a href='https://grails.org/blog/2021-03-22-meet-the-new-mascot.html'>
+    <h3>March 22, 2021</h3>
+    <h2>Meet the Grails® Framework's New Mascot, Sir ...</h2>
   </a>
 </article></div>
     </div>

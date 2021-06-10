@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Thu, 10 Jun 2021 22:22:44 GMT</pubDate><item><title>2GM Town Hall Meeting: 2021 Q2</title><link>https://grails.org/blog/2021-05-21-2gm-town-hall-q2.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Thu, 10 Jun 2021 23:06:49 GMT</pubDate><item><title>Updated Grails Wrapper for Grails 3 and 4 projects</title><link>https://grails.org/blog/2021-06-10-grails-wrapper-update.html</link><description><![CDATA[</p>
+<p>Recently, the Grails Framework Artifactory instance was updated and as a result all HTTP requests to the repository are being redirected over HTTPS.  That is a good thing, but unfortunately it caused <a href="https://github.com/grails/grails-wrapper/issues/7">an issue</a> as our <code>grails-wrapper.jar</code> was hardcoded to download from HTTP and was not able to follow redirects.</p>
+<p>We are preparing a patch release of Grails 4 and Grails 3 to make new applications work with the change, but for existing Grails 3 and Grails 4 applications the <code>grailsw</code> command will fail if the necessary assets haven't already been cached on the machine.</p>
+<p>The error received is:</p>
+<pre><code>You must be connected to the internet the first time you use the Grails wrapper
+org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 3; The element type &quot;hr&quot; must be terminated by the matching end-tag &quot;&lt;/hr&gt;&quot;.
+
+</code></pre>
+<h2>Updating Existing Projects</h2>
+<p>To fix this, replace the <code>grails-wrapper.jar</code> file in the base of your existing project with one of the updated wrappers below:</p>
+<ul>
+<li><a href="/files/wrapper-issue7/grails3/grails-wrapper.jar">Updated grails-wrapper.jar for Grails 3 Projects</a> <a href="/files/wrapper-issue7/grails3/grails-wrapper.jar.md5">(MD5)</a></li>
+<li><a href="/files/wrapper-issue7/grails4/grails-wrapper.jar">Updated grails-wrapper.jar for Grails 4 Projects</a> <a href="/files/wrapper-issue7/grails4/grails-wrapper.jar.md5">(MD5)</a></li>
+</ul>
+<p>Running the <code>grailsw</code> command from within the project should now work as expected.</p>
+<h2>Changing Repository URL</h2>
+<p>In addition to removing the hard-coded HTTP URL, we have also added the ability to change the base URL that the wrapper uses.</p>
+<p>There are two possible mechanisms for doing this:</p>
+<ul>
+<li>Setting an environment variable named <code>GRAILS_CORE_ARTIFACTORY_BASE_URL</code></li>
+<li>Setting the <code>grails.core.artifactory.baseUrl</code> system property</li>
+</ul>
+<p>The default value is <code>https://repo.grails.org/grails/core</code> and we do not expect that to change.</p>
+<h2>Wrapping Up</h2>
+<p>We apologize for any inconvenience you may have experienced by this recent change.  We will be posting a more detailed post-mortem on these events in the next few days.  Please continue to report <a href="https://github.com/grails/grails-core/issues">any issues</a> you encounter.</p>]]></description><author>Jason Schindler</author><guid>2021-06-10-grails-wrapper-update</guid><pubDate>Thu, 10 Jun 2021 00:00:00 GMT</pubDate></item><item><title>2GM Town Hall Meeting: 2021 Q2</title><link>https://grails.org/blog/2021-05-21-2gm-town-hall-q2.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/webinar.html"><span class="hashtag">#webinar</span></a> <a href="https://grails.org/blog/tag/townhall.html"><span class="hashtag">#townhall</span></a></p>
 <p>A big thanks to everyone who joined us for our Q2 2GM Town Hall Meeting! For those of you who missed the live event, the recording is embedded below.</p>
 <p>At this quarter's meeting, we shared updates regarding the Grails and Micronaut roadmaps, discussed changes to the Micronaut Guides, talked about how to become a sponsor of the Grails and Micronaut Foundations, and encouraged qualified community members to apply to join the 2GM engineering team! You can find all of Object Computing's open positions <a href="https://jobs.lever.co/oci">here</a>.</p>

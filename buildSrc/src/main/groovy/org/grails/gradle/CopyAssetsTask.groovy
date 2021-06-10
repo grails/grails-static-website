@@ -16,6 +16,7 @@ class CopyAssetsTask extends DefaultTask {
     static final String[] JAVASCRIPT_EXTENSIONS = ["*.js"] as String[]
     static final String[] CSS_EXTENSIONS = ["*.css"] as String[]
     static final String[] IMAGE_EXTENSIONS = ["*.ico", "*.png", "*.svg", "*.jpg", "*.jpeg", "*.gif"]
+    static final String[] FILE_EXTENSIONS = ["*.jar", "*.md5"]
 
     @InputDirectory
     final Property<File> assets = project.objects.property(File)
@@ -29,6 +30,7 @@ class CopyAssetsTask extends DefaultTask {
         copyCss()
         copyJavascripts()
         copyFonts()
+        copyFiles()
     }
 
     File dist() {
@@ -93,6 +95,20 @@ class CopyAssetsTask extends DefaultTask {
                 copySpec.from(javascripts)
                 copySpec.into(outputJavascripts)
                 copySpec.include(JAVASCRIPT_EXTENSIONS)
+            }
+        })
+    }
+
+    void copyFiles() {
+        File outputFiles = new File(dist().absolutePath + '/files')
+        outputFiles.mkdir()
+        File files = new File(assets.get().absolutePath + '/files')
+        project.copy(new Action<CopySpec>() {
+            @Override
+            void execute(CopySpec copySpec) {
+                copySpec.from(files)
+                copySpec.into(outputFiles)
+                copySpec.include(recursiveIncludes(FILE_EXTENSIONS))
             }
         })
     }

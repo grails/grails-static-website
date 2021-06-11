@@ -12,9 +12,7 @@ image: grails-blog-index-1.png
 
 [%date]
 
-Recently, the Grails Framework Artifactory instance was updated. As a result, the Grails wrapper now fails under certain conditions because the URL it uses to retrieve information is no longer supported. 
-
-All HTTP requests to the repository are now being redirected over HTTPS, which is a good thing, but unfortunately it caused [an issue](https://github.com/grails/grails-wrapper/issues/7) because our `grails-wrapper.jar` was hardcoded to download from HTTP and was not able to follow redirects.
+Recently, the Grails Framework Artifactory instance was updated. As a result, the Grails wrapper now fails under certain conditions because the URL it uses to retrieve information is no longer supported.
 
 We are preparing a patch release of Grails framework 4 and Grails framework 3 to make new applications work with the change, but for existing Grails framework 3 and Grails framework 4 applications, the `grailsw` command will fail if the necessary assets haven't already been cached on the machine.
 

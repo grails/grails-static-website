@@ -64,7 +64,6 @@
 <p><span class="author">By Jason Schindler</span></p>
 <p><span class="date">June 10, 2021</span></p>
 <p>Recently, the Grails Framework Artifactory instance was updated. As a result, the Grails wrapper now fails under certain conditions because the URL it uses to retrieve information is no longer supported.</p>
-<p>All HTTP requests to the repository are now being redirected over HTTPS, which is a good thing, but unfortunately it caused <a href="https://github.com/grails/grails-wrapper/issues/7">an issue</a> because our <code>grails-wrapper.jar</code> was hardcoded to download from HTTP and was not able to follow redirects.</p>
 <p>We are preparing a patch release of Grails framework 4 and Grails framework 3 to make new applications work with the change, but for existing Grails framework 3 and Grails framework 4 applications, the <code>grailsw</code> command will fail if the necessary assets haven't already been cached on the machine.</p>
 <p>The error received is:</p>
 <pre><code>You must be connected to the internet the first time you use the Grails wrapper

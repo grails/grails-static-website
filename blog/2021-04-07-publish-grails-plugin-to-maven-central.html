@@ -232,7 +232,7 @@ ext.&quot;signing.secretKeyRingFile&quot; = project.hasProperty(&quot;signing.se
 <p>Get Signatory Credentials</p>
 <ol>
 <li>Get the public key ID (The last 8 symbols using <code>gpg -K</code> command).</li>
-<li>Export the keys with command <code>gpg -keyring secring.gpg --export-secret-keys &gt; ~/.gnupg/secring.gpg</code>.</li>
+<li>Export the keys with command <code>gpg --keyring secring.gpg --export-secret-keys &gt; ~/.gnupg/secring.gpg</code>.</li>
 <li>Know the Passphrase used to protect private keys.</li>
 </ol>
 </li>

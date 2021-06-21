@@ -178,7 +178,7 @@ grailsPublish {
       
    3. Get Signatory Credentials
       1. Get the public key ID (The last 8 symbols using `gpg -K` command).
-      2. Export the keys with command `gpg -keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg`.
+      2. Export the keys with command `gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg`.
       3. Know the Passphrase used to protect private keys.
     
    4. Export the following environment variables

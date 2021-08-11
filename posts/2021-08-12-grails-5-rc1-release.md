@@ -3,7 +3,7 @@ title: Grails 5.0.0 RC1 Released
 date: August 11, 2021
 description: The Grails Foundation is pleased to announce the first release candidate of Grails framework 5.0.0.
 author: Puneet Behl
-image: grails-blog-index-2.png
+image: grails-blog-index-3.png
 ---
 
 # [%title]

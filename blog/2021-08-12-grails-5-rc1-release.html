@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails® Foundation Announced</title>
+    <title>Grails 5.0.0 RC1 Released</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="We're pleased to announce the formation of the Grails® Foundation, a not-for-profit organization that exists to support and collectively lead the open source Grails® Framework." />
-    <meta name="date" content="October 26, 2020" />
+    <meta name="description" content="The Grails Foundation is pleased to announce the first release candidate of Grails framework 5.0.0." />
+    <meta name="date" content="August 11, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='We're pleased to announce the formation of the Grails® Foundation, a not-for-profit organization that exists to support and collectively lead the open source Grails® Framework.'/>
+    <meta name='twitter:description' content='The Grails Foundation is pleased to announce the first release candidate of Grails framework 5.0.0.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails® Foundation Announced'/>
-    <meta property='og:description' content='We're pleased to announce the formation of the Grails® Foundation, a not-for-profit organization that exists to support and collectively lead the open source Grails® Framework.'/>
+    <meta property='og:title' content='Grails 5.0.0 RC1 Released'/>
+    <meta property='og:description' content='The Grails Foundation is pleased to announce the first release candidate of Grails framework 5.0.0.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,23 +60,40 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails® Foundation Announced</h1>
-<p><span class="author">By Jen Wiese</span></p>
-<p><span class="date">October 26, 2020</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/foundation.html"><span class="hashtag">#foundation</span></a></p>
-<p>We're pleased to announce the formation of the new Grails<sup>®</sup> Foundation, a not-for-profit company established to support and continue to advance the open source Grails® Framework.</p>
-<p>The Grails Foundation oversees software roadmap and development, best practices and processes, repository control, documentation and support, and fundraising related to the open source framework.</p>
-<p><a href="https://objectcomputing.com/news/2020/10/26/new-grails-foundation-announced">Continue reading on Object Computing, Inc. (OCI) website</a></p>
+  <div class='light padded blogpost'><h1>Grails 5.0.0 RC1 Released</h1>
+<p><span class="author">By Puneet Behl</span></p>
+<p><span class="date">August 11, 2021</span></p>
+<p>The <a href="https://grails.org/foundation/index.html">Grails® Foundation</a> is pleased to announce the first release candidate of <a href="https://github.com/grails/grails-core/releases/tag/v5.0.0.RC1">Grails framework 5.0.0</a>! With this release, we are one step closer to the Grails framework's next GA release!</p>
+<h2>Overview</h2>
+<p>Grails framework 5 represents a significant upgrade, with the Framework now rebased on top of an updated minimum set of dependencies including:</p>
+<ul>
+<li>Spring 5.3.9</li>
+<li>Spring Boot 2.5.3</li>
+<li>Apache Groovy 3</li>
+<li>Hibernate 5.5</li>
+<li>Gradle 6.9</li>
+</ul>
+<p>A major highlight of Grails framework 5 is support for Apache Groovy 3, which comes with the brand new Parrot parser and a bunch of new features and capabilities. The Parrot parser supports additional syntax and language features, such as lambda expressions, default methods with interfaces, and a lot more. See <a href="https://groovy-lang.org/releasenotes/groovy-3.0.html#releasenotes">the release notes for Groovy 3.0</a> for details.</p>
+<p>Grails framework 5 also upgrades to Spring 5.3.9 and Spring Boot 2.5.3, which have a minimum Gradle requirement of 6.8 or later and a default Apache Groovy version of 3. We strongly recommend that users check out the following Spring technologies release notes for more information:</p>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes">Spring Boot 2.5</a></li>
+<li><a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53">Spring Framework 5.3</a></li>
+</ul>
+<p>This release also provides support for Java 15.</p>
+<p>Many Grails plugins should work with Grails framework 5. For those in the Grails plugin community, now is the time to upgrade your plugins and verify they continue to work with Grails framework 5.</p>
+<h2>Important Changes</h2>
+<ul>
+<li>Dot-based(a.b.c) access to config is deprecated and will be removed in future.</li>
+<li>The grails-publish-plugin has been removed.</li>
+<li>The grails-gradle-plugin has been moved out of grails-core and may follow a separate versioning from grailsCore, so you should decouple the grailsVersion Gradle property from grailsGradlePluginVersion in existing applications.</li>
+<li><code>grails.util.Metadata</code> includes breaking changes as part of improvements.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Thanks to all those who contributed to this release. Please <a href="https://twitter.com/grailsframework">follow us on Twitter @grailsframework</a> for the most up-to-date information on the framework.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
-  <a href='https://grails.org/blog/2021-08-12-grails-5-rc1-release.html'>
-    <h3>August 11, 2021</h3>
-    <h2>Grails 5.0.0 RC1 Released</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-2.png)'>
   <a href='https://grails.org/blog/2021-07-20-call-for-productivity-tips.html'>
     <h3>July 20, 2021</h3>
@@ -87,6 +104,12 @@
   <a href='https://grails.org/blog/2021-06-10-grails-wrapper-update.html'>
     <h3>June 10, 2021</h3>
     <h2>Updated Grails Wrapper for Grails 3 and 4 pro...</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
+  <a href='https://grails.org/blog/2021-05-21-2gm-town-hall-q2.html'>
+    <h3>May 21, 2021</h3>
+    <h2>2GM Town Hall Meeting: 2021 Q2</h2>
   </a>
 </article></div>
     </div>

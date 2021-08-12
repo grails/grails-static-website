@@ -42,6 +42,10 @@ Many Grails plugins should work with Grails framework 5. For those in the Grails
 - The grails-gradle-plugin has been moved out of grails-core and may follow a separate versioning from grailsCore, so you should decouple the grailsVersion Gradle property from grailsGradlePluginVersion in existing applications.
 - `grails.util.Metadata` includes breaking changes as part of improvements.  
 
+##  Download
+The easiest way to get started is to use [SDKMAN! (The Software Development Kit Manager)](https://sdkman.io/) to download Grails 5.0.0.RC1.
+Alternatively, you could download the Grails Binary directly from the [Github Release](https://github.com/grails/grails-core/releases/download/v5.0.0.RC1/grails-5.0.0.RC1.zip) page.
+
 ## Conclusion
 
 Thanks to all those who contributed to this release. Please [follow us on Twitter @grailsframework](https://twitter.com/grailsframework) for the most up-to-date information on the framework. 

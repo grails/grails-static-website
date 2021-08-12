@@ -34,10 +34,10 @@ class DocumentationPage {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: "guidegroup") {
             if (version) {
-                boolean isSnapshot = version.contains('BUILD-SNAPSHOT') || version.contains('snapshot')
+                boolean isSnapshot = version.endsWith('-SNAPSHOT') || version.contains('snapshot')
                 div(class: "guidegroupheader") {
                     img(src: "[%url]/images/documentation.svg", alt: "Grails Version (${version})")
-                    h2 "${isSnapshot ? 'Snapshot' : (version.contains('.M') ? 'Milestone' : 'Latest')} Version (${version}) Documentation"
+                    h2 "${isSnapshot ? 'Snapshot' : (version.contains('.M') ? 'Milestone' : (version.contains('.RC') ? 'Release Candidate': 'Latest'))} Version (${version}) Documentation"
                 }
                 ul {
                     li {

@@ -31,7 +31,7 @@ Grails framework 5 also upgrades to Spring 5.3.9 and Spring Boot 2.5.3, which ha
 - [Spring Boot 2.5](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes)
 - [Spring Framework 5.3](https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53)
 
-This release also provides support for Java 16.
+This release also provides support for Java 15.
 
 Many Grails plugins should work with Grails framework 5. For those in the Grails plugin community, now is the time to upgrade your plugins and verify they continue to work with Grails framework 5.
 

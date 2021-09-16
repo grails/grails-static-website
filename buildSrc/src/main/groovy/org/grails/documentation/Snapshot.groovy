@@ -16,7 +16,7 @@ class Snapshot implements Comparable<Snapshot> {
     }
 
     boolean isBuildSnapshot() {
-        text == "BUILD-SNAPSHOT"
+        text.endsWith("SNAPSHOT")
     }
 
     boolean isReleaseCandidate() {

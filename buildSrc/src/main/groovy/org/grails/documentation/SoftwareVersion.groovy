@@ -19,12 +19,17 @@ class SoftwareVersion implements Comparable<SoftwareVersion> {
         if (parts.length >= 3) {
             softVersion = new SoftwareVersion()
             softVersion.versionText = version
-            if (parts.length > 3) {
-                softVersion.snapshot = new Snapshot(parts[3])
-            }
             softVersion.major = parts[0].toInteger()
             softVersion.minor = parts[1].toInteger()
-            softVersion.patch = parts[2].toInteger()
+            if (parts.length > 3) {
+                softVersion.snapshot = new Snapshot(parts[3])
+            } else if (parts[2].contains('-')) {
+                String[] subParts = parts[2].split("-")
+                softVersion.patch = subParts.first() as int
+                softVersion.snapshot = new Snapshot(subParts[1..-1].join("-"))
+            } else {
+                softVersion.patch = parts[2].toInteger()
+            }
         }
         softVersion
     }

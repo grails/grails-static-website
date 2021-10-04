@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Updated Grails Wrapper for Grails 3 and 4 projects</title>
+    <title>2GM Q3 Town Hall Meeting: 2021 Q3</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Instructions to update grails-wrapper.jar for recent updates to Grails Framework Repository" />
-    <meta name="date" content="June 10, 2021" />
+    <meta name="description" content="Community members who missed the live broadcast of our 2021 third-quarter Town Hall Meeting can watch the video recording here." />
+    <meta name="date" content="September 24, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
-    <meta name='twitter:card' content='summary_large_image'/>
+    <meta name='twitter:card' content='player'/><meta name='twitter:player' content='https://www.youtube.com/embed/bG89gtyVPP8' />
+<meta name='twitter:player:width' content='560' />
+<meta name='twitter:player:height' content='315' />
+
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Instructions to update grails-wrapper.jar for recent updates to Grails Framework Repository'/>
+    <meta name='twitter:description' content='Community members who missed the live broadcast of our 2021 third-quarter Town Hall Meeting can watch the video recording here.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Updated Grails Wrapper for Grails 3 and 4 projects'/>
-    <meta property='og:description' content='Instructions to update grails-wrapper.jar for recent updates to Grails Framework Repository'/>
+    <meta property='og:title' content='2GM Q3 Town Hall Meeting: 2021 Q3'/>
+    <meta property='og:description' content='Community members who missed the live broadcast of our 2021 third-quarter Town Hall Meeting can watch the video recording here.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,43 +63,20 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Updated Grails Wrapper for Grails 3 and 4 projects</h1>
-<p><span class="author">By Jason Schindler</span></p>
-<p><span class="date">June 10, 2021</span></p>
-<p>Recently, the Grails Framework Artifactory instance was updated. As a result, the Grails wrapper now fails under certain conditions because the URL it uses to retrieve information is no longer supported.</p>
-<p>We are preparing a patch release of Grails framework 4 and Grails framework 3 to make new applications work with the change, but for existing Grails framework 3 and Grails framework 4 applications, the <code>grailsw</code> command will fail if the necessary assets haven't already been cached on the machine.</p>
-<p>The error received is:</p>
-<pre><code>You must be connected to the internet the first time you use the Grails wrapper
-org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 3; The element type &quot;hr&quot; must be terminated by the matching end-tag &quot;&lt;/hr&gt;&quot;.
-
-</code></pre>
-<h2>Updating Existing Projects</h2>
-<p>To fix this, replace the <code>grails-wrapper.jar</code> file in the base of your existing project with one of the updated wrappers below:</p>
-<ul>
-<li><a href="/files/wrapper-issue7/grails3/grails-wrapper.jar">Updated grails-wrapper.jar for Grails 3 Projects</a> <a href="/files/wrapper-issue7/grails3/grails-wrapper.jar.md5">(MD5)</a></li>
-<li><a href="/files/wrapper-issue7/grails4/grails-wrapper.jar">Updated grails-wrapper.jar for Grails 4 Projects</a> <a href="/files/wrapper-issue7/grails4/grails-wrapper.jar.md5">(MD5)</a></li>
-</ul>
-<p>Running the <code>grailsw</code> command from within the project should now work as expected.</p>
-<h2>Changing Repository URL</h2>
-<p>In addition to fixing the URL, we have also added the ability to change the base URL that the wrapper uses.</p>
-<p>There are two possible mechanisms for doing this:</p>
-<ul>
-<li>Setting an environment variable named <code>GRAILS_CORE_ARTIFACTORY_BASE_URL</code></li>
-<li>Setting the <code>grails.core.artifactory.baseUrl</code> system property</li>
-</ul>
-<p>The default value is <code>https://repo.grails.org/grails/core</code>, and we do not expect that to change.</p>
-<h2>Wrapping Up</h2>
-<p>We apologize for any inconvenience you may have experienced by this recent change. We will post a more detailed post-mortem on these events in the next few days. Please continue to report <a href="https://github.com/grails/grails-core/issues">any issues</a> you encounter.</p>
+  <div class='light padded blogpost'><h1>2GM Q3 Town Hall Meeting: 2021 Q3</h1>
+<p><span class="author">By Jen Wiese</span></p>
+<p><span class="date">September 24, 2021</span></p>
+<p>A big thanks to everyone who joined us for our Q3 2GM Town Hall Meeting! For those of you who missed the live event, the recording is embedded below.</p>
+<p>At this quarter's meeting, we provided an update on the latest advancements with the Grails and Micronaut frameworks, including a look at what is coming soon. We also shared the latest news and sponsors of the Grails and Micronaut Foundations, as well as some great live discussions and Q&amp;A with our panel.</p>
+<p>A special thanks to our fantastic panel of experts: Jeff Scott Brown, James Kleeh, Puneet Behl, Sergio del Amo Caballero, and our awesome guest Tim Berglund.</p>
+<p>Till next time!</p>
+<p>— Jen Wiese</p>
+<p><a href="https://objectcomputing.com/download_file/5342">Slides</a></p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/bG89gtyVPP8" frameborder="0"></iframe>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-4.png)'>
-  <a href='https://grails.org/blog/2021-09-24-q3-town-hall-meeting.html'>
-    <h3>September 24, 2021</h3>
-    <h2>2GM Q3 Town Hall Meeting: 2021 Q3</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
   <a href='https://grails.org/blog/2021-09-17-groovy-4-webinar.html'>
     <h3>September 17, 2021</h3>
@@ -107,6 +87,12 @@ org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 3; The element type 
   <a href='https://grails.org/blog/2021-09-15-q3-town-hall-meeting-scheduled.html'>
     <h3>September 15, 2021</h3>
     <h2>2GM Q3 Town Hall Meeting Coming Soon</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
+  <a href='https://grails.org/blog/2021-09-02-grails-deep-dive.html'>
+    <h3>September 2, 2021</h3>
+    <h2>Grails Deep Dive Training Class Scheduled</h2>
   </a>
 </article></div>
     </div>

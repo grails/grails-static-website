@@ -10,7 +10,7 @@ class Page implements Content {
 
     @Override
     String getPath() {
-        filename
+        filename?.replaceAll('\\\\', '/')
     }
 
     @Override

@@ -327,3 +327,6 @@ releases:
   -
     version: 5.0.0-RC3
     publicationDate: Sep 11, 2021
+  -
+    version: 5.0.0-RC4
+    publicationDate: Oct 05, 2021

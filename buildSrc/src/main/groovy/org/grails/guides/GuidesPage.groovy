@@ -265,7 +265,7 @@ class GuidesPage {
             div(class: "guidegroupheader") {
                 img src: "[%url]/images/${category.image}" as String, alt: category.name
                 if ( linkToCategory )  {
-                    a(href: "[%url]/categories/${category.slug}.html") {
+                    a(href: "${GUIDES_URL}/categories/${category.slug}.html") {
                         h2 category.name
                     }
                 } else {

@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 12 Oct 2021 10:11:45 GMT</pubDate><item><title>New Developer Advocate Announced</title><link>https://grails.org/blog/2021-10-08-developer-advocate-announced.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 12 Oct 2021 15:46:16 GMT</pubDate><item><title>Grails framework 5 GA Released</title><link>https://grails.org/blog/2021-10-11-grails-5-ga.html</link><description><![CDATA[</p>
+<p>The <a href="https://grails.org/foundation/index.html">Grails Foundation™</a> is excited to announce the GA release of Grails framework 5!</p>
+<h2>Overview</h2>
+<p>This release includes <a href="https://groovy-lang.org/releasenotes/groovy-3.0.html">Apache Groovy 3</a>, <a href="https://micronaut.io/2021/08/18/micronaut-framework-3-released/">Micronaut framework 3</a>, <a href="https://docs.gradle.org/7.0/release-notes.html">Gradle 7</a>, <a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes">Spring Boot 2.5</a>, <a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53">Spring framework 5.3</a>, and <a href="https://spockframework.org/spock/docs/2.0/release_notes.html">Spock 2.0</a>.</p>
+<h3>Apache Groovy 3</h3>
+<p>Apache Groovy 3 is a major highlight of this release. It comes with a brand new Parrot parser and a bunch of new features and capabilities.</p>
+<p>The Parrot parser supports additional syntax and language features, such as lambda expressions, default methods with interfaces, and a lot more. In addition, several new extension methods are added to existing Java classes. See the release notes for Groovy 3.0 for details.</p>
+<p>Grails framework 5 is built with Groovy 3.0.7, which requires JDK 8 as the minimum version of JRE. We have tested most Grails projects up to JDK 14.</p>
+<h3>Spring Upgrade</h3>
+<p>Grails framework 5 updates to Spring 5.3.10 and Spring Boot 2.5.5. We strongly recommend checking the following Spring technologies release notes for more information.</p>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes">Spring Boot 2.5</a></li>
+<li><a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53">Upgrading to Spring Framework 5.3</a></li>
+</ul>
+<h2>Important Changes</h2>
+<h3>Deprecating ‘dot’-Based Navigation</h3>
+<p>The ‘dot’-based navigation to Grails config is deprecated and will be removed in future.</p>
+<p>We request that you update your plugins to use configuration beans <code>@ConfigurationProperties</code> or <code>@Value</code>, or access configuration settings using <code>grailsApplication.config.getProperty(‘a.b.c’, String)</code> instead of <code>grailsApplication.config.a.b.c</code>.</p>
+<h3>Default Autowire By Type in Data Services</h3>
+<p>In previous versions, the beans inside the Grails DataService were autowire by name, but this is changed to autowire by type in Grails framework 5. Use the Spring <code>@Qualifier</code> annotation to autowire by name. For details, see the Spring documentation for <a href="https://docs.spring.io/spring-framework/docs/5.3.10/reference/html/core.html#beans-autowired-annotation-qualifiers">Fine-tuning Annotation Based Autowiring with Qualifiers</a>.</p>
+<h3>Grails Gradle Plugin</h3>
+<p>The <a href="https://github.com/grails/grails-gradle-plugin">Grails Gradle Plugin</a> is moved out of grails-core and may follow separate versioning, so you should decouple the <code>grailsVersion</code> Gradle property from <code>grailsGradlePluginVersion</code> in existing applications.</p>
+<h3>Grails Gradle Publish Plugin Removed</h3>
+<p>The Grails Gradle Publish plugin used the Bintray API to publish artifacts. However, after the JFrog shutdown of Bintray, this stopped working. We have removed this plugin from the new Grails Plugin applications.</p>
+<h2>Get Started with Grails Framework 5</h2>
+<h3>Download</h3>
+<p>The easiest way to <a href="https://grails.org/download.html">get started</a> is to use SDKMAN! (The Software Development Kit Manager) to download Grails framework 5.0.0. Alternatively, you can download the Grails binary directly from <a href="https://grails.org">grails.org</a>.</p>
+<h3>Upgrade</h3>
+<p>For applications on Grails framework 4, it should be an easy upgrade, as there are not many API changes in Grails
+framework 5. Also, most Grails framework 4 plugins should work just fine, unless they are using specific Spring, Spring Boot, or Groovy APIs that have been changed or removed.</p>
+<p>For members of the <a href="https://plugins.grails.org/">Grails plugin</a> community, now is the time to upgrade your plugins and verify they continue to work.</p>
+<h2>The Road Ahead</h2>
+<p>In the upcoming months, we will be working on improvements in the Grails CLI, <a href="https://guides.grails.org/index.html">Grails Guides</a>, and the <a href="https://grails.org/documentation.html">Grails documentation</a> around Micronaut integration.</p>
+<h2>Thank You</h2>
+<p>Community involvement is vital for the success of Grails framework. We appreciate the Grails community for the support and feedback throughout this journey. We are excited about this latest release. Please, upgrade your applications to Grails framework 5. We would love to hear about your experience, and if you need any help with your upgrade, we are here to <a href="https://grails.org/support.html">support</a> you.</p>]]></description><author>Puneet Behl</author><guid>2021-10-11-grails-5-ga</guid><pubDate>Mon, 11 Oct 2021 00:00:00 GMT</pubDate></item><item><title>New Developer Advocate Announced</title><link>https://grails.org/blog/2021-10-08-developer-advocate-announced.html</link><description><![CDATA[</p>
 <p>The <a href="https://micronaut.io/foundation/">Micronaut</a> and <a href="https://grails.org/foundation/index.html">Grails</a> Foundations™ are excited to announce that Sergio del Amo Caballero has taken on a new role and new responsibilities as the 2GM Developer Advocate!</p>
 <p>The Foundations support the technical innovation and advancement of the Grails<sup>®</sup> and <a href="https://micronaut.io/">Micronaut</a><sup>®</sup> frameworks for our growing global community, and the creation of this new position is one more way we are investing in the continued success of our open source products. As Developer Advocate, Sergio will represent developer interests while engaging with our communities to evangelize the Frameworks.</p>
 <p>In seeking the right person to fill the Developer Advocate position, we looked for an individual with passion for the technology who also has a strong connection with both the development team and the community at large.</p>

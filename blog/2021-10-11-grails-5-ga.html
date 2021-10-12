@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eric Helgeson Named 2017 Grails® Rock Star</title>
+    <title>Grails framework 5 GA Released</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="The Grails® Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework." />
-    <meta name="date" content="November 30, 2017" />
+    <meta name="description" content="The Grails Foundation™ is excited to announce the GA release of Grails framework 5!" />
+    <meta name="date" content="October 11, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='The Grails® Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.'/>
+    <meta name='twitter:description' content='The Grails Foundation™ is excited to announce the GA release of Grails framework 5!'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Eric Helgeson Named 2017 Grails® Rock Star'/>
-    <meta property='og:description' content='The Grails® Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.'/>
+    <meta property='og:title' content='Grails framework 5 GA Released'/>
+    <meta property='og:description' content='The Grails Foundation™ is excited to announce the GA release of Grails framework 5!'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,24 +60,47 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Eric Helgeson Named 2017 Grails® Rock Star</h1>
-<p><span class="author">By Sergio Del Amo Caballero</span></p>
-<p><span class="date">November 30, 2017</span></p>
-<p>The Grails<sup>®</sup> Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.</p>
-<p>Yesterday at G3 Summit 2017, Eric Helgeson was awarded the Grails Rock Star Award. Eric is the author of the book <a href="https://www.grails3book.com/">Practical Grails 3</a>, and he is often seen in the <a href="https://grails.slack.com/">Grails Slack Community</a> answering and helping other users. Moreover, Eric contributes to the Grails Community with code, plugin development, issues reporting, etc.</p>
-<p>Also, Graeme Rocher and Jeff Scott Brown, Grails framework co-founders, were awarded Grails lifetime contributor awards for their contributions in the past decade to the framework success.</p>
-<p><strong>Congratulations to Eric, Graeme, and Jeff for these well deserved awards.</strong></p>
-<p><img src="2017-11-30-img01.png" alt="Eric Helgeson, Graeme Rocher, and Jeff Scott Brown were honored at G3 Summit 2017 for their contributions to the Grails framework." /></p>
+  <div class='light padded blogpost'><h1>Grails framework 5 GA Released</h1>
+<p><span class="author">By Puneet Behl</span></p>
+<p><span class="date">October 11, 2021</span></p>
+<p>The <a href="https://grails.org/foundation/index.html">Grails Foundation™</a> is excited to announce the GA release of Grails framework 5!</p>
+<h2>Overview</h2>
+<p>This release includes <a href="https://groovy-lang.org/releasenotes/groovy-3.0.html">Apache Groovy 3</a>, <a href="https://micronaut.io/2021/08/18/micronaut-framework-3-released/">Micronaut framework 3</a>, <a href="https://docs.gradle.org/7.0/release-notes.html">Gradle 7</a>, <a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes">Spring Boot 2.5</a>, <a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53">Spring framework 5.3</a>, and <a href="https://spockframework.org/spock/docs/2.0/release_notes.html">Spock 2.0</a>.</p>
+<h3>Apache Groovy 3</h3>
+<p>Apache Groovy 3 is a major highlight of this release. It comes with a brand new Parrot parser and a bunch of new features and capabilities.</p>
+<p>The Parrot parser supports additional syntax and language features, such as lambda expressions, default methods with interfaces, and a lot more. In addition, several new extension methods are added to existing Java classes. See the release notes for Groovy 3.0 for details.</p>
+<p>Grails framework 5 is built with Groovy 3.0.7, which requires JDK 8 as the minimum version of JRE. We have tested most Grails projects up to JDK 14.</p>
+<h3>Spring Upgrade</h3>
+<p>Grails framework 5 updates to Spring 5.3.10 and Spring Boot 2.5.5. We strongly recommend checking the following Spring technologies release notes for more information.</p>
+<ul>
+<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.5-Release-Notes">Spring Boot 2.5</a></li>
+<li><a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x#upgrading-to-version-53">Upgrading to Spring Framework 5.3</a></li>
+</ul>
+<h2>Important Changes</h2>
+<h3>Deprecating ‘dot’-Based Navigation</h3>
+<p>The ‘dot’-based navigation to Grails config is deprecated and will be removed in future.</p>
+<p>We request that you update your plugins to use configuration beans <code>@ConfigurationProperties</code> or <code>@Value</code>, or access configuration settings using <code>grailsApplication.config.getProperty(‘a.b.c’, String)</code> instead of <code>grailsApplication.config.a.b.c</code>.</p>
+<h3>Default Autowire By Type in Data Services</h3>
+<p>In previous versions, the beans inside the Grails DataService were autowire by name, but this is changed to autowire by type in Grails framework 5. Use the Spring <code>@Qualifier</code> annotation to autowire by name. For details, see the Spring documentation for <a href="https://docs.spring.io/spring-framework/docs/5.3.10/reference/html/core.html#beans-autowired-annotation-qualifiers">Fine-tuning Annotation Based Autowiring with Qualifiers</a>.</p>
+<h3>Grails Gradle Plugin</h3>
+<p>The <a href="https://github.com/grails/grails-gradle-plugin">Grails Gradle Plugin</a> is moved out of grails-core and may follow separate versioning, so you should decouple the <code>grailsVersion</code> Gradle property from <code>grailsGradlePluginVersion</code> in existing applications.</p>
+<h3>Grails Gradle Publish Plugin Removed</h3>
+<p>The Grails Gradle Publish plugin used the Bintray API to publish artifacts. However, after the JFrog shutdown of Bintray, this stopped working. We have removed this plugin from the new Grails Plugin applications.</p>
+<h2>Get Started with Grails Framework 5</h2>
+<h3>Download</h3>
+<p>The easiest way to <a href="https://grails.org/download.html">get started</a> is to use SDKMAN! (The Software Development Kit Manager) to download Grails framework 5.0.0. Alternatively, you can download the Grails binary directly from <a href="https://grails.org">grails.org</a>.</p>
+<h3>Upgrade</h3>
+<p>For applications on Grails framework 4, it should be an easy upgrade, as there are not many API changes in Grails
+framework 5. Also, most Grails framework 4 plugins should work just fine, unless they are using specific Spring, Spring Boot, or Groovy APIs that have been changed or removed.</p>
+<p>For members of the <a href="https://plugins.grails.org/">Grails plugin</a> community, now is the time to upgrade your plugins and verify they continue to work.</p>
+<h2>The Road Ahead</h2>
+<p>In the upcoming months, we will be working on improvements in the Grails CLI, <a href="https://guides.grails.org/index.html">Grails Guides</a>, and the <a href="https://grails.org/documentation.html">Grails documentation</a> around Micronaut integration.</p>
+<h2>Thank You</h2>
+<p>Community involvement is vital for the success of Grails framework. We appreciate the Grails community for the support and feedback throughout this journey. We are excited about this latest release. Please, upgrade your applications to Grails framework 5. We would love to hear about your experience, and if you need any help with your upgrade, we are here to <a href="https://grails.org/support.html">support</a> you.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
-  <a href='https://grails.org/blog/2021-10-11-grails-5-ga.html'>
-    <h3>October 11, 2021</h3>
-    <h2>Grails framework 5 GA Released</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
   <a href='https://grails.org/blog/2021-10-08-developer-advocate-announced.html'>
     <h3>October 8, 2021</h3>
@@ -88,6 +111,12 @@
   <a href='https://grails.org/blog/2021-09-24-q3-town-hall-meeting.html'>
     <h3>September 24, 2021</h3>
     <h2>2GM Q3 Town Hall Meeting: 2021 Q3</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
+  <a href='https://grails.org/blog/2021-09-17-groovy-4-webinar.html'>
+    <h3>September 17, 2021</h3>
+    <h2>Webinar: An Insider's Guide to Groovy 4</h2>
   </a>
 </article></div>
     </div>

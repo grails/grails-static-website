@@ -333,3 +333,6 @@ releases:
   -
     version: 5.0.0
     publicationDate: Oct 12, 2021
+  -
+    version: 5.0.1
+    publicationDate: Nov 03, 2021

@@ -4,27 +4,20 @@ plugins {
 }
 
 ext {
-    micronautVersion = '2.0.1'
-    spockVersion='1.3-groovy-2.5'
+    micronautVersion = '3.1.3'
 }
 
 repositories {
     mavenCentral()
 }
 
-configurations {
-    all {
-        resolutionStrategy {
-            force "org.spockframework:spock-core:$spockVersion"
-        }
-    }
-}
 
 dependencies {
     annotationProcessor(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     implementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     testAnnotationProcessor(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     testImplementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
+
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-validation")
@@ -40,7 +33,7 @@ dependencies {
     implementation('com.vladsch.flexmark:flexmark-ext-tables:0.61.26')
 
     testImplementation("io.micronaut:micronaut-http-server-netty")
-    testImplementation("org.spockframework:spock-core:${spockVersion}") {
+    testImplementation("org.spockframework:spock-core") {
         exclude module:'groovy-all'
     }
 }

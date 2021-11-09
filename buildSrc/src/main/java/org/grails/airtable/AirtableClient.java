@@ -22,7 +22,6 @@ import io.micronaut.http.annotation.Header;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.http.client.annotation.Client;
-import io.reactivex.Single;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
@@ -37,7 +36,7 @@ public interface AirtableClient extends AirtableApi {
 
     @Override
     @Get("/{version}/{baseId}/{table}")
-    Single<RecordList> list(@Header String authorization,
+    RecordList list(@Header String authorization,
                             @NonNull @NotBlank @PathVariable String version,
                             @NonNull @NotBlank @PathVariable String baseId,
                             @NonNull @NotBlank @PathVariable String table,

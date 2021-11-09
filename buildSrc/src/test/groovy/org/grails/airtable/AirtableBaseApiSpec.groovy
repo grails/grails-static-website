@@ -7,7 +7,6 @@ import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.PathVariable
 import io.micronaut.inject.qualifiers.Qualifiers
 import io.micronaut.runtime.server.EmbeddedServer
-import io.reactivex.Single
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Ignore
@@ -55,7 +54,7 @@ class AirtableBaseApiSpec extends ApplicationContextSpecification {
     static class AirtableController {
 
         @Get("/v0/appxxxyyy/{table}")
-        Single<RecordList> list(@PathVariable String table) {
+        RecordList list(@PathVariable String table) {
             if (table == MicronautAirtable.TABLE_PRACTICE_AREAS) {
                 RecordList recordList = new RecordList()
                 recordList.records = new ArrayList<>()
@@ -64,7 +63,7 @@ class AirtableBaseApiSpec extends ApplicationContextSpecification {
                 record.fields = ["Name": "MICRONAUT"]
                 record.createdTime = "2018-05-08T16:21:17.000Z"
                 recordList.records << record
-                return Single.just(recordList)
+                return recordList
             } else if (table == MicronautAirtable.TABLE_FOCUS) {
                 RecordList recordList = new RecordList()
                 recordList.records = new ArrayList<>()
@@ -73,7 +72,7 @@ class AirtableBaseApiSpec extends ApplicationContextSpecification {
                 record.fields = ["name": "Introduction to Micronaut 2.0", "category": "meetup", "events": true, "status": "scheduled (confirmed)", "link": "https://www.meetup.com/Stuttgart-Cloud-Foundry-Meetup/events/271983604/", "practice area": ["recaaa"], "start/publish date": "2020-07-30", "time": "5:45 to 8:45 pm GMT+2", "speaker(s)": ["recccc"], "location": "online", "Meetup": "Stuttgart Cloud Foundry Meetup", "month": "07 July", "quarter": "3"]
                 record.createdTime = "2020-07-17T15:57:31.000Z"
                 recordList.records << record
-                return Single.just(recordList)
+                return recordList
             } else if (table == MicronautAirtable.TABLE_SMES) {
                 RecordList recordList = new RecordList()
                 recordList.records = new ArrayList<>()
@@ -82,9 +81,9 @@ class AirtableBaseApiSpec extends ApplicationContextSpecification {
                 record.fields = ["Name":"Sergio del Amo Caballero"]
                 record.createdTime = "2020-07-17T15:57:31.000Z"
                 recordList.records << record
-                return Single.just(recordList)
+                return recordList
             }
-            return Single.just(new RecordList())
+            return new RecordList()
         }
     }
 }

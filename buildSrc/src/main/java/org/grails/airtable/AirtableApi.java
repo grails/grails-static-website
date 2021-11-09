@@ -20,7 +20,6 @@ import edu.umd.cs.findbugs.annotations.Nullable;
 import io.micronaut.http.annotation.Header;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.QueryValue;
-import io.reactivex.Single;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
@@ -48,7 +47,7 @@ public interface AirtableApi {
      * @param userLocale The user locale that should be used to format dates when using String as cellFormat.
      * @return A list records in a table
      */
-    Single<RecordList> list(@Header String authorization,
+    RecordList list(@Header String authorization,
                             @NonNull @NotBlank @PathVariable String version,
                             @NonNull @NotBlank @PathVariable String baseId,
                             @NonNull @NotBlank @PathVariable String table,

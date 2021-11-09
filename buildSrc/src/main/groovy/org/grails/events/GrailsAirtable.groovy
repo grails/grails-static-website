@@ -49,7 +49,7 @@ class GrailsAirtable {
                 "All Upcoming Events",
                 null,
                 null,
-                null).blockingGet().records
+                null).records
         records.findAll { Record record ->
             (record.fields[FIELD_PRACTICE_AREA] && (record.fields[FIELD_PRACTICE_AREA] as List<String>).contains(practiceId)) &&
                     (record.fields[FIELD_STATUS] == STATUS_SCHEDULED) &&
@@ -87,7 +87,7 @@ class GrailsAirtable {
                 null,
                 null,
                 null,
-                null).blockingGet().records
+                null).records
         records.find { Record record ->
             record.id == speakerId
         }?.fields[FIELD_NAME] as String
@@ -104,7 +104,7 @@ class GrailsAirtable {
                 null,
                 null,
                 null,
-                null).blockingGet().records
+                null).records
         practiceAreaRecords.find { Record record ->
             (record.fields[FIELD_NAME] as String).equalsIgnoreCase(practiceName)
         }?.id

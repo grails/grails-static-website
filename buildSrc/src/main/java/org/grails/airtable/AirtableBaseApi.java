@@ -21,8 +21,6 @@ import io.micronaut.core.util.StringUtils;
 import io.micronaut.http.HttpHeaderValues;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.QueryValue;
-import io.reactivex.Single;
-
 import javax.validation.constraints.NotBlank;
 import java.util.List;
 
@@ -44,7 +42,7 @@ public class AirtableBaseApi {
         this.airtableBaseConfiguration = airtableBaseConfiguration;
     }
 
-    public Single<RecordList> list(@NonNull @NotBlank @PathVariable String table,
+    public RecordList list(@NonNull @NotBlank @PathVariable String table,
                                    @Nullable @QueryValue("fields[]") List<String> fields,
                                    @Nullable @QueryValue String filterByFormula,
                                    @Nullable @QueryValue Integer maxRecords,
@@ -69,7 +67,7 @@ public class AirtableBaseApi {
                 userLocale);
     }
 
-    public Single<RecordList> list(@NonNull @NotBlank @PathVariable String table) {
+    public RecordList list(@NonNull @NotBlank @PathVariable String table) {
         return list(table,
                 null,
                 null,

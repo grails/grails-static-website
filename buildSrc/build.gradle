@@ -9,7 +9,7 @@ ext {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 configurations {
@@ -25,7 +25,6 @@ dependencies {
     implementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     testAnnotationProcessor(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     testImplementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
-
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-validation")

@@ -77,12 +77,12 @@ class AgeService {
     void offerAgeAdvice(int age) {
 
         if (age &lt; 0) {
-            log.error (&quot;You cannot be &amp;#36;age years old!&quot;)
+            log.error (&quot;You cannot be $age years old!&quot;)
         } else if (age in 0..&lt;30) {
-            log.info (&quot;You are a young and vibrant :) Age &amp;#36;age&quot;)
+            log.info (&quot;You are a young and vibrant :) Age $age&quot;)
             log.info (&quot;Live life to the fullest&quot;)
         } else if (30 &lt;= age) {
-            log.warn (&quot;It's all downhill from here, sorry. Age &amp;#36;age&quot;)
+            log.warn (&quot;It's all downhill from here, sorry. Age $age&quot;)
         }
 
     }

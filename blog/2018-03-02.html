@@ -80,7 +80,7 @@
 <h2>Gradle Tips</h2>
 <p>When you work often with Gradle it becomes useful to get a verbose output while you run your tests:</p>
 <pre><code class="language-groovy">tasks.withType(Test) {
-      beforeTest { descriptor -&gt; logger.quiet &quot; -- &amp;#36;descriptor&quot; }
+      beforeTest { descriptor -&gt; logger.quiet &quot; -- $descriptor&quot; }
      testLogging {
          events &quot;passed&quot;, &quot;skipped&quot;, &quot;failed&quot;
          exceptionFormat 'full'

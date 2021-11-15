@@ -266,7 +266,7 @@
         module: {
             loaders: [
                 {
-                    test: /\.js&amp;#36;/,
+                    test: /\.js$/,
                     include: path.join(__dirname, 'src/main/js'),
                     loader: 'babel',
                     query: {
@@ -397,14 +397,14 @@
     	out &lt;&lt; &quot;&quot;&quot;
       &lt;li&gt;
         &lt;input type=&quot;checkbox&quot;
-    			checked=&amp;#36;{todo.complete ? 'checked' : ''}
-    			onchange=&amp;#36;{ /* specify an Ajax function */} /&gt;
-    			&lt;span&gt;&amp;#36;{todo.name}&lt;/span&gt;
+    			checked=${todo.complete ? 'checked' : ''}
+    			onchange=${ /* specify an Ajax function */} /&gt;
+    			&lt;span&gt;${todo.name}&lt;/span&gt;
     	  &lt;/li&gt;
     		&quot;&quot;&quot;
     }
 
-    &lt;g:todo todo=&amp;#36;{todo} &gt;&lt;/g:todo&gt;
+    &lt;g:todo todo=${todo} &gt;&lt;/g:todo&gt;
 </code></pre>
 <p>Of course this is not an entirely fair comparison. <a href="https://objectcomputing.com/resources/publications/sett/december-2015-custom-gsp-tags-grails-best-kept-secret/">GSP tags provide much more functionality</a> than simply rendering of attributes, but Grails developers should find the syntax of JSX to be quite friendly and understandable coming from GSPs.</p>
 <p>JSX allows us to write Javascript expressions bound by curly braces, supports namespacing of components, and can make large, complex UIs easier to visualize while coding [4]. However, JSX is optional. You can write React components entirely in plain Javascript, but the resulting code is more verbose.</p>

@@ -81,7 +81,7 @@ appender('STDOUT', ConsoleAppender) {
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() &amp;&amp; targetDir != null) {
     appender(&quot;FULL_STACKTRACE&quot;, FileAppender) {
-        file = &quot;&amp;#36;{targetDir}/stacktrace.log&quot;
+        file = &quot;${targetDir}/stacktrace.log&quot;
         append = true
         encoder(PatternLayoutEncoder) {
             pattern = &quot;%level %logger - %msg%n&quot;
@@ -109,7 +109,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
       pattern = &quot;%level %logger - %msg%n&quot;
   }
   rollingPolicy(TimeBasedRollingPolicy) {
-      fileNamePattern = &quot;&amp;#36;{HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
+      fileNamePattern = &quot;${HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
       maxHistory = 30
       totalSizeCap = FileSize.valueOf(&quot;2GB&quot;)
   }
@@ -163,7 +163,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
       pattern = &quot;%level %logger - %msg%n&quot;
   }
   rollingPolicy(TimeBasedRollingPolicy) {
-      fileNamePattern = &quot;&amp;#36;{HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
+      fileNamePattern = &quot;${HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
       maxHistory = 30
       totalSizeCap = FileSize.valueOf(&quot;2GB&quot;)
   }
@@ -172,7 +172,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() &amp;&amp; targetDir != null) {
     appender(&quot;FULL_STACKTRACE&quot;, FileAppender) {
-        file = &quot;&amp;#36;{targetDir}/stacktrace.log&quot;
+        file = &quot;${targetDir}/stacktrace.log&quot;
         append = true
         encoder(PatternLayoutEncoder) {
             pattern = &quot;%level %logger - %msg%n&quot;

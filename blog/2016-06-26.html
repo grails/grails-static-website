@@ -212,7 +212,7 @@ class SkillsTestSpeechlet implements GrailsConfigurationAware, Speechlet {
         log.info(&quot;onIntent requestId={}, sessionId={}&quot;, request.getRequestId(),
                 session.getSessionId())
 
-        log.debug(&quot;invoking intent:&amp;#36;{intentName}&quot;)
+        log.debug(&quot;invoking intent:${intentName}&quot;)
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech()
         // Create the Simple card content.
         SimpleCard card = new SimpleCard(title:&quot;Twitter Search Results&quot;)
@@ -288,7 +288,7 @@ class SkillsTestSpeechlet implements GrailsConfigurationAware, Speechlet {
         LinkAccountCard card = new LinkAccountCard()
         // Create the plain text output.
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech(text:speechText)
-        log.debug(&quot;Session ID=&amp;#36;{session.sessionId}&quot;)
+        log.debug(&quot;Session ID=${session.sessionId}&quot;)
         // Create reprompt
         Reprompt reprompt = new Reprompt(outputSpeech: speech)
         SpeechletResponse.newTellResponse(speech, card)
@@ -423,7 +423,7 @@ class SkillsTestController {
 </ul>
 <p>Example SSML</p>
 <pre><code>        &lt;speak&gt;
-          &lt;audio src=&quot;\&quot;https://s3.amazonaws.com/vanderfox-sounds/groovybaby1.mp3\&quot;/&quot;&gt; &amp;#36;{speechText}
+          &lt;audio src=&quot;\&quot;https://s3.amazonaws.com/vanderfox-sounds/groovybaby1.mp3\&quot;/&quot;&gt; ${speechText}
           &lt;/audio&gt;
         &lt;/speak&gt;
 </code></pre>

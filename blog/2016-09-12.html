@@ -69,26 +69,26 @@
 <p>If you want to know how to migrate from resources to asset-pipeline, this post is for you.</p>
 <h2>Let's Migrate!</h2>
 <p>I recommend you start the migration analyzing your layouts because probably those files contain most of your static resources (javascripts and css files). Imagine that the content of your <code>main.gsp</code> layout is the following:</p>
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'jquery-ui-1.10.3.full.min.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'jquery-ui-1.10.3.custom.min.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'jquery.gritter.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'ui.jqgrid.css') }&quot; /&gt;
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'jquery-ui-1.10.3.full.min.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'jquery-ui-1.10.3.custom.min.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'jquery.gritter.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'ui.jqgrid.css') }&quot; /&gt;
 
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery-2.0.3.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery-ui-1.10.3.custom.min.js') }&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery-ui-1.10.3.full.min.js') }&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.mobile.custom.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.slimscroll.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.gritter.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.hotkeys.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.easy-pie-chart.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.maskedinput.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.dataTables.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.dataTables.bootstrap.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js/jqGrid', file:'jquery.jqGrid.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js/jqGrid/i18n', file:'grid.locale-en.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery-2.0.3.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery-ui-1.10.3.custom.min.js') }&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery-ui-1.10.3.full.min.js') }&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.mobile.custom.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.slimscroll.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.gritter.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.hotkeys.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.easy-pie-chart.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.maskedinput.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.dataTables.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.dataTables.bootstrap.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js/jqGrid', file:'jquery.jqGrid.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js/jqGrid/i18n', file:'grid.locale-en.js')}&quot;&gt;&lt;/script&gt;
 </code></pre>
 <p>As you can see, there are a bunch of css and javascript files that are mostly related to jQuery, but all of those files are on the same directory. When doing the migration, we're also going to reorganize the files in a better way.</p>
 <p>By default, asset-pipeline creates the directories <code>images</code>, <code>javascripts</code>, and <code>stylesheets</code> under <code>grails-app/assets</code> directory. Any file you copy into those directories can be served by the plugin. The easy way would be to copy all of the css and javascript files to those directories and change the way we import the resources.</p>
@@ -101,8 +101,8 @@
 </code></pre>
 <p>You could replace the following code:</p>
 <pre><code class="language-html">&lt;!-- Using resources --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
 </code></pre>
 <p>With this one:</p>
 <pre><code class="language-html">&lt;!-- Using asset-pipeline --&gt;

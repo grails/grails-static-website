@@ -72,7 +72,7 @@ jdk:
   - oraclejdk8
 script:
   - curl -s get.sdkman.io | bash
-  - source &quot;&amp;#36;HOME/.sdkman/bin/sdkman-init.sh&quot;
+  - source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;
   - echo sdkman_auto_answer=true &gt; ~/.sdkman/etc/config
   - source &quot;/home/travis/.sdkman/bin/sdkman-init.sh&quot;
   - sdk install grails

@@ -153,7 +153,7 @@ git push
 </code></pre>
 <h2>Adding Travis to the Project</h2>
 <p>The first thing we will do is initialize Travis for the project.</p>
-<pre><code class="language-bash">&amp;#36; travis init
+<pre><code class="language-bash">$ travis init
 Detected repository as sbglasius/demoplugin, is this correct? |yes|
 Main programming language used: |Ruby| Groovy
 .travis.yml file created!
@@ -207,14 +207,14 @@ set -e
 ./gradlew clean check assemble --stacktrace
 
 EXIT_STATUS=0
-echo &quot;Publishing archives for branch &amp;#36;TRAVIS_BRANCH&quot;
-if [[ -n &amp;#36;TRAVIS_TAG ]] || [[ &amp;#36;TRAVIS_BRANCH == 'master' &amp;&amp; &amp;#36;TRAVIS_PULL_REQUEST == 'false' ]]; then
-  if [[ -n &amp;#36;TRAVIS_TAG ]]; then
+echo &quot;Publishing archives for branch $TRAVIS_BRANCH&quot;
+if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' &amp;&amp; $TRAVIS_PULL_REQUEST == 'false' ]]; then
+  if [[ -n $TRAVIS_TAG ]]; then
     echo &quot;Pushing build to Bintray&quot;
-    ./gradlew bintrayUpload notifyPluginPortal || EXIT_STATUS=&amp;#36;?
+    ./gradlew bintrayUpload notifyPluginPortal || EXIT_STATUS=$?
   fi
 fi
-exit &amp;#36;EXIT_STATUS
+exit $EXIT_STATUS
 fi
 </code></pre>
 <p>The script is currently a bit more advanced than it needs to be; that is because more functionality will be added later.</p>
@@ -279,17 +279,17 @@ set -e
 ./gradlew clean check assemble --stacktrace
 
 EXIT_STATUS=0
-echo &quot;Publishing archives for branch &amp;#36;TRAVIS_BRANCH&quot;
-if [[ -n &amp;#36;TRAVIS_TAG ]] || [[ &amp;#36;TRAVIS_BRANCH == 'master' &amp;&amp; &amp;#36;TRAVIS_PULL_REQUEST == 'false' ]]; then
-  if [[ -n &amp;#36;TRAVIS_TAG ]]; then
+echo &quot;Publishing archives for branch $TRAVIS_BRANCH&quot;
+if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' &amp;&amp; $TRAVIS_PULL_REQUEST == 'false' ]]; then
+  if [[ -n $TRAVIS_TAG ]]; then
     echo &quot;Pushing build to Bintray&quot;
-    ./gradlew bintrayUpload || EXIT_STATUS=&amp;#36;?
+    ./gradlew bintrayUpload || EXIT_STATUS=$?
   else
     echo &quot;Publishing snapshot to OJO&quot;
-    ./gradlew artifactoryPublish || EXIT_STATUS=&amp;#36;?
+    ./gradlew artifactoryPublish || EXIT_STATUS=$?
   fi
 fi
-exit &amp;#36;EXIT_STATUS
+exit $EXIT_STATUS
 fi
 </code></pre>
 <p>Commit and push to GitHub and go watch the build on Travis-CI. Notice, that the build ends with a push to OJO.</p>
@@ -302,12 +302,12 @@ fi
 <pre><code class="language-yml">sudo: false # run on container-based infrastructure
 
 before_cache:
-  - rm -f &amp;#36;HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - &amp;#36;HOME/.gradle/caches/
-    - &amp;#36;HOME/.gradle/wrapper/
-    - &amp;#36;HOME/.m2/repositories/
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.m2/repositories/
 </code></pre>
 <p>This will reduce downloads and build time on Travis-CI.</p>
 <h2>Conclusion</h2>

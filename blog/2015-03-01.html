@@ -79,7 +79,7 @@ class FirstInterceptor {
 </code></pre>
 <p>The interceptor class does noes not need to extend any special base class and does not need to be marked with any special annotations in order for the framework to recognize the class as an interceptor. The location of the source file and the name of the class are sufficient to register the class as an interceptor.</p>
 <p>The <code>create-interceptor</code> command may be used to define an interceptor.</p>
-<pre><code>    &amp;#36; grails create-interceptor demo.First
+<pre><code>    $ grails create-interceptor demo.First
     | Created grails-app/controllers/demo/FirstInterceptor.groovy
     | Created src/test/groovy/demo/FirstInterceptorSpec.groovy
 </code></pre>
@@ -291,11 +291,11 @@ package demo
 class DemoController {
 
     def index() {
-        render &quot;firstInterceptorRan is &amp;#36;{params.firstInterceptorRan}&quot;
+        render &quot;firstInterceptorRan is ${params.firstInterceptorRan}&quot;
     }
 
     def create() {
-        render &quot;firstInterceptorRan is &amp;#36;{params.firstInterceptorRan}&quot;
+        render &quot;firstInterceptorRan is ${params.firstInterceptorRan}&quot;
     }
 }
 </code></pre>
@@ -340,7 +340,7 @@ class DemoControllerFunctionalSpec extends GebSpec {
         go '/demo/index'
 
         then:
-        &amp;#36;().text() == 'firstInterceptorRan is yes'
+        $().text() == 'firstInterceptorRan is yes'
     }
 
     void &quot;test the create action&quot;() {
@@ -348,7 +348,7 @@ class DemoControllerFunctionalSpec extends GebSpec {
         go '/demo/create'
 
         then:
-        &amp;#36;().text() == 'firstInterceptorRan is null'
+        $().text() == 'firstInterceptorRan is null'
     }
 }
 </code></pre>

@@ -198,7 +198,7 @@ class BookResourceSpec extends Specification {
         RestBuilder restBuilder = new RestBuilder()
 
         when:
-        RestResponse resp = restBuilder.post(&quot;http://localhost:&amp;#36;{serverPort}/book&quot;) {
+        RestResponse resp = restBuilder.post(&quot;http://localhost:${serverPort}/book&quot;) {
             accept('application/json')
             contentType('application/json')
             json(JsonOutput.toJson([title: 'Practical Grails 3']))
@@ -239,7 +239,7 @@ class BookResourceSpec extends Specification {
         RestBuilder restBuilder = new RestBuilder()
 
         when:
-        RestResponse resp = restBuilder.post(&quot;http://localhost:&amp;#36;{serverPort}/book&quot;) {
+        RestResponse resp = restBuilder.post(&quot;http://localhost:${serverPort}/book&quot;) {
             accept('application/json')
             contentType('application/json')
             json(JsonOutput.toJson([title: 'Practical Grails 3']))

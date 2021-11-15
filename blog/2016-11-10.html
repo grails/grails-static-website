@@ -143,7 +143,7 @@
 <p>Once you have prepared your application for deployment to deploy the app you can run <code>gradle assemble</code> to build a WAR file and then copy the generated WAR file located in <code>build/libs</code> to JBoss 7's <code>standalone/deployments</code> directory and then run <code>bin/standalone.sh</code>.</p>
 <p>Note that if you receive an exception that looks like the following:</p>
 <pre><code class="language-groovy">16:45:35,789 WARN  [org.jboss.as.ee] (MSC service thread 1-6) JBAS011006: Not installing optional component org.springframework.web.context.request.async.StandardServletAsyncWebRequest due to exception: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS011054: Could not find default constructor for class org.springframework.web.context.request.async.StandardServletAsyncWebRequest
-    at org.jboss.as.ee.component.ComponentDescription&amp;#36;DefaultComponentConfigurator.configure(ComponentDescription.java:606)
+    at org.jboss.as.ee.component.ComponentDescription$DefaultComponentConfigurator.configure(ComponentDescription.java:606)
 </code></pre>
 <p>This is apparently <a href="https://stackoverflow.com/questions/13786685/spring3-2-and-jboss-as-7">normal behaviour</a> and can be safely ignored.</p>
 <h2>This Is WAY Too Hard</h2>

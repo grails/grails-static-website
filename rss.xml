@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 15 Nov 2021 10:19:00 GMT</pubDate><item><title>Grails® 5 - Groovy Podcast Episode 84</title><link>https://grails.org/blog/2021-11-11.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 15 Nov 2021 17:02:45 GMT</pubDate><item><title>Grails® 5 - Groovy Podcast Episode 84</title><link>https://grails.org/blog/2021-11-11.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/podcast.html"><span class="hashtag">#podcast</span></a></p>
 <p><a href="https://twitter.com/kenkousen">Ken Kousen</a> (Java Champion, NFJS speaker, serial book author) invited <a href="https://twitter.com/puneetbhl">Puneet Behl</a> (Grails Framework Development Lead) and <a href="https://twitter.com/sdelamo">Sergio del Amo</a> (2GM Developer Advocate) to join him for the latest episode of the Groovy Podcast.</p>
 <p>This episode covers Grails framework 5, migrating from Grails framework 2 to Grails framework 5, Grails infrastructure, Micronaut framework integration with Grails framework, and more.</p>
@@ -307,7 +307,7 @@ publishing {
 <p>Provide GnuPG key Information in your build.gradle file.</p>
 <pre><code class="language-groovy">ext.&quot;signing.keyId&quot; = project.hasProperty(&quot;signing.keyId&quot;) ? project.getProperty('signing.keyId') : System.getenv('SIGNING_KEY_ID')
 ext.&quot;signing.password&quot; = project.hasProperty(&quot;signing.password&quot;) ? project.getProperty('signing.password') : System.getenv('SIGNING_PASSPHRASE')
-ext.&quot;signing.secretKeyRingFile&quot; = project.hasProperty(&quot;signing.secretKeyRingFile&quot;) ? project.getProperty('signing.secretKeyRingFile') : (System.getenv('SIGNING_PASSPHRASE')?:&quot;&amp;#36;{System.properties['user.home']}&amp;#36;{File.separator}.gnupg&amp;#36;{File.separator}secring.gpg&quot;)
+ext.&quot;signing.secretKeyRingFile&quot; = project.hasProperty(&quot;signing.secretKeyRingFile&quot;) ? project.getProperty('signing.secretKeyRingFile') : (System.getenv('SIGNING_PASSPHRASE')?:&quot;${System.properties['user.home']}${File.separator}.gnupg${File.separator}secring.gpg&quot;)
 </code></pre>
 </li>
 <li>
@@ -365,7 +365,7 @@ tasks.withType(Sign) {
        maven { url &quot;https://plugins.gradle.org/m2/&quot; }
    }
    dependencies {
-       classpath &quot;org.grails:grails-gradle-plugin:&amp;#36;grailsVersion&quot;
+       classpath &quot;org.grails:grails-gradle-plugin:$grailsVersion&quot;
        classpath &quot;com.bertramlabs.plugins:asset-pipeline-gradle:3.0.10&quot;
        classpath &quot;io.github.gradle-nexus:publish-plugin:1.0.0&quot;
    }
@@ -791,7 +791,7 @@ jdk:
   - oraclejdk8
 script:
   - curl -s get.sdkman.io | bash
-  - source &quot;&amp;#36;HOME/.sdkman/bin/sdkman-init.sh&quot;
+  - source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;
   - echo sdkman_auto_answer=true &gt; ~/.sdkman/etc/config
   - source &quot;/home/travis/.sdkman/bin/sdkman-init.sh&quot;
   - sdk install grails
@@ -971,7 +971,7 @@ import groovy.transform.CompileStatic
 class FooService {
 
     String doSomething(String name) {
-        &quot;Hi &amp;#36;{name}, FooService did something&quot;
+        &quot;Hi ${name}, FooService did something&quot;
     }
 }
 </code></pre>
@@ -1047,7 +1047,7 @@ import groovy.transform.CompileStatic
 class FooService {
 
     String doSomething(String name) {
-        &quot;Hi &amp;#36;{name}, FooService did something&quot;
+        &quot;Hi ${name}, FooService did something&quot;
     }
 }
 </code></pre>
@@ -1126,7 +1126,7 @@ import groovy.transform.CompileStatic
 class FooService {
 
     String doSomething(String name) {
-        &quot;Hi &amp;#36;{name}, FooService did something&quot;
+        &quot;Hi ${name}, FooService did something&quot;
     }
 }
 </code></pre>
@@ -1244,12 +1244,12 @@ class AgeService {
     void offerAgeAdvice(int age) {
 
         if (age &lt; 0) {
-            log.error (&quot;You cannot be &amp;#36;age years old!&quot;)
+            log.error (&quot;You cannot be $age years old!&quot;)
         } else if (age in 0..&lt;30) {
-            log.info (&quot;You are a young and vibrant :) Age &amp;#36;age&quot;)
+            log.info (&quot;You are a young and vibrant :) Age $age&quot;)
             log.info (&quot;Live life to the fullest&quot;)
         } else if (30 &lt;= age) {
-            log.warn (&quot;It's all downhill from here, sorry. Age &amp;#36;age&quot;)
+            log.warn (&quot;It's all downhill from here, sorry. Age $age&quot;)
         }
 
     }
@@ -1500,7 +1500,7 @@ p.delete()
 <h2>Gradle Tips</h2>
 <p>When you work often with Gradle it becomes useful to get a verbose output while you run your tests:</p>
 <pre><code class="language-groovy">tasks.withType(Test) {
-      beforeTest { descriptor -&gt; logger.quiet &quot; -- &amp;#36;descriptor&quot; }
+      beforeTest { descriptor -&gt; logger.quiet &quot; -- $descriptor&quot; }
      testLogging {
          events &quot;passed&quot;, &quot;skipped&quot;, &quot;failed&quot;
          exceptionFormat 'full'
@@ -1678,7 +1678,7 @@ class BookResourceSpec extends Specification {
         RestBuilder restBuilder = new RestBuilder()
 
         when:
-        RestResponse resp = restBuilder.post(&quot;http://localhost:&amp;#36;{serverPort}/book&quot;) {
+        RestResponse resp = restBuilder.post(&quot;http://localhost:${serverPort}/book&quot;) {
             accept('application/json')
             contentType('application/json')
             json(JsonOutput.toJson([title: 'Practical Grails 3']))
@@ -1719,7 +1719,7 @@ class BookResourceSpec extends Specification {
         RestBuilder restBuilder = new RestBuilder()
 
         when:
-        RestResponse resp = restBuilder.post(&quot;http://localhost:&amp;#36;{serverPort}/book&quot;) {
+        RestResponse resp = restBuilder.post(&quot;http://localhost:${serverPort}/book&quot;) {
             accept('application/json')
             contentType('application/json')
             json(JsonOutput.toJson([title: 'Practical Grails 3']))
@@ -1996,7 +1996,7 @@ class Greeter {
     String name
 
     String sayHello() {
-        &quot;&amp;#36;{name}&amp;#36;{greetingService.sayHi()}&quot;
+        &quot;${name}${greetingService.sayHi()}&quot;
     }
 }
 package demo
@@ -2562,7 +2562,7 @@ drwxr-xr-x  10 zak  staff    340 Nov  1 13:10 src
 <p>Once you have prepared your application for deployment to deploy the app you can run <code>gradle assemble</code> to build a WAR file and then copy the generated WAR file located in <code>build/libs</code> to JBoss 7's <code>standalone/deployments</code> directory and then run <code>bin/standalone.sh</code>.</p>
 <p>Note that if you receive an exception that looks like the following:</p>
 <pre><code class="language-groovy">16:45:35,789 WARN  [org.jboss.as.ee] (MSC service thread 1-6) JBAS011006: Not installing optional component org.springframework.web.context.request.async.StandardServletAsyncWebRequest due to exception: org.jboss.as.server.deployment.DeploymentUnitProcessingException: JBAS011054: Could not find default constructor for class org.springframework.web.context.request.async.StandardServletAsyncWebRequest
-    at org.jboss.as.ee.component.ComponentDescription&amp;#36;DefaultComponentConfigurator.configure(ComponentDescription.java:606)
+    at org.jboss.as.ee.component.ComponentDescription$DefaultComponentConfigurator.configure(ComponentDescription.java:606)
 </code></pre>
 <p>This is apparently <a href="https://stackoverflow.com/questions/13786685/spring3-2-and-jboss-as-7">normal behaviour</a> and can be safely ignored.</p>
 <h2>This Is WAY Too Hard</h2>
@@ -2588,7 +2588,7 @@ appender('STDOUT', ConsoleAppender) {
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() &amp;&amp; targetDir != null) {
     appender(&quot;FULL_STACKTRACE&quot;, FileAppender) {
-        file = &quot;&amp;#36;{targetDir}/stacktrace.log&quot;
+        file = &quot;${targetDir}/stacktrace.log&quot;
         append = true
         encoder(PatternLayoutEncoder) {
             pattern = &quot;%level %logger - %msg%n&quot;
@@ -2616,7 +2616,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
       pattern = &quot;%level %logger - %msg%n&quot;
   }
   rollingPolicy(TimeBasedRollingPolicy) {
-      fileNamePattern = &quot;&amp;#36;{HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
+      fileNamePattern = &quot;${HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
       maxHistory = 30
       totalSizeCap = FileSize.valueOf(&quot;2GB&quot;)
   }
@@ -2670,7 +2670,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
       pattern = &quot;%level %logger - %msg%n&quot;
   }
   rollingPolicy(TimeBasedRollingPolicy) {
-      fileNamePattern = &quot;&amp;#36;{HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
+      fileNamePattern = &quot;${HOME_DIR}/logs/myApp-%d{yyyy-MM-dd_HH-mm}.log&quot;
       maxHistory = 30
       totalSizeCap = FileSize.valueOf(&quot;2GB&quot;)
   }
@@ -2679,7 +2679,7 @@ appender(&quot;ROLLING&quot;, RollingFileAppender) {
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() &amp;&amp; targetDir != null) {
     appender(&quot;FULL_STACKTRACE&quot;, FileAppender) {
-        file = &quot;&amp;#36;{targetDir}/stacktrace.log&quot;
+        file = &quot;${targetDir}/stacktrace.log&quot;
         append = true
         encoder(PatternLayoutEncoder) {
             pattern = &quot;%level %logger - %msg%n&quot;
@@ -2790,7 +2790,7 @@ git push
 </code></pre>
 <h2>Adding Travis to the Project</h2>
 <p>The first thing we will do is initialize Travis for the project.</p>
-<pre><code class="language-bash">&amp;#36; travis init
+<pre><code class="language-bash">$ travis init
 Detected repository as sbglasius/demoplugin, is this correct? |yes|
 Main programming language used: |Ruby| Groovy
 .travis.yml file created!
@@ -2844,14 +2844,14 @@ set -e
 ./gradlew clean check assemble --stacktrace
 
 EXIT_STATUS=0
-echo &quot;Publishing archives for branch &amp;#36;TRAVIS_BRANCH&quot;
-if [[ -n &amp;#36;TRAVIS_TAG ]] || [[ &amp;#36;TRAVIS_BRANCH == 'master' &amp;&amp; &amp;#36;TRAVIS_PULL_REQUEST == 'false' ]]; then
-  if [[ -n &amp;#36;TRAVIS_TAG ]]; then
+echo &quot;Publishing archives for branch $TRAVIS_BRANCH&quot;
+if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' &amp;&amp; $TRAVIS_PULL_REQUEST == 'false' ]]; then
+  if [[ -n $TRAVIS_TAG ]]; then
     echo &quot;Pushing build to Bintray&quot;
-    ./gradlew bintrayUpload notifyPluginPortal || EXIT_STATUS=&amp;#36;?
+    ./gradlew bintrayUpload notifyPluginPortal || EXIT_STATUS=$?
   fi
 fi
-exit &amp;#36;EXIT_STATUS
+exit $EXIT_STATUS
 fi
 </code></pre>
 <p>The script is currently a bit more advanced than it needs to be; that is because more functionality will be added later.</p>
@@ -2916,17 +2916,17 @@ set -e
 ./gradlew clean check assemble --stacktrace
 
 EXIT_STATUS=0
-echo &quot;Publishing archives for branch &amp;#36;TRAVIS_BRANCH&quot;
-if [[ -n &amp;#36;TRAVIS_TAG ]] || [[ &amp;#36;TRAVIS_BRANCH == 'master' &amp;&amp; &amp;#36;TRAVIS_PULL_REQUEST == 'false' ]]; then
-  if [[ -n &amp;#36;TRAVIS_TAG ]]; then
+echo &quot;Publishing archives for branch $TRAVIS_BRANCH&quot;
+if [[ -n $TRAVIS_TAG ]] || [[ $TRAVIS_BRANCH == 'master' &amp;&amp; $TRAVIS_PULL_REQUEST == 'false' ]]; then
+  if [[ -n $TRAVIS_TAG ]]; then
     echo &quot;Pushing build to Bintray&quot;
-    ./gradlew bintrayUpload || EXIT_STATUS=&amp;#36;?
+    ./gradlew bintrayUpload || EXIT_STATUS=$?
   else
     echo &quot;Publishing snapshot to OJO&quot;
-    ./gradlew artifactoryPublish || EXIT_STATUS=&amp;#36;?
+    ./gradlew artifactoryPublish || EXIT_STATUS=$?
   fi
 fi
-exit &amp;#36;EXIT_STATUS
+exit $EXIT_STATUS
 fi
 </code></pre>
 <p>Commit and push to GitHub and go watch the build on Travis-CI. Notice, that the build ends with a push to OJO.</p>
@@ -2939,12 +2939,12 @@ fi
 <pre><code class="language-yml">sudo: false # run on container-based infrastructure
 
 before_cache:
-  - rm -f &amp;#36;HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
-    - &amp;#36;HOME/.gradle/caches/
-    - &amp;#36;HOME/.gradle/wrapper/
-    - &amp;#36;HOME/.m2/repositories/
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.m2/repositories/
 </code></pre>
 <p>This will reduce downloads and build time on Travis-CI.</p>
 <h2>Conclusion</h2>
@@ -2984,26 +2984,26 @@ cache:
 <p>If you want to know how to migrate from resources to asset-pipeline, this post is for you.</p>
 <h2>Let's Migrate!</h2>
 <p>I recommend you start the migration analyzing your layouts because probably those files contain most of your static resources (javascripts and css files). Imagine that the content of your <code>main.gsp</code> layout is the following:</p>
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'jquery-ui-1.10.3.full.min.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'jquery-ui-1.10.3.custom.min.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'jquery.gritter.css') }&quot; /&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'ui.jqgrid.css') }&quot; /&gt;
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'jquery-ui-1.10.3.full.min.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'jquery-ui-1.10.3.custom.min.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'jquery.gritter.css') }&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'ui.jqgrid.css') }&quot; /&gt;
 
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery-2.0.3.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery-ui-1.10.3.custom.min.js') }&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery-ui-1.10.3.full.min.js') }&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.mobile.custom.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.slimscroll.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.gritter.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.hotkeys.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.easy-pie-chart.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.maskedinput.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.dataTables.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'jquery.dataTables.bootstrap.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js/jqGrid', file:'jquery.jqGrid.min.js')}&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js/jqGrid/i18n', file:'grid.locale-en.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery-2.0.3.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery-ui-1.10.3.custom.min.js') }&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery-ui-1.10.3.full.min.js') }&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.mobile.custom.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.slimscroll.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.gritter.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.hotkeys.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.easy-pie-chart.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.maskedinput.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.dataTables.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'jquery.dataTables.bootstrap.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js/jqGrid', file:'jquery.jqGrid.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;${resource(dir:'assets/js/jqGrid/i18n', file:'grid.locale-en.js')}&quot;&gt;&lt;/script&gt;
 </code></pre>
 <p>As you can see, there are a bunch of css and javascript files that are mostly related to jQuery, but all of those files are on the same directory. When doing the migration, we're also going to reorganize the files in a better way.</p>
 <p>By default, asset-pipeline creates the directories <code>images</code>, <code>javascripts</code>, and <code>stylesheets</code> under <code>grails-app/assets</code> directory. Any file you copy into those directories can be served by the plugin. The easy way would be to copy all of the css and javascript files to those directories and change the way we import the resources.</p>
@@ -3016,8 +3016,8 @@ cache:
 </code></pre>
 <p>You could replace the following code:</p>
 <pre><code class="language-html">&lt;!-- Using resources --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;&amp;#36;{resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
-&lt;script src=&quot;&amp;#36;{resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;${resource(dir: 'assets/css', file:'bootstrap.min.css') }&quot; /&gt;
+&lt;script src=&quot;${resource(dir:'assets/js', file:'bootstrap.min.js')}&quot;&gt;&lt;/script&gt;
 </code></pre>
 <p>With this one:</p>
 <pre><code class="language-html">&lt;!-- Using asset-pipeline --&gt;
@@ -3176,7 +3176,6 @@ Integer maxLineNumbers =  config.getProperty('max.line.numbers', Integer)
 // returns 2112 if the config value does not
 // exist or if the type conversion fails
 Integer maxLineNumbers =  config.getProperty('max.line.numbers', Integer, 2112)
-{% endhighlight %}
 </code></pre>
 <h3>Required Properties</h3>
 <p>For required properties you could write application code that reacts however is appropriate if the property doesn't exist. You could also use the <a href="https://docs.grails.org/3.1.10/api/grails/config/ConfigMap.html#getRequiredProperty(java.lang.String,%20java.lang.Class)">getRequiredProperty</a> method which will throw an exception if a requested property does not exist.</p>
@@ -3229,7 +3228,7 @@ class WidgetService {
 
     int area
 
-    @Value('&amp;#36;{widget.width}')
+    @Value('${widget.width}')
     int width
 
     def someServiceMethod() {
@@ -3242,7 +3241,7 @@ class WidgetService {
 
 class WidgetService {
 
-    @Value('&amp;#36;{widget.width:50}')
+    @Value('${widget.width:50}')
     int width
 
     def someServiceMethod() {
@@ -3666,7 +3665,7 @@ class SkillsTestSpeechlet implements GrailsConfigurationAware, Speechlet {
         log.info(&quot;onIntent requestId={}, sessionId={}&quot;, request.getRequestId(),
                 session.getSessionId())
 
-        log.debug(&quot;invoking intent:&amp;#36;{intentName}&quot;)
+        log.debug(&quot;invoking intent:${intentName}&quot;)
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech()
         // Create the Simple card content.
         SimpleCard card = new SimpleCard(title:&quot;Twitter Search Results&quot;)
@@ -3742,7 +3741,7 @@ class SkillsTestSpeechlet implements GrailsConfigurationAware, Speechlet {
         LinkAccountCard card = new LinkAccountCard()
         // Create the plain text output.
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech(text:speechText)
-        log.debug(&quot;Session ID=&amp;#36;{session.sessionId}&quot;)
+        log.debug(&quot;Session ID=${session.sessionId}&quot;)
         // Create reprompt
         Reprompt reprompt = new Reprompt(outputSpeech: speech)
         SpeechletResponse.newTellResponse(speech, card)
@@ -3877,7 +3876,7 @@ class SkillsTestController {
 </ul>
 <p>Example SSML</p>
 <pre><code>        &lt;speak&gt;
-          &lt;audio src=&quot;\&quot;https://s3.amazonaws.com/vanderfox-sounds/groovybaby1.mp3\&quot;/&quot;&gt; &amp;#36;{speechText}
+          &lt;audio src=&quot;\&quot;https://s3.amazonaws.com/vanderfox-sounds/groovybaby1.mp3\&quot;/&quot;&gt; ${speechText}
           &lt;/audio&gt;
         &lt;/speak&gt;
 </code></pre>
@@ -4186,7 +4185,7 @@ class SkillsTestController {
         module: {
             loaders: [
                 {
-                    test: /\.js&amp;#36;/,
+                    test: /\.js$/,
                     include: path.join(__dirname, 'src/main/js'),
                     loader: 'babel',
                     query: {
@@ -4317,14 +4316,14 @@ class SkillsTestController {
     	out &lt;&lt; &quot;&quot;&quot;
       &lt;li&gt;
         &lt;input type=&quot;checkbox&quot;
-    			checked=&amp;#36;{todo.complete ? 'checked' : ''}
-    			onchange=&amp;#36;{ /* specify an Ajax function */} /&gt;
-    			&lt;span&gt;&amp;#36;{todo.name}&lt;/span&gt;
+    			checked=${todo.complete ? 'checked' : ''}
+    			onchange=${ /* specify an Ajax function */} /&gt;
+    			&lt;span&gt;${todo.name}&lt;/span&gt;
     	  &lt;/li&gt;
     		&quot;&quot;&quot;
     }
 
-    &lt;g:todo todo=&amp;#36;{todo} &gt;&lt;/g:todo&gt;
+    &lt;g:todo todo=${todo} &gt;&lt;/g:todo&gt;
 </code></pre>
 <p>Of course this is not an entirely fair comparison. <a href="https://objectcomputing.com/resources/publications/sett/december-2015-custom-gsp-tags-grails-best-kept-secret/">GSP tags provide much more functionality</a> than simply rendering of attributes, but Grails developers should find the syntax of JSX to be quite friendly and understandable coming from GSPs.</p>
 <p>JSX allows us to write Javascript expressions bound by curly braces, supports namespacing of components, and can make large, complex UIs easier to visualize while coding [4]. However, JSX is optional. You can write React components entirely in plain Javascript, but the resulting code is more verbose.</p>
@@ -4514,7 +4513,7 @@ json {
 }
 </code></pre>
 <p>When a request is made to render a Book, that view will be used by default.</p>
-<pre><code>    &amp;#36; curl http://localhost:8080/books/1.json
+<pre><code>    $ curl http://localhost:8080/books/1.json
     {&quot;bookTitle&quot;:&quot;Wool&quot;,&quot;bookAuthor&quot;:&quot;Hugh Howey&quot;}
 </code></pre>
 <p>Grails takes into account a number of factors when attempting to resolve the view including the content type, version and locale.</p>
@@ -4563,7 +4562,7 @@ class FirstInterceptor {
 </code></pre>
 <p>The interceptor class does noes not need to extend any special base class and does not need to be marked with any special annotations in order for the framework to recognize the class as an interceptor. The location of the source file and the name of the class are sufficient to register the class as an interceptor.</p>
 <p>The <code>create-interceptor</code> command may be used to define an interceptor.</p>
-<pre><code>    &amp;#36; grails create-interceptor demo.First
+<pre><code>    $ grails create-interceptor demo.First
     | Created grails-app/controllers/demo/FirstInterceptor.groovy
     | Created src/test/groovy/demo/FirstInterceptorSpec.groovy
 </code></pre>
@@ -4775,11 +4774,11 @@ package demo
 class DemoController {
 
     def index() {
-        render &quot;firstInterceptorRan is &amp;#36;{params.firstInterceptorRan}&quot;
+        render &quot;firstInterceptorRan is ${params.firstInterceptorRan}&quot;
     }
 
     def create() {
-        render &quot;firstInterceptorRan is &amp;#36;{params.firstInterceptorRan}&quot;
+        render &quot;firstInterceptorRan is ${params.firstInterceptorRan}&quot;
     }
 }
 </code></pre>
@@ -4824,7 +4823,7 @@ class DemoControllerFunctionalSpec extends GebSpec {
         go '/demo/index'
 
         then:
-        &amp;#36;().text() == 'firstInterceptorRan is yes'
+        $().text() == 'firstInterceptorRan is yes'
     }
 
     void &quot;test the create action&quot;() {
@@ -4832,7 +4831,7 @@ class DemoControllerFunctionalSpec extends GebSpec {
         go '/demo/create'
 
         then:
-        &amp;#36;().text() == 'firstInterceptorRan is null'
+        $().text() == 'firstInterceptorRan is null'
     }
 }
 </code></pre>

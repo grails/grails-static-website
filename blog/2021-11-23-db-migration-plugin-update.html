@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails Framework Exciting Updates</title>
+    <title>Grails Database Migration 4.0.0-RC1 Released</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Grails Product Development Lead, Puneet Behl, shares a number of updates regarding the current state of the Grails framework, as well as plans for the future." />
-    <meta name="date" content="January 22, 2021" />
+    <meta name="description" content="Grails Database Migration 4.0.0-RC1 Released" />
+    <meta name="date" content="November 23, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Grails Product Development Lead, Puneet Behl, shares a number of updates regarding the current state of the Grails framework, as well as plans for the future.'/>
+    <meta name='twitter:description' content='Grails Database Migration 4.0.0-RC1 Released'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails Framework Exciting Updates'/>
-    <meta property='og:description' content='Grails Product Development Lead, Puneet Behl, shares a number of updates regarding the current state of the Grails framework, as well as plans for the future.'/>
+    <meta property='og:title' content='Grails Database Migration 4.0.0-RC1 Released'/>
+    <meta property='og:description' content='Grails Database Migration 4.0.0-RC1 Released'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,62 +60,43 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails Framework Exciting Updates</h1>
+  <div class='light padded blogpost'><h1>Grails Database Migration 4.0.0-RC1 Released</h1>
 <p><span class="author">By Puneet Behl</span></p>
-<p><span class="date">January 22, 2021</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/grails.html"><span class="hashtag">#grails</span></a></p>
-<p>We wish everyone a healthy and happy new year 2021 and thank all our users and contributors for your love and support of the Grails framework. We are excited to announce some of the upcoming changes around Grails releases, which will benefit the community and help with maintainability.</p>
-<h2>Adoption of Semantic Versioning</h2>
-<p>Starting with version 4.0.0, the Grails framework is following semantic versioning 2.0.0 to make the release process more predictable and simple. To understand what that means, please see <a href="https://semver.org/">the specification documentation</a></p>
-<h2>Announcing Grails 5!</h2>
-<p>To avoid violating semantic versioning, what had been planned to be Grails 4.1 will now be released as Grails 5. Once Grails 5 is released, we recommend users update their applications to benefit from the latest features and improvements. We believe that updating from Grails 4 to 5 should be a smooth experience as we have not made any major breaking changes in Grails 5 itself.</p>
-<p>A major highlight of this release is the update to Apache Groovy 3, which includes support for Java 15 and significant other improvements around static compilation. We have also upgraded to the latest stable releases of some third-party libraries, including:</p>
-<ul>
+<p><span class="date">November 23, 2021</span></p>
+<p>The Grails Database Migration plugin is one of the most popular plugins in the Grails ecosystem. It helps manage database changes in a structural manner and prevents inconsistencies, communication issues, and other problems.</p>
+<p>In today's technology landscape, where application and database schemas are continuously evolving, this plugin makes it easy for the development team to keep track of database changes, quickly rollback, and modify the schema.</p>
+<p>The plugin internally uses the Liquibase library to manage the database. When using the plugin, database migrations are represented in the form of text, either using Groovy DSL or native Liquibase XML, in one or more changelog files. There are several popular approaches to maintaining and organizing  the changelog files. We suggest you check <a href="https://grails-plugins.github.io/grails-database-migration/snapshot/index.html">Grails Database Migration plugin documentation</a> for details.</p>
+<p>In this release, we have updated to Liquibase 4.6, Grails framework 5, and Apache Groovy 3. Refer to the release notes for 4.0.0-RC1 for more details.</p>
+<h2>Upgrading from Liquibase 3.10 to 4.6</h2>
+<p>The update from Liquibase 3.10 to 4.6 has been a major effort, and it's allowed us to offer users  a bunch of new features, significant improvements, and bug fixes. Following are some highlights:</p>
+<ol>
 <li>
-<p>Apache Groovy 3, which offers several <a href="https://groovy-lang.org/releasenotes/groovy-3.0.html">enhancements</a> to the language, including GDK improvements, a new parrot parser – far more flexible than the previous versions – and a collection of other new features and capabilities.</p>
+<p>The extension classes are now loaded with the java.util.ServiceLoader system instead of the legacy custom class-finding logic. This might not impact the main Liquibase functionality, but it will affect anyone using extension classes.</p>
 </li>
 <li>
-<p>SpringBoot 2.4: This release adds a significant number of new features and improvements, such as improvements to the config file processing, a new startup actuator endpoint to help identify beans that are taking longer than expected to start, and an update to Spring Framework 5.3. For more information, check out <a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4-Release-Notes">SpringBoot 2.4 release notes</a>.</p>
+<p>Logging is now based on java.util.Logging, which is unlikely to directly impact applications.</p>
 </li>
 <li>
-<p>Gradle 6, which brings faster incremental Java and Groovy compilation, better version ordering, many bug fixes, and more. Refer to <a href="https://docs.gradle.org/6.5/release-notes.html">Gradle Release Notes</a> for more information.</p>
+<p>Support has been added to enable users to connect to Liquibase Hub (<a href="https://hub.liquibase.com">hub.liquibase.com</a>). This allows you to organize, monitor, and visualize Liquibase database change activity in real time.</p>
 </li>
-</ul>
-<h2>New Release Cadence</h2>
-<p>Going forward, the Grails framework will adhere to the following release cadence:</p>
-<ul>
-<li>A patch release every 3 weeks, which will include only bug fixes and will not introduce new features or breaking changes</li>
-<li>A minor release every 6 weeks, which will introduce new features/functionality in a backward compatible manner</li>
-<li>A major release once every year, which may introduce breaking changes</li>
-</ul>
-<p>This disciplined approach to releases will make the upgrade path for future minor and major releases easier.</p>
-<h2>Grails Framework EOL Schedule</h2>
-<p>In 2021, we will be scheduling “End Of Life” for Grails 2 and 3 as follows:</p>
-<ul>
-<li>Grails 2 will be EOL after June 30th, 2021.</li>
-<li>Grails 3 will be EOL after September 30th, 2021.</li>
-</ul>
-<p>Going forward, with each major release, the previous major release will go into maintenance and support mode.</p>
-<h2>The Road Ahead</h2>
-<p>We are excited to continue to advance the Grails framework in the year 2021 with the support of the new <a href="https://grails.org/foundation/index.html">Grails Foundation</a> and great community. We will be focusing on improving the performance of the Grails application and user experience. In addition, we are planning a number of enhancements including:</p>
-<ul>
-<li>Making GSP more modular and independent of the Grails framework</li>
-<li>Transaction support in GORM for MongoDB</li>
-<li>Native support for web-sockets</li>
-<li>Continuously improving Grails documentation (especially around plugins, Micronaut configuration, HTTP Client, and other features)</li>
-<li>Better integration with Micronaut, such as declarative HTTP Client</li>
-<li>Better support for Kafka, including creating Kafka listeners through a plugin and more</li>
-</ul>
+<li>
+<p>Support has been added for additional databases, such as CockroachDB and Maria DB.</p>
+</li>
+<li>
+<p>We've made significant changes to some important configuration and command APIs and added a new CLI library.</p>
+</li>
+<li>
+<p>Newly added support for Liquibase Quality Checks allow you to run checks against changelogs and SQL scripts.</p>
+</li>
+</ol>
+<p>For more information, we recommend checking out <a href="https://docs.liquibase.com/tools-integrations/extensions/extension-upgrade-guides/home.html">Liquibase Extension Upgrade Guide</a> and the <a href="https://github.com/liquibase/liquibase/releases/">release notes</a> for each major version starting with 4.x (4.1, 4.2, and so on up to 4.6).</p>
+<h2>Still Not Updated to Grails Framework 5?</h2>
+<p>We are excited about the recent release of Grails framework 5 and continually updating documentation and popular libraries. Now is a good time to update to Grails framework 5 and switch to Liquibase 4.</p>
+<p>We would love to hear about your experience with the update to Grails Database Migration 4.0.0-RC1, and if you need any help with your upgrade, we're here to <a href="https://grails.org/support.html">support</a> you.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-2.png)'>
-  <a href='https://grails.org/blog/2021-11-23-db-migration-plugin-update.html'>
-    <h3>November 23, 2021</h3>
-    <h2>Grails Database Migration 4.0.0-RC1 Released</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
   <a href='https://grails.org/blog/2021-11-11.html'>
     <h3>November 11, 2021</h3>
@@ -126,6 +107,12 @@
   <a href='https://grails.org/blog/2021-10-11-grails-5-ga.html'>
     <h3>October 11, 2021</h3>
     <h2>Grails framework 5 GA Released</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
+  <a href='https://grails.org/blog/2021-10-08-developer-advocate-announced.html'>
+    <h3>October 8, 2021</h3>
+    <h2>New Developer Advocate Announced</h2>
   </a>
 </article></div>
     </div>

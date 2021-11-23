@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 23 Nov 2021 10:17:40 GMT</pubDate><item><title>Grails® 5 - Groovy Podcast Episode 84</title><link>https://grails.org/blog/2021-11-11.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 23 Nov 2021 21:35:26 GMT</pubDate><item><title>Grails Database Migration 4.0.0-RC1 Released</title><link>https://grails.org/blog/2021-11-23-db-migration-plugin-update.html</link><description><![CDATA[</p>
+<p>The Grails Database Migration plugin is one of the most popular plugins in the Grails ecosystem. It helps manage database changes in a structural manner and prevents inconsistencies, communication issues, and other problems.</p>
+<p>In today's technology landscape, where application and database schemas are continuously evolving, this plugin makes it easy for the development team to keep track of database changes, quickly rollback, and modify the schema.</p>
+<p>The plugin internally uses the Liquibase library to manage the database. When using the plugin, database migrations are represented in the form of text, either using Groovy DSL or native Liquibase XML, in one or more changelog files. There are several popular approaches to maintaining and organizing  the changelog files. We suggest you check <a href="https://grails-plugins.github.io/grails-database-migration/snapshot/index.html">Grails Database Migration plugin documentation</a> for details.</p>
+<p>In this release, we have updated to Liquibase 4.6, Grails framework 5, and Apache Groovy 3. Refer to the release notes for 4.0.0-RC1 for more details.</p>
+<h2>Upgrading from Liquibase 3.10 to 4.6</h2>
+<p>The update from Liquibase 3.10 to 4.6 has been a major effort, and it's allowed us to offer users  a bunch of new features, significant improvements, and bug fixes. Following are some highlights:</p>
+<ol>
+<li>
+<p>The extension classes are now loaded with the java.util.ServiceLoader system instead of the legacy custom class-finding logic. This might not impact the main Liquibase functionality, but it will affect anyone using extension classes.</p>
+</li>
+<li>
+<p>Logging is now based on java.util.Logging, which is unlikely to directly impact applications.</p>
+</li>
+<li>
+<p>Support has been added to enable users to connect to Liquibase Hub (<a href="https://hub.liquibase.com">hub.liquibase.com</a>). This allows you to organize, monitor, and visualize Liquibase database change activity in real time.</p>
+</li>
+<li>
+<p>Support has been added for additional databases, such as CockroachDB and Maria DB.</p>
+</li>
+<li>
+<p>We've made significant changes to some important configuration and command APIs and added a new CLI library.</p>
+</li>
+<li>
+<p>Newly added support for Liquibase Quality Checks allow you to run checks against changelogs and SQL scripts.</p>
+</li>
+</ol>
+<p>For more information, we recommend checking out <a href="https://docs.liquibase.com/tools-integrations/extensions/extension-upgrade-guides/home.html">Liquibase Extension Upgrade Guide</a> and the <a href="https://github.com/liquibase/liquibase/releases/">release notes</a> for each major version starting with 4.x (4.1, 4.2, and so on up to 4.6).</p>
+<h2>Still Not Updated to Grails Framework 5?</h2>
+<p>We are excited about the recent release of Grails framework 5 and continually updating documentation and popular libraries. Now is a good time to update to Grails framework 5 and switch to Liquibase 4.</p>
+<p>We would love to hear about your experience with the update to Grails Database Migration 4.0.0-RC1, and if you need any help with your upgrade, we're here to <a href="https://grails.org/support.html">support</a> you.</p>]]></description><author>Puneet Behl</author><guid>2021-11-23-db-migration-plugin-update</guid><pubDate>Tue, 23 Nov 2021 00:00:00 GMT</pubDate></item><item><title>Grails® 5 - Groovy Podcast Episode 84</title><link>https://grails.org/blog/2021-11-11.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/podcast.html"><span class="hashtag">#podcast</span></a></p>
 <p><a href="https://twitter.com/kenkousen">Ken Kousen</a> (Java Champion, NFJS speaker, serial book author) invited <a href="https://twitter.com/puneetbhl">Puneet Behl</a> (Grails Framework Development Lead) and <a href="https://twitter.com/sdelamo">Sergio del Amo</a> (2GM Developer Advocate) to join him for the latest episode of the Groovy Podcast.</p>
 <p>This episode covers Grails framework 5, migrating from Grails framework 2 to Grails framework 5, Grails infrastructure, Micronaut framework integration with Grails framework, and more.</p>

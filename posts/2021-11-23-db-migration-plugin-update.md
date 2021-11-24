@@ -16,7 +16,7 @@ The Grails Database Migration plugin is one of the most popular plugins in the G
 
 In today's technology landscape, where application and database schemas are continuously evolving, this plugin makes it easy for the development team to keep track of database changes, quickly rollback, and modify the schema.
 
-The plugin internally uses the Liquibase library to manage the database. When using the plugin, database migrations are represented in the form of text, either using Groovy DSL or native Liquibase XML, in one or more changelog files. There are several popular approaches to maintaining and organizing  the changelog files. We suggest you check [Grails Database Migration plugin documentation](https://grails-plugins.github.io/grails-database-migration/snapshot/index.html) for details.
+The plugin internally uses the Liquibase library to manage the database. When using the plugin, database migrations are represented in the form of text, either using Groovy DSL or native Liquibase XML, in one or more changelog files. There are several popular approaches to maintaining and organizing  the changelog files. We suggest you check [Grails Database Migration plugin documentation](https://grails-plugins.github.io/grails-database-migration/4.0.0-RC1/index.html) for details.
 
 In this release, we have updated to Liquibase 4.6, Grails framework 5, and Apache Groovy 3. Refer to the release notes for 4.0.0-RC1 for more details.
 

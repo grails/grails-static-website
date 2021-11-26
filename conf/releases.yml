@@ -339,3 +339,6 @@ releases:
   -
     version: 4.0.13
     publicationDate: Nov 23, 2021
+  -
+    version: 5.0.2
+    publicationDate: Nov 26, 2021

@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>2GM Q3 Town Hall Meeting: 2021 Q3</title>
+    <title>Grails Framework and Log4j 2 Vulnerability</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Community members who missed the live broadcast of our 2021 third-quarter Town Hall Meeting can watch the video recording here." />
-    <meta name="date" content="September 24, 2021" />
+    <meta name="description" content="Most applications are not affected since the Grails framework uses Logback by default." />
+    <meta name="date" content="December 14, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
-    <meta name='twitter:card' content='player'/><meta name='twitter:player' content='https://www.youtube.com/embed/bG89gtyVPP8' />
-<meta name='twitter:player:width' content='560' />
-<meta name='twitter:player:height' content='315' />
-
+    <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Community members who missed the live broadcast of our 2021 third-quarter Town Hall Meeting can watch the video recording here.'/>
+    <meta name='twitter:description' content='Most applications are not affected since the Grails framework uses Logback by default.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='2GM Q3 Town Hall Meeting: 2021 Q3'/>
-    <meta property='og:description' content='Community members who missed the live broadcast of our 2021 third-quarter Town Hall Meeting can watch the video recording here.'/>
+    <meta property='og:title' content='Grails Framework and Log4j 2 Vulnerability'/>
+    <meta property='og:description' content='Most applications are not affected since the Grails framework uses Logback by default.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -63,26 +60,51 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>2GM Q3 Town Hall Meeting: 2021 Q3</h1>
-<p><span class="author">By Jen Wiese</span></p>
-<p><span class="date">September 24, 2021</span></p>
-<p>A big thanks to everyone who joined us for our Q3 2GM Town Hall Meeting! For those of you who missed the live event, the recording is embedded below.</p>
-<p>At this quarter's meeting, we provided an update on the latest advancements with the Grails and Micronaut frameworks, including a look at what is coming soon. We also shared the latest news and sponsors of the Grails and Micronaut Foundations, as well as some great live discussions and Q&amp;A with our panel.</p>
-<p>A special thanks to our fantastic panel of experts: Jeff Scott Brown, James Kleeh, Puneet Behl, Sergio del Amo Caballero, and our awesome guest Tim Berglund.</p>
-<p>Till next time!</p>
-<p>— Jen Wiese</p>
-<p><a href="https://objectcomputing.com/download_file/5342">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/bG89gtyVPP8" frameborder="0"></iframe>
+  <div class='light padded blogpost'><h1>Grails Framework and Log4j 2 Vulnerability</h1>
+<p><span class="author">By Sergio del Amo</span></p>
+<p><span class="date">December 14, 2021</span></p>
+<p>Vulnerability <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a> may allow an attacker to remotely execute code. It affects <a href="https://logging.apache.org/log4j/2.x/">Log4j</a>'s <code>log4j-core</code> jar. Log4j <a href="https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.15.0/">v2.15.0</a> fixes it. Moreover, Log4j <a href="https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.16.0/">v2.16.0</a> disables JNDI functionality by default, and it removes message lookups.</p>
+<h2>Are Grails 2 applications vulnerable?</h2>
+<p>CVE-2021-44228 only affects log4j versions between 2.0 and 2.14.1. Grails 2 applications used Log4j 1.x. However, you should consider migrating as soon as possible to the latest version of the Grails framework. Grails 2 is EOL (End of Life).</p>
+<h2>Are Grails applications (3, 4, or 5) vulnerable?</h2>
+<p>All Grails applications built on Grails framework 3.0.0 and later use <a href="http://logback.qos.ch">Logback</a>. Thus, <strong>most Grails applications are not affected</strong>.</p>
+<p>However, your application might be vulnerable if it includes untrusted input in the log messages and pulls <code>log4j-core</code> as a transitive dependency through some other library or a plugin.</p>
+<h2>The &quot;tomcat-embed-logging-log4j&quot; dependency</h2>
+<p>You might have noticed that there is a tomcat-embed-logging-log4j dependency in the classpath. We believe it is not affected by the vulnerability because:</p>
+<ol>
+<li>The JAR does not contain <code>org/apache/logging/log4j/core/lookup/JndiLookup.class</code>.</li>
+<li>The <a href="https://repo1.maven.org/maven2/org/apache/tomcat/embed/tomcat-embed-logging-log4j/8.5.2/tomcat-embed-logging-log4j-8.5.2.pom">POM</a> does not mention any dependencies.</li>
+</ol>
+<h2>How can you check to see if you are pulling <code>log4j-core</code> as a transitive dependency?</h2>
+<p>If you are using Gradle, the following command will return a dependency report for 'log4j-core' dependency:</p>
+<pre><code>./gradlew dependencyInsight --dependency log4j-core
+</code></pre>
+<p>For Grails 2 applications, use:</p>
+<pre><code>./grailsw dependencyReport
+</code></pre>
+<h2>How do you tell your build to use a particular version of Log4j?</h2>
+<p>With Gradle, if your application is pulling <code>log4j-core</code> transitively, you can declare a <code>resolutionStrategy</code>:</p>
+<pre><code class="language-groovy">configurations.all {
+  resolutionStrategy.eachDependency { DependencyResolveDetails details -&amp;gt;
+    if (details.requested.group == 'org.apache.logging.log4j') {
+      details.useVersion '2.16.0'
+    }
+  }
+}
+</code></pre>
+<h2>Other Options</h2>
+<p>If you cannot upgrade, please do the following, as <a href="https://logging.apache.org/log4j/2.x/">suggested by the Log4j team</a>:</p>
+<blockquote>
+<p>For those who cannot upgrade to 2.15.0, in releases &gt;=2.10, this behavior can be mitigated by setting either the system property <code>log4j2.formatMsgNoLookups</code> or the environment variable <code>LOG4J_FORMAT_MSG_NO_LOOKUPS</code> to <code>true</code>.
+For releases &gt;=2.7 and &lt;=2.14.1, all <code>PatternLayoutpatterns</code> can be modified to specify the message converter as <code>%m{nolookups}</code> instead of just <code>%m</code>.
+For releases &gt;=2.0-beta9 and &lt;=2.10.0, the mitigation is to remove the <code>JndiLookup</code> class from the classpath: <code>zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class</code>.</p>
+</blockquote>
+<h2>Learn More</h2>
+<p>All Grails applications built on Grails framework 3.0.0 and later are Spring Boot applications. Learn more about <a href="https://spring.io/blog/2021/12/10/log4j2-vulnerability-and-spring-boot">Log4j 2 vulnerability and Spring Boot</a> in the Spring blog.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
-  <a href='https://grails.org/blog/2021-12-14-log4j2-cve.html'>
-    <h3>December 14, 2021</h3>
-    <h2>Grails Framework and Log4j 2 Vulnerability</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
   <a href='https://grails.org/blog/2021-12-06-february-2022-training-announcement.html'>
     <h3>December 7, 2021</h3>
@@ -93,6 +115,12 @@
   <a href='https://grails.org/blog/2021-11-23-db-migration-plugin-update.html'>
     <h3>November 23, 2021</h3>
     <h2>Grails Database Migration 4.0.0-RC1 Released</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
+  <a href='https://grails.org/blog/2021-11-11.html'>
+    <h3>November 11, 2021</h3>
+    <h2>Grails® 5 - Groovy Podcast Episode 84</h2>
   </a>
 </article></div>
     </div>

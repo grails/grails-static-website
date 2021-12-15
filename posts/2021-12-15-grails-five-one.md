@@ -12,7 +12,7 @@ image: grails-blog-index-2.png
 
 [%date]
 
-The [Grails Foundation™](https://grails.org/foundation/index.html) is pleased to announce a new minor release: Grails framework 5.1!
+The [Grails Foundation™](https://grails.org/foundation/index.html) is pleased to announce a new minor release: [**Grails framework 5.1**](https://github.com/grails/grails-core/releases/tag/v5.1.0)!
 
 This release of the Grails framework includes a number of bug fixes and improvements for Gradle 7.2 support, plus some updates to our plugins and dependencies.
 

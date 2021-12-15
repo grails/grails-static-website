@@ -1,7 +1,7 @@
 ---
 title: Grails 5.1 Released
 date: Dec 15, 2021
-description: 
+description: Grails framework 5.1.0 improves Gradle 7.2 support and upgrades to Spring Boot 2.6.1, GORM 7.2 and Micronaut 3.2.0
 author: Puneet Behl
 image: grails-blog-index-2.png
 ---

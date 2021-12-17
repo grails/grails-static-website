@@ -47,8 +47,18 @@ In your `build.gradle` file
 
 ## The Road Ahead
 
-- Spring Security Core Plugin
-- Major updates to the Grails CLI
+### Spring Security Core Plugin
+
+Currently, the Spring Security Core Grails plugin still uses Spring Security Core 5.1.13.RELEASE which is EOL. We are planning to update the plugin to use the latest version of Spring Security. See [Spring Security Versions · spring-projects/spring-security Wiki · GitHub](https://github.com/spring-projects/spring-security/wiki/Spring-Security-Versions#released-versions) for more information.
+
+### Leveling up the Grails CLI!
+
+The current implementation of Grails CLI is difficult to test and unadaptable. For example, configuring automation tools to update dependencies is impossible. Also, the CLI does not work offline and it is very difficult to customize it. We are planning to work on implementing a CLI which is super flexible, easy to customize, and basically solves the above limitations.
+
+### Consolidating Grails Plugin
+
+Currently, the Grails plugin is distributed over in the multiple Github organization such as [gpc - Grails Plugin Collective · GitHub](https://github.com/gpc), [Grails Plugins · GitHub](https://github.com/grails-plugins), and [grails3-plugins · GitHub](https://github.com/grails3-plugins). We are planning to consolidate a list of all active plugins into one single place. Please stay tuned to our blogs, we will soon share more information around the same.
+
 
 ## References
 

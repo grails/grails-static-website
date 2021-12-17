@@ -49,15 +49,3 @@ In your `build.gradle` file
 
 - Spring Security Core Plugin
 - Major updates to the Grails CLI
-
-## References
-
-- [Spring Boot 2.6 Release Notes · spring-projects/spring-boot Wiki](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes)
-- [Upgrading to Spring Framework 5.x · spring-projects/spring-framework Wiki](https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x)
-- [Grails 5.1 Release Notes](https://github.com/grails/grails-core/releases/tag/v5.1.0)
-- [Micronaut 3.2 Release Notes](https://github.com/micronaut-projects/micronaut-core/releases/tag/v3.2.2)
-- [GORM for Hibernate 7.2 Release Notes](https://github.com/grails/gorm-hibernate5/releases/tag/v7.2.0)
-- [GORM for MongoDB 7.2 Release Notes](https://github.com/grails/gorm-mongodb/releases/tag/v7.2.0)
-- [GORM for Neo4j 7.2 Release Notes](https://github.com/grails/gorm-neo4j/releases/tag/v7.2.0)
-- [Hibernate ORM 5.6.2.Final released](https://in.relation.to/2021/12/08/hibernate-orm-562/)
-- [What's New — MongoDB Java Sync 4.4](https://docs.mongodb.com/drivers/java/sync/current/whats-new/#std-label-version-4.4)

@@ -14,7 +14,7 @@ image: grails-blog-index-2.png
 
 The [Grails Foundation™](https://grails.org/foundation/index.html) is pleased to announce a new minor release: [**Grails framework 5.1**](https://github.com/grails/grails-core/releases/tag/v5.1.0)!
 
-This release of the Grails framework includes a number of bug fixes and improvements for Gradle 7.2 support, plus some updates to our plugins and dependencies.
+This release of the Grails framework includes a number of bug fixes and Gradle 7.2 compatibility changes i.e. now the Gradle task definitions with [incorrectly defined input output will fail the build](https://docs.gradle.org/7.0/userguide/upgrading_version_6.html#task_validation_problems_are_now_errors), plus bunch of dependencies updates. For more information, please check [**Grails 5.1 release notes**](https://github.com/grails/grails-core/releases/tag/v5.1.0).
 
 The dependencies that have been updated include:
 

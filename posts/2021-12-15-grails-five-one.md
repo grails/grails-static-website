@@ -29,7 +29,7 @@ A major change that accompanies Spring Boot 2.6 is that circular references are 
 
 ## A Note About Semantic Versioning
 
-Grails framework 4 is the first version of the Framework that follows semantic versioning. The release of Grails framework 5.1 is not expected to break Grails 5 applications, and we recommend that you upgrade quickly to get the latest updates into your Grails 5 applications.
+Grails framework 4 was the first version of the Framework that follows semantic versioning. Grails framework 5.1.0 is a minor release. Because of that, it should not contain breaking changes. It contains new features, the patches introduced in Grails 5.0.x releases and minor upgrades to Grails dependencies such as SpringBoot, Micronaut or GORM. Please, upgrade quickly to get the latest updates into your Grails 5 applications.
 
 ## Upgrading to Grails Framework 5.1
 

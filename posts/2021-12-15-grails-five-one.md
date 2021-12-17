@@ -49,3 +49,7 @@ In your `build.gradle` file
 
 - Spring Security Core Plugin
 - Major updates to the Grails CLI
+
+## Need help upgrading to Grails® framework 5.1?
+
+We are excited with the release of Grails 5.1 and looking forward to hearing about your experience updating the applications. Please feel free to reach out to us if you have any questions or need any help updating your applications. We are here to [support](https://grails.org/support.html) you.

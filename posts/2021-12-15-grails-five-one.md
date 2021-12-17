@@ -35,15 +35,15 @@ Grails framework 4 is the first version of the Framework that follows semantic v
 
 As this is a minor release, updating to Grails framework 5.1 should be pretty straightforward. Here are step-by step instructions:
 
-In your gradle.properties file,
+In your `gradle.properties` file,
 
-- Update property grailsVersion to 5.1.0
-- Update property gorm.version to 7.2.0
+- Update property `grailsVersion` to 5.1.0
+- Update property `gorm.version` to 7.2.0
 
-In your build.gradle file
+In your `build.gradle` file
 
-- Update Gradle hibernate5 plugin to 7.2.0
-- Under dependencies, update hibernate-core to 5.6.2.Final
+- Update Gradle `hibernate5` plugin to 7.2.0
+- Under dependencies, update `hibernate-core` to 5.6.2.Final
 
 ## The Road Ahead
 

@@ -18,14 +18,20 @@ This release of the Grails framework includes a number of bug fixes and improvem
 
 The dependencies that have been updated include:
 
-- Spring Boot 2.6.1
-- Micronaut 3.2
-- GORM for Hibernate 7.2, which updates to Hibernate 5.6
-- GORM for MongoDB 7.2, which updates to underline Mongo driver 4.4
+### Spring Boot 2.6.1
+One important change that accompanies Spring Boot 2.6 is that circular references are prohibited. In order to maintain backwards compatibility for Grails users, Grails framework 5.1 explicitly enables circular references by default. This will no longer be the case once Grails framework 6 is released. For more information check the [Spring Boot 2.6 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes).
 
-Check-out the release notes from these libraries to learn about the new features that are included with those releases.
+### Micronaut 3.2
+Updating to Micronaut 3.2 should not affect the Grails application. Please check [release notes](https://github.com/micronaut-projects/micronaut-core/releases/tag/v3.2.2) for more details. 
 
-A major change that accompanies Spring Boot 2.6 is that circular references are prohibited. In order to maintain backwards compatibility for Grails users, Grails framework 5.1 explicitly enables circular references by default. This will no longer be the case once Grails framework 6 is released.  
+### GORM for Hibernate 7.2, which updates to Hibernate 5.6
+This version updates to [Hibernate ORM 5.6.2](https://in.relation.to/2021/12/08/hibernate-orm-562/). There are several other bug fixes and dependency updates. For complete details,  please check [release notes for GORM for Hibernate 7.2](https://github.com/grails/gorm-hibernate5/releases/tag/v7.2.0).
+
+### GORM for MongoDB 7.2, which updates to underline Mongo driver 4.4
+This version updates the underlying Mongo driver to 4.4. Read [What's New — MongoDB Java Sync 4.4](https://docs.mongodb.com/drivers/java/sync/current/whats-new/#std-label-version-4.4) to understand what has changed in the Java driver. We also recommend you to check [release notes for GORM for MongoDB 7.2](https://github.com/grails/gorm-mongodb/releases/tag/v7.2.0) for a list of all the changes and dependency updates.
+
+### GORM for Neo4j
+Please check [release notes](https://github.com/grails/gorm-neo4j/releases/tag/v7.2.0) for complete information about the changes in this release.
 
 ## A Note About Semantic Versioning
 

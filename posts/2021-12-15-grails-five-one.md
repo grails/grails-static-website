@@ -71,3 +71,4 @@ Currently, the Grails plugin is distributed over in the multiple Github organiza
 - [GORM for Neo4j 7.2 Release Notes](https://github.com/grails/gorm-neo4j/releases/tag/v7.2.0)
 - [Hibernate ORM 5.6.2.Final released](https://in.relation.to/2021/12/08/hibernate-orm-562/)
 - [What's New — MongoDB Java Sync 4.4](https://docs.mongodb.com/drivers/java/sync/current/whats-new/#std-label-version-4.4)
+

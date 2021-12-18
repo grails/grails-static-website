@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSON Views</title>
+    <title>Grails Framework 5.1 Released</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Learn about Grails Framework® convention-based content negotiation." />
-    <meta name="date" content="April 13, 2016" />
+    <meta name="description" content="Grails framework 5.1.0 improves Gradle 7.2 support and upgrades to Spring Boot 2.6.1, GORM 7.2, and Micronaut framework 3.2.0" />
+    <meta name="date" content="December 18, 2021" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Learn about Grails Framework® convention-based content negotiation.'/>
+    <meta name='twitter:description' content='Grails framework 5.1.0 improves Gradle 7.2 support and upgrades to Spring Boot 2.6.1, GORM 7.2, and Micronaut framework 3.2.0'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='JSON Views'/>
-    <meta property='og:description' content='Learn about Grails Framework® convention-based content negotiation.'/>
+    <meta property='og:title' content='Grails Framework 5.1 Released'/>
+    <meta property='og:description' content='Grails framework 5.1.0 improves Gradle 7.2 support and upgrades to Spring Boot 2.6.1, GORM 7.2, and Micronaut framework 3.2.0'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -26,8 +26,8 @@
     <link rel='stylesheet' href='https://grails.org/stylesheets/screen.css' />
     <script src='https://grails.org/javascripts/navigation.js'></script>
     
-    <link rel='stylesheet' href='https://grails.org/stylesheets/prism.css'/>
-    <script src='https://grails.org/javascripts/prism.js'></script>
+    
+    
 </head>
 <body><header class='mainheader'>
     <div class='content'>
@@ -60,76 +60,66 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>JSON Views</h1>
-<p><span class="author">By Jeff Scott Brown</span></p>
-<p><span class="date">April 13, 2016</span></p>
-<p>Tags: <a href="https://grails.org/blog/tag/json.html"><span class="hashtag">#json</span></a> <a href="https://grails.org/blog/tag/rest.html"><span class="hashtag">#rest</span></a></p>
-<p>We recently published another Grails<sup>®</sup> Quickcast, brought to you in collaboration with DZone. In case you missed the first episode on Grails 3 Interceptors, you can view it <a href="https://objectcomputing.com/products/grails/resources/quickcasts/grails-interceptors">here</a>.</p>
-<p>The latest episode introduces JSON Views, a really simple yet powerful tool supported by Grails 3 for describing the JSON response formats for REST APIs. The video is available <a href="https://objectcomputing.com/products/grails/resources/quickcasts/json-views">here</a>.</p>
-<p>Another powerful feature supported by the tool is convention-based content negotiation.</p>
-<p>Consider a simple domain class.</p>
-<pre><code class="language-groovy">package demo
-
-import grails.rest.Resource
-
-@Resource(uri='/books', formats=['json'])
-class Book {
-    String title
-    String author
-}
-</code></pre>
-<p>A simple JSON view for that domain class might look like this.</p>
-<pre><code class="language-groovy">// grails-app/views/book/_book.gson
-import demo.Book
-
-model {
-	Book book
-}
-
-json {
-   bookTitle book.title
-   bookAuthor book.author
-}
-</code></pre>
-<p>When a request is made to render a Book, that view will be used by default.</p>
-<pre><code>    $ curl http://localhost:8080/books/1.json
-    {&quot;bookTitle&quot;:&quot;Wool&quot;,&quot;bookAuthor&quot;:&quot;Hugh Howey&quot;}
-</code></pre>
-<p>Grails takes into account a number of factors when attempting to resolve the view including the content type, version and locale.</p>
-<p>The following paths are searched:</p>
+  <div class='light padded blogpost'><h1>Grails Framework 5.1 Released</h1>
+<p><span class="author">By Puneet Behl</span></p>
+<p><span class="date">December 18, 2021</span></p>
+<p>The <a href="https://grails.org/foundation/index.html">Grails Foundation™</a> is pleased to announce a new minor release: <a href="https://github.com/grails/grails-core/releases/tag/v5.1.0"><strong>Grails framework 5.1</strong></a>!</p>
+<p>This release of the Grails framework includes a number of bug fixes and Gradle 7.2 compatibility changes (the Gradle task definitions with <a href="https://docs.gradle.org/7.0/userguide/upgrading_version_6.html#task_validation_problems_are_now_errors">incorrectly defined input output will now fail the build</a>), plus a bunch of dependencies updates. For more information, please check the <a href="https://github.com/grails/grails-core/releases/tag/v5.1.0"><strong>Grails 5.1 release notes</strong></a>.</p>
+<h2>Updated Dependencies</h2>
+<p>The dependencies that have been updated include:</p>
+<h3>Spring Boot 2.6.1</h3>
+<p>One important change that accompanies Spring Boot 2.6 is that circular references are prohibited. In order to maintain backwards compatibility for Grails users, Grails framework 5.1 explicitly enables circular references by default. This will no longer be the case once Grails framework 6 is released. For more information check the <a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes">Spring Boot 2.6 Release Notes</a>.</p>
+<h3>Micronaut 3.2</h3>
+<p>Updating to Micronaut 3.2 should not affect Grails applications. Please check <a href="https://github.com/micronaut-projects/micronaut-core/releases/tag/v3.2.2">the release notes</a> for more details.</p>
+<h3>GORM for Hibernate 7.2, which updates to Hibernate 5.6</h3>
+<p>This version updates to <a href="https://in.relation.to/2021/12/08/hibernate-orm-562/">Hibernate ORM 5.6.2</a>. There are several other bug fixes and dependency updates. For complete details,  please check <a href="https://github.com/grails/gorm-hibernate5/releases/tag/v7.2.0">the release notes for GORM for Hibernate 7.2</a>.</p>
+<h3>GORM for MongoDB 7.2, which updates to underline Mongo driver 4.4</h3>
+<p>This version updates the underlying Mongo driver to 4.4. Read <a href="https://docs.mongodb.com/drivers/java/sync/current/whats-new/#std-label-version-4.4">What's New — MongoDB Java Sync 4.4</a> to understand what has changed in the Java driver. We also recommend that you check <a href="https://github.com/grails/gorm-mongodb/releases/tag/v7.2.0">the release notes for GORM for MongoDB 7.2</a> for a list of all the changes and dependency updates.</p>
+<h3>GORM for Neo4j</h3>
+<p>Please check <a href="https://github.com/grails/gorm-neo4j/releases/tag/v7.2.0">the release notes</a> for complete information about the changes in this release.</p>
+<h2>A Note About Semantic Versioning</h2>
+<p>Grails framework 4 was the first version of the Framework that followed semantic versioning. Grails framework 5.1.0 is a minor release; thus, it should not contain breaking changes. It contains new features, the patches introduced in Grails 5.0.x releases, and minor upgrades to Grails dependencies, such as Spring Boot, Micronaut, and GORM. Please upgrade quickly to get the latest updates into your Grails 5 applications.</p>
+<h2>Upgrading to Grails Framework 5.1</h2>
+<p>As this is a minor release, updating to Grails framework 5.1 should be pretty straightforward. Here are step-by step instructions:</p>
+<p>In your <code>gradle.properties</code> file,</p>
 <ul>
-<li>view_name[_LOCALE][_ACCEPT_CONTENT_TYPE][_ACCEPT_VERSION].gson (Example: show_de_hal_v1.0.gson)</li>
-<li>view_name[_LOCALE][_ACCEPT_CONTENT_TYPE].gson (Example: show_de_hal.gson)</li>
-<li>view_name[_LOCALE][_ACCEPT_VERSION].gson (Example: show_de_v1.0.gson)</li>
-<li>view_name[_LOCALE].gson (Example: show_de.gson)</li>
-<li>view_name[_ACCEPT_CONTENT_TYPE][_ACCEPT_VERSION].gson (Example: show_hal_v1.0.gson)</li>
-<li>view_name[_ACCEPT_VERSION][_ACCEPT_CONTENT_TYPE].gson (Example: show_v1.0_hal.gson)</li>
-<li>view_name[_ACCEPT_CONTENT_TYPE].gson (Example: show_hal.gson)</li>
-<li>view_name[_ACCEPT_VERSION].gson (Example: show_v1.0.gson)</li>
-<li>view_name.gson (Example: show.gson)</li>
+<li>Update property <code>grailsVersion</code> to 5.1.0</li>
+<li>Update property <code>gorm.version</code> to 7.2.0</li>
 </ul>
-<p>The content type (defined by either the <code>ACCEPT</code> header or file extension in the URI) is taken into account to allow different formats for the same view.</p>
-<p>For more detail, see <a href="https://grails.github.io/grails-views/latest/">the official documentation</a>.</p>
+<p>In your <code>build.gradle</code> file</p>
+<ul>
+<li>Update Gradle <code>hibernate5</code> plugin to 7.2.0</li>
+<li>Under dependencies, update <code>hibernate-core</code> to 5.6.2.Final</li>
+</ul>
+<h2>The Road Ahead</h2>
+<h3>Spring Security Core Plugin</h3>
+<p>Currently, the Spring Security Core Grails plugin still uses Spring Security Core 5.1.13.RELEASE which is EOL. We are planning to update the plugin to use the latest version of Spring Security. See <a href="https://github.com/spring-projects/spring-security/wiki/Spring-Security-Versions#released-versions">Spring Security Versions · spring-projects/spring-security Wiki · GitHub</a> for more information.</p>
+<h3>Leveling up the Grails CLI!</h3>
+<p>The current implementation of Grails CLI is difficult to test and unadaptable. For example, configuring automation tools to update dependencies is impossible. Also, the CLI does not work offline, and it is very difficult to customize it. We plan to work on implementing a new, super-flexible, easy-to-customize CLI that eliminates these limitations.</p>
+<h3>Consolidating Grails Plugins</h3>
+<p>Currently, Grails plugins are distributed across multiple Github organizations, including <a href="https://github.com/gpc">gpc - Grails Plugin Collective · GitHub</a>, <a href="https://github.com/grails-plugins">Grails Plugins · GitHub</a>, and <a href="https://github.com/grails3-plugins">grails3-plugins · GitHub</a>. We are planning to consolidate a list of all active plugins into one place. We will soon share more information about this initiative in the Grails blog.</p>
+<h2>Need help upgrading to Grails® framework 5.1?</h2>
+<p>We are excited about the release of Grails framework 5.1 and look forward to hearing about your experience with it. Please feel free to reach out to us if you have any questions or need help updating your applications. Community members and members of the core development team are available to answer questions on <a href="https://slack.grails.org/">our Slack channel</a>, and hourly commercial support can be purchased <a href="https://objectcomputing.com/products/grails/consulting-support">here</a>.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/2019-12-20.jpg)'>
+  <a href='https://grails.org/blog/2021-12-14-log4j2-cve.html'>
+    <h3>December 14, 2021</h3>
+    <h2>Grails Framework and Log4j 2 Vulnerability</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
+  <a href='https://grails.org/blog/2021-12-06-february-2022-training-announcement.html'>
+    <h3>December 7, 2021</h3>
+    <h2>Grails Training Now Enrolling</h2>
+  </a>
+</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-2.png)'>
-  <a href='https://grails.org/blog/2021-12-15-grails-five-one.html'>
-    <h3>December 18, 2021</h3>
-    <h2>Grails Framework 5.1 Released</h2>
-  </a>
-</article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/quickcast.jpg)'>
-  <a href='https://grails.org/blog/2017-01-20-2.html'>
-    <h3>January 20, 2017</h3>
-    <h2>Quickcast #4: Angular Scaffolding</h2>
-  </a>
-</article></div>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/quickcast.jpg)'>
-  <a href='https://grails.org/blog/2016-04-01-2.html'>
-    <h3>April 1, 2016</h3>
-    <h2>Quickcast #2: JSON Views</h2>
+  <a href='https://grails.org/blog/2021-11-23-db-migration-plugin-update.html'>
+    <h3>November 23, 2021</h3>
+    <h2>Grails Database Migration 4.0.0-RC1 Released</h2>
   </a>
 </article></div>
     </div>

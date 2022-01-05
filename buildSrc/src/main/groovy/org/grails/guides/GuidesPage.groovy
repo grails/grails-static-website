@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat
 @CompileStatic
 class GuidesPage {
 
-    public static final Integer NUMBER_OF_LATEST_GUIDES = 5
+    public static final Integer NUMBER_OF_LATEST_GUIDES = 8
     private static final Integer MARGIN_TOP = 50
     public static final String GUIDES_URL = "https://guides.grails.org"
 
@@ -79,10 +79,10 @@ class GuidesPage {
             setOmitNullAttributes(true)
             div(class: 'twocolumns') {
                 div(class: 'column') {
-                    mkp.yieldUnescaped rightColumn(tag, category, tags)
+                    mkp.yieldUnescaped rightColumn(tag, category, guides)
                 }
                 div(class: 'column') {
-                    mkp.yieldUnescaped leftColumn(tag, category, guides)
+                    mkp.yieldUnescaped leftColumn(tag, category, tags)
                     if ( tag ) {
                         mkp.yieldUnescaped guideGroupByTag(tag, guides)
 
@@ -93,20 +93,32 @@ class GuidesPage {
                         div(id: 'searchresults') {
                             mkp.yieldUnescaped('')
                         }
-                        mkp.yieldUnescaped guideGroupByCategory(categories().apprentice, guides)
                     }
                 }
             }
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     if ( !(tag || category) ) {
-                        mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides, true, 'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().apprentice, guides, true,'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().async, guides, true, 'margin-top: 0;')
                     }
                 }
                 div(class: 'column') {
                     if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().advanced, guides, true, 'margin-top: 0;')
+                    }
+                }
+            }
+
+            div(class: 'twocolumns') {
+                div(class: 'column') {
+                    if ( !(tag || category) ) {
                         mkp.yieldUnescaped guideGroupByCategory(categories().gorm, guides, true, 'margin-top: 0;')
-                        mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides)
+                    }
+                }
+                div(class: 'column') {
+                    if ( !(tag || category) ) {
+                        mkp.yieldUnescaped guideGroupByCategory(categories().testing, guides, true, 'margin-top: 0;')
 
                     }
                 }
@@ -114,8 +126,7 @@ class GuidesPage {
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     if ( !(tag || category) ) {
-                        mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides)
-                        mkp.yieldUnescaped guideGroupByCategory(categories().async, guides, true, 'margin-top: 0;')
+                        mkp.yieldUnescaped guideGroupByCategory(categories().devops, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().googlecloud, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().ios, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().android, guides)
@@ -124,7 +135,7 @@ class GuidesPage {
                 }
                 div(class: 'column') {
                     if ( !(tag || category) ) {
-                        mkp.yieldUnescaped guideGroupByCategory(categories().vue, guides)
+                        mkp.yieldUnescaped guideGroupByCategory(categories().vue, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().angular, guides, true, 'margin-top: 0;')
                         mkp.yieldUnescaped guideGroupByCategory(categories().angularjs, guides)
                         mkp.yieldUnescaped guideGroupByCategory(categories().react, guides)
@@ -151,29 +162,30 @@ class GuidesPage {
     }
 
     @CompileDynamic
-    static String leftColumn(Tag tag, Category category, List<Guide> guides) {
-        if ( tag || category ) {
-            return ''
-        }
+    static String leftColumn(Tag tag, Category category, Set<Tag> tags) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div {
-            mkp.yieldUnescaped latestGuides(guides)
-        }
-        writer.toString()
-    }
-    @CompileDynamic
-    static String sponsoredBy() {
-        StringWriter writer = new StringWriter()
-        MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: 'sponsoredby') {
-            h4 'Sponsored by'
-            a(href: 'https://objectcomputing.com/products/grails/') {
-                img src: "[%url]/images/oci_home_to_grails.svg", alt: 'Object Computing'
+            if (!( tag || category )) {
+                mkp.yieldUnescaped tagCloud(tags)
             }
         }
         writer.toString()
     }
+
+    @CompileDynamic
+    static String rightColumn(Tag tag, Category category, List<Guide> guides) {
+        StringWriter writer = new StringWriter()
+        MarkupBuilder html = new MarkupBuilder(writer)
+        html.div {
+            mkp.yieldUnescaped searchBox(tag, category)
+            if (!( tag || category )) {
+                mkp.yieldUnescaped latestGuides(guides)
+            }
+        }
+        writer.toString()
+    }
+
     @CompileDynamic
     static String latestGuides(List<Guide> guides) {
         StringWriter writer = new StringWriter()
@@ -220,22 +232,6 @@ class GuidesPage {
         writer.toString()
     }
 
-    @CompileDynamic
-    static String rightColumn(Tag tag, Category category, Set<Tag> tags) {
-        StringWriter writer = new StringWriter()
-        MarkupBuilder html = new MarkupBuilder(writer)
-        html.div {
-            mkp.yieldUnescaped searchBox(tag, category)
-            if ( tag || category ) {
-                mkp.yieldUnescaped sponsoredBy()
-            } else {
-                mkp.yieldUnescaped Training.training()
-                mkp.yieldUnescaped sponsoredBy()
-                mkp.yieldUnescaped tagCloud(tags)
-            }
-        }
-        writer.toString()
-    }
 
     @CompileDynamic
     static String searchBox(Tag tag, Category category) {

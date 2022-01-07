@@ -16,7 +16,7 @@ image: grails-blog-index-3.png
 
 The Grails Foundation™ is truly appreciative of the tremendous support we receive from our sponsors. In addition to financial support, generous contributions of development tools, infrastructure, and other resources are essential to the continued evolution of the Grails® framework. Thus, we have established a new partnership program to recognize the companies whose contributions enable us to maintain and expand both the open source technologies and the assets we rely on to keep our communities informed and engaged.
 
-Today, we are pleased to announce that Gradle Inc, the providers of [Gradle Build Tool](https://grails.org) and [Gradle Enterprise](https://gradle.com), has joined the [Grails Foundation](https://gradle.org/foundation/index.html) as our first Tools and Infrastructure Partner! In support of our organizations' shared values and goals within the open source ecosystem, Gradle provides the Foundation free instances of [Gradle Enterprise](https://gradle.com).
+Today, we are pleased to announce that Gradle Inc, the providers of [Gradle Build Tool](https://gradle.org) and [Gradle Enterprise](https://gradle.com), has joined the [Grails Foundation](https://grails.org/foundation/index.html) as our first Tools and Infrastructure Partner! In support of our organizations' shared values and goals within the open source ecosystem, Gradle provides the Foundation free instances of [Gradle Enterprise](https://gradle.com).
 
 Gradle Enterprise has helped our team to improve build times and test-feedback cycle times, and improve troubleshooting efficiency by combining root-cause analysis data with failure analytics.
 

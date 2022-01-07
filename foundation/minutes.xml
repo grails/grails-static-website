@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Foundation | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 07 Jan 2022 14:16:42 GMT</pubDate><item><title>Technology Advisory Board Meeting</title><link>https://grails.org/foundation/minutes/20210321-tab.html</link><description><![CDATA[</h2>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Foundation | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 07 Jan 2022 14:18:54 GMT</pubDate><item><title>Technology Advisory Board Meeting</title><link>https://grails.org/foundation/minutes/20211217-tab.html</link><description><![CDATA[</h2>
+<h3>Meeting Attendance:</h3>
+<ul>
+<li><strong>Puneet Behl</strong> - Grails Product Development Lead, Object Computing, Inc.</li>
+<li><strong>Paul King</strong> – Groovy Project Development Lead, Object Computing, Inc.</li>
+<li><strong>James Kleeh</strong> - Micronaut Product Development Lead, Object Computing, Inc.</li>
+<li><strong>Graeme Rocher</strong> - Grails co-founder; Architect, Oracle</li>
+<li><strong>Jason Schindler</strong> – Partner and Groovy, Grails, and Micronaut Team Manager, Object Computing Inc.</li>
+<li><strong>Jen Wiese</strong> - Grails Foundation Community Engagement Manager, Object Computing, Inc.</li>
+</ul>
+<h3>Not in Attendance:</h3>
+<ul>
+<li><strong>David Estes</strong> - Co-founder and VP of Engineering, Morpheus Data; Creator of the Grails Asset-Pipeline</li>
+</ul>
+<p><strong>The Meeting Was Led By:</strong> Jen Wiese</p>
+<hr />
+<h3>Agenda:</h3>
+<ul>
+<li>Welcome and Introduction of New Members</li>
+<li>Foundation Goals</li>
+<li>Technology Advisory Board Goals</li>
+<li>Review Communication</li>
+<li>Fondation Community Updates</li>
+<li>Tech Talk: Grails Update</li>
+<li>Sponsorships</li>
+<li>Open Discussion</li>
+</ul>
+<h3>Welcome and Introduction of New Members</h3>
+<ul>
+<li>New TAB Members: Jason Schindler and Paul King</li>
+<li>Covered internal communication channels</li>
+<li>Feel free to send in topics to discuss prior to meeting; all input and ideas are welcome</li>
+<li>We want to capitalize on the group of folks we have here, so please reach out</li>
+</ul>
+<h3>Foundation Goals</h3>
+<ul>
+<li>Ensure technical innovation and advancement of the Grails framework as a free and open public use software development framework for a growing global community</li>
+<li>Evangelize and promote the Grails framework as a leading technology in the JVM space</li>
+<li>Build and support an ecosystem of complementary documentation, functionality, and services</li>
+</ul>
+<h3>Technology Advisory Board Goals</h3>
+<ul>
+<li>Provide input to help guide the direction of the Framework</li>
+<li>Represent perspectives from various areas of the industry</li>
+<li>Ensure the Framework continues to reflect and serve its diverse and growing user community</li>
+<li>Your insights are a significant part of why the foundation exists!</li>
+</ul>
+<h3>Foundation Community Updates</h3>
+<ul>
+<li>Excited about recent investment in the Foundation with the Developer Advocate role that Sergio is filling</li>
+<li>Representing developer interests while engaging with our communities to advocate for the Grails framework</li>
+<li>Should be seeing a dedicated Grails YouTube Channel for all of the on-demand content for the community coming soon</li>
+<li>Ramping back up our Quickcasts, which are short technical tutorials (which will be available on demand), starting out with a series of introductory content</li>
+<li>Expecting to see more technical content published in blog posts and guides to help support our user community</li>
+<li>Continue with live public webinars and private tech talks for clients</li>
+<li>Continue with live, public and private training events</li>
+<li>Receive requests for these events regularly</li>
+<li>Just completed a 12-hour (4 morning) public, online training event with 30 participants!</li>
+<li>The Foundation will be delivering events moving forward: training workshops, webinars, publications, and other online community events</li>
+</ul>
+<h3>Technical Discussion</h3>
+<ul>
+<li>Planning for Grails 6
+<ul>
+<li>Minimum JDK support - minimum version at least 11? 17?
+<ul>
+<li>Move from 8</li>
+</ul>
+</li>
+<li>Early Grails 6 release? Support for JDK11
+<ul>
+<li>Groovy 4 - ready early 2022</li>
+<li>More Micronaut integration</li>
+</ul>
+</li>
+<li>Spring release Q4 2022</li>
+<li>Possible Grails 7 that would support JDK17 when released</li>
+<li>Support timeline for Grails 5 after release of Grails 6</li>
+</ul>
+</li>
+<li>Grails and Microanut Integration
+<ul>
+<li>Improved configuration integration between Grails and Micronaut
+<ul>
+<li>https://github.com/grails/grails-core/issues/12082</li>
+</ul>
+</li>
+<li>Investigate the use of Micronaut server runtimes</li>
+<li>Grails servlet APIs
+<ul>
+<li>Servlet filters</li>
+<li>Tracing</li>
+<li>Metrics</li>
+<li>Swagger</li>
+</ul>
+</li>
+<li>Investigate use of GSP outside of Grails</li>
+</ul>
+</li>
+</ul>
+<h3>Grails Framework Updates</h3>
+<ul>
+<li>Grails 5.0.0 (4 Oct)</li>
+<li>Grails 5.0.1 (4 Nov)</li>
+<li>Grails 4.0.13 (23 Nov)</li>
+<li>Grails 5.0.2(26 Nov)</li>
+<li>Grails 5.0.3 (14 Dec)</li>
+<li>Grails 5.1.0 (Today/Tomorrow)</li>
+<li>Grails Database Migration 4.0.0-RC3</li>
+<li>Spring Security Core Plugin (Next)</li>
+<li>Leveling-up Grails CLI (Next)</li>
+<li>Consolidating Grails Plugin from different Github repos</li>
+</ul>
+<h3>Tech Talk</h3>
+<ul>
+<li>Minimum JDK support for Grails 6</li>
+<li>Grails + Micronaut future</li>
+</ul>
+<h3>Foundation Sponsors</h3>
+<ul>
+<li>As a not-for-profit organization, the Grails Foundation relies on the financial support from our amazing community of generous sponsors.
+<ul>
+<li><a href="https://grails.org/foundation/sponsorship.html#corporate">Corporate Sponsorships</a></li>
+<li><a href="https://grails.org/foundation/sponsorship.html#community">Community Sponsorships</a></li>
+</ul>
+</li>
+<li>Review current sponsors</li>
+<li>Please let us know if there is anyone that would like to learn more about the Grails Foundation and how they can support the Framework and become a corporate sponsor.</li>
+</ul>
+<h3>Open Discussion</h3>
+<ul>
+<li>Meeting notes will be published</li>
+<li>Thank you to everyone who attended. Your participation and time is very much appreciated</li>
+</ul>
+]]></description><guid>20211217-tab</guid><pubDate>Fri, 17 Dec 2021 00:00:00 GMT</pubDate></item><item><title>Technology Advisory Board Meeting</title><link>https://grails.org/foundation/minutes/20210321-tab.html</link><description><![CDATA[</h2>
 <h3>Meeting Attendance:</h3>
 <ul>
 <li><strong>Jeff Scott Brown</strong> - Grails Foundation, co-founder and Director; Grails co-founder; Grails Practice Lead at Object Computing</li>

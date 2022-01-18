@@ -351,3 +351,6 @@ releases:
   -
     version: 5.1.1
     publicationDate: Dec 19, 2021
+  -
+    version: 5.1.2
+    publicationDate: Jan 18, 2022

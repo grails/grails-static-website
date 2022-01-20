@@ -7,12 +7,12 @@ class AirtableBaseConfigurationSpec extends ApplicationContextSpecification {
     Map<String, Object> getConfiguration() {
         super.configuration + [
                 'airtable.api-key': 'secret',
-                'airtable.bases.2020.id': 'appxxxyyy',
+                'airtable.bases.2022.id': 'appxxxyyy',
         ]
     }
 
-    void "bean of type AirtableBaseConfiguration named 2020 exists"() {
+    void "bean of type AirtableBaseConfiguration named 2022 exists"() {
         expect:
-        applicationContext.containsBean(AirtableBaseConfiguration, Qualifiers.byName("2020"))
+        applicationContext.containsBean(AirtableBaseConfiguration, Qualifiers.byName("2022"))
     }
 }

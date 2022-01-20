@@ -96,9 +96,9 @@ class RenderSiteTask extends DefaultTask {
         if (System.getenv("AIRTABLE_API_KEY") != null && System.getenv("AIRTABLE_BASE_ID") != null) {
             Map<String, Object> configuration = [:]
             configuration['airtable.api-key'] = System.getenv("AIRTABLE_API_KEY")
-            configuration['airtable.bases.2020.id'] =  System.getenv("AIRTABLE_BASE_ID")
+            configuration['airtable.bases.2022.id'] =  System.getenv("AIRTABLE_BASE_ID")
             ApplicationContext applicationContext = ApplicationContext.run(configuration)
-            AirtableBaseApi api = applicationContext.getBean(AirtableBaseApi, Qualifiers.byName("2020"))
+            AirtableBaseApi api = applicationContext.getBean(AirtableBaseApi, Qualifiers.byName("2022"))
             GrailsAirtable airtable = new GrailsAirtable(api)
             List<Event> events = airtable.fetchGrailsByPracticeName('2GM')
             eventsHtml = EventsPage.eventsTable(events)

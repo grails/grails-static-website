@@ -5,7 +5,7 @@ class AirtableConfigurationSpec extends ApplicationContextSpecification {
     Map<String, Object> getConfiguration() {
         super.configuration + [
                 'airtable.api-key': 'secret',
-                'airtable.bases.2020.id': 'appxxxyyy',
+                'airtable.bases.2022.id': 'appxxxyyy',
         ]
     }
 

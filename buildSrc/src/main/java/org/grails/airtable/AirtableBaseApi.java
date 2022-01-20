@@ -21,14 +21,22 @@ import io.micronaut.core.util.StringUtils;
 import io.micronaut.http.HttpHeaderValues;
 import io.micronaut.http.annotation.PathVariable;
 import io.micronaut.http.annotation.QueryValue;
+import io.micronaut.http.client.exceptions.HttpClientException;
+import io.micronaut.http.client.exceptions.HttpClientResponseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.validation.constraints.NotBlank;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Sergio del Amo
  * @since 1.0.0
  */
 public class AirtableBaseApi {
+    private static final Logger LOG = LoggerFactory.getLogger(AirtableBaseApi.class);
 
     private final AirtableClient airtableClient;
     private final AirtableConfiguration airtableConfiguration;
@@ -52,19 +60,37 @@ public class AirtableBaseApi {
                                    @Nullable @QueryValue CellFormat cellFormat,
                                    @Nullable @QueryValue TimeZone timeZone,
                                    @Nullable @QueryValue UserLocale userLocale) {
-        return airtableClient.list(HttpHeaderValues.AUTHORIZATION_PREFIX_BEARER + StringUtils.SPACE + airtableConfiguration.getApiKey(),
-                airtableConfiguration.getApiVersion(),
-                airtableBaseConfiguration.getId(),
-                table,
-                fields,
-                filterByFormula,
-                maxRecords,
-                pageSize,
-                sort,
-                view,
-                cellFormat,
-                timeZone,
-                userLocale);
+        try {
+            return airtableClient.list(HttpHeaderValues.AUTHORIZATION_PREFIX_BEARER + StringUtils.SPACE + airtableConfiguration.getApiKey(),
+                    airtableConfiguration.getApiVersion(),
+                    airtableBaseConfiguration.getId(),
+                    table,
+                    fields,
+                    filterByFormula,
+                    maxRecords,
+                    pageSize,
+                    sort,
+                    view,
+                    cellFormat,
+                    timeZone,
+                    userLocale);
+        } catch (HttpClientResponseException e) {
+            if (LOG.isErrorEnabled()) {
+                LOG.error("HTTPClientResponseException getting records - status {}", e.getStatus());
+            }
+            Optional<AirtableApiError> airtableApiErrorOptional = e.getResponse().getBody(AirtableApiError.class);
+            if (airtableApiErrorOptional.isPresent()) {
+                AirtableApiError airtableApiError = airtableApiErrorOptional.get();
+                if (LOG.isErrorEnabled()) {
+                    LOG.error("Airtable API Error - type {} message {}",
+                            airtableApiError.getError() != null ? airtableApiError.getError().getType() : "",
+                            airtableApiError.getError() != null ? airtableApiError.getError().getMessage() : "");
+                }
+            }
+        }
+        RecordList recordList = new RecordList();
+        recordList.setRecords(Collections.emptyList());
+        return recordList;
     }
 
     public RecordList list(@NonNull @NotBlank @PathVariable String table) {

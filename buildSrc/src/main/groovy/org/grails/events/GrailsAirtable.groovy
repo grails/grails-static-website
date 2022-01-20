@@ -6,6 +6,7 @@ import org.grails.airtable.AirtableBaseApi
 import org.grails.airtable.Record
 
 import java.time.LocalDate
+import java.util.stream.Collectors
 
 @CompileStatic
 class GrailsAirtable {
@@ -50,11 +51,11 @@ class GrailsAirtable {
                 null,
                 null,
                 null).records
-        records.findAll { Record record ->
+        records.stream().filter(record -> {
             (record.fields[FIELD_PRACTICE_AREA] && (record.fields[FIELD_PRACTICE_AREA] as List<String>).contains(practiceId)) &&
                     (record.fields[FIELD_STATUS] == STATUS_SCHEDULED) &&
                     (record.fields[FIELD_EVENTS] as boolean)
-        }.collect { Record record ->
+        }).map(record -> {
             String d = record.fields[FIELD_DATE]
             Event e = new Event()
             e.link = record.fields[FIELD_LINK] ?: record.fields[FIELD_LINK_OCI]
@@ -65,7 +66,7 @@ class GrailsAirtable {
             List<String> guestSpeakers = record.fields[FIELD_GUEST_SPEAKERS].collect { guestSpeakerName(it as String) }
             e.speakers = ociSpeakers + guestSpeakers
             e
-        }
+        }).collect(Collectors.toList())
     }
 
     String ociSpeakerName(String speakerId) {

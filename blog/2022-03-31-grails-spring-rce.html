@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails Training Now Enrolling</title>
+    <title>Grails and the Recent Spring Framework RCE</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Our first training workshops for 2022 have just been added to the schedule!" />
-    <meta name="date" content="December 7, 2021" />
+    <meta name="description" content="Grails Framework information regarding CVE-2022-22965" />
+    <meta name="date" content="March 31, 2022" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Our first training workshops for 2022 have just been added to the schedule!'/>
+    <meta name='twitter:description' content='Grails Framework information regarding CVE-2022-22965'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails Training Now Enrolling'/>
-    <meta property='og:description' content='Our first training workshops for 2022 have just been added to the schedule!'/>
+    <meta property='og:title' content='Grails and the Recent Spring Framework RCE'/>
+    <meta property='og:description' content='Grails Framework information regarding CVE-2022-22965'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,27 +60,28 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails Training Now Enrolling</h1>
-<p><span class="author">By Jen Wiese</span></p>
-<p><span class="date">December 7, 2021</span></p>
-<p>Our first training workshops for 2022 have just been added to the schedule!</p>
-<p>Courses are developed and delivered by team members who work daily with these advanced technologies and can speak with authority as subject matter experts.</p>
-<p><a href="https://objectcomputing.com/services/training/catalog/grails/grails-security-workshop"><strong>Introduction to Grails Security</strong></a></p>
-<p>February 14 &amp; 15, 2022</p>
-<p>Learn how to build robust security functionality into your Grails apps and practice configuring and using such plugins as Spring Security Core, LDAP, REST, ACL, and UI.</p>
-<p><a href="https://objectcomputing.com/services/training/catalog/grails/micronaut-and-grails"><strong>Using Micronaut Features in a Grails Application</strong></a></p>
-<p>February 16 &amp; 17, 2022</p>
-<p>Learn how to take advantage of the Grails framework's built-in Micronaut features to enhance their productivity and application performance.</p>
+  <div class='light padded blogpost'><h1>Grails and the Recent Spring Framework RCE</h1>
+<p><span class="author">By Jason Schindler</span></p>
+<p><span class="date">March 31, 2022</span></p>
+<p><strong>Grails Framework information regarding CVE-2022-22965</strong></p>
+<h2>Background</h2>
+<p>The Spring Framework Team <a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement">recently announced</a> a remote code execution vulnerability discovered within the Spring Framework published as <a href="https://tanzu.vmware.com/security/cve-2022-22965">CVE-2022-22965</a>.  At this time, there is a known exploit that impacts applications which:</p>
+<ul>
+<li>Use JDK 9 or higher</li>
+<li>Run on the Apache Tomcat Servlet container</li>
+<li>Are packaged as a WAR</li>
+<li>Include the <code>spring-webmvc</code> or <code>spring-webflux</code> dependency</li>
+</ul>
+<p>More up-to-date information can be found on the <a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement">Spring Blog announcement</a>.</p>
+<h2>Are Grails Applications Vulnerable?</h2>
+<p>Because Grails applications are built on top of Spring and Spring Boot, the Grails team has taken this vulnerability very seriously. Our investigations have yielded no evidence that Grails 4.x or 5.x applications are vulnerable to this attack. The Grails framework has its own data-binding logic, which includes checks to validate that a given property a) is in a list of properties that may be bound to, and b) exists within the target metaClass. All other property candidates are ignored.</p>
+<p>The known exploit is one mechanism that can be used for this vulnerability. We will continue to monitor this situation and alert the Grails community of any vulnerabilities discovered, along with mitigation steps.</p>
+<h2>Next Steps</h2>
+<p>Although at this time, we have no reason to believe that Grails applications are vulnerable, as a precaution, we have released <a href="https://github.com/grails/grails-core/releases/tag/v5.1.6">Grails 5.1.6</a>.  This Grails Framework release updates our Spring Dependency to 5.3.18 which includes the upstream patch from the Spring Framework Team.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
-  <a href='https://grails.org/blog/2022-03-31-grails-spring-rce.html'>
-    <h3>March 31, 2022</h3>
-    <h2>Grails and the Recent Spring Framework RCE</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
   <a href='https://grails.org/blog/2022-01-07-gradle-enterprise-tools-and-infrastructure-partner.html'>
     <h3>January 7, 2022</h3>
@@ -91,6 +92,12 @@
   <a href='https://grails.org/blog/2022-01-07-2gm-town-hall-q1.html'>
     <h3>January 7, 2022</h3>
     <h2>2GM Town Hall Meeting: 2022 Q1</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-2.png)'>
+  <a href='https://grails.org/blog/2021-12-15-grails-five-one.html'>
+    <h3>December 18, 2021</h3>
+    <h2>Grails Framework 5.1 Released</h2>
   </a>
 </article></div>
     </div>

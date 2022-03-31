@@ -65,11 +65,11 @@
 <p><span class="date">March 31, 2022</span></p>
 <p><strong>Grails Framework information regarding CVE-2022-22965</strong></p>
 <h2>Background</h2>
-<p>The Spring Framework Team <a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement">recently announced</a> a remote code execution vulnerability discovered within the Spring Framework published as <a href="https://tanzu.vmware.com/security/cve-2022-22965">CVE-2022-22965</a>.  At this time, there is a known exploit that impacts applications which:</p>
+<p>The Spring Framework Team <a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement">recently announced</a> a remote code execution vulnerability, published as <a href="https://tanzu.vmware.com/security/cve-2022-22965">CVE-2022-22965</a>, discovered within the Spring Framework.  At this time, there is a known exploit that impacts applications that:</p>
 <ul>
 <li>Use JDK 9 or higher</li>
 <li>Run on the Apache Tomcat Servlet container</li>
-<li>Are packaged as a WAR</li>
+<li>Are packaged as a WAR, and</li>
 <li>Include the <code>spring-webmvc</code> or <code>spring-webflux</code> dependency</li>
 </ul>
 <p>More up-to-date information can be found on the <a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement">Spring Blog announcement</a>.</p>
@@ -77,7 +77,7 @@
 <p>Because Grails applications are built on top of Spring and Spring Boot, the Grails team has taken this vulnerability very seriously. Our investigations have yielded no evidence that Grails 4.x or 5.x applications are vulnerable to this attack. The Grails framework has its own data-binding logic, which includes checks to validate that a given property a) is in a list of properties that may be bound to, and b) exists within the target metaClass. All other property candidates are ignored.</p>
 <p>The known exploit is one mechanism that can be used for this vulnerability. We will continue to monitor this situation and alert the Grails community of any vulnerabilities discovered, along with mitigation steps.</p>
 <h2>Next Steps</h2>
-<p>Although at this time, we have no reason to believe that Grails applications are vulnerable, as a precaution, we have released <a href="https://github.com/grails/grails-core/releases/tag/v5.1.6">Grails 5.1.6</a>.  This Grails Framework release updates our Spring Dependency to 5.3.18 which includes the upstream patch from the Spring Framework Team.</p>
+<p>Although at this time, we have no reason to believe that Grails applications are vulnerable, as a precaution, we have released <a href="https://github.com/grails/grails-core/releases/tag/v5.1.6">Grails 5.1.6</a>.  This Grails Framework release updates our Spring Dependency to 5.3.18, which includes the upstream patch from the Spring Framework Team.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>

@@ -490,7 +490,13 @@ body.foundation-sponsors div.sponsor-group .sponsor-group-title {
 
 body.foundation-sponsors div.sponsor-group .sponsor-group-member img {
     max-width: 350px;
+    min-width: 200px;
 }
+
+body.foundation-sponsors div.sponsor-group .sponsor-group-member + .sponsor-group-member {
+    margin-top: 1rem;
+}
+
 
 body.foundation-sponsors div.sponsor-group ul.community-list {
     columns: 1;

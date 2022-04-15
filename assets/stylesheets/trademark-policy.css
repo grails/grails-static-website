@@ -1,0 +1,15 @@
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 100;
+    text-indent: .5ch;
+}
+
+p + p {
+    margin-top: 2.2rem;
+}
+
+.pre-footer {
+    margin-top: 3rem;
+}
+

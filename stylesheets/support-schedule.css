@@ -1,3 +1,19 @@
 table.support-schedule {
 	width: 100%;
 }
+
+.twocolumns.support-schedule {
+	background-color: #ffffff;
+}
+
+table.support-schedule tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+table.support-schedule td {
+	color: #545454;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-top: none;
+}

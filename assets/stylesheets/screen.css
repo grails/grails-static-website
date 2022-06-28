@@ -1775,3 +1775,38 @@ blockquote {
 body.community-guidelines ul > li {
 	margin-left: 30px;
 }
+
+h3.subsection-header {
+	text-transform: uppercase;
+	color: #feb672;
+}
+
+.twocolumns.support-schedule {
+	background-color: #ffffff;
+}
+
+.twocolumns.support-schedule > .column.support-schedule {
+	width: 48.29%;
+}
+
+table th {
+	color: #FFFFFF;
+	background-color: #808080;
+	text-align: left;
+}
+
+table.support-schedule tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+table.support-schedule td {
+	color: #545454;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-top: none;
+}
+
+.no-border {
+	border: none;
+}

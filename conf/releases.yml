@@ -390,3 +390,6 @@ releases:
   -
     version: 5.1.9
     publicationDate: Jul 18, 2022
+  -
+    version: 5.2.2
+    publicationDate: Aug 02, 2022

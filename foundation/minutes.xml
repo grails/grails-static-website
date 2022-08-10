@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Foundation | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 10 Aug 2022 10:02:00 GMT</pubDate><item><title>Technology Advisory Board Meeting</title><link>https://grails.org/foundation/minutes/20220323-tab.html</link><description><![CDATA[</h2>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Foundation | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 10 Aug 2022 21:27:53 GMT</pubDate><item><title>Technology Advisory Board Meeting</title><link>https://grails.org/foundation/minutes/20220711-tab.html</link><description><![CDATA[</h2>
+<h3>Meeting Attendance:</h3>
+<ul>
+<li><strong>Puneet Behl</strong> - Grails Product Development Lead at Object Computing</li>
+<li><strong>Søren Glasius</strong> - Architect and Technical Manager at Gennemtænkt IT</li>
+<li><strong>Jason Schindler</strong> - Object Computing Inc., Partner and Groovy, Grails, and Micronaut Team Manager</li>
+<li><strong>Paul King</strong> - Groovy Project Development Lead at Object Computing, Inc.</li>
+<li><strong>James Kleeh</strong> – Software Development Engineer at Amazon</li>
+<li><strong>Jen Wiese</strong> - Grails Foundation Community Engagement Manager</li>
+<li><strong>Tabitha Willan</strong> - Lead Application Engineer at Omaha Public Power District</li>
+</ul>
+<h3>Not in Attendance:</h3>
+<ul>
+<li><strong>David Estes</strong> – Co-founder and VP of Engineering at Morpheus Data; Creator of the Grails Asset-Pipeline</li>
+<li><strong>Ken Kousen</strong> – President at Kousen IT, Inc.</li>
+<li><strong>Graeme Rocher</strong> - Grails co-founder; Architect at Oracle</li>
+</ul>
+<p><strong>The Meeting Was Led By:</strong> Jason Schindler</p>
+<hr />
+<h3>Agenda:</h3>
+<ul>
+<li>Welcome</li>
+<li>Grails Updates</li>
+<li>Open Discussion</li>
+<li>Close Meeting</li>
+</ul>
+<h3>Grails Framework Updates</h3>
+<ul>
+<li>Review of JDK Support in Grails framework 6 from last meeting
+<ul>
+<li>The plan is to base Grails framework 6 on JDK 11</li>
+<li>Paul: The Groovy community is a little split on if Groovy 5 should be JDK 8, 11, or 17.  It will only impact future versions of the Grails framework that use Groovy 5, so shouldn’t be a concern for Grails framework 6
+<ul>
+<li>https://twitter.com/ApacheGroovy/status/1524255310923595776</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>New Grails CLI
+<ul>
+<li><em>Puneet</em>: Plan is to have the new CLI available as an option in Grails 5 and then make it the standard in Grails 6.  If we are unable to get the CLI complete in time for Grails 6, we will release it as an option in Grails 6.</li>
+<li><em>Jason</em>: Polled the group to see who uses custom templates / profiles from the CLI.  Tabitha does.
+<ul>
+<li><em>Jason</em>: When we update the Grails CLI to the new version based on Micronaut there will be some changes to how custom commands and profiles are done.  I think it would be good for us to review those with the group.</li>
+<li><em>Puneet</em>: Reviewed tentative updates for the new CLI
+<ul>
+<li><em>Puneet</em>: current commands written as an <code>ApplicationCommand</code> should continue to work</li>
+</ul>
+</li>
+<li><em>Tabitha</em>: As far as the templates, what we did was create a custom plugin for the templates with a command that updates the templates, so I don’t think your change will impact us.</li>
+<li><em>Puneet</em>: I would like to demo this to the tab once it is in a presentable state.</li>
+<li><em>James</em>: I think there will be some things that won’t immediately translate with the new CLI but it should be easier to extend and understand once the change is made.  I personally feel like the pros outweigh the cons there.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Grails framework 4 End of Support
+<ul>
+<li><em>Jason</em>: The tentative date for end of support for Grails framework 4 is at the end of this year.  That is dependent on the release of Grails 6.  By the end of the year, Grails 6 should be released, 5 should move to active maintenance</li>
+</ul>
+</li>
+</ul>
+<h3>Open Discussion</h3>
+<ul>
+<li><em>Puneet</em>: I had some presentations accepted for ApacheCon.  I don’t know the full schedule yet but I’m looking forward to presenting.
+<ul>
+<li><em>Paul</em>: Here is the tentative schedule: https://www.apachecon.com/acna2022/schedule.html</li>
+</ul>
+</li>
+<li><em>Puneet</em>: Currently the Grails Plugin Portal goes down very often, but I know James we had some plans of making it completely static and I’d like some feedback on the priority of that
+<ul>
+<li>TAB talked through static site generation options</li>
+</ul>
+</li>
+<li><em>Søren</em>: The CFP for GR8 Conf is open and we are always looking for speakers
+<ul>
+<li>https://cfp.gr8conf.org/login/auth</li>
+</ul>
+</li>
+</ul>
+<h3>Close Meeting</h3>
+<ul>
+<li>Meeting notes will be published</li>
+<li>Thank you to everyone who attended. Your participation and time is very much appreciated</li>
+</ul>
+]]></description><guid>20220711-tab</guid><pubDate>Thu, 07 Jul 2022 00:00:00 GMT</pubDate></item><item><title>Technology Advisory Board Meeting</title><link>https://grails.org/foundation/minutes/20220323-tab.html</link><description><![CDATA[</h2>
 <h3>Meeting Attendance:</h3>
 <ul>
 <li><strong>Puneet Behl</strong> - Grails Product Development Lead at Object Computing</li>

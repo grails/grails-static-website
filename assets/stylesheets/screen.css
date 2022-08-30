@@ -257,7 +257,6 @@ li {
 }
 
 
-
 .listingblock .content {
 	width: auto;
 	max-width: 100%;
@@ -891,13 +890,17 @@ footer li {
 }
 
 .socialmedianav ul {
-	padding: 0;
-	overflow: auto;
-	width: 325px;
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	padding-left: 1em;
+	flex-wrap: wrap;
+}
+@media screen and (min-width: 961px) {
+	.socialmedianav ul {
+		flex-wrap: nowrap;
+	}
 }
 .socialmedianav li {
-	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
 	list-style-type: none;
@@ -906,8 +909,7 @@ footer li {
 }
 
 .partnersnav ul {
-	padding: 0;
-	margin: 0;
+	padding-left: 1em;
 }
 .partnersnav li {
 	list-style-type: none;
@@ -921,9 +923,6 @@ footer li {
 .ocihometograils,
 .partnersnav,
 .socialmedianav {
-	width: 100%;
-	float: none;
-	overflow: auto;
 	text-align: center;
 	margin-bottom: 30px;
 }
@@ -1246,12 +1245,9 @@ article.quote h2 {
 	footer {
 		overflow: auto;
 	}
-	.ocihometograils,
-	.partnersnav,
-	.socialmedianav {
-		width: 33%;
-		float: left;
-
+	footer .content {
+		display: flex;
+		justify-content: center;
 	}
 	.partnersnav li {
 		text-align: right;

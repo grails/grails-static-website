@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 02 Sep 2022 09:28:02 GMT</pubDate><item><title>Grails Framework Remote Code Execution Vulnerability</title><link>https://grails.org/blog/2022-07-18-rce-vulnerability.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 02 Sep 2022 09:37:50 GMT</pubDate><item><title>Grails Framework Remote Code Execution Vulnerability</title><link>https://grails.org/blog/2022-07-18-rce-vulnerability.html</link><description><![CDATA[</p>
 <p><strong>Grails Framework information regarding CVE-2022-35912</strong></p>
 <h2>Updates</h2>
 <h3>July 20th, 2022</h3>

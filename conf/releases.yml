@@ -393,3 +393,9 @@ releases:
   -
     version: 5.2.2
     publicationDate: Aug 02, 2022
+  -
+    version: 4.1.2
+    publicationDate: Aug 25, 2022
+  -
+    version: 5.2.3
+    publicationDate: Aug 26, 2022

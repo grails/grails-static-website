@@ -24,7 +24,7 @@
  @media only screen and (max-width: 800px) {
   .menu{
    flex-direction: column;
-   align-items:center; 
+   align-items:center;
   }
  }
  .intro_copy{
@@ -40,16 +40,19 @@
  article p {
   margin: 2em 0;
  }
+ .starting{
+   font-size:0.9em;
+ }
  .hours{
   font-size:2em;
   font-weight:300;
  }
  .price{
-  font-size:3.5em;
+  font-size:1.5em;
   font-weight:700;
  }
  .lwr_case{
-  font-size:.4em;
+  font-size:.8em;
   font-weight:300;
  }
  .disclaimer{
@@ -57,10 +60,10 @@
   font-size:.9em;
  }
  li{
-  font-weight: 200;
+  font-weight: 300;
  }
  ul{
-  list-style-type:none;
+  list-style-type:disc;
  }
  .button{
   font-family: 'Inter', sans-serif;
@@ -71,12 +74,13 @@
   border:none;
   padding:.5em .8em;
   margin:1em .5em;
+  cursor: pointer;
  }
  button{
    background-color:#3359A3;
  }
  .menu a{
-  width:80%; 
+  width:80%;
   background-color:#454545;
   text-align:center;
  }
@@ -96,15 +100,15 @@
   @media only screen and (max-width: 800px) {
     .CTA{
      flex-direction: column;
-     align-items:center; 
+     align-items:center;
     }
     .CTA button {
-      width:100%; 
+      width:100%;
      }
    }
-/* Modal CSS 
+/* Modal CSS
  Code used and adjusted for grails via:
-https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only-css-tricks.html 
+https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only-css-tricks.html
 */
    #popup {
     position:fixed;
@@ -122,14 +126,17 @@ https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only
     transform:translate(-50%,-50%);
     padding:3em;
     background:#eee;
+    width: 22vw;
+    min-width: 500px;
   }
-  #popup a.close-popup {
+  #popup .close-popup {
     position:absolute;
     top:20px;
     right:20px;
     font-size:20px;
     font-weight:600;
     text-decoration:none;
+    cursor: pointer;
   }
   #popup:target {
     display:block;

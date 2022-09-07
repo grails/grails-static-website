@@ -1,5 +1,6 @@
 table.support-schedule {
 	width: 100%;
+	overflow-x: auto;
 }
 
 .twocolumns.support-schedule {

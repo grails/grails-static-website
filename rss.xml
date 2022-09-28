@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 28 Sep 2022 10:09:53 GMT</pubDate><item><title>Grails Framework Remote Code Execution Vulnerability</title><link>https://grails.org/blog/2022-07-18-rce-vulnerability.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 28 Sep 2022 17:51:57 GMT</pubDate><item><title>Grails Data Binding to Static Properties Bug</title><link>https://grails.org/blog/2022-09-28-static-binding-bug.html</link><description><![CDATA[</p>
+<p><strong>Information about an issue in the Grails data binding logic that can cause modification of static properties</strong></p>
+<h2>Summary</h2>
+<p>The Grails Team has confirmed a bug that was found in the Grails data binding logic, which incorrectly permits data binding to static properties under certain conditions. This bug was identified and reported by the Engineering Team at Transitional Data Services (<a href="https://tdsi.com">https://tdsi.com</a>).</p>
+<h2>Description</h2>
+<p>Data binding to static properties is not intended behavior. However, because of this bug, a static property of the target object's class may be modified if:</p>
+<ul>
+<li>The data binding source contains a property of the same name as the static property</li>
+<li>The static property's declared type is <strong>Object</strong> (or the type is undeclared, which is the same as declaring as <strong>Object</strong>)</li>
+<li>The static property is not final</li>
+</ul>
+<p>This can occur when manually calling <strong>bindData</strong> (or one of several variants) given the conditions above. Under particular additional conditions, controller actions that automatically bind request data to (nested) command objects may cause static properties to change.</p>
+<h2>The constraints property</h2>
+<p>One common property that represents an important part of the functionality in the Grails framework is the <strong>constraints</strong> property. The <strong>constraints</strong> property allows classes that implement the <strong>Validateable</strong> trait to check that the data in an instance of the class is valid. It is also a static property that could be overwritten due to this bug, potentially leading to data corruption.   Because of this possibility, we feel it is important for organizations using the Framework to be aware of this bug and its resolutions.</p>
+<p>For more information about data validation functionality available in the Grails framework, please see the <a href="https://docs.grails.org/5.2.4/guide/validation.html">documentation</a>.</p>
+<h2>Resolution</h2>
+<p>The Grails Team recommends that all Grails applications be upgraded to a patched Grails release. Grails 4.x applications can be upgraded to version 4.1.2 or higher, and Grails 5.x applications can be upgraded to 5.2.3 or higher.</p>
+<p>We have released a patched version of Grails 3 for this bug.  Grails 3.x applications can be upgraded to version 3.3.16.</p>
+<p>Please note that versions 1, 2, and 3 of the Grails framework <a href="https://grails.org/support-schedule.html">have reached end of support</a>.  We strongly recommend that applications built with these versions be upgraded to an actively maintained version of the Framework. Additionally, the <a href="https://grails.org/foundation/">Grails Foundation</a> provides <a href="https://grails.org/support.html">Commercial Support options</a> for Grails framework versions 3, 4, and 5.  To learn more about how Commercial Support can benefit your organization, please <a href="mailto:info@grails.org">contact us</a>.</p>
+<p>If you are unable to upgrade to a patched version of the Framework, you can make a couple of minor adjustments to work around the issue.</p>
+<p>First, if your application makes explicit calls to <strong>bindData</strong>, those calls should be reviewed and adjusted to avoid binding to static properties of the target instance's class.</p>
+<p>Second, you can prevent data binding to static properties by marking them as <strong>final</strong>. For example:</p>
+<pre><code class="language-groovy">class RecordValueCommand implements Validateable {
+    int value
+    static constraints = { value min: 0 }
+}
+</code></pre>
+<p>Because <strong>constraints</strong> is not <strong>final</strong> and has no declared type, it is susceptible to this data binding bug. The workaround is to add the <strong>final</strong> modifier.</p>
+<pre><code class="language-groovy">static final constraints = { value min: 0 }
+</code></pre>
+<p>In situations where the <strong>final</strong> modifier cannot be added, the type of the property should be declared explicitly (not <strong>Object</strong>) and the static property will resist type-changing modifications.</p>
+<pre><code class="language-groovy">static Closure constraints = { value min: 0 }
+</code></pre>
+<h2>Thank you!</h2>
+<p>We would like to thank the Engineering Team at Transitional Data Services for identifying this bug as well as the countless contributions from the folks in  our awesome community.  Without your dedication and enthusiasm, the Grails framework would not be where it is today.  Thank you!</p>
+<p>For more technical details about this bug and the patches, please see the <a href="https://github.com/grails/grails-core/issues/12718">discussion on GitHub</a>.</p>]]></description><author>Matthew Moss</author><guid>2022-09-28-static-binding-bug</guid><pubDate>Wed, 28 Sep 2022 00:00:00 GMT</pubDate></item><item><title>Grails Framework Remote Code Execution Vulnerability</title><link>https://grails.org/blog/2022-07-18-rce-vulnerability.html</link><description><![CDATA[</p>
 <p><strong>Grails Framework information regarding CVE-2022-35912</strong></p>
 <h2>Updates</h2>
 <h3>July 20th, 2022</h3>

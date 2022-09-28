@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Webinar: An Insider's Guide to Groovy 4</title>
+    <title>Grails Data Binding to Static Properties Bug</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="This complimentary 60-minute webinar prepares Groovy users of all proficiency levels to take advantage of the new features Groovy 4 offers." />
-    <meta name="date" content="September 17, 2021" />
+    <meta name="description" content="Information about an issue in the Grails data binding logic that can cause modification of static properties" />
+    <meta name="date" content="September 28, 2022" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
-    <meta name='twitter:card' content='player'/><meta name='twitter:player' content='https://www.youtube.com/embed/H027QTB_5MM' />
-<meta name='twitter:player:width' content='560' />
-<meta name='twitter:player:height' content='315' />
-
+    <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='This complimentary 60-minute webinar prepares Groovy users of all proficiency levels to take advantage of the new features Groovy 4 offers.'/>
+    <meta name='twitter:description' content='Information about an issue in the Grails data binding logic that can cause modification of static properties'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Webinar: An Insider's Guide to Groovy 4'/>
-    <meta property='og:description' content='This complimentary 60-minute webinar prepares Groovy users of all proficiency levels to take advantage of the new features Groovy 4 offers.'/>
+    <meta property='og:title' content='Grails Data Binding to Static Properties Bug'/>
+    <meta property='og:description' content='Information about an issue in the Grails data binding logic that can cause modification of static properties'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -63,24 +60,48 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Webinar: An Insider's Guide to Groovy 4</h1>
-<p><span class="author">By Jen Wiese</span></p>
-<p><span class="date">September 17, 2021</span></p>
-<p>Apache Groovy 4 is nearing release, and it's been improved in a number of areas for greater simplicity and efficiency.</p>
-<p>Join Object Computing Groovy Practice Lead, <a href="https://objectcomputing.com/products/2gm-team#king">Paul King</a>, as he shares an overview of the exciting new features you'll find in Groovy 4, including JDK17 support, switch expressions, annotations on type parameters, enhanced ranges, and support for sealed classes, records, and language-integrated queries. He'll also introduce you to Groovy 4's additional bundle type checkers, macro methods, and design-by-contract support so you can specify preconditions, postconditions, and invariants.</p>
-<p>This complimentary 60-minute webinar prepares Groovy users of all proficiency levels to take advantage of the new features Groovy 4 offers.</p>
-<p><a href="https://objectcomputing.com/download_file/5328">Slides</a></p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/H027QTB_5MM" frameborder="0"></iframe>
+  <div class='light padded blogpost'><h1>Grails Data Binding to Static Properties Bug</h1>
+<p><span class="author">By Matthew Moss</span></p>
+<p><span class="date">September 28, 2022</span></p>
+<p><strong>Information about an issue in the Grails data binding logic that can cause modification of static properties</strong></p>
+<h2>Summary</h2>
+<p>The Grails Team has confirmed a bug that was found in the Grails data binding logic, which incorrectly permits data binding to static properties under certain conditions. This bug was identified and reported by the Engineering Team at Transitional Data Services (<a href="https://tdsi.com">https://tdsi.com</a>).</p>
+<h2>Description</h2>
+<p>Data binding to static properties is not intended behavior. However, because of this bug, a static property of the target object's class may be modified if:</p>
+<ul>
+<li>The data binding source contains a property of the same name as the static property</li>
+<li>The static property's declared type is <strong>Object</strong> (or the type is undeclared, which is the same as declaring as <strong>Object</strong>)</li>
+<li>The static property is not final</li>
+</ul>
+<p>This can occur when manually calling <strong>bindData</strong> (or one of several variants) given the conditions above. Under particular additional conditions, controller actions that automatically bind request data to (nested) command objects may cause static properties to change.</p>
+<h2>The constraints property</h2>
+<p>One common property that represents an important part of the functionality in the Grails framework is the <strong>constraints</strong> property. The <strong>constraints</strong> property allows classes that implement the <strong>Validateable</strong> trait to check that the data in an instance of the class is valid. It is also a static property that could be overwritten due to this bug, potentially leading to data corruption.   Because of this possibility, we feel it is important for organizations using the Framework to be aware of this bug and its resolutions.</p>
+<p>For more information about data validation functionality available in the Grails framework, please see the <a href="https://docs.grails.org/5.2.4/guide/validation.html">documentation</a>.</p>
+<h2>Resolution</h2>
+<p>The Grails Team recommends that all Grails applications be upgraded to a patched Grails release. Grails 4.x applications can be upgraded to version 4.1.2 or higher, and Grails 5.x applications can be upgraded to 5.2.3 or higher.</p>
+<p>We have released a patched version of Grails 3 for this bug.  Grails 3.x applications can be upgraded to version 3.3.16.</p>
+<p>Please note that versions 1, 2, and 3 of the Grails framework <a href="https://grails.org/support-schedule.html">have reached end of support</a>.  We strongly recommend that applications built with these versions be upgraded to an actively maintained version of the Framework. Additionally, the <a href="https://grails.org/foundation/">Grails Foundation</a> provides <a href="https://grails.org/support.html">Commercial Support options</a> for Grails framework versions 3, 4, and 5.  To learn more about how Commercial Support can benefit your organization, please <a href="mailto:info@grails.org">contact us</a>.</p>
+<p>If you are unable to upgrade to a patched version of the Framework, you can make a couple of minor adjustments to work around the issue.</p>
+<p>First, if your application makes explicit calls to <strong>bindData</strong>, those calls should be reviewed and adjusted to avoid binding to static properties of the target instance's class.</p>
+<p>Second, you can prevent data binding to static properties by marking them as <strong>final</strong>. For example:</p>
+<pre><code class="language-groovy">class RecordValueCommand implements Validateable {
+    int value
+    static constraints = { value min: 0 }
+}
+</code></pre>
+<p>Because <strong>constraints</strong> is not <strong>final</strong> and has no declared type, it is susceptible to this data binding bug. The workaround is to add the <strong>final</strong> modifier.</p>
+<pre><code class="language-groovy">static final constraints = { value min: 0 }
+</code></pre>
+<p>In situations where the <strong>final</strong> modifier cannot be added, the type of the property should be declared explicitly (not <strong>Object</strong>) and the static property will resist type-changing modifications.</p>
+<pre><code class="language-groovy">static Closure constraints = { value min: 0 }
+</code></pre>
+<h2>Thank you!</h2>
+<p>We would like to thank the Engineering Team at Transitional Data Services for identifying this bug as well as the countless contributions from the folks in  our awesome community.  Without your dedication and enthusiasm, the Grails framework would not be where it is today.  Thank you!</p>
+<p>For more technical details about this bug and the patches, please see the <a href="https://github.com/grails/grails-core/issues/12718">discussion on GitHub</a>.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
-  <a href='https://grails.org/blog/2022-09-28-static-binding-bug.html'>
-    <h3>September 28, 2022</h3>
-    <h2>Grails Data Binding to Static Properties Bug</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
   <a href='https://grails.org/blog/2022-07-18-rce-vulnerability.html'>
     <h3>July 18, 2022</h3>
@@ -91,6 +112,12 @@
   <a href='https://grails.org/blog/2022-04-01-jetbrains-new-tools-and-infrastructure-partner.html'>
     <h3>April 1, 2022</h3>
     <h2>Announcing Our Newest Tools and Infrastructur...</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
+  <a href='https://grails.org/blog/2022-03-31-grails-spring-rce.html'>
+    <h3>March 31, 2022</h3>
+    <h2>Grails and the Recent Spring Framework RCE</h2>
   </a>
 </article></div>
     </div>

@@ -30,25 +30,18 @@
  .intro_copy{
   margin:2em 0;
  }
- h2{
+ .header{
   background-color:#3359A3;
   color:white;
   padding:.5em;
   font-weight: 300;
   filter: drop-shadow(0 4px 0.2rem #C0C0C0);
  }
- article p {
-  margin: 2em 0;
- }
- .starting{
-   font-size:0.9em;
- }
- .hours{
-  font-size:2em;
-  font-weight:300;
+ .product{
+  margin-top: .2em;
  }
  .price{
-  font-size:1.5em;
+  font-size:2em;
   font-weight:700;
  }
  .lwr_case{
@@ -62,42 +55,79 @@
  li{
   font-weight: 300;
  }
- ul{
-  list-style-type:disc;
- }
- .button{
-  font-family: 'Inter', sans-serif;
+ .support_nav_bttn{
   font-size:1.2em;
   font-weight: 300;
   text-decoration:none;
   color:#fff;
+  background-color: #454545;
   border:none;
   padding:.5em .8em;
   margin:1em .5em;
   cursor: pointer;
  }
- button{
-   background-color:#3359A3;
- }
- .menu a{
-  width:80%;
-  background-color:#454545;
-  text-align:center;
- }
- .menu a:hover{
+ .support_nav_bttn:hover{
   color:#fff;
+  background-color: #454545;
  }
- .CTA{
-  justify-content:flex-end;
+ .cta_wrapper{
   display:flex;
+  justify-content:flex-end;
   flex-direction:row;
  }
- .CTA button a{
+  .cta {
   text-decoration: none;
   color:#fff;
+  background-color: #3359A3;
+  margin: .5em;
+  padding: .7em;
+ }   
+ .cta:hover{
+  color:#fff;
+ }
+ .product-wrapper{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin:0 11%;
+  gap: 1em;
+ }
+ .product{
+  border:solid 1px grey;
+  width:8em;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align: center;
+ }
+ .double{
+  width: 100%;
+ }
+ .banner{
+  color:White;
+  background:linear-gradient(0deg, rgba(255,118,0,1) 0%, rgba(254,173,103,1) 100%);
+  width:100%;
+  padding: 1% 0 1% 0;
+  font-weight: 400;
+ }
+ .columns{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: 1em;
+ }
+ .column{
+  display: flex;
+  flex-wrap:wrap;
+  align-content: flex-start;
+  gap: 1em;
+  width:30em;
+ }
+ .contactus{
+  align-items: center;
  }
   /* Mobile CTA */
-  @media only screen and (max-width: 800px) {
+  /* @media only screen and (max-width: 800px) {
     .CTA{
      flex-direction: column;
      align-items:center;
@@ -105,39 +135,63 @@
     .CTA button {
       width:100%;
      }
-   }
-/* Modal CSS
- Code used and adjusted for grails via:
-https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only-css-tricks.html
-*/
-   #popup {
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:100vw;
-    height:100vh;
-    background:rgba(0,0,0,0.75);
-    display:none;
+   } */
+
+/* Modal CSS Code used and adjusted for grails via:
+https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only-css-tricks.html*/
+
+#popup {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.75);
+  display:none;
+  overflow: scroll;
+}
+#popup .popup-content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:3em;
+  background:#eee;
+  width: 500px;
+}
+#popup .close-popup {
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  cursor: pointer;
+}
+#popup:target {
+  display:block;
+}
+@media only screen and (max-width: 800px){
+  #popup .popup-content{
+    width:80%;
   }
-  #popup .popup-content {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    padding:3em;
-    background:#eee;
-    width: 22vw;
-    min-width: 500px;
+  .product{
+    width:60%;
   }
-  #popup .close-popup {
-    position:absolute;
-    top:20px;
-    right:20px;
-    font-size:20px;
-    font-weight:600;
-    text-decoration:none;
-    cursor: pointer;
+  .column{
+    justify-content: center;
   }
-  #popup:target {
-    display:block;
+  .contactus{
+    flex-direction: column;
   }
+  .support_nav_bttn{
+    width: 100%;
+    text-align: center; 
+}
+}
+/* Small view port (Iphone SE) styling */
+@media only screen and (max-width: 400px){
+  #popup .popup-content{
+    top:67%;
+  }
+}

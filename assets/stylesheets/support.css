@@ -34,11 +34,15 @@
   background-color:#3359A3;
   color:white;
   padding:.5em;
-  font-weight: 300;
+  font-weight: 500;
   filter: drop-shadow(0 4px 0.2rem #C0C0C0);
  }
  .product{
   margin-top: .2em;
+ }
+ .sell{
+  margin-top: 2em;
+  margin-bottom: 1em;
  }
  .price{
   font-size:2em;
@@ -94,14 +98,26 @@
  }
  .product{
   border:solid 1px grey;
-  width:8em;
+  padding: 0.7em;
   display:flex;
   flex-direction:column;
+  justify-content: space-between;
   align-items:center;
   text-align: center;
  }
+ .product h2{
+  font-size: 1.6em;
+  font-weight: 600;
+ }
  .double{
-  width: 100%;
+  width: 98%;
+  padding: inherit;
+ }
+ ul{
+  margin-bottom:4em;
+ }
+ .hr{
+  margin-bottom:2em;
  }
  .banner{
   color:White;
@@ -109,33 +125,37 @@
   width:100%;
   padding: 1% 0 1% 0;
   font-weight: 400;
+  font-size: 2em;
  }
  .columns{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
   gap: 1em;
+  margin-top:2em;
  }
  .column{
   display: flex;
   flex-wrap:wrap;
   align-content: flex-start;
   gap: 1em;
-  width:30em;
+  width:31em;
+ }
+ .left{
+  justify-content: space-around;
  }
  .contactus{
   align-items: center;
+  flex-wrap:nowrap;
+  margin-bottom: 1em;
  }
-  /* Mobile CTA */
-  /* @media only screen and (max-width: 800px) {
-    .CTA{
-     flex-direction: column;
-     align-items:center;
-    }
-    .CTA button {
-      width:100%;
-     }
-   } */
+ .contactus .column{
+  gap: initial;
+  padding-top:1em;
+ }
+ .contactus p{
+  font-size: .9em;
+ }
 
 /* Modal CSS Code used and adjusted for grails via:
 https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only-css-tricks.html*/
@@ -183,11 +203,15 @@ https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only
   }
   .contactus{
     flex-direction: column;
+    text-align: center; 
   }
   .support_nav_bttn{
     width: 100%;
     text-align: center; 
 }
+ul{
+  margin-bottom:1em;
+ }
 }
 /* Small view port (Iphone SE) styling */
 @media only screen and (max-width: 400px){

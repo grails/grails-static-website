@@ -56,6 +56,9 @@
   font-weight:300;
   font-size:.9em;
  }
+.columns .terms{
+  justify-content: flex-end;
+ }
  li{
   font-weight: 300;
  }
@@ -144,6 +147,9 @@
  .left{
   justify-content: space-around;
  }
+ .right{
+  align-content: space-between;
+ }
  .contactus{
   align-items: center;
   flex-wrap:nowrap;
@@ -156,6 +162,38 @@
  .contactus p{
   font-size: .9em;
  }
+
+@media only screen and (max-width: 800px){
+  #popup .popup-content{
+    width:80%;
+  }
+  .product{
+    width:60%;
+  }
+  .column{
+    justify-content: center;
+  }
+  .contactus{
+    flex-direction: column;
+    text-align: center; 
+  }
+  .support_nav_bttn{
+    width: 100%;
+    text-align: center; 
+}
+ul{
+  margin-bottom:1em;
+ }
+ .columns .terms{
+  justify-content: center;
+ }
+}
+/* Small view port (Iphone SE) styling */
+@media only screen and (max-width: 400px){
+  #popup .popup-content{
+    top:67%;
+  }
+}
 
 /* Modal CSS Code used and adjusted for grails via:
 https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only-css-tricks.html*/
@@ -190,32 +228,4 @@ https://codingflag.blogspot.com/2020/10/how-to-create-popup-modal-using-css-only
 }
 #popup:target {
   display:block;
-}
-@media only screen and (max-width: 800px){
-  #popup .popup-content{
-    width:80%;
-  }
-  .product{
-    width:60%;
-  }
-  .column{
-    justify-content: center;
-  }
-  .contactus{
-    flex-direction: column;
-    text-align: center; 
-  }
-  .support_nav_bttn{
-    width: 100%;
-    text-align: center; 
-}
-ul{
-  margin-bottom:1em;
- }
-}
-/* Small view port (Iphone SE) styling */
-@media only screen and (max-width: 400px){
-  #popup .popup-content{
-    top:67%;
-  }
 }

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eric Helgeson Named 2017 Grails® Rock Star</title>
+    <title>Grails Spring Security Core Plugin Improper Privilege Management Vulnerability</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="The Grails® Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework." />
-    <meta name="date" content="November 30, 2017" />
+    <meta name="description" content="Information regarding CVE-2022-41923" />
+    <meta name="date" content="November 22, 2022" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='The Grails® Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.'/>
+    <meta name='twitter:description' content='Information regarding CVE-2022-41923'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Eric Helgeson Named 2017 Grails® Rock Star'/>
-    <meta property='og:description' content='The Grails® Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.'/>
+    <meta property='og:title' content='Grails Spring Security Core Plugin Improper Privilege Management Vulnerability'/>
+    <meta property='og:description' content='Information regarding CVE-2022-41923'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,24 +60,39 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Eric Helgeson Named 2017 Grails® Rock Star</h1>
-<p><span class="author">By Sergio Del Amo Caballero</span></p>
-<p><span class="date">November 30, 2017</span></p>
-<p>The Grails<sup>®</sup> Rock Star Award recognizes a member of the Grails Community for his or her outstanding contributions to the success of the Framework.</p>
-<p>Yesterday at G3 Summit 2017, Eric Helgeson was awarded the Grails Rock Star Award. Eric is the author of the book <a href="https://www.grails3book.com/">Practical Grails 3</a>, and he is often seen in the <a href="https://grails.slack.com/">Grails Slack Community</a> answering and helping other users. Moreover, Eric contributes to the Grails Community with code, plugin development, issues reporting, etc.</p>
-<p>Also, Graeme Rocher and Jeff Scott Brown, Grails framework co-founders, were awarded Grails lifetime contributor awards for their contributions in the past decade to the framework success.</p>
-<p><strong>Congratulations to Eric, Graeme, and Jeff for these well deserved awards.</strong></p>
-<p><img src="2017-11-30-img01.png" alt="Eric Helgeson, Graeme Rocher, and Jeff Scott Brown were honored at G3 Summit 2017 for their contributions to the Grails framework." /></p>
+  <div class='light padded blogpost'><h1>Grails Spring Security Core Plugin Improper Privilege Management Vulnerability</h1>
+<p><span class="author">By Matthew Moss</span></p>
+<p><span class="date">November 22, 2022</span></p>
+<p><strong>Information regarding CVE-2022-41923</strong></p>
+<h2>Overview</h2>
+<p>The Grails team has confirmed a security vulnerability found in the Grails Spring Security Core plugin, initially identified by Adrien Peter and Benjamin Sepe from <a href="https://www.synacktiv.com/">Synacktiv</a>, and investigated and reported by Arek Bazylewicz of <a href="https://id5.io">ID5</a>. This vulnerability has been assigned identifier <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41923">CVE-2022-41923</a>.</p>
+<p>The vulnerability allows an attacker access to one endpoint (i.e. the targeted endpoint) using the authorization requirements of a different endpoint (i.e. the donor endpoint). In some Grails framework applications, access to the targeted endpoint will be granted based on meeting the authorization requirements of the donor endpoint, which can result in a privilege escalation attack.</p>
+<h2>Impacted Applications</h2>
+<p>Grails Spring Security Core plugin versions:</p>
+<ul>
+<li>1.x</li>
+<li>2.x</li>
+<li>&gt;=3.0.0 &lt;3.3.2</li>
+<li>&gt;=4.0.0 &lt;4.0.5</li>
+<li>&gt;=5.0.0 &lt;5.1.1</li>
+</ul>
+<p>We strongly suggest that all Grails framework applications using the Grails Spring Security Core plugin be updated to a patched release of the plugin.</p>
+<h2>Protecting Your Applications</h2>
+<p>The following Grails Spring Security Core plugin versions have been patched for this vulnerability:</p>
+<ul>
+<li><a href="https://github.com/grails/grails-spring-security-core/releases/tag/v3.3.2">3.3.2</a></li>
+<li><a href="https://github.com/grails/grails-spring-security-core/releases/tag/v4.0.5">4.0.5</a></li>
+<li><a href="https://github.com/grails/grails-spring-security-core/releases/tag/v5.1.1">5.1.1</a></li>
+</ul>
+<p>The best way to protect your Grails framework application is to upgrade to a patched release of this plugin.</p>
+<p>If you are unable to upgrade to a patched version of the plugin, you can work around the issue with a small code and configuration change described in <a href="https://github.com/grails/GSSC-CVE-2022-41923">this GitHub repository</a>.  We have provided workaround examples for Grails framework 2 through 5 applications. A demonstration of the vulnerability will be provided in time, after users have an opportunity to patch their applications.</p>
+<h2>Looking Forward</h2>
+<p>The Grails Foundation and the Grails development team take application security very seriously. We are continuing to research and monitor this vulnerability and will update this post with new information as it is discovered.</p>
+<p>If you have questions about this vulnerability or need assistance on upgrades or workarounds, please see the <a href="https://github.com/grails/grails-spring-security-core/issues/844">discussion on GitHub</a> or contact us at <a href="mailto:security@grails.org">security@grails.org</a>.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-4.png)'>
-  <a href='https://grails.org/blog/2022-11-22-ss-plugin-auth-cve.html'>
-    <h3>November 22, 2022</h3>
-    <h2>Grails Spring Security Core Plugin Improper P...</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
   <a href='https://grails.org/blog/2022-09-28-static-binding-bug.html'>
     <h3>September 28, 2022</h3>
@@ -88,6 +103,12 @@
   <a href='https://grails.org/blog/2022-07-18-rce-vulnerability.html'>
     <h3>July 18, 2022</h3>
     <h2>Grails Framework Remote Code Execution Vulner...</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-4.png)'>
+  <a href='https://grails.org/blog/2022-04-01-jetbrains-new-tools-and-infrastructure-partner.html'>
+    <h3>April 1, 2022</h3>
+    <h2>Announcing Our Newest Tools and Infrastructur...</h2>
   </a>
 </article></div>
     </div>

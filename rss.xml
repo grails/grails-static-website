@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 22 Nov 2022 10:00:34 GMT</pubDate><item><title>Grails Data Binding to Static Properties Bug</title><link>https://grails.org/blog/2022-09-28-static-binding-bug.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 22 Nov 2022 18:42:03 GMT</pubDate><item><title>Grails Spring Security Core Plugin Improper Privilege Management Vulnerability</title><link>https://grails.org/blog/2022-11-22-ss-plugin-auth-cve.html</link><description><![CDATA[</p>
+<p><strong>Information regarding CVE-2022-41923</strong></p>
+<h2>Overview</h2>
+<p>The Grails team has confirmed a security vulnerability found in the Grails Spring Security Core plugin, initially identified by Adrien Peter and Benjamin Sepe from <a href="https://www.synacktiv.com/">Synacktiv</a>, and investigated and reported by Arek Bazylewicz of <a href="https://id5.io">ID5</a>. This vulnerability has been assigned identifier <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-41923">CVE-2022-41923</a>.</p>
+<p>The vulnerability allows an attacker access to one endpoint (i.e. the targeted endpoint) using the authorization requirements of a different endpoint (i.e. the donor endpoint). In some Grails framework applications, access to the targeted endpoint will be granted based on meeting the authorization requirements of the donor endpoint, which can result in a privilege escalation attack.</p>
+<h2>Impacted Applications</h2>
+<p>Grails Spring Security Core plugin versions:</p>
+<ul>
+<li>1.x</li>
+<li>2.x</li>
+<li>&gt;=3.0.0 &lt;3.3.2</li>
+<li>&gt;=4.0.0 &lt;4.0.5</li>
+<li>&gt;=5.0.0 &lt;5.1.1</li>
+</ul>
+<p>We strongly suggest that all Grails framework applications using the Grails Spring Security Core plugin be updated to a patched release of the plugin.</p>
+<h2>Protecting Your Applications</h2>
+<p>The following Grails Spring Security Core plugin versions have been patched for this vulnerability:</p>
+<ul>
+<li><a href="https://github.com/grails/grails-spring-security-core/releases/tag/v3.3.2">3.3.2</a></li>
+<li><a href="https://github.com/grails/grails-spring-security-core/releases/tag/v4.0.5">4.0.5</a></li>
+<li><a href="https://github.com/grails/grails-spring-security-core/releases/tag/v5.1.1">5.1.1</a></li>
+</ul>
+<p>The best way to protect your Grails framework application is to upgrade to a patched release of this plugin.</p>
+<p>If you are unable to upgrade to a patched version of the plugin, you can work around the issue with a small code and configuration change described in <a href="https://github.com/grails/GSSC-CVE-2022-41923">this GitHub repository</a>.  We have provided workaround examples for Grails framework 2 through 5 applications. A demonstration of the vulnerability will be provided in time, after users have an opportunity to patch their applications.</p>
+<h2>Looking Forward</h2>
+<p>The Grails Foundation and the Grails development team take application security very seriously. We are continuing to research and monitor this vulnerability and will update this post with new information as it is discovered.</p>
+<p>If you have questions about this vulnerability or need assistance on upgrades or workarounds, please see the <a href="https://github.com/grails/grails-spring-security-core/issues/844">discussion on GitHub</a> or contact us at <a href="mailto:security@grails.org">security@grails.org</a>.</p>]]></description><author>Matthew Moss</author><guid>2022-11-22-ss-plugin-auth-cve</guid><pubDate>Tue, 22 Nov 2022 00:00:00 GMT</pubDate></item><item><title>Grails Data Binding to Static Properties Bug</title><link>https://grails.org/blog/2022-09-28-static-binding-bug.html</link><description><![CDATA[</p>
 <p><strong>Information about an issue in the Grails data binding logic that can cause modification of static properties</strong></p>
 <h2>Summary</h2>
 <p>The Grails Team has confirmed a bug that was found in the Grails data binding logic, which incorrectly permits data binding to static properties under certain conditions. This bug was identified and reported by the Engineering Team at Transitional Data Services (<a href="https://tdsi.com">https://tdsi.com</a>).</p>

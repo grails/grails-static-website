@@ -91,21 +91,21 @@ class DocumentationPage {
 
                         div(class: 'versionselector') {
                             h4 'Single Page - User Guide'
-                            select(onchange: "window.location.href='http://grails.org/doc/' + this.value + '/guide/single.html'") {
+                            select(onchange: "window.location.href='https://grails.org/doc/' + this.value + '/guide/single.html'") {
                                 option 'Select a version'
                                 mkp.yield('[%versions]')
                             }
                         }
                         div(class: 'versionselector') {
                             h4 'User Guide'
-                            select(onchange: "window.location.href=&apos;http://grails.org/doc/&apos; + this.value") {
+                            select(onchange: "window.location.href=&apos;https://grails.org/doc/&apos; + this.value") {
                                 option 'Select a version'
                                 mkp.yield('[%versions]')
                             }
                         }
                         div(class: 'versionselector') {
                             h4 'API Reference'
-                            select(onchange: "window.location.href=&apos;http://grails.org/doc/&apos; + this.value + &apos;/api&apos;") {
+                            select(onchange: "window.location.href=&apos;https://grails.org/doc/&apos; + this.value + &apos;/api&apos;") {
                                 option 'Select a version'
                                 mkp.yield('[%versions]')
                             }

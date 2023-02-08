@@ -1,6 +1,6 @@
 ---
 title: Grails Artifact Repository Scheduled Maintenance
-date: February 8th, 2023
+date: February 8, 2023
 description: Scheduled Maintenance of repo.grails.org Feb 12, 2023 08:00 UTC - 11:00 UTC
 author: Jason Schindler
 image: grails-blog-index-5.png

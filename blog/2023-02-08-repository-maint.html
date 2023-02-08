@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grails Database Migration 4.0.0-RC1 Released</title>
+    <title>Grails Artifact Repository Scheduled Maintenance</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Grails Database Migration 4.0.0-RC1 Released" />
-    <meta name="date" content="November 23, 2021" />
+    <meta name="description" content="Scheduled Maintenance of repo.grails.org Feb 12, 2023 08:00 UTC - 11:00 UTC" />
+    <meta name="date" content="February 8, 2023" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Grails Database Migration 4.0.0-RC1 Released'/>
+    <meta name='twitter:description' content='Scheduled Maintenance of repo.grails.org Feb 12, 2023 08:00 UTC - 11:00 UTC'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Grails Database Migration 4.0.0-RC1 Released'/>
-    <meta property='og:description' content='Grails Database Migration 4.0.0-RC1 Released'/>
+    <meta property='og:title' content='Grails Artifact Repository Scheduled Maintenance'/>
+    <meta property='og:description' content='Scheduled Maintenance of repo.grails.org Feb 12, 2023 08:00 UTC - 11:00 UTC'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,49 +60,18 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Grails Database Migration 4.0.0-RC1 Released</h1>
-<p><span class="author">By Puneet Behl</span></p>
-<p><span class="date">November 23, 2021</span></p>
-<p>The Grails Database Migration plugin is one of the most popular plugins in the Grails ecosystem. It helps manage database changes in a structural manner and prevents inconsistencies, communication issues, and other problems.</p>
-<p>In today's technology landscape, where application and database schemas are continuously evolving, this plugin makes it easy for the development team to keep track of database changes, quickly rollback, and modify the schema.</p>
-<p>The plugin internally uses the Liquibase library to manage the database. When using the plugin, database migrations are represented in the form of text, either using Groovy DSL or native Liquibase XML, in one or more changelog files. There are several popular approaches to maintaining and organizing  the changelog files. We suggest you check <a href="https://grails-plugins.github.io/grails-database-migration/4.0.0-RC1/index.html">Grails Database Migration plugin documentation</a> for details.</p>
-<p>In this release, we have updated to Liquibase 4.6, Grails framework 5, and Apache Groovy 3. Refer to the release notes for 4.0.0-RC1 for more details.</p>
-<h2>Upgrading from Liquibase 3.10 to 4.6</h2>
-<p>The update from Liquibase 3.10 to 4.6 has been a major effort, and it's allowed us to offer users  a bunch of new features, significant improvements, and bug fixes. Following are some highlights:</p>
-<ol>
-<li>
-<p>The extension classes are now loaded with the java.util.ServiceLoader system instead of the legacy custom class-finding logic. This might not impact the main Liquibase functionality, but it will affect anyone using extension classes.</p>
-</li>
-<li>
-<p>Logging is now based on java.util.Logging, which is unlikely to directly impact applications.</p>
-</li>
-<li>
-<p>Support has been added to enable users to connect to Liquibase Hub (<a href="https://hub.liquibase.com">hub.liquibase.com</a>). This allows you to organize, monitor, and visualize Liquibase database change activity in real time.</p>
-</li>
-<li>
-<p>Support has been added for additional databases, such as CockroachDB and Maria DB.</p>
-</li>
-<li>
-<p>We've made significant changes to some important configuration and command APIs and added a new CLI library.</p>
-</li>
-<li>
-<p>Newly added support for Liquibase Quality Checks allow you to run checks against changelogs and SQL scripts.</p>
-</li>
-</ol>
-<p>For more information, we recommend checking out <a href="https://docs.liquibase.com/tools-integrations/extensions/extension-upgrade-guides/home.html">Liquibase Extension Upgrade Guide</a> and the <a href="https://github.com/liquibase/liquibase/releases/">release notes</a> for each major version starting with 4.x (4.1, 4.2, and so on up to 4.6).</p>
-<h2>Still Not Updated to Grails Framework 5?</h2>
-<p>We are excited about the recent release of Grails framework 5 and continually updating documentation and popular libraries. Now is a good time to update to Grails framework 5 and switch to Liquibase 4.</p>
-<p>We would love to hear about your experience with the update to Grails Database Migration 4.0.0-RC1, and if you need any help with your upgrade, we're here to <a href="https://grails.org/support.html">support</a> you.</p>
+  <div class='light padded blogpost'><h1>Grails Artifact Repository Scheduled Maintenance</h1>
+<p><span class="author">By Jason Schindler</span></p>
+<p><span class="date">February 8, 2023</span></p>
+<p><strong>Scheduled Maintenance of repo.grails.org Feb 12, 2023 08:00 UTC - 11:00 UTC</strong></p>
+<p>The Grails Artifactory Instance at <a href="https://repo.grails.org">repo.grails.org</a> will be down for scheduled maintenance on Sunday February 12th, 2023 as JFrog migrates it to newer infrastructure.</p>
+<p>The outage will begin at <strong>08:00 UTC</strong> and is expected to last 3 hours. The repository should be available again at <strong>11:00 UTC</strong></p>
+<p>During this time, projects that retrieve their dependencies from repo.grails.org may experience issues.</p>
+<p>For more information, or to discuss issues encountered after this window, please see this <a href="https://github.com/grails/grails-core/issues/12863">GitHub issue</a>.</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
-  <a href='https://grails.org/blog/2023-02-08-repository-maint.html'>
-    <h3>February 8, 2023</h3>
-    <h2>Grails Artifact Repository Scheduled Maintena...</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-4.png)'>
   <a href='https://grails.org/blog/2022-11-22-ss-plugin-auth-cve.html'>
     <h3>November 22, 2022</h3>
@@ -113,6 +82,12 @@
   <a href='https://grails.org/blog/2022-09-28-static-binding-bug.html'>
     <h3>September 28, 2022</h3>
     <h2>Grails Data Binding to Static Properties Bug</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-1.png)'>
+  <a href='https://grails.org/blog/2022-07-18-rce-vulnerability.html'>
+    <h3>July 18, 2022</h3>
+    <h2>Grails Framework Remote Code Execution Vulner...</h2>
   </a>
 </article></div>
     </div>

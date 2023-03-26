@@ -1,0 +1,114 @@
+---
+title: Grails 6 M2 - Release Annoucement
+date: Mar 27, 2023
+description: The Grails Foundation™ is excited to announce the M2 release of Grails framework 6!
+author: Puneet Behl
+image: grails-blog-index-3.png
+---
+
+# [%title]
+
+[%author]
+
+[%date]
+
+The Grails® Foundation is excited for the release of Grails framework 6 M2! We encourage you to try this release and provide your feedback (here)[https://github.com/grails/grails-core/issues].
+
+## What are some changes to expect?
+
+- Leveling up the Grails CLI
+- New Java 11 Baseline
+
+With the release of Grails 6 M2, we have introduced a brand new implementation of the Grails Command Line Interface (CLI) inspired by the CLI used in the Micronaut framework. This new CLI is much more flexible, fast and easy to maintain. Using the new CLI, you can create Grails applications offline or in areas of limited connectivity, and it is lightning fast. It uses (Picocli)[https://picocli.info/] for building the command-line application, and the Rocker template engine which produces statically typed plain Java objects. 
+
+## Key CLI Concepts
+
+- Application Type
+  An application type can be defined as a pre-selected group of features required at minimum to build a specific type of application. For example - a Grails web application is shipped with features such as GSP, Geb, Webdriver, etc.
+
+- Features
+  A feature affects the outcome of a generated project such as adding dependencies to build.gradle file, some default configurations, support additional CLI commands, etc. 
+
+Starting with Grails 6, there will not be a Grails CLI wrapper in new projects.  Many of the commands offered by the legacy CLI can be run directly from Gradle.  For example, `./grailsw run-app` can be achieved with `./gradlew bootRun`.  For commands that alter the files of a Grails project like `create-controller`, you will be able to use the globally-installed Grails CLI from within the project folder.  
+
+There are some specific commands which are supported via plugins that may not work with the New CLI, these commands are written as Groovy scripts and need to be converted to Grails ApplicationCommand which would make them available as Gradle tasks. You can find more information in the Grails Documentation about (creating custom commands)[https://docs.grails.org/latest/guide/commandLine.html#creatingCustomCommands]. Or, we can rewrite commands in the New Grails CLI and use rocker templates instead.
+
+## Installation
+
+### Installing with SDKMan
+
+The easiest way to install new Grails CLI is with (SDKMan)[https://sdkman.io], run the following command:
+
+```
+sdk install grails 6.0.0-M2
+```
+
+### Download & Install Binary
+
+- Download the latest binary from (here)[https://github.com/grails/grails-forge/releases/tag/v6.0.0-M2] based on your Operating System
+- Extract to appropriate directory.
+- Create environment variable GRAILS_HOME which points to installation directory, eg: c:/grails
+- Update the PATH environment variable, append %GRAILS_HOME%\bin.
+
+### Use SDKMan To Build & Install From Source 
+
+- Clone the repository as follows:
+```
+git clone (https://github.com/grails/grails-forge.git)[https://github.com/grails/grails-forge.git]
+```
+- Build dist using the command `./gradlew :grails-cli:assembleDist`.
+- Copy & Extract the archive from grails-forge/grails-cli/build/distributions/grails-cli.*.zip to the user home directory.
+- Use (SDKMan)[https://sdkman.io/], to install dev version using the following command:
+```
+sdk install grails dev ~/grails-cli/
+sdk use grails dev
+```
+
+## The Previous Grails CLI & Its Limitations
+
+The previous Grails CLI used YAML based configuration files which are not very extensible when it comes to customizing it. Also, it was very difficult to use automation tools to auto-update dependencies and the process of testing the profile was very complicated.
+
+## The Grails Profiles & ApplicationType in the New CLI 
+
+The Grails Profiles such as web, plugin, react, etc. are supported by means of application-types. Currently, we only support following application-types:
+- Web
+- REST API
+- Web Plugin
+- Plugin
+
+We will soon add support for REST API Plugin, ReactJS and AngularJS application types.
+
+## The Grails Scaffolding Plugin
+
+The Grails Scaffolding plugin, which defines commands such as generate-all and generate-controller, will not work because it uses the command scripts. In Grails 3, we introduced the concept of an ApplicationCommand which has similar abilities as scripts in regards to retrieving arguments, template generation, file access, and model building. For more information, please read the Grails documentation for (creating custom commands)[https://docs.grails.org/latest/guide/commandLine.html#creatingCustomCommands].
+
+## Why should you upgrade to Grails 6?
+
+- We are planning to move baseline Java 17 with Grails 7 so Grails 6 provides an easy upgrade path to users or applications who are planning to move to Java 17.
+- We will be ending the support for Grails 4 by the end of this quarter, and Grails 5 by the end of 2023. So we strongly recommend updating applications to upgrade to Grails 6. Please read about our support schedule (here)[https://grails.org/support-schedule.html].
+- In addition, we have updated a bunch of underline dependencies along with this release. Such as, Spring 5.3.26, Spring Boot 2.7.9, Tomcat 9.0.73, Hibernate 5.6.15.Final etc. Check the Grails Core (GitHub release notes)[https://github.com/grails/grails-core/releases/v6.0.0-M2/] page for more information.
+
+## Grails 6 Release Schedule
+
+- We will work on updating other important Grails projects such as GORM, GSP, Views etc to Grails 6 M2 for the next few days.
+- Grails 6 RC1 will be released in the next couple of weeks which will include updates to GORM, GSP, and Grails Views. 
+- Grails GA or, based on feedback, another RC release targeted for the end of March
+
+## Grails Support Schedule
+
+- We will end support for Grails 4 by the end of this quarter (31st March 2023).
+- We will support Grails 5 through the end of 2023.
+
+The Grails Foundation is committed to the continued evolution, development, maintenance, and support of the Grails framework. Our goal is to provide Grails users the support they need while maintaining as much focus as possible on innovation. The level and type of support available for earlier versions of the Grails framework will change as the Framework continues to evolve, and the support team remains available to help regardless of the version of the Grails framework that you are using. For more information about the level of support available for each version of the Grails framework, please see our (support schedule)[https://grails.org/support-schedule.html].
+
+We understand that different organizations have different support needs. With our support options, we can help your team make the most of the features available in the Grails framework and add another layer of protection to the investment in your critical business applications. Please (contact us)[https://grails.org/support.html#popup] if you need help supporting your Grails applications.
+
+## The Road Ahead..
+
+- The new Grails Forge website is coming soon!
+- More application types will be supported.
+- We will be adding more features such as Security.
+- There will be support for the Grails Scaffolding Plugin with Grails 6.
+- We are planning to baseline Java 17, support Apache Groovy 4, Spring 6, and Spring Boot 3 as part of Grails 7. 
+
+

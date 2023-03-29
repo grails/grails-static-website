@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 28 Mar 2023 21:06:37 GMT</pubDate><item><title>Grails Foundation joining Unity</title><link>https://grails.org/blog/2023-03-17-grails-foundation-joining-unity-foundation.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Wed, 29 Mar 2023 09:05:00 GMT</pubDate><item><title>Grails 6 M2 - Release Annoucement</title><link>https://grails.org/blog/2023-03-15-grails-6-m2.html</link><description><![CDATA[</p>
+<p>The Grails Foundation is excited for the release of Grails framework 6 M2! We encourage you to try this release and provide your feedback (here)[https://github.com/grails/grails-core/issues].</p>
+<h2>What are some changes to expect?</h2>
+<ul>
+<li>Leveling up the Grails CLI</li>
+<li>New Java 11 Baseline</li>
+</ul>
+<p>With the release of Grails 6 M2, we have introduced a brand new implementation of the Grails Command Line Interface (CLI) inspired by the CLI used in the Micronaut framework. This new CLI is much more flexible, fast and easy to maintain. Using the new CLI, you can create Grails applications offline or in areas of limited connectivity, and it is lightning fast. It uses (Picocli)[https://picocli.info/] for building the command-line application, and the Rocker template engine which produces statically typed plain Java objects.</p>
+<h2>Key CLI Concepts</h2>
+<ul>
+<li>
+<p>Application Type</p>
+<p>An application type can be defined as a pre-selected group of features required at minimum to build a specific type of application. For example - a Grails web application is shipped with features such as GSP, Geb, Webdriver, etc.</p>
+</li>
+<li>
+<p>Features</p>
+<p>A feature affects the outcome of a generated project such as adding dependencies to build.gradle file, some default configurations, support additional CLI commands, etc.</p>
+</li>
+</ul>
+<p>Starting with Grails 6, there will not be a Grails CLI wrapper in new projects.  Many of the commands offered by the legacy CLI can be run directly from Gradle.  For example, <code>./grailsw run-app</code> can be achieved with <code>./gradlew bootRun</code>.  For commands that alter the files of a Grails project like <code>create-controller</code>, you will be able to use the globally-installed Grails CLI from within the project folder.</p>
+<p>There are some specific commands which are supported via plugins that may not work with the New CLI, these commands are written as Groovy scripts and need to be converted to Grails ApplicationCommand which would make them available as Gradle tasks. You can find more information in the Grails Documentation about (creating custom commands)[https://docs.grails.org/latest/guide/commandLine.html#creatingCustomCommands]. Alternatively, we can rewrite commands in the New Grails CLI and use rocker templates instead.</p>
+<h2>Installation</h2>
+<h3>Installing with SDKMan</h3>
+<p>The easiest way to install new Grails CLI is with (SDKMan)[https://sdkman.io], run the following command:</p>
+<pre><code>sdk install grails 6.0.0-M2
+</code></pre>
+<h3>Download &amp; Install Binary</h3>
+<ul>
+<li>Download the latest binary from (here)[https://github.com/grails/grails-forge/releases/tag/v6.0.0-M2] based on your Operating System</li>
+<li>Extract to appropriate directory</li>
+<li>Create environment variable GRAILS_HOME which points to installation directory, eg: c:/grails</li>
+<li>Update the PATH environment variable, append %GRAILS_HOME%\bin</li>
+</ul>
+<h3>Use SDKMan To Build &amp; Install From Source</h3>
+<ul>
+<li>Clone the repository as follows:</li>
+</ul>
+<pre><code>git clone (https://github.com/grails/grails-forge.git)[https://github.com/grails/grails-forge.git]
+</code></pre>
+<ul>
+<li>Build dist using the command <code>./gradlew :grails-cli:assembleDist</code></li>
+<li>Copy &amp; Extract the archive from grails-forge/grails-cli/build/distributions/grails-cli.*.zip to the user home directory</li>
+<li>Use (SDKMan)[https://sdkman.io/], to install dev version using the following command:</li>
+</ul>
+<pre><code>sdk install grails dev ~/grails-cli/
+sdk use grails dev
+</code></pre>
+<h2>The Previous Grails CLI &amp; Its Limitations</h2>
+<p>The previous Grails CLI used YAML based configuration files which are not very extensible when it comes to customizing it. Also, it was very difficult to use automation tools to auto-update dependencies and the process of testing the profile was very complicated.</p>
+<h2>The Grails Profiles &amp; ApplicationType in the New CLI</h2>
+<p>The Grails Profiles such as web, plugin, react, etc. are supported by means of application-types. Currently, we support following application-types:</p>
+<ul>
+<li>Web</li>
+<li>REST API</li>
+<li>Web Plugin</li>
+<li>Plugin</li>
+</ul>
+<p>We will soon add support for REST API Plugin, ReactJS and AngularJS application types.</p>
+<h2>The Grails Scaffolding Plugin</h2>
+<p>The Grails Scaffolding plugin, which defines commands such as generate-all and generate-controller, will not work because it uses the command scripts. In Grails 3, we introduced the concept of an ApplicationCommand which has similar abilities as scripts in regards to retrieving arguments, template generation, file access, and model building. For more information, please read the Grails documentation for (creating custom commands)[https://docs.grails.org/latest/guide/commandLine.html#creatingCustomCommands].</p>
+<h2>Why should you upgrade to Grails 6?</h2>
+<ul>
+<li>With the future release of Grails 7, we are planning a move to Java 17 as a baseline, so Grails 6 provides an easy upgrade path to users or applications who are planning to move to Java 17.</li>
+<li>We will be ending the support for Grails 4 by the end of this quarter, and Grails 5 by the end of 2023. We strongly recommend updating applications to upgrade to Grails 6. Please read about our support schedule (here)[https://grails.org/support-schedule.html].</li>
+<li>Additionally with this realease, we have updated a bunch of underlying dependencies. Some of those updates include: Spring 5.3.26, Spring Boot 2.7.9, Tomcat 9.0.73, and Hibernate 5.6.15.Final. Check the Grails Core (GitHub release notes)[https://github.com/grails/grails-core/releases/v6.0.0-M2/] page for more information.</li>
+</ul>
+<h2>Grails 6 Release Schedule</h2>
+<ul>
+<li>We will work on updating other important Grails projects such as GORM, GSP, Views etc to Grails 6 M2 over the next few days.</li>
+<li>Grails 6 RC1 will be released in the next couple of weeks which will include updates to GORM, GSP, and Grails Views.</li>
+<li>Based on feedback, Grails GA or another RC release is targeted for the end of April.</li>
+</ul>
+<h2>Grails Support Schedule</h2>
+<ul>
+<li>We will end support for Grails 4 by the end of this quarter (31st March 2023).
+End of support means that this version of the Grails framework is no longer actively maintained and is unlikely to receive additional updates. You can still recieve commercial support through our additional support options (here)[https://grails.org/support.html#premium].</li>
+<li>We will support Grails 5 through the end of 2023.</li>
+</ul>
+<p>The Grails Foundation is committed to the continued evolution, development, maintenance, and support of the Grails framework. Our goal is to provide Grails users the support they need while maintaining as much focus as possible on innovation. The level and type of support available for earlier versions of the Grails framework will change as the Framework continues to evolve, and the support team remains available to help regardless of the version of the Grails framework that you are using. For more information about the level of support available for each version of the Grails framework, please see our (support schedule)[https://grails.org/support-schedule.html].</p>
+<p>We understand that different organizations have different support needs. With our support options, we can help your team make the most of the features available in the Grails framework and add another layer of protection to the investment in your critical business applications. Please (contact us)[https://grails.org/support.html#popup] if you need help supporting your Grails applications.</p>
+<h2>The Road Ahead..</h2>
+<ul>
+<li>The new Grails Forge website is coming soon!</li>
+<li>More application types will be supported.</li>
+<li>We will be adding more features such as Security.</li>
+<li>There will be support for the Grails Scaffolding Plugin with Grails 6.</li>
+<li>We are planning the move to Java 17 baseline, support Apache Groovy 4, Spring 6, and Spring Boot 3 as part of Grails 7.</li>
+</ul>
+<h2>Thank you!</h2>
+<p>Big thanks to our wonderful community of users for your continued support of the Grails framework over the past 15 years!
+With a hopeful outlook towards the future and a deep sense of gratitude, we eagerly anticipate the path that lies ahead, embracing the invaluable chance to develop and pioneer new advancements within this Framework.</p>]]></description><author>Puneet Behl</author><guid>2023-03-15-grails-6-m2</guid><pubDate>Wed, 29 Mar 2023 00:00:00 GMT</pubDate></item><item><title>Grails Foundation joining Unity</title><link>https://grails.org/blog/2023-03-17-grails-foundation-joining-unity-foundation.html</link><description><![CDATA[</p>
 <p>The Grails Foundation™ is pleased to announce a new partnership with the <a href="https://unityfoundation.io/">Unity Foundation</a>™.</p>
 <p>The Grails Foundation is one of three Open Source Software (OSS) Foundations joining the Unity Foundation as official member organizations of the Unity team. Established in 2020 as a non-profit, community-based organization, Unity set out on a journey to leverage open source software tools to provide more inherently equitable access to the information and services that support the needs of the greater St. Louis area community, with a focus on the underserved.</p>
 <p>Dr. Ebrahim Moshiri, founder of St. Louis-based technology company, <a href="https://objectcomputing.com/">Object Computing, Inc</a>. (OCI), envisioned a radically new way of serving the community by extending all of the openly available tools and systems that OCI had been building, supporting, and advancing for the last three decades. The <a href="https://unityfoundation.io/#projects">Unity Foundation</a> was organized to drive the engineering of a new kind of CommUNITY Infrastructure and data sharing ecosystem that, through collaborations and partnerships with other St. Louis based organizations, can address the digital divide in our region. In essence, Unity seeks to apply the ideals of altruism, benevolence, and social consciousness to the world of software tools and systems that organizations use to collect, organize, and share data.</p>
@@ -4791,13 +4881,7 @@ json {
 <li>view_name.gson (Example: show.gson)</li>
 </ul>
 <p>The content type (defined by either the <code>ACCEPT</code> header or file extension in the URI) is taken into account to allow different formats for the same view.</p>
-<p>For more detail, see <a href="https://grails.github.io/grails-views/latest/">the official documentation</a>.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-04-13</guid><pubDate>Wed, 13 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #1: Grails® Interceptors</title><link>https://grails.org/blog/2016-04-01-1.html</link><description><![CDATA[</p>
-<p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
-<p>In this 17-minute video, the Grails<sup>®</sup> framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, talks Grails <a href="https://en.wikipedia.org/wiki/Interceptor_pattern">interceptors</a>.</p>
-<p>(Yes, <code>create-interceptor</code> actually creates an interceptor. Mind. Blown.)</p>
-<p>This tutorial assumes only basic familiarity with Groovy (which is pretty darned expressive anyway) and the MVC concept (which you already know). It also serves as an excellent introduction to the interceptor pattern in any language, because Grails' behind-the-scenes legwork lets you focus on the logic of the pattern.</p>
-<p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-1</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #2: JSON Views</title><link>https://grails.org/blog/2016-04-01-2.html</link><description><![CDATA[</p>
+<p>For more detail, see <a href="https://grails.github.io/grails-views/latest/">the official documentation</a>.</p>]]></description><author>Jeff Scott Brown</author><guid>2016-04-13</guid><pubDate>Wed, 13 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #2: JSON Views</title><link>https://grails.org/blog/2016-04-01-2.html</link><description><![CDATA[</p>
 <p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a> <a href="https://grails.org/blog/tag/json.html"><span class="hashtag">#json</span></a></p>
 <p>In a delightful and informative 15 minutes, the Grails<sup>®</sup> framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, probes JSON views.</p>
 <p>Beginning with a Grails 3.1.1 application created with a standard web profile, Jeff demonstrates how to add a few custom domain classes.</p>
@@ -4806,7 +4890,13 @@ json {
 <p>While the app is running in development mode, the JSON files can be altered, and the effects of those changes can be seen real-time in the application.</p>
 <p>This Quickcast assumes basic knowledge of Grails, JSON, and REST APIs.</p>
 <p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
-<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-2</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Grails® 3 Interceptors</title><link>https://grails.org/blog/2015-03-01.html</link><description><![CDATA[</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-2</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Quickcast #1: Grails® Interceptors</title><link>https://grails.org/blog/2016-04-01-1.html</link><description><![CDATA[</p>
+<p>Tags: <a href="https://grails.org/blog/tag/quickcast.html"><span class="hashtag">#quickcast</span></a></p>
+<p>In this 17-minute video, the Grails<sup>®</sup> framework co-founder, <a href="https://objectcomputing.com/products/2gm-team#brown">Jeff Scott Brown</a>, talks Grails <a href="https://en.wikipedia.org/wiki/Interceptor_pattern">interceptors</a>.</p>
+<p>(Yes, <code>create-interceptor</code> actually creates an interceptor. Mind. Blown.)</p>
+<p>This tutorial assumes only basic familiarity with Groovy (which is pretty darned expressive anyway) and the MVC concept (which you already know). It also serves as an excellent introduction to the interceptor pattern in any language, because Grails' behind-the-scenes legwork lets you focus on the logic of the pattern.</p>
+<p>Grails Quickcasts, brought to you through a partnership between <a href="https://objectcomputing.com/">Object Computing, Inc.</a> (OCI) and <a href="https://dzone.com/">DZone</a>, provide bite-sized tutorials to help you maximize your productivity with the Framework.</p>
+<iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/XnRNfDGkBVg" frameborder="0"></iframe>]]></description><author>Jeff Scott Brown</author><guid>2016-04-01-1</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title>Grails® 3 Interceptors</title><link>https://grails.org/blog/2015-03-01.html</link><description><![CDATA[</p>
 <h2>Introduction</h2>
 <p>Grails<sup>®</sup> 3 is a major step forward in the evolution of the framework and re-evaluates many aspects of the framework that have evolved over the years. One area of the framework that was re-evaluated is that related to Grails filters.</p>
 <p>Grails filters are a lot like servlet filters but are more simple and are better integrated into the Grails runtime and its conventions. Grails filters were a way to implement logic that might relate to any number of controllers and were a powerful and flexible way to address many of those concerns. Grails 3 introduces the notion of interceptors as a better way to address many of the types of concerns that previously would have been addressed with filters.</p>

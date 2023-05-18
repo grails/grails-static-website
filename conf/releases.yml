@@ -429,3 +429,6 @@ releases:
   -
     version: 6.0.0-M3
     publicationDate: May 16, 2023
+  -
+    version: 6.0.0-M4
+    publicationDate: May 18, 2023

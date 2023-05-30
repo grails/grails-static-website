@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 29 May 2023 10:02:21 GMT</pubDate><item><title>Grails 6 RC1 - Release Announcement</title><link>https://grails.org/blog/2023-05-27-grails-6-rc1.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 30 May 2023 08:18:26 GMT</pubDate><item><title>Grails 6 RC1 - Release Announcement</title><link>https://grails.org/blog/2023-05-27-grails-6-rc1.html</link><description><![CDATA[</p>
 <p>The Grails Foundation is pleased to announce the release of Grails 6 RC1! We encourage you to update your applications to this release.</p>
 <p>The <a href="https://github.com/grails/grails-core/releases/tag/v6.0.0-RC1">Grails 6.0.0-RC1 Release</a> provides an easy upgrade path to the developers, or project managers who are looking to upgrade to Java 17, and Spring 6.</p>
 <h2>What’s New?</h2>
@@ -39,7 +39,7 @@ sdk use grails dev
 </li>
 </ul>
 <h3>Why do some Grails commands don't work?</h3>
-<p>The New CLI currently supports commands like <code>create-app</code>, <code>create-controller</code>, <code>create-service</code>, etc. You could also enter the Grails CLI interactive mode by entering <code>grails</code> and pressing the <code>return key</code> for auto-complete of supported commands.</p>
+<p>The New CLI currently supports commands like <code>create-app</code>, <code>create-controller</code>, etc. You could also enter the Grails CLI interactive mode by entering <code>grails</code> and pressing the <code>return key</code> for auto-complete of supported commands.</p>
 <p><img src="2023-05-27-img0.gif" alt="Example CLI Commands GIF" /></p>
 <p>We’ve dropped the support for commands which perform the redundant tasks such as <code>grails run-app</code> and we recommend using the Gradle <code>bootRun</code> task to run your application. However, we’ll add the support for a few other commands such as <code>create-service</code>, <code>create-test</code>, etc.</p>
 <h2>Grails 4 EOL - Announcement</h2>

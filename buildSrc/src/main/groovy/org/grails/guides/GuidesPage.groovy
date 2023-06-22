@@ -30,11 +30,11 @@ class GuidesPage {
                 GrailsVersionedGuide multiGuide = ((GrailsVersionedGuide) guide)
                 div(class: (guide.tags.contains('quickcast') ? 'quickcast multiguide' : 'multiguide')) {
                     span(class: 'title', guide.title)
-                    for (GrailsMayorVersion grailsVersion :  multiGuide.grailsMayorVersionTags.keySet())  {
+                    for (GrailsMajorVersion grailsVersion :  multiGuide.grailsMayorVersionTags.keySet())  {
                         Set<String> tagList = multiGuide.grailsMayorVersionTags[grailsVersion] as Set<String>
                         if (query == null || titlesMatchesQuery(multiGuide.title, query) || tagsMatchQuery(tagList as List<String>, query)) {
                             div(class: 'align-left') {
-                                String href = "${GUIDES_URL}${grailsVersion == GrailsMayorVersion.GRAILS_3 ? '/grails3' : ''}/${multiGuide.githubSlug.replaceAll('grails-guides/', '')}/guide/index.html"
+                                String href = "${GUIDES_URL}${grailsVersion == GrailsMajorVersion.GRAILS_3 ? '/grails3' : ''}/${multiGuide.githubSlug.replaceAll('grails-guides/', '')}/guide/index.html"
                                 a(class: 'grailsVersion', href: href) {
                                     mkp.yield(grailsVersion.toString().replaceAll("_", " "))
                                 }

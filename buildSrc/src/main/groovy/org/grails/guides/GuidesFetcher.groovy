@@ -73,9 +73,13 @@ class GuidesFetcher {
                         guide.title = guideArr.title
                         guide.subtitle = guideArr.subtitle
                         if (githubBranch == 'grails3') {
-                            guide.grailsMayorVersionTags[GrailsMayorVersion.GRAILS_3] = guideArr.tags
-                        } else if (githubBranch == 'master') {
-                            guide.grailsMayorVersionTags[GrailsMayorVersion.GRAILS_4] = guideArr.tags
+                            guide.grailsMayorVersionTags[GrailsMajorVersion.GRAILS_3] = guideArr.tags
+                        } else if (githubBranch == 'grails4' || githubBranch == 'master') {
+                            guide.grailsMayorVersionTags[GrailsMajorVersion.GRAILS_4] = guideArr.tags
+                        } else if (githubBranch == 'grails5') {
+                            guide.grailsMayorVersionTags[GrailsMajorVersion.GRAILS_5] = guideArr.tags
+                        } else if (githubBranch == 'grails6') {
+                            guide.grailsMayorVersionTags[GrailsMajorVersion.GRAILS_6] = guideArr.tags
                         }
                         if (guideArr.publicationDate) {
                             guide.publicationDate = dateFormat.parse(guideArr.publicationDate as String)

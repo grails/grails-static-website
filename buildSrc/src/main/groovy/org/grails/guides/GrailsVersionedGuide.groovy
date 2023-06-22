@@ -6,7 +6,7 @@ import groovy.transform.CompileStatic
 class GrailsVersionedGuide implements Guide {
     List<String> authors
     String category
-    Map<GrailsMayorVersion, List<String>> grailsMayorVersionTags = [:]
+    Map<GrailsMajorVersion, List<String>> grailsMayorVersionTags = [:]
     String name
     String title
     String subtitle
@@ -18,11 +18,11 @@ class GrailsVersionedGuide implements Guide {
     @Override
     List<String> getTags() {
         List<List<String>> tags = grailsMayorVersionTags.collect {
-            GrailsMayorVersion k, List<String> v ->
+            GrailsMajorVersion k, List<String> v ->
                 v
         }
         tags << grailsMayorVersionTags.collect {
-            GrailsMayorVersion k, List<String> v ->
+            GrailsMajorVersion k, List<String> v ->
                 k.toString().toLowerCase()
         } as List<String>
         tags.flatten() as List<String>

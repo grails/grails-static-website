@@ -5,6 +5,7 @@ on:
       - master
   schedule:
     - cron:  '* 9 * * *'
+  workflow_dispatch:
 jobs:
   build:
     if: github.repository == 'grails/grails-static-website'

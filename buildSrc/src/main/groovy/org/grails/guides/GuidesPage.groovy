@@ -34,7 +34,7 @@ class GuidesPage {
                         Set<String> tagList = multiGuide.grailsMayorVersionTags[grailsVersion] as Set<String>
                         if (query == null || titlesMatchesQuery(multiGuide.title, query) || tagsMatchQuery(tagList as List<String>, query)) {
                             div(class: 'align-left') {
-                                final String href = GUIDES_URL + '/' + grailsVersion.name().toLowerCase().replaceAll('_', '') + multiGuide.githubSlug.replaceAll(/grails-guides\//, '') + '/guide/index.html'
+                                final String href = GUIDES_URL + '/' + grailsVersion.name().toLowerCase().replaceAll('_', '') + '/' + multiGuide.githubSlug.replaceAll(/grails-guides\//, '') + '/guide/index.html'
                                 a(class: 'grailsVersion', href: href) {
                                     mkp.yield(grailsVersion.toString().replaceAll("_", " "))
                                 }

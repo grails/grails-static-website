@@ -31,7 +31,7 @@ fi
 
 git clone https://${GH_TOKEN}@github.com/${GITHUB_SLUG}.git -b gh-pages gh-pages --single-branch > /dev/null
 cd gh-pages
-cp -r ../build/dist/* .
+cp -rv ../build/dist/* .
 if git diff --quiet; then
   echo "No changes in MAIN Website"
 else

@@ -108,6 +108,14 @@ ul, ol {
 	padding-left: 20px;
 }
 
+b, strong {
+	font-weight: bold;
+}
+
+h4, h5, h6, b, strong {
+color: #000;
+}
+
 html, body {
 	height: 100%;
 }

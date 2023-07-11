@@ -149,7 +149,8 @@ class RenderSiteTask extends DefaultTask {
     static Map<String, String> processMetadata(Map<String, String> sitemeta) {
         Map<String, String> resolvedMetadata = sitemeta
         if (resolvedMetadata.containsKey("CSS")) {
-            resolvedMetadata.put("CSS", "<link rel='stylesheet' href='" + resolvedMetadata['CSS'] + "'/>")
+        
+            resolvedMetadata.put("CSS", "<link rel='stylesheet' href='[%url]" + resolvedMetadata['CSS'] + "'/>")
         } else {
             resolvedMetadata.put("CSS", "")
         }

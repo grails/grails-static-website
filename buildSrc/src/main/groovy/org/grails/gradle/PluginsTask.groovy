@@ -9,10 +9,9 @@ import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
-import org.grails.HtmlPost
 import org.grails.plugin.Plugin
 
-import static groovy.io.FileType.FILES
+import java.util.stream.Collector
 
 @CompileStatic
 class PluginsTask extends DefaultTask {
@@ -63,25 +62,49 @@ class PluginsTask extends DefaultTask {
         if (!pluginsOwnersFolder.exists()) {
             pluginsOwnersFolder.mkdir()
         }
-        File outputFile = new File(inputFile.absolutePath + "/" + "plugins.html")
-        outputFile.createNewFile()
+        File pluginOutputFile = new File(inputFile.absolutePath + "/" + "plugins.html")
+        pluginOutputFile.createNewFile()
         String html = pluginsHeader() + plugins.collect { plugin -> htmlForPlugin(plugin) }.join("\n")
-        outputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
+        pluginOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
+
+        Set<String> tags = getTags(plugins)
+        for (tag in tags) {
+            File tagsOutputFile = new File(pluginsTagsFolder.getPath() + "/" + tag + ".html")
+            tagsOutputFile.createNewFile()
+            String htmlForTagsFile = tagsHeader() + renderHtmlPagesForTags(plugins, tag)
+            tagsOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(htmlForTagsFile, metadata, templateText)
+        }
+
+        Set<String> owners = getOwners(plugins)
+        for (owner in owners) {
+            File ownersOutputFile = new File(pluginsOwnersFolder.getPath() + "/" + owner + ".html")
+            ownersOutputFile.createNewFile()
+            String htmlForOwnersFile = ownersHeader() + renderHtmlPagesForOwners(plugins, owner)
+            ownersOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(htmlForOwnersFile, metadata, templateText)
+        }
     }
 
-    void renderHtmlPagesForTags(File folder, List<Plugin> plugins) {
-        // Get Set<PluginTag> given plugins
-        // Loop through every tag
-        // Get the plugins by tag
-        // and generate HTML page just with the plugins belong tag
+    String renderHtmlPagesForTags(List<Plugin> plugins, String tag) {
+        List<String> pluginsByTag = new ArrayList<>()
+            for (plugin in plugins){
+                if(plugin.labels.contains(tag)){
+                    pluginsByTag.add(htmlForPlugin(plugin))
+                }
+            }
+            pluginsByTag.toString()
     }
 
-    void renderHtmlPagesForOwners(File folder, List<Plugin> plugins) {
-        // Get Set<Owner> given plugins
-        // Loop through every owner
-        // Get the plugins by owner
-        // and generate HTML page just with the plugins belong owner
+    String renderHtmlPagesForOwners(List<Plugin> plugins, String owner) {
+
+        List<String> pluginByOwner = new ArrayList<>()
+        for (plugin in plugins){
+            if(plugin.owner.contains(owner)){
+                pluginByOwner.add(htmlForPlugin(plugin))
+            }
+        }
+        pluginByOwner.toString()
     }
+
 
     @CompileDynamic
     String pluginsHeader() {
@@ -110,9 +133,16 @@ class PluginsTask extends DefaultTask {
                     mkp.yield(plugin.owner)
                 }
             }
-
-            //TODO render tags
-
+            if (plugin.latestVersion) {
+                p{
+                    mkp.yield(plugin.latestVersion)
+                }
+            }
+            if(plugin.labels.size()>0){
+                p{
+                    mkp.yield(plugin.labels)
+                }
+            }
         }
         writer.toString()
 
@@ -121,9 +151,63 @@ class PluginsTask extends DefaultTask {
     List<Plugin> pluginsFromJson(Object json) {
         List<Plugin> plugins = []
         for (int i = 0; i < json.size(); i++) {
-            plugins.add(new Plugin(name: json[i].bintrayPackage.name, owner: json[i].bintrayPackage.owner))
+            plugins.add(new Plugin(name: json[i].bintrayPackage.name, owner: json[i].bintrayPackage.owner,
+                    latestVersion: json[i].bintrayPackage.latestVersion, labels: json[i].bintrayPackage.labels))
         }
         plugins
     }
 
+    static boolean seen(String element, Set elements) {
+        elements.contains(element)
+    }
+
+    Set<String> getTags(List<Plugin> plugins) {
+
+        Set<String> tags = []
+        for (plugin in plugins){
+            for (label in plugin.labels){
+                if (!seen(label,tags)){
+                    tags.add(label);
+                }
+            }
+        }
+        return tags
+    }
+
+    @CompileDynamic
+    String tagsHeader() {
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mb = new MarkupBuilder(writer)
+        mb.div(class: 'headerbar chalicesbg') {
+            div(class: 'content') {
+                h1 {
+                    mkp.yield('Tags')
+                }
+            }
+        }
+        writer.toString()
+    }
+    @CompileDynamic
+    String ownersHeader() {
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mb = new MarkupBuilder(writer)
+        mb.div(class: 'headerbar chalicesbg') {
+            div(class: 'content') {
+                h1 {
+                    mkp.yield('Owners')
+                }
+            }
+        }
+        writer.toString()
+    }
+
+    Set<String> getOwners(List<Plugin> plugins) {
+        Set<String> owners = []
+        for (plugin in plugins){
+                if (!seen(plugin.owner, owners)){
+                    owners.add(plugin.owner);
+                }
+        }
+        return owners
+    }
 }

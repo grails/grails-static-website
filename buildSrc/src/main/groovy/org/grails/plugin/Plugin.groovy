@@ -8,4 +8,15 @@ import groovy.transform.EqualsAndHashCode
 class Plugin {
     String name
     String owner
+    String desc
+    List<String> labels
+    String latestVersion
+    String vcsUrl
+    String updated
+    String license
+
+
+
+
+
 }

@@ -7,9 +7,9 @@ import groovy.transform.EqualsAndHashCode
 @CompileStatic
 class Plugin {
     String name
-    String owner
+    Owner owner
     String desc
-    List<String> labels
+    List<Tag> labels
     String latestVersion
     String vcsUrl
     String updated

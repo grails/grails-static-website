@@ -26,43 +26,6 @@ class PluginsPage {
             //tagpage as href
 
 
-//    @CompileDynamic
-//    static String renderGuide(Plugin plugin, String query = null) {
-//        StringWriter writer = new StringWriter()
-//        MarkupBuilder html = new MarkupBuilder(writer)
-//        html.li {
-//            //check for instance of just one plugin (for single plugin page)
-//            if ( guide instanceof SingleGuide) {
-//
-//                a class: (guide.owners.contains('quickcast') ? 'quickcast guide' : 'guide'), href: "${GUIDES_URL}/${guide.name}/guide/index.html", guide.title
-//                guide.owners.each { String tag ->
-//                    span(style: 'display: none', class: 'tag', tag)
-//                }
-//            } else if (guide instanceof GrailsVersionedGuide) {
-//                GrailsVersionedGuide multiGuide = ((GrailsVersionedGuide) guide)
-//                div(class: (guide.owners.contains('quickcast') ? 'quickcast multiguide' : 'multiguide')) {
-//                    span(class: 'title', guide.title)
-//                    for (GrailsMajorVersion grailsVersion :  multiGuide.grailsMayorVersionTags.keySet())  {
-//                        Set<String> tagList = multiGuide.grailsMayorVersionTags[grailsVersion] as Set<String>
-//                        if (query == null || titlesMatchesQuery(multiGuide.title, query) || tagsMatchQuery(tagList as List<String>, query)) {
-//                            div(class: 'align-left') {
-//                                final String href = GUIDES_URL + '/' + grailsVersion.name().toLowerCase().replaceAll('_', '') + '/' + multiGuide.githubSlug.replaceAll(/grails-plugins\//, '') + '/guide/index.html'
-//                                a(class: 'grailsVersion', href: href) {
-//                                    mkp.yield(grailsVersion.toString().replaceAll("_", " "))
-//                                }
-//                                tagList.each { String tag ->
-//                                    span(style: 'display: none', class: 'tag', tag)
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        writer.toString()
-//    }
-
-
     @CompileDynamic
     static String mainContent(
                               List<Plugin> plugin,

@@ -9,14 +9,12 @@ class Plugin {
     String name
     Owner owner
     String desc
-    List<Tag> labels
+    List<String> labels
     String latestVersion
     String vcsUrl
     String updated
     String license
-
-
-
+    Integer githubStars
 
 
 }

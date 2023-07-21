@@ -3,53 +3,25 @@ package org.grails.plugin
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
-
-import java.text.SimpleDateFormat
+import org.grails.guides.TagUtils
+import org.grails.tags.Tag
+import org.grails.tags.TagCloud
 
 @CompileStatic
 class PluginsPage {
 
-    public static final Integer NUMBER_OF_LATEST_GUIDES = 8
-    private static final Integer MARGIN_TOP = 50
-    public static final String GUIDES_URL = "https://plugins.grails.org"
-
-
-    //mainContent(){}
-    //rightColumn()
-        //genPluginList
-            //pluginpage as href
-
-    //leftColumn()
-        //genOwnerCloud
-            //ownerpage as href
-        //genTagCloud
-            //tagpage as href
-
-
     @CompileDynamic
     static String mainContent(
-                              List<Plugin> plugin,
-                              Set<Owner> owners = null,
-                              Tag tag = null) {
+                              String siteUrl,
+                              List<Plugin> plugins,
+                                String title) {
 
 
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'headerbar chalicesbg') {
             div(class: 'content') {
-                if (tag || owner) {
-                    h1 'Tag or Owner'
-//                        a(href: "[%url]/index.html", 'Grails Plugin')
-//                        if (tag) {
-//                            mkp.yield(" → #${plugin.labels}")
-//                        } else if(owner) {
-//                            mkp.yield(" → #${plugin.owner.name}")
-//                        }
-
-
-                } else {
-                    h1 'Grails Plugins'
-                }
+                h1 title
             }
         }
         html.div(class: 'content') {
@@ -57,26 +29,32 @@ class PluginsPage {
             setOmitNullAttributes(true)
             div(class: 'twocolumns') {
                 div(class: 'column') {
-                    mkp.yieldUnescaped rightColumn(tag, null, plugin)
+                    mkp.yieldUnescaped rightColumn(siteUrl, plugins)
                 }
                 div(class: 'column') {
-                    //mkp.yieldUnescaped leftColumn(tag, null, owners)
-                    if (tag) {
-                      //  mkp.yieldUnescaped guideGroupByTag(tag, guides)
+                    //TODO Legacy Plugins
+                    //TODO Plublishing Guide
+                    //TODO Portal on github linking to https://github.com/grails/grails-plugins-metadata
+                    
+                    //TODO add Header for Plugins Tag Cloud
+                    Set<Tag> tags = TagUtils.populateTagsByPlugins(plugins)
+                    mkp.yieldUnescaped TagCloud.tagCloud(siteUrl + "/plugins/tags", tags, false)
 
-                    } else if ( owner ) {
-                        //mkp.yieldUnescaped guideGroupByCategory(category, guides.findAll { it.category == category.name }, false )
+                    //TODO add Header for Latest Plugins
+                    //TODO render Latest Plugins
 
-                    }
+                    //TODO add Header for TOP Rated Plugins
+                    //TODO render TOP Rated
+
+                    //TODO add Header for Plugins by Owner Tag Cloud
+                    //TODO render Owner Tag Cloud
+
+
                 }
             }
-
         }
         writer.toString()
-
     }
-
-
 
     @CompileDynamic
     static String leftColumn(Tag tag, Owner owner, Set<Tag> tags) {
@@ -91,89 +69,74 @@ class PluginsPage {
     }
 
     @CompileDynamic
-    static String rightColumn(Tag tag, Owner owner, List<Plugin> plugins) {
+    static String rightColumn(String siteUrl,List<Plugin> plugins) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: 'latestguides'){
+        html.div(class: 'plugins'){
             html.ul {
-                //TODO add search box
-                if (!(tag || owner)) {
-                    for (plugin in plugins) {
-                        mkp.yieldUnescaped renderSinglePlugin(plugin)
-                    }
+                for (plugin in plugins) {
+                    mkp.yieldUnescaped renderSinglePlugin(siteUrl, plugin)
                 }
             }
         }
         writer.toString()
     }
 
-
-//    @CompileDynamic
-//    static String tagCloud(Set<Tag> tags) {
-//        StringWriter writer = new StringWriter()
-//        MarkupBuilder html = new MarkupBuilder(writer)
-//        html.div(class: 'tagsbytopic') {
-//            h3 class: 'columnheader', 'Guides by Tag'
-//            ul(class: 'tagcloud') {
-//                tags.each { Tag t ->
-//                    li(class: "tag") {
-//                        a href: "${GUIDES_URL}/owners/${t.label.toLowerCase()}.html", t.label
-//                    }
-//                }
-//            }
-//        }
-//        writer.toString()
-//    }
-
-
-
-//    @CompileDynamic
-//    static String pluginsByTag(Tag tag, List<Plugin> plugins) {
-//        StringWriter writer = new StringWriter()
-//        MarkupBuilder html = new MarkupBuilder(writer)
-//        html.div(class: "guidegroup") {
-//            div(class: "guidegroupheader") {
-//                img src: "[%url]/images/documentation.svg" as String, alt: 'Guides'
-//                h2 "Guides filtered by #${tag.label}"
-//            }
-//            ul {
-//                List<Plugin> plugin = plugins.findAll { Plugin plugin -> plugin.tags.contains(tag.label) }
-//                plugin.each { mkp.yieldUnescaped renderSinglePlugin(it) }
-//            }
-//        }
-//        writer.toString()
-//    }
-
     @CompileDynamic
-    static String renderSinglePlugin(Plugin plugin) {
+    static String renderSinglePlugin(String siteUrl, Plugin plugin) {
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
-        mb.li {
-            b {
-                mkp.yieldUnescaped(plugin.name)
-            }
-            if (plugin.owner) {
-                a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
-                    mkp.yield(plugin.owner.name)
+        mb.li(class: 'plugin') {
+            if (plugin.vcsUrl) {
+                ul(class: 'iconlinks') {
+                    a(href: plugin.vcsUrl) {
+                        if (plugin.vcsUrl.contains("bintray.com")) {
+                            img(src: "${siteUrl}/images/bintray.svg", width: 20)
+                        } else if (plugin.vcsUrl.contains("github.com")) {
+                            img(src: "${siteUrl}/images/github.svg", width: 20)
+                        } else {
+                            mkp.yield("Repository")
+                        }
+                    }
                 }
-            }
-            if (plugin.latestVersion) {
-                span{
-                    mkp.yield(plugin.latestVersion)
+                h3 {
+                    mkp.yield(plugin.name)
                 }
-            }
-            if(plugin.labels.size()>0){
-                span{
-                    for (int i=0;i<plugin.labels.size();i++){
-                        a(href: "[%url]/plugins/tags/${plugin.labels.label[i]}.html") {
-                            mkp.yield(plugin.labels.label[i] + " ")
+                if (plugin.desc) {
+                    p {
+                        mkp.yield(plugin.desc)
+                    }
+                }
+                p {
+                    if (plugin.latestVersion) {
+                        b {
+                            mkp.yield(plugin.latestVersion)
+                        }
+                    }
+                    mkp.yield(plugin.updated) //TODO format this nicely
+
+                    if (plugin.owner) {
+                        span {
+                            mkp.yield("by")
+                        }
+                        a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
+                            mkp.yield(plugin.owner.name)
+                        }
+                    }
+                }
+                if (plugin.labels) {
+                    ul(class: 'labels') {
+                        for (String label : plugin.labels) {
+                            li(class: 'label') {
+                                a(href: "[%url]/plugins/tags/${label}.html") {
+                                    mkp.yield(label)
+                                }
+                            }
                         }
                     }
                 }
             }
         }
         writer.toString()
-
     }
-
 }

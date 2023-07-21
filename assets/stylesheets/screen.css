@@ -610,6 +610,7 @@ article.quote,
 	margin-bottom: 50px;
 }
 
+.twocolumns .column .plugins:first-child,
 .twocolumns .column article.quote:first-child {
 	margin-top: 50px;
 }
@@ -791,6 +792,7 @@ body.grails3plugins .latestguides ul {
 	font-weight: normal;
 }
 
+li.plugin h3,
 .latestguides li b,
 .latestguides li a,
 .latestguides li span {
@@ -1797,4 +1799,52 @@ table th {
 
 .no-border {
 	border: none;
+}
+
+/*
+.plugins-list {
+	padding: 30px 0 0 30px;
+	margin: 0;
+	background-color: #ffffff;
+}
+*/
+li.plugin {
+	list-style-type: none;
+	padding: 10px 30px 10px 0;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 1px;
+	overflow: auto;
+}
+
+li.plugin .iconlinks {
+	float: right;
+}
+li.plugin .iconlinks li {
+	list-style: none;
+	display: inline;
+	border: none;
+	margin: 5px;
+	padding: 0;
+}
+
+li.plugin .labels {
+	overflow: auto;
+	margin: 20px 0;
+	padding: 0;
+	clear: both;
+}
+li.plugin li.label {
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin: 5px;
+	padding: 0;
+}
+li.plugin li.label a {
+	border: 1px solid rgb(211, 211, 211);
+	text-decoration: none;
+	padding: 10px;
+	background-color: #F5F5F5;
+	color: #7c7c7c;
+	display: block;
 }

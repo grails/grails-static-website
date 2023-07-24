@@ -12,6 +12,7 @@ import org.gradle.api.tasks.TaskAction
 import org.grails.plugin.Owner
 import org.grails.plugin.Plugin
 import org.grails.plugin.PluginsPage
+import org.grails.tags.Tag
 
 import java.time.LocalDate
 import java.util.stream.Collectors
@@ -68,11 +69,11 @@ class PluginsTask extends DefaultTask {
         }
         File pluginOutputFile = new File(inputFile.absolutePath + "/" + "plugins.html")
         pluginOutputFile.createNewFile()
-
         String html = PluginsPage.mainContent(siteUrl, plugins, 'Grails Plugins')
         pluginOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
 
         Set<String> tags = getTags(plugins)
+
         for (String tag in tags) {
             File tagsOutputFile = new File(pluginsTagsFolder.getPath() + "/" + tag + ".html")
             tagsOutputFile.createNewFile()
@@ -131,11 +132,17 @@ class PluginsTask extends DefaultTask {
         elements.contains(owner)
     }
 
+    static boolean seen(String tag, Set<String> elements) {
+        elements.contains(tag)
+    }
+
     Set<String> getTags(List<Plugin> plugins) {
         Set<String> tags = []
         for (plugin in plugins) {
-            for (String label : plugins.labels) {
-                tags.add(label)
+            for (label in plugin.labels) {
+                if (!seen(label, tags)) {
+                    tags.add(label)
+                }
             }
         }
         tags

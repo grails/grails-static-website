@@ -3,9 +3,7 @@ package org.grails.plugin
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
-import org.grails.guides.Guide
-import org.grails.plugin.Plugin
-import org.grails.tags.Tag
+
 
 @CompileStatic
 class OwnerUtils {
@@ -14,13 +12,10 @@ class OwnerUtils {
     static Set<Owner> populateOwnersByPlugins(List<Plugin> plugins) {
         Set<Owner> owners = []
         if (plugins) {
-
             for (Plugin plugin : plugins) {
                 if (plugin.owner) {
-
                         owners.add(plugin.owner)
                     }
-
             }
         }
         return ownerCloud(owners) as Set<Owner>

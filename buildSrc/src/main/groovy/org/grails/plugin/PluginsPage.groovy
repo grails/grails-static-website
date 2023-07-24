@@ -7,7 +7,7 @@ import org.grails.guides.TagUtils
 import org.grails.tags.Tag
 import org.grails.tags.TagCloud
 
-import java.sql.Array
+import java.text.SimpleDateFormat
 import java.time.LocalDate
 
 @CompileStatic
@@ -98,6 +98,14 @@ class PluginsPage {
     static String renderSinglePlugin(String siteUrl, Plugin plugin) {
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
+
+        String oldDate = plugin.updated
+        SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+        Date date = isoFormat.parse(oldDate)
+        SimpleDateFormat dt1 = new SimpleDateFormat("MMM d, yyyy");
+
+
+
         mb.li(class: 'plugin') {
             if (plugin.vcsUrl) {
                 ul(class: 'iconlinks') {
@@ -125,11 +133,12 @@ class PluginsPage {
                             mkp.yield(plugin.latestVersion)
                         }
                     }
-                    mkp.yield(plugin.updated) //TODO format this nicely
+                    mkp.yield(" published ")
+                    mkp.yield(dt1.format(date)) //TODO format this nicely
 
                     if (plugin.owner) {
                         span {
-                            mkp.yield("by")
+                            mkp.yield("by ")
                         }
                         a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
                             mkp.yield(plugin.owner.name)
@@ -157,12 +166,12 @@ class PluginsPage {
         StringWriter writer = new StringWriter()
         MarkupBuilder mkp = new MarkupBuilder(writer)
 
-        List<String> urlLink = ["https://plugins.grails.org/",
+        List<String> urlLink = [
         siteUrl+"/legacy-plugins",
         "https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html",
         "https://github.com/grails/grails3-plugins"]
 
-        List<String> title = ["Current Plugins (Grails 3+)",
+        List<String> title = [
         "Legacy Plugins (Grails 1 & 2)",
         "Publishing Guide",
         "Portal on Github"]
@@ -194,17 +203,21 @@ class PluginsPage {
         List<Plugin> filteredPlugins = plugins.sort{a,b-> a.updated<=>today}
         List<Plugin> topFive = filteredPlugins.take(5)
 
-        makeHtml(topFive)
+        renderLatestPlugins(topFive)
     }
     @CompileDynamic
-    static String makeHtml(List<Plugin> topFive){
+    static String renderLatestPlugins(List<Plugin> topFive){
         StringWriter writer = new StringWriter()
         MarkupBuilder mkp = new MarkupBuilder(writer)
         mkp.ul(class: 'latestguides') {
             for (plugin in topFive) {
+
+                SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+                Date date = isoFormat.parse(plugin.updated)
+                SimpleDateFormat dt1 = new SimpleDateFormat("MMM d, yyyy");
                 li {
                         b plugin.name
-                        span plugin.updated
+                        span dt1.format(date)
                         a href: plugin.vcsUrl, 'Read More'
 
                 }

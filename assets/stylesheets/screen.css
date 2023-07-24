@@ -1840,7 +1840,7 @@ li.plugin li.label {
 	margin: 5px;
 	padding: 0;
 }
-li.plugin li.label a {
+*.pluginleftmenu li{
 	border: 1px solid rgb(211, 211, 211);
 	text-decoration: none;
 	padding: 10px;
@@ -1848,3 +1848,5 @@ li.plugin li.label a {
 	color: #7c7c7c;
 	display: block;
 }
+
+

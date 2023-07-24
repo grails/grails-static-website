@@ -7,6 +7,9 @@ import org.grails.guides.TagUtils
 import org.grails.tags.Tag
 import org.grails.tags.TagCloud
 
+import java.sql.Array
+import java.time.LocalDate
+
 @CompileStatic
 class PluginsPage {
 
@@ -32,27 +35,36 @@ class PluginsPage {
                     mkp.yieldUnescaped rightColumn(siteUrl, plugins)
                 }
                 div(class: 'column') {
-                    //TODO Legacy Plugins
-                    //TODO Plublishing Guide
-                    //TODO Portal on github linking to https://github.com/grails/grails-plugins-metadata
-                    
-                    //TODO add Header for Plugins Tag Cloud
+                    mkp.yieldUnescaped leftColumnMenu(siteUrl)
+
+                    mkp.yieldUnescaped createHeader('Plugins By Tag')
                     Set<Tag> tags = TagUtils.populateTagsByPlugins(plugins)
                     mkp.yieldUnescaped TagCloud.tagCloud(siteUrl + "/plugins/tags", tags, false)
 
-                    //TODO add Header for Latest Plugins
+                    mkp.yieldUnescaped createHeader('Latest Plugins')
                     //TODO render Latest Plugins
+                    mkp.yieldUnescaped fetchLatestPlugins(plugins)
 
-                    //TODO add Header for TOP Rated Plugins
+                    mkp.yieldUnescaped createHeader('Top Rated Plugins')
                     //TODO render TOP Rated
 
-                    //TODO add Header for Plugins by Owner Tag Cloud
-                    //TODO render Owner Tag Cloud
+                    mkp.yieldUnescaped createHeader('Plugins By Owner')
+                    mkp.yieldUnescaped OwnerUtils.populateOwnersByPlugins(plugins)
 
 
                 }
             }
         }
+        writer.toString()
+    }
+
+    @CompileDynamic
+    static String leftColumnMenu(String siteUrl){
+        StringWriter writer = new StringWriter()
+        MarkupBuilder html = new MarkupBuilder(writer)
+            html.ul(class: 'guidegroup'){
+                 mkp.yieldUnescaped(createLink(siteUrl))
+            }
         writer.toString()
     }
 
@@ -136,6 +148,68 @@ class PluginsPage {
                     }
                 }
             }
+        }
+        writer.toString()
+    }
+
+    @CompileDynamic
+    static String createLink(String siteUrl){
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mkp = new MarkupBuilder(writer)
+
+        List<String> urlLink = ["https://plugins.grails.org/",
+        siteUrl+"/legacy-plugins",
+        "https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html",
+        "https://github.com/grails/grails3-plugins"]
+
+        List<String> title = ["Current Plugins (Grails 3+)",
+        "Legacy Plugins (Grails 1 & 2)",
+        "Publishing Guide",
+        "Portal on Github"]
+        for (int i = 0; i<urlLink.size();i++) {
+            mkp.li() {
+                mkp.a(href: urlLink[i]) {
+                    mkp.yield(title[i])
+                }
+            }
+        }
+        writer.toString()
+
+    }
+    @CompileDynamic
+    static String createHeader(String section){
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mkp = new MarkupBuilder(writer)
+        mkp.h3(class: 'columnheader'){
+            mkp.yield section
+        }
+        writer.toString()
+    }
+
+    @CompileDynamic
+    static String fetchLatestPlugins(List<Plugin> plugins){
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mkp = new MarkupBuilder(writer)
+        String today = LocalDate.now().toString()
+        List<Plugin> filteredPlugins = plugins.sort{a,b-> a.updated<=>today}
+        List<Plugin> topFive = filteredPlugins.take(5)
+
+        makeHtml(topFive)
+    }
+    @CompileDynamic
+    static String makeHtml(List<Plugin> topFive){
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mkp = new MarkupBuilder(writer)
+        mkp.ul(class: 'latestguides') {
+            for (plugin in topFive) {
+                li {
+                        b plugin.name
+                        span plugin.updated
+                        a href: plugin.vcsUrl, 'Read More'
+
+                }
+            }
+
         }
         writer.toString()
     }

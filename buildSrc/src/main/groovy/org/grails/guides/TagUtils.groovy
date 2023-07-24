@@ -24,6 +24,7 @@ class TagUtils {
     static Set<Tag> populateTagsByPlugins(List<Plugin> plugins) {
         Map<String, Integer> tagsMap = [:]
         if (plugins) {
+
             for (Plugin plugin : plugins) {
                 if (plugin.labels) {
                     for (String tag : plugin.labels) {

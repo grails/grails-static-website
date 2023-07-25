@@ -2,13 +2,17 @@ package org.grails.plugin
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
+import groovy.transform.Sortable
 import jdk.nashorn.internal.objects.annotations.Getter
 import org.jetbrains.annotations.NotNull
 
 import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 @EqualsAndHashCode
 @CompileStatic
+@Sortable(includes=['updated'])
 class Plugin implements Comparable{
     String name
     Owner owner
@@ -16,7 +20,7 @@ class Plugin implements Comparable{
     List<String> labels
     String latestVersion
     String vcsUrl
-    String updated
+    LocalDateTime updated
     String license
     Integer githubStars
 
@@ -29,4 +33,5 @@ class Plugin implements Comparable{
     int compareTo(@NotNull Object o) {
         return 0
     }
+
 }

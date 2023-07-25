@@ -3,7 +3,6 @@ package org.grails.gradle
 import groovy.json.JsonSlurper
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
-import groovy.xml.MarkupBuilder
 import org.gradle.api.DefaultTask
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
@@ -12,9 +11,9 @@ import org.gradle.api.tasks.TaskAction
 import org.grails.plugin.Owner
 import org.grails.plugin.Plugin
 import org.grails.plugin.PluginsPage
-import org.grails.tags.Tag
 
-import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.stream.Collectors
 
 @CompileStatic
@@ -104,10 +103,12 @@ class PluginsTask extends DefaultTask {
     @CompileDynamic
     List<Plugin> pluginsFromJson(Object json) {
         List<Plugin> plugins = []
+
         for (int i = 0; i < json.size(); i++) {
             Owner owner = new Owner(name: json[i].bintrayPackage.owner)
+            LocalDateTime updatedDate = parseIsoStringToDate(json[i].bintrayPackage.updated)
             plugins.add(new Plugin(name: json[i].bintrayPackage.name,
-                    updated: json[i].bintrayPackage.updated,
+                    updated: updatedDate,
                     owner: owner,
                     desc: json[i].bintrayPackage.desc,
                     vcsUrl: json[i].bintrayPackage.vcsUrl,
@@ -118,6 +119,11 @@ class PluginsTask extends DefaultTask {
         plugins
     }
 
+    LocalDateTime parseIsoStringToDate(String isoFormattedString){
+        DateTimeFormatter f = DateTimeFormatter.ofPattern( "yyyy-MM-dd'T'HH:mm:ss.SSSXXX" );
+        return  LocalDateTime.parse(isoFormattedString, f);
+
+    }
     Optional<Integer> githubStars(String vcsUrl) {
         if (!vcsUrl) {
             return Optional.empty()
@@ -148,7 +154,7 @@ class PluginsTask extends DefaultTask {
         tags
     }
 
-    Set<Owner> getOwners(List<Plugin> plugins) {
+    static Set<Owner> getOwners(List<Plugin> plugins) {
         Set<Owner> owners = []
         for (plugin in plugins){
                 if (!seen(plugin.owner, owners)){
@@ -158,5 +164,8 @@ class PluginsTask extends DefaultTask {
         return owners
     }
 
-
+    static String formatUpdatedDate(LocalDateTime date){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, YYYY");
+        return formatter.format(date)
+    }
 }

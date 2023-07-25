@@ -3,12 +3,13 @@ package org.grails.plugin
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
+import org.grails.gradle.PluginsTask
 import org.grails.guides.TagUtils
 import org.grails.tags.Tag
 import org.grails.tags.TagCloud
 
-import java.text.SimpleDateFormat
-import java.time.LocalDate
+import java.time.LocalDateTime
+
 
 @CompileStatic
 class PluginsPage {
@@ -42,14 +43,13 @@ class PluginsPage {
                     mkp.yieldUnescaped TagCloud.tagCloud(siteUrl + "/plugins/tags", tags, false)
 
                     mkp.yieldUnescaped createHeader('Latest Plugins')
-                    //TODO render Latest Plugins
                     mkp.yieldUnescaped fetchLatestPlugins(plugins)
 
                     mkp.yieldUnescaped createHeader('Top Rated Plugins')
-                    //TODO render TOP Rated
+                    mkp.yieldUnescaped fetchTopRatedPlugins(siteUrl,plugins)
 
                     mkp.yieldUnescaped createHeader('Plugins By Owner')
-                    mkp.yieldUnescaped OwnerUtils.populateOwnersByPlugins(plugins)
+                    mkp.yieldUnescaped populateOwnersByPlugins(siteUrl,plugins)
 
 
                 }
@@ -99,13 +99,6 @@ class PluginsPage {
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
 
-        String oldDate = plugin.updated
-        SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
-        Date date = isoFormat.parse(oldDate)
-        SimpleDateFormat dt1 = new SimpleDateFormat("MMM d, yyyy");
-
-
-
         mb.li(class: 'plugin') {
             if (plugin.vcsUrl) {
                 ul(class: 'iconlinks') {
@@ -134,7 +127,7 @@ class PluginsPage {
                         }
                     }
                     mkp.yield(" published ")
-                    mkp.yield(dt1.format(date)) //TODO format this nicely
+                    mkp.yield(PluginsTask.formatUpdatedDate(plugin.updated))
 
                     if (plugin.owner) {
                         span {
@@ -197,10 +190,9 @@ class PluginsPage {
 
     @CompileDynamic
     static String fetchLatestPlugins(List<Plugin> plugins){
-        StringWriter writer = new StringWriter()
-        MarkupBuilder mkp = new MarkupBuilder(writer)
-        String today = LocalDate.now().toString()
-        List<Plugin> filteredPlugins = plugins.sort{a,b-> a.updated<=>today}
+
+        //TODO why is this sort method not working?
+        List<Plugin> filteredPlugins = plugins.sort{a,b-> a.updated<=> LocalDateTime.now()}
         List<Plugin> topFive = filteredPlugins.take(5)
 
         renderLatestPlugins(topFive)
@@ -209,20 +201,62 @@ class PluginsPage {
     static String renderLatestPlugins(List<Plugin> topFive){
         StringWriter writer = new StringWriter()
         MarkupBuilder mkp = new MarkupBuilder(writer)
+
         mkp.ul(class: 'latestguides') {
             for (plugin in topFive) {
 
-                SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
-                Date date = isoFormat.parse(plugin.updated)
-                SimpleDateFormat dt1 = new SimpleDateFormat("MMM d, yyyy");
                 li {
                         b plugin.name
-                        span dt1.format(date)
+                        span PluginsTask.formatUpdatedDate(plugin.updated)
                         a href: plugin.vcsUrl, 'Read More'
 
                 }
             }
 
+        }
+        writer.toString()
+    }
+
+    @CompileDynamic
+    static String populateOwnersByPlugins(String siteUrl, List<Plugin> plugins){
+        //TODO Owner cloud is created by ocurance. Occurance will need to be added to Owner pojo
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mkp = new MarkupBuilder(writer)
+        Set <Owner> owners =PluginsTask.getOwners(plugins)
+        mkp.ul(class: 'tagsbytopic') {
+            for (owner in owners) {
+                li(class: 'tag1'){
+                    a href: "[%url]/plugins/owners/${owner.name}.html", owner.name
+                }
+            }
+        }
+        writer.toString()
+
+    }
+
+    @CompileDynamic
+    static String fetchTopRatedPlugins(String siteUrl, List<Plugin> plugins){
+        //TODO github API fetch highest ratings for all plugins and sort top 5
+        StringWriter writer = new StringWriter()
+        MarkupBuilder mkp = new MarkupBuilder(writer)
+        List<String> ratings =["250", "213", "213", "213", "202"]
+        List<String> title = [
+                "Spring Security Core", "Hibernate", "Hibernate3", "Hibernate5", "Spring-Security-Rest"]
+        mkp.div(class: 'latestguides') {
+            mkp.ul(class: 'latestguides') {
+                for (int i = 0; i < title.size(); i++) {
+                    li {
+                        b {
+                            mkp.yield title[i],false
+                        }
+                        span {
+                            img(src: "${siteUrl}/images/small_githubstar.svg", width: 52){}
+                                mkp.yield ratings[i], false
+                        }
+                        //a href: "", "Read More"
+                    }
+                }
+            }
         }
         writer.toString()
     }

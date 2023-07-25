@@ -791,6 +791,7 @@ body.grails3plugins .latestguides ul {
 	font-weight: normal;
 }
 
+li.plugin h3,
 .latestguides li b,
 .latestguides li a,
 .latestguides li span {
@@ -1469,9 +1470,11 @@ body.grails3plugins article {
 	background-color: #ffffff;
 }
 
-
+.twocolumns .column .plugins:first-child {
+	margin-top: 20px;
+}
 .plugins-list {
-	padding: 30px 0 0 30px;
+	padding: 30px 0 30px 30px;
 	margin: 0;
 	background-color: #ffffff;
 }
@@ -1624,7 +1627,7 @@ body.grails3plugins li.label a {
 	text-align: center;
 	display: block;
 	float: left;
-	padding: 8px 4px;
+	padding: 10px 4px 8px;
 	height: 28px;
 }
 
@@ -1797,4 +1800,56 @@ table th {
 
 .no-border {
 	border: none;
+}
+
+li.plugin h3 {
+	font-weight: bold;
+	color: #000000;
+}
+
+li.plugin {
+	list-style-type: none;
+	padding: 10px 30px 10px 0;
+	border-bottom: 2px solid #eee;
+	margin-bottom: 1px;
+	overflow: auto;
+}
+
+li.plugin .iconlinks {
+	float: right;
+}
+li.plugin .iconlinks li {
+	list-style: none;
+	display: inline;
+	border: none;
+	margin: 5px;
+	padding: 0;
+}
+
+li.plugin .labels {
+	overflow: auto;
+	margin: 20px 0;
+	padding: 0;
+	clear: both;
+}
+ul.labels li.label {
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin: 5px 5px 5px 0;
+	padding: 0;
+}
+ul.labels li.label a {
+	border: 1px solid rgb(211, 211, 211);
+	text-decoration: none;
+	padding: 10px;
+	background-color: #FFFFFF;
+	color: #7c7c7c;
+	display: block;
+}
+
+.breadcrumbs {
+	padding: .5rem 0;
+	font-size: .6875rem;
+	text-transform: uppercase;
 }

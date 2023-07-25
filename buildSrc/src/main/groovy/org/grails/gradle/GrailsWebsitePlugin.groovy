@@ -18,6 +18,7 @@ class GrailsWebsitePlugin implements Plugin<Project> {
     public static final String TASK_BUILD = "build"
     public static final String TASK_GEN_SITE = "renderSite"
     public static final String TASK_GEN_SITEMAP = "genSitemap"
+    public static final String TASK_GEN_PLUGINS = "genPlugins"
     public static final String TASK_COPY_ASSETS = "copyAssets"
     public static final String BUILD_GUIDES = "buildGuides"
     public static final String GROUP_GRAILS = 'grails'
@@ -51,6 +52,20 @@ class GrailsWebsitePlugin implements Plugin<Project> {
             task.setDescription('Generates documentation HTML page - build/temp/documentation.html')
             task.setGroup(GROUP_GRAILS)
         })
+
+        project.tasks.register(TASK_GEN_PLUGINS, PluginsTask, { task ->
+            Object extension = project.getExtensions().findByName(EXTENSION_NAME)
+            if (extension instanceof SiteExtension) {
+                SiteExtension siteExtension = ((SiteExtension) extension)
+                task.setProperty("output", siteExtension.output)
+                task.setProperty("url", siteExtension.url)
+                task.setProperty("document", siteExtension.template)
+            }
+            task.setGroup(GROUP_GRAILS)
+            task.setDescription('Generates an HTML Page listing the Grails plugins')
+        })
+
+
         project.tasks.register(TASK_GEN_SITEMAP, SitemapTask, { task ->
             Object extension = project.getExtensions().findByName(EXTENSION_NAME)
             if (extension instanceof SiteExtension) {
@@ -162,6 +177,7 @@ class GrailsWebsitePlugin implements Plugin<Project> {
             task.dependsOn(TASK_GEN_PROFILES)
             task.dependsOn(TASK_GEN_FAQ)
             task.finalizedBy(TASK_RENDER_BLOG)
+            task.finalizedBy(TASK_GEN_PLUGINS)
             task.finalizedBy(TASK_RENDER_MINUTES)
             task.finalizedBy(TASK_GEN_SITEMAP)
             task.setDescription('Build Micronaut website - generates pages with HTML entries in pages and build/temp, renders blog and RSS feed, copies assets and generates a sitemap')

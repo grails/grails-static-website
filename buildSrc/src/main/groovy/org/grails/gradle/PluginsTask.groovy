@@ -139,7 +139,7 @@ class PluginsTask extends DefaultTask {
         if (!vcsUrl.contains("github.com")) {
             return Optional.empty()
         }
-        if (!System.getenv("GITHUB_TOKEN")) {
+        if (!System.getenv("GH_TOKEN")) {
             return Optional.empty()
         }
         try {
@@ -148,7 +148,7 @@ class PluginsTask extends DefaultTask {
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(new URI(url))
                     .header("X-GitHub-Api-Version", "2022-11-28")
-                    .header("Authorization", "Bearer ${System.getenv("GITHUB_TOKEN")}")
+                    .header("Authorization", "Bearer ${System.getenv("GH_TOKEN")}")
                     .GET()
                     .build()
             HttpResponse<String> response = HttpClient.newBuilder().build().send(request, HttpResponse.BodyHandlers.ofString())

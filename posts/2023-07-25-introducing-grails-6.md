@@ -1,5 +1,5 @@
 ---
-title: "Introducing Grails 6: Embracing Modern Java, Java 11, and the Latest Spring and Spring Boot Updates"
+title: Introducing Grails 6 - Embracing Modern Java, Java 11, and the Latest Spring and Spring Boot Updates
 date: July 25, 2023
 description: The Grails Foundation™ is excited to announce the GA release of Grails framework 6!
 author: Puneet Behl

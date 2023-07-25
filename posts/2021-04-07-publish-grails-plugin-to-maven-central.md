@@ -302,7 +302,7 @@ When using this file, you must configure the following GitHub Secrets:
 To trigger a release, create a new release from the GitHub releases page. Here is a sample [Grails Plugin](https://github.com/puneetbehl/myplugin) that's configured to publish to Maven Central.
 
 ## Update Information on Grails Plugin Portal
-The [Grails Plugin Portal](https://plugins.grails.org) uses the [grails-plugins.json](https://raw.githubusercontent.com/grails/grails-plugins-metadata/main/grails-plugins.json) metadata file to display plugin information.
+The [Grails Plugin Portal](https://grails.org/plugins.html) uses the [grails-plugins.json](https://raw.githubusercontent.com/grails/grails-plugins-metadata/main/grails-plugins.json) metadata file to display plugin information.
 
 The metadata is hosted at [https://github.com/grails/grails-plugins-metadata/blob/main/grails-plugins.json](https://github.com/grails/grails-plugins-metadata/blob/main/grails-plugins.json). When you publish a new plugin or release an existing plugin, you must send a pull request to this file to update the information on the portal.
 

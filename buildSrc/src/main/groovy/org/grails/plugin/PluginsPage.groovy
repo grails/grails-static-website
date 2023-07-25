@@ -120,7 +120,7 @@ class PluginsPage {
         List<Map<String, String>> links = [
                 [url: siteUrl+"/legacy-plugins.html", title: "Legacy Plugins (Grails 1 & 2)"],
                 [url: "https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html", title: "Publishing Guide"],
-                [url: "https://github.com/grails/grails3-plugins", title: "Portal on Github"],
+                [url: "https://github.com/grails/grails-plugins-metadata", title: "Portal on Github"],
         ]
 
         StringWriter writer = new StringWriter()

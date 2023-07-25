@@ -610,7 +610,6 @@ article.quote,
 	margin-bottom: 50px;
 }
 
-.twocolumns .column .plugins:first-child,
 .twocolumns .column article.quote:first-child {
 	margin-top: 50px;
 }
@@ -1471,9 +1470,11 @@ body.grails3plugins article {
 	background-color: #ffffff;
 }
 
-
+.twocolumns .column .plugins:first-child {
+	margin-top: 20px;
+}
 .plugins-list {
-	padding: 30px 0 0 30px;
+	padding: 30px 0 30px 30px;
 	margin: 0;
 	background-color: #ffffff;
 }
@@ -1626,7 +1627,7 @@ body.grails3plugins li.label a {
 	text-align: center;
 	display: block;
 	float: left;
-	padding: 8px 4px;
+	padding: 10px 4px 8px;
 	height: 28px;
 }
 
@@ -1801,13 +1802,11 @@ table th {
 	border: none;
 }
 
-/*
-.plugins-list {
-	padding: 30px 0 0 30px;
-	margin: 0;
-	background-color: #ffffff;
+li.plugin h3 {
+	font-weight: bold;
+	color: #000000;
 }
-*/
+
 li.plugin {
 	list-style-type: none;
 	padding: 10px 30px 10px 0;
@@ -1833,20 +1832,24 @@ li.plugin .labels {
 	padding: 0;
 	clear: both;
 }
-li.plugin li.label {
+ul.labels li.label {
 	display: block;
 	float: left;
 	list-style-type: none;
-	margin: 5px;
+	margin: 5px 5px 5px 0;
 	padding: 0;
 }
-*.pluginleftmenu li{
+ul.labels li.label a {
 	border: 1px solid rgb(211, 211, 211);
 	text-decoration: none;
 	padding: 10px;
-	background-color: #F5F5F5;
+	background-color: #FFFFFF;
 	color: #7c7c7c;
 	display: block;
 }
 
-
+.breadcrumbs {
+	padding: .5rem 0;
+	font-size: .6875rem;
+	text-transform: uppercase;
+}

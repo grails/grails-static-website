@@ -37,6 +37,20 @@ class TagUtils {
         populateWithTagsMap(tagsMap)
     }
 
+    static Set<Tag> populateTagsByPluginsOwners(List<Plugin> plugins) {
+        Map<String, Integer> tagsMap = [:]
+        if (plugins) {
+            for (Plugin plugin : plugins) {
+                if (plugin.owner) {
+                    String tag = plugin.owner.name
+                    String k = tag.trim().toLowerCase()
+                    tagsMap[k] = tagsMap.containsKey(k) ? (1 + tagsMap[k]) : 1
+                }
+            }
+        }
+        populateWithTagsMap(tagsMap)
+    }
+
     private static Set<Tag> populateWithTagsMap(Map<String, Integer> tagsMap) {
         Set<Tag> tags = []
         tagsMap.each { k, v ->

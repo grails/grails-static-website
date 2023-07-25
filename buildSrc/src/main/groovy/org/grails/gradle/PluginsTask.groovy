@@ -12,6 +12,9 @@ import org.grails.plugin.Owner
 import org.grails.plugin.Plugin
 import org.grails.plugin.PluginsPage
 
+import java.net.http.HttpClient
+import java.net.http.HttpRequest
+import java.net.http.HttpResponse
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.stream.Collectors
@@ -40,15 +43,17 @@ class PluginsTask extends DefaultTask {
                 "all", //TODO Make it configurable,
                 "",
                 "")
-
+        Map<String, String> resolvedMetadata = org.grails.gradle.RenderSiteTask.processMetadata(metadata)
 
         String json = new URL(GRAILS_PLUGINS_JSON).text
         JsonSlurper slurper = new JsonSlurper()
         def result = slurper.parseText(json)
-        renderHtml(pluginsFromJson(result), templateText, metadata)
+
+        List<Plugin> plugins = pluginsFromJson(result)
+        renderHtml(plugins, templateText, metadata, "plugins.html")
     }
 
-    void renderHtml(List<Plugin> plugins, String templateText, Map<String, String> metadata) {
+    void renderHtml(List<Plugin> plugins, String templateText, Map<String, String> metadata, String fileName) {
         String siteUrl = url.get()
         File inputFile = new File(output.get().absolutePath + "/" + RenderSiteTask.DIST)
         if (!inputFile.exists()) {
@@ -66,13 +71,14 @@ class PluginsTask extends DefaultTask {
         if (!pluginsOwnersFolder.exists()) {
             pluginsOwnersFolder.mkdir()
         }
-        File pluginOutputFile = new File(inputFile.absolutePath + "/" + "plugins.html")
+        File pluginOutputFile = new File(inputFile.absolutePath + "/" + fileName)
         pluginOutputFile.createNewFile()
         String html = PluginsPage.mainContent(siteUrl, plugins, 'Grails Plugins')
-        pluginOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
+        html = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
+        html = RenderSiteTask.highlightMenu(html, metadata, "/plugins.html")
+        pluginOutputFile.text = html
 
-        Set<String> tags = getTags(plugins)
-
+        List<String> tags = plugins.stream().flatMap(p -> p.labels.stream()).distinct().collect(Collectors.toList()) as List<String>
         for (String tag in tags) {
             File tagsOutputFile = new File(pluginsTagsFolder.getPath() + "/" + tag + ".html")
             tagsOutputFile.createNewFile()
@@ -80,10 +86,11 @@ class PluginsTask extends DefaultTask {
             tagsOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(htmlForTags, metadata, templateText)
         }
 
-        Set<Owner> owners = getOwners(plugins)
+        List<String> owners = plugins.stream().map(p -> p.owner.name).distinct().collect(Collectors.toList())
+                as List<String>
 
-        for (owner in owners) {
-            File ownersOutputFile = new File(pluginsOwnersFolder.getPath() + "/" + owner.name + ".html")
+        for (String owner in owners) {
+            File ownersOutputFile = new File(pluginsOwnersFolder.getPath() + "/" + owner + ".html")
             ownersOutputFile.createNewFile()
             String htmlForOwnersFile = renderHtmlPagesForOwners(siteUrl, plugins, owner)
             ownersOutputFile.text = RenderSiteTask.renderHtmlWithTemplateContent(htmlForOwnersFile, metadata, templateText)
@@ -95,9 +102,9 @@ class PluginsTask extends DefaultTask {
         return PluginsPage.mainContent(siteUrl, filteredPlugins, "Plugins by tag #${tag}", )
     }
 
-    String renderHtmlPagesForOwners(String siteUrl, List<Plugin> plugins, Owner owner) {
-        List<Plugin> filteredPlugins = plugins.stream().filter(p -> p.owner.name == owner.name).collect(Collectors.toList())
-        return PluginsPage.mainContent(siteUrl, filteredPlugins, "Plugins by creator: #${owner.name}")
+    String renderHtmlPagesForOwners(String siteUrl, List<Plugin> plugins, String owner) {
+        List<Plugin> filteredPlugins = plugins.stream().filter(p -> p.owner.name == owner).collect(Collectors.toList())
+        return PluginsPage.mainContent(siteUrl, filteredPlugins, "Plugins by creator: #${owner}")
     }
 
     @CompileDynamic
@@ -122,50 +129,39 @@ class PluginsTask extends DefaultTask {
     LocalDateTime parseIsoStringToDate(String isoFormattedString){
         DateTimeFormatter f = DateTimeFormatter.ofPattern( "yyyy-MM-dd'T'HH:mm:ss.SSSXXX" );
         return  LocalDateTime.parse(isoFormattedString, f);
-
     }
+
+    @CompileDynamic
     Optional<Integer> githubStars(String vcsUrl) {
         if (!vcsUrl) {
             return Optional.empty()
         }
-        return Optional.of(36)
-        //TODO fetch API
-        return Optional.empty()
-
-    }
-
-    static boolean seen(Owner owner, Set elements) {
-        elements.contains(owner)
-    }
-
-    static boolean seen(String tag, Set<String> elements) {
-        elements.contains(tag)
-    }
-
-    Set<String> getTags(List<Plugin> plugins) {
-        Set<String> tags = []
-        for (plugin in plugins) {
-            for (label in plugin.labels) {
-                if (!seen(label, tags)) {
-                    tags.add(label)
-                }
+        if (!vcsUrl.contains("github.com")) {
+            return Optional.empty()
+        }
+        if (!System.getenv("GITHUB_TOKEN")) {
+            return Optional.empty()
+        }
+        try {
+            println("fetching github stars of " + vcsUrl)
+            String url = "https://api.github.com/repos/" + vcsUrl.substring(vcsUrl.indexOf("github.com/") + "github.com/".length())
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(new URI(url))
+                    .header("X-GitHub-Api-Version", "2022-11-28")
+                    .header("Authorization", "Bearer ${System.getenv("GITHUB_TOKEN")}")
+                    .GET()
+                    .build()
+            HttpResponse<String> response = HttpClient.newBuilder().build().send(request, HttpResponse.BodyHandlers.ofString())
+            if (response.statusCode() == 200) {
+                String json = response.body()
+                Integer stars = new JsonSlurper().parseText(json).stargazers_count as Integer
+                return stars == 0 ? Optional.empty() : Optional.of(stars)
             }
+        } catch (Exception e) {
+            println e.message
+            return Optional.empty()
         }
-        tags
+        return Optional.empty()
     }
 
-    static Set<Owner> getOwners(List<Plugin> plugins) {
-        Set<Owner> owners = []
-        for (plugin in plugins){
-                if (!seen(plugin.owner, owners)){
-                    owners.add(plugin.owner);
-                }
-        }
-        return owners
-    }
-
-    static String formatUpdatedDate(LocalDateTime date){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, YYYY");
-        return formatter.format(date)
-    }
 }

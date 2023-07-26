@@ -75,4 +75,22 @@ class SoftwareVersionSpec extends Specification {
         where:
         versionText << ['', null]
     }
+
+    void "test compare latest major GA is greater than pre-release"() {
+        when:
+        SoftwareVersion gaVersion = SoftwareVersion.build('6.0.0')
+        SoftwareVersion preRelease = SoftwareVersion.build('6.0.0-RC1')
+
+        then:
+        gaVersion > preRelease
+    }
+
+    void "test pre-release is greater than last stable version"() {
+        when:
+        SoftwareVersion lastStableRelease = SoftwareVersion.build('5.3.3')
+        SoftwareVersion preRelease = SoftwareVersion.build('6.0.0-RC1')
+
+        then:
+        preRelease > lastStableRelease
+    }
 }

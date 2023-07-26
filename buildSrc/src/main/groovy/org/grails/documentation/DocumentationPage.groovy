@@ -73,16 +73,24 @@ class DocumentationPage {
         Collection<DocumentationCategory> categories = categories(modules)
         html.div(class: 'content') {
             html.div(class: "twocolumns") {
-                html.div(class: "odd column") {
-                    mkp.yieldUnescaped(renderDocumentation(preRelease.versionText))
+                if (preRelease > latest) {
+                    html.div(class: "odd column") {
+                        mkp.yieldUnescaped(renderDocumentation(preRelease.versionText))
+                    }
+                } else {
+                    html.div(class: "odd column") {
+                        mkp.yieldUnescaped(renderDocumentation('snapshot'))
+                    }
                 }
                 html.div(class: "column") {
                     mkp.yieldUnescaped(renderDocumentation(latest.versionText))
                 }
             }
             html.div(class: "twocolumns") {
-                html.div(class: "odd column") {
-                    mkp.yieldUnescaped(renderDocumentation('snapshot'))
+                if (preRelease > latest) {
+                    html.div(class: "odd column") {
+                        mkp.yieldUnescaped(renderDocumentation('snapshot'))
+                    }
                 }
                 html.div(class: "column") {
                     html.div(class: 'olderversions') {

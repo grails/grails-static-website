@@ -37,3 +37,7 @@ dependencies {
         exclude module:'groovy-all'
     }
 }
+
+tasks.withType(Jar).configureEach {
+    it.duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}

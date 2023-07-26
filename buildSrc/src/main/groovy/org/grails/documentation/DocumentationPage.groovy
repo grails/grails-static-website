@@ -147,7 +147,7 @@ class DocumentationPage {
                 html.div(class: 'column') {
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Async' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Database' }))
-                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Build Status' }))
+//                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Build Status' }))
 
                 }
             }

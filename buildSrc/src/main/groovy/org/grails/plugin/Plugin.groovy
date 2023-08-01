@@ -3,12 +3,9 @@ package org.grails.plugin
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.Sortable
-import jdk.nashorn.internal.objects.annotations.Getter
 import org.jetbrains.annotations.NotNull
 
-import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 @EqualsAndHashCode
 @CompileStatic

@@ -116,6 +116,26 @@ sdk use grails dev
 
 Curious about the inner workings of the New Grails Forge? Delve into the source code on GitHub: [Grails Forge Core Source Code](https://github.com/grails/grails-forge)
 
+## Preview Feature: Explore Your Grails Application Source Files
+
+We are excited to introduce the Preview Feature on [https://start.grails.org](https://start.grails.org)! This powerful addition allows you to take a sneak peek into your Grails application source files before actually generating the project. With the Preview Feature, you can explore the selected options and features to see exactly what will be generated, giving you full control and confidence in your project setup.
+
+How does it work? It's simple:
+
+1. Customize Your Options: Start by selecting the application type and setting your project preferences, just like you would with the regular project generation process.
+
+2. Click "Preview": Instead of hitting the "Generate Project" button right away, click on "Preview" to see the magic happen.
+
+3. Visualize Your Project: The Preview Feature will instantly generate a visualization of your Grails application source files, showcasing the directory structure and all the code files based on your chosen options.
+
+4. Navigate and Inspect: Dive into the source files, navigate through the directories, and inspect the actual code snippets that will be included in your project.
+
+5. Refine and Adjust: If you spot anything you'd like to modify, simply go back, adjust your options, and preview again until you're fully satisfied with your project setup.
+
+This Preview Feature is a game-changer, as it allows you to make informed decisions and tailor your Grails application precisely to your needs. Gone are the days of uncertainty - with the Preview Feature, you can confidently create and manage your Grails projects with ease.
+
+So, what are you waiting for? Try out the Preview Feature on [https://start.grails.org](https://start.grails.org) and unleash the full potential of the New Grails Forge CLI and UI.
+
 ## Ready to Forge Ahead
 
 With the New Grails Forge installed on your system, you're all set to embark on a new era of Grails application generation. Explore the lightning-fast performance, enhanced flexibility, and seamless compatibility with Gradle and plugins. Together, let's redefine Grails development and build remarkable applications for a rapidly evolving world.

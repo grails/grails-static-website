@@ -18,7 +18,7 @@ The Grails Foundation™ is thrilled to unveil the next level of Grails applicat
 
 ## Multiple Application Types for Your Needs
 
-The New Grails Forge also introduces Grails Profiles through application-types, supporting various application types to meet your specific needs. Currently, we offer support for Web, REST API, Web Plugin, and Plugin. Stay tuned as we plan to add support for additional application types, including REST API Plugin, ReactJS, and AngularJS.
+The New Grails Forge also introduces Grails Profiles through application-types, supporting various application types to meet your specific needs. Currently, we offer support for Web, REST API, Web Plugin, and Plugin. Stay tuned as we plan to add support for additional application types, including REST API Plugin, React, and Angular.
 
 ## The New Grails Forge CLI: Speed, Flexibility, and Efficiency
 
@@ -142,7 +142,7 @@ With the New Grails Forge installed on your system, you're all set to embark on 
 
 ## Introducing the Grails Forge UI: A User-Friendly Gateway to Project Generation
 
-Now, let's move on to the star of the show - the ReactJS-based Grails Forge UI! This cutting-edge website serves as an interactive and user-friendly alternative to project generation, eliminating the need to install the CLI locally.
+Now, let's move on to the star of the show - the React-based Grails Forge UI! This cutting-edge website serves as an interactive and user-friendly alternative to project generation, eliminating the need to install the CLI locally.
 
 ## Seamless Replacement for the Old Grails Forge Website
 

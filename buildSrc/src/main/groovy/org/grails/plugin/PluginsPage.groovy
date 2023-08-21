@@ -42,38 +42,33 @@ class PluginsPage {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'headerbar chalicesbg') {
             div(class: 'content') {
-                h1 'Grails Plugins'
+                h1 'All Plugins'
             }
         }
         html.div(class: 'content') {
             if (title == 'Grails Plugins') {
                 div(class: 'twocolumns') {
                     div(class: 'column') {
-                        mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                        h3(class: "columnheader", "Grails Plugins")
+                        mkp.yieldUnescaped renderPlugins(siteUrl, plugins)
                     }
                     div(class: 'column') {
+                        mkp.yieldUnescaped linksMenu(siteUrl)
+                        mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
+                        mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
                         mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
+                        mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     }
                 }
             } else {
                 html.div(class: "breadcrumbs") {
-                    a(href: siteUrl + "/plugins.html", "Grails Plugins")
+                    a(href: siteUrl + "/plugins.html", "All Grails Plugins")
                     span(' » ')
                     span(title)
                 }
+                mkp.yieldUnescaped renderTwoColumnsPlugins(siteUrl, plugins)
             }
-            mkp.yieldUnescaped renderTwoColumnsPlugins(siteUrl, plugins)
-            if (title == 'Grails Plugins') {
-                div(class: 'twocolumns') {
-                    div(class: 'column') {
-                        mkp.yieldUnescaped linksMenu(siteUrl)
-                        mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
-                    }
-                    div(class: 'column') {
-                        mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
-                    }
-                }
-            }
+
         }
         writer.toString()
     }
@@ -118,7 +113,6 @@ class PluginsPage {
     @CompileDynamic
     static String linksMenu(String siteUrl) {
         List<Map<String, String>> links = [
-                [url: siteUrl+"/legacy-plugins.html", title: "Legacy Plugins (Grails 1 & 2)"],
                 [url: "https://grails.org/blog/2021-04-07-publish-grails-plugin-to-maven-central.html", title: "Publishing Guide"],
                 [url: "https://github.com/grails/grails-plugins-metadata", title: "Portal on Github"],
         ]
@@ -218,17 +212,6 @@ class PluginsPage {
         MarkupBuilder mb = new MarkupBuilder(writer)
         mb.li(class: 'plugin') {
 
-//                ul(class: 'iconlinks') {
-//                    a(href: plugin.vcsUrl) {
-//                        if (plugin.vcsUrl.contains("bintray.com")) {
-//                            img(src: "${siteUrl}/images/bintray.svg", width: 20)
-//                        } else if (plugin.vcsUrl.contains("github.com")) {
-//                            img(src: "${siteUrl}/images/github.svg", width: 20)
-//                        } else {
-//                            mkp.yield("Repository")
-//                        }
-//                    }
-//                }
             if (plugin.vcsUrl) {
                 h3 {
                     a(href: plugin.vcsUrl, plugin.name)

@@ -42,7 +42,7 @@ class PluginsPage {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'headerbar chalicesbg') {
             div(class: 'content') {
-                h1 'All Plugins'
+                h1 'All Grails Plugins'
             }
         }
         html.div(class: 'content') {

@@ -4,6 +4,7 @@ import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
 import org.grails.gradle.PluginsTask
+import org.grails.guides.Category
 import org.grails.guides.TagUtils
 import org.grails.tags.Tag
 import org.grails.tags.TagCloud
@@ -42,22 +43,26 @@ class PluginsPage {
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'headerbar chalicesbg') {
             div(class: 'content') {
-                h1 'All Grails Plugins'
+                h1 'Grails Plugins'
             }
         }
         html.div(class: 'content') {
             if (title == 'Grails Plugins') {
                 div(class: 'twocolumns') {
                     div(class: 'column') {
-                        h3(class: "columnheader", "Grails Plugins")
-                        mkp.yieldUnescaped renderPlugins(siteUrl, plugins)
-                    }
-                    div(class: 'column') {
+                        div(id: 'searchresults') {
+                            mkp.yieldUnescaped('')
+                        }
+                        mkp.yieldUnescaped searchBox(null, null)
                         mkp.yieldUnescaped linksMenu(siteUrl)
                         mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
                         mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
                         mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
                         mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                    }
+                    div(class: 'column') {
+                        h3(class: "columnheader", "All Grails Plugins")
+                        mkp.yieldUnescaped renderPlugins(siteUrl, plugins)
                     }
                 }
             } else {
@@ -213,16 +218,16 @@ class PluginsPage {
         mb.li(class: 'plugin') {
 
             if (plugin.vcsUrl) {
-                h3 {
+                h3(class: 'name') {
                     a(href: plugin.vcsUrl, plugin.name)
                 }
             } else {
-                h3 {
+                h3(class: 'name') {
                     a(plugin.name)
                 }
             }
             if (plugin.desc) {
-                p plugin.desc
+                p (class: 'desc'){plugin.desc}
             }
             p {
                 if (plugin.latestVersion) {
@@ -234,7 +239,7 @@ class PluginsPage {
                 if (plugin.owner) {
                     span"by "
                     a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
-                        mkp.yield(plugin.owner.name)
+                        div(class: 'owner') {mkp.yield(plugin.owner.name)}
                     }
                 }
             }
@@ -283,6 +288,23 @@ class PluginsPage {
         html.ul {
             for (plugin in topFive) {
                 mkp.yieldUnescaped renderSinglePlugin(siteUrl, plugin)
+            }
+        }
+        writer.toString()
+    }
+
+    @CompileDynamic
+    static String searchBox(Tag tag, Category category) {
+        StringWriter writer = new StringWriter()
+        MarkupBuilder html = new MarkupBuilder(writer)
+        if ( !(tag || category) ) {
+            html.div(class: 'searchbox', style: 'margin-top: 50px !important;') {
+                div(class: 'search', style: 'margin-bottom: 0px !important;') {
+                    input(type: 'text', id: 'query', placeholder: 'SEARCH')
+                    div(id: 'noresults') {
+                        mkp.yieldUnescaped '&nbsp;'
+                    }
+                }
             }
         }
         writer.toString()

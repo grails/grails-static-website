@@ -18,7 +18,7 @@ Greetings, fellow developers! Prepare to be amazed by the latest release – Gra
 
 ## Seamless Grails 6 Compatibility with Upgraded Commands
 
-One of the most remarkable enhancements is the seamless transition to Grails 6. Grails Spring Security Core Plugin 6.0.0 now boasts upgraded commands fully compatible with Grails 6. This is crucial because the old scripts you might have been using would have caused compatibility issues with Grails 6. But worry not! We've revamped these commands, ensuring a smooth transition and allowing you to continue using them seamlessly.
+We are intentional about making the transition to Grails 6 seamless. Grails Spring Security Core Plugin 6.0.0 now boasts upgraded commands fully compatible with Grails 6. This is crucial because the old scripts you might have been using would have caused compatibility issues with Grails 6. But worry not! We've revamped these commands, ensuring a smooth transition and allowing you to continue using them seamlessly.
 
 Do you remember running a script like `s2-quickstart` using the command:
 
@@ -38,7 +38,7 @@ The `runCommand` Gradle task allows you to execute various Grails ApplicationCom
 
 ## Spring Security Leveled Up to 5.8.6
 
-Security is paramount, and that's why we've given the underlying Spring Security framework a power boost in Grails Spring Security Core Plugin. It's now fueled by version 5.8.6. This ensures that your application benefits from the latest security enhancements and bug fixes from the Spring Security team. By staying up to date with Spring Security versions, your app is fortified against emerging threats and vulnerabilities.
+Security is paramount, and that's why we've given the underlying Spring Security framework a power boost in Grails Spring Security Core Plugin. It's now fueled by version 5.8.6 of Spring Security. This ensures that your application benefits from the latest security enhancements and bug fixes from the Spring Security team. By staying up to date with Spring Security versions, your app is fortified against emerging threats and vulnerabilities.
 
 ## Navigating Docs Made Effortless
 

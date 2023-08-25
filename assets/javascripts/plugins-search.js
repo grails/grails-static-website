@@ -193,11 +193,9 @@ function renderGuideAsHtmlLi(guide, query) {
 
     html += "<ul class='labels'>";
         for (var i = 0; i < guide.labels.length; i++) {
-            var tag = guide.labels[i];
-            var siteUrl = document.location
-            var tagUrl = `${siteUrl}/plugins/tags/${tag}`
+            var label = guide.labels[i].trim()
             html += "<li class='label'>";
-            html +=`<a href=${tagUrl}>${tag}</a>`
+            html += "<a href=\"/plugins/tags/"+label+".html\">"+label+ "</a>";
             html += "</li>"
         }
     html += "</ul>"

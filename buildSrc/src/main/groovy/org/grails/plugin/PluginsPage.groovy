@@ -50,9 +50,7 @@ class PluginsPage {
             if (title == 'Grails Plugins') {
                 div(class: 'twocolumns') {
                     div(class: 'column') {
-                        div(id: 'searchresults') {
-                            mkp.yieldUnescaped('')
-                        }
+
                         mkp.yieldUnescaped searchBox(null, null)
                         mkp.yieldUnescaped linksMenu(siteUrl)
                         mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
@@ -61,6 +59,9 @@ class PluginsPage {
                         mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     }
                     div(class: 'column') {
+                        div(id: 'searchresults') {
+                            mkp.yieldUnescaped('')
+                        }
                         h3(class: "columnheader", "All Grails Plugins")
                         mkp.yieldUnescaped renderPlugins(siteUrl, plugins)
                     }
@@ -215,6 +216,7 @@ class PluginsPage {
     static String renderSinglePlugin(String siteUrl, Plugin plugin) {
         StringWriter writer = new StringWriter()
         MarkupBuilder mb = new MarkupBuilder(writer)
+
         mb.li(class: 'plugin') {
 
             if (plugin.vcsUrl) {
@@ -227,7 +229,7 @@ class PluginsPage {
                 }
             }
             if (plugin.desc) {
-                p (class: 'desc'){plugin.desc}
+                p (class: 'desc'){mkp.yield(plugin.desc)}
             }
             p {
                 if (plugin.latestVersion) {

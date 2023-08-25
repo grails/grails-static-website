@@ -1,6 +1,6 @@
 var queryInputFieldId = "query";
 var mobileQueryInputFieldId = "mobilequery";
-var allguides = new Array();
+var allGuides = new Array();
 var guideClassName = "plugin";
 var multiguideClassName = "multiguide";
 
@@ -9,22 +9,21 @@ var elementsClassNames = new Array();
 elementsClassNames.push('plugins');
 elementsClassNames.push('tagcloud');
 elementsClassNames.push('labels');
-//elementsClassNames.push('tagsbytopic');
-//elementsClassNames.push('guidesuggestion');
+elementsClassNames.push('columnheader');
+elementsClassNames.push('tagsbytopic');
+elementsClassNames.push('plugin');
 
 onload = function () {
     var elements = document.getElementsByClassName(guideClassName);
     for ( var i = 0; i < elements.length; i++ ) {
         var element = elements[i];
-        var guide = { href: element.getAttribute('href'), desc: element.getElementsByClassName('desc'), owner: element.getElementsByClassName('owner'), labels: labelsAtPlugin(element) }; /* */
-        allguides.push(guide);
+        var name = element.getElementsByClassName('name')
+        var desc = element.getElementsByClassName('desc')
+        var owner = element.getElementsByClassName('owner')
+        var labels = element.getElementsByClassName('label')
+        var guide = { name: name[0].textContent, owner: owner[0].textContent, labels: labelsAtPlugin(labels) }; /* */
+        allGuides.push(guide);
     }
-//    elements = document.getElementsByClassName(multiguideClassName);
-//    for ( var i = 0; i < elements.length; i++ ) {
-//        var element = elements[i];
-//        var guide = { name: titleAtMultiguide(element), versions: versionsAtMultiguide(element)  }; /* */
-//        allguides.push(guide);
-//    }
 
     if ( document.getElementById(queryInputFieldId) ) {
         var e = document.getElementById(queryInputFieldId);
@@ -36,7 +35,7 @@ onload = function () {
         e.oninput = onQueryChanged;
         e.onpropertychange = e.oninput; // for IE8
     }
-};
+}
 
 function hideElementsToDisplaySearchResults() {
     for ( var i = 0; i < elementsClassNames.length; i++) {
@@ -71,50 +70,24 @@ function showElementsByClassName(className) {
 function labelsAtPlugin(element) {
 
     var labels = [];
-    for (var y=0; y< element.childNodes.length; y++){
-        if (element.childNodes[y].className == "labels") {
-            labels.push(element.childNodes[y].textContent)
-        }
+    for (var y=0; y< element.length; y++){
+            labels.push(element[y].textContent)
     }
     return labels;
 }
 
-//function versionsAtMultiguide(element) {
-//    var versions = [];
+
+//    for (var y=0; y< element.childNodes.length; y++){
+//    var label = element.childNodes[y].getElementsByClassName('labels');
+//    var liElements = label.getElementsByTagName('li')
+//        if (element.childNodes[y].className == "labels") {
 //
-//    for (var y = 0; y < element.childNodes.length; y++) {
-//        if (element.childNodes[y].className === "align-left") {
-//            var versionDiv = element.childNodes[y];
-//            var verEl;
-//            var hrefEl;
-//            var tagsArr = [];
-//            for (var x = 0; x < versionDiv.childNodes.length; x++) {
-//                if (versionDiv.childNodes[x].className === "grailsVersion") {
-//                    verEl = versionDiv.childNodes[x].textContent
-//                    hrefEl = versionDiv.childNodes[x].getAttribute('href');
-//                }
-//                if (versionDiv.childNodes[x].className === "tag") {
-//                    var tag = versionDiv.childNodes[x];
-//                    tagsArr.push(tag.textContent);
-//                }
+//        //TODO GET LI FROM UL
+//            for (var i=0;y <liElements.length;i ++){
+//                labels.push(liElements[i])
 //            }
-//            versions.push({grailsVersion: verEl, href: hrefEl, tags: tagsArr})
 //        }
 //    }
-//    return versions
-//}
-//
-//function tagsAtGuide(element) {
-//    var tags = new Array();
-//
-//    for (var y = 0; y < element.childNodes.length; y++) {
-//        if (element.childNodes[y].className == "tag") {
-//            var tag = element.childNodes[y];
-//            tags.push(tag.textContent);
-//        }
-//    }
-//    return tags;
-//}
 
 function onQueryChanged() {
     var query = queryValue();
@@ -127,8 +100,8 @@ function onQueryChanged() {
 
     var matchingGuides = [];
     if ( query !== '' ) {
-        for (var i = 0; i < allguides.length; i++) {
-            var guide = allguides[i];
+        for (var i = 0; i < allGuides.length; i++) {
+            var guide = allGuides[i];
             if ( doesGuideMatchesQuery(guide, query) ) {
                 matchingGuides.push(guide);
             }
@@ -136,7 +109,7 @@ function onQueryChanged() {
     }
     if ( matchingGuides.length > 0 ) {
         hideElementsToDisplaySearchResults();
-        var html = renderGuideAsHtmlLi(matchingGuides, query);
+        var html = renderGuideGroup(matchingGuides, query);
         document.getElementById("searchresults").innerHTML = html;
 
     } else {
@@ -155,8 +128,18 @@ function doesTagsMatchesQuery(tags, query) {
 }
 
 function doesTitleMatchesQuery(title, query) {
-    if (title.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
-        return true;
+    if (title !== undefined ){
+        if (title.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+            return true;
+        }
+    }
+}
+
+function doesOwnerMatchesQuery(owner, query) {
+    if (owner !== undefined ){
+        if (owner.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+            return true;
+        }
     }
 }
 
@@ -164,18 +147,12 @@ function doesGuideMatchesQuery(guide, query) {
     if (doesTitleMatchesQuery(guide.name, query)) {
         return true;
     }
-    if (guide.tags === undefined || guide.tags === null) {
-        for ( var i = 0; i < guide.versions.length; i++) {
-            var version = guide.versions[i];
-            if (doesTagsMatchesQuery(version.tags,query)) {
-                return true;
-            }
-        }
-    } else {
-        if (doesTagsMatchesQuery(guide.tags, query)) {
+    if(doesOwnerMatchesQuery(guide.owner, query)){
+        return true;
+    }
+    if(doesTagsMatchesQuery(guide.labels, query)) {
             return true;
         }
-    }
 
     return false;
 }
@@ -209,33 +186,21 @@ function renderGuideGroup(guides, query) {
 }
 
 function renderGuideAsHtmlLi(guide, query) {
-    var html = "<li>";
-    html += guide.name
-//    if (guide.tags === undefined || guide.tags === null) {
-//        html += "<div class=\"multiguide\">";
-//        html += "<span class=\"title\">" + guide.name + "</span>";
-//        var titleMatched = doesTitleMatchesQuery(guide.name, query);
-//        for (var i = 0; i < guide.labels.length; i++) {
-//
-//            var tagsMatched = doesTagsMatchesQuery(guide.labels, query);
-//            if (titleMatched || tagsMatched) {
-//                html += "<div class=\"align-left\">";
-//                html += "<a class=\"grailsVersion\" href=\""+version.href+"\">"+version.grailsVersion+"</a>"
-//                for (var x = 0; x < version.tags.length; x++) {
-//                    var tag = version.tags[x];
-//                    html += "<span style='display: none' class='tag'>" + tag + "</span>";
-//                }
-//                html += "</div>";
-//            }
-//        }
-//        html += "</div>";
-//    } else {
-//        html += "<a class='" + guideClassName + "' href='" + guide.href + "'>" + guide.title + "</a>";
-//        for (var i = 0; i < guide.tags.length; i++) {
-//            var tag = guide.tags[i];
-//            html += "<span style='display: none' class='tag'>" + tag + "</span>";
-//        }
-//    }
+    var html = "<li class='plugin'>";
+    html += "<h3 class='name'><a href=>" + guide.name + "</a> </h3>";
+    html += "<p class='desc'>" + guide.desc + "</p>"
+    html += "<a href=/plugins/owners/" + guide.owner +".html>"+guide.owner+ "</a>";
+
+    html += "<ul class='labels'>";
+        for (var i = 0; i < guide.labels.length; i++) {
+            var tag = guide.labels[i];
+            var siteUrl = document.location
+            var tagUrl = `${siteUrl}/plugins/tags/${tag}`
+            html += "<li class='label'>";
+            html +=`<a href=${tagUrl}>${tag}</a>`
+            html += "</li>"
+        }
+    html += "</ul>"
     html += "</li>"
     return html;
 }

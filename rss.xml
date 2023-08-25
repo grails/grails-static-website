@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Thu, 24 Aug 2023 18:34:52 GMT</pubDate><item><title>Introducing the New Grails Forge - A Lightning-Fast, Micronaut-Inspired CLI for Grails Application Generation</title><link>https://grails.org/blog/2023-08-03-introducing-new-grails-forge.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 25 Aug 2023 02:50:54 GMT</pubDate><item><title>Introducing Grails Spring Security Core Plugin 6.0.0 - Elevated Security, Grails 6 Compatibility, Enhanced Commands, and Effortless Documentation</title><link>https://grails.org/blog/2023-08-25-introducing-grails-spring-security-core-6.html</link><description><![CDATA[</p>
+<p><strong>Exciting News from the Grails Foundation: Unveiling Grails Spring Security Core Plugin 6.0.0</strong></p>
+<p>Greetings, fellow developers! Prepare to be amazed by the latest release – Grails Spring Security Core Plugin 6.0.0! This isn't just an upgrade in security; it's a journey towards greater heights for your applications. Packed with updates and improvements, this release doesn't just enhance security; it also streamlines your development experience. Let's explore the exciting changes this release brings.</p>
+<h2>Seamless Grails 6 Compatibility with Upgraded Commands</h2>
+<p>We are intentional about making the transition to Grails 6 seamless. Grails Spring Security Core Plugin 6.0.0 now boasts upgraded commands fully compatible with Grails 6. This is crucial because the old scripts you might have been using would have caused compatibility issues with Grails 6. But worry not! We've revamped these commands, ensuring a smooth transition and allowing you to continue using them seamlessly.</p>
+<p>Do you remember running a script like <code>s2-quickstart</code> using the command:</p>
+<pre><code class="language-bash">grails s2-quickstart com.yourapp User Role
+</code></pre>
+<p>This command was used to create user and role classes (and optionally a requestmap class) in your specified package.</p>
+<p>Fast forward to Grails 6, things have evolved. Now, you can trigger these commands using Gradle tasks, like so:</p>
+<pre><code class="language-bash">./gradlew runCommand &quot;-Pargs=s2-quickstart com.yourapp User Role&quot;
+</code></pre>
+<p>The <code>runCommand</code> Gradle task allows you to execute various Grails ApplicationCommands, just like the good old <code>s2-quickstart</code>. The difference? It's sleeker, perfectly aligned with Grails 6, and propels your app into modern development.</p>
+<h2>Spring Security Leveled Up to 5.8.6</h2>
+<p>Security is paramount, and that's why we've given the underlying Spring Security framework a power boost in Grails Spring Security Core Plugin. It's now fueled by version 5.8.6 of Spring Security. This ensures that your application benefits from the latest security enhancements and bug fixes from the Spring Security team. By staying up to date with Spring Security versions, your app is fortified against emerging threats and vulnerabilities.</p>
+<h2>Navigating Docs Made Effortless</h2>
+<p>We've heard your feedback – navigating documentation shouldn't be a chore. That's why we've spruced up the Internal Docs task. This magic generates documentation that empowers you to grasp the plugin's features and their effective usage. But there's more – we've added a slick select drop-down feature. This nifty addition enables you to switch effortlessly between documentation for different releases. Whether diving into the latest version or revisiting an older one, finding the info you need is now seamless.</p>
+<p><img src="https://grails.org/blog/2023-08-25-thenewselectoption.png" alt="Documentation Select Option" /></p>
+<h2>All Aboard the Grails 6 Train</h2>
+<p>Web development is a swiftly moving train, and the Grails Spring Security Core Plugin is on board. We've given it a makeover for seamless integration with Grails 6. This empowers you to tap into the coolest Grails framework features while enjoying the robust security provided by the plugin.</p>
+<h2>Getting Cozy with Dependency Updates</h2>
+<p>Dependencies are the foundation of your app, and keeping them up-to-date is crucial. In Grails Spring Security Core Plugin 6.0.0, we've rolled out updates to key dependencies:</p>
+<ul>
+<li><strong>Spring Security 5.8.6:</strong> Latest Spring Security version for cutting-edge security features.</li>
+<li><strong>Hibernate 5:</strong> Upgraded to version 8, embracing enhancements in Hibernate technology.</li>
+<li><strong>Spring Security Core 5.3.0:</strong> Now at version 5.3.0, aligning with latest developments in the Spring Security ecosystem.</li>
+<li><strong>Grails Gradle Plugin 6:</strong> Elevating your build and development experience with Grails Gradle Plugin v6.</li>
+<li><strong>Webdriver Binaries 3.2:</strong> For web testing enthusiasts, Webdriver Binaries plugin updated to v3.2, enhancing testing capabilities.</li>
+<li><strong>Spring Dependency Management 1.1.3:</strong> Details matter – Spring Dependency Management plugin upgraded to v1.1.3, simplifying project dependency management.</li>
+</ul>
+<h2>Embrace the Future</h2>
+<p>Grails Spring Security Core Plugin 6.0.0 release goes beyond security enhancement; it's a stride towards improved compatibility and integration. The transition from Grails scripts to Grails ApplicationCommand underscores the plugin's commitment to delivering a unified and consistent experience in the realm of Grails 6. As you embark on secure, robust web app development, the upgraded plugin is your ally, aligning projects with the evolving landscape of modern web development. Upgrade today for a new era of security and compatibility in your Grails applications!</p>
+<h2>How to Upgrade</h2>
+<p>To use the</p>
+<p>latest Grails Spring Security Core plugin, simply edit your <code>build.gradle</code> file and change the dependency from version 5.3.0 to version 6.0.0:</p>
+<p>From:</p>
+<pre><code class="language-groovy">implementation 'org.grails.plugins:spring-security-core:5.3.0'
+</code></pre>
+<p>To:</p>
+<pre><code class="language-groovy">implementation 'org.grails.plugins:spring-security-core:6.0.0'
+</code></pre>
+<p>Updating your project's dependencies is all it takes. Your application is now upgraded to Grails Spring Security Core Plugin 6.0.0, ready to take advantage of enhanced security, smoother documentation navigation, and Grails 6 compatibility.</p>
+<h2>Glimpse into the Future</h2>
+<p>But wait, there's more! As you enjoy these enhancements in Grails Spring Security Core Plugin 6.0.0, we want to give you a sneak peek into the exciting future. Our team is actively working on upgrading the Grails Spring Security REST plugin, bringing you even more comprehensive security features and seamless integration.</p>
+<p>And that's not all. Our vision extends further down the road. We're planning to support the next major release, Spring Security 6, with a focus on addressing bug fixes and introducing further improvements. This dedication to staying ahead of the curve ensures that your applications will continue to be fortified with the latest security advancements and enhancements.</p>
+<p>So, as you relish the benefits of Grails Spring Security Core Plugin 6.0.0, rest assured that the journey ahead is just as thrilling. We're committed to providing you with the tools you need to build exceptional, secure, and future-proof web applications. Stay tuned for more updates as we continue this innovative journey together!</p>]]></description><author>Puneet Behl</author><guid>2023-08-25-introducing-grails-spring-security-core-6</guid><pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate></item><item><title>Introducing the New Grails Forge - A Lightning-Fast, Micronaut-Inspired CLI for Grails Application Generation</title><link>https://grails.org/blog/2023-08-03-introducing-new-grails-forge.html</link><description><![CDATA[</p>
 <p>Dear Grails Developers,</p>
 <p>The Grails Foundation™ is thrilled to unveil the next level of Grails application generation - the New Grails Forge! Building upon the foundation of the previous Grails Forge, we have introduced a brand new implementation of the Grails Forge website, and the Grails Command Line Interface (CLI).</p>
 <h2>Multiple Application Types for Your Needs</h2>

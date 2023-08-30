@@ -146,6 +146,7 @@ class PluginsPage {
                 }
             }
         }
+        html.div(class:'pagination-container')
         writer.toString()
     }
 

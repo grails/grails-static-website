@@ -21,11 +21,15 @@ onload = function () {
         var desc = element.getElementsByClassName('desc')
         var owner = element.getElementsByClassName('owner')
         var labels = element.getElementsByClassName('label')
-        var guide = { name: name[0].textContent, owner: owner[0].textContent, labels: labelsAtPlugin(labels) }; /* */
+
+        var description = desc[0].textContent
+
+        var guide = {desc: description, name: name[0].textContent, owner: owner[0].textContent,labels: labelsAtPlugin(labels) }; /* */
+
         allGuides.push(guide);
     }
 
-    if ( document.getElementById(queryInputFieldId) ) {
+    if (document.getElementById(queryInputFieldId)) {
         var e = document.getElementById(queryInputFieldId);
         e.oninput = onQueryChanged;
         e.onpropertychange = e.oninput; // for IE8
@@ -172,7 +176,7 @@ function queryValue() {
 
 function renderGuideGroup(guides, query) {
     var html = "";
-    html += "<div class='guidegroup'>";
+
     html += "  <div class='guidegroupheader'>";
     html += "    <h2>Guides Filtered by: " + queryValue() + "</h2>";
     html += "  </div>";
@@ -181,7 +185,7 @@ function renderGuideGroup(guides, query) {
         html += "    " + renderGuideAsHtmlLi(guides[i], query);
     }
     html += "  </ul>";
-    html += "</div>";
+
     return html;
 }
 

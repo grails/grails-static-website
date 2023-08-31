@@ -3,6 +3,7 @@ package org.grails.gradle
 import groovy.json.JsonSlurper
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
+import groovy.util.logging.Slf4j
 import org.gradle.api.DefaultTask
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
@@ -19,8 +20,10 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.stream.Collectors
 
+@Slf4j
 @CompileStatic
 class PluginsTask extends DefaultTask {
+
     public static final String GRAILS_PLUGINS_JSON = "https://raw.githubusercontent.com/grails/grails-plugins-metadata/main/grails-plugins.json"
     @OutputDirectory
     final Property<File> output = project.objects.property(File)
@@ -143,7 +146,7 @@ class PluginsTask extends DefaultTask {
             return Optional.empty()
         }
         try {
-            println("fetching github stars of " + vcsUrl)
+            log.debug("fetching github stars of " + vcsUrl)
             String url = "https://api.github.com/repos/" + vcsUrl.substring(vcsUrl.indexOf("github.com/") + "github.com/".length())
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(new URI(url))

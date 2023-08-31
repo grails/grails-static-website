@@ -90,7 +90,7 @@ class GuidesPage {
                         mkp.yieldUnescaped guideGroupByCategory(category, guides.findAll { it.category == category.name }, false )
 
                     } else {
-                        div(id: 'searchresults') {
+                        div(class: 'searchresults') {
                             mkp.yieldUnescaped('')
                         }
                     }

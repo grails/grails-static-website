@@ -116,10 +116,11 @@ function tagsAtGuide(element) {
 
 function onQueryChanged() {
     var query = queryValue();
+    const resultsDiv = document.getElementsByClassName("searchresults")
     query = query.trim();
     if ( query === '' ) {
         showElementsToDisplaySearchResults();
-        document.getElementById("searchresults").innerHTML = "";
+        resultsDiv[0].innerHTML = "";
         return;
     }
 
@@ -135,10 +136,10 @@ function onQueryChanged() {
     if ( matchingGuides.length > 0 ) {
         hideElementsToDisplaySearchResults();
         var html = renderGuideGroup(matchingGuides, query);
-        document.getElementById("searchresults").innerHTML = html;
+        resultsDiv[0].innerHTML = html;
 
     } else {
-        document.getElementById("searchresults").innerHTML = "<div class='guidegroup'><div class='guidegroupheader'><h2>No results found</h2></div></div>";
+        resultsDiv[0].innerHTML = "<div class='guidegroup'><div class='guidegroupheader'><h2>No results found</h2></div></div>";
     }
 }
 

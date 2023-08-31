@@ -4,13 +4,9 @@ const allGuides = [];
 const guideClassName = "plugin";
 const elementsClassNames = [];
 elementsClassNames.push('plugins');
-elementsClassNames.push('tagcloud');
-elementsClassNames.push('labels');
 elementsClassNames.push('columnheader');
-elementsClassNames.push('tagsbytopic');
-elementsClassNames.push('plugin');
 
-onload = function () {
+window.addEventListener("load", (event) => {
     const elements = document.getElementsByClassName(guideClassName);
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
@@ -41,7 +37,7 @@ onload = function () {
         e.oninput = onQueryChanged;
         e.onpropertychange = e.oninput; // for IE8
     }
-}
+});
 
 function hideElementsToDisplaySearchResults() {
     for (let i = 0; i < elementsClassNames.length; i++) {
@@ -97,10 +93,14 @@ function labelsAtPlugin(element) {
 
 function onQueryChanged() {
     let query = queryValue();
+    if (query.length < 3)  {
+        return;
+    }
+    const resultsDiv = document.getElementsByClassName("searchresults");
     query = query.trim();
     if (query === '') {
         showElementsToDisplaySearchResults();
-        document.getElementById("searchresults").innerHTML = "";
+        resultsDiv[0].innerHTML = "";
         return;
     }
 
@@ -113,12 +113,14 @@ function onQueryChanged() {
             }
         }
     }
+    hideElementsToDisplaySearchResults();
+    resultsDiv[0].insertAdjacentHTML("beforeBegin", "  <h3 class=\"columnheader\">Plugins Filtered by: " + queryValue() + "</h3>");
     if (matchingGuides.length > 0) {
-        hideElementsToDisplaySearchResults();
-        document.getElementById("searchresults").innerHTML = renderGuideGroup(matchingGuides);
-
+        resultsDiv[0].innerHTML = renderGuideGroup(matchingGuides);
+        paginatePlugins(resultsDiv, resultsDiv[0], 12);
+        window.scrollTo({ top: document.getElementById("query").offsetTop, behavior: 'smooth'});
     } else {
-        document.getElementById("searchresults").innerHTML = "<div class='guidegroup'><div class='guidegroupheader'><h2>No results found</h2></div></div>";
+        resultsDiv.innerHTML = "<div class='guidegroup'><div class='guidegroupheader'><h2>No results found</h2></div></div>";
     }
 }
 
@@ -169,7 +171,6 @@ function queryValue() {
 
 function renderGuideGroup(guides) {
     let html = "";
-    html += "  <h3 class=\"columnheader\">Plugins Filtered by: " + queryValue() + "</h3>";
     html += "  <ul>";
     for (let i = 0; i <= guides.length-1; i++) {
         html += "    " + renderGuideAsHtmlLi(guides[i]);

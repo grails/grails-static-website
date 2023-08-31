@@ -1,4 +1,4 @@
-function paginate(items, itemsPerPage, paginationContainer) {
+function paginate(items, itemsPerPage, itemsContainer, paginationContainer) {
     let currentPage = 1;
     const totalPages = Math.ceil(items.length / itemsPerPage);
 
@@ -7,7 +7,6 @@ function paginate(items, itemsPerPage, paginationContainer) {
         const endIndex = startIndex + itemsPerPage;
         const pageItems = items.slice(startIndex, endIndex);
 
-        const itemsContainer = document.querySelector("div.plugins");
         itemsContainer.innerHTML = "";
 
         pageItems.forEach((item) => {
@@ -15,6 +14,7 @@ function paginate(items, itemsPerPage, paginationContainer) {
             li.innerText = item.innerText;
             itemsContainer.appendChild(item);
         });
+        window.scrollTo({ top: document.getElementById("query").offsetTop, behavior: 'smooth'});
     }
 
     function setupPagination() {
@@ -48,9 +48,16 @@ function paginate(items, itemsPerPage, paginationContainer) {
     setupPagination();
 }
 
-window.onload = function () {
-    const pluginsDiv = document.getElementsByClassName("plugins");
-    const plugins = pluginsDiv[0].getElementsByClassName("plugin")
-    const max = 25;
-    paginate(Array.from(plugins), max, ".pagination-container")
+const paginatePlugins = function(pluginsDiv, pluginsContainer, max) {
+    if (pluginsDiv.display !== "none") {
+        const plugins = pluginsDiv[0].getElementsByClassName("plugin")
+        paginate(Array.from(plugins), max, pluginsContainer, ".pagination-container")
+    }
 }
+
+window.addEventListener("load", (event) => {
+    const pluginsDiv = document.getElementsByClassName("plugins");
+    if (pluginsDiv[0].display !== "none") {
+        paginatePlugins(pluginsDiv, document.querySelector("div.plugins"), 12);
+    }
+})

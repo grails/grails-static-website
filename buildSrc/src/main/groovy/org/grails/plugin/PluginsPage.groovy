@@ -59,10 +59,9 @@ class PluginsPage {
                         mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     }
                     div(class: 'column') {
-                        div(id: 'searchresults') {
+                        div(class: 'searchresults') {
                             mkp.yieldUnescaped('')
                         }
-                        h3(class: "columnheader", "All Grails Plugins")
                         mkp.yieldUnescaped renderPlugins(siteUrl, plugins)
                     }
                 }
@@ -139,7 +138,8 @@ class PluginsPage {
     static String renderPlugins(String siteUrl,List<Plugin> plugins) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.div(class: 'plugins'){
+        html.h3(class: "columnheader", "All Grails Plugins")
+        html.div(class: 'plugins') {
             ul {
                 for (plugin in plugins) {
                     mkp.yieldUnescaped renderSinglePlugin(siteUrl, plugin)

@@ -536,6 +536,10 @@ body.gorm .mainheader {
 	margin-top: 42.5px;
 }
 
+.hidden {
+	display: none;
+}
+
 .training th,
 .calltoaction h2 {
 	background-color: gray;/*#feb672;*/

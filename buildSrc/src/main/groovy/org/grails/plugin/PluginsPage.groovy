@@ -3,7 +3,6 @@ package org.grails.plugin
 import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.xml.MarkupBuilder
-import org.grails.gradle.PluginsTask
 import org.grails.guides.Category
 import org.grails.guides.TagUtils
 import org.grails.tags.Tag
@@ -59,10 +58,7 @@ class PluginsPage {
                         mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     }
                     div(class: 'column') {
-                        div(class: 'searchresults') {
-                            mkp.yieldUnescaped('')
-                        }
-                        mkp.yieldUnescaped renderPlugins(siteUrl, plugins)
+                        mkp.yieldUnescaped(renderPlugins(siteUrl, plugins))
                     }
                 }
             } else {
@@ -80,7 +76,7 @@ class PluginsPage {
 
 
     @CompileDynamic
-    static String renderTwoColumnsPlugins(String siteUrl,List<Plugin> plugins) {
+    static String renderTwoColumnsPlugins(String siteUrl, List<Plugin> plugins) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div {
@@ -110,7 +106,7 @@ class PluginsPage {
                     }
                 }
                 index += page
-            } while(plugins.size() > index)
+            } while (plugins.size() > index)
         }
         writer.toString()
     }
@@ -135,18 +131,29 @@ class PluginsPage {
     }
 
     @CompileDynamic
-    static String renderPlugins(String siteUrl,List<Plugin> plugins) {
+    static String renderPlugins(String siteUrl, List<Plugin> plugins) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.h3(class: "columnheader", "All Grails Plugins")
-        html.div(class: 'plugins') {
+        html.h3(class: "columnheader allpluginslabel", "All Grails Plugins")
+        html.h3(class: "columnheader searchresultslabel hidden", "Plugins Filtered by: ") {
+            html.span(class: "query-label")
+        }
+        html.div(class: 'plugins allplugins') {
             ul {
                 for (plugin in plugins) {
                     mkp.yieldUnescaped renderSinglePlugin(siteUrl, plugin)
                 }
             }
         }
-        html.div(class:'pagination-container')
+        html.div(class: "guidegroup noresults hidden") {
+            div(class: "guidegroupheader") {
+                h2("No results found!")
+            }
+        }
+        html.div(class: 'searchresults hidden') {
+            mkp.yieldUnescaped('')
+        }
+        html.div(class: 'pagination-container')
         writer.toString()
     }
 
@@ -230,7 +237,7 @@ class PluginsPage {
                 }
             }
             if (plugin.desc) {
-                p (class: 'desc'){mkp.yield(plugin.desc)}
+                p(class: 'desc') { mkp.yield(plugin.desc) }
             }
             p {
                 if (plugin.latestVersion) {
@@ -240,9 +247,9 @@ class PluginsPage {
                 mkp.yield(FORMATTER.format(plugin.updated))
 
                 if (plugin.owner) {
-                    span"by "
+                    span "by "
                     a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
-                        div(class: 'owner') {mkp.yield(plugin.owner.name)}
+                        div(class: 'owner') { mkp.yield(plugin.owner.name) }
                     }
                 }
             }
@@ -300,13 +307,10 @@ class PluginsPage {
     static String searchBox(Tag tag, Category category) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        if ( !(tag || category) ) {
+        if (!(tag || category)) {
             html.div(class: 'searchbox', style: 'margin-top: 50px !important;') {
                 div(class: 'search', style: 'margin-bottom: 0px !important;') {
                     input(type: 'text', id: 'query', placeholder: 'SEARCH')
-                    div(id: 'noresults') {
-                        mkp.yieldUnescaped '&nbsp;'
-                    }
                 }
             }
         }

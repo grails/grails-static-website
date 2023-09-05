@@ -1,30 +1,40 @@
 const queryInputFieldId = "query";
 const mobileQueryInputFieldId = "mobilequery";
-const allGuides = [];
-const guideClassName = "plugin";
-const elementsClassNames = [];
-elementsClassNames.push('plugins');
-elementsClassNames.push('columnheader');
+const allPluginsContainerDivClass = "allplugins";
+const pluginContainerDivClassName = "plugin";
+const allPluginsHeadingLabelClassName = "allpluginslabel";
+const searchResultsDivClassName = "searchresults";
+const searchResultsHeadingLabelClassName = "searchresultslabel";
+const searchResultsLabelSelector = "h3." + searchResultsHeadingLabelClassName;
+const gitHubStarsSelector = "div.githubstar";
+const noresultsDivClassName = "noresults";
+
+const allPlugins = [];
+const elementsClassNames = [allPluginsContainerDivClass, allPluginsHeadingLabelClassName];
 
 window.addEventListener("load", (event) => {
-    const elements = document.getElementsByClassName(guideClassName);
-    for (let i = 0; i < elements.length; i++) {
+    const elements = document.querySelectorAll("div." + allPluginsContainerDivClass + " ul > li.plugin");
+    for (let i = 0; i <= elements.length - 1; i++) {
         const element = elements[i];
         const name = element.getElementsByClassName('name');
-        const desc = element.getElementsByClassName('desc');
+        const desc = element.getElementsByClassName('desc')[0]?.textContent;
         const owner = element.getElementsByClassName('owner');
         const labels = element.getElementsByClassName('label');
+        const vcsUrl = element.querySelector("h3.name > a").href
+        const metaInfo = element.querySelector("p")?.outerHTML
+        const ghStar = element.querySelector(gitHubStarsSelector)?.outerHTML
 
-        const description = desc[0]?.textContent;
-
-        const guide = {
-            desc: description,
+        const plugin = {
             name: name[0]?.textContent,
+            desc: desc,
             owner: owner[0]?.textContent,
-            labels: labelsAtPlugin(labels)
+            labels: labelsAtPlugin(labels),
+            vcsUrl: vcsUrl,
+            metaInfo: metaInfo,
+            ghStar: ghStar
         };
 
-        allGuides.push(guide);
+        allPlugins.push(plugin);
     }
 
     if (document.getElementById(queryInputFieldId)) {
@@ -46,18 +56,23 @@ function hideElementsToDisplaySearchResults() {
     }
 }
 
-function showElementsToDisplaySearchResults() {
+function resetDefault() {
+    hideElementsByClassName(noresultsDivClassName)
+    hideElementsByClassName(searchResultsDivClassName)
+    hideElementsByClassName(searchResultsHeadingLabelClassName)
+    searchResultsDiv.innerHTML = ""
     for (let i = 0; i < elementsClassNames.length; i++) {
         const className = elementsClassNames[i];
         showElementsByClassName(className);
     }
+    paginate(defaultPluginList, max, pluginsContainer, paginationContainerClass);
 }
 
 function hideElementsByClassName(className) {
     const elements = document.getElementsByClassName(className);
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
-        element.style.display = "none";
+        element.classList.add("hidden");
     }
 }
 
@@ -65,7 +80,7 @@ function showElementsByClassName(className) {
     const elements = document.getElementsByClassName(className);
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
-        element.style.display = "block";
+        element.classList.remove("hidden");
     }
 }
 
@@ -78,49 +93,43 @@ function labelsAtPlugin(element) {
     return labels;
 }
 
-
-//    for (var y=0; y< element.childNodes.length; y++){
-//    var label = element.childNodes[y].getElementsByClassName('labels');
-//    var liElements = label.getElementsByTagName('li')
-//        if (element.childNodes[y].className == "labels") {
-//
-//        //TODO GET LI FROM UL
-//            for (var i=0;y <liElements.length;i ++){
-//                labels.push(liElements[i])
-//            }
-//        }
-//    }
-
 function onQueryChanged() {
-    let query = queryValue();
-    if (query.length < 3)  {
+    let query = queryValue()?.trim();
+    const matchingPlugins = [];
+    if (query === null || query === "") {
+        resetDefault();
         return;
-    }
-    const resultsDiv = document.getElementsByClassName("searchresults");
-    query = query.trim();
-    if (query === '') {
-        showElementsToDisplaySearchResults();
-        resultsDiv[0].innerHTML = "";
+    } else if (query.length < 3) {
         return;
     }
 
-    const matchingGuides = [];
     if (query !== '') {
-        for (let i = 0; i < allGuides.length; i++) {
-            const guide = allGuides[i];
-            if (doesGuideMatchesQuery(guide, query)) {
-                matchingGuides.push(guide);
+        for (let i = 0; i <= allPlugins.length - 1; i++) {
+            const plugin = allPlugins[i];
+            if (doesPluginMatchesQuery(plugin, query)) {
+                matchingPlugins.push(plugin);
             }
         }
     }
-    hideElementsToDisplaySearchResults();
-    resultsDiv[0].insertAdjacentHTML("beforeBegin", "  <h3 class=\"columnheader\">Plugins Filtered by: " + queryValue() + "</h3>");
-    if (matchingGuides.length > 0) {
-        resultsDiv[0].innerHTML = renderGuideGroup(matchingGuides);
-        paginatePlugins(resultsDiv, resultsDiv[0], 12);
-        window.scrollTo({ top: document.getElementById("query").offsetTop, behavior: 'smooth'});
-    } else {
-        resultsDiv.innerHTML = "<div class='guidegroup'><div class='guidegroupheader'><h2>No results found</h2></div></div>";
+    if (searchResultsDiv) {
+        if (matchingPlugins.length > 0) {
+            if (searchResultsDiv.parentNode.getElementsByClassName(searchResultsLabelSelector).length === 0) {
+                const searchResultHeadingLabel = document.querySelector(searchResultsLabelSelector);
+                const querySpan = searchResultHeadingLabel.querySelector("span");
+                querySpan.innerHTML = queryValue()
+                showElementsByClassName(searchResultsHeadingLabelClassName)
+            }
+            hideElementsToDisplaySearchResults();
+            searchResultsDiv.innerHTML = renderPlugins(matchingPlugins);
+            paginate(Array.from(searchResultsDiv.getElementsByClassName(pluginContainerDivClassName)), max, searchResultsDiv, paginationContainerClass)
+            showElementsByClassName(searchResultsDivClassName)
+            hideElementsByClassName(noresultsDivClassName)
+        } else if (matchingPlugins.length === 0) {
+            hideElementsToDisplaySearchResults();
+            showElementsByClassName(noresultsDivClassName)
+            const pagination = document.querySelector(paginationContainerClass);
+            pagination.innerHTML = "";
+        }
     }
 }
 
@@ -150,10 +159,8 @@ function doesOwnerMatchesQuery(owner, query) {
     }
 }
 
-function doesGuideMatchesQuery(guide, query) {
-    return doesTitleMatchesQuery(guide.name, query) ||
-        doesOwnerMatchesQuery(guide.owner, query) ||
-        doesTagsMatchesQuery(guide.labels, query);
+function doesPluginMatchesQuery(guide, query) {
+    return doesTitleMatchesQuery(guide.name, query) || doesOwnerMatchesQuery(guide.owner, query) || doesTagsMatchesQuery(guide.labels, query);
 }
 
 function queryValue() {
@@ -169,31 +176,32 @@ function queryValue() {
     return value;
 }
 
-function renderGuideGroup(guides) {
+function renderPlugins(plugins) {
     let html = "";
     html += "  <ul>";
-    for (let i = 0; i <= guides.length-1; i++) {
-        html += "    " + renderGuideAsHtmlLi(guides[i]);
+    for (let i = 0; i <= plugins.length - 1; i++) {
+        html += "    " + renderPluginAsHtmlLi(plugins[i]);
     }
     html += "  </ul>";
 
     return html;
 }
 
-function renderGuideAsHtmlLi(guide) {
+function renderPluginAsHtmlLi(plugin) {
     let html = "<li class='plugin'>";
-    html += "<h3 class='name'><a href=>" + guide.name + "</a> </h3>";
-    html += "<p class='desc'>" + guide.desc + "</p>"
-    html += "<a href=/plugins/owners/" + guide.owner + ".html>" + guide.owner + "</a>";
-
+    html += "<h3 class='name'><a href=" + plugin.vcsUrl + "\">" + plugin.name + "</a> </h3>";
+    html += plugin.metaInfo;
+    html += "<div class=\"owner\"><a href=/plugins/owners/" + plugin.owner + ".html>" + plugin.owner + "</a></div>";
     html += "<ul class='labels'>";
-    for (let i = 0; i < guide.labels.length; i++) {
-        const label = guide.labels[i]?.trim();
+    for (let i = 0; i < plugin.labels.length; i++) {
+        const label = plugin.labels[i]?.trim();
         html += "<li class='label'>";
         html += "<a href=\"/plugins/tags/" + label + ".html\">" + label + "</a>";
         html += "</li>"
     }
     html += "</ul>"
+    html += plugin.ghStar;
     html += "</li>"
     return html;
 }
+

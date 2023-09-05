@@ -1,3 +1,5 @@
+const paginationContainerClass = ".pagination-container";
+const max = 18;
 function paginate(items, itemsPerPage, itemsContainer, paginationContainer) {
     let currentPage = 1;
     const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -14,50 +16,38 @@ function paginate(items, itemsPerPage, itemsContainer, paginationContainer) {
             li.innerText = item.innerText;
             itemsContainer.appendChild(item);
         });
-        window.scrollTo({ top: document.getElementById("query").offsetTop, behavior: 'smooth'});
+        window.scrollTo({top: queryInputOffsetTop, behavior: 'smooth'});
     }
 
     function setupPagination() {
         const pagination = document.querySelector(paginationContainer);
         pagination.innerHTML = "";
 
-        for (let i = 1; i <= totalPages; i++) {
-            const link = document.createElement("a");
-            link.href = "#";
-            link.innerText = i;
+        if (totalPages > 1) {
+            for (let i = 1; i <= totalPages; i++) {
+                const link = document.createElement("a");
+                link.href = "#";
+                link.innerText = i;
 
-            if (i === currentPage) {
-                link.classList.add("active");
+                if (i === currentPage) {
+                    link.classList.add("active");
+                }
+
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    currentPage = i;
+                    showItems(currentPage);
+
+                    const currentActive = pagination.querySelector(".active");
+                    currentActive.classList.remove("active");
+                    link.classList.add("active");
+                });
+
+                pagination.appendChild(link);
             }
-
-            link.addEventListener("click", (event) => {
-                event.preventDefault();
-                currentPage = i;
-                showItems(currentPage);
-
-                const currentActive = pagination.querySelector(".active");
-                currentActive.classList.remove("active");
-                link.classList.add("active");
-            });
-
-            pagination.appendChild(link);
         }
     }
 
     showItems(currentPage);
     setupPagination();
 }
-
-const paginatePlugins = function(pluginsDiv, pluginsContainer, max) {
-    if (pluginsDiv.display !== "none") {
-        const plugins = pluginsDiv[0].getElementsByClassName("plugin")
-        paginate(Array.from(plugins), max, pluginsContainer, ".pagination-container")
-    }
-}
-
-window.addEventListener("load", (event) => {
-    const pluginsDiv = document.getElementsByClassName("plugins");
-    if (pluginsDiv[0].display !== "none") {
-        paginatePlugins(pluginsDiv, document.querySelector("div.plugins"), 12);
-    }
-})

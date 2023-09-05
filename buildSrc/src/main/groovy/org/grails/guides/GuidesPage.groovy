@@ -241,9 +241,6 @@ class GuidesPage {
             html.div(class: 'searchbox', style: 'margin-top: 50px !important;') {
                 div(class: 'search', style: 'margin-bottom: 0px !important;') {
                     input(type: 'text', id: 'query', placeholder: 'SEARCH')
-                    div(id: 'noresults') {
-                        mkp.yieldUnescaped '&nbsp;'
-                    }
                 }
             }
         }

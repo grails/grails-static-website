@@ -46,28 +46,26 @@ class PluginsPage {
             }
         }
         html.div(class: 'content') {
-            if (title == 'Grails Plugins') {
-                div(class: 'twocolumns') {
-                    div(class: 'column') {
-
-                        mkp.yieldUnescaped searchBox(null, null)
-                        mkp.yieldUnescaped linksMenu(siteUrl)
-                        mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
-                        mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
-                        mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
-                        mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
-                    }
-                    div(class: 'column') {
-                        mkp.yieldUnescaped(renderPlugins(siteUrl, plugins))
-                    }
-                }
-            } else {
+            if (title !== 'Grails Plugins') {
                 html.div(class: "breadcrumbs") {
                     a(href: siteUrl + "/plugins.html", "All Grails Plugins")
                     span(' » ')
                     span(title)
                 }
-                mkp.yieldUnescaped renderTwoColumnsPlugins(siteUrl, plugins)
+            }
+            div(class: 'twocolumns') {
+                div(class: 'column') {
+
+                    mkp.yieldUnescaped searchBox(null, null)
+                    mkp.yieldUnescaped linksMenu(siteUrl)
+                    mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
+                    mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
+                    mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
+                    mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                }
+                div(class: 'column') {
+                    mkp.yieldUnescaped(renderPlugins(siteUrl, plugins, title))
+                }
             }
 
         }
@@ -131,10 +129,14 @@ class PluginsPage {
     }
 
     @CompileDynamic
-    static String renderPlugins(String siteUrl, List<Plugin> plugins) {
+    static String renderPlugins(String siteUrl, List<Plugin> plugins, String title) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.h3(class: "columnheader allpluginslabel", "All Grails Plugins")
+        if( title != 'Grails Plugins'){
+            html.h3(class: "columnheader allpluginslabel", "Plugins")
+        }else{
+            html.h3(class: "columnheader allpluginslabel", "All Grails Plugins")
+        }
         html.h3(class: "columnheader searchresultslabel hidden", "Plugins Filtered by: ") {
             html.span(class: "query-label")
         }

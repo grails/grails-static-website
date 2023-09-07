@@ -57,11 +57,11 @@ class PluginsPage {
                 div(class: 'column') {
 
                     mkp.yieldUnescaped searchBox(null, null)
-                    mkp.yieldUnescaped linksMenu(siteUrl)
                     mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
                     mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                    mkp.yieldUnescaped linksMenu(siteUrl)
                 }
                 div(class: 'column') {
                     mkp.yieldUnescaped(renderPlugins(siteUrl, plugins, title))
@@ -241,20 +241,18 @@ class PluginsPage {
             if (plugin.desc) {
                 p(class: 'desc') { mkp.yield(plugin.desc) }
             }
-            p {
+
                 if (plugin.latestVersion) {
                     span plugin.latestVersion
                 }
                 mkp.yield(" published ")
                 mkp.yield(FORMATTER.format(plugin.updated))
-
                 if (plugin.owner) {
-                    span "by "
                     a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
-                        div(class: 'owner') { mkp.yield(plugin.owner.name) }
+                        mkp.yield("by " + plugin.owner.name)
                     }
                 }
-            }
+
             if (plugin.labels) {
                 ul(class: 'labels') {
                     for (String label : plugin.labels) {

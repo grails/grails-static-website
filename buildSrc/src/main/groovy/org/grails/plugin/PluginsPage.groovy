@@ -37,7 +37,8 @@ class PluginsPage {
     @CompileDynamic
     static String mainContent(String siteUrl,
                               List<Plugin> plugins,
-                              String title) {
+                              String title,
+                                List<Plugin> filteredPlugins) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'headerbar chalicesbg') {
@@ -64,7 +65,11 @@ class PluginsPage {
                     mkp.yieldUnescaped linksMenu(siteUrl)
                 }
                 div(class: 'column') {
-                    mkp.yieldUnescaped(renderPlugins(siteUrl, plugins, title))
+                    if(filteredPlugins != null) {
+                        mkp.yieldUnescaped(renderPlugins(siteUrl, filteredPlugins, title))
+                    }else{
+                        mkp.yieldUnescaped(renderPlugins(siteUrl, plugins, title))
+                    }
                 }
             }
 

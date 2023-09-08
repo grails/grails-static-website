@@ -76,7 +76,7 @@ class PluginsTask extends DefaultTask {
         }
         File pluginOutputFile = new File(inputFile.absolutePath + "/" + fileName)
         pluginOutputFile.createNewFile()
-        String html = PluginsPage.mainContent(siteUrl, plugins, 'Grails Plugins')
+        String html = PluginsPage.mainContent(siteUrl, plugins, 'Grails Plugins', null)
         html = RenderSiteTask.renderHtmlWithTemplateContent(html, metadata, templateText)
         html = RenderSiteTask.highlightMenu(html, metadata, "/plugins.html")
         pluginOutputFile.text = html
@@ -102,12 +102,12 @@ class PluginsTask extends DefaultTask {
 
     String renderHtmlPagesForTags(String siteUrl, List<Plugin> plugins, String tag) {
         List<Plugin> filteredPlugins = plugins.stream().filter(p -> p.labels.contains(tag)).collect(Collectors.toList())
-        return PluginsPage.mainContent(siteUrl, filteredPlugins, "Plugins by tag #${tag}", )
+        return PluginsPage.mainContent(siteUrl, plugins , "Plugins by tag #${tag}", filteredPlugins)
     }
 
     String renderHtmlPagesForOwners(String siteUrl, List<Plugin> plugins, String owner) {
         List<Plugin> filteredPlugins = plugins.stream().filter(p -> p.owner.name == owner).collect(Collectors.toList())
-        return PluginsPage.mainContent(siteUrl, filteredPlugins, "Plugins by creator: #${owner}")
+        return PluginsPage.mainContent(siteUrl, plugins , "Plugins by creator: #${owner}", filteredPlugins)
     }
 
     @CompileDynamic

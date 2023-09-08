@@ -141,7 +141,7 @@ class PluginsPage {
         if (title != 'Grails Plugins') {
             html.h3(class: "columnheader allpluginslabel", "Plugins")
         } else {
-            html.h3(class: "columnheader allpluginslabel", "All Grails Plugins")
+            html.h3(class: "columnheader allpluginslabel", "All Grails Plugins (" +plugins.size() +")")
         }
         html.h3(class: "columnheader searchresultslabel hidden", "Plugins Filtered by: ") {
             html.span(class: "query-label")

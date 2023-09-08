@@ -1,0 +1,29 @@
+ul, ol {
+    padding-left: 0;
+}
+
+li.plugin {
+    padding: 24px;
+    border-radius: 1px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+div.column {
+    padding: 15px;
+}
+
+div.twocolumns div.column {
+    width: 44.326906%;
+}
+
+article.quote, .guidegroup {
+    border-top: 0;
+    padding-top: 0px;
+}
+
+.columnheader {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}

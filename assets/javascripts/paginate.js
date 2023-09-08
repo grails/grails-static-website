@@ -1,5 +1,5 @@
 const paginationContainerClass = ".pagination-container";
-const max = 18;
+const max = 20;
 function paginate(items, itemsPerPage, itemsContainer, paginationContainer) {
     let currentPage = 1;
     const totalPages = Math.ceil(items.length / itemsPerPage);

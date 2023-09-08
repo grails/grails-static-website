@@ -10,7 +10,6 @@ import org.grails.tags.TagCloud
 import java.time.format.DateTimeFormatter
 import java.util.stream.Collectors
 
-
 @CompileStatic
 class PluginsPage {
     private static final Comparator<Plugin> COMPARE_BY_NAME = new Comparator<Plugin>() {
@@ -38,7 +37,7 @@ class PluginsPage {
     static String mainContent(String siteUrl,
                               List<Plugin> plugins,
                               String title,
-                                List<Plugin> filteredPlugins) {
+                              List<Plugin> filteredPlugins) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
         html.div(class: 'headerbar chalicesbg') {
@@ -56,18 +55,17 @@ class PluginsPage {
             }
             div(class: 'twocolumns') {
                 div(class: 'column') {
-
                     mkp.yieldUnescaped searchBox(null, null)
+                    mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                    mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
-                    mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
-                    mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped linksMenu(siteUrl)
                 }
                 div(class: 'column') {
-                    if(filteredPlugins != null) {
+                    if (filteredPlugins != null) {
                         mkp.yieldUnescaped(renderPlugins(siteUrl, filteredPlugins, title))
-                    }else{
+                    } else {
                         mkp.yieldUnescaped(renderPlugins(siteUrl, plugins, title))
                     }
                 }
@@ -123,10 +121,13 @@ class PluginsPage {
 
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        html.ul(class: 'guidegroup') {
-            for (Map<String, String> link : links) {
-                li {
-                    a(href: link.url, link.title)
+        html.div {
+            mkp.yieldUnescaped createHeader('Useful Link')
+            ul(class: 'guidegroup') {
+                for (Map<String, String> link : links) {
+                    li {
+                        a(href: link.url, link.title)
+                    }
                 }
             }
         }
@@ -137,9 +138,9 @@ class PluginsPage {
     static String renderPlugins(String siteUrl, List<Plugin> plugins, String title) {
         StringWriter writer = new StringWriter()
         MarkupBuilder html = new MarkupBuilder(writer)
-        if( title != 'Grails Plugins'){
+        if (title != 'Grails Plugins') {
             html.h3(class: "columnheader allpluginslabel", "Plugins")
-        }else{
+        } else {
             html.h3(class: "columnheader allpluginslabel", "All Grails Plugins")
         }
         html.h3(class: "columnheader searchresultslabel hidden", "Plugins Filtered by: ") {
@@ -247,16 +248,16 @@ class PluginsPage {
                 p(class: 'desc') { mkp.yield(plugin.desc) }
             }
 
-                if (plugin.latestVersion) {
-                    span plugin.latestVersion
+            if (plugin.latestVersion) {
+                span plugin.latestVersion
+            }
+            mkp.yield(" published ")
+            mkp.yield(FORMATTER.format(plugin.updated))
+            if (plugin.owner) {
+                a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
+                    mkp.yield("by " + plugin.owner.name)
                 }
-                mkp.yield(" published ")
-                mkp.yield(FORMATTER.format(plugin.updated))
-                if (plugin.owner) {
-                    a(href: "[%url]/plugins/owners/${plugin.owner.name}.html") {
-                        mkp.yield("by " + plugin.owner.name)
-                    }
-                }
+            }
 
             if (plugin.labels) {
                 ul(class: 'labels') {

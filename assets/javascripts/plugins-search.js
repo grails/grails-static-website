@@ -16,6 +16,7 @@ window.addEventListener("load", (event) => {
     const elements = document.querySelectorAll("div." + allPluginsContainerDivClass + " ul > li.plugin");
     for (let i = 0; i <= elements.length - 1; i++) {
         const element = elements[i];
+        const pluginData = element.innerHTML;
         const name = element.getElementsByClassName('name');
         const desc = element.getElementsByClassName('desc')[0]?.textContent;
         const owner = element.getElementsByClassName('owner');
@@ -25,6 +26,7 @@ window.addEventListener("load", (event) => {
         const ghStar = element.querySelector(gitHubStarsSelector)?.outerHTML
 
         const plugin = {
+            pluginData: pluginData,
             name: name[0]?.textContent,
             desc: desc,
             owner: owner[0]?.textContent,
@@ -189,18 +191,7 @@ function renderPlugins(plugins) {
 
 function renderPluginAsHtmlLi(plugin) {
     let html = "<li class='plugin'>";
-    html += "<h3 class='name'><a href=" + plugin.vcsUrl + "\">" + plugin.name + "</a> </h3>";
-    html += plugin.metaInfo;
-    html += "<div class=\"owner\"><a href=/plugins/owners/" + plugin.owner + ".html>" + plugin.owner + "</a></div>";
-    html += "<ul class='labels'>";
-    for (let i = 0; i < plugin.labels.length; i++) {
-        const label = plugin.labels[i]?.trim();
-        html += "<li class='label'>";
-        html += "<a href=\"/plugins/tags/" + label + ".html\">" + label + "</a>";
-        html += "</li>"
-    }
-    html += "</ul>"
-    html += plugin.ghStar;
+    html += plugin.pluginData
     html += "</li>"
     return html;
 }

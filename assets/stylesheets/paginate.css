@@ -1,12 +1,9 @@
 .pagination-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 20px;
-}
-
-.pagination-container {
-    display: inline-block;
 }
 
 .pagination-container a {

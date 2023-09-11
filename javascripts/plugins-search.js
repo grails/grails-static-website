@@ -62,7 +62,7 @@ function resetDefault() {
     hideElementsByClassName(noresultsDivClassName)
     hideElementsByClassName(searchResultsDivClassName)
     hideElementsByClassName(searchResultsHeadingLabelClassName)
-    searchResultsDiv.innerHTML = ""
+    clearSearchResultsDiv()
     for (let i = 0; i < elementsClassNames.length; i++) {
         const className = elementsClassNames[i];
         showElementsByClassName(className);
@@ -93,6 +93,10 @@ function labelsAtPlugin(element) {
         labels.push(element[y].textContent)
     }
     return labels;
+}
+
+function clearSearchResultsDiv() {
+    searchResultsDiv.innerHTML = ""
 }
 
 function onQueryChanged() {
@@ -127,6 +131,7 @@ function onQueryChanged() {
             showElementsByClassName(searchResultsDivClassName)
             hideElementsByClassName(noresultsDivClassName)
         } else if (matchingPlugins.length === 0) {
+            clearSearchResultsDiv();
             hideElementsToDisplaySearchResults();
             showElementsByClassName(noresultsDivClassName)
             const pagination = document.querySelector(paginationContainerClass);

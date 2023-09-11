@@ -536,6 +536,10 @@ body.gorm .mainheader {
 	margin-top: 42.5px;
 }
 
+.hidden {
+	display: none;
+}
+
 .training th,
 .calltoaction h2 {
 	background-color: gray;/*#feb672;*/
@@ -1809,10 +1813,10 @@ li.plugin h3 {
 
 li.plugin {
 	list-style-type: none;
-	padding: 10px 30px 10px 0;
 	border-bottom: 2px solid #eee;
-	margin-bottom: 1px;
 	overflow: auto;
+	background-color: #FFFF;
+	padding: 1px 10px 1px 15px;
 }
 
 li.plugin .iconlinks {
@@ -1828,7 +1832,7 @@ li.plugin .iconlinks li {
 
 li.plugin .labels {
 	overflow: auto;
-	margin: 20px 0;
+	margin: 10px 0px;
 	padding: 0;
 	clear: both;
 }
@@ -1842,14 +1846,20 @@ ul.labels li.label {
 ul.labels li.label a {
 	border: 1px solid rgb(211, 211, 211);
 	text-decoration: none;
-	padding: 10px;
+	padding: 5px;
 	background-color: #FFFFFF;
 	color: #7c7c7c;
 	display: block;
+	background-color: white-smoke;
 }
 
 .breadcrumbs {
 	padding: .5rem 0;
 	font-size: .6875rem;
 	text-transform: uppercase;
+}
+
+li.plugin.p{
+	font-size: 16px;
+	line-height: 20px;
 }

@@ -1,6 +1,6 @@
 ---
 title: Introducing the New Grails Plugin Portal - A Static Marvel!
-date: September 13, 2023
+date: September 11, 2023
 description: Discover the revamped Grails Plugin Portal! This static, GitHub-hosted portal brings you lightning-fast plugin searches, curated lists of top-rated plugins, and seamless integration with the latest Grails ecosystem. Learn about its features, how to include your Grails plugin, and join the community to shape the future of Grails development. Say goodbye to the limitations of the old portal and embrace the convenience of the new Grails Plugin Portal!
 author: Puneet Behl
 image: grails-blog-index-3.png
@@ -14,7 +14,7 @@ image: grails-blog-index-3.png
 
 Hey there, Grails enthusiasts! Are you ready for some exciting news? We're thrilled to introduce the revamped Grails Plugin Portal, and let us tell you, it's a game-changer! This dynamic portal is now completely static and hosted on GitHub, offering you a seamless and efficient experience in exploring Grails plugins.
 
-![Grails Plugin Portal!](https://grails.org/blog/2023-09-13-new-grails-plugin-portal.png)
+![Grails Plugin Portal!](https://grails.org/blog/2023-09-11-new-grails-plugin-portal.png)
 
 ## A Glimpse of the Future: Grails Plugin Portal Redesigned
 

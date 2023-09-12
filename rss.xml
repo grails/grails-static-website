@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 12 Sep 2023 03:57:09 GMT</pubDate><item><title>Introducing Grails Spring Security Core Plugin 6.0.0 - Elevated Security, Grails 6 Compatibility, Enhanced Commands, and Effortless Documentation</title><link>https://grails.org/blog/2023-08-25-introducing-grails-spring-security-core-6.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 12 Sep 2023 03:57:49 GMT</pubDate><item><title>Introducing the New Grails Plugin Portal - A Static Marvel!</title><link>https://grails.org/blog/2023-09-11-the-new-grails-plugin-portal.html</link><description><![CDATA[</p>
+<p>Hey there, Grails enthusiasts! Are you ready for some exciting news? We're thrilled to introduce the revamped Grails Plugin Portal, and let us tell you, it's a game-changer! This dynamic portal is now completely static and hosted on GitHub, offering you a seamless and efficient experience in exploring Grails plugins.</p>
+<p><img src="https://grails.org/blog/2023-09-11-new-grails-plugin-portal.png" alt="Grails Plugin Portal!" /></p>
+<h2>A Glimpse of the Future: Grails Plugin Portal Redesigned</h2>
+<p>Our dedicated team has been hard at work, and we're excited to unveil the Grails Plugin Portal 2.0, now hosted at <a href="https://github.com/grails/grails-static-website">https://github.com/grails/grails-static-website</a>. What's our aim? To make your Grails plugin journey smoother and more accessible than ever before!</p>
+<h2>Key Features of the New Grails Plugin Portal</h2>
+<h3>Quick and Easy Search Functionality</h3>
+<p>We get it, time is precious when you're deep into Grails projects. That's why our new portal boasts a lightning-fast search feature. Type in your keywords, hit enter, and voilà! Your desired plugins are right there at your fingertips.</p>
+<h3>Paginated List of All Plugins</h3>
+<p>With the Grails ecosystem booming, there's no shortage of plugins to explore. To help you navigate this sea of possibilities, we've introduced a paginated list of all available plugins. Explore them at your pace, knowing that detailed plugin info is just a click away.</p>
+<h3>Top-Rated Plugins</h3>
+<p>Wondering which plugins are the cream of the crop? Wonder no more! Our top-rated plugins section showcases gems that have been tried, tested, and adored by fellow Grails developers. It's your shortcut to finding the best tools for your projects.</p>
+<h3>Latest Release Plugins</h3>
+<p>Stay ahead in the world of Grails development with our &quot;Latest Release&quot; section. We keep it up to date to showcase the newest additions to the Grails plugin ecosystem. Be the first to try out fresh features and improvements as they roll in.</p>
+<h3>Tag Clouds for Owners and Tags</h3>
+<p>To make your plugin search even more intuitive, we've introduced tag clouds for both plugin owners and tags. Click on a tag to find all relevant plugins or explore the work of your favorite authors. These tag clouds are your secret weapon for effortless plugin discovery!</p>
+<h2>Limitations of the Previous Plugin Portal</h2>
+<p>Before we dive further into the awesomeness of the new portal, let's address the shortcomings of the previous version. It had some issues that weren't exactly developer-friendly:</p>
+<ol>
+<li>
+<p><strong>Frequent Downtime</strong>: The old portal was notorious for going offline quite often, causing disruptions and frustration for developers.</p>
+</li>
+<li>
+<p><strong>High Resource Utilization</strong>: It was a resource-hungry beast, slowing down performance due to its dynamic architecture.</p>
+</li>
+<li>
+<p><strong>Slow Performance</strong>: Slow loading times and delays were common complaints. The dynamic setup struggled with the increasing plugin data, resulting in sluggishness.</p>
+</li>
+</ol>
+<h2>All Plugins in One Place</h2>
+<p>Did you know that all the plugins on the Grails Plugin Portal are sourced from <a href="https://github.com/grails/grails-plugin-metadata/tree/grails-plugins.json">https://github.com/grails/grails-plugin-metadata/tree/grails-plugins.json</a>? We've streamlined the process to ensure you have access to the most up-to-date plugins directly from the source.</p>
+<h2>How to Include or Update Your Grails Plugin</h2>
+<p>Excited to get your Grails plugin into the spotlight on our portal? Here's how you can include or update your Grails plugin:</p>
+<ol>
+<li>
+<p><strong>Fork the Repository</strong>: Start by forking the <a href="https://github.com/grails/grails-plugin-metadata">Grails Plugin Metadata Repository</a>.</p>
+</li>
+<li>
+<p><strong>Edit the JSON File</strong>: Navigate to the <code>grails-plugins.json</code> file in your forked repository. This file contains the plugin metadata.</p>
+</li>
+<li>
+<p><strong>Add Your Plugin</strong>: To include your plugin, simply add its metadata to the JSON file. Make sure to follow the established format.</p>
+</li>
+<li>
+<p><strong>Submit a Pull Request</strong>: Once you've added or updated your plugin details, submit a pull request to the original <a href="https://github.com/grails/grails-plugin-metadata">Grails Plugin Metadata Repository</a>. Our team will review it and, upon approval, your plugin will be part of the portal!</p>
+</li>
+</ol>
+<h2>Get Involved and Contribute</h2>
+<p>But here's the exciting part: the Grails Plugin Portal is not just a resource; it's a community effort! We're eager to hear your thoughts and welcome your contributions. Have a Grails plugin you'd like to share, or ideas for portal enhancements? Join us on <a href="https://github.com/grails/grails-static-website">GitHub</a>, and together, we'll make Grails development a breeze!</p>
+<h2>Embrace the Future of Grails Plugin Discovery</h2>
+<p>The new Grails Plugin Portal is your gateway to a brighter future in Grails development. With its static structure, lightning-fast search, and curated lists of top-rated and latest release plugins, it's your one-stop-shop for all things Grails. Come on in, explore, discover, and become an active part of the Grails community. Let's build amazing Grails applications together with this reimagined portal!</p>
+<p>Ready to get started? Visit the <a href="https://grails.org/plugins.html">Grails Plugin Portal</a> today!</p>]]></description><author>Puneet Behl</author><guid>2023-09-11-the-new-grails-plugin-portal</guid><pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate></item><item><title>Introducing Grails Spring Security Core Plugin 6.0.0 - Elevated Security, Grails 6 Compatibility, Enhanced Commands, and Effortless Documentation</title><link>https://grails.org/blog/2023-08-25-introducing-grails-spring-security-core-6.html</link><description><![CDATA[</p>
 <p><strong>Exciting News from the Grails Foundation: Unveiling Grails Spring Security Core Plugin 6.0.0</strong></p>
 <p>Greetings, fellow developers! Prepare to be amazed by the latest release – Grails Spring Security Core Plugin 6.0.0! This isn't just an upgrade in security; it's a journey towards greater heights for your applications. Packed with updates and improvements, this release doesn't just enhance security; it also streamlines your development experience. Let's explore the exciting changes this release brings.</p>
 <h2>Seamless Grails 6 Compatibility with Upgraded Commands</h2>

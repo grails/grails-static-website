@@ -10,12 +10,9 @@ li.plugin {
 }
 
 
-div.column {
-    padding: 15px;
-}
-
 div.twocolumns div.column {
     width: 44.326906%;
+    padding: 15px;
 }
 
 article.quote, .guidegroup {

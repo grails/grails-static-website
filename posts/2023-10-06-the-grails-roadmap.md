@@ -1,4 +1,16 @@
-## Grails Framework Roadmap: Embracing Apache Groovy 4, Spring Boot 3, Spring Framework 6, Java 17, and Gradle 8, and Beyond!
+---
+title: Grails Framework Roadmap - Embracing Apache Groovy 4, Spring Boot 3, Spring Framework 6, Java 17, and Gradle 8, and Beyond!
+date: October 6, 2023
+description: Explore the future of web development with the Grails Framework. Discover how Grails is embracing Apache Groovy 4, Spring Boot 3, Spring Framework 6, Java 17, and Gradle 8 support to enhance your development experience. Plus, dive into bug fixes, improved documentation, and more. Join us on this exciting journey!
+author: Puneet Behl
+image: grails-blog-index-3.png
+---
+
+# [%title]
+
+[%author]
+
+[%date]
 
 ### Introduction
 

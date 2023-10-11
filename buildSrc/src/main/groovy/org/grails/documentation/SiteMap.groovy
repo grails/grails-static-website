@@ -25,6 +25,22 @@ class SiteMap {
         stableVersions(releases).reverse().drop(1).collect { it.versionText }
     }
 
+    static List<String> versionsBeforeGrails6(File releases) {
+        stableVersions(releases)
+                .findAll { version -> version.major < 6 }
+                .reverse()
+                .drop(1)
+                .collect { it.versionText }
+    }
+
+    static List<String> versionsAfterGrails6(File releases) {
+        stableVersions(releases)
+                .findAll { version -> version.major >= 6 }
+                .reverse()
+                .drop(1)
+                .collect { it.versionText }
+    }
+
     static List<SoftwareVersion> stableVersions(File releases) {
         (versions(releases).findAll { SoftwareVersion softwareVersion ->
             !softwareVersion.isSnapshot()

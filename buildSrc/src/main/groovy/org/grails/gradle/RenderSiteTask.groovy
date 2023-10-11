@@ -69,8 +69,9 @@ class RenderSiteTask extends DefaultTask {
         File o = output.get()
         File releasesFile = releases.get()
         SoftwareVersion latest = SiteMap.latestVersion(releasesFile)
-        List<String> olderVersions = SiteMap.olderVersions(releasesFile).reverse()
-        String versions = olderVersions.collect {version -> "<option>${version}</option>" }.join(' ')
+        List<String> versionsBeforeGrails6 = SiteMap.versionsBeforeGrails6(releasesFile).reverse()
+        List<String> versionsAfterGrails6 = SiteMap.versionsAfterGrails6(releasesFile).reverse()
+        String versions = versionsBeforeGrails6.collect {version -> "<option>${version}</option>" }.join(' ')
         Map<String, String> m = siteMeta(title.get(),
                 about.get(),
                 url.get(),
@@ -90,7 +91,7 @@ class RenderSiteTask extends DefaultTask {
                                         List<String> keywords,
                                         String robots,
                                         String latest,
-                                        String versions
+                                        String versionsBeforeGrails6
     ) {
         String eventsHtml = ""
         if (System.getenv("AIRTABLE_API_KEY") != null && System.getenv("AIRTABLE_BASE_ID") != null) {
@@ -110,7 +111,7 @@ class RenderSiteTask extends DefaultTask {
                 url: url,
                 latest: latest,
                 events: eventsHtml,
-                versions: versions,
+                versions: versionsBeforeGrails6,
                 keywords: keywords.join(','),
                 robots: robots,
         ] as Map<String, String>

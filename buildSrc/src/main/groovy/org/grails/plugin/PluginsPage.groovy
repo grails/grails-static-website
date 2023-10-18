@@ -56,7 +56,7 @@ class PluginsPage {
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     mkp.yieldUnescaped searchBox(null, null)
-                    mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                    //mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)

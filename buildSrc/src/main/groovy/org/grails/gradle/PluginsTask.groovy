@@ -126,7 +126,7 @@ class PluginsTask extends DefaultTask {
                     githubStars: githubStars(json[i].bintrayPackage.vcsUrl).orElse(null),
                     labels: json[i].bintrayPackage.labels as List<String>))
         }
-        plugins
+        Collections.unmodifiableList(plugins)
     }
 
     LocalDateTime parseIsoStringToDate(String isoFormattedString){

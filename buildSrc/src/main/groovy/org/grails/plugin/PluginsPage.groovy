@@ -8,6 +8,7 @@ import org.grails.guides.TagUtils
 import org.grails.tags.Tag
 import org.grails.tags.TagCloud
 import java.time.format.DateTimeFormatter
+import java.util.stream.Collector
 import java.util.stream.Collectors
 
 @CompileStatic
@@ -56,7 +57,7 @@ class PluginsPage {
             div(class: 'twocolumns') {
                 div(class: 'column') {
                     mkp.yieldUnescaped searchBox(null, null)
-                    //mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
+                    mkp.yieldUnescaped latestPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped topRatedPlugins(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByTag(siteUrl, plugins)
                     mkp.yieldUnescaped pluginsByOwner(siteUrl, plugins)
@@ -292,8 +293,10 @@ class PluginsPage {
 
     @CompileDynamic
     static String fetchLatestPlugins(String siteUrl, List<Plugin> plugins) {
-        plugins.sort(COMPARE_BY_UPDATED)
-        List<Plugin> topFive = plugins.take(5)
+        final List<Plugin> sortedPlugins = plugins.stream()
+                .sorted(COMPARE_BY_UPDATED)
+                .collect(Collectors.toList())
+        final List<Plugin> topFive = sortedPlugins.take(5)
         renderLatestPlugins(siteUrl, topFive)
     }
 

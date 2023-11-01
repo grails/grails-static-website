@@ -5,6 +5,7 @@ import groovy.transform.CompileDynamic
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
 import org.gradle.api.DefaultTask
+import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
@@ -32,6 +33,9 @@ class PluginsTask extends DefaultTask {
     final Property<String> url = project.objects.property(String)
 
     @Input
+    final ListProperty<String> keywords = project.objects.listProperty(String)
+
+    @Input
     final Property<File> document = project.objects.property(File)
 
     @TaskAction
@@ -42,10 +46,12 @@ class PluginsTask extends DefaultTask {
         Map<String, String> metadata = RenderSiteTask.siteMeta("Grails Plugins", // TODO Make it configurable
                 "List of Plugins", //TODO Make it configurable
                 url.get(),
-                [], //TODO
+                keywords.get() as List<String>,
                 "all", //TODO Make it configurable,
                 "",
                 "")
+        metadata.put("JAVASCRIPT", "/javascripts/plugins-search.js")
+
         Map<String, String> resolvedMetadata = org.grails.gradle.RenderSiteTask.processMetadata(metadata)
 
         String json = new URL(GRAILS_PLUGINS_JSON).text
@@ -53,7 +59,7 @@ class PluginsTask extends DefaultTask {
         def result = slurper.parseText(json)
 
         List<Plugin> plugins = pluginsFromJson(result)
-        renderHtml(plugins, templateText, metadata, "plugins.html")
+        renderHtml(plugins, templateText, resolvedMetadata, "plugins.html")
     }
 
     void renderHtml(List<Plugin> plugins, String templateText, Map<String, String> metadata, String fileName) {

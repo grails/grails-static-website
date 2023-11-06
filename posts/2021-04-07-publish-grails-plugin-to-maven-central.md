@@ -145,7 +145,7 @@ grailsPublish {
                          developer {
                              id = 'puneetbehl'
                              name = 'Puneet Behl'
-                             email = 'behlp@objectcomputing.com'
+                             email = 'behlp@unityfoundation.io'
                          }
                      }
                      scm {

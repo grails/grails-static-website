@@ -69,9 +69,7 @@ class RenderSiteTask extends DefaultTask {
         File o = output.get()
         File releasesFile = releases.get()
         SoftwareVersion latest = SiteMap.latestVersion(releasesFile)
-        List<String> versionsBeforeGrails6 = SiteMap.versionsBeforeGrails6(releasesFile).reverse()
-        List<String> versionsAfterGrails6 = SiteMap.versionsAfterGrails6(releasesFile).reverse()
-        String versions = versionsBeforeGrails6.collect {version -> "<option>${version}</option>" }.join(' ')
+        String versions = SiteMap.olderVersions(releasesFile).reverse().collect {version -> "<option>${version}</option>" }.join(' ')
         Map<String, String> m = siteMeta(title.get(),
                 about.get(),
                 url.get(),
@@ -112,6 +110,7 @@ class RenderSiteTask extends DefaultTask {
                 latest: latest,
                 events: eventsHtml,
                 versions: versionsBeforeGrails6,
+                versionAfterGrails6: versionsBeforeGrails6,
                 keywords: keywords.join(','),
                 robots: robots,
         ] as Map<String, String>

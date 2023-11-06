@@ -35,7 +35,9 @@ title: Download | Grails&reg; Framework
                 <h3 class='columnheader'>Older Versions</h3>
                 <p>You can download previous versions as far back as Grails 1.2.0.</p>
                 <div class='versionselector'>
-                    <select class='form-control' onchange='window.location.href=&apos;https://github.com/grails/grails-core/releases/download/v&apos;+ this.value +&apos;/grails-&apos; + this.value + &apos;.zip&apos;'>
+                    <select class='form-control'
+                            onchange="window.location.href=this.value.startsWith('6') ? 'https://github.com/grails/grails-forge/releases/download/v'+this.value+'/grails-cli-'+this.value+'.zip':
+                    'https://github.com/grails/grails-core/releases/download/v'+this.value+'/grails-'+this.value+'.zip'">
                         <option label='Select a version' disabled='disabled' selected='selected' />
                         [%versions]
                     </select>

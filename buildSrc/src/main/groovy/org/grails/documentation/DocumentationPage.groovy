@@ -77,12 +77,9 @@ class DocumentationPage {
                 html.div(class: "odd column"){
                     if (preRelease > latest) {
                         mkp.yieldUnescaped(renderDocumentation(preRelease.versionText))
-                        mkp.yieldUnescaped(renderDocumentation('snapshot'))
-
-                    } else {
-                        mkp.yieldUnescaped(renderDocumentation('snapshot'))
                     }
 
+                    mkp.yieldUnescaped(renderDocumentation('snapshot'))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Grails Profiles' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'GORM - Data Access Toolkit' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Security' }))

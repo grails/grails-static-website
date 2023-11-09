@@ -21,6 +21,8 @@ The Grails team has confirmed a security vulnerability found in the Grails Sprin
 
 The vulnerability allows an attacker access to one endpoint (i.e. the targeted endpoint) using the authorization requirements of a different endpoint (i.e. the donor endpoint). In some Grails framework applications, access to the targeted endpoint will be granted based on meeting the authorization requirements of the donor endpoint, which can result in a privilege escalation attack.
 
+**Update**: Synacktiv has made available their [security advisory (PDF)](https://www.synacktiv.com/sites/default/files/2023-03/Synacktiv-Grails-Spring-Security-CVE-2022-41923.pdf) on this vulnerability.
+
 ## Impacted Applications
 
 Grails Spring Security Core plugin versions:

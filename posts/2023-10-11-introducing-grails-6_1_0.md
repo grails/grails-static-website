@@ -35,7 +35,7 @@ In this release, we have made several changes to improve the framework's perform
 
     4. Going Further (JDK 17) - Jakarta compatible SiteMesh 3.2 is already available. Sitemesh 3 supports JDK 17, making it an easier transition to future Grails releases, such as Grails 7.0.
 
-    5. To learn more about the discussions around Grails and Sitemesh, you can read the details at [here](https://github.com/grails/grails-core/issues/13058). This discussion provides insights into the decisions and considerations made during the decoupling process.
+    5. To learn more about updates around Grails and Sitemesh, please [review the discussion](https://github.com/grails/grails-core/issues/13058). This discussion provides insights into the decisions and considerations made during the decoupling process.
 
     These changes aim to provide developers with more choices and the ability to use the Sitemesh version that best suits their application requirements.
 

@@ -58,6 +58,7 @@ class DocumentationPage {
         writer.toString()
     }
 
+
     @CompileDynamic
     static String mainContent(File releases, File modules) {
         StringWriter writer = new StringWriter()
@@ -73,26 +74,20 @@ class DocumentationPage {
         Collection<DocumentationCategory> categories = categories(modules)
         html.div(class: 'content') {
             html.div(class: "twocolumns") {
-                if (preRelease > latest) {
-                    html.div(class: "odd column") {
+                html.div(class: "odd column"){
+                    if (preRelease > latest) {
                         mkp.yieldUnescaped(renderDocumentation(preRelease.versionText))
                     }
-                } else {
-                    html.div(class: "odd column") {
-                        mkp.yieldUnescaped(renderDocumentation('snapshot'))
-                    }
+
+                    mkp.yieldUnescaped(renderDocumentation('snapshot'))
+                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Grails Profiles' }))
+                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'GORM - Data Access Toolkit' }))
+                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Security' }))
+
                 }
                 html.div(class: "column") {
                     mkp.yieldUnescaped(renderDocumentation(latest.versionText))
-                }
-            }
-            html.div(class: "twocolumns") {
-                if (preRelease > latest) {
-                    html.div(class: "odd column") {
-                        mkp.yieldUnescaped(renderDocumentation('snapshot'))
-                    }
-                }
-                html.div(class: "column") {
+
                     html.div(class: 'olderversions') {
                         h3(class: 'columnheader', style: 'margin-bottom: 10px;', 'Older Version')
                         p 'Browse previous versions\' documentation since Grails 1.2.0'
@@ -119,39 +114,17 @@ class DocumentationPage {
                             }
                         }
                     }
-                }
-            }
-            html.div(class: 'twocolumns') {
-                html.div(class: 'odd column') {
-                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Grails Profiles' }))
-                }
-                html.div(class: 'column') {
+
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Upgrade' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Testing' }))
-
-                }
-            }
-            html.div(class: 'twocolumns') {
-                html.div(class: 'odd column') {
-                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'GORM - Data Access Toolkit' }))
-                }
-                html.div(class: 'column') {
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Views' }))
-
-                }
-            }
-            html.div(class: 'twocolumns') {
-                html.div(class: 'odd column') {
-                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Security' }))
-                }
-                html.div(class: 'column') {
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Async' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Database' }))
-//                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Build Status' }))
-
                 }
+
             }
         }
+
         writer.toString()
     }
 

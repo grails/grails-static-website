@@ -1,6 +1,6 @@
 ---
 title: Introducing Grails Framework 6.1.0 Release
-date: November 10, 2023
+date: November 14, 2023
 description: It highlights the changes and improvements made in this release, provides information about bug fixes, dependency upgrades, and acknowledges the contributions of various developers.
 author: Puneet Behl
 image: grails-blog-index-3.png

@@ -116,6 +116,10 @@ ul, ol {
 	list-style: disc !important;
 }
 
+.blogpost > ol, ul ol {
+	list-style: lower-roman !important;
+}
+
 .blogpost > ol {
 	list-style: lower-roman !important;
 }

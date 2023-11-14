@@ -54,19 +54,19 @@ Before we dive further into the awesomeness of the new portal, let's address the
 
 ## All Plugins in One Place
 
-Did you know that all the plugins on the Grails Plugin Portal are sourced from [https://github.com/grails/grails-plugin-metadata/tree/grails-plugins.json](https://github.com/grails/grails-plugin-metadata/tree/grails-plugins.json)? We've streamlined the process to ensure you have access to the most up-to-date plugins directly from the source.
+Did you know that all the plugins on the Grails Plugin Portal are sourced from [https://github.com/grails/grails-plugins-metadata/tree/grails-plugins.json](https://github.com/grails/grails-plugins-metadata/tree/grails-plugins.json)? We've streamlined the process to ensure you have access to the most up-to-date plugins directly from the source.
 
 ## How to Include or Update Your Grails Plugin
 
 Excited to get your Grails plugin into the spotlight on our portal? Here's how you can include or update your Grails plugin:
 
-1. **Fork the Repository**: Start by forking the [Grails Plugin Metadata Repository](https://github.com/grails/grails-plugin-metadata).
+1. **Fork the Repository**: Start by forking the [Grails Plugin Metadata Repository](https://github.com/grails/grails-plugins-metadata).
 
 2. **Edit the JSON File**: Navigate to the `grails-plugins.json` file in your forked repository. This file contains the plugin metadata.
 
 3. **Add Your Plugin**: To include your plugin, simply add its metadata to the JSON file. Make sure to follow the established format.
 
-4. **Submit a Pull Request**: Once you've added or updated your plugin details, submit a pull request to the original [Grails Plugin Metadata Repository](https://github.com/grails/grails-plugin-metadata). Our team will review it and, upon approval, your plugin will be part of the portal!
+4. **Submit a Pull Request**: Once you've added or updated your plugin details, submit a pull request to the original [Grails Plugin Metadata Repository](https://github.com/grails/grails-plugins-metadata). Our team will review it and, upon approval, your plugin will be part of the portal!
 
 ## Get Involved and Contribute
 

@@ -108,6 +108,18 @@ ul, ol {
 	padding-left: 20px;
 }
 
+.blogpost > ul, ol {
+	padding-left: 20px !important;
+}
+
+.blogpost > ul {
+	list-style: disc !important;
+}
+
+.blogpost > ol {
+	list-style: lower-roman !important;
+}
+
 b, strong {
 	font-weight: bold;
 }

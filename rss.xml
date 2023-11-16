@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Thu, 16 Nov 2023 12:20:00 GMT</pubDate><item><title>Introducing Grails Framework 6.1.0 Release</title><link>https://grails.org/blog/2023-11-14-introducing-grails-6_1_0.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Thu, 16 Nov 2023 12:23:12 GMT</pubDate><item><title>Introducing Grails Framework 6.1.0 Release</title><link>https://grails.org/blog/2023-11-14-introducing-grails-6_1_0.html</link><description><![CDATA[</p>
 <p>The Grails Foundation is excited to announce the release of Grails Framework 6.1.0! This release comes with a host of changes, bug-fixes, and improvements that will further enhance your experience with the Grails framework . Grails continues to be a powerful and efficient framework for building web applications in Groovy, and this latest version takes it to the next level. Let's dive into what's new in Grails 6.1.0.</p>
 <h2>What's Changed</h2>
 <p>In this release, we have made several changes to improve the framework's performance and maintainability. Some of the notable changes include:</p>
@@ -149,12 +149,12 @@ grailsGradlePluginVersion=6.1.0
 </li>
 </ol>
 <h2>All Plugins in One Place</h2>
-<p>Did you know that all the plugins on the Grails Plugin Portal are sourced from <a href="https://github.com/grails/grails-plugins-metadata/tree/grails-plugins.json">https://github.com/grails/grails-plugins-metadata/tree/grails-plugins.json</a>? We've streamlined the process to ensure you have access to the most up-to-date plugins directly from the source.</p>
+<p>Did you know that all the plugins on the Grails Plugin Portal are sourced from <a href="https://github.com/grails/grails-plugin-metadata/tree/grails-plugins.json">https://github.com/grails/grails-plugin-metadata/tree/grails-plugins.json</a>? We've streamlined the process to ensure you have access to the most up-to-date plugins directly from the source.</p>
 <h2>How to Include or Update Your Grails Plugin</h2>
 <p>Excited to get your Grails plugin into the spotlight on our portal? Here's how you can include or update your Grails plugin:</p>
 <ol>
 <li>
-<p><strong>Fork the Repository</strong>: Start by forking the <a href="https://github.com/grails/grails-plugins-metadata">Grails Plugin Metadata Repository</a>.</p>
+<p><strong>Fork the Repository</strong>: Start by forking the <a href="https://github.com/grails/grails-plugin-metadata">Grails Plugin Metadata Repository</a>.</p>
 </li>
 <li>
 <p><strong>Edit the JSON File</strong>: Navigate to the <code>grails-plugins.json</code> file in your forked repository. This file contains the plugin metadata.</p>
@@ -163,7 +163,7 @@ grailsGradlePluginVersion=6.1.0
 <p><strong>Add Your Plugin</strong>: To include your plugin, simply add its metadata to the JSON file. Make sure to follow the established format.</p>
 </li>
 <li>
-<p><strong>Submit a Pull Request</strong>: Once you've added or updated your plugin details, submit a pull request to the original <a href="https://github.com/grails/grails-plugins-metadata">Grails Plugin Metadata Repository</a>. Our team will review it and, upon approval, your plugin will be part of the portal!</p>
+<p><strong>Submit a Pull Request</strong>: Once you've added or updated your plugin details, submit a pull request to the original <a href="https://github.com/grails/grails-plugin-metadata">Grails Plugin Metadata Repository</a>. Our team will review it and, upon approval, your plugin will be part of the portal!</p>
 </li>
 </ol>
 <h2>Get Involved and Contribute</h2>

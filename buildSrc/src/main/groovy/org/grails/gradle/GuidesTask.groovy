@@ -132,7 +132,7 @@ class GuidesTask extends DefaultTask {
             String slug = "${category.slug.toLowerCase()}.html"
             pageOutput = new File(categoriesDir.getAbsolutePath() + "/" + slug)
             pageOutput.createNewFile()
-            pageOutput.text = "---\ntitle: Guides at category ${category} | Grails Framework\nbody: guides\n---\n" + GuidesPage.mainContent(classLoader, guides, tags, category, null)
+            pageOutput.text = "---\ntitle: Guides at category ${category.name} | Grails Framework\nbody: guides\n---\n" + GuidesPage.mainContent(classLoader, guides, tags, category, null)
         }
     }
 }

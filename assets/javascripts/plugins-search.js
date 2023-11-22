@@ -152,8 +152,13 @@ function doesTagsMatchesQuery(tags, query) {
 
 function doesTitleMatchesQuery(title, query) {
     if (title !== undefined) {
-        if (title.toLowerCase().includes(query.toLowerCase())) {
+        title = title.toLowerCase();
+        query = query.toLowerCase();
+        if (title.includes(query)) {
             return true;
+        }
+        if (query.includes(" ")) {
+            return query.split(" ").every(term => title.includes(term));
         }
     }
 }

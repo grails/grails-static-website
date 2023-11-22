@@ -33,7 +33,7 @@ class SitemapTask extends DefaultTask {
         }
         File outputFile = new File(inputFile.absolutePath + "/" + FILE_SITEMAP)
         outputFile.createNewFile()
-        outputFile.text = sitemapContent(urls)
+        outputFile.text = sitemapContent(urls.sort())
     }
 
     @CompileDynamic

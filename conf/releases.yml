@@ -444,3 +444,6 @@ releases:
   -
     version: 6.1.0
     publicationDate: Nov 06, 2023
+  -
+    version: 5.3.4
+    publicationDate: Dec 02, 2023

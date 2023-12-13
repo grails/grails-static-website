@@ -453,3 +453,6 @@ releases:
   -
     version: 3.3.17
     publicationDate: Dec 07, 2023
+  -
+    version: 6.1.1
+    publicationDate: Dec 13, 2023

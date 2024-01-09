@@ -462,3 +462,6 @@ releases:
   -
     version: 5.3.5
     publicationDate: Dec 19, 2023
+  -
+    version: 3.3.18
+    publicationDate: Jan 09, 2024

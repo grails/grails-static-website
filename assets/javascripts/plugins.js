@@ -9,7 +9,7 @@ window.addEventListener("load", (event) => {
     pluginsDiv = document.getElementsByClassName("allplugins");
     pluginsContainer = document.querySelector("div.plugins");
     if (queryInputOffsetTop  !== null){
-        queryInputOffsetTop = document.getElementById("query").offsetTop;
+        queryInputOffsetTop = queryInputOffsetTop.offsetTop;
     }
     if (pluginsDiv.length > 0 && pluginsDiv[0].display !== "none") {
         defaultPluginList = Array.from(pluginsDiv[0].getElementsByClassName("plugin")).slice();

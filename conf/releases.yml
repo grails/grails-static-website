@@ -477,3 +477,6 @@ releases:
   -
     version: 6.1.2
     publicationDate: Jan 31, 2024
+  -
+    version: 6.2.0
+    publicationDate: Apr 05, 2024

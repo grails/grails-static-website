@@ -1,13 +1,7 @@
 modules:
-  grailsprofiles:
-    title: Grails Profiles
-    url: '[%url]/profiles.html'
-    categoryImage: '[%url]/images/profiles.svg'
-    category: Grails Profiles
-    categoryDescription: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.'
   upgrade:
     title: Upgrade Documentation
-    url: https://grails.github.io/grails-upgrade/latest/guide/index.html
+    url: https://docs.grails.org/latest/guide/upgrading.html
     categoryImage: '[%url]/images/upgrade.svg'
     category: Upgrade
     categoryDescription: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.'

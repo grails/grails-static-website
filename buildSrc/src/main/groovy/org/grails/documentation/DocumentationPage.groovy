@@ -80,7 +80,6 @@ class DocumentationPage {
                     }
 
                     mkp.yieldUnescaped(renderDocumentation('snapshot'))
-                    mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Grails Profiles' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'GORM - Data Access Toolkit' }))
                     mkp.yieldUnescaped(renderCategory(categories.find { it.title == 'Security' }))
 

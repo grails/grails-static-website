@@ -4,7 +4,7 @@ modules:
     url: https://docs.grails.org/latest/guide/upgrading.html
     categoryImage: '[%url]/images/upgrade.svg'
     category: Upgrade
-    categoryDescription: 'Grails Profiles encapsulate  project commands, templates, and plugins. They facilitate the construction of REST APIs, web applications with a JavaScript frontend, and more.'
+    categoryDescription: Upgrade guides for the latest version of Grails
   async:
     title: Async Grails
     url: https://async.grails.org/latest/guide/index.html

@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 07 Jun 2024 18:03:56 GMT</pubDate><item><title>CVE-2023-46131: Data Binding Denial of Service Vulnerability</title><link>https://grails.org/blog/2023-12-20-cve-data-binding-dos.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 07 Jun 2024 18:42:27 GMT</pubDate><item><title>Grails Future Planning</title><link>https://grails.org/blog/2024-06-07-grails-future.html</link><description><![CDATA[</p>
+<p><strong>Grails Community Steering Committee is working on plans for the future of Grails.</strong></p>
+<p>The Grails Foundation would like to follow up on the
+<a href="https://objectcomputing.com/resources/news/2024/05/10/open-letter-our-open-source-communities">Open Letter To Our
+Community</a> that was recently published by Object Computing, Inc. (OCI).<br />
+We have assembled a Grails Community Steering Committee with the goal of
+helping define the path forward for the Grails framework. One of the first
+priorities of the group is to define the scope for a meaningful and valuable
+Grails 7, which can be created and supported responsibly. Achieving that will
+require contributions from a combination of passionate community members and
+organizations who care about being involved in the future of the technology.</p>
+<p>Our experience has shown that increased transparency regarding challenges and
+opportunities is crucial for the Framework's continued development. We're
+committed to improving communication in this area.</p>
+<p>The Grails Steering Committee’s current focus is on three key goals:</p>
+<ol>
+<li>Defining an MVP (Minimum Viable Product) for Grails 7.</li>
+<li>Outlining Community Contribution Opportunities: We'll clearly define how individuals and organizations can contribute to the MVP's development.</li>
+<li>Highlighting Contribution Methods: We recognize that contributions come in various forms. Some organizations may prefer dedicating engineering resources, while others might choose to provide financial support for a core development team.</li>
+</ol>
+<p>Previously, these contribution avenues have existed but lacked clear
+communication. We're committed to making them more visible and accessible.</p>
+<p>The work we are doing right now will enable our community to have a greater
+impact on the future of the Grails framework. The feedback we get in the coming
+weeks will be enlightening. We must understand what is important from the
+community’s perspective, and for us to envision the possible paths to accomplish
+desired outcomes. OCI is committed to stewarding the framework forward including
+helping the technology and the community find a public place for the community to
+rally around the technology.</p>
+<p>Creating and maintaining these free and open solutions is a significant commitment
+and it will take a positively energized community to help us carry things forward.
+Every single message we have received and every single conversation we have been
+involved in in recent weeks has been helpful, appreciated, and respectful. This
+community is remarkable and your input is sincerely appreciated.</p>
+<p>We will continue to communicate more information here in the coming weeks. Always
+feel welcome to reach out to us at <a href="mailto:info@grails.org">info@grails.org</a> if you have any questions,
+concerns, or would like to engage in ways that you are currently not.  Together
+we are all defining the way forward and your help is appreciated.</p>]]></description><author>Jeff Brown</author><guid>2024-06-07-grails-future</guid><pubDate>Fri, 07 Jun 2024 00:00:00 GMT</pubDate></item><item><title>CVE-2023-46131: Data Binding Denial of Service Vulnerability</title><link>https://grails.org/blog/2023-12-20-cve-data-binding-dos.html</link><description><![CDATA[</p>
 <p><strong>A vulnerability in grails-core data binding can leave your application open to a denial-of-service attack.</strong></p>
 <h2>Overview</h2>
 <p>The Grails® framework engineering team has confirmed a security vulnerability in the grails-databinding module, discovered by Wenbo Shen, Rui Chang, crane from Zhejiang University, and two other researchers from Antgroup FG Security Lab. This vulnerability is assigned the identifier <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-46131">CVE-2023-46131</a>.</p>

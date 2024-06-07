@@ -1,7 +1,7 @@
 ---
 title: Grails Future Planning
 date: June 7, 2024
-description: Grails Community Steering Committee is working on plans for the future of Grails.
+description: Grails Community Steering Committee is working on plans for the future of the Grails framework.
 author: Jeff Brown
 image: grails-blog-index-5.png
 ---

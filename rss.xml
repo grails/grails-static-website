@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 25 Jun 2024 12:04:14 GMT</pubDate><item><title>Grails Future Planning</title><link>https://grails.org/blog/2024-06-07-grails-future.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 25 Jun 2024 13:21:35 GMT</pubDate><item><title>Grails Future Planning</title><link>https://grails.org/blog/2024-06-25-grails-seven-mvp.html</link><description><![CDATA[</p>
+<p><strong>MVP (Minimum Viable Product) for Grails 7.</strong></p>
+<p>The Grails Community Steering Committee has begun discussions on the MVP (Minimum Viable Product)
+for Grails 7. To assist in these discussions, the Grails Foundation has enabled
+[https://github.com/orgs/grails/discussions](GitHub Discussions) on the grails-core project. We now
+need the community’s feedback!</p>
+<p>Please vote on the various posted polls and respond to the existing discussions to help with decisions
+on priorities for the Grails 7 MVP.</p>
+<p>Thank you for all of your input!</p>]]></description><author>Jeff Brown</author><guid>2024-06-25-grails-seven-mvp</guid><pubDate>Tue, 25 Jun 2024 00:00:00 GMT</pubDate></item><item><title>Grails Future Planning</title><link>https://grails.org/blog/2024-06-07-grails-future.html</link><description><![CDATA[</p>
 <p><strong>Grails Community Steering Committee is working on plans for the future of the Grails framework.</strong></p>
 <p>The Grails Foundation would like to follow up on the
 <a href="https://objectcomputing.com/resources/news/2024/05/10/open-letter-our-open-source-communities">Open Letter To Our

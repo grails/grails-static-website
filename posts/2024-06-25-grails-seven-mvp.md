@@ -1,5 +1,5 @@
 ---
-title: Grails Future Planning
+title: Grails 7 MVP
 date: June 25, 2024
 description: MVP (Minimum Viable Product) for Grails 7.
 author: Jeff Brown

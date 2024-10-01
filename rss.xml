@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 01 Oct 2024 18:04:19 GMT</pubDate><item><title>Grails 7 MVP</title><link>https://grails.org/blog/2024-06-25-grails-seven-mvp.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Tue, 01 Oct 2024 19:16:30 GMT</pubDate><item><title>Grails Community Contributions</title><link>https://grails.org/blog/2024-10-01-grails-community-contributions.html</link><description><![CDATA[</p>
+<p><strong>Grails Community Contributions</strong></p>
+<p>As a follow-up to our <a href="http://localhost:8080/blog/2024-06-07-grails-future.html">blog post</a> a few months ago, we have worked with the community to assemble a Grails Community Steering Committee and enabled <a href="https://github.com/orgs/grails/discussions">GitHub Discussions</a> in the grails GitHub org to solicit feedback on a number of topics.
+The goal of this was to help design a path forward for the Grails framework. One of the first priorities was to define
+the scope for a meaningful and valuable Grails 7. This effort required significant contributions from a combination of
+passionate community members and organizations who care about being involved in the future of the technology. We are
+pleased with the progress the Steering Committee has made so far as efforts continue to be made towards the Grails
+framework 7 MVP.</p>
+<p>When the committee was initially put together, we did not reach out to individuals, but instead let members of the
+community volunteer their time and efforts as they felt they could help. We want to continue to create awareness and
+encourage community participation. Please join us <a href="https://slack.grails.org/">here</a> in our Grails Community Slack to get involved. Additionally,
+there is a 60-minute online meeting each Thursday at 10:00am US Central during which the team will be discussing
+priorities for the technology and helping to manage governance of the Framework.</p>
+<p>We want to thank you in advance for your continued support of the Grails framework and our amazing community.</p>]]></description><author>James Fredley</author><guid>2024-10-01-grails-community-contributions</guid><pubDate>Tue, 01 Oct 2024 00:00:00 GMT</pubDate></item><item><title>Grails 7 MVP</title><link>https://grails.org/blog/2024-06-25-grails-seven-mvp.html</link><description><![CDATA[</p>
 <p><strong>MVP (Minimum Viable Product) for Grails 7.</strong></p>
 <p>The Grails Community Steering Committee has begun discussions on the MVP (Minimum Viable Product)
 for Grails 7. To assist in these discussions, the Grails Foundation has enabled

@@ -14,8 +14,7 @@ image: grails-blog-index-5.png
 
 **[%description]**
 
-As a follow-up to our blog post a few months ago, we have worked with the community to assemble a Grails Community
-Steering Committee and enabled GitHub Discussions on the grails-core project to solicit feedback on a number of topics.
+As a follow-up to our [blog post](http://localhost:8080/blog/2024-06-07-grails-future.html) a few months ago, we have worked with the community to assemble a Grails Community Steering Committee and enabled [GitHub Discussions](https://github.com/orgs/grails/discussions) in the grails GitHub org to solicit feedback on a number of topics.
 The goal of this was to help design a path forward for the Grails framework. One of the first priorities was to define
 the scope for a meaningful and valuable Grails 7. This effort required significant contributions from a combination of
 passionate community members and organizations who care about being involved in the future of the technology. We are

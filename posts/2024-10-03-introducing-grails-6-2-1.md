@@ -25,6 +25,7 @@ The 6.2.1 release, while being a patch release, brings back the Grails Shell, Pr
       * execution of custom company/internal Grails scripts
       * continued use of custom company/internal profiles
     * Grails Wrapper is now an optional feature from Grails Forge via the Grails distribution or [https://start.grails.org/](https://start.grails.org/])
+      * you can now run **./grailsw update-wrapper** to get the latest grails wrapper version based on the Grails version
 
 ## Bug Fixes and Improvements
 
@@ -48,18 +49,18 @@ Keeping up with the latest dependencies is crucial for the health of any framewo
 * `org.grails.plugins:fields` to version 5.1.0
 * `org.grails.plugins:scaffolding` to version 5.1.2
 * `org.grails:grails-shell` to version 6.2.1
-* `org.grails:grails-wrapper` to version 4.0.0
+* `org.grails:grails6-wrapper` to version 4.0.1
 * `org.grails.plugins:gsp` to version 6.2.2
-* `org.grails.profiles:base` to version 6.0.0
-* `org.grails.profiles:web` to version 6.0.0
-* `org.grails.profiles:profile` to version 6.0.0
-* `org.grails.profiles:plugin` to version 6.0.0
-* `org.grails.profiles:web-plugin` to version 6.0.0
-* `org.grails.profiles:rest-api` to version 6.0.0
-* `org.grails.profiles:rest-api-plugin` to version 6.0.0
-* `org.grails.profiles:react` to version 6.0.0
-* `org.grails.profiles:vue` to version 6.0.0
-* `org.grails.profiles:angular` to version 9.0.0
+* `org.grails.profiles:base` to version 6.0.1
+* `org.grails.profiles:web` to version 6.0.1
+* `org.grails.profiles:profile` to version 6.0.1
+* `org.grails.profiles:plugin` to version 6.0.1
+* `org.grails.profiles:web-plugin` to version 6.0.1
+* `org.grails.profiles:rest-api` to version 6.0.1
+* `org.grails.profiles:rest-api-plugin` to version 6.0.1
+* `org.grails.profiles:react` to version 6.0.1
+* `org.grails.profiles:vue` to version 6.0.1
+* `org.grails.profiles:angular` to version 9.0.1
 * And many more transitive dependencies.
 
 These upgrades ensure that Grails 6.2.1 remains compatible with the latest libraries and tools, providing developers with a robust and reliable environment. We recommend checking out the [GitHub release page](https://github.com/grails/grails-core/releases/tag/v6.2.1) for more information.

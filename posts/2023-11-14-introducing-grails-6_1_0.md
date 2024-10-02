@@ -95,7 +95,7 @@ You can get started with Grails 6.1.0 today by visiting our [official website](h
 
 If you already have a Grails application and want to upgrade to the latest version, follow these steps:
 
-1. Open the project in your favorite IDE (preferably JetBrain's IntelliJ IDEA).
+1. Open the project in your favorite IDE (preferably JetBrains' IntelliJ IDEA).
 2. Update your application's `gradle.propreties` file to specify Grails 6.1.0 as the desired version.
 
     ````properties

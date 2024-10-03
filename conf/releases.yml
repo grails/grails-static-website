@@ -483,3 +483,6 @@ releases:
   -
     version: 6.2.0
     publicationDate: Apr 05, 2024
+  -
+    version: 6.2.1
+    publicationDate: Oct 03, 2024

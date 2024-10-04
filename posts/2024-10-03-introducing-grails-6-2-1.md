@@ -126,7 +126,6 @@ We would like to extend our heartfelt thanks to all the contributors who made Gr
 * [Puneet Behl](https://github.com/puneetbehl)
 * [Søren Berg Glasius](https://github.com/sbglasius)
 * [David Estes](https://github.com/davydotcom)
-* [Jeff Scott Brown](https://github.com/osscontributor)
 * [Paul King](https://github.com/paulk-asert)
 
 Their dedication and hard work have significantly contributed to the success of Grails 6.2.1.

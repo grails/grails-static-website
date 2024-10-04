@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Introducing Grails Framework 6.1.0 Release</title>
+    <title>Introducing Grails Framework 6.2.1 Release</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
     <meta name="description" content="It highlights the changes and improvements made in this release, provides information about bug fixes, dependency upgrades, and acknowledges the contributions of various developers." />
-    <meta name="date" content="November 14, 2023" />
+    <meta name="date" content="October 3, 2024" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
@@ -17,7 +17,7 @@
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='Introducing Grails Framework 6.1.0 Release'/>
+    <meta property='og:title' content='Introducing Grails Framework 6.2.1 Release'/>
     <meta property='og:description' content='It highlights the changes and improvements made in this release, provides information about bug fixes, dependency upgrades, and acknowledges the contributions of various developers.'/>
     <meta property='og:type' content='website'/>
 
@@ -66,83 +66,75 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>Introducing Grails Framework 6.1.0 Release</h1>
-<p><span class="author">By Puneet Behl</span></p>
-<p><span class="date">November 14, 2023</span></p>
-<p>The Grails Foundation is excited to announce the release of Grails Framework 6.1.0! This release comes with a host of changes, bug-fixes, and improvements that will further enhance your experience with the Grails framework . Grails continues to be a powerful and efficient framework for building web applications in Groovy, and this latest version takes it to the next level. Let's dive into what's new in Grails 6.1.0.</p>
+  <div class='light padded blogpost'><h1>Introducing Grails Framework 6.2.1 Release</h1>
+<p><span class="author">By James Fredley</span></p>
+<p><span class="date">October 3, 2024</span></p>
+<p>The Grails Foundation is excited to announce the release of Grails framework 6.2.1. This latest version delivers critical bug fixes and reintroduces key features based on community feedback.</p>
 <h2>What's Changed</h2>
-<p>In this release, we have made several changes to improve the framework's performance and maintainability. Some of the notable changes include:</p>
+<p>The 6.2.1 release, while being a patch release, brings back the Grails Shell, Profiles and Wrapper (as an optional feature) and addresses some bugs.</p>
 <ul>
-<li>
-<p><strong>Update to SnakeYaml 2.2</strong>: This update fixes the <a href="https://www.cve.org/CVERecord?id=CVE-2022-1471">CVE-2022-1471</a> reported in December of last year. This unsafe deserialization problem could easily lead to arbitrary code execution under the right circumstances. For more details on this vulnerability, you can read about it on <a href="https://snyk.io/blog/snakeyaml-unsafe-deserialization-vulnerability/">Snyk's blog</a>.</p>
+<li><strong>Grails Shell, Profiles and Wrapper</strong>:
+<ul>
+<li>Reintroduces the Grails Shell and Profiles in response to community feedback, addressing a key feature loss identified by users including:
+<ul>
+<li>enables the IntelliJ Grails Plugin to load in IntelliJ</li>
+<li>execution of Grails scripts that have not been migrated to Gradle such as <strong>grails list-plugins</strong> and <strong>grails dbm-update</strong></li>
+<li>execution of custom company/internal Grails scripts</li>
+<li>continued use of custom company/internal profiles</li>
+</ul>
 </li>
-<li>
-<p><strong>Decoupling the Sitemesh Plugin</strong>: We have introduced significant changes to decouple the Sitemesh plugin for more flexibility. Here are the details:</p>
-<ol>
-<li>
-<p>Created a new <code>org.grails.plugins:sitemesh2</code> and moved Sitemesh specific tag libraries that require the Sitemesh2 dependency into a separate Sitemesh2 specific plugin. This plugin can now be optionally used, providing more flexibility in choosing Sitemesh versions.</p>
-</li>
-<li>
-<p>Introducing the <a href="https://github.com/codeconsole/grails-sitemesh3">Sitemesh3 Grails Plugin</a>, a new plugin that can be independently used with Grails 6. This plugin offers compatibility with the latest Sitemesh version, allowing developers to leverage the benefits of Sitemesh3 in their Grails applications.</p>
-</li>
-<li>
-<p>To migrate from Sitemesh 2 to Sitemesh 3, not only completely decouples Sitemesh from GSP, but it also introduces a powerful new feature that GSP has been lacking: Decorator Chaining. With SiteMesh 3, you can apply multiple decorators to a view. For instance, something like this:</p>
-<pre><code class="language-html">&lt;meta name=&quot;layout&quot; content=&quot;my-decorator,my-other-decorator&quot; /&gt;
-</code></pre>
-<p>This enhancement provides more flexibility in structuring views and layouts, making it easier to create complex and dynamic page layouts.</p>
-</li>
-<li>
-<p>Going Further (JDK 17) - Jakarta compatible SiteMesh 3.2 is already available. Sitemesh 3 supports JDK 17, making it an easier transition to future Grails releases, such as Grails 7.0.</p>
-</li>
-<li>
-<p>To learn more about updates around Grails and Sitemesh, please <a href="https://github.com/grails/grails-core/issues/13058">review the discussion</a>. This discussion provides insights into the decisions and considerations made during the decoupling process.</p>
-</li>
-</ol>
-<p>These changes aim to provide developers with more choices and the ability to use the Sitemesh version that best suits their application requirements.</p>
-</li>
-<li>
-<p>Updated Micronaut Groovy to version 3.4.0 for better compatibility.</p>
-</li>
-<li>
-<p>Escaped Javadoc special characters for improved documentation.</p>
-</li>
-<li>
-<p>Update Spring Core to 5.3.30, and Spring Boot 2.7.16.</p>
-</li>
-<li>
-<p>Updated various dependencies and plugins to their latest versions.</p>
+<li>Grails Wrapper is now an optional feature from Grails Forge via the Grails distribution or <a href="https://start.grails.org/]">https://start.grails.org/</a>
+<ul>
+<li>you can now run <strong>./grailsw update-wrapper</strong> to get the latest grails wrapper version based on the Grails version</li>
+</ul>
 </li>
 </ul>
-<p>These changes will not only make Grails more efficient but also ensure that it remains current and compatible with the latest technologies.</p>
+</li>
+</ul>
 <h2>Bug Fixes and Improvements</h2>
-<p>Grails 6.1.0 also addresses several bug fixes and improvements, including:</p>
+<p>Grails 6.2.1 also addresses several bug fixes and improvements, including:</p>
 <ul>
-<li>An update to GSP version 6.1.0.</li>
-<li>An update to the grails-testing-support monorepo to version 3.1.0.</li>
+<li>Fixes a lack of a “controller” attribute in GSP tags with a “resource” attribute</li>
+<li>Fixes a bug in LinkGenerator when domain classes have a static id mapping to another property, that is not “id”</li>
+<li>Fixes a problem finding the main class when running CLI commands</li>
+<li>Fixes an edge cases that causes a cast class exception when the same variable name is used as arguments to multiple actions</li>
 </ul>
 <p>These updates will enhance the stability and reliability of the framework.</p>
 <h2>Dependency Upgrades</h2>
 <p>Keeping up with the latest dependencies is crucial for the health of any framework. In this release, we have upgraded various dependencies to their latest versions, including but not limited to the following:</p>
 <ul>
-<li><code>commons-io:commons-io</code> to version 2.15.0.</li>
-<li><code>org.jsoup:jsoup</code> to version 1.16.2.</li>
-<li><code>org.grails:grails-datastore-gorm-hibernate5</code> to 8.0.1.</li>
-<li><code>Micronaut</code> to version 3.10.2.</li>
-<li><code>Gradle</code> to version 7.6.3.</li>
-<li><code>Apache Tomcat</code> to 9.0.81.</li>
-<li><code>JUnit Jupiter</code> to 5.10.0, and <code>JUnit Platform</code> to 1.10.0.</li>
-<li>And many more.</li>
+<li><code>com.github.javaparser:javaparser-core</code> to version 3.25.10</li>
+<li><code>ch.qos.logback:logback-classic</code> to version 1.2.13</li>
+<li><code>org.springframework:spring-core</code> to version 5.3.39</li>
+<li><code>org.grails:grails-testing-support</code> to version 3.2.2</li>
+<li><code>org.apache.tomcat:tomcat-jdbc</code> to version 9.0.95</li>
+<li><code>org.grails.plugins:fields</code> to version 5.1.0</li>
+<li><code>org.grails.plugins:scaffolding</code> to version 5.1.2</li>
+<li><code>org.grails:grails-shell</code> to version 6.2.1</li>
+<li><code>org.grails:grails6-wrapper</code> to version 4.0.1</li>
+<li><code>org.grails.plugins:gsp</code> to version 6.2.2</li>
+<li><code>org.grails.profiles:base</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:web</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:profile</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:plugin</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:web-plugin</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:rest-api</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:rest-api-plugin</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:react</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:vue</code> to version 6.0.1</li>
+<li><code>org.grails.profiles:angular</code> to version 9.0.1</li>
+<li>And many more transitive dependencies.</li>
 </ul>
-<p>These upgrades ensure that Grails 6.1.0 remains compatible with the latest libraries and tools, providing developers with a robust and reliable environment. We recommend checking out the <a href="https://github.com/grails/grails-core/releases/tag/v6.1.0">GitHub release page</a> for more information.</p>
-<h2>Installing Grails 6.1.0</h2>
-<p>You can get started with Grails 6.1.0 today by visiting our <a href="https://start.grails.org/">official website</a>. Alternatively, you can quickly install Grails 6.1.0 using the <a href="https://sdkman.io/">SDKMan</a>.</p>
+<p>These upgrades ensure that Grails 6.2.1 remains compatible with the latest libraries and tools, providing developers with a robust and reliable environment. We recommend checking out the <a href="https://github.com/grails/grails-core/releases/tag/v6.2.1">GitHub release page</a> for more information.</p>
+<h2>Installing Grails 6.2.1</h2>
+<p>You can get started with Grails 6.2.1 today by visiting our <a href="https://start.grails.org/">official website</a>. Alternatively, you can quickly install Grails 6.2.1 using the <a href="https://sdkman.io/">SDKMan</a>.</p>
 <ol>
 <li>
 <p>If you don't have SDKMan installed, follow the instructions at <a href="https://sdkman.io/install/">SDKMan Installation Guide</a> to set it up.</p>
 </li>
 <li>
-<p>Once SDKMan is installed, open your terminal and run the following command to install Grails 6.1.0:</p>
-<pre><code class="language-shell">sdk install grails 6.1.0
+<p>Once SDKMan is installed, open your terminal and run the following command to install Grails 6.2.1:</p>
+<pre><code class="language-shell">sdk install grails 6.2.1
 </code></pre>
 </li>
 <li>
@@ -151,55 +143,50 @@
 </code></pre>
 </li>
 </ol>
-<h2>Upgrading Your Existing Applications to Grails 6.1.0</h2>
+<h2>Upgrading Your Existing Applications to Grails 6.2.1</h2>
 <p>If you already have a Grails application and want to upgrade to the latest version, follow these steps:</p>
 <ol>
 <li>
 <p>Open the project in your favorite IDE (preferably JetBrains' IntelliJ IDEA).</p>
 </li>
 <li>
-<p>Update your application's <code>gradle.propreties</code> file to specify Grails 6.1.0 as the desired version.</p>
-<pre><code class="language-properties">grailsVersion=6.1.0
-grailsGradlePluginVersion=6.1.0
+<p>Update your application's <code>gradle.propreties</code> file to specify Grails 6.2.1 as the desired version.</p>
+<pre><code class="language-properties">grailsVersion=6.2.1
+grailsGradlePluginVersion=6.2.1
 </code></pre>
 </li>
 <li>
 <p>Make any necessary adjustments to your application code, configuration, and dependencies to ensure compatibility with the new version.</p>
 </li>
 </ol>
-<p>Normally, Grails Core dependencies are automatically updated using the Grails Bill of Materials (BOM). However, if you have specific versions defined in your build configuration, you may need to manually update them to align with Grails 6.1.0.</p>
-<p>By following these steps, you can smoothly transition your existing Grails application to the exciting Grails 6.1.0.</p>
+<p>Normally, Grails Core dependencies are automatically updated using the Grails Bill of Materials (BOM). However, if you have specific versions defined in your build configuration, you may need to manually update them to align with Grails 6.2.1.</p>
+<p>By following these steps, you can smoothly transition your existing Grails application to the exciting Grails 6.2.1.</p>
 <h3>Exploring Alternative Approaches</h3>
-<p>If manual dependency updates seem daunting or you want a more streamlined approach, consider the following alternatives:</p>
+<p>If manual dependency updates seem daunting, or you want a more streamlined approach, consider the following alternatives:</p>
 <h4>1. Use Grails Forge Website</h4>
-<p>Visit <a href="https://start.grails.org">https://start.grails.org</a> and generate a new Grails application with Grails 6.1.0. Compare the versions in the newly generated application with your existing one to identify any discrepancies. This can serve as a reference point for your update.</p>
+<p>Visit <a href="https://start.grails.org">https://start.grails.org</a> and generate a new Grails application with Grails 6.2.1. Compare the versions in the newly generated application with your existing one to identify any discrepancies. This can serve as a reference point for your update.</p>
 <h4>2. Automated Dependency Update Bots</h4>
 <p>Configure automated dependency update bots like <a href="https://docs.renovatebot.com/">Renovate</a> or <a href="https://dependabot.com/">Dependabot</a> with your source control platform (e.g., GitHub). These bots can automatically detect and update outdated dependencies in your project, including Grails dependencies, saving you time and effort in manual updates.</p>
-<p>With these steps and alternative approaches, you should be well on your way to enjoying the exciting features and improvements in Grails 6.1.0. Happy coding!</p>
+<p>With these steps and alternative approaches, you should be well on your way to enjoying the exciting features and improvements in Grails 6.2.1. Happy coding!</p>
 <h2>Contributors</h2>
-<p>We would like to extend our heartfelt thanks to all the contributors who made Grails 6.1.0 possible. Special thanks to:</p>
+<p>We would like to extend our heartfelt thanks to all the contributors who made Grails 6.2.1 possible. Special thanks to:</p>
 <ul>
 <li><a href="https://github.com/codeconsole">Scott Murphy</a></li>
-<li><a href="https://github.com/guillermocalvo">Guillermo Calvo</a></li>
-<li><a href="https://github.com/puneetbehl">Puneet Behl</a></li>
-<li><a href="https://github.com/weiqigao">Weiqi Gao</a></li>
-<li><a href="https://github.com/mattmoss">Matthew Moss</a></li>
-<li><a href="https://github.com/Emrichardsone">Emma Richardson</a></li>
 <li><a href="https://github.com/matrei">Mattias Reichel</a></li>
+<li><a href="https://github.com/jamesfredley">James Fredley</a></li>
+<li><a href="https://github.com/puneetbehl">Puneet Behl</a></li>
+<li><a href="https://github.com/sbglasius">Søren Berg Glasius</a></li>
+<li><a href="https://github.com/davydotcom">David Estes</a></li>
+<li><a href="https://github.com/osscontributor">Jeff Scott Brown</a></li>
+<li><a href="https://github.com/paulk-asert">Paul King</a></li>
 </ul>
-<p>Their dedication and hard work have significantly contributed to the success of Grails 6.1.0.</p>
-<p>With all these exciting changes and improvements, Grails 6.1.0 is set to offer an even better experience for developers working on web applications. Whether you're an experienced Grails developer or just getting started, this release has something for everyone.</p>
+<p>Their dedication and hard work have significantly contributed to the success of Grails 6.2.1.</p>
+<p>With all these exciting changes and improvements, Grails 6.2.1 is set to offer an even better experience for developers working on web applications. Whether you're an experienced Grails developer or just getting started, this release has something for everyone.</p>
 <p>Join the <a href="https://grails.slack.com">Grails Slack community</a>, share your feedback, and contribute to making Grails framework even better in the future. Happy coding!</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
-  <a href='https://grails.org/blog/2024-10-03-introducing-grails-6-2-1.html'>
-    <h3>October 3, 2024</h3>
-    <h2>Introducing Grails Framework 6.2.1 Release</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
   <a href='https://grails.org/blog/2024-10-01-grails-community-contributions.html'>
     <h3>October 1, 2024</h3>
@@ -210,6 +197,12 @@ grailsGradlePluginVersion=6.1.0
   <a href='https://grails.org/blog/2024-06-25-grails-seven-mvp.html'>
     <h3>June 25, 2024</h3>
     <h2>Grails 7 MVP</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-5.png)'>
+  <a href='https://grails.org/blog/2024-06-07-grails-future.html'>
+    <h3>June 7, 2024</h3>
+    <h2>Grails Future Planning</h2>
   </a>
 </article></div>
     </div>

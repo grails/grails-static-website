@@ -34,6 +34,7 @@ Grails 6.2.1 also addresses several bug fixes and improvements, including:
 * Fixes a lack of a “controller” attribute in GSP tags with a “resource” attribute
 * Fixes a bug in LinkGenerator when domain classes have a static id mapping to another property, that is not “id”
 * Fixes a problem finding the main class when running CLI commands
+* Fixes an edge cases that causes a cast class exception when the same variable name is used as arguments to multiple actions
 
 These updates will enhance the stability and reliability of the framework.
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 04 Oct 2024 02:26:31 GMT</pubDate><item><title>Introducing Grails Framework 6.2.1 Release</title><link>https://grails.org/blog/2024-10-03-introducing-grails-6-2-1.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 04 Oct 2024 03:57:04 GMT</pubDate><item><title>Introducing Grails Framework 6.2.1 Release</title><link>https://grails.org/blog/2024-10-03-introducing-grails-6-2-1.html</link><description><![CDATA[</p>
 <p>The Grails Foundation is excited to announce the release of Grails framework 6.2.1. This latest version delivers critical bug fixes and reintroduces key features based on community feedback.</p>
 <h2>What's Changed</h2>
 <p>The 6.2.1 release, while being a patch release, brings back the Grails Shell, Profiles and Wrapper (as an optional feature) and addresses some bugs.</p>
@@ -13,7 +13,7 @@
 <li>continued use of custom company/internal profiles</li>
 </ul>
 </li>
-<li>Grails Wrapper is now an optional feature from Grails Forge via the Grails distribution or <a href="https://start.grails.org/]">https://start.grails.org/</a>
+<li>Grails Wrapper is now an optional feature from Grails Forge via the Grails distribution or <a href="https://start.grails.org/">https://start.grails.org/</a>
 <ul>
 <li>you can now run <strong>./grailsw update-wrapper</strong> to get the latest grails wrapper version based on the Grails version</li>
 </ul>

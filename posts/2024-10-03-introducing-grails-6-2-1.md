@@ -24,7 +24,7 @@ The 6.2.1 release, while being a patch release, brings back the Grails Shell, Pr
       * execution of Grails scripts that have not been migrated to Gradle such as **grails list-plugins** and **grails dbm-update**
       * execution of custom company/internal Grails scripts
       * continued use of custom company/internal profiles
-    * Grails Wrapper is now an optional feature from Grails Forge via the Grails distribution or [https://start.grails.org/](https://start.grails.org/])
+    * Grails Wrapper is now an optional feature from Grails Forge via the Grails distribution or [https://start.grails.org/](https://start.grails.org/)
       * you can now run **./grailsw update-wrapper** to get the latest grails wrapper version based on the Grails version
 
 ## Bug Fixes and Improvements

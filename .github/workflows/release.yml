@@ -9,14 +9,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      GIT_USER_NAME: puneetbehl
-      GIT_USER_EMAIL: behlp@unityfoundation.io
+      GIT_USER_NAME: grails-build
+      GIT_USER_EMAIL: grails-build@users.noreply.github.com
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: gradle/wrapper-validation-action@v1
       - name: Run Release Script
         run: ./release.sh ${{ github.event.inputs.grails_version }}
       - name: Commit Release

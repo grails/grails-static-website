@@ -12,7 +12,7 @@ image: grails-blog-index-3.png
 
 [%date]
 
-The Grails Foundation is excited to announce the release of Grails framework 6.2.2. This latest version delivers critical bug fixes and reintroduces key features based on community feedback.
+The Grails Foundation is excited to announce the release of Grails framework 6.2.2. This latest version delivers bug fixes and reintroduces key features based on community feedback.
 
 ## What's Changed
 
@@ -92,7 +92,7 @@ If you already have a Grails application and want to upgrade to the latest versi
 
     ````properties
     grailsVersion=6.2.2
-    grailsGradlePluginVersion=6.2.2
+    grailsGradlePluginVersion=6.2.3
     ````
 
 3. Make any necessary adjustments to your application code, configuration, and dependencies to ensure compatibility with the new version.

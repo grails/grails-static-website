@@ -122,10 +122,10 @@ We would like to extend our heartfelt thanks to all the contributors who made Gr
 * [Scott Murphy](https://github.com/codeconsole)
 * [Mattias Reichel](https://github.com/matrei)
 * [James Fredley](https://github.com/jamesfredley)
-* [Puneet Behl](https://github.com/puneetbehl)
 * [Søren Berg Glasius](https://github.com/sbglasius)
 * [David Estes](https://github.com/davydotcom)
-* [Paul King](https://github.com/paulk-asert)
+* [Guillermo Calvo](https://github.com/guillermocalvo)
+* [James Daugherty](https://github.com/jdaugherty)
 
 Their dedication and hard work have significantly contributed to the success of Grails 6.2.2.
 

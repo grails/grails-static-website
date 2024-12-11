@@ -34,7 +34,7 @@ questions:
   -
     slug: 'question_slack_vs_stackoverflow'
     title: 'What is the difference between Slack and interaction on Stack Overflow?'
-    answer: 'Use the [Grails Community Slack](https://slack.grails.org) for discussion around the framework''s development. For questions we recommend [Stack Overflow](https://stackoverflow.com/questions/tagged/grails)'
+    answer: 'Use the [Grails Community Slack](https://slack.grails.org) for discussion around the framework''s development. For questions we recommend [Stack Overflow](https://stackoverflow.com/questions/tagged/grails). Long lived discussions will occur on GitHub.'
   -
     slug: 'question_issue'
     title: 'How do I report an issue with the Grails framework?'

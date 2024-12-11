@@ -24,17 +24,9 @@ questions:
     title: 'Where can I find Grails on social media?'
     answer: 'You can find Grails on [Twitter](https://twitter.com/grailsframework) and [LinkedIn](https://www.linkedin.com/groups/39757).'
   -
-    slug: 'question_mailinglist'
-    title: 'Do you have a mailing list?'
-    answer: 'Yes. Subscribe to our Google Group [here](https://groups.google.com/forum/#!forum/grails-dev-discuss).'
-  -
     slug: 'question_feature'
     title: 'Where can I suggest a new feature or share an interesting finding?'
-    answer: 'The [Grails mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) is a great place to start a conversation with the Grails developers and other Grails users.'
-  -
-    slug: 'question_mailinglist_vs_stackoverflow'
-    title: 'What is the difference between the mailing list and interaction on Stack Overflow?'
-    answer: 'Use the [mailing list](https://groups.google.com/forum/#!forum/grails-dev-discuss) for discussion around the framework''s development. For questions we recommend [Stack Overflow](https://stackoverflow.com/questions/tagged/grails)'
+    answer: '[GitHub Discussions](https://github.com/orgs/grails/discussions) is a great place to start a conversation with the Grails developers and other Grails users.'
   -
     slug: 'question_issue'
     title: 'How do I report an issue with the Grails framework?'

@@ -12,6 +12,8 @@ image: grails-blog-index-3.png
 
 [%date]
 
+Happy New Year!
+
 The Grails Foundation is recognizing and celebrating great leadership and
 stewardship from [James Fredley](https://github.com/jamesfredley).
 

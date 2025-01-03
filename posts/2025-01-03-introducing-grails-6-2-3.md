@@ -26,6 +26,8 @@ Grails 6.2.3 addresses a critical bug fixes:
 Keeping up with the latest dependencies is crucial for the health of any framework. In this release, we have upgraded various dependencies to their latest versions, including but not limited to the following:
 
 * `org.grails:grails-gradle-plugin` to version 6.2.4
+* `org.apache.tomcat:tomcat-jdbc` to version 9.0.98
+* `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.98
 
 These upgrades ensure that Grails 6.2.3 remains compatible with the latest libraries and tools, providing developers with a robust and reliable environment. We recommend checking out the [GitHub release page](https://github.com/grails/grails-core/releases/tag/v6.2.3) for more information.
 

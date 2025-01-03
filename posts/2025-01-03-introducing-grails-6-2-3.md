@@ -12,7 +12,7 @@ image: grails-blog-index-3.png
 
 [%date]
 
-The Grails Foundation is excited to announce the release of Grails framework 6.2.3. This latest version delivers a key bug fixe.
+The Grails Foundation is excited to announce the release of Grails framework 6.2.3. This latest version delivers a key bug fix.
 
 ## Bug Fixes and Improvements
 

@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 03 Jan 2025 16:03:51 GMT</pubDate><item><title>James Fredley Named 2025 Grails® Rock Star</title><link>https://grails.org/blog/2025-01-02-grails-community-rockstar-fredley.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 03 Jan 2025 16:41:10 GMT</pubDate><item><title>Introducing Grails Framework 6.2.3 Release</title><link>https://grails.org/blog/2025-01-03-introducing-grails-6-2-3.html</link><description><![CDATA[</p>
+<p>The Grails Foundation is excited to announce the release of Grails framework 6.2.3. This latest version delivers a key bug fix.</p>
+<h2>Bug Fixes and Improvements</h2>
+<p>Grails 6.2.3 addresses a critical bug fixes:</p>
+<ul>
+<li>Fixes an edge cases that causes a cast class exception when inherited commands are used as an action parameter.</li>
+</ul>
+<h2>Dependency Upgrades</h2>
+<p>Keeping up with the latest dependencies is crucial for the health of any framework. In this release, we have upgraded various dependencies to their latest versions, including but not limited to the following:</p>
+<ul>
+<li><code>org.grails:grails-gradle-plugin</code> to version 6.2.4</li>
+<li><code>org.apache.tomcat:tomcat-jdbc</code> to version 9.0.98</li>
+<li><code>org.apache.tomcat.embed:tomcat-embed-core</code> to version 9.0.98</li>
+</ul>
+<p>These upgrades ensure that Grails 6.2.3 remains compatible with the latest libraries and tools, providing developers with a robust and reliable environment. We recommend checking out the <a href="https://github.com/grails/grails-core/releases/tag/v6.2.3">GitHub release page</a> for more information.</p>
+<h2>Installing Grails 6.2.3</h2>
+<p>You can get started with Grails 6.2.3 today by visiting our <a href="https://start.grails.org/">official website</a>. Alternatively, you can quickly install Grails 6.2.3 using the <a href="https://sdkman.io/">SDKMan</a>.</p>
+<ol>
+<li>
+<p>If you don't have SDKMan installed, follow the instructions at <a href="https://sdkman.io/install/">SDKMan Installation Guide</a> to set it up.</p>
+</li>
+<li>
+<p>Once SDKMan is installed, open your terminal and run the following command to install Grails 6.2.3:</p>
+<pre><code class="language-shell">sdk install grails 6.2.3
+</code></pre>
+</li>
+<li>
+<p>You're all set! To verify the installation, run:</p>
+<pre><code class="language-shell">grails --version
+</code></pre>
+</li>
+</ol>
+<h2>Upgrading Your Existing Applications to Grails 6.2.3</h2>
+<p>If you already have a Grails application and want to upgrade to the latest version, follow these steps:</p>
+<ol>
+<li>
+<p>Open the project in your favorite IDE (preferably JetBrains' IntelliJ IDEA).</p>
+</li>
+<li>
+<p>Update your application's <code>gradle.propreties</code> file to specify Grails 6.2.3 as the desired version.</p>
+<pre><code class="language-properties">grailsVersion=6.2.3
+grailsGradlePluginVersion=6.2.4
+</code></pre>
+</li>
+<li>
+<p>Make any necessary adjustments to your application code, configuration, and dependencies to ensure compatibility with the new version.</p>
+</li>
+</ol>
+<p>Normally, Grails Core dependencies are automatically updated using the Grails Bill of Materials (BOM). However, if you have specific versions defined in your build configuration, you may need to manually update them to align with Grails 6.2.3.</p>
+<p>By following these steps, you can smoothly transition your existing Grails application to the exciting Grails 6.2.3.</p>
+<h3>Exploring Alternative Approaches</h3>
+<p>If manual dependency updates seem daunting, or you want a more streamlined approach, consider the following alternatives:</p>
+<h4>1. Use Grails Forge Website</h4>
+<p>Visit <a href="https://start.grails.org">https://start.grails.org</a> and generate a new Grails application with Grails 6.2.3. Compare the versions in the newly generated application with your existing one to identify any discrepancies. This can serve as a reference point for your update.</p>
+<h4>2. Automated Dependency Update Bots</h4>
+<p>Configure automated dependency update bots like <a href="https://docs.renovatebot.com/">Renovate</a> or <a href="https://dependabot.com/">Dependabot</a> with your source control platform (e.g., GitHub). These bots can automatically detect and update outdated dependencies in your project, including Grails dependencies, saving you time and effort in manual updates.</p>
+<p>With these steps and alternative approaches, you should be well on your way to enjoying the exciting features and improvements in Grails 6.2.3. Happy coding!</p>
+<p>Join the <a href="https://grails.slack.com">Grails Slack community</a>, share your feedback, and contribute to making Grails framework even better in the future. Happy coding!</p>]]></description><author>James Daugherty</author><guid>2025-01-03-introducing-grails-6-2-3</guid><pubDate>Fri, 03 Jan 2025 00:00:00 GMT</pubDate></item><item><title>James Fredley Named 2025 Grails® Rock Star</title><link>https://grails.org/blog/2025-01-02-grails-community-rockstar-fredley.html</link><description><![CDATA[</p>
 <p>Happy New Year!</p>
 <p>The Grails Foundation is recognizing and celebrating great leadership and
 stewardship from <a href="https://github.com/jamesfredley">James Fredley</a>.</p>

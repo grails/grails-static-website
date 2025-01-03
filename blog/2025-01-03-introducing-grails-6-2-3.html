@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>2GM Q3 Town Hall Meeting Coming Soon</title>
+    <title>Introducing Grails Framework 6.2.3 Release</title>
     <meta name="keywords" content="grails,jvm,framework,groovy,gradle,spring-boot,gorm" />
-    <meta name="description" content="Our 2021 third-quarter Town Hall Meeting is just around the corner!" />
-    <meta name="date" content="September 15, 2021" />
+    <meta name="description" content="It highlights the critical bug fix in this release." />
+    <meta name="date" content="January 3, 2025" />
     <meta name="robots" content="all"/>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://grails.org/rss.xml" />
     <meta charset='UTF-8' />
     <link rel='icon' href='https://grails.org/images/favicon.ico'/>
     <meta name='twitter:card' content='summary_large_image'/>
     <meta name='twitter:site' content='@grailsframework'/>
-    <meta name='twitter:description' content='Our 2021 third-quarter Town Hall Meeting is just around the corner!'/>
+    <meta name='twitter:description' content='It highlights the critical bug fix in this release.'/>
     <meta name='twitter:creator' content='@grailsframework'/>
     <meta property='og:image' content='https://grails.org/images/grails.png'/>
     <meta property='og:image:width' content='300'/>
     <meta property='og:image:height' content='300'/>
     <meta property='og:url' content='https://grails.org'/>
-    <meta property='og:title' content='2GM Q3 Town Hall Meeting Coming Soon'/>
-    <meta property='og:description' content='Our 2021 third-quarter Town Hall Meeting is just around the corner!'/>
+    <meta property='og:title' content='Introducing Grails Framework 6.2.3 Release'/>
+    <meta property='og:description' content='It highlights the critical bug fix in this release.'/>
     <meta property='og:type' content='website'/>
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -66,23 +66,70 @@
   </div>
 </div>
 <div class='content container'>
-  <div class='light padded blogpost'><h1>2GM Q3 Town Hall Meeting Coming Soon</h1>
-<p><span class="author">By Jen Wiese</span></p>
-<p><span class="date">September 15, 2021</span></p>
-<p>Our 2021 third-quarter Town Hall Meeting is just around the corner!</p>
-<p>2GM Town Hall Meetings give the Groovy, Grails, and Micronaut team a chance to engage with you and empower you to contribute to the frameworks you love. Each Town Hall Meeting is led by a panel of 2GM users, developers, and advocates, and everyone is welcome and encouraged to participate.</p>
-<p>We look forward to seeing you on September 24th, where we'll be sharing an update on our Productivity Tips 'n' Tricks guide, chatting about the latest technology releases, and more!</p>
-<p><a href="https://us02web.zoom.us/webinar/register/7816317393035/WN_KbJAjtyMR8m56mzMroahEw">Reserve your seat</a></p>
+  <div class='light padded blogpost'><h1>Introducing Grails Framework 6.2.3 Release</h1>
+<p><span class="author">By James Daugherty</span></p>
+<p><span class="date">January 3, 2025</span></p>
+<p>The Grails Foundation is excited to announce the release of Grails framework 6.2.3. This latest version delivers a key bug fix.</p>
+<h2>Bug Fixes and Improvements</h2>
+<p>Grails 6.2.3 addresses a critical bug fixes:</p>
+<ul>
+<li>Fixes an edge cases that causes a cast class exception when inherited commands are used as an action parameter.</li>
+</ul>
+<h2>Dependency Upgrades</h2>
+<p>Keeping up with the latest dependencies is crucial for the health of any framework. In this release, we have upgraded various dependencies to their latest versions, including but not limited to the following:</p>
+<ul>
+<li><code>org.grails:grails-gradle-plugin</code> to version 6.2.4</li>
+<li><code>org.apache.tomcat:tomcat-jdbc</code> to version 9.0.98</li>
+<li><code>org.apache.tomcat.embed:tomcat-embed-core</code> to version 9.0.98</li>
+</ul>
+<p>These upgrades ensure that Grails 6.2.3 remains compatible with the latest libraries and tools, providing developers with a robust and reliable environment. We recommend checking out the <a href="https://github.com/grails/grails-core/releases/tag/v6.2.3">GitHub release page</a> for more information.</p>
+<h2>Installing Grails 6.2.3</h2>
+<p>You can get started with Grails 6.2.3 today by visiting our <a href="https://start.grails.org/">official website</a>. Alternatively, you can quickly install Grails 6.2.3 using the <a href="https://sdkman.io/">SDKMan</a>.</p>
+<ol>
+<li>
+<p>If you don't have SDKMan installed, follow the instructions at <a href="https://sdkman.io/install/">SDKMan Installation Guide</a> to set it up.</p>
+</li>
+<li>
+<p>Once SDKMan is installed, open your terminal and run the following command to install Grails 6.2.3:</p>
+<pre><code class="language-shell">sdk install grails 6.2.3
+</code></pre>
+</li>
+<li>
+<p>You're all set! To verify the installation, run:</p>
+<pre><code class="language-shell">grails --version
+</code></pre>
+</li>
+</ol>
+<h2>Upgrading Your Existing Applications to Grails 6.2.3</h2>
+<p>If you already have a Grails application and want to upgrade to the latest version, follow these steps:</p>
+<ol>
+<li>
+<p>Open the project in your favorite IDE (preferably JetBrains' IntelliJ IDEA).</p>
+</li>
+<li>
+<p>Update your application's <code>gradle.propreties</code> file to specify Grails 6.2.3 as the desired version.</p>
+<pre><code class="language-properties">grailsVersion=6.2.3
+grailsGradlePluginVersion=6.2.4
+</code></pre>
+</li>
+<li>
+<p>Make any necessary adjustments to your application code, configuration, and dependencies to ensure compatibility with the new version.</p>
+</li>
+</ol>
+<p>Normally, Grails Core dependencies are automatically updated using the Grails Bill of Materials (BOM). However, if you have specific versions defined in your build configuration, you may need to manually update them to align with Grails 6.2.3.</p>
+<p>By following these steps, you can smoothly transition your existing Grails application to the exciting Grails 6.2.3.</p>
+<h3>Exploring Alternative Approaches</h3>
+<p>If manual dependency updates seem daunting, or you want a more streamlined approach, consider the following alternatives:</p>
+<h4>1. Use Grails Forge Website</h4>
+<p>Visit <a href="https://start.grails.org">https://start.grails.org</a> and generate a new Grails application with Grails 6.2.3. Compare the versions in the newly generated application with your existing one to identify any discrepancies. This can serve as a reference point for your update.</p>
+<h4>2. Automated Dependency Update Bots</h4>
+<p>Configure automated dependency update bots like <a href="https://docs.renovatebot.com/">Renovate</a> or <a href="https://dependabot.com/">Dependabot</a> with your source control platform (e.g., GitHub). These bots can automatically detect and update outdated dependencies in your project, including Grails dependencies, saving you time and effort in manual updates.</p>
+<p>With these steps and alternative approaches, you should be well on your way to enjoying the exciting features and improvements in Grails 6.2.3. Happy coding!</p>
+<p>Join the <a href="https://grails.slack.com">Grails Slack community</a>, share your feedback, and contribute to making Grails framework even better in the future. Happy coding!</p>
     <h2 class='space-above'>
       <span>You might also like ...</span>
     </h2>
     <div class='threecolumns'>
-      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
-  <a href='https://grails.org/blog/2025-01-03-introducing-grails-6-2-3.html'>
-    <h3>January 3, 2025</h3>
-    <h2>Introducing Grails Framework 6.2.3 Release</h2>
-  </a>
-</article></div>
       <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
   <a href='https://grails.org/blog/2025-01-02-grails-community-rockstar-fredley.html'>
     <h3>January 2, 2025</h3>
@@ -93,6 +140,12 @@
   <a href='https://grails.org/blog/2024-11-20-introducing-grails-6-2-2.html'>
     <h3>November 20, 2024</h3>
     <h2>Introducing Grails Framework 6.2.2 Release</h2>
+  </a>
+</article></div>
+      <div class='column'><article class='blogcard' style='background-image: url(https://grails.org/images/grails-blog-index-3.png)'>
+  <a href='https://grails.org/blog/2024-10-03-introducing-grails-6-2-1.html'>
+    <h3>October 3, 2024</h3>
+    <h2>Introducing Grails Framework 6.2.1 Release</h2>
   </a>
 </article></div>
     </div>

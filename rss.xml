@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 03 Jan 2025 22:03:29 GMT</pubDate><item><title>Introducing Grails Framework 6.2.3 Release</title><link>https://grails.org/blog/2025-01-03-introducing-grails-6-2-3.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Fri, 03 Jan 2025 22:25:19 GMT</pubDate><item><title>Introducing Grails Framework 6.2.3 Release</title><link>https://grails.org/blog/2025-01-03-introducing-grails-6-2-3.html</link><description><![CDATA[</p>
 <p>The Grails Foundation is excited to announce the release of Grails framework 6.2.3. This latest version delivers a key bug fix.</p>
 <h2>Bug Fixes and Improvements</h2>
 <p>Grails 6.2.3 addresses a critical bug fixes:</p>
@@ -119,7 +119,7 @@ We encourage you to try this pre-release and provide your feedback <a href="http
 </ul>
 </li>
 <li><a href="https://java.testcontainers.org/">Testcontainers</a> features are also available on <a href="https://start.grails.org/">Grails Forge</a> and Grails Forge CLI for MySQL, PostgreSQL, SQL Server and MongoDB.</li>
-<li>Support for Live Reload via Hotswap Agent: <a href="https://github.com/grails/grails-forge/issues/445">crrent integration details</a>.  This was made possible by the removal of the default Micronaut parent application context.</li>
+<li>Support for Live Reload via Hotswap Agent: <a href="https://github.com/grails/grails-forge/issues/445">current integration details</a>.  This was made possible by the removal of the default Micronaut parent application context.</li>
 <li>Reintroduced the <code>grails-shell</code>, <code>grails-wrapper</code> and <code>grails-profiles</code> that were removed in Grails 6.
 <ul>
 <li>Update to the latest wrapper release based on Grails version with <code>./grailsw update-wrapper</code></li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 06 Jan 2025 22:03:21 GMT</pubDate><item><title>Introducing Grails Framework 6.2.3 Release</title><link>https://grails.org/blog/2025-01-03-introducing-grails-6-2-3.html</link><description><![CDATA[</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog | Grails Framework</title><link>https://grails.org</link><description>A powerful Groovy-based web application framework for the JVM built on top of Spring Boot</description><pubDate>Mon, 06 Jan 2025 22:16:20 GMT</pubDate><item><title>Introducing Grails Framework 6.2.3 Release</title><link>https://grails.org/blog/2025-01-03-introducing-grails-6-2-3.html</link><description><![CDATA[</p>
 <p>The Grails Foundation is excited to announce the release of Grails framework 6.2.3. This latest version delivers a key bug fix.</p>
 <h2>Bug Fixes and Improvements</h2>
 <p>Grails 6.2.3 addresses a critical bug fixes:</p>
@@ -92,38 +92,38 @@ We encourage you to try this pre-release and provide your feedback <a href="http
 <h2>What's Changed</h2>
 <ul>
 <li>New minimum versions introduced:
-<ul>
+<ol>
 <li>Gradle 8</li>
 <li>Groovy 4</li>
 <li>Java 17</li>
 <li>Sitemesh 3</li>
 <li>Spring Boot 3.4 (Spring Framework 6.2)</li>
-</ul>
+</ol>
 </li>
 <li>Default integration of the Micronaut Framework has been removed from Grails. Use <a href="https://micronaut-projects.github.io/micronaut-spring/latest/guide/">Micronaut for Spring</a> to add Micronaut support to your Grails application.</li>
 </ul>
 <h3>With the release of Grails 7.0.0-M1, we have:</h3>
 <ul>
 <li>Added support for:
-<ul>
+<ol>
 <li>Gradle 8.12</li>
 <li>Groovy 4.0.24</li>
 <li>Java 17-23, 17 and 21 are LTS</li>
 <li>Sitemesh 3</li>
 <li>Spring Boot 3.4.1 &amp; Spring Framework 6.2.1, including transition from <code>javax</code> to <code>jakarta</code> namespace.</li>
-</ul>
+</ol>
 </li>
 <li>Added default support for containerized browser testing using <a href="https://java.testcontainers.org/">Testcontainers</a> through the <a href="https://github.com/grails/geb">Geb Grails Plugin</a>, eliminating web browser version synchronization issues. A <a href="https://github.com/grails/geb?tab=readme-ov-file#containergebspec-recommended">container runtime environment</a> is now required for Geb functional and integration tests.
-<ul>
+<ol>
 <li>This has also been backported for Grails 6.x compatiblility via <a href="https://github.com/grails/geb/releases/tag/v4.1.1">Geb 4.1.1</a></li>
-</ul>
+</ol>
 </li>
 <li><a href="https://java.testcontainers.org/">Testcontainers</a> features are also available on <a href="https://start.grails.org/">Grails Forge</a> and Grails Forge CLI for MySQL, PostgreSQL, SQL Server and MongoDB.</li>
 <li>Support for Live Reload via Hotswap Agent: <a href="https://github.com/grails/grails-forge/issues/445">current integration details</a>.  This was made possible by the removal of the default Micronaut parent application context.</li>
 <li>Reintroduced the <code>grails-shell</code>, <code>grails-wrapper</code> and <code>grails-profiles</code> that were removed in Grails 6.
-<ul>
+<ol>
 <li>Update to the latest wrapper release based on Grails version with <code>./grailsw update-wrapper</code></li>
-</ul>
+</ol>
 </li>
 <li>Updated the default styling to use Bootstrap 5.3.3. Both <a href="https://github.com/grails/scaffolding">Scaffolding</a> and <a href="https://github.com/gpc/fields">Fields</a> now support Bootstrap classes.</li>
 <li>Reduced deployment sizes (currently pending, due to Graalvm dependencies required for test and bootRun by <code>asset-pipeline</code>).</li>
@@ -263,7 +263,7 @@ We encourage you to try this pre-release and provide your feedback <a href="http
 <li>org.grails:views-json-testing-support:4.0.0-M1</li>
 </ul>
 <h2>Installing Grails 7.0.0-M1</h2>
-<p>Try out Grails 7.0.0-M1 today by visiting the online app creator - <a href="https://start.grails.org/">Grails Forge</a>.
+<p>Try out Grails 7.0.0-M1 today by visiting the online app creator * <a href="https://start.grails.org/">Grails Forge</a>.
 Alternatively, you can quickly install Grails 7.0.0-M1 using the <a href="https://sdkman.io/">SDKMan</a>.</p>
 <ol>
 <li>

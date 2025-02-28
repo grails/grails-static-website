@@ -27,7 +27,7 @@ You can get more info by running:
  genProfiles - Generates profiles HTML page - build/temp/profiles.html
  genSitemap - Generates build/dist/sitemap.xml with every page in the site
  renderBlog - Renders Markdown posts (posts/*.md) into HTML pages (dist/blog/*.html). It generates tag pages. Generates RSS feed. Posts with future dates are not generated.
- renderSite - Build Micronaut website - generates pages with HTML entries in pages and build/temp, renders blog and RSS feed, copies assets and generates a sitemap
+ renderSite - Build Grails website - generates pages with HTML entries in pages and build/temp, renders blog and RSS feed, copies assets and generates a sitemap
 
  To see all tasks and more detail, run gradlew tasks --all
 
@@ -109,7 +109,7 @@ The process to deploy Grails 3.1 applications to JBoss 6.4 EAP is largely simila
 
 #### Text Expander snippets
 
-If you write often to Micronaut's blog, we recommend you to create a [Text Expander](https://textexpander.com) snippet:
+If you write often to Grails's blog, we recommend you to create a [Text Expander](https://textexpander.com) snippet:
 
  ![](docs/textexpander.png)
 

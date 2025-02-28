@@ -26,7 +26,7 @@ questions:
   -
     slug: 'question_mailinglist'
     title: 'Do you have a mailing list?'
-    answer: 'No, we prefer to converse over Slack, GitHub or Stack Overflow.  Mailing lists are planned after Grails transition to ASF.'
+    answer: 'Yes, there are a number of mailing-lists at the ASF. Check the [Community](https://grails.org/community.html) page for more information'
   -
     slug: 'question_feature'
     title: 'Where can I suggest a new feature or share an interesting finding?'

@@ -492,3 +492,6 @@ releases:
   -
     version: 6.2.3
     publicationDate: Jan 03, 2025
+  -
+    version: 7.0.0-M3
+    publicationDate: Mar 05, 2025

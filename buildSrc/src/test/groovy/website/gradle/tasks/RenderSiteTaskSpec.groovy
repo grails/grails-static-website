@@ -45,6 +45,17 @@ class RenderSiteTaskSpec extends Specification {
             """.stripIndent().trim()
     }
 
+    def 'menu highlighting leaves every item unselected on the home page'() {
+        given: 'the shared menu and the home page path'
+            def menu = """
+                <li><a href='https://grails.apache.org/blog/index.html'>Blog</a></li>
+                <li><a href='https://grails.apache.org/casestudies/index.html'>Case Studies</a></li>
+            """.stripIndent().trim()
+
+        expect: 'no menu item is highlighted, because the home page has none'
+            RenderSiteTask.highlightMenu(menu, '/index.html') == menu
+    }
+
     def 'shared partial placeholders resolve for Guide rendering'() {
         when: 'a shared partial is resolved with placeholders for the site URL and Kapa widget script'
             def partial = RenderSiteTask.resolvePartial(

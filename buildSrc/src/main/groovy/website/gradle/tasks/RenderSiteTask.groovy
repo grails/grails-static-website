@@ -418,10 +418,19 @@ abstract class RenderSiteTask extends GrailsWebsiteTask {
         "<meta name='twitter:card' content='$cardType'/>"
     }
 
+    /** Scheme, host and optional port of an absolute menu link, e.g. {@code https://grails.apache.org}. */
+    private static final String MENU_ITEM_ORIGIN = "(?:[a-zA-Z][a-zA-Z0-9+.\\-]*:)?//[^'/]*"
+
+    /**
+     * Marks the menu item whose link points at {@code path} as active. Only an
+     * origin may precede the path in the href, so the path has to match the
+     * whole link path and not merely its tail: otherwise the home page
+     * ("/index.html") would highlight the Blog archive ("/blog/index.html").
+     */
     static String highlightMenu(String html, String path) {
         String normalizedPath = path.startsWith('/') ? path : "/$path"
         html.replaceFirst(
-                "(<li)(><a href='[^']*${Pattern.quote(normalizedPath)}')",
+                "(<li)(><a href='(?:${MENU_ITEM_ORIGIN})?${Pattern.quote(normalizedPath)}')",
                 "\$1 class='active'\$2"
         )
     }

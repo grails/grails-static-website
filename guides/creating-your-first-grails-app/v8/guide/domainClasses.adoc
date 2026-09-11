@@ -25,3 +25,5 @@ include::../snippets/grails-app/domain/example/Vehicle.groovy[]
 ----
 
 GORM maps these classes to tables automatically when you run the app against H2 (the starter default).
+
+H2 treats `YEAR` as a reserved word, so `Vehicle` maps the `year` property to a `vehicle_year` column. Without that mapping, schema generation fails when you run the app or `./gradlew integrationTest`.

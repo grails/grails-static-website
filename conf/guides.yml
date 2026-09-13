@@ -840,7 +840,7 @@ guides:
           - 'security'
         sampleRef:
           repo: 'grails-guides/database-per-tenant'
-          branch: 'grails5'
+          branch: 'master'
         toc:
           training:
             title: Grails Training
